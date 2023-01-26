@@ -1,0 +1,124 @@
+// bootstrap vars
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #F6F6F6;
+$gray-200: #F0EEFF;
+$gray-500: rgba(126, 131, 137, 0.53);
+$gray-600: rgba(60, 60, 67, 0.6);
+$gray-700: #7E8389;
+$gray-800: rgba(0, 0, 0, .2);
+$black: #000;
+// scss-docs-end gray-color-variables
+// scss-docs-start color-variables
+$yellow: #FFE000;
+$red: #E20000;
+// Prefix for :root CSS variables
+$variable-prefix: bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix;
+// scss-docs-end color-variables
+// scss-docs-start spacer-variables-maps
+$spacer: 20px;
+$spacers: (
+	0: 0,
+	1: $spacer * .25,
+	//5
+	2: $spacer * .5,
+	//10
+	3: $spacer,
+	//20
+	4: $spacer * 1.5,
+	//30
+	5: $spacer * 2,
+	//40
+);
+// Settings for the `<body>` element.
+$body-color: $black;
+$body-bg: $gray-100;
+//gutter
+$grid-gutter-width: 40px;
+//gutter
+// scss-docs-start border-variables
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-500;
+$border-color-translucent: rgba($black, .175);
+// scss-docs-end border-variables
+// scss-docs-start border-radius-variables
+$border-radius: 8px;
+// scss-docs-end border-radius-variables
+// scss-docs-start font-variables
+$font-family-base: "Inter";
+$font-size-base: 0.875rem; //14px
+$line-height-base: 1.25;
+// scss-docs-start headings-variables
+$headings-margin-bottom: $spacer * 0;
+$headings-font-weight: 400;
+$headings-line-height: 1.2;
+// hr
+$hr-margin-y: 30px;
+$hr-border-color: $gray-500; // Allows for inherited colors
+$hr-border-width: var(--#{$prefix}border-width);
+$hr-opacity: 0.4;
+// Tables
+// Tables end
+// scss-docs-start input-btn-variables
+$input-btn-padding-y: 10.25px;
+$input-btn-padding-x: 16px;
+$input-btn-border-width: var(--#{$prefix}border-width);
+// scss-docs-end input-btn-variables
+// scss-docs-start btn-variables
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: 25px;
+$btn-border-width: $input-btn-border-width;
+$btn-border-radius: $border-radius;
+$btn-font-weight: 400;
+$btn-transition: color .3s ease-in-out,
+	background-color .3s ease-in-out,
+	border-color .3s ease-in-out,
+	box-shadow .3s ease-in-out;
+// scss-docs-end btn-variables
+// scss-docs-start form-label-variables
+$form-label-margin-bottom: 10px;
+$form-label-font-size: 11px;
+$form-label-color: $gray-700;
+// form labels new wars
+$form-label-margin-bottom-m: 15px;
+// form labels new wars
+// scss-docs-end form-label-variables
+// scss-docs-start form-input-variables
+$input-bg: $white;
+$input-border-color: $gray-500;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $yellow;
+$input-focus-box-shadow: none;
+$input-placeholder-color: $gray-600;
+$input-plaintext-color: $gray-600;
+$input-focus-bg: $input-bg;
+$input-transition: border-color .2s ease-in-out,
+	box-shadow .2s ease-in-out;
+// scss-docs-end form-input-variables
+// scss-docs-start form-check-variables
+$form-check-input-width: 1em;
+$form-check-margin-bottom: 10px;
+$form-check-input-border: var(--#{$prefix}border-width) solid $black;
+$form-check-input-border-radius: .15em;
+$form-check-input-focus-border: $black;
+$form-check-input-checked-color: $black;
+$form-check-input-checked-bg-color: $white;
+$form-check-label-cursor: pointer;
+$form-check-transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+$form-check-input-focus-box-shadow: none;
+$form-check-input-checked-border-color: $form-check-input-checked-color;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+// scss-docs-end form-check-variables
+// select  bootstrap (custom) 
+$form-select-bg: $input-bg;
+$form-select-indicator-color: $gray-700;
+$form-select-border-color: $input-border-color;
+$form-select-focus-border-color: $input-focus-border-color;
+// new select vars 
+$form-select-options-selected: $gray-200;
+$form-select-checbox-size: 16px;
+$form-select-checbox-radius: 2px;
+$form-select-checbox-color: $black;
+// new select vars 

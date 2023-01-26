@@ -1,0 +1,375 @@
+header {
+	height: 80px;
+	z-index: 3;
+
+	@media (max-width:($md3+px)) {
+		height: 60px;
+	}
+
+	.new-logo-mob {
+		flex: 0 0 80px;
+		width: 80px;
+		display: none;
+
+		@media (max-width:($md3+px)) {
+			display: flex;
+		}
+
+		img {
+			width: 42px;
+		}
+	}
+}
+
+.qela-search {
+	margin: 0px 18px 0px 0px;
+	flex: 1 1 auto;
+
+	.qela-wrapper {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		width: 100%;
+
+		@media (max-width:($md3+px)) {
+			position: absolute;
+			top: 100%;
+			width: calc(100% - 40px);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&.qela--visible {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
+
+	input {}
+
+	button {
+		color: $gray-700;
+		border: none;
+
+		&::before {
+			font-size: 24px;
+		}
+	}
+}
+
+.qela-badge {
+	padding: 0;
+	color: $gray-700;
+	margin: 0px 20px 0px 0px;
+	transition: color 0.3s ease 0s;
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: $black;
+		}
+	}
+
+	.badge {
+		color: $white;
+		min-width: 20px;
+		padding: 0 5px;
+		height: 14px;
+		font-size: 9px;
+		line-height: 9px;
+		font-weight: 600;
+	}
+
+	&.qela--active {
+		color: $black;
+	}
+
+	&::before {
+		font-size: 24px;
+	}
+}
+
+.qela-user {
+	button {
+		&.show {
+			span {
+				&::before {
+					transform: rotate(-180deg);
+					color: $black;
+				}
+			}
+		}
+	}
+
+	span {
+		&::before {
+			margin: 0px 0px 0px 10px;
+			font-size: 14px;
+			color: $gray-700;
+			transition: transform 0.3s ease 0s;
+		}
+	}
+
+	form {
+		width: 280px;
+		right: 0;
+
+		&.show {
+			right: 0;
+		}
+	}
+
+	.qela-avatar {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.qela-menu {
+	width: 80px;
+	transition: width 0.3s linear 0s, left 0.3s linear 0s;
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	@media (max-width:($md3+px)) {
+		width: 400px;
+		left: -110%;
+	}
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+	}
+
+	&.active {
+		width: 230px;
+
+		&::before {
+			opacity: 1;
+			pointer-events: auto;
+
+			@media (max-width:($md3+px)) {
+				visibility: visible;
+			}
+		}
+
+		@media (max-width:($md3+px)) {
+			width: 400px;
+			left: 0;
+		}
+
+		@media (max-width:($md4+px)) {
+			width: 100%;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		background: $gray-800;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .3s linear 0s;
+		z-index: 1;
+		left: 0;
+		top: 0;
+
+		@media (max-width:($md3+px)) {
+			transition: none;
+			visibility: hidden;
+			transition: visibility 0s linear 0.3s;
+		}
+	}
+
+	.qela-wrapper {
+		overflow: auto;
+		overflow-x: hidden;
+		flex: 1 1 auto;
+		background-color: $white;
+	}
+
+	.nav {
+		padding: 20px;
+	}
+
+	.nav-item {
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+
+		a {
+			padding: 0;
+
+
+			@media (any-hover:hover) {
+				&:hover {
+					span {
+						color: $black;
+					}
+				}
+			}
+
+			&.active {
+				span {
+					color: $black;
+
+					&:first-child {
+						background-color: $yellow;
+					}
+				}
+			}
+		}
+	}
+
+	span {
+		color: $gray-700;
+		font-weight: 500;
+		transition: color 0.3s ease 0s;
+
+		@media (max-width:($md3+px)) {
+			font-size: 18px;
+		}
+
+		&:first-child {
+			margin: 0px 20px 0px 0px;
+		}
+	}
+
+	.logo {
+		padding: 20px;
+		height: 80px;
+		flex: 0 0 80px;
+		background-color: $white;
+
+		@media (max-width:($md3+px)) {
+			height: 60px;
+			flex: 0 0 60px;
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			opacity: .2;
+			background-color: rgba(126, 131, 137, .53);
+
+		}
+	}
+}
+
+.qela-btn-menu {
+	position: absolute;
+	z-index: 1;
+	left: calc(100% - 16px);
+	top: 40%;
+	border-radius: 50%;
+
+	padding: 9px 4px 9px 14px;
+	background-color: $white;
+	color: $gray-700;
+
+	@media (max-width:($md3+px)) {
+		display: none;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $white;
+			color: $black;
+		}
+	}
+
+	&::before {
+		transition: transform .3s ease 0s;
+		font-size: 14px;
+		color: $gray-700;
+		transform: rotate(-90deg);
+	}
+
+	&.active {
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.qela-btn-close {
+	background-color: transparent;
+	z-index: 4;
+	top: 8px;
+	right: 5px;
+	display: none;
+
+	@media (max-width:($md3+px)) {
+		display: block;
+	}
+
+	&::before {
+		font-size: 28px;
+	}
+}
+
+.qela-burger {
+	display: none;
+
+	@media (max-width: ($md3+px)) {
+		display: block;
+		cursor: pointer;
+
+		width: 40px;
+		flex: 0 0 40px;
+		height: 40px;
+		position: relative;
+		background-color: transparent;
+
+		span {
+			transition: transform 0.4s ease 0s;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background-color: $gray-700;
+			pointer-events: none;
+			cursor: pointer;
+
+			&:first-child {
+				top: calc(50% - 9px);
+			}
+
+			&:last-child {
+				top: auto;
+				bottom: calc(50% - 11px);
+			}
+		}
+
+		&.active {
+			span {
+				transform: scale(0);
+				height: 1px;
+				width: 24px;
+
+				&:first-child {
+					transform: translate(-50%, -50%) rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+
+				&:last-child {
+					transform: translate(-50%, -50%) rotate(45deg);
+					bottom: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Reg"
+})
+
+<body>
+	@@include('./components/_header.html',{})
+	<main>
+		<!-- Форма регистрации -->
+		<div class="qela-conatiner-min">
+			<div class="qela-reg p-3 p-sm-5 bg-white rounded-3 qela-shadow">
+				<div class="row">
+					<div class="col-12">
+						<div class="qela-title">
+							<h1>Регістрація</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<form class="col-12">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="inputText" class="form-label">Ім'я</label>
+								<input type="text" class="form-control" id="inputText" placeholder="Введіть ім'я">
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="inputText2" class="form-label">Призвіще</label>
+								<input type="text" class="form-control" id="inputText2" placeholder="Введіть призвіще">
+							</div>
+							<div class="col-12 mb-3">
+								<label for="inputEmail1" class="form-label">Email</label>
+								<input type="email" placeholder="Введіть email" class="form-control" id="inputEmail1">
+							</div>
+							<div class="col-12 mb-3">
+								<label for="inputPassword1" class="form-label">Пароль</label>
+								<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword1">
+							</div>
+							<div class="col-12 mb-3">
+								<label for="inputPassword2" class="form-label">Повторіть пароль ще раз</label>
+								<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword2">
+							</div>
+							<div class="col-12">
+								<label for="textarea1" class="form-label">Деталі повідомлення</label>
+								<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="selectMulti" class="form-label">Селект multiple</label>
+								<select id="selectMulti" multiple class="multiple">
+									<option value="1" selected="selected">Пункт-1</option>
+									<option value="2">Пункт-2</option>
+									<option value="3">Пункт-3</option>
+									<option value="4">Пункт-4</option>
+								</select>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="selectMulti2" class="form-label">Селект multiple</label>
+								<select id="selectMulti2" multiple class="multiple">
+									<option value="1" selected="selected">Пункт-1</option>
+									<option value="2">Пункт-2</option>
+									<option value="3">Пункт-3</option>
+									<option value="4">Пункт-4</option>
+								</select>
+							</div>
+							<div class="col-12 mb-3">
+								<label for="select1" class="form-label">Селект</label>
+								<select id="select1" class="sel">
+									<option value="1" selected="selected">Пункт-1</option>
+									<option value="2">Пункт-2</option>
+									<option value="3">Пункт-3</option>
+									<option value="4">Пункт-4</option>
+								</select>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="qela-checkbox-label">Гендер</div>
+								</div>
+								<div class="col-12 d-flex flex-wrap mb-2">
+									<div class="form-check me-3">
+										<input type="checkbox" class="form-check-input" id="Check2">
+										<label class="form-check-label" for="Check2">Чоловіча</label>
+									</div>
+									<div class="form-check me-3">
+										<input type="checkbox" class="form-check-input" id="Check3">
+										<label class="form-check-label" for="Check3">Жіноча</label>
+									</div>
+									<div class="form-check me-3">
+										<input type="checkbox" class="form-check-input" id="Check4">
+										<label class="form-check-label" for="Check4">Свій варіант</label>
+									</div>
+									<div class="form-check me-3">
+										<input type="checkbox" class="form-check-input" id="Check5">
+										<label class="form-check-label" for="Check5">Утримаюсь</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Check6">
+										<label class="form-check-label" for="Check6">Не важливо</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="mb-3 form-check me-3">
+									<input type="checkbox" class="form-check-input" id="Check1">
+									<label class="form-check-label" for="Check1">Відправляючи цю форму ви погоджуєтесь з <a href="#" target="_blank">правилами конфиденційності</a></label>
+								</div>
+							</div>
+							<div class="col-12 d-inline-flex justify-content-end">
+								<button type="reset" class="btn btn-light me-3">Відмінити</button>
+								<button type="submit" class="btn btn-warning">Зареєструватись</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	@@include('_js.html',{})
+</body>
+
+</html>

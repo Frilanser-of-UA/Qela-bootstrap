@@ -1,0 +1,15 @@
+.form-control {
+	@media (any-hover:hover) {
+		&:hover {
+			border-color: $black;
+		}
+	}
+
+	&:focus {
+		@media (any-hover:hover) {
+			&:hover {
+				border-color: $yellow;
+			}
+		}
+	}
+}
