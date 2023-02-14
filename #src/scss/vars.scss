@@ -12,6 +12,19 @@ $black: #000;
 // scss-docs-start color-variables
 $yellow: #FFE000;
 $red: #E20000;
+$red-light-2: #FFADAD;
+$primary: $yellow;
+$violet: #978FFF;
+$violet-light-0: #F5F4FF;
+$violet-light: #F0EEFF;
+$violet-light-2: #E5E3FF;
+$violet-light-3: #CCC8FF;
+$gray-01: #4D4D4D;
+$lightgray-3: #BBBDC0;
+$text_disable: #767676;
+$disabled-surf-1: #EFEFEF;
+$disabled-surf-2: #CACACA;
+
 // Prefix for :root CSS variables
 $variable-prefix: bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix: $variable-prefix;
@@ -88,9 +101,14 @@ $form-label-margin-bottom-m: 15px;
 // scss-docs-start form-input-variables
 $input-bg: $white;
 $input-border-color: $gray-500;
+$input-disabled-color: #7E7E7E;
+$input-disabled-bg: $white;
+$input-disabled-border-color: #D1D1D2;
+
 $input-focus-bg: $input-bg;
-$input-focus-border-color: $yellow;
-$input-focus-box-shadow: none;
+$input-focus-border-color: $violet;
+$input-focus-box-shadow: 0px 0px 0px 1px $violet;
+
 $input-placeholder-color: $gray-600;
 $input-plaintext-color: $gray-600;
 $input-focus-bg: $input-bg;
@@ -111,14 +129,3 @@ $form-check-input-focus-box-shadow: none;
 $form-check-input-checked-border-color: $form-check-input-checked-color;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
 // scss-docs-end form-check-variables
-// select  bootstrap (custom) 
-$form-select-bg: $input-bg;
-$form-select-indicator-color: $gray-700;
-$form-select-border-color: $input-border-color;
-$form-select-focus-border-color: $input-focus-border-color;
-// new select vars 
-$form-select-options-selected: $gray-200;
-$form-select-checbox-size: 16px;
-$form-select-checbox-radius: 2px;
-$form-select-checbox-color: $black;
-// new select vars 

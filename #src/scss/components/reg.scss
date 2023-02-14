@@ -1,7 +1,48 @@
-.qela-reg {}
+.qela-form {
+	background-color: $white;
+	padding: 40px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	margin: 0px 0px 40px 0px;
 
-.qela-checkbox-label {
-	font-size: $form-label-font-size;
-	color: $form-label-color;
-	margin-bottom: $form-label-margin-bottom-m;
+	@media (max-width:($md4+px)) {
+		padding: 20px;
+	}
+
+	.qela-mt-2 {
+		margin-top: 10px;
+	}
+
+	.form-check {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	.qela-buttons {
+		display: inline-flex;
+		justify-content: end;
+
+		@media (max-width:($md4+px)) {
+			flex-direction: column;
+		}
+	}
+
+	button {
+		&:not(:last-child) {
+			margin: 0px 20px 0px 0px;
+
+			@media (max-width:($md4+px)) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+
+	.datepicker__buttons {
+		button {
+			&:not(:last-child) {
+				margin: 0px 2px 0px 0px;
+			}
+		}
+	}
 }

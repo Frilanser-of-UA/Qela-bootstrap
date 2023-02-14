@@ -1,15 +1,54 @@
 .form-control {
 	@media (any-hover:hover) {
 		&:hover {
-			border-color: $black;
+			border-color: $violet;
 		}
 	}
 
 	&:focus {
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $yellow;
+				border-color: $violet;
 			}
 		}
 	}
+
+	&:disabled {
+		&::placeholder {
+			color: #7E7E7E;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				border-color: #D1D1D2;
+			}
+		}
+	}
+
+	&.invalid {
+		border-color: $red-light-2;
+
+		&:focus {
+			border-color: $red-light-2;
+			box-shadow: none;
+
+			@media (any-hover:hover) {
+				&:hover {
+					border-color: $red-light-2;
+				}
+			}
+		}
+
+		&~.form-error {
+			display: block;
+		}
+	}
+}
+
+.form-error {
+	color: $red;
+	font-size: 11px;
+	line-height: 13px;
+	padding: 5px 0px 0px 0px;
+	display: none;
 }
