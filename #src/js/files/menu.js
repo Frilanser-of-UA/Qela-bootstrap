@@ -22,5 +22,13 @@ window.onload = function () {
 		} else if (!targetElement.closest('.qela-wrapper') && document.querySelector('.qela-wrapper.qela--visible')) {
 			document.querySelector('.qela-wrapper').classList.remove('qela--visible');
 		}
+		//== випадашки dots
+		if (targetElement.classList.contains('dots-table')) {
+			if (document.querySelector('.dots-table')) {
+				document.querySelector('.dots-table').classList.toggle('active');
+			}
+		} else if (!targetElement.closest('.dots-table') && document.querySelector('.dots-table.active')) {
+			document.querySelector('.dots-table').classList.remove('active');
+		}
 	}
 }

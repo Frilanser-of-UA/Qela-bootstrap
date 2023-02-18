@@ -1,111 +1,63 @@
-.statistics {
-	margin: 0px 0px 40px 0px;
-	// .statistics__container
+.qela-statistics {
+	background-color: $white;
+	border-radius: 10px;
+	padding: 40px;
+	margin-bottom: 40px;
 
-	&__container {}
-
-	// .statistics__body
-
-	&__body {
-		background-color: var(--white);
-		border-radius: 10px;
-		padding: 29px 0 41px 0;
+	@media (max-width:($md3+px)) {
+		padding: 20px;
 	}
 
-	// .statistics__items
-
-	&__items {
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+	.row {
 		text-align: center;
-		height: 100%;
-
-		@media (max-width:($md1+px)) {
-			grid-template-columns: repeat(3, 1fr);
-			gap: 30px 0;
-		}
-
-		@media (max-width:($md3+px)) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@media (max-width:($md4+px)) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-
-	// .statistics__item
-
-	&__item {
-		position: relative;
-		display: flex;
-		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		position: relative;
 
+		&>div {
+			position: relative;
 
-
-		&:nth-child(3) {
-			@media (max-width:($md1+px)) {
-				&::before {
-					display: none;
+			&:nth-child(3) {
+				.qela-hv {
+					@media (max-width:($md1+px)) {
+						display: none;
+					}
 				}
 			}
 
-			@media (max-width:($md3+px)) {
-				&::before {
-					display: block;
-				}
-			}
-		}
-
-		@media (max-width:($md3+px)) {
-			&:nth-child(even) {
-				&::before {
-					content: '';
+			.qela-hv {
+				@media (max-width:($md3+px)) {
 					display: none;
 				}
 			}
 		}
-
-		&:not(:last-child) {
-			&::before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				background-color: rgba(179, 179, 179, 0.4);
-				height: 90px;
-				width: 1px;
-
-				@media (max-width:($md1+px)) {
-					height: 100%;
-				}
-
-				@media (max-width:($md4+px)) {
-					display: none;
-				}
-			}
-		}
-
 	}
 
-	// .statistics__number
-
-	&__number {
-		font-size: 32px;
-		line-height: 39px;
+	img {
+		display: block;
+		margin: 0 auto;
 	}
+}
 
-	// .statistics__label
+.qela-number {
+	font-size: 32px;
+	line-height: 39px;
+}
 
-	&__label {
-		font-size: 11px;
-		line-height: 13px;
-		color: rgba(60, 60, 67, 0.6);
+.qela-label {
+	font-size: 11px;
+	line-height: 13px;
+	color: $gray-600;
+}
+
+.qela-hv {
+	border-left: 1px solid $gray-400;
+	position: absolute;
+	height: 90px;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@media (max-width:($md1+px)) {
+		height: 70px;
 	}
-
-	// .statistics__img
-
-	&__img {}
 }

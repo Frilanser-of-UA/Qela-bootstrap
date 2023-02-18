@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<title>Users</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/vendors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
+	<div class="container-fluid h-100 ">
+		<div class="row h-100 position-relative">
+			<div class="col-1 d-flex align-items-center">
+				<button class="qela-burger border-0"><span></span><span></span><span></span></button>
+			</div>
+			<div class="col d-flex align-items-center justify-content-end">
+				<!-- form search -->
+				<form class="qela-search" role="search">
+					<div class="qela-wrapper">
+						<input class="form-control ps-5" type="search" placeholder="Пошук" aria-label="Search">
+						<button class="btn ic-search " type="submit"></button>
+					</div>
+					<button class="btn ic-search p-1 qela-search-btn" type="button"></button>
+				</form>
+				<!-- badge -->
+				<button type="button" class="btn border-0 position-relative qela-badge qela--active">
+					<span class="ic-bell"></span>
+					<span class="position-absolute d-flex align-items-center justify-content-center top-0 start-100 translate-middle badge rounded-pill bg-danger">25</span>
+				</button>
+				<!-- user -->
+				<div class="dropdown qela-user">
+					<button type="button" class="btn p-1 border-0 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<div class="qela-avatar"><img class="rounded-circle w-100" src="img/header/user.jpg" alt=""></div>
+						<span class="ic-chevron"></span>
+					</button>
+					<form class="dropdown-menu gy-5 bg-white border-0 p-3 dropdown-caret dropdown-menu-end qela-shadow-15">
+						<div class="mb-3">
+							<label for="exampleDropdownFormEmail2" class="form-label">Email</label>
+							<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+						</div>
+						<div class="mb-3">
+							<label for="exampleDropdownFormPassword2" class="form-label">Ваш пароль</label>
+							<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+						</div>
+						<div class="mb-3">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="dropdownCheck2">
+								<label class="form-check-label" for="dropdownCheck2">
+									Запамятати мене
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary w-100">Відправити</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- menu -->
+	<div class="h-100 qela-menu">
+		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
+		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close " aria-label="Close"></button>
+		<nav id="gela-nav" class="d-flex flex-column position-relative h-100 ">
+			<a href="#" class="position-relative z-3 logo qela-shadow">
+				<img src="img\header\logo.svg" alt="">
+			</a>
+			<div class="qela-wrapper d-flex flex-column position-relative z-2">
+				<ul class="nav flex-column mb-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center active" aria-current="page">
+							<span class="ic-spead p-2 rounded-5"></span>
+							<span>Дашборд</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-people p-2 rounded-5"></span>
+							<span>Користувачі</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-box-arrow p-2 rounded-5"></span>
+							<span>Голосування</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-notes p-2 rounded-5"></span>
+							<span>Новини</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-calendar p-2 rounded-5"></span>
+							<span>Квести</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-dollar p-2 rounded-5"></span>
+							<span>Донати</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-lattice p-2 rounded-5"></span>
+							<span>Теги</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-speaker p-2 rounded-5"></span>
+							<span>Маркетинг</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-jostik p-2 rounded-5"></span>
+							<span>Гейміфікація</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-city p-2 rounded-5"></span>
+							<span>Організація</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-tent p-2 rounded-5"></span>
+							<span>Магазин</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav flex-column pt-0">
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-settings p-2 rounded-5"></span>
+							<span>Налаштування</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+</header>
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1>Користувачі</h1>
+					</div>
+				</div>
+			</div>
+			<!-- =====================Cтатистика==================== -->
+			<div class="container ">
+				<div class="qela-statistics">
+					<div class="row gy-4">
+						<div class="col-md-4 col-xl-2">
+							<div class="qela-number">1000</div>
+							<div class="qela-label">Донаторів</div>
+							<div class="qela-hv"></div>
+						</div>
+						<div class="col-md-4 col-xl-2">
+							<div class="qela-number">250 000</div>
+							<div class="qela-label">Донатів, UAH</div>
+							<div class="qela-hv"></div>
+						</div>
+						<div class="col-md-4 col-xl-2">
+							<img src="img/users/coin.svg" alt="">
+							<div class="qela-number">10 000</div>
+							<div class="qela-label">Вага голосу</div>
+							<div class="qela-hv"></div>
+						</div>
+						<div class="col-md-4 col-xl-2">
+							<div class="qela-number">1000</div>
+							<div class="qela-label">Верифікованих</div>
+							<div class="qela-hv"></div>
+						</div>
+						<div class="col-md-4 col-xl-2">
+							<div class="qela-number">250 000</div>
+							<div class="qela-label">Неверифікованих</div>
+							<div class="qela-hv"></div>
+						</div>
+						<div class="col-md-4 col-xl-2">
+							<div class="qela-number">4</div>
+							<div class="qela-label">Заблокованих</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- =====================Список користувачів==================== -->
+			<div class="container">
+				<div class="qela-list-users qela-shadow">
+					<div class="row gy-3">
+						<div class="col">
+							<h2 class="m-0">Список користувачів</h2>
+						</div>
+						<div class="col-md-6 col-12">
+							<form class="qela-search m-0" role="search">
+								<div class="qela-wrapper">
+									<input class="form-control ps-5" type="search" placeholder="Пошук" aria-label="Search">
+									<button class="btn ic-search" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="col d-flex align-items-center">
+							<div class="qela-filter">
+								<div class="body">
+									<div class="qela-name">Фільтр</div>
+									<div class="qela-dropdown">
+										<button class="dropdown-btn ic-chevron">Показати всіх</button>
+										<ul class="dropdown-list">
+											<li class="dropdown-item label not-visible">Показати всіх</li>
+											<li class="dropdown-item ">Пункт-2</li>
+											<li class="dropdown-item">Пункт-3</li>
+											<li class="dropdown-item">Пункт-4</li>
+											<li class="dropdown-item">Пункт-5</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<a href="#" download="" class="qela-download ic-download"></a>
+						</div>
+						<div class="col-12">
+							<div class="qela-filter">
+								<div class="body">
+									<div class="form-check gray">
+										<input type="checkbox" class="form-check-input">
+									</div>
+									<div class="dropdown">
+										<button class="btn-dropdown ic-chevron" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											Дії з обраним
+										</button>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="#">Змінити статус</a></li>
+											<li><a class="dropdown-item" href="#">Відправити Email</a></li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="#">Заблокувати</a></li>
+											<li><a class="dropdown-item" href="#">Видалити</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="table-responsive table-qela">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th scope="col">
+												<div class="qela-filter small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">П.І.Б.</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">П.І.Б.</li>
+																<li class="dropdown-item">Ґжицький Рожден Златович</li>
+																<li class="dropdown-item">Волинець Павло Артурович</li>
+																<li class="dropdown-item">Андрейчук Дана Йосипівна</li>
+																<li class="dropdown-item">Бабченко Сніжана Найденівна</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Стать</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Стать</li>
+																<li class="dropdown-item">Чоловіча</li>
+																<li class="dropdown-item">Жіноча</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Вік</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Вік</li>
+																<li class="dropdown-item">18-25</li>
+																<li class="dropdown-item">26-35</li>
+																<li class="dropdown-item">36-45</li>
+																<li class="dropdown-item">46-55</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Регіональне відділення </button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Регіональне відділення </li>
+																<li class="dropdown-item">Фастівський осередок </li>
+																<li class="dropdown-item">Фастівський осередок </li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Теги</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Теги</li>
+																<li class="dropdown-item">#fundrising>50</li>
+																<li class="dropdown-item">#activity>4</li>
+																<li class="dropdown-item">#earlyinnovator</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter qela-center small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Вага голосу</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Вага голосу</li>
+																<li class="dropdown-item">105</li>
+																<li class="dropdown-item">215</li>
+																<li class="dropdown-item">300</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												<div class="qela-filter qela-center small">
+													<div class="body">
+														<div class="qela-dropdown">
+															<button class="dropdown-btn ic-chevron">Верифікація</button>
+															<ul class="dropdown-list">
+																<li class="dropdown-item label not-visible">Верифікація</li>
+																<li class="dropdown-item">Верифікований</li>
+																<li class="dropdown-item">Не верифікований</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</th>
+											<th scope="col">
+												Дії
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-3.jpg" alt="">
+												<span>Бєлінський Кузьма Тарасович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>26-35</td>
+											<td>Фастівський осередок</td>
+											<td>
+												<a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a><a href="#" class="qela-tag">#earlyinnovat</a>
+												<div class=" dots-table active">
+													<span>...</span>
+													<div class="dots-table__body">
+														<a href="#">#activity&gt;4,</a>
+														<a href="#">#fundrising&gt;50,</a>
+														<a href="#">#earlyinnovat</a>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-3.jpg" alt="">
+												<span>Бєлінський Кузьма Тарасович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>26-35</td>
+											<td>Фастівський осередок</td>
+											<td>
+												<a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a><a href="#" class="qela-tag">#earlyinnovat</a>
+												<div class=" dots-table active">
+													<span>...</span>
+													<div class="dots-table__body">
+														<a href="#">#activity&gt;4,</a>
+														<a href="#">#fundrising&gt;50,</a>
+														<a href="#">#earlyinnovat</a>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-1.jpg" alt="">
+												<span>Коваль Петро Іванович</span>
+											</td>
+											<td>Чоловіча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#earlyinnovator</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>105</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="d-flex align-items-center">
+												<div class="form-check gray">
+													<input type="checkbox" class="form-check-input">
+												</div>
+												<img src="img/users/img-2.jpg" alt="">
+												<span>Андрейчук Дана Йосипівна</span>
+											</td>
+											<td>Жіноча</td>
+											<td>18-25</td>
+											<td>Фастівський осередок</td>
+											<td><a href="#" class="qela-tag">#activity>4,</a><a href="#" class="qela-tag">#fundrising>50</a></td>
+											<td>
+												<div class="qela-voice">
+													<div class="body-voice">
+														<img src="img/users/coin.svg" alt="">
+														<span>215</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="qela-verification non">
+													<span class="ic-success"></span>
+												</div>
+											</td>
+											<td>
+												<div class="qela-actions">
+													<button type="button" class="ic-edit"></button>
+													<button type="button" class="ic-mail"></button>
+													<button type="button" class="ic-stop"></button>
+													<button type="button" class="ic-delete"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.js"></script>
+<script src="js/vendors.js"></script>
+</body>
+
+</html>

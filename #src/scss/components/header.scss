@@ -23,6 +23,8 @@ header {
 
 .qela-search {
 	margin: 0px 18px 0px 0px;
+	display: flex;
+	justify-content: flex-end;
 	flex: 1 1 auto;
 
 	.qela-wrapper {
@@ -32,6 +34,18 @@ header {
 		position: relative;
 		transition: all 0.3s ease 0s;
 		width: 100%;
+
+		button {
+			padding: 5px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+
+			&::before {
+				font-size: 24px;
+			}
+		}
 
 		@media (max-width:($md3+px)) {
 			position: absolute;

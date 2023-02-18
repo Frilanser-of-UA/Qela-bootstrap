@@ -8,10 +8,10 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	};
 }
 
-document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__btn');
-	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__item');
+document.querySelectorAll('.qela-dropdown').forEach(function (dropDownWrapper) {
+	const dropDownBtn = dropDownWrapper.querySelector('.dropdown-btn');
+	const dropDownList = dropDownWrapper.querySelector('.dropdown-list');
+	const dropDownListItems = dropDownList.querySelectorAll('.dropdown-item');
 
 	// Клик по кнопке. Открыть/Закрыть select
 	dropDownBtn.addEventListener('click', function (e) {
@@ -27,7 +27,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 			if (this.classList.contains('not-visible')) {
 				this.classList.remove('not-visible');
 			} else {
-				const activeLink = dropDownList.querySelector('.dropdown__item.not-visible');
+				const activeLink = dropDownList.querySelector('.dropdown-item.not-visible');
 				if (activeLink) {
 					activeLink.classList.remove('not-visible');
 				}
@@ -61,12 +61,4 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 		}
 	});
 });
-
-const dropdownMob = document.querySelector('.filter__button-mob');
-if (dropdownMob) {
-	dropdownMob.addEventListener("click", function (e) {
-		dropdownMob.classList.toggle('visible-mob');
-		document.querySelector('.filter__body').classList.toggle('visible-mob')
-	});
-}
 // ============================================
