@@ -10885,6 +10885,45 @@ h2 {
 .qela-modal .modal-footer button:not(:last-child) {
   margin: 0px 8px 0px 0px;
 }
+.qela-modal.modal-md .modal-header {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  justify-content: center;
+}
+@media (max-width: 567.98px) {
+  .qela-modal.modal-md .modal-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+}
+.qela-modal.modal-md .modal-body {
+  padding: 0 40px 40px 40px;
+}
+@media (max-width: 567.98px) {
+  .qela-modal.modal-md .modal-body {
+    padding: 0 20px 20px 20px;
+  }
+}
+.qela-modal.modal-md .modal-footer {
+  padding: 0 40px 40px 40px;
+}
+@media (max-width: 567.98px) {
+  .qela-modal.modal-md .modal-footer {
+    padding: 0 20px 20px 20px;
+  }
+}
+.qela-modal .qela-form {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+}
+.qela-modal .qela-form button {
+  flex: 1 1 auto;
+}
 
 header {
   height: 80px;

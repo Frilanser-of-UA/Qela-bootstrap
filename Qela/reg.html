@@ -10,7 +10,8 @@
 </head>
 
 <body>
-	<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
+	<div id="app" v-cloak>
+		<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
 	<div class="container-fluid h-100 ">
 		<div class="row h-100 position-relative">
 			<div class="col-1 d-flex align-items-center">
@@ -149,144 +150,145 @@
 	</div>
 
 </header>
-	<main id="app" v-cloak>
-		<!-- Форма регистрации -->
-		<div class="qela-conatiner-min">
-			<div class="qela-form">
-				<div class="row">
-					<div class="col-12">
-						<h1>Регістрація</h1>
-					</div>
-				</div>
-				<div class="row">
-					<form class="col-12">
-						<div class="row gy-3">
-							<div class="col-md-6">
-								<label for="inputText" class="form-label">Ім'я</label>
-								<input type="text" class="form-control invalid" id="inputText" placeholder="Введіть ім'я">
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-md-6">
-								<label for="inputText2" class="form-label">Призвіще</label>
-								<input type="text" class="form-control" id="inputText2" placeholder="Введіть призвіще">
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-12">
-								<label for="inputEmail1" class="form-label">Email</label>
-								<input type="email" placeholder="Введіть email" class="form-control" id="inputEmail1">
-							</div>
-							<div class="col-12">
-								<label for="inputPassword1" class="form-label">Пароль</label>
-								<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword1">
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-12">
-								<label for="inputPassword2" class="form-label">Повторіть пароль ще раз</label>
-								<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword2">
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-12">
-								<label for="textarea1" class="form-label">Деталі повідомлення</label>
-								<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
-								<span class="form-error">Error text</span>
-							</div>
+		<main>
+			<!-- Форма регистрации -->
+			<div class="qela-conatiner-min">
+				<div class="qela-form">
+					<div class="row">
+						<div class="col-12">
+							<h1>Регістрація</h1>
 						</div>
-						<hr>
-						<div class="row gy-3">
-							<div class="col-md-6">
-								<label class="form-label">Селект multiple</label>
-								<div class="invalid">
-									<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" deselect-label="" placeholder="Select from the list" :options="options" :multiple="true"></v-multi-select>
+					</div>
+					<div class="row">
+						<form class="col-12">
+							<div class="row gy-3">
+								<div class="col-md-6">
+									<label for="inputText" class="form-label">Ім'я</label>
+									<input type="text" class="form-control invalid" id="inputText" placeholder="Введіть ім'я">
+									<span class="form-error">Error text</span>
 								</div>
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-md-6">
-								<label class="form-label">Селект multiple</label>
-								<div>
-									<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
+								<div class="col-md-6">
+									<label for="inputText2" class="form-label">Призвіще</label>
+									<input type="text" class="form-control" id="inputText2" placeholder="Введіть призвіще">
+									<span class="form-error">Error text</span>
 								</div>
-								<span class="form-error">Error text</span>
-							</div>
-							<div class="col-12">
-								<label class="form-label">Селект</label>
-								<div>
-									<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								<div class="col-12">
+									<label for="inputEmail1" class="form-label">Email</label>
+									<input type="email" placeholder="Введіть email" class="form-control" id="inputEmail1">
 								</div>
-								<span class="form-error">Error text</span>
+								<div class="col-12">
+									<label for="inputPassword1" class="form-label">Пароль</label>
+									<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword1">
+									<span class="form-error">Error text</span>
+								</div>
+								<div class="col-12">
+									<label for="inputPassword2" class="form-label">Повторіть пароль ще раз</label>
+									<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword2">
+									<span class="form-error">Error text</span>
+								</div>
+								<div class="col-12">
+									<label for="textarea1" class="form-label">Деталі повідомлення</label>
+									<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
+									<span class="form-error">Error text</span>
+								</div>
 							</div>
-							<div class="col-12">
-								<div class="datepicker">
-									<div class="datepicker__name">Датапикер</div>
-									<div class="datepicker__row">
-										<div class="datepicker__item">
-											<div class="datepicker__wrap">
-												<h3>Start</h3>
-												<div class="datepicker__buttons">
-													<button type="button">24HR</button>
-													<button type="button" class="active">am/ PM</button>
+							<hr>
+							<div class="row gy-3">
+								<div class="col-md-6">
+									<label class="form-label">Селект multiple</label>
+									<div class="invalid">
+										<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" deselect-label="" placeholder="Select from the list" :options="options" :multiple="true"></v-multi-select>
+									</div>
+									<span class="form-error">Error text</span>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Селект multiple</label>
+									<div>
+										<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
+									</div>
+									<span class="form-error">Error text</span>
+								</div>
+								<div class="col-12">
+									<label class="form-label">Селект</label>
+									<div>
+										<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+									</div>
+									<span class="form-error">Error text</span>
+								</div>
+								<div class="col-12">
+									<div class="datepicker">
+										<div class="datepicker__name">Датапикер</div>
+										<div class="datepicker__row">
+											<div class="datepicker__item">
+												<div class="datepicker__wrap">
+													<h3>Start</h3>
+													<div class="datepicker__buttons">
+														<button type="button">24HR</button>
+														<button type="button" class="active">am/ PM</button>
+													</div>
 												</div>
+												<div class="invalid">
+													<v-date-picker v-model="date" />
+												</div>
+												<span class="form-error">Set start date and time</span>
 											</div>
-											<div class="invalid">
-												<v-date-picker v-model="date" />
+											<div class="datepicker__sep">
+												<span class="ic-arrow"></span>
 											</div>
-											<span class="form-error">Set start date and time</span>
-										</div>
-										<div class="datepicker__sep">
-											<span class="ic-arrow"></span>
-										</div>
-										<div class="datepicker__item">
-											<div class="datepicker__wrap">
-												<h3>End</h3>
+											<div class="datepicker__item">
+												<div class="datepicker__wrap">
+													<h3>End</h3>
+												</div>
+												<div>
+													<v-date-picker v-model="date2" />
+												</div>
+												<span class="form-error">Set start date and time</span>
 											</div>
-											<div>
-												<v-date-picker v-model="date2" />
-											</div>
-											<span class="form-error">Set start date and time</span>
 										</div>
 									</div>
 								</div>
+								<div class="col-12">
+									<div class="qela-checkbox-label">Гендер</div>
+								</div>
+								<div class="col-12 d-flex flex-wrap ">
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="Check2">
+										<label class="form-check-label" for="Check2">Чоловіча</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label" for="Check3">Жіноча</label>
+										<input type="checkbox" class="form-check-input invalid" id="Check3">
+									</div>
+									<div class="form-check">
+										<label class="form-check-label" for="Check4">Свій варіант</label>
+										<input type="checkbox" class="form-check-input" id="Check4">
+									</div>
+									<div class="form-check">
+										<label class="form-check-label" for="Check5">Утримаюсь</label>
+										<input type="checkbox" class="form-check-input" id="Check5">
+									</div>
+									<div class="form-check">
+										<label class="form-check-label" for="Check6">Не важливо</label>
+										<input type="checkbox" class="form-check-input" id="Check6">
+									</div>
+								</div>
+								<div class="col-12 qela-mt-2">
+									<div class="form-check">
+										<label class="form-check-label" for="Check1">Відправляючи цю форму ви погоджуєтесь з <a href="#" target="_blank">правилами конфиденційності</a></label>
+										<input type="checkbox" class="form-check-input" id="Check1">
+									</div>
+								</div>
+								<div class="col-12 qela-buttons">
+									<button type="reset" class="btn btn-light">Відмінити</button>
+									<button type="submit" class="btn btn-primary">Зареєструватись</button>
+								</div>
 							</div>
-							<div class="col-12">
-								<div class="qela-checkbox-label">Гендер</div>
-							</div>
-							<div class="col-12 d-flex flex-wrap ">
-								<div class="form-check">
-									<input type="checkbox" class="form-check-input" id="Check2">
-									<label class="form-check-label" for="Check2">Чоловіча</label>
-								</div>
-								<div class="form-check">
-									<label class="form-check-label" for="Check3">Жіноча</label>
-									<input type="checkbox" class="form-check-input invalid" id="Check3">
-								</div>
-								<div class="form-check">
-									<label class="form-check-label" for="Check4">Свій варіант</label>
-									<input type="checkbox" class="form-check-input" id="Check4">
-								</div>
-								<div class="form-check">
-									<label class="form-check-label" for="Check5">Утримаюсь</label>
-									<input type="checkbox" class="form-check-input" id="Check5">
-								</div>
-								<div class="form-check">
-									<label class="form-check-label" for="Check6">Не важливо</label>
-									<input type="checkbox" class="form-check-input" id="Check6">
-								</div>
-							</div>
-							<div class="col-12 qela-mt-2">
-								<div class="form-check">
-									<label class="form-check-label" for="Check1">Відправляючи цю форму ви погоджуєтесь з <a href="#" target="_blank">правилами конфиденційності</a></label>
-									<input type="checkbox" class="form-check-input" id="Check1">
-								</div>
-							</div>
-							<div class="col-12 qela-buttons">
-								<button type="reset" class="btn btn-light">Відмінити</button>
-								<button type="submit" class="btn btn-primary">Зареєструватись</button>
-							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
-	</main>
+		</main>
+	</div>
 	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
 	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
