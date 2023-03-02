@@ -19,8 +19,8 @@
 			</div>
 		</main>
 		<!-- Modal sm-->
-		<div class="modal modal-sm fade qela-modal" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
+		<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h1 class="modal-title" id="modal1Label">Модальне вікно</h1>
@@ -37,49 +37,47 @@
 			</div>
 		</div>
 		<!-- Modal lg-->
-		<div class="modal modal-md fade qela-modal" id="modal2" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
+		<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h1 class="modal-title" id="modal1Label">Відправити Email</h1>
 						<button type="button" class="qela-btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="modal-body">
-						<div class="qela-form">
-							<form class="col-12">
-								<div class="row gy-3">
-									<div class="col-12">
-										<label class="form-label">Список юзерів (4)</label>
-										<div>
-											<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
-										</div>
-										<span class="form-error">Error text</span>
-									</div>
-									<div class="col-12">
-										<label class="form-label">Тип повідомлення</label>
-										<div>
-											<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-										</div>
-										<span class="form-error">Error text</span>
-									</div>
-									<div class="col-12">
-										<label for="inputText" class="form-label">Тема повідомлення</label>
-										<input type="text" class="form-control" id="inputText" placeholder="Назва нового повідомлення">
-										<span class="form-error">Error text</span>
-									</div>
-									<div class="col-12">
-										<label for="textarea1" class="form-label">Деталі повідомлення</label>
-										<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
-										<span class="form-error">Error text</span>
-									</div>
-									<div class="col-12 mt-4 qela-buttons">
-										<button type="reset" class="btn btn-light" data-bs-dismiss="modal">Відмінити</button>
-										<button type="submit" class="btn btn-primary">Зареєструватись</button>
-									</div>
+					<form class="qela-form">
+						<div class="modal-body row gy-3">
+							<div class="col-12">
+								<label class="form-label">Список юзерів (4)</label>
+								<div>
+									<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
 								</div>
-							</form>
+								<span class="form-error">Error text</span>
+							</div>
+							<div class="col-12">
+								<label class="form-label">Тип повідомлення</label>
+								<div>
+									<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								</div>
+								<span class="form-error">Error text</span>
+							</div>
+							<div class="col-12">
+								<label for="inputText" class="form-label">Тема повідомлення</label>
+								<input type="text" class="form-control" id="inputText" placeholder="Назва нового повідомлення">
+								<span class="form-error">Error text</span>
+							</div>
+							<div class="col-12">
+								<label for="textarea1" class="form-label">Деталі повідомлення</label>
+								<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
+								<span class="form-error">Error text</span>
+							</div>
 						</div>
-					</div>
+						<div class="modal-footer row gy-3">
+							<div class="col-12 mt-4 qela-buttons">
+								<button type="reset" class="btn btn-light" data-bs-dismiss="modal">Відмінити</button>
+								<button type="submit" class="btn btn-primary">Зареєструватись</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

@@ -10253,6 +10253,27 @@ body {
   display: none;
 }
 
+.btn-input {
+  background: #F6F6F6;
+  border-color: rgba(126, 131, 137, 0.53);
+  padding: 10px 6px;
+}
+.btn-input::before {
+  font-size: 16px;
+}
+.btn-input:hover {
+  color: #fff;
+  background-color: #978FFF;
+  border-color: #978FFF;
+  box-shadow: 0px 0px 0px 1px #978FFF;
+}
+.btn-input:disabled {
+  background: #CACACA;
+}
+.btn-input:disabled::before {
+  color: #fff;
+}
+
 .multiselect {
   cursor: pointer;
 }
@@ -10272,6 +10293,7 @@ body {
   padding: 0px 42px 0 16px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border-radius: 8px;
   border: 1px solid rgba(126, 131, 137, 0.53);
 }
@@ -10282,9 +10304,7 @@ body {
 }
 
 .multiselect__tags-wrap {
-  margin: 3.5px 0px 2px -12px;
-  display: flex;
-  flex-wrap: wrap;
+  margin: 3.5px 0px 3px -12px;
 }
 
 .multiselect__tag {
@@ -10295,6 +10315,7 @@ body {
   color: #000;
   line-height: 120%;
   background: #E5E3FF;
+  display: inline-flex;
 }
 
 .multiselect__tag-icon {
@@ -10309,13 +10330,14 @@ body {
   border-radius: 4px;
   background-color: #E5E3FF;
 }
-@media (any-hover: hover) {
-  .multiselect__tag-icon:hover {
-    background-color: #CCC8FF;
-  }
-  .multiselect__tag-icon:hover::after {
-    color: #000;
-  }
+.multiselect__tag-icon:focus {
+  background-color: #CCC8FF;
+}
+.multiselect__tag-icon:hover {
+  background-color: #CCC8FF;
+}
+.multiselect__tag-icon:hover::after {
+  color: #000;
 }
 .multiselect__tag-icon::after {
   content: "\e906";
@@ -10343,6 +10365,15 @@ body {
   margin-top: 0;
   transform: translate(-50%, -50%);
   border: none;
+}
+
+.multiselect__input {
+  margin: 0;
+  padding: 5px 0;
+}
+.multiselect__input::placeholder {
+  color: #7E8389;
+  font-weight: 500;
 }
 
 .multiselect__placeholder {
@@ -10427,89 +10458,9 @@ body {
   border-color: #FFADAD;
 }
 
-.datepicker h3 {
-  font-size: 15px;
-  line-height: 18px;
-  padding: 0px 0px 9px 0px;
-}
-.datepicker__name {
-  margin: 0px 0px 8px 0px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  color: #4D4D4D;
-}
-.datepicker__row {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto 30px auto;
-}
-@media (max-width: 767.98px) {
-  .datepicker__row {
-    grid-template-columns: 1fr;
-  }
-}
-.datepicker__item {
-  background: #F0EEFF;
-  border-radius: 8px;
-  padding: 12px;
-}
-.datepicker__wrap {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 0px 16px 0px;
-  flex: 1 1 auto;
-}
-.datepicker__buttons button {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #4D4D4D;
-  border-radius: 4px;
-  background-color: #F5F4FF;
-  padding: 6px 10px;
-  border: none;
-  transition: color 0.3s ease 0s, background 0.3s ease 0s;
-}
-@media (any-hover: hover) {
-  .datepicker__buttons button:hover {
-    color: #000;
-    background-color: #F0EEFF;
-  }
-}
-.datepicker__buttons button.active {
-  color: #fff;
-  background-color: #978FFF;
-}
-.datepicker__buttons button.active:disabled {
-  background: #CACACA;
-  color: #fff;
-}
-.datepicker__buttons button:disabled {
-  pointer-events: none;
-  background: #EFEFEF;
-  color: #767676;
-}
-.datepicker__sep {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.datepicker__sep span {
-  font-size: 18px;
-  padding: 6px;
-  background-color: #F0EEFF;
-  border-radius: 50%;
-}
-@media (max-width: 767.98px) {
-  .datepicker__sep span {
-    transform: rotate(90deg);
-  }
-}
-
 .dp__main {
   font-family: "Inter";
+  position: relative;
 }
 
 .dp__input {
@@ -10592,11 +10543,19 @@ body {
   display: none;
 }
 
+.dp__calendar_header {
+  margin-bottom: 8px;
+}
+
 .dp__calendar_header_item {
   font-size: 12px;
   line-height: 16px;
+  height: 32px;
+  width: 40px;
+  flex: 0 0 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   letter-spacing: 0.4px;
   color: #7E8389;
@@ -10605,6 +10564,48 @@ body {
 
 .dp__cell_offset {
   color: #BBBDC0;
+}
+
+.dp__cell_inner {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+.dp__today {
+  border: 2px solid #978FFF;
+}
+
+.dp__button {
+  border-top: 1px solid #E8E8E8;
+}
+
+.dp__button svg {
+  height: 24px;
+}
+
+.dp__action_row {
+  border-radius: 0 0 17px 17px;
+  border-top: 1px solid #E8E8E8;
+}
+
+.dp__selection_preview {
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.4px;
+  color: #000;
+}
+
+.dp__action {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #978FFF;
 }
 
 .invalid .dp__input {
@@ -10628,6 +10629,10 @@ body {
   .invalid .dp__input:disabled:hover {
     border-color: #D1D1D2;
   }
+}
+
+.server-error {
+  color: #E20000;
 }
 
 h1 {
@@ -10843,19 +10848,7 @@ h2 {
   }
 }
 
-.qela-modal .modal-header {
-  padding-top: 32px;
-  padding-bottom: 8px;
-  padding-right: 40px;
-}
-.qela-modal h1 {
-  text-align: center;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 120%;
-  color: #000;
-}
-.qela-modal .qela-btn-close {
+.modal .qela-btn-close {
   position: absolute;
   display: block;
   padding: 7px;
@@ -10864,65 +10857,81 @@ h2 {
   right: 10px;
   border: none;
 }
-.qela-modal .qela-btn-close::before {
+.modal .qela-btn-close::before {
   font-size: 18px;
 }
-.qela-modal .modal-body {
-  padding-top: 0;
-}
-.qela-modal .modal-body p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 120%;
-}
-.qela-modal .modal-footer {
-  display: flex;
-  padding: 0 24px 24px 24px;
-}
-.qela-modal .modal-footer button {
-  flex: 1 1 auto;
-}
-.qela-modal .modal-footer button:not(:last-child) {
-  margin: 0px 8px 0px 0px;
-}
-.qela-modal.modal-md .modal-header {
-  padding-top: 40px;
-  padding-bottom: 30px;
-  padding-right: 40px;
-  justify-content: center;
-}
-@media (max-width: 567.98px) {
-  .qela-modal.modal-md .modal-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-  }
-}
-.qela-modal.modal-md .modal-body {
-  padding: 0 40px 40px 40px;
-}
-@media (max-width: 567.98px) {
-  .qela-modal.modal-md .modal-body {
-    padding: 0 20px 20px 20px;
-  }
-}
-.qela-modal.modal-md .modal-footer {
-  padding: 0 40px 40px 40px;
-}
-@media (max-width: 567.98px) {
-  .qela-modal.modal-md .modal-footer {
-    padding: 0 20px 20px 20px;
-  }
-}
-.qela-modal .qela-form {
+.modal .qela-form {
   background-color: transparent;
   padding: 0;
   box-shadow: none;
   border-radius: 0;
   margin: 0;
 }
-.qela-modal .qela-form button {
+.modal .qela-form button {
   flex: 1 1 auto;
+}
+
+.modal-header {
+  padding-top: 32px;
+  padding-bottom: 8px;
+  padding-right: 40px;
+}
+.modal-header h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+
+.modal-body {
+  padding-top: 0;
+}
+.modal-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.modal-footer {
+  display: flex;
+  padding: 0 24px 24px 24px;
+}
+.modal-footer button {
+  flex: 1 1 auto;
+}
+.modal-footer button:not(:last-child) {
+  margin: 0px 8px 0px 0px;
+}
+
+.modal-md .modal-header {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  justify-content: center;
+}
+@media (max-width: 567.98px) {
+  .modal-md .modal-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+}
+.modal-md .modal-body {
+  padding: 0 40px 40px 40px;
+}
+@media (max-width: 567.98px) {
+  .modal-md .modal-body {
+    padding: 0 20px 20px 20px;
+  }
+}
+.modal-md .modal-footer {
+  padding: 0 40px 40px 40px;
+}
+@media (max-width: 567.98px) {
+  .modal-md .modal-footer {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 header {
@@ -11261,6 +11270,51 @@ header .new-logo-mob img {
     transform: translate(-50%, -50%) rotate(45deg);
     bottom: 50%;
   }
+}
+
+.qela-card {
+  background-color: #fff;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 30px;
+}
+.qela-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qela-card__top h2 {
+  margin: 0;
+}
+
+.qela-filters {
+  display: flex;
+  align-items: center;
+}
+.qela-filters .qela-filter:not(:last-child) {
+  margin: 0px 16px 0px 0px;
+}
+
+.qela-commits {
+  display: flex;
+  align-items: center;
+}
+.qela-commits .qela-item {
+  display: flex;
+  align-items: center;
+}
+.qela-commits .qela-item:not(:last-child) {
+  margin: 0px 16px 0px 0px;
+}
+.qela-commits .qela-item::before {
+  margin: 0px 8px 0px 0px;
+}
+.qela-commits .qela-item.blue::before {
+  color: rgb(57, 175, 242);
+}
+.qela-commits .qela-item.green::before {
+  color: rgb(132, 204, 130);
 }
 
 .qela-form {

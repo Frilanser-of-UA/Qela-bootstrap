@@ -2,3 +2,7 @@
 @import "form/multyselect";
 @import "form/checkbox";
 @import "form/datapiker";
+
+.server-error {
+	color: $red;
+}

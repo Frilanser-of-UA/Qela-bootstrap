@@ -1,18 +1,4 @@
-.qela-modal {
-	.modal-header {
-		padding-top: 32px;
-		padding-bottom: 8px;
-		padding-right: 40px;
-	}
-
-	h1 {
-		text-align: center;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 120%;
-		color: $black;
-	}
-
+.modal {
 	.qela-btn-close {
 		position: absolute;
 		display: block;
@@ -27,61 +13,6 @@
 		}
 	}
 
-	.modal-body {
-		padding-top: 0;
-
-		p {
-			margin: 0;
-			font-size: 14px;
-			line-height: 120%;
-		}
-	}
-
-	.modal-footer {
-		display: flex;
-		padding: 0 24px 24px 24px;
-
-		button {
-			flex: 1 1 auto;
-
-			&:not(:last-child) {
-				margin: 0px 8px 0px 0px;
-			}
-		}
-	}
-
-	&.modal-md {
-		.modal-header {
-			padding-top: 40px;
-			padding-bottom: 30px;
-			padding-right: 40px;
-			justify-content: center;
-
-			@media (max-width:($md4+px)) {
-				padding-top: 20px;
-				padding-bottom: 20px;
-				padding-right: 20px;
-			}
-		}
-
-		.modal-body {
-			padding: 0 40px 40px 40px;
-
-			@media (max-width:($md4+px)) {
-				padding: 0 20px 20px 20px;
-			}
-		}
-
-		.modal-footer {
-			padding: 0 40px 40px 40px;
-
-			@media (max-width:($md4+px)) {
-				padding: 0 20px 20px 20px;
-			}
-
-		}
-	}
-
 	.qela-form {
 		background-color: transparent;
 		padding: 0;
@@ -92,5 +23,74 @@
 		button {
 			flex: 1 1 auto;
 		}
+	}
+}
+
+.modal-header {
+	padding-top: 32px;
+	padding-bottom: 8px;
+	padding-right: 40px;
+
+	h1 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 120%;
+		color: $black;
+	}
+}
+
+.modal-body {
+	padding-top: 0;
+
+	p {
+		margin: 0;
+		font-size: 14px;
+		line-height: 120%;
+	}
+}
+
+.modal-footer {
+	display: flex;
+	padding: 0 24px 24px 24px;
+
+	button {
+		flex: 1 1 auto;
+
+		&:not(:last-child) {
+			margin: 0px 8px 0px 0px;
+		}
+	}
+}
+
+.modal-md {
+	.modal-header {
+		padding-top: 40px;
+		padding-bottom: 30px;
+		padding-right: 40px;
+		justify-content: center;
+
+		@media (max-width:($md4+px)) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.modal-body {
+		padding: 0 40px 40px 40px;
+
+		@media (max-width:($md4+px)) {
+			padding: 0 20px 20px 20px;
+		}
+	}
+
+	.modal-footer {
+		padding: 0 40px 40px 40px;
+
+		@media (max-width:($md4+px)) {
+			padding: 0 20px 20px 20px;
+		}
+
 	}
 }

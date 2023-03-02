@@ -187,6 +187,13 @@
 									<span class="form-error">Error text</span>
 								</div>
 								<div class="col-12">
+									<label for="inputPassword1" class="form-label">input-group</label>
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+										<button class="btn btn-outline-secondary btn-input ic-delete" type="button" id="button-addon2"></button>
+									</div>
+								</div>
+								<div class="col-12">
 									<label for="textarea1" class="form-label">Деталі повідомлення</label>
 									<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
 									<span class="form-error">Error text</span>
@@ -197,14 +204,14 @@
 								<div class="col-md-6">
 									<label class="form-label">Селект multiple</label>
 									<div class="invalid">
-										<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" deselect-label="" placeholder="Select from the list" :options="options" :multiple="true"></v-multi-select>
+										<v-multi-select v-model="value1" :searchable="true" open-direction=" bottom" deselect-label="" :options="options" :multiple="true"></v-multi-select>
 									</div>
 									<span class="form-error">Error text</span>
 								</div>
 								<div class="col-md-6">
 									<label class="form-label">Селект multiple</label>
 									<div>
-										<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
+										<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
 									</div>
 									<span class="form-error">Error text</span>
 								</div>
@@ -216,36 +223,11 @@
 									<span class="form-error">Error text</span>
 								</div>
 								<div class="col-12">
-									<div class="datepicker">
-										<div class="datepicker__name">Датапикер</div>
-										<div class="datepicker__row">
-											<div class="datepicker__item">
-												<div class="datepicker__wrap">
-													<h3>Start</h3>
-													<div class="datepicker__buttons">
-														<button type="button">24HR</button>
-														<button type="button" class="active">am/ PM</button>
-													</div>
-												</div>
-												<div class="invalid">
-													<v-date-picker v-model="date" />
-												</div>
-												<span class="form-error">Set start date and time</span>
-											</div>
-											<div class="datepicker__sep">
-												<span class="ic-arrow"></span>
-											</div>
-											<div class="datepicker__item">
-												<div class="datepicker__wrap">
-													<h3>End</h3>
-												</div>
-												<div>
-													<v-date-picker v-model="date2" />
-												</div>
-												<span class="form-error">Set start date and time</span>
-											</div>
-										</div>
+									<label class="form-label">Датапикер</label>
+									<div class="">
+										<v-date-picker v-model="date" range multi-calendars />
 									</div>
+									<span class="form-error">Set start date and time</span>
 								</div>
 								<div class="col-12">
 									<div class="qela-checkbox-label">Гендер</div>
@@ -300,7 +282,6 @@
 			},
 			data() {
 				return {
-					date2: new Date(),
 					date: new Date(),
 					value1: '',
 					value2: '',
@@ -309,7 +290,11 @@
 						'Пункт 1 sadafdf',
 						'Пункт 2',
 						'Пункт 3',
-						'Пункт 4'
+						'Пункт 4',
+						'Пункт 1 assadafdf',
+						'Пункт 2sades',
+						'Пункт 3sd',
+						'Пункт 4sd'
 					]
 				}
 			},
