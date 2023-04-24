@@ -4,12 +4,12 @@
 
 .multiselect--active {
 	.multiselect__tags {
-		border-color: $violet;
+		border-color: $purple;
 		border-bottom-color: $white;
 
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $violet;
+				border-color: $purple;
 				border-bottom-color: $white;
 			}
 		}
@@ -22,11 +22,11 @@
 	align-items: center;
 	flex-wrap: wrap;
 	border-radius: 8px;
-	border: 1px solid $gray-500;
+	border: 1px solid $gray-500-500;
 
 	@media (any-hover:hover) {
 		&:hover {
-			border-color: $violet;
+			border-color: $purple;
 		}
 	}
 }
@@ -42,7 +42,7 @@
 	margin-bottom: 2px;
 	color: $black;
 	line-height: 120%;
-	background: $violet-light-2;
+	background: $purple;
 	display: inline-flex;
 }
 
@@ -56,14 +56,14 @@
 	height: 24px;
 	padding: 4px;
 	border-radius: 4px;
-	background-color: $violet-light-2;
+	background-color: $purple;
 
 	&:focus {
-		background-color: $violet-light-3;
+		background-color: $purple;
 	}
 
 	&:hover {
-		background-color: $violet-light-3;
+		background-color: $purple;
 
 		&::after {
 			color: $black;
@@ -74,7 +74,7 @@
 		content: "\e906";
 		font-family: "icons";
 		font-size: 16px;
-		color: $gray-600;
+		color: $gray-500-600;
 	}
 }
 
@@ -105,19 +105,19 @@
 	padding: 5px 0;
 
 	&::placeholder {
-		color: $gray-700;
+		color: $gray-500-700;
 		font-weight: 500;
 	}
 }
 
 .multiselect__placeholder {
-	color: $gray-600;
+	color: $gray-500-600;
 	margin-bottom: 0px;
 	padding-top: 0px;
 }
 
 .multiselect__content-wrapper {
-	border-color: $violet;
+	border-color: $purple;
 	border-top-color: transparent;
 	border-radius: 0 0 8px 8px;
 }
@@ -139,12 +139,12 @@
 }
 
 .multiselect__option--selected {
-	background: $violet-light;
+	background: $purple;
 	color: $black;
 	font-weight: 400;
 
 	&.multiselect__option--highlight {
-		background: $violet-light;
+		background: $purple;
 		color: $black;
 		font-weight: 400;
 	}
@@ -158,12 +158,12 @@
 .invalid {
 	.multiselect--active {
 		.multiselect__tags {
-			border-color: $red-light-2;
+			border-color: $red;
 			border-bottom-color: $white;
 
 			@media (any-hover:hover) {
 				&:hover {
-					border-color: $red-light-2;
+					border-color: $red;
 					border-bottom-color: $white;
 				}
 			}
@@ -171,17 +171,17 @@
 	}
 
 	.multiselect__tags {
-		border: 1px solid $red-light-2;
+		border: 1px solid $red;
 
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $red-light-2;
+				border-color: $red;
 			}
 		}
 	}
 
 	.multiselect__content-wrapper {
-		border-color: $red-light-2;
+		border-color: $red;
 		border-top-color: transparent;
 	}
 

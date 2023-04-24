@@ -8,19 +8,19 @@
 .dp__input {
 	height: 40px;
 	border-radius: $border-radius;
-	color: $gray-01;
+	color: $gray-500;
 	border-color: $input-border-color;
 
 	@media (any-hover:hover) {
 		&:hover {
-			border-color: $violet;
+			border-color: $purple;
 		}
 	}
 
 	&:focus {
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $violet;
+				border-color: $purple;
 			}
 		}
 	}
@@ -114,12 +114,12 @@
 	justify-content: center;
 	text-align: center;
 	letter-spacing: 0.4px;
-	color: $gray-700;
+	color: $gray-500-700;
 	font-weight: 400;
 }
 
 .dp__cell_offset {
-	color: $lightgray-3;
+	color: $gray-500;
 }
 
 .dp__cell_inner {
@@ -136,7 +136,7 @@
 .dp__pointer {}
 
 .dp__today {
-	border: 2px solid $violet;
+	border: 2px solid $purple;
 
 }
 
@@ -164,24 +164,24 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 100%;
-	color: $violet;
+	color: $purple;
 }
 
 .invalid {
 	.dp__input {
-		color: $gray-01;
-		border-color: $red-light-2;
+		color: $gray-500;
+		border-color: $red;
 
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $red-light-2;
+				border-color: $red;
 			}
 		}
 
 		&:focus {
 			@media (any-hover:hover) {
 				&:hover {
-					border-color: $red-light-2;
+					border-color: $red;
 				}
 			}
 		}

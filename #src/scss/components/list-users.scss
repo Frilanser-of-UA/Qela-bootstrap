@@ -26,12 +26,12 @@
 .qela-download {
 	margin: 0px 0px 0px auto;
 	font-size: 24px;
-	color: $gray-700;
+	color: $gray-500-700;
 	text-decoration: none;
 
 	@media (any-hover:hover) {
 		&:hover {
-			color: $violet;
+			color: $purple;
 		}
 	}
 }

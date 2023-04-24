@@ -30,7 +30,7 @@
 			font-weight: 400;
 			font-size: 11px;
 			line-height: 13px;
-			color: $gray-700;
+			color: $gray-500-700;
 		}
 
 		td {
@@ -68,7 +68,7 @@
 
 	@media (any-hover:hover) {
 		&:hover {
-			color: $violet;
+			color: $purple;
 		}
 	}
 }
@@ -99,7 +99,7 @@
 	&.non {
 		span {
 			color: $red;
-			background-color: $red-light-1;
+			background-color: $red;
 
 		}
 	}
@@ -114,7 +114,7 @@
 		width: 24px;
 		height: 24px;
 		color: $green;
-		background-color: $green-lite;
+		background-color: $green;
 		border-radius: 50%;
 
 		&::before {
@@ -128,7 +128,7 @@
 	align-items: center;
 
 	button {
-		color: $gray-700;
+		color: $gray-500-700;
 		transition: color 0.3s ease 0s;
 		background-color: transparent;
 		border: none;
@@ -138,7 +138,7 @@
 		@media (any-hover:hover) {
 			&:hover {
 				&::before {
-					color: $violet
+					color: $purple
 				}
 			}
 		}

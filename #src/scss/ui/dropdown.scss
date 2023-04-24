@@ -5,7 +5,7 @@
 		align-items: center;
 		border: none;
 		background-color: transparent;
-		color: $gray-700;
+		color: $gray-500-700;
 		transition: color 0.2s ease 0s;
 
 		&.show {
@@ -20,7 +20,7 @@
 		&::before {
 			font-size: 12px;
 			margin: 0px 0px 0px 4px;
-			color: $gray-700;
+			color: $gray-500-700;
 			transition: all 0.2s ease 0s;
 		}
 
@@ -53,14 +53,14 @@
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 17px;
-		color: $gray-700;
+		color: $gray-500-700;
 		margin: 0px 10px 0px 0px;
 	}
 
 	&.small {
 		.dropdown-btn {
 			font-size: 11px;
-			color: $gray-700;
+			color: $gray-500-700;
 			padding: 0px;
 
 			&::before {
@@ -88,7 +88,7 @@
 
 		&::before {
 			font-size: 14px;
-			color: $gray-700;
+			color: $gray-500-700;
 			margin: 0px 0px 0px 4px;
 			transition: transform 0.3s ease 0s;
 		}
@@ -129,7 +129,7 @@
 	.dropdown-item {
 		font-size: 11px;
 		line-height: 18px;
-		color: $gray-700;
+		color: $gray-500-700;
 		cursor: pointer;
 		transition: color 0.3s ease 0s;
 		position: relative;

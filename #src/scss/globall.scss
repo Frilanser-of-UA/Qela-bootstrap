@@ -1,4 +1,4 @@
-body {
+.qela-body {
 	padding-top: 120px;
 	padding-left: 80px;
 
@@ -28,4 +28,13 @@ body {
 		padding: 0 20px;
 		max-width: 100%;
 	}
+}
+
+.bg-blue-200 {
+	color: $blue-200;
+}
+
+.beta {
+	color: $yellow-300;
+	background-color: $indigo-300;
 }

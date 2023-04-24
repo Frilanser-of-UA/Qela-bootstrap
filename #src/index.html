@@ -8,12 +8,29 @@
 <body>
 	<main class="main">
 		<div class="container">
-			<h2 class="title">Верстка сайта "Qela":</h2>
-			<ol class="list">
-				<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/reg.html" class="link">Форма регистрации</a></li>
-				<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/users.html" class="link">Таблиця з користувачами</a></li>
-				<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/modal.html" class="link">Модальне вікно</a></li>
-			</ol>
+			<h2 class="title">Верстка "Qela":</h2>
+			<div class="flex">
+				<div>
+					<h3 class="subtitle">Global components:</h3>
+					<ol class="list">
+						<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/icons.html" class="link">Icons</a></li>
+						<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/buttons.html" class="link">Buttons</a></li>
+					</ol>
+				</div>
+				<div>
+					<h3 class="subtitle">Page components:</h3>
+					<ol class="list">
+					</ol>
+				</div>
+				<div>
+					<h3 class="subtitle">Pages semples:</h3>
+					<ol class="list">
+						<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/reg.html" class="link">Form</a></li>
+						<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/users.html" class="link">Table width users</a></li>
+						<li class="item"><a target="_blank" href="http://andreyfront.owlweb.com.ua/Qela/modal.html" class="link">Modals</a></li>
+					</ol>
+				</div>
+			</div>
 		</div>
 	</main>
 </body>
@@ -56,6 +73,10 @@
 		-moz-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
 		padding: 0;
+	}
+
+	main {
+		max-width: 100%;
 	}
 
 	input,
@@ -118,23 +139,37 @@
 	.container {
 		max-width: 1220px;
 		margin: 0 auto;
-		padding: 50px;
+		padding: 50px 10px;
 	}
 
 	.title {
 		font-weight: 700;
-		font-size: 36px;
+		font-size: 32px;
 		color: rgba(235, 231, 145, 0.8);
-		margin: 0px 0px 40px 0px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	.flex {
+		display: flex;
+		gap: 50px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.subtitle {
+		font-weight: 600;
+		margin: 0px 0px 10px 0px;
+		color: rgba(235, 231, 145, 0.8);
+		font-size: 24px;
 	}
 
 	.list {
 		counter-reset: ol-numbers;
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.item:not(:last-child) {
-		margin: 0px 0px 20px 0px;
+		margin: 0px 0px 15px 0px;
 	}
 
 	.list .item {
