@@ -16,14 +16,20 @@
 	&.is-invalid {
 		background-image: none;
 
-		@media (any-hover:hover) {
-			&:hover {
-				border-color: $danger;
-			}
+		&:hover {
+			border-color: $danger;
 		}
 
-		&~.form-error {
-			display: block;
+		&~.btn-input {
+			&:hover {
+				border-color: $danger;
+				color: $danger;
+			}
+
+			&:active {
+				color: $danger  !important;
+				border-color: $danger  !important;
+			}
 		}
 
 		&~.helper-text {
@@ -36,35 +42,47 @@
 	display: block;
 	color: $gray-600;
 	margin-top: 4px;
+	width: 100%;
 }
 
-.form-error {
-	color: $danger;
-	margin-top: 4px;
-	display: none;
+.invalid-feedback {
+	font-size: 1rem;
 }
+
+
 
 .btn-input {
-	background: #F6F6F6;
-	border-color: $gray-500-500;
-	padding: 10px 6px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-color: $gray-400;
+	background: $white;
+	color: $gray-600;
 
 	&::before {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	&:hover {
-		color: $white;
-		background-color: $purple;
-		border-color: $purple;
-		box-shadow: 0px 0px 0px 1px $purple;
+		background: $white;
+		border-color: $secondary;
+		color: $secondary;
+	}
+
+	&:active {
+		color: $secondary  !important;
+		border-color: $secondary  !important;
+		background: $white  !important;
 	}
 
 	&:disabled {
-		background: #CACACA;
+		border-color: $gray-400;
+	}
+}
 
-		&::before {
-			color: $white;
+.has-validation {
+	&.is-invalid {
+		&~.helper-text {
+			display: none;
 		}
 	}
 }

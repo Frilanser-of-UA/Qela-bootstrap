@@ -1,16 +1,24 @@
 .multiselect {
 	cursor: pointer;
+	min-height: 38px;
+
+	&.multiselect--disabled {
+		.multiselect__select {
+			background: transparent;
+			color: rgb(166, 166, 166);
+		}
+	}
 }
 
 .multiselect--active {
 	.multiselect__tags {
-		border-color: $purple;
-		border-bottom-color: $white;
+		border-color: $secondary;
+		border-bottom-color: $input-bg;
 
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $purple;
-				border-bottom-color: $white;
+				border-color: $secondary;
+				border-bottom-color: $input-bg;
 			}
 		}
 	}
@@ -21,28 +29,31 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	border-radius: 8px;
-	border: 1px solid $gray-500-500;
+	border-radius: $input-border-radius;
+	border: 1px solid $input-border-color;
+	background-color: $input-bg;
+	min-height: 38px;
+	transition: border-color 0.2s ease 0s;
 
 	@media (any-hover:hover) {
 		&:hover {
-			border-color: $purple;
+			border-color: $secondary;
 		}
 	}
 }
 
 .multiselect__tags-wrap {
-	margin: 3.5px 0px 3px -12px;
+	margin: 4px 0px 3px -12px;
 }
 
 .multiselect__tag {
-	padding: 6px 28px 6px 6px;
+	padding: 5px 28px 5px 6px;
 	border-radius: 6px;
 	margin-right: 2px;
 	margin-bottom: 2px;
 	color: $black;
 	line-height: 120%;
-	background: $purple;
+	background: $secondary-100;
 	display: inline-flex;
 }
 
@@ -52,18 +63,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 24px;
-	height: 24px;
+	width: 22px;
+	height: 22px;
 	padding: 4px;
 	border-radius: 4px;
-	background-color: $purple;
+	background-color: $secondary-100;
 
 	&:focus {
-		background-color: $purple;
+		background-color: $secondary-400;
+
+		&::after {
+			color: $black;
+		}
 	}
 
 	&:hover {
-		background-color: $purple;
+		background-color: $secondary-400;
 
 		&::after {
 			color: $black;
@@ -74,13 +89,11 @@
 		content: "\e906";
 		font-family: "icons";
 		font-size: 16px;
-		color: $gray-500-600;
+		color: $black;
 	}
 }
 
 .multiselect__select {
-	width: 40px;
-	height: 40px;
 	right: 0;
 	top: 0;
 	padding: 0;
@@ -89,7 +102,7 @@
 		content: "\e903";
 		font-family: "icons";
 		font-size: 16px;
-		color: #BABABA;
+		color: $input-color;
 		position: absolute;
 		top: 50%;
 		right: auto;
@@ -105,21 +118,21 @@
 	padding: 5px 0;
 
 	&::placeholder {
-		color: $gray-500-700;
+		color: $input-placeholder-color;
 		font-weight: 500;
 	}
 }
 
 .multiselect__placeholder {
-	color: $gray-500-600;
+	color: $input-placeholder-color;
 	margin-bottom: 0px;
 	padding-top: 0px;
 }
 
 .multiselect__content-wrapper {
-	border-color: $purple;
+	border-color: $secondary;
 	border-top-color: transparent;
-	border-radius: 0 0 8px 8px;
+	border-radius: 0 0 10px 10px;
 }
 
 .multiselect__option--highlight {
@@ -132,6 +145,12 @@
 	line-height: 17px;
 	padding: 12px 12px 12px 16px;
 
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $gray-100;
+		}
+	}
+
 	&::after {
 		content: '';
 		display: none;
@@ -139,12 +158,12 @@
 }
 
 .multiselect__option--selected {
-	background: $purple;
+	background: $secondary-100;
 	color: $black;
 	font-weight: 400;
 
 	&.multiselect__option--highlight {
-		background: $purple;
+		background: $secondary-100;
 		color: $black;
 		font-weight: 400;
 	}
@@ -155,15 +174,15 @@
 	margin: 0;
 }
 
-.invalid {
+.is-invalid {
 	.multiselect--active {
 		.multiselect__tags {
-			border-color: $red;
+			border-color: $danger;
 			border-bottom-color: $white;
 
 			@media (any-hover:hover) {
 				&:hover {
-					border-color: $red;
+					border-color: $danger-600;
 					border-bottom-color: $white;
 				}
 			}
@@ -171,21 +190,27 @@
 	}
 
 	.multiselect__tags {
-		border: 1px solid $red;
+		border: 1px solid $danger;
 
 		@media (any-hover:hover) {
 			&:hover {
-				border-color: $red;
+				border-color: $danger-600;
 			}
 		}
 	}
 
 	.multiselect__content-wrapper {
-		border-color: $red;
+		border-color: $danger;
 		border-top-color: transparent;
+
+		@media (any-hover:hover) {
+			&:hover {
+				border-color: $danger-600;
+			}
+		}
 	}
 
-	&~.form-error {
-		display: block;
+	&~.helper-text {
+		display: none;
 	}
 }

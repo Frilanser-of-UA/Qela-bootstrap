@@ -10,311 +10,681 @@
 </head>
 
 <body>
-	<main>
-		<!-- Навигация (якоря)-->
-		<aside class="fixed-top pt-2 d-lg-block d-none" style="width: 280px;">
-			<a class="text-center d-block h3 mb-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
-			<nav>
-				<ol class="d-flex flex-column gap-2">
-					<li><a href="#h3Btn1" class="text-black">Buttons</a></li>
-					<li><a href="#h3Btn2" class="text-black">Text field</a></li>
-				</ol>
-			</nav>
-		</aside>
-		<!-- Навигация (якоря) -->
-		<div style="max-width: 680px;" class="mx-auto px-3">
-			<div class="mt-3 mb-3 d-flex flex-column gap-3">
-				<!-- FIX Buttons  -->
-				<h2 class="h1" id="h3Btn1">Buttons</h2>
-				<!-- FIX Large filled  -->
-				<h4>Large filled</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-primary">Primary</button>
-					<button type="button" class="btn btn-primary" disabled>Primary</button>
-					<button type="button" class="btn btn-primary ic-plus ic-left">Primary</button>
-					<button type="button" class="btn btn-primary ic-plus ic-left" disabled>Primary</button>
-					<button type="button" class="btn btn-primary ic-plus ic-right">Primary</button>
-					<button type="button" class="btn btn-primary ic-plus ic-right" disabled>Primary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-secondary">Secondary</button>
-					<button type="button" class="btn btn-secondary" disabled>Secondary</button>
-					<button type="button" class="btn btn-secondary ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-secondary ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-secondary ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-secondary ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-success">Secondary</button>
-					<button type="button" class="btn btn-success" disabled>Secondary</button>
-					<button type="button" class="btn btn-success ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-success ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-success ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-success ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-danger">Danger</button>
-					<button type="button" class="btn btn-danger" disabled>Danger</button>
-					<button type="button" class="btn btn-danger ic-plus ic-left">Danger</button>
-					<button type="button" class="btn btn-danger ic-plus ic-left" disabled>Danger</button>
-					<button type="button" class="btn btn-danger ic-plus ic-right">Danger</button>
-					<button type="button" class="btn btn-danger ic-plus ic-right" disabled>Danger</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-warning">Warning</button>
-					<button type="button" class="btn btn-warning" disabled>Warning</button>
-					<button type="button" class="btn btn-warning ic-plus ic-left">Warning</button>
-					<button type="button" class="btn btn-warning ic-plus ic-left" disabled>Warning</button>
-					<button type="button" class="btn btn-warning ic-plus ic-right">Warning</button>
-					<button type="button" class="btn btn-warning ic-plus ic-right" disabled>Warning</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-info">Info</button>
-					<button type="button" class="btn btn-info" disabled>Info</button>
-					<button type="button" class="btn btn-info ic-plus ic-left">Info</button>
-					<button type="button" class="btn btn-info ic-plus ic-left" disabled>Info</button>
-					<button type="button" class="btn btn-info ic-plus ic-right">Info</button>
-					<button type="button" class="btn btn-info ic-plus ic-right" disabled>Info</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-custom p-0">Info-custom-text</button>
-					<button type="button" class="btn btn-custom p-0" disabled>Info-custom-text</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-link">Link</button>
-					<button type="button" class="btn btn-link" disabled>Link</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-light">Light</button>
-					<button type="button" class="btn btn-light" disabled>Light</button>
-					<button type="button" class="btn btn-light ic-plus ic-left">Light</button>
-					<button type="button" class="btn btn-light ic-plus ic-left" disabled>Light</button>
-					<button type="button" class="btn btn-light ic-plus ic-right">Light</button>
-					<button type="button" class="btn btn-light ic-plus ic-right" disabled>Light</button>
-				</div>
-				<!-- FIX Small filled  -->
-				<h4 class="mt-4">Small filled</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-primary">Primary</button>
-					<button type="button" class="btn btn-sm btn-primary" disabled>Primary</button>
-					<button type="button" class="btn btn-sm btn-primary ic-plus ic-left">Primary</button>
-					<button type="button" class="btn btn-sm btn-primary ic-plus ic-left" disabled>Primary</button>
-					<button type="button" class="btn btn-sm btn-primary ic-plus ic-right">Primary</button>
-					<button type="button" class="btn btn-sm btn-primary ic-plus ic-right" disabled>Primary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-secondary">Secondary</button>
-					<button type="button" class="btn btn-sm btn-secondary" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-secondary ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-sm btn-secondary ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-secondary ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-sm btn-secondary ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-success">Secondary</button>
-					<button type="button" class="btn btn-sm btn-success" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-success ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-sm btn-success ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-success ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-sm btn-success ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-danger">Danger</button>
-					<button type="button" class="btn btn-sm btn-danger" disabled>Danger</button>
-					<button type="button" class="btn btn-sm btn-danger ic-plus ic-left">Danger</button>
-					<button type="button" class="btn btn-sm btn-danger ic-plus ic-left" disabled>Danger</button>
-					<button type="button" class="btn btn-sm btn-danger ic-plus ic-right">Danger</button>
-					<button type="button" class="btn btn-sm btn-danger ic-plus ic-right" disabled>Danger</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-warning">Warning</button>
-					<button type="button" class="btn btn-sm btn-warning" disabled>Warning</button>
-					<button type="button" class="btn btn-sm btn-warning ic-plus ic-left">Warning</button>
-					<button type="button" class="btn btn-sm btn-warning ic-plus ic-left" disabled>Warning</button>
-					<button type="button" class="btn btn-sm btn-warning ic-plus ic-right">Warning</button>
-					<button type="button" class="btn btn-sm btn-warning ic-plus ic-right" disabled>Warning</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-info">Info</button>
-					<button type="button" class="btn btn-sm btn-info" disabled>Info</button>
-					<button type="button" class="btn btn-sm btn-info ic-plus ic-left">Info</button>
-					<button type="button" class="btn btn-sm btn-info ic-plus ic-left" disabled>Info</button>
-					<button type="button" class="btn btn-sm btn-info ic-plus ic-right">Info</button>
-					<button type="button" class="btn btn-sm btn-info ic-plus ic-right" disabled>Info</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-custom p-0">Info-custom-text</button>
-					<button type="button" class="btn btn-sm btn-custom p-0" disabled>Info-custom-text</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-link">Link</button>
-					<button type="button" class="btn btn-sm btn-link" disabled>Link</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-light">Light</button>
-					<button type="button" class="btn btn-sm btn-light" disabled>Light</button>
-					<button type="button" class="btn btn-sm btn-light ic-plus ic-left">Light</button>
-					<button type="button" class="btn btn-sm btn-light ic-plus ic-left" disabled>Light</button>
-					<button type="button" class="btn btn-sm btn-light ic-plus ic-right">Light</button>
-					<button type="button" class="btn btn-sm btn-light ic-plus ic-right" disabled>Light</button>
-				</div>
-				<!-- FIX Large outlined  -->
-				<h4 class="mt-4">Large outlined</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-primary">Primary</button>
-					<button type="button" class="btn btn-outline-primary" disabled>Primary</button>
-					<button type="button" class="btn btn-outline-primary ic-plus ic-left">Primary</button>
-					<button type="button" class="btn btn-outline-primary ic-plus ic-left" disabled>Primary</button>
-					<button type="button" class="btn btn-outline-primary ic-plus ic-right">Primary</button>
-					<button type="button" class="btn btn-outline-primary ic-plus ic-right" disabled>Primary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-secondary">Secondary</button>
-					<button type="button" class="btn btn-outline-secondary" disabled>Secondary</button>
-					<button type="button" class="btn btn-outline-secondary ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-outline-secondary ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-outline-secondary ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-outline-secondary ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-success">Success</button>
-					<button type="button" class="btn btn-outline-success" disabled>Success</button>
-					<button type="button" class="btn btn-outline-success ic-plus ic-left">Success</button>
-					<button type="button" class="btn btn-outline-success ic-plus ic-left" disabled>Success</button>
-					<button type="button" class="btn btn-outline-success ic-plus ic-right">Success</button>
-					<button type="button" class="btn btn-outline-success ic-plus ic-right" disabled>Success</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-danger">Danger</button>
-					<button type="button" class="btn btn-outline-danger" disabled>Danger</button>
-					<button type="button" class="btn btn-outline-danger ic-plus ic-left">Danger</button>
-					<button type="button" class="btn btn-outline-danger ic-plus ic-left" disabled>Danger</button>
-					<button type="button" class="btn btn-outline-danger ic-plus ic-right">Danger</button>
-					<button type="button" class="btn btn-outline-danger ic-plus ic-right" disabled>Danger</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-warning">Warning</button>
-					<button type="button" class="btn btn-outline-warning" disabled>Warning</button>
-					<button type="button" class="btn btn-outline-warning ic-plus ic-left">Warning</button>
-					<button type="button" class="btn btn-outline-warning ic-plus ic-left" disabled>Warning</button>
-					<button type="button" class="btn btn-outline-warning ic-plus ic-right">Warning</button>
-					<button type="button" class="btn btn-outline-warning ic-plus ic-right" disabled>Warning</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-info">Info</button>
-					<button type="button" class="btn btn-outline-info" disabled>Info</button>
-					<button type="button" class="btn btn-outline-info ic-plus ic-left">Info</button>
-					<button type="button" class="btn btn-outline-info ic-plus ic-left" disabled>Info</button>
-					<button type="button" class="btn btn-outline-info ic-plus ic-right">Info</button>
-					<button type="button" class="btn btn-outline-info ic-plus ic-right" disabled>Info</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-outline-light">Light</button>
-					<button type="button" class="btn btn-outline-light" disabled>Light</button>
-					<button type="button" class="btn btn-outline-light ic-plus ic-left">Light</button>
-					<button type="button" class="btn btn-outline-light ic-plus ic-left" disabled>Light</button>
-					<button type="button" class="btn btn-outline-light ic-plus ic-right">Light</button>
-					<button type="button" class="btn btn-outline-light ic-plus ic-right" disabled>Light</button>
-				</div>
-				<!-- FIX Small outlined  -->
-				<h4 class="mt-4">Small outlined</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
-					<button type="button" class="btn btn-sm btn-outline-primary" disabled>Primary</button>
-					<button type="button" class="btn btn-sm btn-outline-primary ic-plus ic-left">Primary</button>
-					<button type="button" class="btn btn-sm btn-outline-primary ic-plus ic-left" disabled>Primary</button>
-					<button type="button" class="btn btn-sm btn-outline-primary ic-plus ic-right">Primary</button>
-					<button type="button" class="btn btn-sm btn-outline-primary ic-plus ic-right" disabled>Primary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-secondary">Secondary</button>
-					<button type="button" class="btn btn-sm btn-outline-secondary" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ic-left">Secondary</button>
-					<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ic-left" disabled>Secondary</button>
-					<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ic-right">Secondary</button>
-					<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ic-right" disabled>Secondary</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-success">Success</button>
-					<button type="button" class="btn btn-sm btn-outline-success" disabled>Success</button>
-					<button type="button" class="btn btn-sm btn-outline-success ic-plus ic-left">Success</button>
-					<button type="button" class="btn btn-sm btn-outline-success ic-plus ic-left" disabled>Success</button>
-					<button type="button" class="btn btn-sm btn-outline-success ic-plus ic-right">Success</button>
-					<button type="button" class="btn btn-sm btn-outline-success ic-plus ic-right" disabled>Success</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-danger">Danger</button>
-					<button type="button" class="btn btn-sm btn-outline-danger" disabled>Danger</button>
-					<button type="button" class="btn btn-sm btn-outline-danger ic-plus ic-left">Danger</button>
-					<button type="button" class="btn btn-sm btn-outline-danger ic-plus ic-left" disabled>Danger</button>
-					<button type="button" class="btn btn-sm btn-outline-danger ic-plus ic-right">Danger</button>
-					<button type="button" class="btn btn-sm btn-outline-danger ic-plus ic-right" disabled>Danger</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-warning">Warning</button>
-					<button type="button" class="btn btn-sm btn-outline-warning" disabled>Warning</button>
-					<button type="button" class="btn btn-sm btn-outline-warning ic-plus ic-left">Warning</button>
-					<button type="button" class="btn btn-sm btn-outline-warning ic-plus ic-left" disabled>Warning</button>
-					<button type="button" class="btn btn-sm btn-outline-warning ic-plus ic-right">Warning</button>
-					<button type="button" class="btn btn-sm btn-outline-warning ic-plus ic-right" disabled>Warning</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-info">Info</button>
-					<button type="button" class="btn btn-sm btn-outline-info" disabled>Info</button>
-					<button type="button" class="btn btn-sm btn-outline-info ic-plus ic-left">Info</button>
-					<button type="button" class="btn btn-sm btn-outline-info ic-plus ic-left" disabled>Info</button>
-					<button type="button" class="btn btn-sm btn-outline-info ic-plus ic-right">Info</button>
-					<button type="button" class="btn btn-sm btn-outline-info ic-plus ic-right" disabled>Info</button>
-				</div>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-outline-light">Light</button>
-					<button type="button" class="btn btn-sm btn-outline-light" disabled>Light</button>
-					<button type="button" class="btn btn-sm btn-outline-light ic-plus ic-left">Light</button>
-					<button type="button" class="btn btn-sm btn-outline-light ic-plus ic-left" disabled>Light</button>
-					<button type="button" class="btn btn-sm btn-outline-light ic-plus ic-right">Light</button>
-					<button type="button" class="btn btn-sm btn-outline-light ic-plus ic-right" disabled>Light</button>
-				</div>
-				<!-- FIX Button custom ic-right -->
-				<h4 class="mt-4">Button custom ic-right</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn btn-sm btn-custom p-0 pe-4 ic-plus ic-right">Info-custom-text</button>
-					<button type="button" class="btn btn-sm btn-custom p-0 pe-4 ic-plus ic-right" disabled>Info-custom-text</button>
-				</div>
-				<!-- FIX Button-button -->
-				<h4 class="mt-4">Button-button</h4>
-				<div class="d-flex gap-2 flex-wrap">
-					<button type="button" class="btn-close ic-cloze" aria-label="Close"></button>
-					<button type="button" class="btn-close ic-cloze" disabled aria-label="Close"></button>
-				</div>
-				<!-- FIX Text field  -->
-				<h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
-				<!-- FIX Text field input outline-->
-				<h4>Text field input outline</h4>
-				<div>
-					<label for="inputText1" class="form-label">Label</label>
-					<input type="text" class="form-control" id="inputText1" placeholder="Name">
-					<span class="form-error">Error text</span>
-					<span class="helper-text">Helper text</span>
-				</div>
-				<div>
-					<label for="inputText2" class="form-label">Label</label>
-					<input type="text" class="form-control is-invalid" id="inputText2" placeholder="Name">
-					<span class="form-error">Error text</span>
-					<span class="helper-text">Helper text</span>
-				</div>
-				<div>
-					<label for="inputText3" class="form-label">Label</label>
-					<input type="text" class="form-control" disabled id="inputText3" placeholder="Name">
-					<span class="form-error">Error text</span>
-					<span class="helper-text">Helper text</span>
+	<div id="app" v-cloak>
+		<main>
+			<!-- Навигация (якоря)-->
+			<aside class="fixed-top pt-2 d-lg-block d-none" style="width: 280px;">
+				<a class="text-center d-block h3 mb-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
+				<nav>
+					<ol class="d-flex flex-column gap-2">
+						<li><a href="#h3Btn1" class="text-black">Buttons</a></li>
+						<li><a href="#h3Btn2" class="text-black">Text field</a></li>
+						<li><a href="#h3Btn3" class="text-black">Checkbox</a></li>
+						<li><a href="#h3Btn4" class="text-black">Radiobutton</a></li>
+						<li><a href="#h3Btn5" class="text-black">Tooltip</a></li>
+						<li><a href="#h3Btn6" class="text-black">Multi-select</a></li>
+					</ol>
+				</nav>
+			</aside>
+			<!-- Навигация (якоря) -->
+			<div style="max-width: 680px;" class="mx-auto px-3">
+				<div class="mt-3 mb-3 d-flex flex-column gap-3">
+					<!-- FIX Buttons  -->
+<h2 class="h1" id="h3Btn1">Buttons</h2>
+<!-- FIX Large filled  -->
+<h4>Large filled</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-primary" disabled>Primary</button>
+	<button type="button" class="btn btn-primary ic-plus ico-left">Primary</button>
+	<button type="button" class="btn btn-primary ic-plus ico-left" disabled>Primary</button>
+	<button type="button" class="btn btn-primary ic-plus ico-right">Primary</button>
+	<button type="button" class="btn btn-primary ic-plus ico-right" disabled>Primary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-secondary" disabled>Secondary</button>
+	<button type="button" class="btn btn-secondary ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-secondary ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-secondary ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-secondary ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-success">Secondary</button>
+	<button type="button" class="btn btn-success" disabled>Secondary</button>
+	<button type="button" class="btn btn-success ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-success ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-success ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-success ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-danger" disabled>Danger</button>
+	<button type="button" class="btn btn-danger ic-plus ico-left">Danger</button>
+	<button type="button" class="btn btn-danger ic-plus ico-left" disabled>Danger</button>
+	<button type="button" class="btn btn-danger ic-plus ico-right">Danger</button>
+	<button type="button" class="btn btn-danger ic-plus ico-right" disabled>Danger</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-warning" disabled>Warning</button>
+	<button type="button" class="btn btn-warning ic-plus ico-left">Warning</button>
+	<button type="button" class="btn btn-warning ic-plus ico-left" disabled>Warning</button>
+	<button type="button" class="btn btn-warning ic-plus ico-right">Warning</button>
+	<button type="button" class="btn btn-warning ic-plus ico-right" disabled>Warning</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-info" disabled>Info</button>
+	<button type="button" class="btn btn-info ic-plus ico-left">Info</button>
+	<button type="button" class="btn btn-info ic-plus ico-left" disabled>Info</button>
+	<button type="button" class="btn btn-info ic-plus ico-right">Info</button>
+	<button type="button" class="btn btn-info ic-plus ico-right" disabled>Info</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-custom p-0">Info-custom-text</button>
+	<button type="button" class="btn btn-custom p-0" disabled>Info-custom-text</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-link">Link</button>
+	<button type="button" class="btn btn-link" disabled>Link</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-light" disabled>Light</button>
+	<button type="button" class="btn btn-light ic-plus ico-left">Light</button>
+	<button type="button" class="btn btn-light ic-plus ico-left" disabled>Light</button>
+	<button type="button" class="btn btn-light ic-plus ico-right">Light</button>
+	<button type="button" class="btn btn-light ic-plus ico-right" disabled>Light</button>
+</div>
+<!-- FIX Small filled  -->
+<h4 class="mt-4">Small filled</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-primary">Primary</button>
+	<button type="button" class="btn btn-sm btn-primary" disabled>Primary</button>
+	<button type="button" class="btn btn-sm btn-primary ic-plus ico-left">Primary</button>
+	<button type="button" class="btn btn-sm btn-primary ic-plus ico-left" disabled>Primary</button>
+	<button type="button" class="btn btn-sm btn-primary ic-plus ico-right">Primary</button>
+	<button type="button" class="btn btn-sm btn-primary ic-plus ico-right" disabled>Primary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-sm btn-secondary" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-secondary ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-sm btn-secondary ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-success">Secondary</button>
+	<button type="button" class="btn btn-sm btn-success" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-danger">Danger</button>
+	<button type="button" class="btn btn-sm btn-danger" disabled>Danger</button>
+	<button type="button" class="btn btn-sm btn-danger ic-plus ico-left">Danger</button>
+	<button type="button" class="btn btn-sm btn-danger ic-plus ico-left" disabled>Danger</button>
+	<button type="button" class="btn btn-sm btn-danger ic-plus ico-right">Danger</button>
+	<button type="button" class="btn btn-sm btn-danger ic-plus ico-right" disabled>Danger</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-warning">Warning</button>
+	<button type="button" class="btn btn-sm btn-warning" disabled>Warning</button>
+	<button type="button" class="btn btn-sm btn-warning ic-plus ico-left">Warning</button>
+	<button type="button" class="btn btn-sm btn-warning ic-plus ico-left" disabled>Warning</button>
+	<button type="button" class="btn btn-sm btn-warning ic-plus ico-right">Warning</button>
+	<button type="button" class="btn btn-sm btn-warning ic-plus ico-right" disabled>Warning</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-info">Info</button>
+	<button type="button" class="btn btn-sm btn-info" disabled>Info</button>
+	<button type="button" class="btn btn-sm btn-info ic-plus ico-left">Info</button>
+	<button type="button" class="btn btn-sm btn-info ic-plus ico-left" disabled>Info</button>
+	<button type="button" class="btn btn-sm btn-info ic-plus ico-right">Info</button>
+	<button type="button" class="btn btn-sm btn-info ic-plus ico-right" disabled>Info</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-custom p-0">Info-custom-text</button>
+	<button type="button" class="btn btn-sm btn-custom p-0" disabled>Info-custom-text</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-link">Link</button>
+	<button type="button" class="btn btn-sm btn-link" disabled>Link</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-light">Light</button>
+	<button type="button" class="btn btn-sm btn-light" disabled>Light</button>
+	<button type="button" class="btn btn-sm btn-light ic-plus ico-left">Light</button>
+	<button type="button" class="btn btn-sm btn-light ic-plus ico-left" disabled>Light</button>
+	<button type="button" class="btn btn-sm btn-light ic-plus ico-right">Light</button>
+	<button type="button" class="btn btn-sm btn-light ic-plus ico-right" disabled>Light</button>
+</div>
+<!-- FIX Large outlined  -->
+<h4 class="mt-4">Large outlined</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-primary">Primary</button>
+	<button type="button" class="btn btn-outline-primary" disabled>Primary</button>
+	<button type="button" class="btn btn-outline-primary ic-plus ico-left">Primary</button>
+	<button type="button" class="btn btn-outline-primary ic-plus ico-left" disabled>Primary</button>
+	<button type="button" class="btn btn-outline-primary ic-plus ico-right">Primary</button>
+	<button type="button" class="btn btn-outline-primary ic-plus ico-right" disabled>Primary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-secondary">Secondary</button>
+	<button type="button" class="btn btn-outline-secondary" disabled>Secondary</button>
+	<button type="button" class="btn btn-outline-secondary ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-outline-secondary ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-outline-secondary ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-outline-secondary ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-success">Success</button>
+	<button type="button" class="btn btn-outline-success" disabled>Success</button>
+	<button type="button" class="btn btn-outline-success ic-plus ico-left">Success</button>
+	<button type="button" class="btn btn-outline-success ic-plus ico-left" disabled>Success</button>
+	<button type="button" class="btn btn-outline-success ic-plus ico-right">Success</button>
+	<button type="button" class="btn btn-outline-success ic-plus ico-right" disabled>Success</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-danger">Danger</button>
+	<button type="button" class="btn btn-outline-danger" disabled>Danger</button>
+	<button type="button" class="btn btn-outline-danger ic-plus ico-left">Danger</button>
+	<button type="button" class="btn btn-outline-danger ic-plus ico-left" disabled>Danger</button>
+	<button type="button" class="btn btn-outline-danger ic-plus ico-right">Danger</button>
+	<button type="button" class="btn btn-outline-danger ic-plus ico-right" disabled>Danger</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-warning">Warning</button>
+	<button type="button" class="btn btn-outline-warning" disabled>Warning</button>
+	<button type="button" class="btn btn-outline-warning ic-plus ico-left">Warning</button>
+	<button type="button" class="btn btn-outline-warning ic-plus ico-left" disabled>Warning</button>
+	<button type="button" class="btn btn-outline-warning ic-plus ico-right">Warning</button>
+	<button type="button" class="btn btn-outline-warning ic-plus ico-right" disabled>Warning</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-info">Info</button>
+	<button type="button" class="btn btn-outline-info" disabled>Info</button>
+	<button type="button" class="btn btn-outline-info ic-plus ico-left">Info</button>
+	<button type="button" class="btn btn-outline-info ic-plus ico-left" disabled>Info</button>
+	<button type="button" class="btn btn-outline-info ic-plus ico-right">Info</button>
+	<button type="button" class="btn btn-outline-info ic-plus ico-right" disabled>Info</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-outline-light">Light</button>
+	<button type="button" class="btn btn-outline-light" disabled>Light</button>
+	<button type="button" class="btn btn-outline-light ic-plus ico-left">Light</button>
+	<button type="button" class="btn btn-outline-light ic-plus ico-left" disabled>Light</button>
+	<button type="button" class="btn btn-outline-light ic-plus ico-right">Light</button>
+	<button type="button" class="btn btn-outline-light ic-plus ico-right" disabled>Light</button>
+</div>
+<!-- FIX Small outlined  -->
+<h4 class="mt-4">Small outlined</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
+	<button type="button" class="btn btn-sm btn-outline-primary" disabled>Primary</button>
+	<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-left">Primary</button>
+	<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-left" disabled>Primary</button>
+	<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-right">Primary</button>
+	<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-right" disabled>Primary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-secondary">Secondary</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-left">Secondary</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-left" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-right">Secondary</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-right" disabled>Secondary</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-success">Success</button>
+	<button type="button" class="btn btn-sm btn-outline-success" disabled>Success</button>
+	<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-left">Success</button>
+	<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-left" disabled>Success</button>
+	<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-right">Success</button>
+	<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-right" disabled>Success</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-danger">Danger</button>
+	<button type="button" class="btn btn-sm btn-outline-danger" disabled>Danger</button>
+	<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-left">Danger</button>
+	<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-left" disabled>Danger</button>
+	<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-right">Danger</button>
+	<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-right" disabled>Danger</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-warning">Warning</button>
+	<button type="button" class="btn btn-sm btn-outline-warning" disabled>Warning</button>
+	<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-left">Warning</button>
+	<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-left" disabled>Warning</button>
+	<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-right">Warning</button>
+	<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-right" disabled>Warning</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-info">Info</button>
+	<button type="button" class="btn btn-sm btn-outline-info" disabled>Info</button>
+	<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-left">Info</button>
+	<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-left" disabled>Info</button>
+	<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-right">Info</button>
+	<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-right" disabled>Info</button>
+</div>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-outline-light">Light</button>
+	<button type="button" class="btn btn-sm btn-outline-light" disabled>Light</button>
+	<button type="button" class="btn btn-sm btn-outline-light ic-plus ico-left">Light</button>
+	<button type="button" class="btn btn-sm btn-outline-light ic-plus ico-left" disabled>Light</button>
+	<button type="button" class="btn btn-sm btn-outline-light ic-plus ico-right">Light</button>
+	<button type="button" class="btn btn-sm btn-outline-light ic-plus ico-right" disabled>Light</button>
+</div>
+<!-- FIX Custom ico-right -->
+<h4 class="mt-4">Custom ico-right</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-custom p-0 pe-4 ic-plus ico-right">Info-custom-text</button>
+	<button type="button" class="btn btn-sm btn-custom p-0 pe-4 ic-plus ico-right" disabled>Info-custom-text</button>
+</div>
+<!-- FIX Button-close -->
+<h4 class="mt-4">Button-close</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn-close ic-cloze" aria-label="Close"></button>
+	<button type="button" class="btn-close ic-cloze" disabled aria-label="Close"></button>
+</div>
+					<!-- FIX Text field  -->
+<h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
+<!-- FIX Input outline-->
+<h4>Input outline</h4>
+<div>
+	<label for="inputText1" class="form-label">Label</label>
+	<input type="text" class="form-control" id="inputText1" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText2" class="form-label">Label</label>
+	<input type="text" class="form-control is-invalid" id="inputText2" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText3" class="form-label">Label</label>
+	<input type="text" class="form-control" disabled id="inputText3" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<!-- FIX Input outline small-->
+<h4>Input outline small</h4>
+<div>
+	<label for="inputTextSm1" class="form-label">Label</label>
+	<input type="text" class="form-control form-control-sm" id="inputTextSm1" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputTextSm2" class="form-label">Label</label>
+	<input type="text" class="form-control form-control-sm is-invalid" id="inputTextSm2" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputTextSm3" class="form-label">Label</label>
+	<input type="text" class="form-control form-control-sm" disabled id="inputTextSm3" placeholder="Name">
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<!-- FIX Textarea outline-->
+<h4 class="mt-4">Textarea outline</h4>
+<div>
+	<label for="textarea1" class="form-label">Label</label>
+	<textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="textarea2" class="form-label">Label</label>
+	<textarea class="form-control is-invalid" placeholder="Placeholder" id="textarea2" rows="3"></textarea>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="textarea3" class="form-label">Label</label>
+	<textarea class="form-control" placeholder="Placeholder" disabled id="textarea3" rows="3"></textarea>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<!-- FIX Input group-->
+<h4 class="mt-4">Input group</h4>
+<div>
+	<label for="inputPassword1" class="form-label ">Password</label>
+	<div class="input-group has-validation">
+		<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+		<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputPassword2" class="form-label">Password</label>
+	<div class="input-group has-validation is-invalid">
+		<input type="password" class="form-control is-invalid" placeholder="Password" id="inputPassword2" aria-label="Password" aria-describedby="button-addon2">
+		<button class="btn btn-input ic-eye" type="button" id="button-addon2"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText4" class="form-label">Label</label>
+	<div class="input-group has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" id="inputText4" aria-describedby="basic-addon1">
+		<span class="input-group-text" id="basic-addon1">@</span>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText5" class="form-label ">Label</label>
+	<div class="input-group has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon3">
+		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3">Light</button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText6" class="form-label">Label</label>
+	<div class="input-group has-validation">
+		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon4">Light</button>
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon4">
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText7" class="form-label">Label</label>
+	<div class="input-group has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" disabled id="inputText7" aria-label="Text" aria-describedby="button-addon5">
+		<button class="btn btn-input ic-delete" type="button" disabled id="button-addon5"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<!-- FIX Input group Small-->
+<h4 class="mt-4">Input group Small</h4>
+<div>
+	<label for="inputPassword1" class="form-label ">Password</label>
+	<div class="input-group input-group-sm has-validation">
+		<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+		<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputPassword2" class="form-label">Password</label>
+	<div class="input-group input-group-sm has-validation is-invalid">
+		<input type="password" class="form-control is-invalid" placeholder="Password" id="inputPassword2" aria-label="Password" aria-describedby="button-addon2">
+		<button class="btn btn-input ic-eye" type="button" id="button-addon2"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText4" class="form-label">Label</label>
+	<div class="input-group input-group-sm has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" id="inputText4" aria-describedby="basic-addon1">
+		<span class="input-group-text" id="basic-addon1">@</span>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText5" class="form-label ">Label</label>
+	<div class="input-group input-group-sm has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon3">
+		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3">Light</button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText6" class="form-label">Label</label>
+	<div class="input-group input-group-sm has-validation">
+		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon4">Light</button>
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon4">
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label for="inputText7" class="form-label">Label</label>
+	<div class="input-group input-group-sm has-validation">
+		<input type="text" class="form-control" placeholder="Placeholder" disabled id="inputText7" aria-label="Text" aria-describedby="button-addon5">
+		<button class="btn btn-input ic-delete" type="button" disabled id="button-addon5"></button>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+	<div class="helper-text">Helper text</div>
+</div>
+					<!-- FIX Checkbox  -->
+<h2 class="h1 mt-4" id="h3Btn3">Checkbox</h2>
+<!-- FIX Checkbox-->
+<h4>Checkbox</h4>
+<div>
+	<div class="form-check form-check-inline">
+		<input type="checkbox" class="form-check-input" id="Check1">
+	</div>
+	<div class="form-check form-check-inline">
+		<input type="checkbox" class="form-check-input" id="Check2" disabled>
+	</div>
+</div>
+<div>
+	<div class="form-check form-check-inline">
+		<input type="checkbox" class="form-check-input" id="Check3" checked>
+	</div>
+	<div class="form-check form-check-inline">
+		<input type="checkbox" class="form-check-input" id="Check4" checked disabled>
+	</div>
+</div>
+<!-- FIX Checkbox-label-->
+<h4>Checkbox-label</h4>
+<div>
+	<div class="form-check">
+		<input type="checkbox" class="form-check-input" id="Check5">
+		<label class="form-check-label" for="Check5">Checkbox-label</label>
+	</div>
+	<div class="form-check">
+		<input type="checkbox" class="form-check-input" id="Check6" disabled>
+		<label class="form-check-label" for="Check6">Checkbox-label</label>
+	</div>
+	<div class="form-check">
+		<input type="checkbox" class="form-check-input is-invalid" id="Check5Error">
+		<label class="form-check-label" for="Check5Error">Checkbox-label</label>
+		<div class="invalid-feedback">
+			Error
+		</div>
+	</div>
+</div>
+<div>
+	<div class="form-check">
+		<input type="checkbox" class="form-check-input" id="Check7" checked>
+		<label class="form-check-label" for="Check7">Checkbox-label</label>
+	</div>
+	<div class="form-check">
+		<input type="checkbox" class="form-check-input" id="Check8" checked disabled>
+		<label class="form-check-label" for="Check8">Checkbox-label</label>
+	</div>
+</div>
+<div>
+	<div class="form-check">
+		<label class="form-check-label" for="Check8">Checkbox-label with <a href="#" target="_blank">link</a></label>
+		<input type="checkbox" class="form-check-input" id="Check8">
+	</div>
+</div>
+					<!-- FIX Radiobutton  -->
+<h2 class="h1 mt-4" id="h3Btn4">Radiobutton</h2>
+<!-- FIX Radiobutton-->
+<h4>Radiobutton</h4>
+<div>
+	<div class="form-check form-check-inline">
+		<input type="radio" class="form-check-input" id="Radio1">
+	</div>
+	<div class="form-check form-check-inline">
+		<input type="radio" class="form-check-input" id="Radio2" disabled>
+	</div>
+</div>
+<div>
+	<div class="form-check form-check-inline">
+		<input type="radio" class="form-check-input" id="Radio3" checked>
+	</div>
+	<div class="form-check form-check-inline">
+		<input type="radio" class="form-check-input" id="Radio4" checked disabled>
+	</div>
+</div>
+<!-- FIX Radiobutton-label-->
+<h4>Radiobutton-label</h4>
+<div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio5">
+		<label class="form-check-label" for="Radio5">Radiobutton-label</label>
+	</div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio6" disabled>
+		<label class="form-check-label" for="Radio6">Radiobutton-label</label>
+	</div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input is-invalid" id="Radio6Error">
+		<label class="form-check-label" for="Radio6Error">Radiobutton-label</label>
+		<div class="invalid-feedback">
+			Error
+		</div>
+	</div>
+</div>
+<div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio7" checked>
+		<label class="form-check-label" for="Radio7">Radiobutton-label</label>
+	</div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio8" checked disabled>
+		<label class="form-check-label" for="Radio8">Radiobutton-label</label>
+	</div>
+</div>
+<div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio9">
+		<label class="form-check-label" for="Radio9">Radiobutton-label with <a href="#" target="_blank">link</a></label>
+	</div>
+</div>
+<!-- FIX Radiobutton-label, tooltip-->
+<h4>Radiobutton-label, tooltip</h4>
+<div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio10">
+		<label class="form-check-label me-1" for="Radio10">Radiobutton-label</label>
+		<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+	</div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio11" disabled>
+		<label class="form-check-label me-1" for="Radio11">Radiobutton-label</label>
+		<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+	</div>
+</div>
+<div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio12" checked>
+		<label class="form-check-label me-1" for="Radio12">Radiobutton-label</label>
+		<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+	</div>
+	<div class="form-check">
+		<input type="radio" class="form-check-input" id="Radio13" checked disabled>
+		<label class="form-check-label me-1" for="Radio13">Radiobutton-label</label>
+		<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+	</div>
+</div>
+					<!-- FIX Tooltip  -->
+<h2 class="h1 mt-4" id="h3Btn5">Tooltip</h2>
+<div>
+	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+</div>
+					<!-- FIX Multi-select  -->
+<h2 class="h1 mt-4" id="h3Btn6">Multi-select</h2>
+<div>
+	<label class="form-label">Select multiple</label>
+	<div>
+		<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
+	</div>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label class="form-label">Select multiple</label>
+	<div>
+		<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" :disabled="true"></v-multi-select>
+	</div>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label class="form-label">Select multiple</label>
+	<div class="is-invalid">
+		<v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
+	</div>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
+<div>
+	<label class="form-label">Select</label>
+	<div>
+		<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+	</div>
+	<div class="invalid-feedback">Error text</div>
+	<div class="helper-text">Helper text</div>
+</div>
 				</div>
 			</div>
-		</div>
-		<br><br><br><br><br><br><br><br><br><br>
-	</main>
+		</main>
+	</div>
+	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+	<script type="text/javascript">
+		let app = Vue.createApp({
+			components: {
+				"v-date-picker": VueDatePicker,
+				"v-multi-select": VueMultiselect.default
+			},
+			data() {
+				return {
+					date: new Date(),
+					value1: '',
+					value2: '',
+					value3: '',
+					value4: '',
+					options: [
+						'Пункт 1 sadafdf',
+						'Пункт 2',
+						'Пункт 3',
+						'Пункт 4',
+						'Пункт 1 assadafdf',
+						'Пункт 2sades',
+						'Пункт 3sd',
+						'Пункт 4sd'
+					]
+				}
+			},
+			methods: {
+				click() {
+					alert(1);
+					this.message += " clicked!";
+				}
+			}
+		});
+		console.dir(app);
+		app.mount('#app')
+	</script>
 	<!-- =========================== -->
-	<script src="js/app.js"></script>
-<script src="js/vendors.js"></script>
+	<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>

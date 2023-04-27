@@ -43,9 +43,10 @@ $utilities: map-merge($utilities,
 @import "bootstrap/close";
 @import "bootstrap/modal";
 @import "bootstrap/alert";
+@import "bootstrap/tooltip";
 
 
-// @import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap";
 
 
 // Helpers

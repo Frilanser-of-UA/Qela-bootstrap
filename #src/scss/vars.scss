@@ -295,33 +295,36 @@ $input-focus-box-shadow: $input-btn-focus-box-shadow;
 $input-placeholder-color: $gray-600;
 $input-plaintext-color: $body-color;
 $input-height-border: none;
-
-
-
-$form-color-width: 3rem;
-
 // scss-docs-end form-input-variables
-
-
-
-
-
-
-
-
 // scss-docs-start form-check-variables
 $form-check-input-width: 1em;
-$form-check-margin-bottom: 10px;
-$form-check-input-border: var(--#{$prefix}border-width) solid $black;
-$form-check-input-border-radius: .15em;
-$form-check-input-focus-border: $black;
-$form-check-input-checked-color: $black;
-$form-check-input-checked-bg-color: $white;
+$form-check-min-height: $font-size-base;
+$form-check-padding-start: $form-check-input-width + .5em;
+$form-check-margin-bottom: .125rem;
 $form-check-label-cursor: pointer;
-$form-check-transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+$form-check-transition: all 0.2s ease 0s;
+$form-check-input-bg: transparent;
+$form-check-input-border: 1px solid rgba($gray-500, 1.0);
+$form-check-input-border-radius: 0.1875em;
+$form-check-input-focus-border: $gray-500;
 $form-check-input-focus-box-shadow: none;
-$form-check-input-checked-border-color: $form-check-input-checked-color;
+
+$form-check-input-checked-color: $white;
+$form-check-input-checked-bg-color: $secondary;
+$form-check-input-checked-border-color: $secondary;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$secondary}'/></svg>");
+
+$form-check-input-indeterminate-color: $white;
+$form-check-input-indeterminate-bg-color: $secondary;
+$form-check-input-indeterminate-border-color: $form-check-input-indeterminate-bg-color;
+$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-indeterminate-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>");
+
+$form-check-input-disabled-opacity: 1;
+$form-check-label-disabled-opacity: $form-check-input-disabled-opacity;
+$form-check-btn-check-disabled-opacity: $btn-disabled-opacity;
+
+$form-check-inline-margin-end: 0.5rem;
 // scss-docs-end form-check-variables
 // Dropdowns
 //
@@ -371,3 +374,20 @@ $alert-bg-scale: -80%;
 $alert-color-scale: 0%;
 $alert-dismissible-padding-r: $alert-padding-x * 3; // 3x covers width of x plus default padding on either side
 //alert
+//tooltip
+$tooltip-font-size: 0.75rem;
+$tooltip-max-width: 180px;
+$tooltip-color: $black;
+$tooltip-bg: $white;
+$tooltip-border-radius: $border-radius;
+$tooltip-opacity: 1;
+$tooltip-padding-y: $spacer * 0.75;
+$tooltip-padding-x: $spacer * 0.625;
+$tooltip-margin: null;
+
+$tooltip-arrow-width: 1.5rem;
+$tooltip-arrow-height: 0.75rem;
+// fusv-disable
+$tooltip-arrow-color: null;
+// fusv-enable
+//tooltip

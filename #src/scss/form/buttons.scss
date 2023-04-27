@@ -8,8 +8,8 @@
 		color: $gray-500;
 	}
 
-	&.ic-left,
-	&.ic-right {
+	&.ico-left,
+	&.ico-right {
 		&::before {
 			font-size: 18px;
 			position: absolute;
@@ -18,7 +18,7 @@
 		}
 	}
 
-	&.ic-left {
+	&.ico-left {
 		padding-left: 30px;
 
 		&::before {
@@ -26,7 +26,7 @@
 		}
 	}
 
-	&.ic-right {
+	&.ico-right {
 		padding-right: 30px;
 
 		&::before {
@@ -37,18 +37,18 @@
 
 .btn-sm {
 
-	&.ic-left,
-	&.ic-right {
+	&.ico-left,
+	&.ico-right {
 		&::before {
 			font-size: 14px;
 		}
 	}
 
-	&.ic-left {
+	&.ico-left {
 		padding-left: 24px;
 	}
 
-	&.ic-right {
+	&.ico-right {
 		padding-right: 24px;
 	}
 }
@@ -169,7 +169,7 @@
 }
 
 .btn-custom {
-	&.ic-right {
+	&.ico-right {
 		&::before {
 			font-size: 18px;
 			padding: 1.5px;
@@ -193,7 +193,7 @@
 	&.disabled {
 		background-color: transparent;
 
-		&.ic-right {
+		&.ico-right {
 			&::before {}
 		}
 	}
@@ -329,5 +329,23 @@
 
 	&:disabled {
 		color: $gray-500;
+	}
+}
+
+.qela-btn-tooltip {
+	border: none;
+	color: $info;
+	padding: 0;
+
+	&:hover {
+		color: $secondary;
+	}
+
+	&:active {
+		color: $secondary  !important;
+	}
+
+	&::before {
+		font-size: 16px;
 	}
 }
