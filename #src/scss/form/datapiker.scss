@@ -1,3 +1,10 @@
+.dp__menu {
+	button {
+		border: none;
+		background-color: transparent;
+	}
+}
+
 .dp__main {
 	font-family: $font-family-base;
 	position: relative;
@@ -154,7 +161,7 @@
 }
 
 .dp__selection_preview {
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 100%;
 	letter-spacing: 0.4px;
 	color: $black;
@@ -167,7 +174,14 @@
 	color: $purple;
 }
 
-.invalid {
+.dp__action_button {
+	color: $secondary;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 4px 16px;
+}
+
+.is-invalid {
 	.dp__input {
 		color: $gray-500;
 		border-color: $red;

@@ -5,140 +5,89 @@ header {
 	@media (max-width:($md3+px)) {
 		height: 60px;
 	}
-
-	.new-logo-mob {
-		flex: 0 0 80px;
-		width: 80px;
-		display: none;
-
-		@media (max-width:($md3+px)) {
-			display: flex;
-		}
-
-		img {
-			width: 42px;
-		}
-	}
 }
 
+// search
+
 .qela-search {
-	margin: 0px 18px 0px 0px;
 	display: flex;
 	justify-content: flex-end;
 	flex: 1 1 auto;
 
-	.qela-wrapper {
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-		position: relative;
-		transition: all 0.3s ease 0s;
-		width: 100%;
-
-		button {
-			padding: 5px;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-
-			&::before {
-				font-size: 24px;
-			}
-		}
-
-		@media (max-width:($md3+px)) {
-			position: absolute;
-			top: 100%;
-			width: calc(100% - 40px);
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		&.qela--visible {
-			opacity: 1;
-			visibility: visible;
-			pointer-events: auto;
-		}
-	}
-
-	input {}
-
-	button {
-		color: $gray-500-700;
-		border: none;
-
-		&::before {
-			font-size: 24px;
-		}
+	&>button {
+		color: $gray-500;
+		border: none
 	}
 }
 
-.qela-badge {
+.qela-search__wrapper {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+
+	@media (max-width:($md3+px)) {
+		position: absolute;
+		top: calc(100% + 10px);
+		width: calc(100% - 40px);
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	&.qela--visible {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+}
+
+// search
+
+.qela-notification {
 	padding: 0;
-	color: $gray-500-700;
-	margin: 0px 20px 0px 0px;
-	transition: color 0.3s ease 0s;
+	border: none;
+	position: relative;
+	color: $gray-500;
 
-	@media (any-hover:hover) {
-		&:hover {
-			color: $black;
-		}
-	}
-
-	.badge {
-		color: $white;
-		min-width: 20px;
-		padding: 0 5px;
-		height: 14px;
-		font-size: 9px;
-		line-height: 9px;
-		font-weight: 600;
-	}
-
-	&.qela--active {
+	&.active {
 		color: $black;
-	}
-
-	&::before {
-		font-size: 24px;
 	}
 }
 
 .qela-user {
 	button {
-		&.show {
-			span {
+		@media (any-hover:hover) {
+			&:hover {
 				&::before {
-					transform: rotate(-180deg);
 					color: $black;
 				}
 			}
 		}
-	}
 
-	span {
 		&::before {
-			margin: 0px 0px 0px 10px;
-			font-size: 14px;
-			color: $gray-500-700;
+			font-size: 16px;
+			color: $gray-500;
 			transition: transform 0.3s ease 0s;
 		}
-	}
-
-	form {
-		width: 280px;
-		right: 0;
 
 		&.show {
-			right: 0;
+			&::before {
+				transform: rotate(-180deg);
+				color: $black;
+			}
 		}
 	}
 
-	.qela-avatar {
-		width: 40px;
-		height: 40px;
+	.dropdown-menu {
+		width: 280px;
 	}
+}
+
+.qela-nav {
+	z-index: 3;
 }
 
 .qela-menu {
@@ -161,7 +110,7 @@ header {
 		width: 230px;
 
 		&::before {
-			opacity: 1;
+			opacity: 0.2;
 			pointer-events: auto;
 
 			@media (max-width:($md3+px)) {
@@ -184,7 +133,7 @@ header {
 		position: absolute;
 		width: 100vw;
 		height: 100vh;
-		background: $gray-500-800;
+		background: $black;
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity .3s linear 0s;
@@ -197,13 +146,6 @@ header {
 			visibility: hidden;
 			transition: visibility 0s linear 0.3s;
 		}
-	}
-
-	.qela-wrapper {
-		overflow: auto;
-		overflow-x: hidden;
-		flex: 1 1 auto;
-		background-color: $white;
 	}
 
 	.nav {
@@ -240,7 +182,7 @@ header {
 	}
 
 	span {
-		color: $gray-500-700;
+		color: $gray-500;
 		font-weight: 500;
 		transition: color 0.3s ease 0s;
 
@@ -252,33 +194,41 @@ header {
 			margin: 0px 20px 0px 0px;
 		}
 	}
+}
 
-	.logo {
-		padding: 20px;
-		height: 80px;
-		flex: 0 0 80px;
-		background-color: $white;
+.qela-logo {
+	padding: 20px;
+	height: 80px;
+	flex: 0 0 80px;
+	background-color: $white;
+	z-index: 2;
 
-		@media (max-width:($md3+px)) {
-			height: 60px;
-			flex: 0 0 60px;
-			padding: 0 20px;
-			display: flex;
-			align-items: center;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			right: 0;
-			top: 0;
-			height: 100%;
-			width: 1px;
-			opacity: .2;
-			background-color: rgba(126, 131, 137, .53);
-
-		}
+	@media (max-width:($md3+px)) {
+		height: 60px;
+		flex: 0 0 60px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
 	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		opacity: .2;
+		background-color: rgba(126, 131, 137, .53);
+
+	}
+}
+
+.qela-nav__wrapper {
+	overflow: auto;
+	overflow-x: hidden;
+	flex: 1 1 auto;
+	background-color: $white;
 }
 
 .qela-btn-menu {
@@ -287,10 +237,9 @@ header {
 	left: calc(100% - 16px);
 	top: 40%;
 	border-radius: 50%;
-
 	padding: 9px 4px 9px 14px;
 	background-color: $white;
-	color: $gray-500-700;
+	color: $gray-500;
 
 	@media (max-width:($md3+px)) {
 		display: none;
@@ -299,14 +248,17 @@ header {
 	@media (any-hover:hover) {
 		&:hover {
 			background-color: $white;
-			color: $black;
+
+			&::before {
+				color: $black;
+			}
 		}
 	}
 
 	&::before {
-		transition: transform .3s ease 0s;
+		transition: transform .3s ease 0s, color 0.2s;
 		font-size: 14px;
-		color: $gray-500-700;
+		color: $gray-500;
 		transform: rotate(-90deg);
 	}
 

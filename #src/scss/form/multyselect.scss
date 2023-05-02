@@ -3,9 +3,18 @@
 	min-height: 38px;
 
 	&.multiselect--disabled {
+		opacity: $btn-close-opacity;
+
 		.multiselect__select {
 			background: transparent;
-			color: rgb(166, 166, 166);
+			border-color: $input-disabled-border-color;
+			color: $input-disabled-color;
+		}
+
+		.multiselect__tags {
+			background-color: $input-disabled-bg;
+			border-color: $input-disabled-border-color;
+			color: $input-disabled-color;
 		}
 	}
 }
@@ -172,6 +181,7 @@
 
 .multiselect__single {
 	margin: 0;
+	padding-left: 0;
 }
 
 .is-invalid {

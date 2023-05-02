@@ -17,22 +17,14 @@ window.onload = function () {
 		//== випадашки search
 		if (targetElement.classList.contains('qela-search-btn')) {
 			if (document.querySelector('.qela-search-btn')) {
-				document.querySelector('.qela-wrapper').classList.toggle('qela--visible');
+				document.querySelector('.qela-search__wrapper').classList.toggle('qela--visible');
 			}
-		} else if (!targetElement.closest('.qela-wrapper') && document.querySelector('.qela-wrapper.qela--visible')) {
-			document.querySelector('.qela-wrapper').classList.remove('qela--visible');
-		}
-		//== випадашки dots
-		if (targetElement.classList.contains('dots-table')) {
-			if (document.querySelector('.dots-table')) {
-				document.querySelector('.dots-table').classList.toggle('active');
-			}
-		} else if (!targetElement.closest('.dots-table') && document.querySelector('.dots-table.active')) {
-			document.querySelector('.dots-table').classList.remove('active');
+		} else if (!targetElement.closest('.qela-search__wrapper') && document.querySelector('.qela-search__wrapper.qela--visible')) {
+			document.querySelector('.qela-search__wrapper').classList.remove('qela--visible');
 		}
 	}
 }
-// Полифилл для метода forEach для NodeList
+// // Полифилл для метода forEach для NodeList
 if (window.NodeList && !NodeList.prototype.forEach) {
 	NodeList.prototype.forEach = function (callback, thisArg) {
 		thisArg = thisArg || window;

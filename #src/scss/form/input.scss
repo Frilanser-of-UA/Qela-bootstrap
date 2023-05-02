@@ -86,3 +86,28 @@
 		}
 	}
 }
+
+.form-range {
+
+	&:disabled {
+		&::-webkit-slider-runnable-track {
+			background: $input-disabled-bg;
+		}
+
+		&::-moz-range-track {
+			background: $input-disabled-bg;
+		}
+
+		&::-ms-track {
+			background: $input-disabled-bg;
+		}
+
+		&::-ms-fill-lower {
+			background: $input-disabled-bg;
+		}
+
+		&::-ms-fill-upper {
+			background: $input-disabled-bg;
+		}
+	}
+}

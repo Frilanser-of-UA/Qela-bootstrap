@@ -23,6 +23,10 @@
 						<li><a href="#h3Btn4" class="text-black">Radiobutton</a></li>
 						<li><a href="#h3Btn5" class="text-black">Tooltip</a></li>
 						<li><a href="#h3Btn6" class="text-black">Multi-select</a></li>
+						<li><a href="#h3Btn7" class="text-black">Datapiker</a></li>
+						<li><a href="#h3Btn8" class="text-black">Range</a></li>
+						<li><a href="#h3Btn9" class="text-black">Acordion</a></li>
+						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -640,6 +644,37 @@
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
+					<!-- FIX Datapiker  -->
+<h2 class="h1 mt-4" id="h3Btn7">Datapiker</h2>
+<div class="col-12">
+	<label class="form-label">Датапикер</label>
+	<div class="">
+		<v-date-picker v-model="date" range multi-calendars />
+	</div>
+	<span class="invalid-feedback">Set start date and time</span>
+</div>
+					<!-- FIX Range  -->
+<h2 class="h1 mt-4" id="h3Btn8">Range</h2>
+<div>
+	<label for="Range1" class="form-label">Example range</label>
+	<input type="range" class="form-range" value="90" min="0" max="100" id="Range1">
+</div>
+<div>
+	<label for="Range1" class="form-label">Example range</label>
+	<input type="range" class="form-range" value="50" min="0" max="100" id="Range1" disabled>
+</div>
+					<!-- FIX Acordion  -->
+<h2 class="h1 mt-4" id="h3Btn9">Acordion</h2>
+<!-- FIX Accordion-flush  -->
+<h4>Accordion-flush</h4>
+					<!-- FIX Badge  -->
+<h2 class="h1 mt-4" id="h3Btn10">Badge</h2>
+<!-- FIX Pill badges  -->
+<h4>Pill badges</h4>
+<div>
+	<span class="badge rounded-pill text-bg-danger">Danger</span>
+</div>
+
 				</div>
 			</div>
 		</main>

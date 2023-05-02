@@ -11,119 +11,128 @@
 			<!-- Форма регистрации -->
 			<div class="qela-conatiner-min">
 				<div class="qela-form">
-					<div class="row">
+					<form class="row gy-4">
 						<div class="col-12">
-							<h1>Регістрація</h1>
+							<h1 class="h4">Регістрація</h1>
 						</div>
-					</div>
-					<div class="row">
-						<form class="col-12">
-							<div class="row gy-3">
-								<div class="col-md-6">
-									<label for="inputText" class="form-label">Ім'я</label>
-									<input type="text" class="form-control invalid" id="inputText" placeholder="Введіть ім'я">
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-md-6">
-									<label for="inputText2" class="form-label">Призвіще</label>
-									<input type="text" class="form-control" id="inputText2" placeholder="Введіть призвіще">
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-12">
-									<label for="inputEmail1" class="form-label">Email</label>
-									<input type="email" placeholder="Введіть email" class="form-control" id="inputEmail1">
-								</div>
-								<div class="col-12">
-									<label for="inputPassword1" class="form-label">Пароль</label>
-									<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword1">
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-12">
-									<label for="inputPassword2" class="form-label">Повторіть пароль ще раз</label>
-									<input type="password" placeholder="Введіть пароль" class="form-control" id="inputPassword2">
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-12">
-									<label for="inputPassword1" class="form-label">input-group</label>
-									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-										<button class="btn btn-outline-secondary btn-input ic-delete" type="button" id="button-addon2"></button>
-									</div>
-								</div>
-								<div class="col-12">
-									<label for="textarea1" class="form-label">Деталі повідомлення</label>
-									<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
-									<span class="form-error">Error text</span>
-								</div>
+						<div class="col-md-6">
+							<label for="inputText1" class="form-label">Ім'я</label>
+							<input type="text" class="form-control" id="inputText1" placeholder="Введіть ім'я">
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-md-6">
+							<label for="inputText2" class="form-label">Призвіще</label>
+							<input type="text" class="form-control" id="inputText2" placeholder="Введіть призвіще">
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-12">
+							<label for="inputEmail" class="form-label">Email</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="Введіть email">
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-12">
+							<label for="inputPassword" class="form-label">Пароль</label>
+							<div class="input-group has-validation">
+								<input type="password" class="form-control" placeholder="Введіть пароль" aria-label="password" id="inputPassword" aria-describedby="button-addon1">
+								<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+								<div class="invalid-feedback">Error text</div>
 							</div>
+						</div>
+						<div class="col-12">
+							<label for="inputPassword2" class="form-label">Повторіть пароль</label>
+							<div class="input-group has-validation">
+								<input type="password" class="form-control" placeholder="Введіть пароль" aria-label="password" id="inputPassword2" aria-describedby="button-addon2">
+								<button class="btn btn-input ic-eye-close" type="button" id="button-addon2"></button>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<label for="textarea1" class="form-label">Деталі повідомлення</label>
+							<textarea class="form-control" placeholder="Текст повідомлення" id="textarea1" rows="3"></textarea>
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-12 mt-0">
 							<hr>
-							<div class="row gy-3">
-								<div class="col-md-6">
-									<label class="form-label">Селект multiple</label>
-									<div class="invalid">
-										<v-multi-select v-model="value1" :searchable="true" open-direction=" bottom" deselect-label="" :options="options" :multiple="true"></v-multi-select>
-									</div>
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-md-6">
-									<label class="form-label">Селект multiple</label>
-									<div>
-										<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
-									</div>
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-12">
-									<label class="form-label">Селект</label>
-									<div>
-										<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-									</div>
-									<span class="form-error">Error text</span>
-								</div>
-								<div class="col-12">
-									<label class="form-label">Датапикер</label>
-									<div class="">
-										<v-date-picker v-model="date" range multi-calendars />
-									</div>
-									<span class="form-error">Set start date and time</span>
-								</div>
-								<div class="col-12">
-									<div class="qela-checkbox-label">Гендер</div>
-								</div>
-								<div class="col-12 d-flex flex-wrap ">
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="Check2">
-										<label class="form-check-label" for="Check2">Чоловіча</label>
-									</div>
-									<div class="form-check">
-										<label class="form-check-label" for="Check3">Жіноча</label>
-										<input type="checkbox" class="form-check-input invalid" id="Check3">
-									</div>
-									<div class="form-check">
-										<label class="form-check-label" for="Check4">Свій варіант</label>
-										<input type="checkbox" class="form-check-input" id="Check4">
-									</div>
-									<div class="form-check">
-										<label class="form-check-label" for="Check5">Утримаюсь</label>
-										<input type="checkbox" class="form-check-input" id="Check5">
-									</div>
-									<div class="form-check">
-										<label class="form-check-label" for="Check6">Не важливо</label>
-										<input type="checkbox" class="form-check-input" id="Check6">
+						</div>
+						<div class="col-md-6 mt-0">
+							<label class="form-label">Select multiple</label>
+							<div>
+								<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
+							</div>
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-md-6 mt-0">
+							<label class="form-label">Select multiple</label>
+							<div>
+								<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
+							</div>
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Select</label>
+							<div>
+								<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							</div>
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Датапикер</label>
+							<div class="">
+								<v-date-picker v-model="date" range multi-calendars />
+							</div>
+							<span class="invalid-feedback">Set start date and time</span>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Гендер</label>
+							<div>
+								<div class="form-check form-check-inline">
+									<input type="checkbox" class="form-check-input" id="Check1">
+									<label class="form-check-label" for="Check1">Чоловіча</label>
+									<div class="invalid-feedback">
+										Error
 									</div>
 								</div>
-								<div class="col-12 qela-mt-2">
-									<div class="form-check">
-										<label class="form-check-label" for="Check1">Відправляючи цю форму ви погоджуєтесь з <a href="#" target="_blank">правилами конфиденційності</a></label>
-										<input type="checkbox" class="form-check-input" id="Check1">
+								<div class="form-check form-check-inline">
+									<input type="checkbox" class="form-check-input" id="Check2">
+									<label class="form-check-label" for="Check2">Жіноча</label>
+									<div class="invalid-feedback">
+										Error
 									</div>
 								</div>
-								<div class="col-12 qela-buttons">
-									<button type="reset" class="btn btn-light">Відмінити</button>
-									<button type="submit" class="btn btn-primary">Зареєструватись</button>
+								<div class="form-check form-check-inline">
+									<input type="checkbox" class="form-check-input" id="Check3">
+									<label class="form-check-label" for="Check3">Свій варіант</label>
+									<div class="invalid-feedback">
+										Error
+									</div>
+								</div>
+								<div class="form-check form-check-inline">
+									<input type="checkbox" class="form-check-input" id="Check4">
+									<label class="form-check-label" for="Check4">Утримаюсь</label>
+									<div class="invalid-feedback">
+										Error
+									</div>
+								</div>
+								<div class="form-check form-check-inline">
+									<input type="checkbox" class="form-check-input" id="Check5">
+									<label class="form-check-label" for="Check5">Не важливо</label>
+									<div class="invalid-feedback">
+										Error
+									</div>
 								</div>
 							</div>
-						</form>
-					</div>
+						</div>
+						<div class="col-12">
+							<div class="form-check">
+								<label class="form-check-label" for="Check6">Відправляючи цю форму ви погоджуєтесь з <a href="#" target="_blank">правилами конфиденційності</a></label>
+								<input type="checkbox" class="form-check-input" id="Check6">
+							</div>
+						</div>
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+							<button class="btn btn-info me-md-2" type="reset">Відмінити</button>
+							<button class="btn btn-primary" type="submit">Зареєструватись</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</main>

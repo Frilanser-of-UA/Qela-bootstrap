@@ -9,66 +9,71 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-
+<body class="qela-body">
 	<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
-	<div class="container-fluid h-100 ">
+	<div class="container-fluid h-100">
 		<div class="row h-100 position-relative">
 			<div class="col-1 d-flex align-items-center">
 				<button class="qela-burger border-0"><span></span><span></span><span></span></button>
 			</div>
 			<div class="col d-flex align-items-center justify-content-end">
-				<!-- form search -->
-				<form class="qela-search" role="search">
-					<div class="qela-wrapper">
-						<input class="form-control ps-5" type="search" placeholder="Пошук" aria-label="Search">
-						<button class="btn ic-search " type="submit"></button>
+				<!--FIX form search -->
+				<form class="qela-search me-4" role="search">
+					<div class="qela-search__wrapper">
+						<div class="input-group">
+							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
+							<input type="password" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
+						</div>
 					</div>
 					<button class="btn ic-search p-1 qela-search-btn" type="button"></button>
 				</form>
-				<!-- badge -->
-				<button type="button" class="btn border-0 position-relative qela-badge qela--active">
-					<span class="ic-bell"></span>
-					<span class="position-absolute d-flex align-items-center justify-content-center top-0 start-100 translate-middle badge rounded-pill bg-danger">25</span>
+				<!--FIX badge -->
+				<button type="button" class="btn ic-bell me-4 qela-notification active">
+					<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger qela-badge small">25</span>
 				</button>
-				<!-- user -->
+				<!--FIX user -->
 				<div class="dropdown qela-user">
-					<button type="button" class="btn p-1 border-0 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<div class="qela-avatar"><img class="rounded-circle w-100" src="img/header/user.jpg" alt=""></div>
-						<span class="ic-chevron"></span>
+					<button type="button" class="btn p-1 border-0 d-flex flex-row-reverse align-items-center ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<img class="rounded-circle me-2" src="img/header/user.jpg" width="40" height="40" alt="user">
 					</button>
-					<form class="dropdown-menu gy-5 bg-white border-0 p-3 dropdown-caret dropdown-menu-end qela-shadow-15">
-						<div class="mb-3">
-							<label for="exampleDropdownFormEmail2" class="form-label">Email</label>
-							<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-						</div>
-						<div class="mb-3">
-							<label for="exampleDropdownFormPassword2" class="form-label">Ваш пароль</label>
-							<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-						</div>
-						<div class="mb-3">
-							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="dropdownCheck2">
-								<label class="form-check-label" for="dropdownCheck2">
-									Запамятати мене
-								</label>
+					<div class="dropdown-menu dropdown-caret dropdown-menu-end">
+						<form class="gy-5 p-2">
+							<div class="mb-3">
+								<label for="UserEmail" class="form-label">Email</label>
+								<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email">
+								<div class="invalid-feedback">Error text</div>
 							</div>
-						</div>
-						<button type="submit" class="btn btn-primary w-100">Відправити</button>
-					</form>
+							<div class="mb-3">
+								<label for="inputPassword1" class="form-label">Password</label>
+								<div class="input-group input-group-sm has-validation">
+									<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+									<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+									<div class="invalid-feedback">Error text</div>
+								</div>
+							</div>
+							<div class="mb-3">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="Check">
+									<label class="form-check-label" for="Check">Запамятати мене</label>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary w-100">Відправити</button>
+						</form>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- menu -->
+	<!--FIX menu -->
 	<div class="h-100 qela-menu">
 		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close " aria-label="Close"></button>
-		<nav id="gela-nav" class="d-flex flex-column position-relative h-100 ">
-			<a href="#" class="position-relative z-3 logo qela-shadow">
-				<img src="img\header\logo.svg" alt="">
+		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button>
+		<nav class="d-flex flex-column position-relative h-100 qela-nav">
+			<a href="#" class="position-relative qela-logo qela-shadow">
+				<img src="img\header\logo.svg" alt="logo">
 			</a>
-			<div class="qela-wrapper d-flex flex-column position-relative z-2">
+			<div class="qela-nav__wrapper d-flex flex-column position-relative">
 				<ul class="nav flex-column mb-auto">
 					<li class="nav-item">
 						<a href="#" class="nav-link d-flex align-items-center active" aria-current="page">
@@ -102,7 +107,9 @@
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-dollar p-2 rounded-5"></span>
+							<span class="ic-dollar p-2 rounded-5 position-relative">
+								<span class="position-absolute top-0 start-50 badge rounded-pill text-bg-danger qela-badge small">25</span>
+							</span>
 							<span>Донати</span>
 						</a>
 					</li>
