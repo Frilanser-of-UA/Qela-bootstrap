@@ -10,17 +10,17 @@ window.onload = function () {
 				document.querySelector('.qela-menu').classList.toggle('active');
 				document.querySelector('.qela-btn-menu').classList.toggle('active');
 			}
-		} else if (!targetElement.closest('#gela-nav') && document.querySelector('.qela-menu.active')) {
+		} else if (!targetElement.closest('.qela-nav') && document.querySelector('.qela-menu.active') || targetElement.classList.contains('qela-btn-close')) {
 			document.querySelector('.qela-menu').classList.remove('active');
 			document.querySelector('.qela-btn-menu').classList.remove('active');
 		}
 		//== випадашки search
 		if (targetElement.classList.contains('qela-search-btn')) {
 			if (document.querySelector('.qela-search-btn')) {
-				document.querySelector('.qela-search__wrapper').classList.toggle('qela--visible');
+				document.querySelector('.qela-search__wrapper').classList.toggle('active');
 			}
-		} else if (!targetElement.closest('.qela-search__wrapper') && document.querySelector('.qela-search__wrapper.qela--visible')) {
-			document.querySelector('.qela-search__wrapper').classList.remove('qela--visible');
+		} else if (!targetElement.closest('.qela-search__wrapper') && document.querySelector('.qela-search__wrapper.active')) {
+			document.querySelector('.qela-search__wrapper').classList.remove('active');
 		}
 	}
 }

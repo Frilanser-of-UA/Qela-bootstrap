@@ -27,6 +27,7 @@
 						<li><a href="#h3Btn8" class="text-black">Range</a></li>
 						<li><a href="#h3Btn9" class="text-black">Acordion</a></li>
 						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
+						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -54,12 +55,12 @@
 	<button type="button" class="btn btn-secondary ic-plus ico-right" disabled>Secondary</button>
 </div>
 <div class="d-flex gap-2 flex-wrap">
-	<button type="button" class="btn btn-success">Secondary</button>
-	<button type="button" class="btn btn-success" disabled>Secondary</button>
-	<button type="button" class="btn btn-success ic-plus ico-left">Secondary</button>
-	<button type="button" class="btn btn-success ic-plus ico-left" disabled>Secondary</button>
-	<button type="button" class="btn btn-success ic-plus ico-right">Secondary</button>
-	<button type="button" class="btn btn-success ic-plus ico-right" disabled>Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-success" disabled>Success</button>
+	<button type="button" class="btn btn-success ic-plus ico-left">Success</button>
+	<button type="button" class="btn btn-success ic-plus ico-left" disabled>Success</button>
+	<button type="button" class="btn btn-success ic-plus ico-right">Success</button>
+	<button type="button" class="btn btn-success ic-plus ico-right" disabled>Success</button>
 </div>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-danger">Danger</button>
@@ -120,12 +121,12 @@
 	<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right" disabled>Secondary</button>
 </div>
 <div class="d-flex gap-2 flex-wrap">
-	<button type="button" class="btn btn-sm btn-success">Secondary</button>
-	<button type="button" class="btn btn-sm btn-success" disabled>Secondary</button>
-	<button type="button" class="btn btn-sm btn-success ic-plus ico-left">Secondary</button>
-	<button type="button" class="btn btn-sm btn-success ic-plus ico-left" disabled>Secondary</button>
-	<button type="button" class="btn btn-sm btn-success ic-plus ico-right">Secondary</button>
-	<button type="button" class="btn btn-sm btn-success ic-plus ico-right" disabled>Secondary</button>
+	<button type="button" class="btn btn-sm btn-success">Success</button>
+	<button type="button" class="btn btn-sm btn-success" disabled>Success</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-left">Success</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-left" disabled>Success</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-right">Success</button>
+	<button type="button" class="btn btn-sm btn-success ic-plus ico-right" disabled>Success</button>
 </div>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-sm btn-danger">Danger</button>
@@ -294,6 +295,37 @@
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn-close ic-cloze" aria-label="Close"></button>
 	<button type="button" class="btn-close ic-cloze" disabled aria-label="Close"></button>
+</div>
+<!-- FIX Icon buttons -->
+<h4 class="mt-4">Icon buttons</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-primary ico ic-plus"></button>
+	<button type="button" class="btn btn-secondary ico ic-plus"></button>
+	<button type="button" class="btn btn-warning ico ic-plus"></button>
+	<button type="button" class="btn btn-success ico ic-plus"></button>
+	<button type="button" class="btn btn-danger ico ic-plus"></button>
+	<button type="button" class="btn btn-info ico ic-plus"></button>
+	<button type="button" class="btn btn-light ico ic-plus"></button>
+</div>
+<!-- FIX Icon buttons  small-->
+<h4 class="mt-4">Icon buttons small</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-sm btn-primary ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-secondary ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-warning ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-success ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-danger ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-info ico ic-plus"></button>
+	<button type="button" class="btn btn-sm btn-light ico ic-plus"></button>
+</div>
+<!-- FIX Buttons group-->
+<h4 class="mt-4">Buttons group</h4>
+<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+	<button type="button" class="btn btn-light ico ic-plus"></button>
+	<button type="button" class="btn btn-light ico ic-plus"></button>
+	<button type="button" class="btn btn-light ico ic-plus"></button>
+	<button type="button" class="btn btn-light ico ic-plus"></button>
+	<button type="button" class="btn btn-light danger ico ic-plus"></button>
 </div>
 					<!-- FIX Text field  -->
 <h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
@@ -663,18 +695,112 @@
 	<label for="Range1" class="form-label">Example range</label>
 	<input type="range" class="form-range" value="50" min="0" max="100" id="Range1" disabled>
 </div>
-					<!-- FIX Acordion  -->
-<h2 class="h1 mt-4" id="h3Btn9">Acordion</h2>
-<!-- FIX Accordion-flush  -->
-<h4>Accordion-flush</h4>
+					<!-- FIX Dropdown  -->
+<h2 class="h1 mt-4" id="h3Btn9">Dropdown</h2>
+<div class="dropdown">
+	<button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		Дії з обраним
+	</button>
+	<ul class="dropdown-menu shadow">
+		<li><button type="button" class="dropdown-item">Змінити статус</button></li>
+		<li><button type="button" class="dropdown-item">Відправити Email</button></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><button type="button" class="dropdown-item">Заблокувати</button></li>
+		<li><button type="button" class="dropdown-item">Видалити</button></li>
+	</ul>
+</div>
 					<!-- FIX Badge  -->
 <h2 class="h1 mt-4" id="h3Btn10">Badge</h2>
 <!-- FIX Pill badges  -->
 <h4>Pill badges</h4>
 <div>
-	<span class="badge rounded-pill text-bg-danger">Danger</span>
+	<span class="badge  text-bg-danger">Danger</span>
 </div>
-
+<!-- FIX Pill badges small -->
+<h4>Pill badges small</h4>
+<div>
+	<span class="badge rounded-pill text-bg-danger qela-badge small">Danger</span>
+</div>
+					<!-- FIX Pagination  -->
+<h2 class="h1 mt-4" id="h3Btn11">Pagination</h2>
+<!-- FIX Pagination  default -->
+<h4>Pagination default</h4>
+<nav aria-label="Page navigation">
+	<ul class="pagination">
+		<li class="page-item disabled">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">Prev</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">...</a></li>
+		<li class="page-item"><a class="page-link" href="#">24</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<nav aria-label="Page navigation">
+	<ul class="pagination">
+		<li class="page-item disabled">
+			<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
+				<span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">...</a></li>
+		<li class="page-item"><a class="page-link" href="#">24</a></li>
+		<li class="page-item">
+			<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
+				<span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<!-- FIX Pagination small -->
+<h4>Pagination small</h4>
+<nav aria-label="Page navigation">
+	<ul class="pagination pagination-sm">
+		<li class="page-item disabled">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">Prev</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">...</a></li>
+		<li class="page-item"><a class="page-link" href="#">24</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<nav aria-label="Page navigation">
+	<ul class="pagination pagination-sm">
+		<li class="page-item disabled">
+			<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
+				<span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">...</a></li>
+		<li class="page-item"><a class="page-link" href="#">24</a></li>
+		<li class="page-item">
+			<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
+				<span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
+			</a>
+		</li>
+	</ul>
+</nav>
 				</div>
 			</div>
 		</main>

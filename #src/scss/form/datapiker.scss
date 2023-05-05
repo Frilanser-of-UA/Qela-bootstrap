@@ -147,8 +147,8 @@
 
 }
 
-.dp__button {
-	border-top: 1px solid #E8E8E8;
+.dp__btn {
+	border-top: 1px solid $gray-400;
 }
 
 .dp__button svg {
@@ -157,7 +157,7 @@
 
 .dp__action_row {
 	border-radius: 0 0 17px 17px;
-	border-top: 1px solid #E8E8E8;
+	border-top: 1px solid $gray-400;
 }
 
 .dp__selection_preview {

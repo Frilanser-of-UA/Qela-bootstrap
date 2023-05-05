@@ -1,37 +1,4 @@
-.qela-list-users {
+.qela-users {
 	background-color: $white;
 	border-radius: 10px;
-	padding: 30px;
-	margin-bottom: 40px;
-
-	.row {
-		align-items: center;
-	}
-
-	.qela-search {
-		.qela-wrapper {
-			visibility: visible;
-			opacity: 1;
-			pointer-events: auto;
-
-			@media (max-width:($md3+px)) {
-				position: static;
-				width: 100%;
-				transform: translateX(0);
-			}
-		}
-	}
-}
-
-.qela-download {
-	margin: 0px 0px 0px auto;
-	font-size: 24px;
-	color: $gray-500-700;
-	text-decoration: none;
-
-	@media (any-hover:hover) {
-		&:hover {
-			color: $purple;
-		}
-	}
 }

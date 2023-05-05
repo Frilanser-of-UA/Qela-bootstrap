@@ -1,66 +1,16 @@
 .dropdown {
-	.btn-dropdown {
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: center;
-		border: none;
-		background-color: transparent;
-		color: $gray-500;
-		transition: color 0.2s ease 0s;
+	&>.btn {
+		&::before {
+			transition: transform 0.2s ease 0s, color 0.2s ease 0s;
+		}
 
 		&.show {
-			color: $black;
-
 			&::before {
-				transform: rotate(-180deg);
+				transform: translateY(-50%) matrix(1, 0, 0, -1, 0, 0);
 				color: $black;
 			}
 		}
-
-		&::before {
-			font-size: 12px;
-			margin: 0px 0px 0px 4px;
-			color: $gray-500;
-			transition: all 0.2s ease 0s;
-		}
-
 	}
-
-	.dropdown-menu {
-		box-shadow: $dropdown-box-shadow;
-	}
-}
-
-.qela-filter {
-	.body {
-		display: flex;
-		align-items: center;
-	}
-
-	.form-check {
-		margin-bottom: 0;
-	}
-
-	.qela-name {
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 17px;
-		color: $gray-500-700;
-		margin: 0px 10px 0px 0px;
-	}
-
-	&.small {
-		.dropdown-btn {
-			font-size: 11px;
-			color: $gray-500-700;
-			padding: 0px;
-
-			&::before {
-				font-size: 12px;
-			}
-		}
-	}
-
 }
 
 .qela-dropdown {

@@ -8,10 +8,20 @@
 		color: $gray-500;
 	}
 
+	&[class^="ic-"],
+	&[class*="ic-"] {
+		&:before {
+			font-size: 18px;
+		}
+	}
+
+	&.ico {
+		padding: 9px;
+	}
+
 	&.ico-left,
 	&.ico-right {
 		&::before {
-			font-size: 18px;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -37,11 +47,15 @@
 
 .btn-sm {
 
-	&.ico-left,
-	&.ico-right {
-		&::before {
+	&[class^="ic-"],
+	&[class*="ic-"] {
+		&:before {
 			font-size: 14px;
 		}
+	}
+
+	&.ico {
+		padding: 7.5px;
 	}
 
 	&.ico-left {
@@ -129,8 +143,8 @@
 }
 
 .btn-info {
-	border-color: $gray-200;
-	background-color: $gray-200;
+	border-color: $gray-100;
+	background-color: $gray-100;
 
 	&:hover {
 		border-color: $gray-300;
@@ -319,6 +333,40 @@
 	}
 }
 
+.qela-btn-group {
+	&.btn-group {
+		display: inline-flex;
+		align-items: center;
+
+		.btn {
+			border-color: transparent;
+			background-color: transparent;
+			padding: 5.5px;
+			color: $gray-600;
+
+			@media (any-hover:hover) {
+				&:hover {
+					color: $secondary;
+				}
+			}
+
+			&.danger {
+				color: $danger;
+
+				@media (any-hover:hover) {
+					&:hover {
+						color: $danger-600;
+					}
+				}
+			}
+
+			::before {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
 .btn-close {
 	background-color: $white;
 	border-radius: 50%;
@@ -334,7 +382,7 @@
 
 .qela-btn-tooltip {
 	border: none;
-	color: $info;
+	color: $gray-400;
 	padding: 0;
 
 	&:hover {
@@ -347,5 +395,114 @@
 
 	&::before {
 		font-size: 16px;
+	}
+}
+
+.qela-btn-menu {
+	position: absolute;
+	z-index: 1;
+	left: calc(100% - 16px);
+	top: 40%;
+	border-radius: 50%;
+	padding: 9px 4px 9px 14px;
+	background-color: $white;
+	color: $gray-500;
+
+	@media (max-width:($md3+px)) {
+		display: none;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $white;
+
+			&::before {
+				color: $black;
+			}
+		}
+	}
+
+	&::before {
+		transition: transform .3s ease 0s, color 0.2s;
+		font-size: 14px;
+		color: $gray-500;
+		transform: rotate(-90deg);
+	}
+
+	&.active {
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.qela-btn-close {
+	background-color: transparent;
+	z-index: 4;
+	top: 8px;
+	right: 5px;
+	display: none;
+
+	@media (max-width:($md3+px)) {
+		display: block;
+	}
+
+	&::before {
+		font-size: 28px;
+	}
+}
+
+.qela-burger {
+	display: none;
+
+	@media (max-width: ($md3+px)) {
+		display: block;
+		cursor: pointer;
+
+		width: 40px;
+		flex: 0 0 40px;
+		height: 40px;
+		position: relative;
+		background-color: transparent;
+
+		span {
+			transition: transform 0.4s ease 0s;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background-color: $gray-500-700;
+			pointer-events: none;
+			cursor: pointer;
+
+			&:first-child {
+				top: calc(50% - 9px);
+			}
+
+			&:last-child {
+				top: auto;
+				bottom: calc(50% - 11px);
+			}
+		}
+
+		&.active {
+			span {
+				transform: scale(0);
+				height: 1px;
+				width: 24px;
+
+				&:first-child {
+					transform: translate(-50%, -50%) rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+
+				&:last-child {
+					transform: translate(-50%, -50%) rotate(45deg);
+					bottom: 50%;
+				}
+			}
+		}
 	}
 }

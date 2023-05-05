@@ -17,6 +17,12 @@
 		@extend %ic;
 		display: block;
 	}
+
+	&.ico-sm {
+		&::before {
+			font-size: 16px;
+		}
+	}
 }
 
 .ic-bell:before {
