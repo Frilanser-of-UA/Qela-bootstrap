@@ -25,9 +25,10 @@
 						<li><a href="#h3Btn6" class="text-black">Multi-select</a></li>
 						<li><a href="#h3Btn7" class="text-black">Datapiker</a></li>
 						<li><a href="#h3Btn8" class="text-black">Range</a></li>
-						<li><a href="#h3Btn9" class="text-black">Acordion</a></li>
+						<li><a href="#h3Btn9" class="text-black">Dropdown</a></li>
 						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
 						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
+						<li><a href="#h3Btn12" class="text-black">Alert</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -295,6 +296,12 @@
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn-close ic-cloze" aria-label="Close"></button>
 	<button type="button" class="btn-close ic-cloze" disabled aria-label="Close"></button>
+</div>
+<!-- FIX Button-close small-->
+<h4 class="mt-4">Button-close small</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn-close small ic-cloze" aria-label="Close"></button>
+	<button type="button" class="btn-close small ic-cloze" disabled aria-label="Close"></button>
 </div>
 <!-- FIX Icon buttons -->
 <h4 class="mt-4">Icon buttons</h4>
@@ -680,7 +687,7 @@
 <h2 class="h1 mt-4" id="h3Btn7">Datapiker</h2>
 <div class="col-12">
 	<label class="form-label">Датапикер</label>
-	<div class="">
+	<div>
 		<v-date-picker v-model="date" range multi-calendars />
 	</div>
 	<span class="invalid-feedback">Set start date and time</span>
@@ -801,6 +808,76 @@
 		</li>
 	</ul>
 </nav>
+					<!-- FIX Alert  -->
+<h2 class="h1 mt-4" id="h3Btn12">Alert</h2>
+<!-- FIX Alert defoult -->
+<h4 class="mt-4">Alert defoult</h4>
+<div class="alert alert-secondary qela-alert fade show" role="alert">
+	<span class="ic-alert-triangle text-secondary"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-danger qela-alert fade show" role="alert">
+	<span class="ic-error-warning-fill text-danger"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#" class="text-danger">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-warning qela-alert fade show" role="alert">
+	<span class="ic-error-warning-fill text-warning"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#" class="text-warning">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-info qela-alert fade show" role="alert">
+	<span class="ic-error-warning-fill text-secondary"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<!-- FIX Alert small -->
+<h4 class="mt-4">Alert small</h4>
+<div class="alert alert-secondary qela-alert fade show small" role="alert">
+	<span class="ic-alert-triangle text-secondary"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-danger qela-alert fade show small" role="alert">
+	<span class="ic-error-warning-fill text-danger"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#" class="text-danger">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-warning qela-alert fade show small" role="alert">
+	<span class="ic-error-warning-fill text-warning"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#" class="text-warning">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-info qela-alert fade show small" role="alert">
+	<span class="ic-error-warning-fill text-secondary"></span>
+	<div class="mb-2">
+		Увага! Підписка тільки на місяць
+	</div>
+	<a href="#">Підтвердити</a>
+	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 				</div>
 			</div>
 		</main>

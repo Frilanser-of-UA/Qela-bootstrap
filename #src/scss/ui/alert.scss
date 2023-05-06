@@ -5,27 +5,34 @@
 
 	&.alert {
 		span {
-			position: absolute;
-			left: 16px;
-			top: 1em;
 
-			&::before {
-				font-size: 16px;
-			}
-
-			&.ic-large {
-				position: static;
+			&[class^="ic-"],
+			[class*="ic-"] {
+				position: absolute;
+				left: 16px;
+				top: 1rem;
 
 				&::before {
-					font-size: 38px;
+					font-size: 16px;
 				}
 			}
 		}
 
 		a {
 			text-decoration: none;
-			font-size: 14px;
-			letter-spacing: 0.2px;
+		}
+	}
+
+	&.small {
+		padding: 0.5rem 2.25rem;
+
+		span {
+
+			&[class^="ic-"],
+			[class*="ic-"] {
+				left: 12px;
+				top: 0.5rem;
+			}
 		}
 	}
 
@@ -33,23 +40,6 @@
 		position: absolute;
 		top: 16px;
 		right: 16px;
-		padding: 1px;
 		opacity: 1;
-	}
-
-	&.alert-secondary {
-		background-color: $purple;
-	}
-
-	&.alert-danger {
-		background-color: $red;
-	}
-
-	&.alert-warning {
-		background-color: $orange;
-	}
-
-	&.alert-info {
-		background-color: $gray-500;
 	}
 }

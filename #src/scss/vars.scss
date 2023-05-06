@@ -87,6 +87,16 @@ $danger-600: shade-color($danger, 20%);
 $danger-700: shade-color($danger, 40%);
 $danger-800: shade-color($danger, 60%);
 $danger-900: shade-color($danger, 80%);
+
+$info-100: $gray-100;
+$info-200: $gray-200;
+$info-300: $gray-300;
+$info-400: $gray-400;
+$info-500: $info;
+$info-600: $gray-600;
+$info-700: $gray-700;
+$info-800: $gray-800;
+$info-900: $gray-900;
 // ===============================================
 $primarys: (
 	"primary-100": $primary-100,
@@ -147,6 +157,17 @@ $dangers: (
 	"danger-800": $danger-800,
 	"danger-900": $danger-900
 );
+$infos: (
+	"info-100": $info-100,
+	"info-200": $info-200,
+	"info-300": $info-300,
+	"info-400": $info-400,
+	"info-500": $info-500,
+	"info-600": $info-600,
+	"info-700": $info-700,
+	"info-800": $info-800,
+	"info-900": $info-900
+);
 // Prefix for :root CSS variables
 $variable-prefix: bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix: $variable-prefix;
@@ -171,18 +192,18 @@ $link-shade-percentage: 25%;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
 // LINK
 //gutter
-$grid-gutter-width: 2.5rem;
+$grid-gutter-width: 3rem;
 //gutter
 // scss-docs-start border-variables
 $border-width: 1px;
 $border-style: solid;
-$border-color: $gray-200;
+$border-color: $gray-400;
 $border-color-translucent: rgba($black, .175);
 // scss-docs-end border-variables
 // scss-docs-start border-radius-variables
-$border-radius: .375rem;
+$border-radius: .5rem;
 $border-radius-sm: .25rem;
-$border-radius-lg: .5rem;
+$border-radius-lg: .375rem;
 $border-radius-xl: 1rem;
 $border-radius-2xl: 2rem;
 $border-radius-pill: 50rem;
@@ -269,7 +290,7 @@ $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $i
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
 $btn-border-width: $input-btn-border-width;
-$btn-border-radius: $border-radius;
+$btn-border-radius: $border-radius-lg;
 $btn-font-weight: 500;
 $btn-disabled-opacity: 1;
 $btn-focus-box-shadow: none;
@@ -319,7 +340,7 @@ $input-color: $gray-900;
 $input-border-color: $gray-400;
 $input-border-width: $input-btn-border-width;
 $input-box-shadow: none;
-$input-border-radius: $border-radius;
+$input-border-radius: $border-radius-lg;
 $input-border-radius-sm: $border-radius-sm;
 $input-focus-bg: $input-bg;
 $input-focus-border-color: $secondary;
@@ -387,7 +408,7 @@ $form-range-thumb-transition: background-color .15s ease-in-out, border-color .1
 // $dropdown-link-active-bg: transparent;
 // $dropdown-item-padding-y: $spacer * .25;
 // $dropdown-item-padding-x: $spacer * 0;
-$dropdown-min-width: 10rem;
+$dropdown-min-width: 15rem;
 $dropdown-padding-x: 0.75rem;
 $dropdown-padding-y: 0.75rem;
 // $dropdown-spacer: .125rem;
@@ -395,7 +416,7 @@ $dropdown-font-size: $font-size-sm;
 $dropdown-color: $black;
 // $dropdown-bg: $white;
 $dropdown-border-color: none;
-$dropdown-border-radius: $border-radius;
+$dropdown-border-radius: $border-radius-lg;
 $dropdown-border-width: $border-width;
 // $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width);
 $dropdown-divider-bg: $gray-400;
@@ -438,18 +459,19 @@ $modal-backdrop-opacity: 0.2;
 $alert-padding-y: $spacer;
 $alert-padding-x: $spacer * 2.625;
 $alert-margin-bottom: 0;
+$alert-link-font-weight: 400;
 $alert-border-radius: $border-radius;
 $alert-border-width: 0;
 $alert-bg-scale: -80%;
 $alert-color-scale: 0%;
-$alert-dismissible-padding-r: $alert-padding-x * 3; // 3x covers width of x plus default padding on either side
+$alert-dismissible-padding-r: $alert-padding-x * 3;
 //alert
 //tooltip
 $tooltip-font-size: 0.75rem;
 $tooltip-max-width: 180px;
 $tooltip-color: $black;
 $tooltip-bg: $white;
-$tooltip-border-radius: $border-radius;
+$tooltip-border-radius: $border-radius-lg;
 $tooltip-opacity: 1;
 $tooltip-padding-y: $spacer * 0.75;
 $tooltip-padding-x: $spacer * 0.625;
@@ -467,7 +489,7 @@ $badge-font-size: .75em;
 $badge-color: $white;
 $badge-padding-y: .35em;
 $badge-padding-x: .65em;
-$badge-border-radius: $border-radius;
+$badge-border-radius: $border-radius-lg;
 //badge
 //pagination
 $pagination-padding-y: 0.5rem;
@@ -475,7 +497,7 @@ $pagination-padding-x: .75rem;
 $pagination-padding-y-sm: 0.359375rem;
 $pagination-padding-x-sm: .5rem;
 $pagination-font-size: $font-size-base;
-$pagination-border-radius: $border-radius * 0.8;
+$pagination-border-radius: $border-radius-lg * 0.8;
 $pagination-color: $secondary-600;
 $pagination-border-color: $gray-200;
 $pagination-focus-color: $secondary-600;

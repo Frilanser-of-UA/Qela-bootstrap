@@ -7,7 +7,7 @@
 @import "bootstrap/maps";
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
-$all-colors: map-merge-multiple($primarys, $secondarys, $warnings, $succeses, $dangers);
+$all-colors: map-merge-multiple($primarys, $secondarys, $warnings, $succeses, $dangers, $infos);
 
 $utilities: map-merge($utilities,
 		("color": map-merge(map-get($utilities, "color"),
@@ -76,6 +76,5 @@ $utilities: map-merge($utilities,
 @import "./components/home";
 @import "./components/reg";
 @import "./components/statistics";
-@import "./components/list-users";
 @import "./components/table";
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>===========================================

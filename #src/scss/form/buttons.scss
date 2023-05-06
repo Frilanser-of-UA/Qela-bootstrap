@@ -1,5 +1,9 @@
 .btn {
 	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
 
 	&:disabled,
 	&.disabled {
@@ -19,33 +23,18 @@
 		padding: 9px;
 	}
 
-	&.ico-left,
-	&.ico-right {
-		&::before {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
-
 	&.ico-left {
-		padding-left: 30px;
-
-		&::before {
-			left: 8px;
-		}
+		padding-left: 8px;
 	}
 
 	&.ico-right {
-		padding-right: 30px;
-
-		&::before {
-			right: 8px;
-		}
+		padding-right: 8px;
+		flex-direction: row-reverse;
 	}
 }
 
 .btn-sm {
+	gap: 2px;
 
 	&[class^="ic-"],
 	&[class*="ic-"] {
@@ -56,14 +45,6 @@
 
 	&.ico {
 		padding: 7.5px;
-	}
-
-	&.ico-left {
-		padding-left: 24px;
-	}
-
-	&.ico-right {
-		padding-right: 24px;
 	}
 }
 
@@ -377,6 +358,16 @@
 
 	&:disabled {
 		color: $gray-500;
+	}
+
+	&.small {
+		width: auto;
+		height: auto;
+		padding: 1px;
+
+		&::before {
+			font-size: 16px;
+		}
 	}
 }
 
