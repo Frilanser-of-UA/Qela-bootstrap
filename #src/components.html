@@ -24,6 +24,7 @@
 						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
 						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
 						<li><a href="#h3Btn12" class="text-black">Alert</a></li>
+						<li><a href="#h3Btn13" class="text-black">Logos</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -42,6 +43,7 @@
 					@@include('./components/_badge.html',{})
 					@@include('./components/_pagination.html',{})
 					@@include('./components/_alert.html',{})
+					@@include('./components/_logo.html',{})
 				</div>
 			</div>
 		</main>
@@ -57,7 +59,7 @@
 			},
 			data() {
 				return {
-					date: new Date(),
+					date: [new Date(), new Date()],
 					value1: '',
 					value2: '',
 					value3: '',

@@ -29,6 +29,7 @@
 						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
 						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
 						<li><a href="#h3Btn12" class="text-black">Alert</a></li>
+						<li><a href="#h3Btn13" class="text-black">Logos</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -718,6 +719,35 @@
 		<li><button type="button" class="dropdown-item">Видалити</button></li>
 	</ul>
 </div>
+<div class="dropdown qela-user">
+	<button type="button" class="btn p-1 border-0 pe-4 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+		<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user">
+	</button>
+	<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow" style="">
+		<form class="gy-5 p-2">
+			<div class="mb-3">
+				<label for="UserEmail" class="form-label">Email</label>
+				<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="mb-3">
+				<label for="inputPassword1" class="form-label">Password</label>
+				<div class="input-group input-group-sm has-validation">
+					<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+					<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+					<div class="invalid-feedback">Error text</div>
+				</div>
+			</div>
+			<div class="mb-3">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="Check">
+					<label class="form-check-label" for="Check">Запамятати мене</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary w-100">Відправити</button>
+		</form>
+	</div>
+</div>
 					<!-- FIX Badge  -->
 <h2 class="h1 mt-4" id="h3Btn10">Badge</h2>
 <!-- FIX Pill badges  -->
@@ -878,6 +908,31 @@
 	<a href="#">Підтвердити</a>
 	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+					<!-- FIX Logos  -->
+<h2 class="h1 mt-4" id="h3Btn13">Logos</h2>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<a class="navbar-brand d-inline-flex" href="#">
+		<img src="img/logo-2.svg" alt="Logo" width="40" height="40">
+	</a>
+	<a class="navbar-brand  d-inline-flex" href="#">
+		<img src="img/logo.svg" alt="Logo" width="86" height="40">
+	</a>
+	<a class="navbar-brand  d-inline-flex" href="#">
+		<img src="img/logo-3.svg" alt="Logo" width="57" height="40">
+	</a>
+	<a class="navbar-brand  d-inline-flex" href="#">
+		<img src="img/logo.svg" alt="Logo" width="125" height="50">
+	</a>
+	<a class="navbar-brand  d-inline-flex" href="#">
+		<img src="img/logo.svg" alt="Logo" width="200" height="82">
+	</a>
+	<h3 class="mt-5" id="h3Btn2">Logo block</h3>
+	<div class="text-center">
+		<a class="navbar-brand d-inline-flex" href="#">
+			<img src="img/logo.svg" alt="Logo" width="86" height="40">
+		</a>
+	</div>
+</div>
 				</div>
 			</div>
 		</main>
@@ -893,7 +948,7 @@
 			},
 			data() {
 				return {
-					date: new Date(),
+					date: [new Date(), new Date()],
 					value1: '',
 					value2: '',
 					value3: '',

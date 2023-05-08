@@ -224,10 +224,10 @@ $headings-margin-bottom: $spacer * 0;
 $headings-font-weight: 500;
 $headings-line-height: 1.2;
 // hr
-$hr-margin-y: 30px;
-$hr-border-color: $gray-500; // Allows for inherited colors
+$hr-margin-y: 0;
+$hr-border-color: $gray-300; // Allows for inherited colors
 $hr-border-width: var(--#{$prefix}border-width);
-$hr-opacity: 0.4;
+$hr-opacity: 1;
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.

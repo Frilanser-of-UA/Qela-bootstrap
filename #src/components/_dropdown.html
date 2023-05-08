@@ -14,3 +14,32 @@
 		<li><button type="button" class="dropdown-item">Видалити</button></li>
 	</ul>
 </div>
+<div class="dropdown qela-user">
+	<button type="button" class="btn p-1 border-0 pe-4 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+		<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user">
+	</button>
+	<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow" style="">
+		<form class="gy-5 p-2">
+			<div class="mb-3">
+				<label for="UserEmail" class="form-label">Email</label>
+				<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="mb-3">
+				<label for="inputPassword1" class="form-label">Password</label>
+				<div class="input-group input-group-sm has-validation">
+					<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+					<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+					<div class="invalid-feedback">Error text</div>
+				</div>
+			</div>
+			<div class="mb-3">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="Check">
+					<label class="form-check-label" for="Check">Запамятати мене</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary w-100">Відправити</button>
+		</form>
+	</div>
+</div>

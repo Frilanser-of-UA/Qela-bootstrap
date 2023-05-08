@@ -5310,11 +5310,11 @@ body {
 }
 
 hr {
-  margin: 30px 0;
+  margin: 0 0;
   color: inherit;
   border: 0;
-  border-top: var(--bs-border-width) solid #adb5bd;
-  opacity: 0.4;
+  border-top: var(--bs-border-width) solid #dee2e6;
+  opacity: 1;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -10327,7 +10327,7 @@ textarea.form-control-lg {
   width: 1px;
   min-height: 1em;
   background-color: currentcolor;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 /* ======================================================================== */
@@ -10784,24 +10784,10 @@ textarea.form-control-lg {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.qela-shadow-15 {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
 .qela-conatiner-sm {
-  max-width: 720px;
+  max-width: 432px;
+  padding: 0 16px;
   margin: 0 auto;
-}
-@media (max-width: 990.98px) {
-  .qela-conatiner-sm {
-    padding: 0 30px;
-  }
-}
-@media (max-width: 767.98px) {
-  .qela-conatiner-sm {
-    padding: 0 20px;
-    max-width: 100%;
-  }
 }
 
 .qela-clamp {
@@ -11263,7 +11249,6 @@ textarea.form-control-lg {
   padding: 4px 8px;
   border-color: #ced4da;
   background: #fff;
-  color: #6c757d;
 }
 .btn-input::before {
   font-size: 18px;
@@ -11502,10 +11487,6 @@ textarea.form-control-lg {
 }
 
 .form-check .invalid-feedback {
-  font-size: 0.75rem;
-}
-
-.form-check-label {
   font-size: 0.875rem;
 }
 
@@ -11792,76 +11773,8 @@ textarea.form-control-lg {
   transition: transform 0.2s ease 0s, color 0.2s ease 0s;
 }
 .dropdown > .btn.show::before {
-  transform: translateY(-50%) matrix(1, 0, 0, -1, 0, 0);
+  transform: matrix(1, 0, 0, -1, 0, 0);
   color: #000;
-}
-
-.qela-dropdown {
-  position: relative;
-  width: 100%;
-}
-.qela-dropdown .dropdown-btn {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  line-height: 17px;
-  background-color: transparent;
-  border: none;
-  white-space: nowrap;
-}
-.qela-dropdown .dropdown-btn::before {
-  font-size: 14px;
-  color: #495057;
-  margin: 0px 0px 0px 4px;
-  transition: transform 0.3s ease 0s;
-}
-.qela-dropdown .dropdown-btn.active::before {
-  transform: rotate(-180deg);
-}
-.qela-dropdown .dropdown-list {
-  position: absolute;
-  z-index: 2;
-  padding: 12px;
-  min-width: 115px;
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  left: 0;
-  top: calc(100% + 10px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.3s ease 0s;
-}
-.qela-dropdown .dropdown-list.visible {
-  top: calc(100% + 4px);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.qela-dropdown .dropdown-item {
-  font-size: 11px;
-  line-height: 18px;
-  color: #495057;
-  cursor: pointer;
-  transition: color 0.3s ease 0s;
-  position: relative;
-}
-.qela-dropdown .dropdown-item:not(:last-child) {
-  margin: 0px 0px 8px 0px;
-}
-@media (any-hover: hover) {
-  .qela-dropdown .dropdown-item:hover {
-    color: #000;
-  }
-  .qela-dropdown .dropdown-item:hover::before {
-    opacity: 1;
-  }
-}
-.qela-dropdown .dropdown-item.not-visible {
-  display: none;
 }
 
 .modal .qela-btn-close {
@@ -12013,16 +11926,17 @@ header {
   color: #000;
 }
 
+.qela-user > .btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
 @media (any-hover: hover) {
   .qela-user > .btn:hover::before {
     color: #000;
   }
 }
 .qela-user > .btn::before {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 16px;
   color: #adb5bd;
   transition: transform 0.3s ease 0s;
@@ -12207,19 +12121,6 @@ header {
 }
 .qela-commits .qela-item.green::before {
   color: rgb(132, 204, 130);
-}
-
-.qela-form {
-  background-color: #fff;
-  padding: 30px 40px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  margin: 0px 0px 40px 0px;
-}
-@media (max-width: 567.98px) {
-  .qela-form {
-    padding: 20px;
-  }
 }
 
 .qela-statistics {

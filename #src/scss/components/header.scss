@@ -58,6 +58,10 @@ header {
 
 .qela-user {
 	&>.btn {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+
 		@media (any-hover:hover) {
 			&:hover {
 				&::before {
@@ -67,10 +71,6 @@ header {
 		}
 
 		&::before {
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
 			font-size: 16px;
 			color: $gray-500;
 			transition: transform 0.3s ease 0s;

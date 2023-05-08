@@ -238,11 +238,13 @@
 							<div class="text-info-600 p-3 p-sm-4">
 								<small>Status: <span class="text-secondary">New</span></small>
 							</div>
+							<hr>
 							<div class="p-3 p-sm-4 d-flex flex-column gap-2">
 								<button type="button" class="btn btn-primary ic-check-big ico-right">Publish</button>
 								<button type="button" class="btn btn-info">Save as draft</button>
 								<button type="button" class="btn btn-info">Cancel</button>
 							</div>
+							<hr>
 							<div class="p-3">
 								<div class="alert alert-warning qela-alert fade show" role="alert"><span class="ic-error-warning-fill text-warning"></span>
 									<div class="mb-2">Alert! Editing will not be possible after publication</div>
@@ -265,7 +267,7 @@
 			},
 			data() {
 				return {
-					date: new Date(),
+					date: [new Date(), new Date()],
 					value1: '',
 					value2: '',
 					value3: '',
