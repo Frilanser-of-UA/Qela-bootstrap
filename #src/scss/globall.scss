@@ -1,6 +1,7 @@
 .qela-body {
 	padding-top: 80px;
 	padding-left: 80px;
+	min-height: 100vh;
 
 	@media (max-width:($md3+px)) {
 		padding-top: 60px;
@@ -22,8 +23,9 @@
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1;
-	white-space: nowrap;
-	max-width: 200px;
+	white-space: normal;
+	max-height: 47.5px;
 }

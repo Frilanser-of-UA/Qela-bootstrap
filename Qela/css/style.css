@@ -8852,8 +8852,8 @@ textarea.form-control-lg {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-link-color);
-  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-color: #978FFF;
+  --bs-nav-link-hover-color: #7972cc;
   --bs-nav-link-disabled-color: #6c757d;
   display: flex;
   flex-wrap: wrap;
@@ -8889,10 +8889,10 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-width: 1px;
   --bs-nav-tabs-border-color: #dee2e6;
   --bs-nav-tabs-border-radius: 0.5rem;
-  --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
-  --bs-nav-tabs-link-active-color: #495057;
-  --bs-nav-tabs-link-active-bg: #f8f9fa;
-  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #f8f9fa;
+  --bs-nav-tabs-link-hover-border-color: #dee2e6 #dee2e6 #dee2e6;
+  --bs-nav-tabs-link-active-color: #212529;
+  --bs-nav-tabs-link-active-bg: #fff;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 .nav-tabs .nav-link {
@@ -10768,10 +10768,67 @@ textarea.form-control-lg {
   content: "\e95f";
 }
 
+.ic-article:before {
+  content: "\e960";
+}
+
+.ic-award:before {
+  content: "\e961";
+}
+
+.ic-book:before {
+  content: "\e962";
+}
+
+.ic-diamond-24:before {
+  content: "\e963";
+}
+
+.ic-diamond-28:before {
+  content: "\e964";
+}
+
+.ic-diamond-filled-24:before {
+  content: "\e965";
+}
+
+.ic-diamond-filled-28:before {
+  content: "\e966";
+}
+
+.ic-layout-grid:before {
+  content: "\e967";
+}
+
+.ic-layout-kanban:before {
+  content: "\e968";
+}
+
+.ic-list-check:before {
+  content: "\e969";
+}
+
+.ic-notebook:before {
+  content: "\e96a";
+}
+
+.ic-swipe:before {
+  content: "\e96b";
+}
+
+.ic-trophy:before {
+  content: "\e96c";
+}
+
+.ic-wallpaper:before {
+  content: "\e96d";
+}
+
 /* Свои глобальние стили (qela-) */
 .qela-body {
   padding-top: 80px;
   padding-left: 80px;
+  min-height: 100vh;
 }
 @media (max-width: 767.98px) {
   .qela-body {
@@ -10794,10 +10851,11 @@ textarea.form-control-lg {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  white-space: nowrap;
-  max-width: 200px;
+  white-space: normal;
+  max-height: 47.5px;
 }
 
 .btn {
