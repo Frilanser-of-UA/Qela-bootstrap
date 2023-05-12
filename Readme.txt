@@ -1,3 +1,7 @@
+================= Дата 12.05.23 ======================================
+-- Изменения в Datapiker
+-- Правки text-filed, Checkbox, Radiobutton, multiselect
+-- Небольшие правки в list.html, users.html, page.html, list-party.html, list-verification.html
 ================= Дата 09.05.23 ======================================
 -- Добавлены новие иконки в иконочный шрифт
 -- Добавленa табы list-party.html, list-verification.html

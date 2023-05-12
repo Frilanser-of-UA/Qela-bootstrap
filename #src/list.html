@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 @@include('_head.html',{
-"title":"Users"
+"title":"List"
 })
 
 <body class="qela-body">
@@ -10,18 +10,19 @@
 		<!-- =====================Список користувачів==================== -->
 		<div class="container-fluid">
 			<!--  Item с заголовком + кнопки-->
-			<div class="d-flex gap-2 gap-sm-4 flex-wrap mb-3 mt-3">
-				<div class="d-flex gap-2">
+			<div class="d-flex gap-2 gap-sm-3 flex-wrap mb-2 mt-2">
+				<div class="d-flex gap-2 align-items-center">
 					<button type="button" class="btn btn-sm btn-info ic-chevron-left ico-left">Back</button>
-					<h1 class="h3">All blocks</h1>
+					<h1 class="h5">All blocks</h1>
 				</div>
 				<div class="d-flex gap-2">
 					<button type="button" class="btn btn-primary btn-sm ic-check-big ico-right">New user</button>
 					<button type="button" class="btn btn-light btn-sm">Light</button>
 				</div>
 			</div>
+			@@include('./components/_donators.html',{})
 			<!--  Обвертка для таблици и items -->
-			<div class="bg-white rounded-3 qela-shadow mb-3 pb-4">
+			<div class="bg-white rounded-3 border mb-3 pb-4">
 				<!--  Item  с подзаголовком поиском и кнопками -->
 				<div class="border-bottom px-4 py-3">
 					<div class="row gx-4 align-items-center">
@@ -62,7 +63,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="d-flex align-items-center gap-2">
+						<div class="d-flex align-items-center gap-2 flex-wrap">
 							<div class="dropdown">
 								<button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 									View all
@@ -240,7 +241,7 @@
 					</table>
 				</div>
 				<!--  Item только с пагинацией-->
-				<div class="px-4 py-3 border-bottom">
+				<div class="px-4 py-3">
 					<div class="d-flex gap-2 gap-md-4 justify-content-end align-items-center flex-wrap">
 						<nav aria-label="Page navigation">
 							<ul class="pagination pagination-sm mb-0">

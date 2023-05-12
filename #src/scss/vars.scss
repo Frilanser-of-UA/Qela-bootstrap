@@ -197,7 +197,7 @@ $grid-gutter-width: 3rem;
 // scss-docs-start border-variables
 $border-width: 1px;
 $border-style: solid;
-$border-color: $gray-400;
+$border-color: $gray-300;
 $border-color-translucent: rgba($black, .175);
 // scss-docs-end border-variables
 // scss-docs-start border-radius-variables
@@ -318,7 +318,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
 // scss-docs-end btn-variables
 // scss-docs-start form-label-variables
 $form-label-margin-bottom: 0.5rem;
-$form-label-color: $gray-900;
+$form-label-color: $gray-600;
 // scss-docs-end form-label-variables
 // scss-docs-start form-input-variables
 $input-padding-y: $input-btn-padding-y;
@@ -355,6 +355,7 @@ $form-check-input-width: 1rem;
 $form-check-min-height: $font-size-base;
 $form-check-padding-start: $form-check-input-width + .5rem;
 $form-check-margin-bottom: .125rem;
+$form-check-label-color: $gray-600;
 $form-check-label-cursor: pointer;
 $form-check-transition: all 0.2s ease 0s;
 $form-check-input-bg: transparent;

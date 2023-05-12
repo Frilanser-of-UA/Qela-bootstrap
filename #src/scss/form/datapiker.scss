@@ -1,10 +1,3 @@
-.dp__menu {
-	button {
-		border: none;
-		background-color: transparent;
-	}
-}
-
 .dp__main {
 	font-family: $font-family-base;
 	position: relative;
@@ -15,21 +8,21 @@
 .dp__input {
 	height: 40px;
 	border-radius: $border-radius;
-	color: $gray-500;
+	color: $gray-600;
 	border-color: $input-border-color;
 
 	@media (any-hover:hover) {
 		&:hover {
-			border-color: $purple;
+			border-color: $gray-600;
+
+			&:focus {
+				border-color: $gray-600;
+			}
 		}
 	}
 
-	&:focus {
-		@media (any-hover:hover) {
-			&:hover {
-				border-color: $purple;
-			}
-		}
+	&::placeholder {
+		color: $gray-600;
 	}
 
 	&:disabled {
@@ -65,12 +58,16 @@
 	min-width: 300px;
 	font-family: $font-family-base;
 	font-size: 12px;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-	// border: none;
 }
 
 .dp__month_year_row {
-	padding: 9px 4px;
+	padding: 8px;
+	height: 50px;
+}
+
+.dp__btn {
+	border: none;
+	background-color: transparent;
 }
 
 .dp__month_year_select {
@@ -81,7 +78,7 @@
 
 	@media (any-hover:hover) {
 		&:hover {
-			background-color: $white;
+			background-color: $secondary-100;
 		}
 	}
 }
@@ -92,7 +89,7 @@
 	padding: 7px;
 
 	&:hover {
-		background-color: $white;
+		background-color: $secondary-100;
 	}
 }
 
@@ -104,6 +101,15 @@
 
 .dp__calendar_header_separator {
 	display: none;
+}
+
+.dp__calendar {
+	padding-left: 5px;
+
+	&.dp__calendar_next {
+		padding-left: 0;
+		padding-right: 5px;
+	}
 }
 
 .dp__calendar_header {
@@ -138,26 +144,60 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.4px;
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $secondary-100;
+		}
+	}
 }
 
-.dp__pointer {}
+.dp__range_end,
+.dp__range_start,
+.dp__active_date {
+	background-color: $secondary;
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $secondary;
+
+		}
+	}
+}
+
+.dp__overlay_cell_active {
+	background-color: $secondary;
+}
 
 .dp__today {
-	border: 2px solid $purple;
+	border: 2px solid $secondary;
 
 }
 
-.dp__btn {
-	border-top: 1px solid $gray-400;
+
+
+.dp__button {
+	border-top: $gray-300;
+	border-top: 1px solid $gray-300;
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $secondary-100;
+		}
+	}
 }
 
 .dp__button svg {
 	height: 24px;
 }
 
+.dp__icon {
+	fill: $black;
+}
+
 .dp__action_row {
 	border-radius: 0 0 17px 17px;
-	border-top: 1px solid $gray-400;
+	border-top: 1px solid $gray-300;
 }
 
 .dp__selection_preview {
@@ -165,6 +205,7 @@
 	line-height: 100%;
 	letter-spacing: 0.4px;
 	color: $black;
+	width: 70%;
 }
 
 .dp__action {
@@ -179,6 +220,16 @@
 	font-weight: 500;
 	font-size: 14px;
 	padding: 4px 16px;
+	height: 100%;
+	transition: color 0.3s ease 0s;
+	border: none;
+	background-color: transparent;
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: $secondary-600;
+		}
+	}
 }
 
 .is-invalid {
