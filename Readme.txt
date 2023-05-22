@@ -1,3 +1,11 @@
+================= Дата 22.05.23 ======================================
+-- Добавлена страница page-sign.html (вертикальний таб) - Вкладка General
+-- Дополнение лейблов в inputs, selects, datapiker
+-- Правки в list.html, users.html, page.html, quest.html, list-party.html, list-verification.
+-- В .qela-body внесени изменения отступов изи за уменшения высоти шапки
+-- Переработан header
+-- Обновлен иконочный шрифт(добавлены иконки)
+-- Добавлены новые компоненты (Switch, Radiobutton-label group, Buttons group, Input file, Answer-item-2, Badge)
 ================= Дата 12.05.23 ======================================
 -- Изменения в Datapiker
 -- Правки text-filed, Checkbox, Radiobutton, multiselect

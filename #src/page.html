@@ -10,21 +10,22 @@
 		<main>
 			<!-- =====================Список користувачів==================== -->
 			<div class="container-fluid">
-				<!--  Item с заголовком + кнопки-->
-				<div class="d-flex align-items-center gap-2 flex-wrap mb-2 mt-2">
-					<button type="button" class="btn btn-sm btn-info ic-chevron-left ico-left">Back</button>
-					<h1 class="h5">New Voting</h1>
-				</div>
-				<div class="row gx-3 mb-3">
+				<div class="row gx-3 mb-3 pt-3">
 					<div class="col-lg-9 mb-lg-0 mb-3">
 						<div class="border pb-3 pb-md-5 bg-white rounded-2">
-							<!-- row-1 -->
+							<!-- row-1 (input name) -->
 							<div class="p-3 p-sm-4 bg-white rounded-top">
-								<label for="inputText1" class="form-label">Name</label>
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label for="inputText1" class="form-label">Label <span class="text-danger">*</span></label>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+									</div>
+									<label class="form-label">0/<span>2500</span></label>
+								</div>
 								<input type="text" class="form-control" id="inputText1" placeholder="Voting Name">
 								<div class="invalid-feedback">Error text</div>
 							</div>
-							<!-- row-2 -->
+							<!-- row-2 (Radiobutton-label group grid-4 and select)-->
 							<div class="p-3 p-sm-4 bg-info-100">
 								<div class="mb-4 px-2 px-sm-3 py-3 py-sm-4 border rounded-2">
 									<div class="row gy-2">
@@ -43,49 +44,91 @@
 									</div>
 								</div>
 								<div>
-									<label class="form-label">Subsidiary organization</label>
+									<div class="d-flex justify-content-between gap-1">
+										<div class="d-flex align-items-start gap-1">
+											<label class="form-label">Select<span class="text-danger">*</span></label>
+											<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+										</div>
+										<label class="form-label">hint text</label>
+									</div>
 									<div>
 										<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
 									</div>
 									<div class="invalid-feedback">Error text</div>
 								</div>
 							</div>
-							<!-- row-3 -->
+							<!-- row-3 (inputs grid 2 colums col-6)-->
 							<div class="p-3 p-sm-4 bg-white">
 								<div class="row gx-4 gy-3">
 									<div class="col-md-6">
-										<label for="inputText2" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText2" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control" id="inputText2" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 									<div class="col-md-6">
-										<label for="inputText3" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText3" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control is-invalid" id="inputText3" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 									<div class="col-md-6">
-										<label for="inputText4" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText4" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control" id="inputText4" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 									<div class="col-md-6">
-										<label for="inputText5" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText5" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control" id="inputText5" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 									<div class="col-md-6">
-										<label for="inputText6" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText6" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control" id="inputText6" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 									<div class="col-md-6">
-										<label for="inputText7" class="form-label">Name</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText7" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<input type="text" class="form-control" id="inputText7" placeholder="Voting Name">
 										<div class="invalid-feedback">Error text</div>
 									</div>
 								</div>
 							</div>
-							<!-- row-4 -->
+							<!-- row-4 (Radiobutton-label group grid-2 with text right and textarea whith tetx right)-->
 							<div class="p-3 p-sm-4 bg-info-100">
 								<div class="row gx-4 gy-3">
 									<div class="col-md-6">
@@ -111,7 +154,13 @@
 										<p class="mb-0 pt-md-4"><small>What does it mean. Where it’s going to be used. Place to display in app etc. What does it mean. Where it’s going to be used. Place to display in app etc. What does it mean. Where it’s going to be used. Place to display in app etc.What does it mean. Where it’s going to be used. Place to display in app etc</small></p>
 									</div>
 									<div class="col-md-8">
-										<label for="textarea1" class="form-label">Description</label>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="textarea1" class="form-label">Description<span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<textarea class="form-control" placeholder="Enter voting description" id="textarea1" rows="3"></textarea>
 										<div class="invalid-feedback">Error text</div>
 									</div>
@@ -119,9 +168,8 @@
 										<p class="mb-0 pt-md-4"><small>What does it mean. Where it’s going to be used. Place to display in app etc</small></p>
 									</div>
 								</div>
-
 							</div>
-							<!-- row-5 -->
+							<!-- row-5 (Radiobutton-label group grid-4 with text right and textarea) -->
 							<div class="p-3 p-sm-4 bg-white">
 								<div class="row gx-4 gy-3">
 									<div class="col-12">
@@ -180,13 +228,19 @@
 										</div>
 									</div>
 									<div class="col-12">
-										<label for="textarea1" class="form-label">Description</label>
-										<textarea class="form-control" placeholder="Enter voting description" id="textarea1" rows="3"></textarea>
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="textarea2" class="form-label">Description <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
+										<textarea class="form-control" placeholder="Enter voting description" id="textarea2" rows="3"></textarea>
 										<div class="invalid-feedback">Error text</div>
 									</div>
 								</div>
 							</div>
-							<!-- row-6 -->
+							<!-- row-6 (inputs group whith button Add)-->
 							<div class="p-3 p-sm-4 bg-info-100 border-bottom">
 								<div class="form-label">Voting answer options</div>
 								<div class="row gy-2">
@@ -223,9 +277,15 @@
 									</div>
 								</div>
 							</div>
-							<!-- row-7 -->
+							<!-- row-7 (datapicer)-->
 							<div class="p-3 p-sm-4 bg-white">
-								<label class="form-label">Start and End Voting Time</label>
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label class="form-label">Datapiker<span class="text-danger">*</span></label>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+									</div>
+									<label class="form-label">hint text</label>
+								</div>
 								<div>
 									<v-date-picker v-model="date" range multi-calendars />
 								</div>

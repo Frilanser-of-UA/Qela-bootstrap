@@ -28,10 +28,10 @@
 							<!-- Users -->
 							<div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 								<!--  Item  с подзаголовком поиском и кнопками -->
-								<div class="border-bottom px-4 py-3">
+								<div class="border-bottom px-3 py-2">
 									<div class="row gx-4 align-items-center">
 										<div class="col-md-5">
-											<h2 class="h5 mb-2 mb-md-0">User Verification List</h2>
+											<h2 class="h6 mb-2 mb-md-0">User Verification List</h2>
 										</div>
 										<div class="col-md-7 d-flex gap-1 flex-wrap">
 											<form class="flex-grow-1" role="search">
@@ -45,7 +45,7 @@
 									</div>
 								</div>
 								<!--  Item  с пагинацией + дробдауны -->
-								<div class="px-4 py-3 border-bottom">
+								<div class="px-3 py-2 border-bottom">
 									<div class="d-flex gap-2 gap-md-4 justify-content-between align-items-center flex-wrap">
 										<div class="d-flex align-items-center">
 											<div class="form-check form-check-inline me-2"><input type="checkbox" class="form-check-input" id="Check1"></div>
@@ -242,7 +242,7 @@
 									</table>
 								</div>
 								<!--  Item только с пагинацией-->
-								<div class="px-4 py-3">
+								<div class="p-3">
 									<div class="d-flex gap-2 gap-md-4 justify-content-end align-items-center flex-wrap">
 										<nav aria-label="Page navigation">
 											<ul class="pagination pagination-sm mb-0">
@@ -267,12 +267,19 @@
 							</div>
 							<!-- Settings -->
 							<div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-								<div class="py-3 px-3 px-md-4">
+								<div class="py-2 px-3">
 									<h2 class="h5">Notification Settings</h2>
 								</div>
 								<hr>
-								<div class="row gx-4 p-3 p-md-4">
-									<div class="col-md-6"><label for="textarea1" class="form-label">Photo requirements</label>
+								<div class="row gx-4 p-3">
+									<div class="col-md-6">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="textarea1" class="form-label">Label <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
 										<div class="mb-3 mb-md-4">
 											<textarea class="form-control" placeholder="Describe requirements" id="textarea1" rows="3"></textarea>
 											<div class="invalid-feedback">Error text</div>

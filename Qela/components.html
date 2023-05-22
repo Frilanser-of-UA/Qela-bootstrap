@@ -30,6 +30,7 @@
 						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
 						<li><a href="#h3Btn12" class="text-black">Alert</a></li>
 						<li><a href="#h3Btn13" class="text-black">Logos</a></li>
+						<li><a href="#h3Btn14" class="text-black">Items</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -328,51 +329,94 @@
 </div>
 <!-- FIX Buttons group-->
 <h4 class="mt-4">Buttons group</h4>
-<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-	<button type="button" class="btn btn-light ico ic-plus"></button>
-	<button type="button" class="btn btn-light ico ic-plus"></button>
-	<button type="button" class="btn btn-light ico ic-plus"></button>
-	<button type="button" class="btn btn-light ico ic-plus"></button>
-	<button type="button" class="btn btn-light danger ico ic-plus"></button>
+<div>
+	<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+		<button type="button" class="btn btn-light ico ic-plus"></button>
+		<button type="button" class="btn btn-light ico ic-plus"></button>
+		<button type="button" class="btn btn-light ico ic-plus"></button>
+		<button type="button" class="btn btn-light ico ic-plus"></button>
+		<button type="button" class="btn btn-light danger ico ic-plus"></button>
+	</div>
+</div>
+<div>
+	<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+		<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+		<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+	</div>
 </div>
 					<!-- FIX Text field  -->
 <h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
 <!-- FIX Input outline-->
 <h4>Input outline</h4>
 <div>
-	<label for="inputText1" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText1" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<input type="text" class="form-control" id="inputText1" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText2" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<input type="text" class="form-control is-invalid" id="inputText2" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText3" class="form-label">Label</label>
-	<input type="text" class="form-control" disabled id="inputText3" placeholder="Name">
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText3" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div> <input type="text" class="form-control" disabled id="inputText3" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <!-- FIX Input outline small-->
 <h4>Input outline small</h4>
 <div>
-	<label for="inputTextSm1" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm1" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<input type="text" class="form-control form-control-sm" id="inputTextSm1" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputTextSm2" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<input type="text" class="form-control form-control-sm is-invalid" id="inputTextSm2" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputTextSm3" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm3" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<input type="text" class="form-control form-control-sm" disabled id="inputTextSm3" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
@@ -380,19 +424,37 @@
 <!-- FIX Textarea outline-->
 <h4 class="mt-4">Textarea outline</h4>
 <div>
-	<label for="textarea1" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="textarea1" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">0/<span>2500</span></label>
+	</div>
 	<textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="textarea2" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="textarea2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">0/<span>2500</span></label>
+	</div>
 	<textarea class="form-control is-invalid" placeholder="Placeholder" id="textarea2" rows="3"></textarea>
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="textarea3" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="textarea3" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">0/<span>2500</span></label>
+	</div>
 	<textarea class="form-control" placeholder="Placeholder" disabled id="textarea3" rows="3"></textarea>
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
@@ -400,7 +462,13 @@
 <!-- FIX Input group-->
 <h4 class="mt-4">Input group</h4>
 <div>
-	<label for="inputPassword1" class="form-label ">Password</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputPassword1" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation">
 		<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
 		<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
@@ -409,7 +477,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputPassword2" class="form-label">Password</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputPassword2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation is-invalid">
 		<input type="password" class="form-control is-invalid" placeholder="Password" id="inputPassword2" aria-label="Password" aria-describedby="button-addon2">
 		<button class="btn btn-input ic-eye" type="button" id="button-addon2"></button>
@@ -418,7 +492,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText4" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputPassword3" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation">
 		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" id="inputText4" aria-describedby="basic-addon1">
 		<span class="input-group-text" id="basic-addon1">@</span>
@@ -427,7 +507,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText5" class="form-label ">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText5" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation">
 		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon3">
 		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3">Light</button>
@@ -436,7 +522,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText6" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText6" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation">
 		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon4">Light</button>
 		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon4">
@@ -445,7 +537,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText7" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputText7" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group has-validation">
 		<input type="text" class="form-control" placeholder="Placeholder" disabled id="inputText7" aria-label="Text" aria-describedby="button-addon5">
 		<button class="btn btn-input ic-delete" type="button" disabled id="button-addon5"></button>
@@ -456,58 +554,159 @@
 <!-- FIX Input group Small-->
 <h4 class="mt-4">Input group Small</h4>
 <div>
-	<label for="inputPassword1" class="form-label ">Password</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputPasswordSm1" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation">
-		<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+		<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPasswordSm1" aria-describedby="button-addon1">
 		<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputPassword2" class="form-label">Password</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputPasswordSm2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation is-invalid">
-		<input type="password" class="form-control is-invalid" placeholder="Password" id="inputPassword2" aria-label="Password" aria-describedby="button-addon2">
+		<input type="password" class="form-control is-invalid" placeholder="Password" id="inputPasswordSm2" aria-label="Password" aria-describedby="button-addon2">
 		<button class="btn btn-input ic-eye" type="button" id="button-addon2"></button>
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText4" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm4" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation">
-		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" id="inputText4" aria-describedby="basic-addon1">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" id="inputTextSm4" aria-describedby="basic-addon1">
 		<span class="input-group-text" id="basic-addon1">@</span>
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText5" class="form-label ">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm5" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation">
-		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon3">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputTextSm5" aria-describedby="button-addon3">
 		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3">Light</button>
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText6" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm6" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation">
 		<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon4">Light</button>
-		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText5" aria-describedby="button-addon4">
+		<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputTextSm6" aria-describedby="button-addon4">
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label for="inputText7" class="form-label">Label</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputTextSm7" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="input-group input-group-sm has-validation">
-		<input type="text" class="form-control" placeholder="Placeholder" disabled id="inputText7" aria-label="Text" aria-describedby="button-addon5">
+		<input type="text" class="form-control" placeholder="Placeholder" disabled id="inputTextSm7" aria-label="Text" aria-describedby="button-addon5">
 		<button class="btn btn-input ic-delete" type="button" disabled id="button-addon5"></button>
 		<div class="invalid-feedback">Error text</div>
 	</div>
 	<div class="helper-text">Helper text</div>
+</div>
+<!-- FIX Input file-->
+<h4 class="mt-4">Input file</h4>
+<div>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputFile" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
+	<div class="qela-file">
+		<div class="position-relative">
+			<input id="inputFile" type="file" class="form-control">
+			<label for="2" class="form-label gap-2">
+				<span class="ic-img-plus text-info-500"></span>
+				<span class="text-info-900">Click to browse for file</span>
+				<span class="text-info-600">️Aspect ratio 16/9, max width 1000px, max weight 2 Mb</span>
+			</label>
+		</div>
+		<div class="helper-text">Helper text</div>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+</div>
+<div>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputFile2" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
+	<div class="qela-file has-validation">
+		<div class="position-relative">
+			<input id="inputFile2" type="file" class="form-control is-invalid">
+			<label for="inputFile2" class="form-label gap-2">
+				<span class="ic-img-plus text-info-500"></span>
+				<span class="text-info-900">Click to browse for file</span>
+				<span class="text-info-600">️Aspect ratio 16/9, max width 1000px, max weight 2 Mb</span>
+			</label>
+		</div>
+		<div class="helper-text">Helper text</div>
+		<div class="invalid-feedback">Error text</div>
+	</div>
+</div>
+<div>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label for="inputFile3" class="form-label">Label <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
+	<div class="qela-file">
+		<div class="position-relative">
+			<input id="inputFile3" type="file" class="form-control" disabled>
+			<label for="inputFile3" class="form-label gap-2">
+				<span class="ic-img-plus text-info-500"></span>
+				<span class="text-info-900">Click to browse for file</span>
+				<span class="text-info-600">️Aspect ratio 16/9, max width 1000px, max weight 2 Mb</span>
+			</label>
+		</div>
+		<div class="helper-text">Helper text</div>
+		<div class="invalid-feedback">Error text</div>
+	</div>
 </div>
 					<!-- FIX Checkbox  -->
 <h2 class="h1 mt-4" id="h3Btn3">Checkbox</h2>
@@ -563,6 +762,42 @@
 		<label class="form-check-label" for="Check8">Checkbox-label with <a href="#" target="_blank">link</a></label>
 		<input type="checkbox" class="form-check-input" id="Check8">
 	</div>
+</div>
+<!-- FIX Switch custom-->
+<h4>Switch custom</h4>
+<div>
+	<div class="form-check form-check-inline form-switch">
+		<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck5">
+	</div>
+	<div class="form-check form-check-inline form-switch">
+		<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck6" disabled>
+	</div>
+</div>
+<div>
+	<div class="form-check form-check-inline form-switch">
+		<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck7" checked>
+	</div>
+	<div class="form-check form-check-inline form-switch">
+		<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck8" checked disabled>
+	</div>
+</div>
+<!-- FIX Switch label-->
+<h4>Switch label</h4>
+<div class="form-check form-switch">
+	<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck1">
+	<label class="form-check-label" for="SwitchCheck1">Default switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+	<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck2" disabled>
+	<label class="form-check-label" for="SwitchCheck2">Default switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+	<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck3" checked>
+	<label class="form-check-label" for="SwitchCheck3">Default switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+	<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck4" checked disabled>
+	<label class="form-check-label" for="SwitchCheck4">Default switch checkbox input</label>
 </div>
 					<!-- FIX Radiobutton  -->
 <h2 class="h1 mt-4" id="h3Btn4">Radiobutton</h2>
@@ -645,6 +880,79 @@
 		<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
 	</div>
 </div>
+<!-- FIX Radiobutton-label group grid-2-->
+<h4>Radiobutton-label group grid-2</h4>
+<div>
+	<div class="form-label">Voting Type</div>
+	<div class="px-2 px-sm-3 py-3 py-sm-4 border rounded-2">
+		<div class="row gy-2">
+			<div class="col-md-6">
+				<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup21"><label class="form-check-label" for="RadioGroup21">1 Person = 1 Vote</label></div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup22"><label class="form-check-label" for="RadioGroup22">Qela formula</label></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIX Radiobutton-label group grid-4-->
+<h4>Radiobutton-label group grid-4</h4>
+<div class="p-3 p-sm-4 bg-white">
+	<div class="row gx-4 gy-3">
+		<div class="col-12">
+			<div class="form-label">Voting Type</div>
+			<div class="px-2 px-sm-3 py-3 py-sm-4 border rounded-2">
+				<div class="row gy-2">
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup5"><label class="form-check-label" for="RadioGroup5">1 Person = 1 Vote</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup6"><label class="form-check-label" for="RadioGroup6">Voting for entire organization</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup7"><label class="form-check-label" for="RadioGroup7">Qela formula</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup8"><label class="form-check-label" for="RadioGroup8">Qela formula</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup9"><label class="form-check-label" for="RadioGroup9">1 Person = 1 Vote</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup10"><label class="form-check-label" for="RadioGroup10">Qela formula</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup11"><label class="form-check-label" for="RadioGroup11">Qela formula</label></div>
+					</div>
+					<div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12">
+						<div class="form-check"><input type="radio" class="form-check-input" id="RadioGroup12"><label class="form-check-label" for="RadioGroup12">Qela formula</label></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIX Radiobutton-label group inline-->
+<h4>Radiobutton-label group inline</h4>
+<div class="p-3 p-sm-4 bg-white">
+	<div class="row gx-4 gy-3">
+		<div class="col-12">
+			<div class="form-label">Voting Type</div>
+			<div class="px-2 px-sm-3 py-3 py-sm-4 border rounded-2">
+				<div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup13"><label class="form-check-label" for="RadioGroup13">1 Person = 1 Vote</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup14"><label class="form-check-label" for="RadioGroup14">Voting for entire organization</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup15"><label class="form-check-label" for="RadioGroup15">Qela formula</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup16"><label class="form-check-label" for="RadioGroup16">Qela formula</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup17"><label class="form-check-label" for="RadioGroup17">1 Person = 1 Vote</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup18"><label class="form-check-label" for="RadioGroup18">Qela formula</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup19"><label class="form-check-label" for="RadioGroup19">Qela formula</label></div>
+					<div class="form-check form-check-inline"><input type="radio" class="form-check-input" id="RadioGroup20"><label class="form-check-label" for="RadioGroup20">Qela formula</label></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 					<!-- FIX Tooltip  -->
 <h2 class="h1 mt-4" id="h3Btn5">Tooltip</h2>
 <div>
@@ -653,7 +961,13 @@
 					<!-- FIX Multi-select  -->
 <h2 class="h1 mt-4" id="h3Btn6">Multi-select</h2>
 <div>
-	<label class="form-label">Select multiple</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label class="form-label">Select multiple <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div>
 		<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
 	</div>
@@ -661,7 +975,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label class="form-label">Select multiple</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label class="form-label">Select multiple <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div>
 		<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" :disabled="true"></v-multi-select>
 	</div>
@@ -669,7 +989,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label class="form-label">Select multiple</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label class="form-label">Select multiple <span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div class="is-invalid">
 		<v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
 	</div>
@@ -677,7 +1003,13 @@
 	<div class="helper-text">Helper text</div>
 </div>
 <div>
-	<label class="form-label">Select</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label class="form-label">Select<span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div>
 		<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
 	</div>
@@ -687,7 +1019,13 @@
 					<!-- FIX Datapiker  -->
 <h2 class="h1 mt-4" id="h3Btn7">Datapiker</h2>
 <div class="col-12">
-	<label class="form-label">Датапикер</label>
+	<div class="d-flex justify-content-between gap-1">
+		<div class="d-flex align-items-start gap-1">
+			<label class="form-label">Datapiker<span class="text-danger">*</span></label>
+			<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
 	<div>
 		<v-date-picker v-model="date" range multi-calendars />
 	</div>
@@ -705,6 +1043,20 @@
 </div>
 					<!-- FIX Dropdown  -->
 <h2 class="h1 mt-4" id="h3Btn9">Dropdown</h2>
+<div class="dropdown">
+	<button class="btn btn-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		View all types
+	</button>
+	<ul class="dropdown-menu shadow">
+		<li><button type="button" class="dropdown-item">Змінити статус</button></li>
+		<li><button type="button" class="dropdown-item">Відправити Email</button></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><button type="button" class="dropdown-item">Заблокувати</button></li>
+		<li><button type="button" class="dropdown-item">Видалити</button></li>
+	</ul>
+</div>
 <div class="dropdown">
 	<button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 		Дії з обраним
@@ -752,8 +1104,17 @@
 <h2 class="h1 mt-4" id="h3Btn10">Badge</h2>
 <!-- FIX Pill badges  -->
 <h4>Pill badges</h4>
+<div class="d-flex gap-2">
+	<span class="badge bg-primary text-black">Primary</span>
+	<span class="badge bg-secondary">Secondary</span>
+	<span class="badge bg-success">Success</span>
+	<span class="badge bg-danger">Danger</span>
+	<span class="badge bg-warning">Warning</span>
+	<span class="badge bg-info-100 text-black">Info</span>
+	<span class="badge text-bg-light">Light</span>
+</div>
 <div>
-	<span class="badge  text-bg-danger">Danger</span>
+	<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Info</small></span>
 </div>
 <!-- FIX Pill badges small -->
 <h4>Pill badges small</h4>
@@ -909,7 +1270,7 @@
 	<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 					<!-- FIX Logos  -->
-<h2 class="h1 mt-4" id="h3Btn13">Logos</h2>
+<h2 class="h1 mt-4" id="h4Btn13">Logos</h2>
 <div class="mt-3 mb-3 d-flex flex-column gap-3">
 	<a class="navbar-brand d-inline-flex" href="#">
 		<img src="img/logo-2.svg" alt="Logo" width="40" height="40">
@@ -926,11 +1287,135 @@
 	<a class="navbar-brand  d-inline-flex" href="#">
 		<img src="img/logo.svg" alt="Logo" width="200" height="82">
 	</a>
-	<h3 class="mt-5" id="h3Btn2">Logo block</h3>
+	<h4 class="mt-5">Logo block</h4>
 	<div class="text-center">
 		<a class="navbar-brand d-inline-flex" href="#">
 			<img src="img/logo.svg" alt="Logo" width="86" height="40">
 		</a>
+	</div>
+</div>
+					<!-- FIX Items  -->
+<h2 class="h1 mt-4" id="h3Btn14">Items</h2>
+<h4 class="mt-5">Answer-item-2</h4>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<div class="bg-body border-bottom qela-question py-2 pe-3">
+		<div class="row g-2">
+			<div class="col-auto">
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+				</div>
+			</div>
+			<div class="col-sm">
+				<input type="text" class="form-control" placeholder="Placeholder">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-2 d-flex align-items-center justify-content-center">
+				<div class="form-check form-switch">
+					<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck7" checked>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIX Talent-item -->
+<h4 class="mt-5">Talent-item</h4>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<div class="bg-body border-bottom border-top px-3 py-2">
+		<div class="row g-2">
+			<div class="col-auto">
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+				</div>
+			</div>
+			<div class="col-sm">
+				<input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-sm">
+				<div>
+					<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+				</div>
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-auto">
+				<div class="btn-group" role="group" aria-label="button group">
+					<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIX Question-item  -->
+<h4 class="mt-5">Question-item</h4>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<div class="bg-body border-bottom p-3">
+		<div class="row g-2">
+			<div class="col-auto">
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+				</div>
+			</div>
+			<div class="col-sm">
+				<input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?" disabled>
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-auto">
+				<div class="btn-group" role="group" aria-label="button group">
+					<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+					<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+					<button type="button" class="btn btn-outline-info ico ic-chevron"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<div class="bg-body border-bottom p-3">
+		<div class="row g-2">
+			<div class="col-auto">
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+				</div>
+			</div>
+			<div class="col-sm">
+				<input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-auto">
+				<div class="btn-group" role="group" aria-label="button group">
+					<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+					<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+					<button type="button" class="btn btn-outline-info ico ic-chevron"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mt-3 mb-3 d-flex flex-column gap-3">
+	<div class="bg-body border-bottom p-3">
+		<div class="row g-2">
+			<div class="col-auto">
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
+					<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+				</div>
+			</div>
+			<div class="col-sm">
+				<input type="text" class="form-control is-invalid" placeholder="What are some of the challenges of addressing global warming?">
+				<div class="invalid-feedback">Error text</div>
+			</div>
+			<div class="col-auto">
+				<div class="btn-group" role="group" aria-label="button group">
+					<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+					<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+					<button type="button" class="btn btn-outline-info ico ic-chevron"></button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 				</div>

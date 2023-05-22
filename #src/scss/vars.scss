@@ -19,7 +19,6 @@ $purple: #978FFF;
 $orange: #FF7A00;
 $red: #E20000;
 $green: #0F9178;
-
 // scss-docs-start colors-map
 $primary: $yellow;
 $secondary: $purple;
@@ -272,7 +271,7 @@ $table-caption-color: $red;
 // scss-docs-start input-btn-variables
 $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 1rem;
-$input-btn-border-width: var(--#{$prefix}border-width);
+$input-btn-border-width: 1px;
 $input-btn-font-size: $font-size-base;
 $input-btn-line-height: $line-height-base;
 $input-btn-padding-y-sm: 0.359375rem;
@@ -330,7 +329,7 @@ $input-padding-y-sm: $input-btn-padding-y-sm;
 $input-padding-x-sm: $input-btn-padding-x-sm;
 $input-font-size-sm: $input-btn-font-size-sm;
 
-$input-bg: $body-bg;
+$input-bg: $white;
 $input-disabled-color: $gray-600;
 $input-disabled-bg: $gray-200;
 $input-disabled-border-color: $gray-400;
@@ -488,9 +487,9 @@ $tooltip-arrow-color: null;
 //badge
 $badge-font-size: .75em;
 $badge-color: $white;
-$badge-padding-y: .35em;
-$badge-padding-x: .65em;
-$badge-border-radius: $border-radius-lg;
+$badge-padding-y: 0.15625em;
+$badge-padding-x: .25em;
+$badge-border-radius: $border-radius-sm;
 //badge
 //pagination
 $pagination-padding-y: 0.5rem;

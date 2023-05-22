@@ -1,9 +1,10 @@
 header {
-	height: 80px;
+	height: 56px;
 	z-index: 3;
+	padding-left: 80px;
 
 	@media (max-width:($md3+px)) {
-		height: 60px;
+		padding-left: 0;
 	}
 }
 
@@ -43,6 +44,14 @@ header {
 	}
 }
 
+.qela-search-btn {
+
+	&.btn[class^=ic-]:before,
+	&.btn[class*=ic-]:before {
+		font-size: 24px;
+	}
+}
+
 // search
 
 .qela-notification {
@@ -50,6 +59,16 @@ header {
 	border: none;
 	position: relative;
 	color: $gray-500;
+
+	&.btn[class^=ic-]:before,
+	&.btn[class*=ic-]:before {
+		font-size: 24px;
+	}
+
+	.qela-badge {
+		top: 5px;
+		right: 0;
+	}
 
 	&.active {
 		color: $black;
@@ -61,6 +80,7 @@ header {
 		display: flex;
 		align-items: center;
 		flex-direction: row-reverse;
+		gap: 0;
 
 		@media (any-hover:hover) {
 			&:hover {
@@ -71,7 +91,8 @@ header {
 		}
 
 		&::before {
-			font-size: 16px;
+			font-size: 14px;
+			padding: 12px;
 			color: $gray-500;
 			transition: transform 0.3s ease 0s;
 		}
@@ -193,31 +214,12 @@ header {
 }
 
 .qela-logo {
-	padding: 20px;
-	height: 80px;
-	flex: 0 0 80px;
+	padding: 8px 12px;
+	height: 56px;
+	flex: 0 0 56px;
 	background-color: $white;
 	z-index: 2;
-
-	@media (max-width:($md3+px)) {
-		height: 60px;
-		flex: 0 0 60px;
-		padding: 0 20px;
-		display: flex;
-		align-items: center;
-	}
-
-	&::before {
-		content: "";
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 100%;
-		width: 1px;
-		opacity: .2;
-		background-color: rgba(126, 131, 137, .53);
-
-	}
+	align-items: center;
 }
 
 .qela-nav__wrapper {
