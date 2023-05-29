@@ -18,22 +18,27 @@
 	margin: 0 auto;
 }
 
+// .qela-conatiner-md {
+// 	max-width: 632px;
+// 	padding: 0 16px;
+// 	margin: 0 auto;
+// }
+
 .qela-clamp {
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
-	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1;
-	white-space: normal;
-	max-height: 47.5px;
+	white-space: nowrap;
+	height: auto;
 }
 
 .qela-question {
 	padding-left: 70px;
 
-	@media (max-width:576px) {
-		padding-left: 24px;
+	@media (max-width:($md3+px)) {
+		padding-left: 16px;
 	}
 }
 

@@ -106,6 +106,10 @@
 	align-items: center;
 	gap: 1.5rem;
 
+	@media (max-width:($md3+px)) {
+		gap: 0.5rem;
+	}
+
 	.form-check-input {
 		width: 3.2em;
 		margin-left: 0;
