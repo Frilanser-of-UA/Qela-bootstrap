@@ -444,17 +444,40 @@ $dropdown-header-padding-y: $dropdown-padding-y;
 // Modals
 
 // scss-docs-start modal-variables
-$modal-inner-padding: 24px;
-$modal-footer-margin-between: 0;
-$modal-content-color: $gray-500;
+$modal-inner-padding: $spacer;
+
+$modal-footer-margin-between: .5rem;
+
+$modal-dialog-margin: .5rem;
+$modal-dialog-margin-y-sm-up: 1.75rem;
+
+$modal-title-line-height: $line-height-base;
+
 $modal-content-bg: $white;
-$modal-content-border-color: transparent;
-$modal-content-border-width: 0;
-$modal-content-border-radius: 17px;
-$modal-content-box-shadow-xs: 0px 4px 10px rgba(0, 0, 0, 0.05);
-$modal-content-box-shadow-sm-up: 0px 4px 10px rgba(0, 0, 0, 0.05);
+$modal-content-border-color: $info-300;
+$modal-content-border-width: $border-width;
+$modal-content-border-radius: $border-radius;
+$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
+$modal-content-box-shadow-xs: $box-shadow-sm;
+$modal-content-box-shadow-sm-up: $box-shadow;
+
 $modal-backdrop-bg: $black;
-$modal-backdrop-opacity: 0.2;
+$modal-backdrop-opacity: .3;
+
+$modal-header-border-color: var(--#{$prefix}border-color);
+$modal-header-border-width: $modal-content-border-width;
+$modal-header-padding-y: $modal-inner-padding;
+$modal-header-padding-x: $modal-inner-padding;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+$modal-footer-bg: null;
+$modal-footer-border-color: $modal-header-border-color;
+$modal-footer-border-width: $modal-header-border-width;
+
+$modal-sm: 300px;
+$modal-md: 450px;
+$modal-lg: 800px;
+$modal-xl: 1140px;
 // scss-docs-end modal-variables
 //alert
 $alert-padding-y: $spacer;

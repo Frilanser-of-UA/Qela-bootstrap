@@ -34,7 +34,15 @@
 	height: auto;
 }
 
-.qela-question {
+.qela-pad-r {
+	padding-right: 70px;
+
+	@media (max-width:($md3+px)) {
+		padding-right: 16px;
+	}
+}
+
+.qela-pad-l {
 	padding-left: 70px;
 
 	@media (max-width:($md3+px)) {
@@ -48,4 +56,8 @@
 
 .qela-rounded-et {
 	border-top-right-radius: $border-radius  !important;
+}
+
+.qela-rounded-eb {
+	border-bottom-right-radius: $border-radius  !important;
 }

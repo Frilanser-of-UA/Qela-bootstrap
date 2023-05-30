@@ -1,0 +1,15 @@
+.qela-tab {
+	border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+	border-bottom: none;
+
+	@media (max-width:($md3+px)) {
+		border-right: none;
+		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+		hr {
+			border-top: none;
+			border-left: 1px solid $hr-border-color;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+<!-- FIX Modals  -->
+<h2 class="h1 mt-4" id="h3Btn16">Modals</h2>
+<!-- Button trigger modal -->
+<div>
+	<div class="pt-3">
+		<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal1">
+			modal small
+		</button>
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+			modal middle
+		</button>
+	</div>
+	<!-- Modal sm-->
+	<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal1Label">Modal</h1>
+					<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to post this way?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-secondary">Publish Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal md-->
+	<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Add more info about Location</h1>
+					<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="pb-4">
+							<div class="d-flex justify-content-between gap-1">
+								<div class="d-flex align-items-start gap-1">
+									<label class="form-label">Order</label>
+								</div>
+							</div>
+							<div>
+								<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							</div>
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<div class="pb-4">
+							<div class="d-flex justify-content-between gap-1">
+								<div class="d-flex align-items-start gap-1">
+									<label for="textarea1" class="form-label">Address <span class="text-danger">*</span></label>
+								</div>
+							</div>
+							<textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
+							<div class="invalid-feedback">Error text</div>
+							<div class="helper-text">☝️ Displayed to users like Location Name</div>
+						</div>
+						<div class="pb-4">
+							<div class="d-flex justify-content-between gap-1">
+								<div class="d-flex align-items-start gap-1">
+									<label class="form-label">Radius of area</label>
+								</div>
+							</div>
+							<div>
+								<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							</div>
+							<div class="invalid-feedback">Error text</div>
+							<div class="helper-text">☝️ Radius of area around location coordinates where check-in is available</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-secondary ico-right ic-check-big">Save point</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

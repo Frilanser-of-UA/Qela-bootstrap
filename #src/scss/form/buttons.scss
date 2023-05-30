@@ -287,6 +287,7 @@
 .btn-outline-info {
 	color: $black;
 	background-color: $gray-100;
+	border-color: $gray-300;
 
 	&:hover {
 		background-color: $gray-300;
@@ -359,6 +360,7 @@
 .btn-close {
 	background-color: $white;
 	border-radius: 50%;
+	padding: 7px;
 
 	&::before {
 		font-size: 18px;

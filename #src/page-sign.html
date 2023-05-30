@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 @@include('_head.html',{
-"title":"Page-sign"
+"title":"Vertical tabs"
 })
 
 <body class="qela-body ps-0 ">
@@ -12,36 +12,36 @@
 			<div class="container-fluid">
 				<div class="row gx-3 my-3">
 					<div class="col-lg-9 mb-lg-0 mb-3">
-						<div class="d-flex border rounded-2">
-							<ul class="nav nav-tabs flex-column py-3 px-2 border-end border-bottom-0" id="myTab" role="tablist">
+						<div class="d-flex flex-column flex-md-row border rounded-2">
+							<ul class="nav nav-tabs qela-tab flex-md-column py-1 py-md-3 px-2" id="myTab" role="tablist">
 								<li class="nav-item" role="presentation">
 									<button class="nav-link border-0 bg-body active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">General</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="nav-link border-0 bg-body" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Steps</button>
+									<button class="nav-link border-0 bg-body" id="steps-tab" data-bs-toggle="tab" data-bs-target="#steps-tab-pane" type="button" role="tab" aria-controls="steps-tab-pane" aria-selected="false">Steps</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="nav-link border-0 bg-body" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Awards</button>
+									<button class="nav-link border-0 bg-body" id="awards-tab" data-bs-toggle="tab" data-bs-target="#awards-tab-pane" type="button" role="tab" aria-controls="awards-tab-pane" aria-selected="false">Awards</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="nav-link border-0 bg-body" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Notifications</button>
+									<button class="nav-link border-0 bg-body" id="notifications-tab" data-bs-toggle="tab" data-bs-target="#notifications-tab-pane" type="button" role="tab" aria-controls="notifications-tab-pane" aria-selected="false">Notifications</button>
 								</li>
 								<li class="my-1">
 									<hr>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="nav-link border-0 bg-body" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Analytics</button>
+									<button class="nav-link border-0 bg-body" id="analytics-tab" data-bs-toggle="tab" data-bs-target="#analytics-tab-pane" type="button" role="tab" aria-controls="analytics-tab-pane" aria-selected="false">Analytics</button>
 								</li>
 							</ul>
 							<div class="tab-content w-100" id="myTabContent">
-								<!-- Basic info -->
+								<!-- ==========General========== -->
 								<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 									<!-- Subtitle -->
-									<div class="p-3 border-bottom">
+									<div class="p-3 border-bottom qela-rounded-et">
 										<h2 class="h5">General</h2>
 									</div>
 									<!-- Badge -->
-									<div class="px-3 pt-3 d-flex gap-1">
+									<div class="px-3 pt-3 d-flex flex-wrap gap-1">
 										<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Quest</small></span>
 										<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Watch the video</small></span>
 										<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Type: In-app</small></span>
@@ -130,7 +130,7 @@
 									<div class="py-4 px-3">
 										<div class="d-flex justify-content-between gap-1">
 											<div class="d-flex align-items-start gap-1">
-												<label class="form-label">Select<span class="text-danger">*</span></label>
+												<label class="form-label">Time<span class="text-danger">*</span></label>
 												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
 											</div>
 											<label class="form-label">hint text</label>
@@ -141,13 +141,356 @@
 										<span class="invalid-feedback">Set start date and time</span>
 									</div>
 								</div>
-								<!-- Branches -->
-								<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-									2
+								<!-- ==========Steps========== -->
+								<div class="tab-pane fade" id="steps-tab-pane" role="tabpanel" aria-labelledby="steps-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Steps</h2>
+									</div>
+									<!-- Subsubtitle h3-->
+									<div class="p-3 pb-1">
+										<h2 class="h6">1.Link to share</h2>
+									</div>
+									<!-- input group -->
+									<div class="py-4 px-3 border-bottom">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="inputText25" class="form-label">Link to share <span class="text-danger">*</span></label><button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+											</div>
+											<div class="input-group has-validation">
+												<button class="btn btn-input ic-link" type="button" id="button-addon23"></button>
+												<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText25" aria-describedby="button-addon23">
+												<button class="btn btn-input" type="button" id="button-addon23">Paste</button>
+												<div class="invalid-feedback">Error text</div>
+											</div>
+										</div>
+									</div>
+									<!-- Subsubtitle h3-->
+									<div class="p-3 pt-5 border-bottom">
+										<h2 class="h6">2.Poll</h2>
+									</div>
+									<!-- Question-item -->
+									<div class="bg-body border-bottom p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md"><input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?" disabled="">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-edit"></button><button type="button" class="btn btn-outline-info ico ic-delete"></button><button type="button" class="btn btn-outline-info ico ic-chevron"></button></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Question-item -->
+									<div class="bg-body border-bottom p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md"><input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?" disabled="">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-edit"></button><button type="button" class="btn btn-outline-info ico ic-delete"></button><button type="button" class="btn btn-outline-info ico ic-chevron"></button></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Question-item -->
+									<div class="bg-body border-bottom p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md"><input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+															<button type="button" class="btn btn-outline-info ico ic-chevron-up"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Labels -->
+									<div class="bg-body qela-pad-l pt-2 pe-3 pb-1 border-bottom d-none d-md-block">
+										<div class="row gx-3">
+											<div class="form-label col">Answer options</div>
+											<div class="form-label col-auto">Correct</div>
+										</div>
+									</div>
+									<!-- Answer-item-2 -->
+									<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-1 g-md-2">
+													<div class="col">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="form-check form-switch px-0 px-md-2">
+															<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
+															<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+														</div>
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Answer-item-2 -->
+									<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-1 g-md-2">
+													<div class="col">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="form-check form-switch px-0 px-md-2">
+															<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck18" checked>
+															<label class="form-check-label d-block d-md-none" for="SwitchCheck18">Correct</label>
+														</div>
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Answer-item-2 -->
+									<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-1 g-md-2">
+													<div class="col">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="form-check form-switch px-0 px-md-2">
+															<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck19" checked>
+															<label class="form-check-label d-block d-md-none" for="SwitchCheck19">Correct</label>
+														</div>
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Answer-item-2 -->
+									<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+											</div>
+											<div class="col">
+												<div class="row g-1 g-md-2">
+													<div class="col">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="form-check form-switch px-0 px-md-2">
+															<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck20" checked>
+															<label class="form-check-label d-block d-md-none" for="SwitchCheck20">Correct</label>
+														</div>
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Button sm -->
+									<div class="bg-info-200 qela-pad-l py-2">
+										<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">Add answer</button>
+									</div>
+									<!-- Button sm -->
+									<div class="bg-body p-3 qela-rounded-eb">
+										<button type="button" class="btn btn-secondary ic-plus ico-right">Add answer</button>
+									</div>
 								</div>
-								<!-- Admins -->
-								<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-									3
+								<!-- ==========Awards========== -->
+								<div class="tab-pane fade" id="awards-tab-pane" role="tabpanel" aria-labelledby="awards-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Awards</h2>
+									</div>
+									<!-- input type text -->
+									<div class="p-3 pb-4">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText41" class="form-label">Vote weight <span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+										</div>
+										<input type="text" class="form-control" id="inputText41" placeholder="Insert value">
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<!-- Tooltip -->
+									<div class="d-flex align-items-start gap-1 px-3 pt-4">
+										<span class="form-label">Talents</span>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+									</div>
+									<!-- Labels -->
+									<div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
+										<div class="row gx-3">
+											<div class="form-label col-6">Talent Type</div>
+											<div class="form-label col-6">Talent Type</div>
+										</div>
+									</div>
+									<!-- Talent-item -->
+									<div class="bg-body border-bottom border-top p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+													<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
+													<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+												</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-md">
+														<input type="text" class="form-control" placeholder="Insert talent value">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Talent-item -->
+									<div class="bg-body border-bottom p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+													<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
+													<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+												</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-md">
+														<input type="text" class="form-control" placeholder="Insert talent value" disabled>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete" disabled></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Button -->
+									<div class="p-3">
+										<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">Add talent</button>
+									</div>
+								</div>
+								<!-- ==========Notifications========== -->
+								<div class="tab-pane fade" id="notifications-tab-pane" role="tabpanel" aria-labelledby="notifications-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Notifications</h2>
+									</div>
+									<!-- textarea whith buttons -->
+									<div class="border-bottom px-3 py-4">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1"><label for="textarea12" class="form-label">Success text <span class="text-danger">*</span></label>
+													<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div><label class="form-label">0/<span>2500</span></label>
+											</div>
+											<textarea class="form-control" placeholder="Placeholder" id="textarea12" rows="3"></textarea>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+										<div class="pt-2 d-flex gap-1">
+											<button type="button" class="btn btn-outline-info"># “quest name”</button>
+											<button type="button" class="btn btn-outline-info"># user name</button>
+										</div>
+									</div>
+									<!-- textarea whith buttons -->
+									<div class="border-bottom px-3 py-4">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1"><label for="textarea13" class="form-label">Error text <span class="text-danger">*</span></label>
+													<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div><label class="form-label">0/<span>2500</span></label>
+											</div>
+											<textarea class="form-control" placeholder="Placeholder" id="textarea13" rows="3"></textarea>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+										<div class="pt-2 d-flex gap-1">
+											<button type="button" class="btn btn-outline-info"># “quest name”</button>
+											<button type="button" class="btn btn-outline-info"># user name</button>
+										</div>
+									</div>
+									<!-- Buttons -->
+									<div class="d-flex flex-wrap gap-1 px-3 py-4">
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">Add fail notification</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">Add fail notification</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">Add fail notification</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">Add fail notification</button>
+									</div>
+								</div>
+								<!-- ==========Analytics========== -->
+								<div class="tab-pane fade " id="analytics-tab-pane" role="tabpanel" aria-labelledby="analytics-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Analytics</h2>
+									</div>
 								</div>
 							</div>
 						</div>

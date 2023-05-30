@@ -189,4 +189,27 @@
 			display: block;
 		}
 	}
+
+	&.filled {
+		display: none;
+
+		&~.qela-preview {
+			display: flex;
+		}
+	}
+}
+
+.qela-preview {
+	display: none;
+
+	@media (max-width:($md4+px)) {
+		flex-direction: column;
+	}
+
+	div {
+		&:first-child {
+			overflow: hidden;
+			border-radius: 0.375rem;
+		}
+	}
 }
