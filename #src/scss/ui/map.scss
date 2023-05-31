@@ -1,0 +1,55 @@
+.qela-pin {
+	.badge {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.qela-triangl {
+	width: 0;
+	height: 0;
+	border-left: 9.5px solid transparent;
+	border-right: 9.5px solid transparent;
+	border-top: 32px solid;
+	position: relative;
+	z-index: 2;
+
+	&.secondary {
+		border-top-color: $secondary;
+	}
+}
+
+.qela-dot {
+	border: 1px solid $white;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin-top: 2px;
+	position: relative;
+	z-index: 2;
+
+	&.large {
+		width: 32px;
+		height: 32px;
+		border-width: 2px;
+	}
+
+	&.active {
+		border-width: 2px;
+	}
+}
+
+.qela-area {
+	width: var(--diameter);
+	height: var(--diameter);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&.secondary {
+		border: 2px solid $secondary;
+		background: #{rgba($secondary, 0.1)};
+	}
+}

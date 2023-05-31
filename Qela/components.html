@@ -13,7 +13,7 @@
 	<div id="app" v-cloak>
 		<main>
 			<!-- Навигация (якоря)-->
-			<aside class="fixed-top pt-2 d-lg-block d-none" style="width: 280px;">
+			<aside class="fixed-top pt-2 d-lg-block overflow-auto d-none" style="width: 280px; height: 100vh;">
 				<a class="text-center d-block h3 mb-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
 				<nav>
 					<ol class="d-flex flex-column gap-2">
@@ -33,6 +33,7 @@
 						<li><a href="#h3Btn14" class="text-black">Items</a></li>
 						<li><a href="#h3Btn15" class="text-black">Labels</a></li>
 						<li><a href="#h3Btn16" class="text-black">Modals</a></li>
+						<li><a href="#h3Btn17" class="text-black">Map-pin</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -1623,6 +1624,48 @@
 					<button type="button" class="btn btn-secondary ico-right ic-check-big">Save point</button>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+					<!-- FIX Buttons  -->
+<h2 class="h1 mt-4" id="h3Btn17">Map-pin</h2>
+<div class="d-flex gap-3 bg-info-300">
+	<div class="d-flex flex-column align-items-center">
+		<span class="badge bg-secondary">Start</span>
+		<div class="qela-triangl secondary"></div>
+	</div>
+	<!--  -->
+	<div class="d-flex flex-column align-items-center">
+		<span class="badge bg-secondary">Start</span>
+		<div class="qela-triangl secondary"></div>
+		<div class="qela-dot bg-secondary"></div>
+	</div>
+	<!--  -->
+	<div class="d-flex flex-column align-items-center">
+		<span class="badge bg-secondary rounded-1">Start</span>
+		<div class="qela-triangl secondary"></div>
+		<div class="qela-dot bg-secondary large"></div>
+	</div>
+	<!--  -->
+	<div class="qela-dot bg-secondary"></div>
+</div>
+<div class="py-5 ms-5">
+	<div class="qela-pin d-inline-flex flex-column align-items-center">
+		<span class="badge bg-secondary">Start</span>
+		<div class="qela-triangl secondary"></div>
+		<div class="position-relative">
+			<div class="qela-dot bg-secondary active"></div>
+			<div class="qela-area secondary" style="--diameter:182px"></div>
+		</div>
+	</div>
+</div>
+<div class="pt-5 ms-4">
+	<div class="qela-pin d-inline-flex flex-column align-items-center">
+		<span class="badge bg-secondary">Start</span>
+		<div class="qela-triangl secondary"></div>
+		<div class="position-relative">
+			<div class="qela-dot bg-secondary active"></div>
+			<div class="qela-area secondary" style="--diameter:54px"></div>
 		</div>
 	</div>
 </div>

@@ -8,7 +8,7 @@
 	<div id="app" v-cloak>
 		<main>
 			<!-- Навигация (якоря)-->
-			<aside class="fixed-top pt-2 d-lg-block d-none" style="width: 280px;">
+			<aside class="fixed-top pt-2 d-lg-block overflow-auto d-none" style="width: 280px; height: 100vh;">
 				<a class="text-center d-block h3 mb-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
 				<nav>
 					<ol class="d-flex flex-column gap-2">
@@ -28,6 +28,7 @@
 						<li><a href="#h3Btn14" class="text-black">Items</a></li>
 						<li><a href="#h3Btn15" class="text-black">Labels</a></li>
 						<li><a href="#h3Btn16" class="text-black">Modals</a></li>
+						<li><a href="#h3Btn17" class="text-black">Map-pin</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -50,6 +51,7 @@
 					@@include('./components/_items.html',{})
 					@@include('./components/_labels.html',{})
 					@@include('./components/_modals.html',{})
+					@@include('./components/_map.html',{})
 				</div>
 			</div>
 		</main>
