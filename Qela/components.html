@@ -1175,11 +1175,19 @@
 	<span class="badge bg-success">Success</span>
 	<span class="badge bg-danger">Danger</span>
 	<span class="badge bg-warning">Warning</span>
-	<span class="badge bg-info-100 text-black">Info</span>
-	<span class="badge text-bg-light">Light</span>
+	<span class="badge bg-info-100 text-info-900">Info</span>
+	<span class="badge bg-white text-info-900">Light</span>
 </div>
 <div>
 	<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Info</small></span>
+</div>
+<!-- Custom badges -->
+<div class="d-flex gap-2 flex-wrap">
+	<span class="badge qela-badge-primary">Primary</span>
+	<span class="badge qela-badge-secondary">Secondary</span>
+	<span class="badge qela-badge-danger">Danger</span>
+	<span class="badge qela-badge-success">Success</span>
+	<span class="badge qela-badge-warning">Warning</span>
 </div>
 <!-- FIX Pill badges small -->
 <h4>Pill badges small</h4>
@@ -1380,12 +1388,12 @@
 					<div class="invalid-feedback">Error text</div>
 				</div>
 				<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+					<div class="btn-group" role="group" aria-label="button group">
+						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+					</div>
 					<div class="form-check form-switch px-0 px-md-2">
 						<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
 						<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-					</div>
-					<div class="btn-group" role="group" aria-label="button group">
-						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
 					</div>
 				</div>
 			</div>
@@ -1494,33 +1502,33 @@
 	<div class="row g-2 align-items-center">
 		<div class="col-auto align-self-start">
 			<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-				<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-				<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+				<button type="button" class="btn btn-outline-info py-1 py-lg-0 ico ic-triangle-small"></button>
+				<button type="button" class="btn btn-outline-info py-1 py-lg-0 ico ic-triangle-inverted-small"></button>
 			</div>
 		</div>
 		<div class="col-auto">
-			<div class="text-info-900 ps-1 pe-3 d-none d-md-block">Checkpoint</div>
+			<div class="text-info-900 ps-1 pe-3 d-none d-lg-block">Checkpoint</div>
 		</div>
 		<div class="col">
 			<div class="row g-2">
-				<div class="col-md">
+				<div class="col-lg">
 					<input type="text" class="form-control" placeholder="Placeholder">
 					<div class="invalid-feedback">Error text</div>
 				</div>
-				<div class="col-md">
+				<div class="col-lg">
 					<div class="input-group has-validation">
 						<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" aria-describedby="button-addon25">
 						<button class="btn btn-input ic-eye-close" type="button" id="button-addon25"></button>
 						<div class="invalid-feedback">Error text</div>
 					</div>
 				</div>
-				<div class="col-md">
+				<div class="col-lg">
 					<div>
 						<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
 					</div>
 					<div class="invalid-feedback">Error text</div>
 				</div>
-				<div class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+				<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
 					<div class="btn-group" role="group" aria-label="button group">
 						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
 					</div>
@@ -1533,15 +1541,23 @@
 <h2 class="h1 mt-4" id="h3Btn15">Labels</h2>
 <div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
 	<div class="row gx-3">
-		<div class="form-label col-6">Talent Type</div>
-		<div class="form-label col-6">Talent Type</div>
+		<div class="form-label col-6 mb-0">Talent Type</div>
+		<div class="form-label col-6 mb-0">Talent Type</div>
 	</div>
 </div>
 <!-- ==== -->
 <div class="bg-body qela-pad-l pt-2 pe-3 pb-1 border-bottom d-none d-md-block">
 	<div class="row gx-3">
-		<div class="form-label col">Answer options</div>
-		<div class="form-label col-auto">Correct</div>
+		<div class="form-label col mb-0">Answer options</div>
+		<div class="form-label col-auto mb-0 me-2">Correct</div>
+	</div>
+</div>
+<!-- ==== -->
+<div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-lg-block border-bottom">
+	<div class="row gx-3">
+		<div class="form-label mb-0 col">Address</div>
+		<div class="form-label mb-0 col">Coordinates</div>
+		<div class="form-label mb-0 col">Radius</div>
 	</div>
 </div>
 					<!-- FIX Modals  -->

@@ -11001,6 +11001,14 @@ textarea.form-control-lg {
   content: "\e979";
 }
 
+.ic-arrows-minimize:before {
+  content: "\e97a";
+}
+
+.ic-arrows-maximize:before {
+  content: "\e97b";
+}
+
 /* Свои глобальние стили (qela-) */
 .qela-body {
   padding-top: 56px;
@@ -11034,7 +11042,7 @@ textarea.form-control-lg {
 }
 
 .qela-pad-r {
-  padding-right: 70px;
+  padding-right: 65px;
 }
 @media (max-width: 767.98px) {
   .qela-pad-r {
@@ -11043,7 +11051,7 @@ textarea.form-control-lg {
 }
 
 .qela-pad-l {
-  padding-left: 70px;
+  padding-left: 65px;
 }
 @media (max-width: 767.98px) {
   .qela-pad-l {
@@ -12205,6 +12213,31 @@ textarea.form-control-lg {
 .qela-badge.small {
   padding: 2px 4px;
   font-size: 10px;
+}
+
+.qela-badge-primary {
+  background-color: rgba(255, 224, 0, 0.1);
+  color: #FF7A00;
+}
+
+.qela-badge-secondary {
+  background-color: rgba(151, 143, 255, 0.1);
+  color: #978fff;
+}
+
+.qela-badge-danger {
+  background-color: rgba(226, 0, 0, 0.1);
+  color: #E20000;
+}
+
+.qela-badge-success {
+  background-color: rgba(15, 145, 120, 0.1);
+  color: #0F9178;
+}
+
+.qela-badge-warning {
+  background-color: rgba(255, 122, 0, 0.1);
+  color: #FF7A00;
 }
 
 .page-item.active {

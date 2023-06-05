@@ -4,3 +4,28 @@
 		font-size: 10px;
 	}
 }
+
+.qela-badge-primary {
+	background-color: #{rgba($primary, 0.1)};
+	color: $warning;
+}
+
+.qela-badge-secondary {
+	background-color: #{rgba($secondary, 0.1)};
+	color: $secondary;
+}
+
+.qela-badge-danger {
+	background-color: #{rgba($danger, 0.1)};
+	color: $danger;
+}
+
+.qela-badge-success {
+	background-color: #{rgba($success, 0.1)};
+	color: $success;
+}
+
+.qela-badge-warning {
+	background-color: #{rgba($warning, 0.1)};
+	color: $warning;
+}
