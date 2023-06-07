@@ -16,11 +16,18 @@
 	&[class*="ic-"] {
 		&:before {
 			font-size: 18px;
+			transition: all 0.3s ease 0s;
 		}
 	}
 
 	&.ico {
 		padding: 9px;
+
+		&[aria-expanded="true"] {
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
 	}
 
 	&.ico-left {

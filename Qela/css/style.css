@@ -8556,6 +8556,43 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 0.25rem;
 }
 
+.fade {
+  transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
+}
+
 .dropup,
 .dropend,
 .dropdown,
@@ -11085,9 +11122,13 @@ textarea.form-control-lg {
 }
 .btn[class^=ic-]:before, .btn[class*=ic-]:before {
   font-size: 18px;
+  transition: all 0.3s ease 0s;
 }
 .btn.ico {
   padding: 9px;
+}
+.btn.ico[aria-expanded=true]:before {
+  transform: rotate(-180deg);
 }
 .btn.ico-left {
   padding-left: 8px;
