@@ -11099,6 +11099,50 @@ textarea.form-control-lg {
   content: "\e97b";
 }
 
+.ic-arrow-move:before {
+  content: "\e97c";
+}
+
+.ic-arrow-autofit-content:before {
+  content: "\e97d";
+}
+
+.ic-branch:before {
+  content: "\e97e";
+}
+
+.ic-edit-2:before {
+  content: "\e97f";
+}
+
+.ic-key:before {
+  content: "\e980";
+}
+
+.ic-minus:before {
+  content: "\e981";
+}
+
+.ic-list-check1:before {
+  content: "\e982";
+}
+
+.ic-redo:before {
+  content: "\e983";
+}
+
+.ic-undo:before {
+  content: "\e984";
+}
+
+.ic-triangle-left-small:before {
+  content: "\e985";
+}
+
+.ic-triangle-right-small:before {
+  content: "\e986";
+}
+
 /* Свои глобальние стили (qela-) */
 .qela-body {
   padding-top: 56px;
@@ -11479,7 +11523,7 @@ textarea.form-control-lg {
 .qela-btn-tooltip:active {
   color: #978fff !important;
 }
-.qela-btn-tooltip::before {
+.qela-btn-tooltip.btn[class^=ic-]:before, .qela-btn-tooltip.btn[class*=ic-]:before {
   font-size: 16px;
 }
 
@@ -12358,6 +12402,15 @@ textarea.form-control-lg {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.qela-admin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.qela-admin.btn[class^=ic-]:before, .qela-admin.btn[class*=ic-]:before {
+  font-size: 20px;
+}
+
 .qela-pin .badge {
   position: relative;
   z-index: 2;
@@ -12406,6 +12459,34 @@ textarea.form-control-lg {
 .qela-area.secondary {
   border: 2px solid #978fff;
   background: rgba(151, 143, 255, 0.1);
+}
+
+.qela-avatar {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: capitalize;
+  width: var(--img-size);
+  height: var(--img-size);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #e9ecef;
+}
+
+.qela-ibg {
+  position: relative;
+}
+.qela-ibg img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 header {

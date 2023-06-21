@@ -2,3 +2,14 @@
 .tooltip-inner {
 	box-shadow: $box-shadow;
 }
+
+.qela-admin {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	&.btn[class^=ic-]:before,
+	&.btn[class*=ic-]:before {
+		font-size: 20px;
+	}
+}
