@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<title>Organization</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/vendors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="qela-body">
+	<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
+	<div class="container-fluid h-100 px-0">
+		<div class="row h-100 position-relative gx-2">
+			<!-- item whith title and button burger-->
+			<div class="col-10 col-xl-auto col-md-8 d-flex align-items-center gap-3">
+				<button class="qela-burger border-0 p-0">
+					<img src="img/burger.svg" width="24" height="40" alt="burger button">
+				</button>
+				<h1 class="h5 qela-clamp">User</h1>
+			</div>
+			<div class="col-2 col-xl col-md-4 d-flex align-items-center gap-2 justify-content-end">
+				<!--FIX form search -->
+				<form class="qela-search d-none d-md-flex ms-4" role="search">
+					<div class="qela-search__wrapper">
+						<div class="input-group">
+							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
+							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
+						</div>
+					</div>
+					<button class="btn ic-search p-2 qela-search-btn" type="button"></button>
+				</form>
+				<!--FIX badge -->
+				<button type="button" class="btn ic-bell p-2 qela-notification active">
+					<span class="position-absolute badge rounded-pill text-bg-danger qela-badge small">25</span>
+				</button>
+				<!--FIX user -->
+				<div class="dropdown qela-user d-none d-md-flex pe-1 pe-md-3">
+					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user">
+					</button>
+					<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
+						<form class="gy-5 p-2">
+							<div class="mb-3">
+								<label for="UserEmail" class="form-label">Email</label>
+								<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email">
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<div class="mb-3">
+								<label for="inputPassword1" class="form-label">Password</label>
+								<div class="input-group input-group-sm has-validation">
+									<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1">
+									<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+									<div class="invalid-feedback">Error text</div>
+								</div>
+							</div>
+							<div class="mb-3">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="Check">
+									<label class="form-check-label" for="Check">Запамятати мене</label>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary w-100">Відправити</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--FIX menu -->
+	<div class="h-100 qela-menu">
+		<!--FIX buttons -->
+		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
+		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button>
+		<nav class="d-flex flex-column position-relative h-100 qela-nav bg-white">
+			<!--FIX mobile logo -->
+			<a class="navbar-brand qela-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40"></a>
+			<!--FIX mobile search -->
+			<form class="flex-grow-1 py-2 px-3 d-block d-md-none" role="search">
+				<div class="input-group">
+					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
+					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
+				</div>
+			</form>
+			<!--FIX mobile user -->
+			<div class="py-2 px-3 row gx-2 d-flex d-md-none">
+				<div class="col d-flex align-items-center gap-3">
+					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user">
+					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
+				</div>
+				<div class="col-auto">
+					<button type="button" class="btn btn-info ico ic-log-out"></button>
+				</div>
+			</div>
+			<!--FIX nav wrapper -->
+			<div class="qela-nav__wrapper d-flex flex-column position-relative">
+				<ul class="nav flex-column mb-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center active" aria-current="page">
+							<span class="ic-spead p-2 rounded-5"></span>
+							<span>Дашборд</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-people p-2 rounded-5"></span>
+							<span>Користувачі</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-box-arrow p-2 rounded-5"></span>
+							<span>Голосування</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-notes p-2 rounded-5"></span>
+							<span>Новини</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-calendar p-2 rounded-5"></span>
+							<span>Квести</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-dollar p-2 rounded-5 position-relative">
+								<span class="position-absolute top-0 start-50 badge rounded-pill text-bg-danger qela-badge small">25</span>
+							</span>
+							<span>Донати</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-lattice p-2 rounded-5"></span>
+							<span>Теги</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-speaker p-2 rounded-5"></span>
+							<span>Маркетинг</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-jostik p-2 rounded-5"></span>
+							<span>Гейміфікація</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-city p-2 rounded-5"></span>
+							<span>Організація</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-tent p-2 rounded-5"></span>
+							<span>Магазин</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav flex-column pt-0">
+					<li class="nav-item">
+						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+							<span class="ic-settings p-2 rounded-5"></span>
+							<span>Налаштування</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+</header>
+	<main>
+		<!-- =====================Список користувачів==================== -->
+		<div class="container-fluid">
+			<div class="row gx-3 mb-3 pt-3">
+				<div class="col-lg-4">
+					<div class="border bg-white rounded-2 pb-5">
+						<!-- FIX item actions -->
+						<div class="px-4 pt-5 pb-4 text-center">
+							<img src="img/avatar-100.svg" width="100" height="100" alt="avatar">
+							<h2 class="pt-3 h4">Unity for Planet</h2>
+							<div class="pt-3">
+								<button type="button" class="btn btn-info ic-edit ico-right">Edit</button>
+							</div>
+						</div>
+						<div class="p-3">
+							<!-- FIX Lists whith button -->
+							<ul class="list-group list-group-flush pb-3">
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 flex-grow-1 ">Organization user site link:</span>
+									<button type="button" class="btn btn-info ic-edit ico-right">www.qela-app</button>
+								</li>
+							</ul>
+							<!-- FIX Lists whith text -->
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Organization key:</span>
+									<span class="flex-grow-1">2023-03-01, 09:40:23</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Date Created:</span>
+									<span class="flex-grow-1">2023-03-01, 09:40:23</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Phone Number:</span>
+									<span class="flex-grow-1">+38 067 000 00 00</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Email:</span>
+									<span class="flex-grow-1">alex.kukhtin@gmail.com</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Year of fondation:</span>
+									<span class="flex-grow-1">2023-03-01</span>
+								</li>
+							</ul>
+						</div>
+						<!-- FIX Description  -->
+						<div class="px-4 py-3">
+							<h3 class="h6 text-info-600 pb-2">Description</h3>
+							<div id="#text-more" class="qela-description mb-3">
+								"Unity for Planet" is a non-profit organization dedicated to protecting the environment through community involvement and volunteerism. Our mission is to inspire and empower individuals to take action to preserve and protect the planet for future generations. We believe that everyone has a role to play in creating a sustainable future, and that small actions taken by individuals can lead to significant positive changes for the environment. Through various initiatives such as beach cleanups, tree planting campaigns, and educational programs, we work to engage and educate people about the importance of environmental conservation. Join us in our efforts to create a greener and healthier planet by volunteering with Unity for Planet today!"
+							</div>
+							<div class="text-end">
+								<button type="button" class="btn btn-sm btn-link" data-ql-target="#text-more">Reed more</button>
+							</div>
+						</div>
+						<!-- FIX Lists whith text -->
+						<div class="p-3">
+							<h3 class="h6 text-info-800 pb-2">Contacts</h3>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Address:</span>
+									<span class="flex-grow-1">Mykhaila Hrushevskoho St, Kyiv, 01008</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Phone Number:</span>
+									<span class="flex-grow-1">+38 067 000 00 00</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Phone Number:</span>
+									<span class="flex-grow-1">+38 067 000 00 00</span>
+								</li>
+								<li class="list-group-item d-flex gap-2 align-items-center">
+									<span class="text-info-600 w-25">Email:</span>
+									<span class="flex-grow-1">alex.kukhtin@gmail.com</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ====== -->
+				<div class="col-lg-8 mb-lg-0 mb-3">
+					<div class="border h-100 pb-3 pb-md-4 bg-white rounded-2">
+						<div class="md-3">
+							<ul class="nav nav-tabs bg-body rounded-top px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="admins-tab" data-bs-toggle="tab" data-bs-target="#admins-tab-pane" type="button" role="tab" aria-controls="admins-tab-pane" aria-selected="false" tabindex="-1">Admins</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="branches-tab" data-bs-toggle="tab" data-bs-target="#branches-tab-pane" type="button" role="tab" aria-controls="branches-tab-pane" aria-selected="true">Branches</button>
+								</li>
+							</ul>
+							<div class="tab-content bg-white" id="myTabContent">
+								<!-- Admins -->
+								<div class="tab-pane fade active show" id="admins-tab-pane" role="tabpanel" aria-labelledby="admins-tab" tabindex="0">
+									<!--  Item  с подзаголовком и кнопкай -->
+									<div class="border-bottom px-4 py-3">
+										<div class="row gx-4 align-items-center">
+											<div class="col-md-5">
+												<h2 class="h5 mb-2 mb-md-0">Admins list</h2>
+											</div>
+											<div class="col-md-7 text-end">
+												<button type="button" class="btn btn-primary ic-plus ico-right">Add New Admin</button>
+											</div>
+										</div>
+									</div>
+									<!--  Таблица -->
+									<div class="table-responsive table-qela">
+										<table class="table table-hover">
+											<thead class="table-light">
+												<tr>
+													<th class="ps-4" width="45" scope="col">
+														Photo
+													</th>
+													<th scope="col">
+														Name
+													</th>
+													<th scope="col">
+														Roles
+													</th>
+													<th scope="col">
+														Last visit
+													</th>
+													<th class="text-center pe-4" width="120" scope="col">
+														Status
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
+													</td>
+													<td>
+														Gary Simon
+													</td>
+													<td>
+														<div class="d-flex gap-1">
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-secondary-600 bg-secondary-100 ic-key" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
+														</div>
+													</td>
+													<td>
+														2023-03-01, 09:40:23
+													</td>
+													<td class="text-center pe-4" width="120">
+														<span class="badge qela-badge-success">Confirmed</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
+													</td>
+													<td>
+														Denis
+													</td>
+													<td>
+														<div class="d-flex gap-1">
+															<!-- Tooltip users-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success-600 bg-success-100 ic-people" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch users admin"></button>
+															<!-- Tooltip voting-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success-600 bg-success-100 ic-voting-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch voting admin"></button>
+															<!-- Tooltip quests-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success bg-success-100 ic-diamond-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch quests admin"></button>
+															<!-- Tooltip branch-super-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-secondary-600 bg-secondary-100 ic-branch" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
+														</div>
+													</td>
+													<td>
+														2023-03-01, 09:40:23
+													</td>
+													<td class="text-center pe-4" width="120">
+														<span class="badge qela-badge-success">Confirmed</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-4">
+														<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
+													</td>
+													<td>
+														Chriss Moroz
+													</td>
+													<td>
+														<div class="d-flex gap-1">
+															<!-- Tooltip quest-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-warning-600 bg-warning-100 ic-eye" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch reader"></button>
+														</div>
+													</td>
+													<td>
+														2023-03-01, 09:40:23
+													</td>
+													<td class="text-center pe-4" width="120">
+														<span class="badge bg-info-100 text-info-900">Getting accepted</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg bg-secondary text-white border-0 fs-6" style="--img-size: 40px;"><small>i</small></a>
+													</td>
+													<td>
+														Ivan
+													</td>
+													<td>
+														<div class="d-flex gap-1">
+															<!-- Tooltip users-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success-600 bg-success-100 ic-people" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch users admin"></button>
+															<!-- Tooltip quests-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success bg-success-100 ic-diamond-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch quests admin"></button>
+														</div>
+													</td>
+													<td>
+														2023-03-01, 09:40:23
+													</td>
+													<td class="text-center pe-4">
+														<span class="badge qela-badge-success">Confirmed</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg bg-secondary text-white border-0 fs-6" style="--img-size: 40px;"><small>i</small></a>
+													</td>
+													<td>
+														Ivan
+													</td>
+													<td>
+														<div class="d-flex gap-1">
+															<!-- Tooltip quests-admin -->
+															<button type="button" class="btn qela-btn-tooltip qela-admin text-success bg-success-100 ic-diamond-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch quests admin"></button>
+														</div>
+													</td>
+													<td>
+														2023-03-01, 09:40:23
+													</td>
+													<td class="text-center pe-4">
+														<span class="badge qela-badge-success">Confirmed</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- Branches -->
+								<div class="tab-pane fade" id="branches-tab-pane" role="tabpanel" aria-labelledby="branches-tab" tabindex="0">
+									<!--  Item  с подзаголовком и кнопкай -->
+									<div class="border-bottom px-4 py-3">
+										<div class="row gx-4 align-items-center">
+											<div class="col-md-5">
+												<h2 class="h5 mb-2 mb-md-0">Branches list</h2>
+											</div>
+											<div class="col-md-7 text-end">
+												<button type="button" class="btn btn-primary ic-plus ico-right">Add New Branch</button>
+											</div>
+										</div>
+									</div>
+									<!--  Таблица -->
+									<div class="table-responsive table-qela">
+										<table class="table table-hover">
+											<thead class="table-light">
+												<tr>
+													<th class="ps-4" width="45" scope="col">
+														Logo
+													</th>
+													<th scope="col">
+														Name
+													</th>
+													<th scope="col">
+														Users
+													</th>
+													<th class="text-center pe-4" width="80" scope="col">
+														Status
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg bg-white border-2" style="--img-size: 40px;"><img src="img/type-logo.svg" width="40" height="40" alt="#"></a>
+													</td>
+													<td>
+														West Wing
+													</td>
+													<td width="200">
+														<div class="d-inline-flex align-items-center qela-users">
+															<a href="#" class="qela-avatar qela-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
+																<small><small>J</small></small>
+															</a>
+															<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size:30px">
+																<img src="img/avatar.jpg" width="30" height="30" alt="#">
+															</a>
+															<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size:30px">
+																<img src="img/avatar.jpg" width="30" height="30" alt="#">
+															</a>
+															<span class="text-info-900 ms-2">120</span>
+														</div>
+													</td>
+													<td width="80" class="text-center pe-4">
+														<span class="badge qela-badge-success">Active</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-4" width="45">
+														<a href="#" class="qela-avatar qela-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
+															<small><small>Bn</small></small>
+														</a>
+													</td>
+													<td>
+														Branch Name
+													</td>
+													<td width="200">
+														<div class="d-inline-flex align-items-center qela-users">
+															<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size:30px">
+																<img src="img/avatar.jpg" width="30" height="30" alt="#">
+															</a>
+															<a href="#" class="qela-avatar qela-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
+																<small><small>J</small></small>
+															</a>
+															<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size:30px">
+																<img src="img/avatar.jpg" width="30" height="30" alt="#">
+															</a>
+															<span class="text-info-900 ms-2">1345</span>
+														</div>
+													</td>
+													<td width="80" class="text-center pe-4">
+														<span class="badge qela-badge-success">Active</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<!-- =========================== -->
+	<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
