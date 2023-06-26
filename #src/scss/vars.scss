@@ -179,7 +179,8 @@ $spacers: (
 	2: $spacer * .5,
 	3: $spacer,
 	4: $spacer * 1.5,
-	5: $spacer * 3,
+	5: $spacer * 2,
+	6: $spacer * 3,
 );
 // Settings for the `<body>` element.
 $body-color: $black;
@@ -476,7 +477,7 @@ $modal-footer-border-width: $modal-header-border-width;
 
 $modal-sm: 300px;
 $modal-md: 450px;
-$modal-lg: 800px;
+$modal-lg: 720px;
 $modal-xl: 1140px;
 // scss-docs-end modal-variables
 //alert

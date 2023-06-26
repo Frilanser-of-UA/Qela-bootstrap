@@ -1995,6 +1995,30 @@
 		</div>
 	</div>
 </div>
+<!-- FIX Organization items  -->
+<h4 class="mt-5">Organization items</h4>
+<div class="border-bottom py-4 d-flex justify-content-between align-items-end flex-wrap">
+	<div class="d-flex align-items-center me-0 me-md-2 mb-2 me-md-0">
+		<div class="qela-avatar qela-ibg border-0 me-2 me-md-4" style="--img-size: 100px;">
+			<img src="img/avatar-100.svg" width="100" height="100" alt="avatar">
+		</div>
+		<div class="d-flex flex-column">
+			<button type="button" class="btn btn-sm btn-outline-info ic-refresh ico-left mb-2">Change logo</button>
+			<button type="button" class="btn btn-sm btn-outline-info ic-delete ico-left">Delete</button>
+		</div>
+	</div>
+	<div>
+		<div class="d-flex gap-2 align-items-center pb-2">
+			<span class="text-info-600">Organization key:</span>
+			<span class="flex-grow-1">345</span>
+		</div>
+
+		<div class="d-flex gap-2 align-items-center flex-wrap">
+			<span class="text-info-600 flex-grow-1">Organization user site link:</span>
+			<button type="button" class="btn btn-outline-info ic-file-copy ico-right">www.qela-app</button>
+		</div>
+	</div>
+</div>
 					<!-- FIX Labels  -->
 <h2 class="h1 mt-4" id="h3Btn15">Labels</h2>
 <div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
@@ -2026,8 +2050,11 @@
 		<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal1">
 			modal small
 		</button>
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+		<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal2">
 			modal middle
+		</button>
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+			modal lg Organization
 		</button>
 	</div>
 	<!-- Modal sm-->
@@ -2096,6 +2123,121 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
 					<button type="button" class="btn btn-secondary ico-right ic-check-big">Save point</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal lg Organization-->
+	<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Invite administrator</h1>
+					<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body bg-body">
+					<!-- form email -->
+					<form>
+						<div class="pb-5">
+							<div class="d-flex justify-content-between gap-1">
+								<div class="d-flex align-items-start gap-1">
+									<label for="inputEmail1" class="form-label">Email <span class="text-danger">*</span></label>
+								</div>
+							</div>
+							<input type="email" class="form-control" id="inputEmail1" placeholder="Type client email">
+							<div class="invalid-feedback">Error text</div>
+							<!-- <div class="helper-text">Helper text</div> -->
+						</div>
+					</form>
+					<!-- title h2 -->
+					<h2 class="h6 py-3">Roles</h2>
+					<!-- items label-->
+					<div class="pt-2 pb-1 d-none d-md-block">
+						<div class="row g-0">
+							<div class="col">
+								<div class="text-info-600">Role</div>
+							</div>
+							<div class="col-auto">
+								<div class="text-info-600 px-3">For Branch</div>
+							</div>
+							<div class="col">
+								<div class="text-info-600 pe-2">Branch Name</div>
+							</div>
+							<div class="col-md-auto">
+								<div class="text-info-600">Action</div>
+							</div>
+						</div>
+					</div>
+					<div class="pt-2 pb-3">
+						<!-- items selects-->
+						<div class="pb-2">
+							<div class="row g-1 g-md-2">
+								<div class="col">
+									<div>
+										<div>
+											<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+									<div class="form-check form-switch px-0 px-md-2">
+										<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
+										<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+									</div>
+								</div>
+								<div class="col">
+									<div>
+										<div>
+											<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+									<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
+								</div>
+							</div>
+						</div>
+						<!-- items selects-->
+						<div>
+							<div class="row g-1 g-md-2">
+								<div class="col">
+									<div>
+										<div>
+											<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+									<div class="form-check form-switch px-0 px-md-2">
+										<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17">
+										<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+									</div>
+								</div>
+								<div class="col">
+									<div>
+										<div>
+											<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+									<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- button-->
+					<div class="pb-3">
+						<button type="button" class="btn btn-sm btn-secondary ico-right ic-plus">Add New Role</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Invite Administrator</button>
 				</div>
 			</div>
 		</div>

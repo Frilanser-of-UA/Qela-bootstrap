@@ -8,8 +8,8 @@
 	&:disabled,
 	&.disabled {
 		border-color: transparent;
-		background-color: $gray-200;
-		color: $gray-500;
+		background-color: $info-200;
+		color: $info-500;
 	}
 
 	&[class^="ic-"],
@@ -59,7 +59,7 @@
 
 	&:disabled,
 	&.disabled {
-		background-color: $gray-500;
+		background-color: $info-500;
 		color: $white;
 	}
 }
@@ -131,17 +131,17 @@
 }
 
 .btn-info {
-	border-color: $gray-100;
-	background-color: $gray-100;
+	border-color: $info-100;
+	background-color: $info-100;
 
 	&:hover {
-		border-color: $gray-300;
-		background-color: $gray-300;
+		border-color: $info-300;
+		background-color: $info-300;
 	}
 
 	&:active {
-		border-color: $gray-300  !important;
-		background-color: $gray-300  !important;
+		border-color: $info-300  !important;
+		background-color: $info-300  !important;
 	}
 
 	&:disabled,
@@ -155,8 +155,8 @@
 	background-color: $white;
 
 	&:hover {
-		border-color: $gray-200;
-		background-color: $gray-200;
+		border-color: $info-200;
+		background-color: $info-200;
 	}
 
 	&:active {
@@ -216,9 +216,9 @@
 
 	&:disabled,
 	&.disabled {
-		border-color: $gray-400;
-		background-color: $gray-100;
-		color: $gray-500;
+		border-color: $info-400;
+		background-color: $info-100;
+		color: $info-500;
 	}
 }
 
@@ -228,9 +228,9 @@
 
 	&:disabled,
 	&.disabled {
-		border-color: $gray-400;
-		background-color: $gray-100;
-		color: $gray-500;
+		border-color: $info-400;
+		background-color: $info-100;
+		color: $info-500;
 	}
 }
 
@@ -292,33 +292,33 @@
 }
 
 .btn-outline-info {
-	color: $black;
-	background-color: $gray-100;
-	border-color: $gray-300;
+	color: $info-700;
+	background-color: $info-100;
+	border-color: $info-300;
 
 	&:hover {
-		background-color: $gray-300;
-		border-color: $gray-300;
+		background-color: $info-300;
+		border-color: $info-300;
 	}
 
 	&:active {
-		background-color: $gray-300  !important;
-		border-color: $gray-300  !important;
+		background-color: $info-300  !important;
+		border-color: $info-300  !important;
 	}
 }
 
 .btn-outline-light {
 	color: $black;
-	border-color: $gray-200;
+	border-color: $info-200;
 
 	&:hover {
-		background-color: $gray-200;
-		border-color: $gray-200;
+		background-color: $info-200;
+		border-color: $info-200;
 	}
 
 	&:active {
-		background-color: $gray-200  !important;
-		border-color: $gray-200  !important;
+		background-color: $info-200  !important;
+		border-color: $info-200  !important;
 	}
 }
 
@@ -331,7 +331,7 @@
 			border-color: transparent;
 			background-color: transparent;
 			padding: 5.5px;
-			color: $gray-600;
+			color: $info-600;
 
 			@media (any-hover:hover) {
 				&:hover {
@@ -359,8 +359,8 @@
 .btn-group,
 .btn-group-vertical {
 	.btn-outline-info {
-		color: $gray-600;
-		border-color: $gray-400;
+		color: $info-600;
+		border-color: $info-400;
 	}
 }
 
@@ -374,7 +374,7 @@
 	}
 
 	&:disabled {
-		color: $gray-500;
+		color: $info-500;
 	}
 
 	&.small {
@@ -390,8 +390,8 @@
 
 .qela-btn-tooltip {
 	border: none;
-	color: $gray-400;
-	padding: 0;
+	color: $info-400;
+	padding: 0.125rem 0px 0px 0px;
 
 	&:hover {
 		color: $secondary;
@@ -415,7 +415,7 @@
 	border-radius: 50%;
 	padding: 9px 4px 9px 14px;
 	background-color: $white;
-	color: $gray-500;
+	color: $info-500;
 
 	@media (max-width:($md3+px)) {
 		display: none;
@@ -434,7 +434,7 @@
 	&::before {
 		transition: transform .3s ease 0s, color 0.2s;
 		font-size: 14px;
-		color: $gray-500;
+		color: $info-500;
 		transform: rotate(-90deg);
 	}
 
