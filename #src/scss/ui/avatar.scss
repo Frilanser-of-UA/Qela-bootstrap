@@ -8,6 +8,7 @@
 	text-transform: uppercase;
 	width: var(--img-size);
 	height: var(--img-size);
+	flex: 0 0 var(--img-size);
 	overflow: hidden;
 	border-radius: 50%;
 	border: 1px solid $info-200;

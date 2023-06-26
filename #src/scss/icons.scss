@@ -18,11 +18,18 @@
 		display: block;
 	}
 
+	&.ico-md {
+		&::before {
+			font-size: 18px;
+		}
+	}
+
 	&.ico-sm {
 		&::before {
 			font-size: 16px;
 		}
 	}
+
 }
 
 .ic-bell:before {
