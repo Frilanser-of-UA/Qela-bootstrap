@@ -47,5 +47,28 @@ for (let i = 0; i < coll.length; i++) {
 		}
 	})
 }
-
 // read more text
+// quest items show content right
+let quest = document.querySelectorAll('[data-quest]');
+quest.forEach(function (link, index) {
+	link.addEventListener('click', function () {
+		let self = event.currentTarget;
+		let valueAtribute = self.getAttribute('data-quest');
+		let content = document.querySelector(`.qela-content[id="${valueAtribute}"]`);
+		if (this.classList.contains('qela-quest.active')) {
+			this.classList.remove('active');
+		} else {
+			const activeItem = document.querySelector('.qela-quest.active');
+			const activeContent = document.querySelectorAll('.qela-content.active');
+			activeContent.forEach(function (e) {
+				e.classList.remove('active');
+			});
+			if (activeItem) {
+				activeItem.classList.remove('active');
+			}
+			this.classList.add('active');
+			content.classList.add('active');
+		}
+	});
+});
+// quest items show content right

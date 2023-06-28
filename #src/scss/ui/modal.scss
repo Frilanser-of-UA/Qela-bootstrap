@@ -1,0 +1,17 @@
+.qela-modal-xl {
+	&.modal-xl {
+		@media (min-width: 576px) {
+			--bs-modal-width: 962px;
+			padding-right: 8px;
+			padding-left: 8px;
+		}
+
+		@media (min-width: 992px) {
+			--bs-modal-width: 962px;
+		}
+
+		@media (min-width: 1200px) {
+			--bs-modal-width: 1170px;
+		}
+	}
+}

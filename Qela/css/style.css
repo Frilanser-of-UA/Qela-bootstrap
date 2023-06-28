@@ -10745,7 +10745,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    --bs-modal-width: 1140px;
+    --bs-modal-width: 1170px;
   }
 }
 .modal-fullscreen {
@@ -13147,6 +13147,24 @@ textarea.form-control-lg {
   color: #000;
 }
 
+@media (min-width: 576px) {
+  .qela-modal-xl.modal-xl {
+    --bs-modal-width: 962px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+@media (min-width: 992px) {
+  .qela-modal-xl.modal-xl {
+    --bs-modal-width: 962px;
+  }
+}
+@media (min-width: 1200px) {
+  .qela-modal-xl.modal-xl {
+    --bs-modal-width: 1170px;
+  }
+}
+
 .qela-badge.small {
   padding: 2px 4px;
   font-size: 10px;
@@ -13185,6 +13203,25 @@ textarea.form-control-lg {
   border-right: 1px solid #dee2e6;
   border-bottom: none;
 }
+.qela-tab.nav-tabs {
+  flex: 0 1 240px;
+}
+@media (max-width: 767.98px) {
+  .qela-tab.nav-tabs {
+    flex: 0 0 auto;
+  }
+}
+.qela-tab .nav-item {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .qela-tab .nav-item {
+    width: auto;
+  }
+}
+.qela-tab .nav-link {
+  text-align: start;
+}
 @media (max-width: 767.98px) {
   .qela-tab {
     border-right: none;
@@ -13195,6 +13232,94 @@ textarea.form-control-lg {
     border-left: 1px solid #dee2e6;
     height: 100%;
   }
+}
+
+.qela-quest:not(:last-child) .head {
+  border-bottom: 1px solid #ced4da;
+}
+@media (any-hover: hover) {
+  .qela-quest:hover .head {
+    background-color: #e9ecef;
+  }
+  .qela-quest:hover .btn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+@media (min-width: 767.98px) {
+  .qela-quest.active .head {
+    background-color: #e9ecef;
+  }
+}
+.qela-quest.active .triangle,
+.qela-quest.active .btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.qela-quest .head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  .qela-quest .head {
+    display: block;
+  }
+}
+.qela-quest .btn,
+.qela-quest .triangle,
+.qela-quest .content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease 0s, overflow 0.3s ease 0s;
+}
+@media (max-width: 767.98px) {
+  .qela-quest .btn {
+    width: 50%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 567.98px) {
+  .qela-quest .btn {
+    width: 100%;
+  }
+}
+.qela-quest .triangle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-right: 11px solid #978fff;
+  border-bottom: 11px solid transparent;
+  border-left: 0 solid transparent;
+}
+@media (max-width: 767.98px) {
+  .qela-quest .triangle {
+    display: none;
+  }
+}
+
+.qela-content {
+  transition: opacity 0.3s ease 0s, visibility 0.2s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.qela-content.active {
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .tooltip-inner {

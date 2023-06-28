@@ -2,6 +2,26 @@
 	border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
 	border-bottom: none;
 
+	&.nav-tabs {
+		flex: 0 1 240px;
+
+		@media (max-width:($md3+px)) {
+			flex: 0 0 auto;
+		}
+	}
+
+	.nav-item {
+		width: 100%;
+
+		@media (max-width:($md3+px)) {
+			width: auto;
+		}
+	}
+
+	.nav-link {
+		text-align: start;
+	}
+
 	@media (max-width:($md3+px)) {
 		border-right: none;
 		border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
@@ -11,5 +31,107 @@
 			border-left: 1px solid $hr-border-color;
 			height: 100%;
 		}
+	}
+}
+
+.qela-quest {
+	&:not(:last-child) {
+		.head {
+			border-bottom: 1px solid $info-400;
+		}
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			.head {
+				background-color: $info-200;
+			}
+
+			.btn {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&.active {
+		.head {
+			@media (min-width:($md3+px)) {
+				background-color: $info-200;
+			}
+		}
+
+		.triangle,
+		.btn {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
+
+	.head {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+		flex-wrap: wrap;
+
+		@media (max-width:($md3+px)) {
+			display: block;
+		}
+	}
+
+	.btn,
+	.triangle,
+	.content {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 0.3s ease 0s, overflow 0.3s ease 0s;
+	}
+
+	.btn {
+		@media (max-width:($md3+px)) {
+			width: 50%;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		@media (max-width:($md4+px)) {
+			width: 100%;
+		}
+	}
+
+	.triangle {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 0;
+		height: 0;
+		border-top: 11px solid transparent;
+		border-right: 11px solid $secondary;
+		border-bottom: 11px solid transparent;
+		border-left: 0 solid transparent;
+
+		@media (max-width:($md3+px)) {
+			display: none;
+		}
+	}
+}
+
+.qela-content {
+	transition: opacity 0.3s ease 0s, visibility 0.2s ease 0s;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		display: block;
 	}
 }
