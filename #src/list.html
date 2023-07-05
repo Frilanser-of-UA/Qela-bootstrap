@@ -5,12 +5,14 @@
 })
 
 <body class="qela-body">
-	@@include('./components/_header.html',{})
+	@@include('./components/_header.html',{
+	"title":"All blocks"
+	})
 	<main>
 		<!-- =====================Список користувачів==================== -->
 		<div class="container-fluid">
 			<!--  Item с кнопками-->
-			<div class="d-flex gap-2 flex-wrap mb-2 mt-2">
+			<div class="d-flex gap-2 flex-wrap mb-2 mt-3">
 				<button type="button" class="btn btn-primary btn-sm ic-plus ico-right">New user</button>
 				<button type="button" class="btn btn-light btn-sm">Light</button>
 			</div>

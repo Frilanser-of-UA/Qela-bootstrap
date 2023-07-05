@@ -5,15 +5,13 @@
 })
 
 <body class="qela-body">
-	@@include('./components/_header.html',{})
+	@@include('./components/_header.html',{
+	"title":"Sokira Party"
+	})
 	<main>
 		<!-- =====================Список користувачів==================== -->
 		<div class="container-fluid">
-			<!--  Item с заголовком -->
-			<div class="mb-2 mt-2">
-				<h1 class="h5">Sokira Party</h1>
-			</div>
-			<div class="row mb-3">
+			<div class="row mb-3 mt-3">
 				<div class="col-12">
 					<div class="border pb-3 pb-md-4 md-3 bg-white rounded-2">
 						<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">

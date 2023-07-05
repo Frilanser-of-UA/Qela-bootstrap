@@ -12,7 +12,6 @@
 	overflow: hidden;
 	border-radius: 50%;
 	border: 1px solid $info-200;
-
 }
 
 .qela-ibg {
@@ -35,4 +34,41 @@
 			margin-left: -10px;
 		}
 	}
+}
+
+.qela-preview {
+	width: var(--img-size);
+	height: var(--img-size);
+	flex: 0 0 var(--img-size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-weight: 500;
+	transition: transform 0.3s ease-out 0s;
+
+	&:not(:last-child) {
+		margin-right: 2px;
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			&:not(.qela-empty, .img) {
+				transform: translateY(-5px);
+			}
+
+			&.qela-empty {
+				background-color: $secondary-100;
+				border-color: $secondary;
+			}
+		}
+	}
+
+}
+
+.qela-empty {
+	background-color: $info-100;
+	border: 1px solid $info-100;
+	transition: all 0.3s ease-out 0s;
+	color: $secondary-600;
 }

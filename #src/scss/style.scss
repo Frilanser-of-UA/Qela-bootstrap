@@ -38,6 +38,7 @@ $utilities: map-merge($utilities,
 
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
+@import "bootstrap/card";
 @import "bootstrap/transitions";
 @import "bootstrap/dropdown";
 @import "bootstrap/button-group";
@@ -77,7 +78,6 @@ $utilities: map-merge($utilities,
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>======================================
 @import "./components/header";
-@import "./components/home";
 @import "./components/statistics";
 @import "./components/table";
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>===========================================

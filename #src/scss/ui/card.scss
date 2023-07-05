@@ -1,0 +1,53 @@
+.qela-card {
+	&.card {
+		text-decoration: none;
+		color: $gray-900;
+		transition: background-color 0.3s ease 0s;
+
+		&:hover {
+			color: $gray-900;
+			background-color: $info-100;
+
+			.qela-ibg {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.qela-ibg {
+		padding-top: 55%;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba($black, 0.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease 0s;
+		}
+	}
+}
+
+.qela-noimg {
+	border-radius: $card-border-radius $card-border-radius 0 0;
+
+	[class^="ic-"],
+	[class*="ic-"] {
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+
+		&:before {
+			font-size: 32px;
+		}
+	}
+}

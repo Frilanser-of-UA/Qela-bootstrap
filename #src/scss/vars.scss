@@ -354,7 +354,7 @@ $input-height-border: none;
 // scss-docs-start form-check-variables
 $form-check-input-width: 1rem;
 $form-check-min-height: $font-size-base;
-$form-check-padding-start: $form-check-input-width + .5rem;
+$form-check-padding-start: $form-check-input-width + .0rem;
 $form-check-margin-bottom: .125rem;
 $form-check-label-color: $gray-600;
 $form-check-label-cursor: pointer;
@@ -587,3 +587,31 @@ $list-group-action-hover-color: $list-group-action-color;
 $list-group-action-active-color: $body-color;
 $list-group-action-active-bg: $gray-200;
 // List group end
+// Progress start
+
+$progress-height: 0.5rem;
+$progress-font-size: $font-size-base * .75;
+$progress-bg: $gray-200;
+$progress-border-radius: $border-radius;
+$progress-bar-color: $white;
+$progress-bar-bg: $primary;
+// Progress end
+// Card start
+$card-spacer-y: $spacer;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer * .0;
+$card-border-width: $border-width;
+$card-border-color: $info-200;
+$card-border-radius: $border-radius;
+$card-box-shadow: null;
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width);
+$card-cap-padding-y: $card-spacer-y * .5;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: rgba($black, .03);
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: $white;
+$card-img-overlay-padding: $spacer;
+$card-group-margin: $grid-gutter-width * .5;
+// Card end

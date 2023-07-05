@@ -15,3 +15,25 @@
 		}
 	}
 }
+
+.qela-modal {
+	&.modal {
+		&:has(.card) {
+			.qela-modal-empty {
+				display: none;
+			}
+		}
+
+	}
+
+	.modal-body {
+		max-height: 565px;
+	}
+
+}
+
+.qela-modal-empty {
+	margin: 0;
+	text-align: center;
+	display: block;
+}
