@@ -13830,6 +13830,10 @@ textarea.form-control-lg {
   padding-top: 100%;
 }
 
+.w {
+  word-break: break-all;
+}
+
 .qela-description {
   height: 92px;
   overflow: hidden;
