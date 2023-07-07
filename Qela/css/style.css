@@ -12186,6 +12186,10 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0.5rem !important;
 }
 
+.word-break {
+  word-break: break-word !important;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -13828,10 +13832,6 @@ textarea.form-control-lg {
 
 .qela-qr {
   padding-top: 100%;
-}
-
-.w {
-  word-break: break-all;
 }
 
 .qela-description {
