@@ -5,37 +5,46 @@
 })
 
 <body>
+	<style>
+		.--hide {
+			display: none;
+		}
+	</style>
 	<div id="app" v-cloak>
 		<main>
 			<!-- Навигация (якоря)-->
 			<aside class="fixed-top pt-2 d-lg-block overflow-auto d-none" style="width: 280px; height: 100vh;">
-				<a class="text-center d-block h3 mb-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
-				<nav>
-					<ol class="d-flex flex-column gap-2">
-						<li><a href="#h3Btn1" class="text-black">Buttons</a></li>
-						<li><a href="#h3Btn2" class="text-black">Text field</a></li>
-						<li><a href="#h3Btn3" class="text-black">Checkbox</a></li>
-						<li><a href="#h3Btn4" class="text-black">Radiobutton</a></li>
-						<li><a href="#h3Btn5" class="text-black">Tooltip</a></li>
-						<li><a href="#h3Btn6" class="text-black">Multi-select</a></li>
-						<li><a href="#h3Btn7" class="text-black">Datapiker</a></li>
-						<li><a href="#h3Btn8" class="text-black">Range</a></li>
-						<li><a href="#h3Btn9" class="text-black">Dropdown</a></li>
-						<li><a href="#h3Btn10" class="text-black">Badge</a></li>
-						<li><a href="#h3Btn11" class="text-black">Pagination</a></li>
-						<li><a href="#h3Btn12" class="text-black">Alert</a></li>
-						<li><a href="#h3Btn13" class="text-black">Logos</a></li>
-						<li><a href="#h3Btn14" class="text-black">Items</a></li>
-						<li><a href="#h3Btn15" class="text-black">Labels</a></li>
-						<li><a href="#h3Btn16" class="text-black">Modals</a></li>
-						<li><a href="#h3Btn17" class="text-black">Map-pin</a></li>
-						<li><a href="#h3Btn18" class="text-black">Progress</a></li>
-						<li><a href="#h3Btn19" class="text-black">Avatars</a></li>
-						<li><a href="#h3Btn20" class="text-black">Lists</a></li>
-						<li><a href="#h3Btn21" class="text-black">Description</a></li>
-						<li><a href="#h3Btn22" class="text-black">Img-preview</a></li>
-						<li><a href="#h3Btn23" class="text-black">Cards</a></li>
-						<li><a href="#h3Btn24" class="text-black">QR-code</a></li>
+				<a class="text-center text-decoration-none d-block h3 my-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
+				<div class="p-2">
+					<input type="search" class="form-control" id="search-nav" placeholder="Search">
+				</div>
+				<nav class="ps-2">
+					<ol class="d-flex flex-column gap-2 --elastic">
+						<li><a href="#h3Btn1" class="text-black">buttons</a></li>
+						<li><a href="#h3Btn2" class="text-black">text field</a></li>
+						<li><a href="#h3Btn3" class="text-black">checkbox</a></li>
+						<li><a href="#h3Btn4" class="text-black">radiobutton</a></li>
+						<li><a href="#h3Btn5" class="text-black">tooltip</a></li>
+						<li><a href="#h3Btn6" class="text-black">multi-select</a></li>
+						<li><a href="#h3Btn7" class="text-black">datapiker</a></li>
+						<li><a href="#h3Btn8" class="text-black">range</a></li>
+						<li><a href="#h3Btn9" class="text-black">dropdown</a></li>
+						<li><a href="#h3Btn10" class="text-black">badge</a></li>
+						<li><a href="#h3Btn11" class="text-black">pagination</a></li>
+						<li><a href="#h3Btn12" class="text-black">alert</a></li>
+						<li><a href="#h3Btn13" class="text-black">logos</a></li>
+						<li><a href="#h3Btn14" class="text-black">items</a></li>
+						<li><a href="#h3Btn15" class="text-black">labels</a></li>
+						<li><a href="#h3Btn16" class="text-black">modals</a></li>
+						<li><a href="#h3Btn17" class="text-black">map-pin</a></li>
+						<li><a href="#h3Btn18" class="text-black">progress</a></li>
+						<li><a href="#h3Btn19" class="text-black">avatars</a></li>
+						<li><a href="#h3Btn20" class="text-black">lists</a></li>
+						<li><a href="#h3Btn21" class="text-black">description</a></li>
+						<li><a href="#h3Btn22" class="text-black">img-preview</a></li>
+						<li><a href="#h3Btn23" class="text-black">cards</a></li>
+						<li><a href="#h3Btn24" class="text-black">qr-code</a></li>
+						<li><a href="#h3Btn25" class="text-black">status</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -66,6 +75,7 @@
 					@@include('./components/_img-preview.html',{})
 					@@include('./components/_card.html',{})
 					@@include('./components/_qr.html',{})
+					@@include('./components/_status.html',{})
 				</div>
 			</div>
 		</main>
@@ -107,6 +117,28 @@
 		});
 		console.dir(app);
 		app.mount('#app')
+	</script>
+	<!-- Search -->
+	<script type="text/javascript">
+		document.querySelector('#search-nav').oninput = function () {
+			let val = this.value.trim();
+			let elasticItems = document.querySelectorAll('.--elastic li');
+			if (val != '') {
+				elasticItems.forEach(function (elem) {
+					if (elem.innerText.search(val) == -1) {
+						elem.classList.add('--hide');
+					}
+					else {
+						elem.classList.remove('--hide');
+					}
+				});
+			}
+			else {
+				elasticItems.forEach(function (elem) {
+					elem.classList.remove('--hide');
+				});
+			}
+		}
 	</script>
 	<!-- =========================== -->
 	@@include('_js.html',{})

@@ -8065,22 +8065,22 @@ textarea.form-control-lg {
 .form-check {
   display: block;
   min-height: 1rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   margin-bottom: 0.125rem;
 }
 .form-check .form-check-input {
   float: left;
-  margin-left: -1rem;
+  margin-left: -1.5rem;
 }
 
 .form-check-reverse {
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   padding-left: 0;
   text-align: right;
 }
 .form-check-reverse .form-check-input {
   float: right;
-  margin-right: -1rem;
+  margin-right: -1.5rem;
   margin-left: 0;
 }
 
@@ -12124,6 +12124,26 @@ textarea.form-control-lg {
   content: "\e986";
 }
 
+.ic-un-link:before {
+  content: "\e987";
+}
+
+.ic-location:before {
+  content: "\e988";
+}
+
+.ic-google-map:before {
+  content: "\e989";
+}
+
+.ic-img-32:before {
+  content: "\e98a";
+}
+
+.ic-scan:before {
+  content: "\e98b";
+}
+
 /* Свои глобальние стили (qela-) */
 .qela-body {
   padding-top: 56px;
@@ -13351,7 +13371,7 @@ textarea.form-control-lg {
   }
 }
 
-.qela-modal.modal:has(.card) .qela-modal-empty {
+.qela-modal.modal:has(.card, .table) .qela-modal-empty {
   display: none;
 }
 .qela-modal .modal-body {
@@ -13398,6 +13418,9 @@ textarea.form-control-lg {
   z-index: 2;
 }
 
+.qela-progress {
+  min-width: 150px;
+}
 .qela-progress .progress-bar:last-child {
   z-index: 1;
 }
@@ -14230,5 +14253,48 @@ header {
   border-radius: 50%;
 }
 .qela-verification span::before {
+  font-size: 16px;
+}
+
+.qela-vector {
+  position: absolute;
+  width: 20px;
+  border-left: 2px solid #978fff;
+  right: 0;
+  top: -1px;
+  bottom: -1px;
+}
+.qela-vector::before {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #978fff;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  position: absolute;
+}
+.qela-vector.start {
+  border-top: 2px solid #978fff;
+  border-top-left-radius: 10px;
+  height: calc(50% + 1px);
+  top: 50%;
+}
+.qela-vector.start::before {
+  display: none;
+}
+.qela-vector.end {
+  height: calc(50% + 1px);
+  border-bottom-left-radius: 10px;
+  border-bottom: 2px solid #978fff;
+}
+.qela-vector.end::before {
+  display: none;
+}
+
+.qela-novector {
+  color: #adb5bd;
+}
+.qela-novector::before {
   font-size: 16px;
 }

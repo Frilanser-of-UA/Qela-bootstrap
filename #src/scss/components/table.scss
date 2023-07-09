@@ -75,3 +75,52 @@
 		}
 	}
 }
+
+.qela-vector {
+	position: absolute;
+	width: 20px;
+	border-left: 2px solid $secondary;
+	right: 0;
+	top: -1px;
+	bottom: -1px;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		background-color: $secondary;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 2px;
+		position: absolute;
+	}
+
+	&.start {
+		border-top: 2px solid $secondary;
+		border-top-left-radius: 10px;
+		height: calc(50% + 1px);
+		top: 50%;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&.end {
+		height: calc(50% + 1px);
+		border-bottom-left-radius: 10px;
+		border-bottom: 2px solid $secondary;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.qela-novector {
+	color: $info-500;
+
+	&::before {
+		font-size: 16px;
+	}
+}

@@ -18,7 +18,7 @@
 
 .qela-modal {
 	&.modal {
-		&:has(.card) {
+		&:has(.card, .table) {
 			.qela-modal-empty {
 				display: none;
 			}
