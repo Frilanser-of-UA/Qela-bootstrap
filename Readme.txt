@@ -1,4 +1,8 @@
 ================= Дата 10.07.23 ======================================
+-- Правки вкладки Steps в page-sign.html
+-- Правки компонентов Answer-item-2, Question-item
+-- Добавлена карта во вкладку map в navigation.html (без попапа и пинов)
+-- Добавлены компоненты Toasts
 -- Правки list-group в components.html, organization.html
 ================= Дата 09.07.23 ======================================
 -- Добавлено компоненты  Status, modals Chains in Campaign

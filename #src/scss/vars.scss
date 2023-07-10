@@ -193,6 +193,8 @@ $link-hover-color: shift-color($link-color, $link-shade-percentage);
 // LINK
 //gutter
 $grid-gutter-width: 3rem;
+$container-padding-x: $grid-gutter-width;
+
 //gutter
 // scss-docs-start border-variables
 $border-width: 1px;
@@ -615,3 +617,18 @@ $card-bg: $white;
 $card-img-overlay-padding: $spacer;
 $card-group-margin: $grid-gutter-width * .5;
 // Card end
+$toast-max-width: 350px;
+$toast-padding-x: .75rem;
+$toast-padding-y: .5rem;
+$toast-font-size: .875rem;
+$toast-color: $info-900;
+$toast-background-color: rgba($white, 1.0);
+$toast-border-width: $border-width;
+$toast-border-color: $info-400;
+$toast-border-radius: $border-radius-lg;
+$toast-box-shadow: $box-shadow;
+$toast-spacing: $container-padding-x;
+
+$toast-header-color: $gray-600;
+$toast-header-background-color: rgba($white, 1.0);
+$toast-header-border-color: $info-400;

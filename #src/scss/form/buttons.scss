@@ -474,3 +474,36 @@
 		}
 	}
 }
+
+.qela-btn-map {
+	border-color: transparent;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	z-index: 2;
+
+	.btn {
+		background: #{rgba($black, 0.6)};
+		color: $white;
+		transition: background 0.3s ease 0s;
+		padding: 10px;
+
+		&:not(:first-child) {
+			margin-top: 0;
+		}
+
+		&:first-child {
+			border-top-right-radius: 0;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: 0;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				background: #{rgba($black, 1)};
+			}
+		}
+	}
+}

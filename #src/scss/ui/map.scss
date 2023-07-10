@@ -1,3 +1,13 @@
+.qela-map {
+	height: 440px;
+
+	.form-control {
+		&[type="search"] {
+			z-index: 2;
+		}
+	}
+}
+
 .qela-pin {
 	.badge {
 		position: relative;

@@ -26,9 +26,20 @@ window.onload = function () {
 }
 
 // tooltip
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+// toast
+// const toastElList = document.querySelectorAll('.toast');
+// const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl));
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+	toastTrigger.addEventListener('click', () => {
+		const toast = new bootstrap.Toast(toastLiveExample)
 
+		toast.show()
+	})
+}
 // read more text
 let coll = document.querySelectorAll('[data-ql-target]')
 for (let i = 0; i < coll.length; i++) {

@@ -13,3 +13,14 @@
 		font-size: 20px;
 	}
 }
+
+.qela-tooltip-black {
+	.tooltip-inner {
+		background-color: $black;
+		color: $white;
+	}
+
+	&[data-popper-placement^=left] .tooltip-arrow::before {
+		border-left-color: $black
+	}
+}

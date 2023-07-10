@@ -50,6 +50,7 @@
 						<li><a href="#h3Btn23" class="text-black">cards</a></li>
 						<li><a href="#h3Btn24" class="text-black">qr-code</a></li>
 						<li><a href="#h3Btn25" class="text-black">status</a></li>
+						<li><a href="#h3Btn26" class="text-black">toasts</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -361,6 +362,15 @@
 	<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
 		<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-small"></button>
 		<button type="button" class="btn btn-outline-info py-0 ico ic-triangle-inverted-small"></button>
+	</div>
+</div>
+<!-- FIX Map buttons  -->
+<h4 class="mt-4">Map buttons</h4>
+<div>
+	<div class="btn-group-vertical qela-btn-map position-static" role="group" aria-label="Vertical button group">
+		<button type="button" class="btn border-0 ico ic-plus" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Zoom Out"></button>
+		<button type="button" class="btn border-0 ico ic-minus" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Zoom In"></button>
+		<button type="button" class="btn border-0 ico ic-arrow-autofit-content" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Fit to all poins"></button>
 	</div>
 </div>
 					<!-- FIX Text field  -->
@@ -1042,7 +1052,7 @@
 		</div>
 	</div>
 </div>
-					<!-- FIX c  -->
+					<!-- FIX Tooltip  -->
 <h2 class="h1 mt-4" id="h3Btn5">Tooltip</h2>
 <div>
 	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
@@ -1425,23 +1435,20 @@
 <h2 class="h1 mt-4" id="h3Btn14">Items</h2>
 <h4 class="mt-5">Answer-item-2</h4>
 <div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-	<div class="row g-2">
+	<div class="row g-2 align-items-center">
+		<div class="col-auto d-none d-md-block" style="width: 24px;">
+			1
+		</div>
 		<div class="col-auto">
-			<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-				<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-				<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-			</div>
+			<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 		</div>
 		<div class="col">
 			<div class="row g-1 g-md-2">
-				<div class="col">
-					<input type="text" class="form-control" placeholder="Placeholder">
+				<div class="col"><input type="text" class="form-control" placeholder="Placeholder">
 					<div class="invalid-feedback">Error text</div>
 				</div>
 				<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-					<div class="btn-group" role="group" aria-label="button group">
-						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-					</div>
+					<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
 					<div class="form-check form-switch px-0 px-md-2">
 						<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
 						<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
@@ -1488,12 +1495,12 @@
 <div>
 	<!-- Question-item header-->
 	<div class="bg-body border-bottom p-3">
-		<div class="row g-2">
+		<div class="row g-2 align-items-center">
+			<div class="col-auto d-none d-md-block" style="width: 24px;">
+				1
+			</div>
 			<div class="col-auto">
-				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-					<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-					<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-				</div>
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 			</div>
 			<div class="col">
 				<div class="row g-2">
@@ -1501,11 +1508,7 @@
 						<div class="invalid-feedback">Error text</div>
 					</div>
 					<div class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
-						<div class="btn-group" role="group" aria-label="button group">
-							<button type="button" class="btn btn-outline-info ico ic-edit"></button>
-							<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-							<button type="button" class="btn btn-outline-info ico ic-chevron" data-bs-toggle="collapse" data-bs-target="#collapseItems1" aria-expanded="false" aria-controls="collapseItems1"></button>
-						</div>
+						<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-edit"></button><button type="button" class="btn btn-outline-info ico ic-delete"></button><button type="button" class="btn btn-outline-info ico ic-chevron collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItems1" aria-expanded="false" aria-controls="collapseItems1"></button></div>
 					</div>
 				</div>
 			</div>
@@ -1513,16 +1516,14 @@
 	</div>
 	<!-- Question-item collapsed body-->
 	<div class="collapse" id="collapseItems1">
-		<div class="card card-body">
+		<div class="card card-body rounded-0 border-0 bg-body p-0">
 			<!-- Radiobutton group -->
 			<div class="qela-pad-l pe-3 py-4">
 				<div class="form-check form-check-inline me-5">
-					<input type="radio" class="form-check-input" id="Radio5#">
-					<label class="form-check-label" for="Radio5#">Single-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio5#"><label class="form-check-label" for="Radio5#">Single-choice questions</label>
 				</div>
 				<div class="form-check form-check-inline">
-					<input type="radio" class="form-check-input" id="Radio6#" checked>
-					<label class="form-check-label" for="Radio6#">Multiple-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio6#" checked><label class="form-check-label" for="Radio6#">Multiple-choice questions</label>
 				</div>
 			</div>
 			<!-- Labels -->
@@ -1534,107 +1535,20 @@
 			</div>
 			<!-- Answer-item-2 -->
 			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
+				<div class="row g-2 align-items-center">
+					<div class="col-auto d-none d-md-block" style="width: 24px;">
+						1
+					</div>
 					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
+						<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 					</div>
 					<div class="col">
 						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
+							<div class="col"><input type="text" class="form-control" placeholder="Placeholder">
 								<div class="invalid-feedback">Error text</div>
 							</div>
 							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
+								<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
 								<div class="form-check form-switch px-0 px-md-2">
 									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
 									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
@@ -1655,7 +1569,10 @@
 <div>
 	<!-- Question-item header-->
 	<div class="bg-body border-bottom p-3">
-		<div class="row g-2">
+		<div class="row g-2 align-items-center">
+			<div class="col-auto d-none d-md-block" style="width: 24px;">
+				1
+			</div>
 			<div class="col-auto">
 				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
 					<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
@@ -1664,14 +1581,15 @@
 			</div>
 			<div class="col">
 				<div class="row g-2">
-					<div class="col-md"><input type="text" class="form-control" disabled placeholder="What are some of the challenges of addressing global warming?">
+					<div class="col-md">
+						<input type="text" class="form-control" disabled placeholder="What are some of the challenges of addressing global warming?">
 						<div class="invalid-feedback">Error text</div>
 					</div>
 					<div class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
 						<div class="btn-group" role="group" aria-label="button group">
 							<button type="button" class="btn btn-outline-info ico ic-edit"></button>
 							<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-							<button type="button" class="btn btn-outline-info ico ic-chevron" data-bs-toggle="collapse" data-bs-target="#collapseItems2" aria-expanded="false" aria-controls="collapseItems2"></button>
+							<button type="button" class="btn btn-outline-info ico ic-chevron collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItems2" aria-expanded="false" aria-controls="collapseItems2"></button>
 						</div>
 					</div>
 				</div>
@@ -1680,16 +1598,14 @@
 	</div>
 	<!-- Question-item collapsed body-->
 	<div class="collapse" id="collapseItems2">
-		<div class="card card-body">
+		<div class="card card-body rounded-0 border-0 bg-body p-0">
 			<!-- Radiobutton group -->
 			<div class="qela-pad-l pe-3 py-4">
 				<div class="form-check form-check-inline me-5">
-					<input type="radio" class="form-check-input" id="Radio1#">
-					<label class="form-check-label" for="Radio1#">Single-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio5#"><label class="form-check-label" for="Radio5#">Single-choice questions</label>
 				</div>
 				<div class="form-check form-check-inline">
-					<input type="radio" class="form-check-input" id="Radio2#" checked>
-					<label class="form-check-label" for="Radio2#">Multiple-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio6#" checked><label class="form-check-label" for="Radio6#">Multiple-choice questions</label>
 				</div>
 			</div>
 			<!-- Labels -->
@@ -1701,107 +1617,20 @@
 			</div>
 			<!-- Answer-item-2 -->
 			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
+				<div class="row g-2 align-items-center">
+					<div class="col-auto d-none d-md-block" style="width: 24px;">
+						1
+					</div>
 					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
+						<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 					</div>
 					<div class="col">
 						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
+							<div class="col"><input type="text" class="form-control" placeholder="Placeholder">
 								<div class="invalid-feedback">Error text</div>
 							</div>
 							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
+								<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
 								<div class="form-check form-switch px-0 px-md-2">
 									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
 									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
@@ -1822,23 +1651,24 @@
 <div>
 	<!-- Question-item header-->
 	<div class="bg-body border-bottom p-3">
-		<div class="row g-2">
+		<div class="row g-2 align-items-center">
+			<div class="col-auto d-none d-md-block" style="width: 24px;">
+				1
+			</div>
 			<div class="col-auto">
-				<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-					<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-					<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-				</div>
+				<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 			</div>
 			<div class="col">
 				<div class="row g-2">
-					<div class="col-md"><input type="text" class="form-control is-invalid" placeholder="What are some of the challenges of addressing global warming?">
+					<div class="col-md">
+						<input type="text" class="form-control is-invalid" placeholder="What are some of the challenges of addressing global warming?">
 						<div class="invalid-feedback">Error text</div>
 					</div>
 					<div class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
 						<div class="btn-group" role="group" aria-label="button group">
 							<button type="button" class="btn btn-outline-info ico ic-edit"></button>
 							<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-							<button type="button" class="btn btn-outline-info ico ic-chevron" data-bs-toggle="collapse" data-bs-target="#collapseItems3" aria-expanded="false" aria-controls="collapseItems3"></button>
+							<button type="button" class="btn btn-outline-info ico ic-chevron collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItems3" aria-expanded="false" aria-controls="collapseItems3"></button>
 						</div>
 					</div>
 				</div>
@@ -1847,16 +1677,14 @@
 	</div>
 	<!-- Question-item collapsed body-->
 	<div class="collapse" id="collapseItems3">
-		<div class="card card-body">
+		<div class="card card-body rounded-0 border-0 bg-body p-0">
 			<!-- Radiobutton group -->
 			<div class="qela-pad-l pe-3 py-4">
 				<div class="form-check form-check-inline me-5">
-					<input type="radio" class="form-check-input" id="Radio7#">
-					<label class="form-check-label" for="Radio7#">Single-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio5#"><label class="form-check-label" for="Radio5#">Single-choice questions</label>
 				</div>
 				<div class="form-check form-check-inline">
-					<input type="radio" class="form-check-input" id="Radio8#" checked>
-					<label class="form-check-label" for="Radio8#">Multiple-choice questions</label>
+					<input type="radio" class="form-check-input" id="Radio6#" checked><label class="form-check-label" for="Radio6#">Multiple-choice questions</label>
 				</div>
 			</div>
 			<!-- Labels -->
@@ -1868,107 +1696,20 @@
 			</div>
 			<!-- Answer-item-2 -->
 			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
+				<div class="row g-2 align-items-center">
+					<div class="col-auto d-none d-md-block" style="width: 24px;">
+						1
+					</div>
 					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
+						<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
 					</div>
 					<div class="col">
 						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
+							<div class="col"><input type="text" class="form-control" placeholder="Placeholder">
 								<div class="invalid-feedback">Error text</div>
 							</div>
 							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
-								<div class="form-check form-switch px-0 px-md-2">
-									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
-									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Answer-item-2 -->
-			<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
-				<div class="row g-2">
-					<div class="col-auto">
-						<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-							<button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row g-1 g-md-2">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Placeholder">
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-								<div class="btn-group" role="group" aria-label="button group">
-									<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-								</div>
+								<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
 								<div class="form-check form-switch px-0 px-md-2">
 									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
 									<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
@@ -2020,6 +1761,34 @@
 				<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
 					<div class="btn-group" role="group" aria-label="button group">
 						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Map item checkpoint -->
+<div class="bg-body border-bottom px-3 py-2 qela-rounded-eb">
+	<div class="row g-2 align-items-center">
+		<div class="col-auto text-center">
+			<div style="width:42px;">2</div>
+		</div>
+		<div class="col">
+			<div class="row g-2">
+				<div class="col-lg-7">
+					<input type="text" class="form-control" placeholder="Placeholder">
+					<div class="invalid-feedback">Error text</div>
+				</div>
+				<div class="col-lg">
+					<div>
+						<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+					</div>
+					<div class="invalid-feedback">Error text</div>
+				</div>
+				<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
+					<div class="btn-group" role="group" aria-label="button group">
+						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+						<button type="button" class="btn btn-outline-info ico ic-edit"></button>
 					</div>
 				</div>
 			</div>
@@ -3118,6 +2887,19 @@
 <small class="tetx-info">Status: <span class="text-warning">Draft</span></small>
 <small class="tetx-info">Status: <span class="text-success">Published</span></small>
 <small class="tetx-info">Status: <span class="text-info-900">New</span></small>
+					<!-- FIX Toasts  -->
+<h2 class="h1 mt-4" id="h3Btn26">Toasts</h2>
+<div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<span class="me-2 ic-check-big bg-primary text-white"></span>
+		<strong class="me-auto">Checkpoint 1 added</strong>
+		<small class="text-info-600">11 mins ago</small>
+		<button type="button" class="btn-close small ic-cloze" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">
+		Hello, world! This is a toast message.
+	</div>
+</div>
 				</div>
 			</div>
 		</main>

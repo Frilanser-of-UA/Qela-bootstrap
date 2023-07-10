@@ -206,99 +206,105 @@
 								<!-- ==========Steps========== -->
 								<div class="tab-pane fade show active" id="steps-tab-pane" role="tabpanel" aria-labelledby="steps-tab" tabindex="0">
 									<!-- Subtitle -->
-									<div class="p-3 border-bottom qela-rounded-et">
-										<h2 class="h5">March checkpoints</h2>
+									<div class="p-3 border-bottom">
+										<h2 class="h5">1.Video to watch</h2>
 									</div>
-									<!-- Subtitle whith buttons-->
-									<div class="p-3 border-bottom d-flex align-items-center gap-2 flex-wrap">
-										<h2 class="h4 flex-grow-1">Is the pin in the right spot?<span class="text-info-600"> Drag the pin if it’s necessary</span></h2>
-										<div class="d-flex gap-1 ms-auto">
-											<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-											<button type="button" class="btn btn-primary ic-check-big ico-right">Primary</button>
+									<!-- input group -->
+									<div class="p-3 pb-6 border-bottom">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="inputText25" class="form-label">Link to share <span class="text-danger">*</span></label><button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+											</div>
+											<div class="input-group has-validation">
+												<button class="btn btn-input ic-link" type="button" id="button-addon23"></button>
+												<input type="text" class="form-control" placeholder="Placeholder" aria-label="Text" id="inputText25" aria-describedby="button-addon23">
+												<button class="btn btn-input" type="button" id="button-addon23">Paste</button>
+												<div class="invalid-feedback">Error text</div>
+											</div>
 										</div>
 									</div>
-									<!-- Subtitle h4 and map-->
-									<div class="position-relative">
-										<form class="px-3 pt-2 position-absolute w-100 top-0 start-0" role="search">
-											<div class="input-group">
-												<input type="search" class="form-control" placeholder="Search on a map" aria-label="Search" aria-describedby="button-search">
-												<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-											</div>
-										</form>
-										<!-- Изображение карты для примера -->
-										<img class="w-100" src="img/map.jpg" alt="">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom">
+										<h2 class="h5">2.Poll</h2>
 									</div>
-									<!-- Subtitle h4 and map-->
-									<div class="p-3">
-										<h3 class="h6">Checkpoins list</h3>
-									</div>
-									<!-- Labels -->
-									<div class="bg-body py-2 px-3 d-none d-xl-block border-bottom">
-										<div class="row gx-2">
-											<div class="form-label mb-0 col-lg-auto">Order</div>
-											<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
-												<span class="form-label">Official Address of checkpoint</span>
-												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
-											</div>
-											<div class="form-label mb-0 col-lg">Coordinates</div>
-											<div class="form-label mb-0 col-lg-auto">Actions</div>
-										</div>
-									</div>
-									<!-- Map item checkpoint -->
-									<div class="bg-body border-bottom px-3 py-2 qela-rounded-eb">
-										<div class="row g-2 align-items-center">
-											<div class="col-auto text-center">
-												<div style="width:42px;">2</div>
-											</div>
-											<div class="col">
-												<div class="row g-2">
-													<div class="col-lg-7">
-														<input type="text" class="form-control" placeholder="Placeholder">
-														<div class="invalid-feedback">Error text</div>
-													</div>
-													<div class="col-lg">
-														<div>
-															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+									<!-- Question-item -->
+									<div>
+										<!-- Question-item header-->
+										<div class="bg-body border-bottom p-3">
+											<div class="row g-2 align-items-center">
+												<div class="col-auto d-none d-md-block" style="width: 24px;">
+													1
+												</div>
+												<div class="col-auto">
+													<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+												</div>
+												<div class="col">
+													<div class="row g-2">
+														<div class="col-md"><input type="text" class="form-control" placeholder="What are some of the challenges of addressing global warming?">
+															<div class="invalid-feedback">Error text</div>
 														</div>
-														<div class="invalid-feedback">Error text</div>
-													</div>
-													<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-														<div class="btn-group" role="group" aria-label="button group">
-															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-															<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														<div class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
+															<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-edit"></button><button type="button" class="btn btn-outline-info ico ic-delete"></button><button type="button" class="btn btn-outline-info ico ic-chevron collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItems1" aria-expanded="false" aria-controls="collapseItems1"></button></div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<!-- Map item checkpoint -->
-									<div class="bg-body border-bottom px-3 py-2 pb-6 qela-rounded-eb">
-										<div class="row g-2 align-items-center">
-											<div class="col-auto text-center">
-												<div style="width:42px;">1</div>
-											</div>
-											<div class="col">
-												<div class="row g-2">
-													<div class="col-lg-7">
-														<input type="text" class="form-control" placeholder="Placeholder">
-														<div class="invalid-feedback">Error text</div>
+										<!-- Question-item collapsed body-->
+										<div class="collapse" id="collapseItems1">
+											<div class="card card-body rounded-0 border-0 bg-body p-0">
+												<!-- Radiobutton group -->
+												<div class="qela-pad-l pe-3 py-4">
+													<div class="form-check form-check-inline me-5">
+														<input type="radio" class="form-check-input" id="Radio5#"><label class="form-check-label" for="Radio5#">Single-choice questions</label>
 													</div>
-													<div class="col-lg">
-														<div>
-															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+													<div class="form-check form-check-inline">
+														<input type="radio" class="form-check-input" id="Radio6#" checked><label class="form-check-label" for="Radio6#">Multiple-choice questions</label>
+													</div>
+												</div>
+												<!-- Labels -->
+												<div class="bg-body qela-pad-l pt-2 pe-3 pb-1 border-bottom d-none d-md-block">
+													<div class="row gx-3">
+														<div class="form-label mb-0 col">Answer options</div>
+														<div class="form-label mb-0 col-auto me-2">Correct</div>
+													</div>
+												</div>
+												<!-- Answer-item-2 -->
+												<div class="bg-body border-bottom qela-pad-l py-2 pe-3">
+													<div class="row g-2 align-items-center">
+														<div class="col-auto d-none d-md-block" style="width: 24px;">
+															1
 														</div>
-														<div class="invalid-feedback">Error text</div>
-													</div>
-													<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-														<div class="btn-group" role="group" aria-label="button group">
-															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-															<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														<div class="col-auto">
+															<div class="btn-group-vertical" role="group" aria-label="Vertical button group"><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button type="button" class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button></div>
+														</div>
+														<div class="col">
+															<div class="row g-1 g-md-2">
+																<div class="col"><input type="text" class="form-control" placeholder="Placeholder">
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+																<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+																	<div class="btn-group" role="group" aria-label="button group"><button type="button" class="btn btn-outline-info ico ic-delete"></button></div>
+																	<div class="form-check form-switch px-0 px-md-2">
+																		<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked>
+																		<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
+												<!-- Button sm -->
+												<div class="bg-info-200 qela-pad-l py-2">
+													<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">Add answer</button>
+												</div>
 											</div>
 										</div>
+									</div>
+									<div class="p-3 qela-rounded-eb">
+										<button type="button" class="btn btn-secondary ic-plus ico-right">Add question</button>
 									</div>
 								</div>
 								<!-- ==========Awards========== -->

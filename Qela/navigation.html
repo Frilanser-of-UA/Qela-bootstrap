@@ -83,7 +83,13 @@
 									</button>
 								</li>
 								<li class="nav-item qela-nav-item" role="presentation" style="--step-diametr: 28px; --step-pad-start: 16px;">
-									<button class="nav-link border-0 success" id="targeting-tab" data-bs-toggle="tab" data-bs-target="#targeting-tab-pane" type="button" role="tab" aria-controls="targeting-tab-pane" aria-selected="false">
+									<button class="nav-link border-0 success" id="map-tab" data-bs-toggle="tab" data-bs-target="#map-tab-pane" type="button" role="tab" aria-controls="map-tab-pane" aria-selected="true">
+										<span class="line"></span>
+										<span class="link-name">Map</span>
+									</button>
+								</li>
+								<li class="nav-item qela-nav-item" role="presentation" style="--step-diametr: 28px; --step-pad-start: 16px;">
+									<button class="nav-link border-0" id="targeting-tab" data-bs-toggle="tab" data-bs-target="#targeting-tab-pane" type="button" role="tab" aria-controls="targeting-tab-pane" aria-selected="false">
 										<span class="line"></span>
 										<span class="link-name">Targeting</span>
 									</button>
@@ -225,6 +231,140 @@
 										</div>
 									</div>
 								</div>
+								<!-- ==========Map========== -->
+								<div class="tab-pane fade show active" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">March checkpoints</h2>
+									</div>
+									<!-- Subtitle whith buttons-->
+									<div class="p-3 border-bottom d-flex align-items-center gap-2 flex-wrap">
+										<h2 class="h4 flex-grow-1">Is the pin in the right spot?<span class="text-info-600"> Drag the pin if it’s necessary</span></h2>
+										<div class="d-flex gap-1 ms-auto">
+											<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+											<button type="button" class="btn btn-primary ic-check-big ico-right">Save checkpoint</button>
+										</div>
+									</div>
+									<!--  map-->
+									<div class="position-relative qela-map" aria-live="polite" aria-atomic="true">
+										<!-- map search -->
+										<form class="px-3 pt-2 position-absolute w-100 top-0 start-0" role="search">
+											<div class="input-group">
+												<input type="search" class="form-control" placeholder="Search on a map" aria-label="Search" aria-describedby="button-search">
+												<button class="btn btn-input ic-search" type="button" id="button-search"></button>
+											</div>
+										</form>
+										<!-- Кнопки карты -->
+										<div class="btn-group-vertical qela-btn-map" role="group" aria-label="Vertical button group">
+											<button type="button" class="btn border-0 ico ic-plus" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Zoom Out"></button>
+											<button type="button" class="btn border-0 ico ic-minus" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Zoom In"></button>
+											<button type="button" class="btn border-0 ico ic-arrow-autofit-content" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Fit to all poins"></button>
+										</div>
+										<!-- Изображение карты для примера -->
+										<div class="qela-ibg h-100">
+											<img class="w-100" src="img/map.jpg" alt="">
+										</div>
+										<!-- Toast -->
+										<div class="toast-container toast-container p-3 bottom-0 start-50 translate-middle-x">
+											<div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
+												<div class="toast-header">
+													<span class="me-2 ic-check-big bg-primary text-white"></span>
+													<strong class="me-auto">Checkpoint 1 added</strong>
+													<small class="text-info-600">11 mins ago</small>
+													<button type="button" class="btn-close small ic-cloze" data-bs-dismiss="toast" aria-label="Close"></button>
+												</div>
+												<div class="toast-body">
+													Hello, world! This is a toast message.
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Itam Coordinates -->
+									<div class="px-3 py-2 bg-info-200">
+										<div class="row gx-4 gy-2">
+											<div class="col-lg-6">
+												<span class="text-info-600 pe-1"><small>Address:</small></span>
+												<span class="text-info-900"><small>Shovkovychna St, 24, Kyiv, 02000</small></span>
+											</div>
+											<div class="col-lg-6">
+												<span class="text-info-600 pe-1"><small>Coordinates:</small></span>
+												<span class="text-info-900"><small>Lng: -0.0921766494496712 Lat: 51.50160440542524</small></span>
+											</div>
+										</div>
+									</div>
+									<!-- Subtitle h4 and map-->
+									<div class="p-3">
+										<h3 class="h6">Checkpoins list</h3>
+									</div>
+									<!-- Labels -->
+									<div class="bg-body py-2 px-3 d-none d-xl-block border-bottom">
+										<div class="row gx-2">
+											<div class="form-label mb-0 col-lg-auto">Order</div>
+											<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
+												<span class="form-label">Official Address of checkpoint</span>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
+											</div>
+											<div class="form-label mb-0 col-lg">Coordinates</div>
+											<div class="form-label mb-0 col-lg-auto">Actions</div>
+										</div>
+									</div>
+									<!-- Map item checkpoint -->
+									<div class="bg-body border-bottom px-3 py-2 qela-rounded-eb">
+										<div class="row g-2 align-items-center">
+											<div class="col-auto text-center">
+												<div style="width:42px;">2</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-lg-7">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-lg">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+															<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Map item checkpoint -->
+									<div class="bg-body border-bottom px-3 py-2 pb-6 qela-rounded-eb">
+										<div class="row g-2 align-items-center">
+											<div class="col-auto text-center">
+												<div style="width:42px;">1</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-lg-7">
+														<input type="text" class="form-control" placeholder="Placeholder">
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-lg">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+															<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 								<!-- ==========Targeting========== -->
 								<div class="tab-pane fade" id="targeting-tab-pane" role="tabpanel" aria-labelledby="targeting-tab" tabindex="0">
 									<!-- Subtitle -->
@@ -233,7 +373,7 @@
 									</div>
 								</div>
 								<!-- ==========Conditions========== -->
-								<div class="tab-pane fade active show row g-0" id="conditions-tab-pane" role="tabpanel" aria-labelledby="conditions-tab" tabindex="0">
+								<div class="tab-pane fade row g-0" id="conditions-tab-pane" role="tabpanel" aria-labelledby="conditions-tab" tabindex="0">
 									<!-- Subtitle -->
 									<div class="p-3 col-12 border-bottom qela-rounded-et">
 										<h2 class="h5">Quests QR Code</h2>
