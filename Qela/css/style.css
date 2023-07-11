@@ -13590,6 +13590,7 @@ textarea.form-control-lg {
   padding: var(--step-pad-start) 48px 16px 16px;
   border-radius: 0;
   background-color: #fff;
+  margin-bottom: 0;
 }
 .qela-nav-item .nav-link::before {
   content: counter(step);
@@ -13932,7 +13933,7 @@ textarea.form-control-lg {
   margin-left: -10px;
 }
 
-.qela-preview {
+.qela-previews {
   width: var(--img-size);
   height: var(--img-size);
   flex: 0 0 var(--img-size);
@@ -13943,14 +13944,14 @@ textarea.form-control-lg {
   font-weight: 500;
   transition: transform 0.3s ease-out 0s;
 }
-.qela-preview:not(:last-child) {
+.qela-previews:not(:last-child) {
   margin-right: 2px;
 }
 @media (any-hover: hover) {
-  .qela-preview:hover:not(.qela-empty, .img) {
+  .qela-previews:hover:not(.qela-empty, .img) {
     transform: translateY(-5px);
   }
-  .qela-preview:hover.qela-empty {
+  .qela-previews:hover.qela-empty {
     background-color: #eae9ff;
     border-color: #978fff;
   }
