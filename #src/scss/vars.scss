@@ -410,34 +410,33 @@ $form-range-thumb-transition: background-color .15s ease-in-out, border-color .1
 // scss-docs-start dropdown-variables
 // $dropdown-link-active-color: $black;
 // $dropdown-link-active-bg: transparent;
-// $dropdown-item-padding-y: $spacer * .25;
-// $dropdown-item-padding-x: $spacer * 0;
+$dropdown-item-padding-y: $spacer * .25;
+$dropdown-item-padding-x: $spacer;
 $dropdown-min-width: 15rem;
-$dropdown-padding-x: 0.75rem;
-$dropdown-padding-y: 0.75rem;
+$dropdown-padding-x: 0rem;
+$dropdown-padding-y: 0.5rem;
 // $dropdown-spacer: .125rem;
-$dropdown-font-size: $font-size-sm;
+$dropdown-font-size: $font-size-base;
 $dropdown-color: $black;
 // $dropdown-bg: $white;
-$dropdown-border-color: none;
-$dropdown-border-radius: $border-radius-lg;
+$dropdown-border-color: $info-400;
+$dropdown-border-radius: $border-radius;
 $dropdown-border-width: $border-width;
 // $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width);
-$dropdown-divider-bg: $gray-400;
+$dropdown-divider-bg: $info-400;
 // $dropdown-divider-margin-y: $spacer * .5;
 $dropdown-box-shadow: $box-shadow;
 
-$dropdown-link-color: $gray-600;
-$dropdown-link-hover-color: $black;
-$dropdown-link-hover-bg: none;
+$dropdown-link-color: $info-900;
+$dropdown-link-hover-color: $info-900;
+$dropdown-link-hover-bg: $info-200;
 
 $dropdown-link-active-color: $black;
 $dropdown-link-active-bg: none;
 
 $dropdown-link-disabled-color: $gray-200;
 
-$dropdown-item-padding-y: $spacer * .25;
-$dropdown-item-padding-x: $spacer * 0;
+
 
 $dropdown-header-color: $gray-600;
 $dropdown-header-padding-x: $dropdown-item-padding-x;
