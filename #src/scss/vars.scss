@@ -272,6 +272,18 @@ $table-group-separator-color: currentcolor;
 
 $table-caption-color: $red;
 // scss-docs-end table-variables
+// z-index start
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-offcanvas-backdrop: 1040;
+$zindex-offcanvas: 1045;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+$zindex-toast: 1085;
+$zindex-modal-backdrop: 1090;
+$zindex-modal: 1095;
+// z-index end
 // scss-docs-start input-btn-variables
 $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 1rem;

@@ -10756,7 +10756,7 @@ textarea.form-control-lg {
 }
 
 .modal {
-  --bs-modal-zindex: 1055;
+  --bs-modal-zindex: 1095;
   --bs-modal-width: 450px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
@@ -10843,7 +10843,7 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop {
-  --bs-backdrop-zindex: 1050;
+  --bs-backdrop-zindex: 1090;
   --bs-backdrop-bg: #000;
   --bs-backdrop-opacity: 0.3;
   position: fixed;
@@ -11144,7 +11144,7 @@ textarea.form-control-lg {
 }
 
 .toast {
-  --bs-toast-zindex: 1090;
+  --bs-toast-zindex: 1085;
   --bs-toast-padding-x: 0.75rem;
   --bs-toast-padding-y: 0.5rem;
   --bs-toast-spacing: 3rem;
@@ -11178,7 +11178,7 @@ textarea.form-control-lg {
 }
 
 .toast-container {
-  --bs-toast-zindex: 1090;
+  --bs-toast-zindex: 1085;
   position: absolute;
   z-index: var(--bs-toast-zindex);
   width: max-content;
@@ -13850,9 +13850,27 @@ textarea.form-control-lg {
   z-index: 2;
 }
 
-.qela-pin .badge {
-  position: relative;
-  z-index: 2;
+.qela-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.qela-pin small, .qela-pin .small {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 7px solid #E20000;
+  border-radius: 50%;
+}
+.qela-pin::after {
+  content: "";
+  height: 27px;
+  width: 3px;
+  background-color: #E20000;
 }
 
 .qela-triangl {
@@ -13869,21 +13887,8 @@ textarea.form-control-lg {
 }
 
 .qela-dot {
-  border: 1px solid #fff;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-top: 2px;
-  position: relative;
-  z-index: 2;
-}
-.qela-dot.large {
-  width: 32px;
-  height: 32px;
-  border-width: 2px;
-}
-.qela-dot.active {
-  border-width: 2px;
+  width: 9px;
+  height: 6px;
 }
 
 .qela-area {
@@ -13965,7 +13970,16 @@ textarea.form-control-lg {
 }
 
 .qela-qr {
-  padding-top: 100%;
+  width: 63.5%;
+  display: inline-block;
+}
+@media (max-width: 567.98px) {
+  .qela-qr {
+    width: 100%;
+  }
+}
+.qela-qr img {
+  width: 100%;
 }
 
 .qela-description {

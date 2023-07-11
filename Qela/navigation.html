@@ -232,7 +232,7 @@
 									</div>
 								</div>
 								<!-- ==========Map========== -->
-								<div class="tab-pane fade show active" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab" tabindex="0">
+								<div class="tab-pane fade" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab" tabindex="0">
 									<!-- Subtitle -->
 									<div class="p-3 border-bottom qela-rounded-et">
 										<h2 class="h5">March checkpoints</h2>
@@ -242,7 +242,8 @@
 										<h2 class="h4 flex-grow-1">Is the pin in the right spot?<span class="text-info-600"> Drag the pin if it’s necessary</span></h2>
 										<div class="d-flex gap-1 ms-auto">
 											<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-											<button type="button" class="btn btn-primary ic-check-big ico-right">Save checkpoint</button>
+											<!-- modal btn -->
+											<button type="button" class="btn btn-primary ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modal-map">Save checkpoint</button>
 										</div>
 									</div>
 									<!--  map-->
@@ -275,6 +276,60 @@
 												</div>
 												<div class="toast-body">
 													Hello, world! This is a toast message.
+												</div>
+											</div>
+										</div>
+										<!-- Modal lg map-->
+										<div class="modal fade" id="modal-map" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+											<div class="modal-dialog modal-lg modal-dialog-centered">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h1 class="modal-title fs-5" id="exampleModalLabel">Add more info</h1>
+														<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body bg-body">
+														<!-- text field -->
+														<div class="pb-3">
+															<div class="d-flex justify-content-between gap-1">
+																<div class="d-flex align-items-start gap-1">
+																	<label for="inputText1" class="form-label">Official Address of checkpoint</label>
+																	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet"></button>
+																</div>
+															</div>
+															<input type="text" class="form-control" id="inputText1" placeholder="Placeholder">
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<!-- alert -->
+														<div class="pb-6">
+															<div class="alert alert-info qela-alert p-3 fade show" role="alert">
+																<p> ☝️Official Address of checkpoint </p>
+																<p class="m-0"><small>Displayed to users on quest Quest conditions screen lake official recognizable name of location</small></p>
+															</div>
+														</div>
+														<!-- select -->
+														<div class="pb-3">
+															<div class="d-flex justify-content-between gap-1">
+																<div class="d-flex align-items-start gap-1">
+																	<label class="form-label">Radius</label>
+																	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+																</div>
+															</div>
+															<div>
+																<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+															</div>
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<!-- alert -->
+														<div>
+															<div class="alert alert-info qela-alert p-3 fade show" role="alert">
+																<p>☝️Radius</p>
+																<p class="m-0"><small>Radius of area where checkin in is available for user</small></p>
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-primary">Save</button>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -376,14 +431,14 @@
 									</div>
 								</div>
 								<!-- ==========Conditions========== -->
-								<div class="tab-pane fade row g-0" id="conditions-tab-pane" role="tabpanel" aria-labelledby="conditions-tab" tabindex="0">
+								<div class="tab-pane fade show active row g-0" id="conditions-tab-pane" role="tabpanel" aria-labelledby="conditions-tab" tabindex="0">
 									<!-- Subtitle -->
-									<div class="p-3 col-12 border-bottom qela-rounded-et">
+									<div class="p-3 border-bottom qela-rounded-et">
 										<h2 class="h5">Quests QR Code</h2>
 									</div>
-									<div class="col-sm-10 mx-auto">
+									<div class="col-sm-10 mx-auto p-3 pb-5">
 										<!--Input name -->
-										<div class="pt-4 px-3">
+										<div class="pt-4">
 											<div class="d-flex justify-content-between gap-1">
 												<div class="d-flex align-items-start gap-1">
 													<label for="inputText12" class="form-label">Supervisor name<span class="text-danger">*</span></label>
@@ -395,7 +450,7 @@
 											<div class="invalid-feedback">Error text</div>
 										</div>
 										<!--Input name -->
-										<div class="pt-4 px-3">
+										<div class="pt-4">
 											<div class="d-flex justify-content-between gap-1">
 												<div class="d-flex align-items-start gap-1">
 													<label for="inputNum" class="form-label">Contact number<span class="text-danger">*</span></label>
@@ -407,26 +462,20 @@
 											<div class="invalid-feedback">Error text</div>
 										</div>
 										<!-- QR-code -->
-										<div class="pt-6 px-3 pb-5">
-											<div class="pt-3">
-												<p>This QR code to check users activities. Supervisor have to provide it to Users after they finish the quest.</p>
-												<div class="row h-100 g-3">
-													<div class="col-sm-6 pt-4 px-3 pb-0 pb-sm-5">
-														<div class="text-info-900 text-center">Show QR Code to users </div>
-														<div class="p-4">
-															<div class="qela-ibg qela-qr">
-																<img src="img/QRCode.svg" alt="QR Code">
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-6 p-3 bg-info-200 rounded">
-														<div class="d-flex flex-column justify-content-center align-items-center gap-2 h-100">
-															<button type="button" class="btn btn-secondary ic-print ico-right">Print</button>
-															<div class="text-center">Print QR Code if it’s necessary</div>
-														</div>
-													</div>
+										<div class="pt-6">
+											<div class="pt-4 px-3 pb-6 bg-white rounded-2 text-center">
+												<h2 class="py-6 h4">
+													Show this unique QR code to quest’s volunteers to verify their participation 👇
+												</h2>
+												<div class=" qela-qr p-4">
+													<img src="img/QRCode.svg" alt="QR Code">
 												</div>
 											</div>
+										</div>
+										<!-- buttons -->
+										<div class="pt-4 d-flex gap-1 justify-content-center flex-wrap">
+											<button type="button" class="btn btn-secondary ic-print ico-right">Print QR Code</button>
+											<button type="button" class="btn btn-secondary ic-download ico-right">Download QR Code</button>
 										</div>
 									</div>
 								</div>

@@ -74,5 +74,14 @@
 }
 
 .qela-qr {
-	padding-top: 100%;
+	width: 63.5%;
+	display: inline-block;
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+	}
+
+	img {
+		width: 100%;
+	}
 }
