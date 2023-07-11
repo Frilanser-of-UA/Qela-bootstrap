@@ -1,4 +1,6 @@
 ================= Дата 11.07.23 ======================================
+-- Правки в components.html modals 
+-- Правки в navigation.html добавлен скролл tab-content
 -- Правки в navigation.html во вкладке condinions
 -- Переработан компонент Qr-code
 -- Переработаны компоненты Items, Dropdown

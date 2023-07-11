@@ -10756,7 +10756,7 @@ textarea.form-control-lg {
 }
 
 .modal {
-  --bs-modal-zindex: 1095;
+  --bs-modal-zindex: 1090;
   --bs-modal-width: 450px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
@@ -10843,7 +10843,7 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop {
-  --bs-backdrop-zindex: 1090;
+  --bs-backdrop-zindex: 1085;
   --bs-backdrop-bg: #000;
   --bs-backdrop-opacity: 0.3;
   position: fixed;
@@ -11144,7 +11144,7 @@ textarea.form-control-lg {
 }
 
 .toast {
-  --bs-toast-zindex: 1085;
+  --bs-toast-zindex: 1080;
   --bs-toast-padding-x: 0.75rem;
   --bs-toast-padding-y: 0.5rem;
   --bs-toast-spacing: 3rem;
@@ -11178,7 +11178,7 @@ textarea.form-control-lg {
 }
 
 .toast-container {
-  --bs-toast-zindex: 1085;
+  --bs-toast-zindex: 1080;
   position: absolute;
   z-index: var(--bs-toast-zindex);
   width: max-content;
@@ -11211,7 +11211,7 @@ textarea.form-control-lg {
 }
 
 .tooltip {
-  --bs-tooltip-zindex: 1080;
+  --bs-tooltip-zindex: 1095;
   --bs-tooltip-max-width: 180px;
   --bs-tooltip-padding-x: 0.625rem;
   --bs-tooltip-padding-y: 0.75rem;
@@ -12213,7 +12213,8 @@ textarea.form-control-lg {
 
 /* Свои глобальние стили (qela-) */
 .qela-body {
-  padding-top: 56px;
+  --body-pad-top: 56px;
+  padding-top: var(--body-pad-top);
   padding-left: 80px;
   min-height: 100vh;
 }
@@ -12275,6 +12276,24 @@ textarea.form-control-lg {
 
 .word-break {
   word-break: break-word !important;
+}
+
+.h-100vh {
+  height: calc(100vh - (var(--body-pad-top) + 1rem + 1rem));
+}
+@media (max-width: 990.98px) {
+  .h-100vh {
+    height: auto;
+  }
+}
+
+.qela-scroll {
+  overflow: hidden;
+}
+@media (max-width: 990.98px) {
+  .qela-scroll {
+    overflow: auto;
+  }
 }
 
 .btn {

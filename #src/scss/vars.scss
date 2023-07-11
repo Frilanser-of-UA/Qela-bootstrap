@@ -279,10 +279,11 @@ $zindex-fixed: 1030;
 $zindex-offcanvas-backdrop: 1040;
 $zindex-offcanvas: 1045;
 $zindex-popover: 1070;
-$zindex-tooltip: 1080;
-$zindex-toast: 1085;
-$zindex-modal-backdrop: 1090;
-$zindex-modal: 1095;
+$zindex-toast: 1080;
+$zindex-modal-backdrop: 1085;
+$zindex-modal: 1090;
+$zindex-tooltip: 1095;
+
 // z-index end
 // scss-docs-start input-btn-variables
 $input-btn-padding-y: 0.5rem;

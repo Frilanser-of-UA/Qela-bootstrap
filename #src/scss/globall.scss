@@ -1,5 +1,6 @@
 .qela-body {
-	padding-top: 56px;
+	--body-pad-top: 56px;
+	padding-top: var(--body-pad-top);
 	padding-left: 80px;
 	min-height: 100vh;
 
@@ -58,4 +59,20 @@
 
 .word-break {
 	word-break: break-word !important;
+}
+
+.h-100vh {
+	height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
+
+	@media (max-width:($md2+px)) {
+		height: auto;
+	}
+}
+
+.qela-scroll {
+	overflow: hidden;
+
+	@media (max-width:($md2+px)) {
+		overflow: auto;
+	}
 }
