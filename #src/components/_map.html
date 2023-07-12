@@ -1,42 +1,29 @@
 <!-- FIX Buttons  -->
-<h2 class="h1 mt-4" id="h3Btn17">Map-pin</h2>
-<div class="d-flex gap-3">
-	<div class="d-flex flex-column align-items-center">
-		<span class="badge bg-secondary">Start</span>
-		<div class="qela-triangl secondary"></div>
-	</div>
-	<!--  -->
-	<div class="d-flex flex-column align-items-center">
-		<span class="badge bg-secondary">Start</span>
-		<div class="qela-triangl secondary"></div>
-		<div class="qela-dot bg-secondary"></div>
-	</div>
-	<!--  -->
-	<div class="d-flex flex-column align-items-center">
-		<span class="badge bg-secondary rounded-1">Start</span>
-		<div class="qela-triangl secondary"></div>
-		<div class="qela-dot bg-secondary large"></div>
-	</div>
-	<!--  -->
-	<div class="qela-dot bg-secondary"></div>
-</div>
-<div class="py-5 ms-5">
-	<div class="qela-pin d-inline-flex flex-column align-items-center">
-		<span class="badge bg-secondary">Start</span>
-		<div class="qela-triangl secondary"></div>
-		<div class="position-relative">
-			<div class="qela-dot bg-secondary active"></div>
-			<div class="qela-area secondary" style="--diameter:182px"></div>
+<h2 class="h1 mt-4" id="h3Btn17">Map-pin (active)</h2>
+<!-- С помощью класса актив пины анимировано появляються и кнему же привязан ховер-->
+<div class="d-flex flex-column align-items-start gap-6 ps-6">
+	<div class="qela-pin secondary active">
+		<div class="qela-pin__num">
+			<small>1</small>
+		</div>
+		<div class="qela-pin__dot ">
+			<div class="qela-pin__area" style="--diameter:85px"></div>
 		</div>
 	</div>
-</div>
-<div class="pt-5 ms-4">
-	<div class="qela-pin d-inline-flex flex-column align-items-center">
-		<span class="badge bg-secondary">Start</span>
-		<div class="qela-triangl secondary"></div>
-		<div class="position-relative">
-			<div class="qela-dot bg-secondary active"></div>
-			<div class="qela-area secondary" style="--diameter:54px"></div>
+	<div class="qela-pin danger active">
+		<div class="qela-pin__num">
+			<small>1</small>
+		</div>
+		<div class="qela-pin__dot">
+			<div class="qela-pin__area" style="--diameter:85px"></div>
+		</div>
+	</div>
+	<div class="qela-pin success active">
+		<div class="qela-pin__num">
+			<small>1</small>
+		</div>
+		<div class="qela-pin__dot">
+			<div class="qela-pin__area" style="--diameter:85px"></div>
 		</div>
 	</div>
 </div>

@@ -13870,47 +13870,124 @@ textarea.form-control-lg {
 }
 
 .qela-pin {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s;
+}
+.qela-pin.secondary .qela-pin__num small, .qela-pin.secondary .qela-pin__num .small {
+  border-color: #978fff;
+}
+.qela-pin.secondary .qela-pin__num::after {
+  background-color: #978fff;
+}
+.qela-pin.secondary .qela-pin__dot {
+  background-color: #978fff;
+}
+.qela-pin.secondary .qela-pin__area {
+  border: 2px solid #978fff;
+  background: rgba(151, 143, 255, 0.1);
+}
+.qela-pin.success .qela-pin__num small, .qela-pin.success .qela-pin__num .small {
+  border-color: #0F9178;
+}
+.qela-pin.success .qela-pin__num::after {
+  background-color: #0F9178;
+}
+.qela-pin.success .qela-pin__dot {
+  background-color: #0F9178;
+}
+.qela-pin.success .qela-pin__area {
+  border: 2px solid #0F9178;
+  background: rgba(15, 145, 120, 0.1);
+}
+.qela-pin.danger .qela-pin__num small, .qela-pin.danger .qela-pin__num .small {
+  border-color: #E20000;
+}
+.qela-pin.danger .qela-pin__num::after {
+  background-color: #E20000;
+}
+.qela-pin.danger .qela-pin__dot {
+  background-color: #E20000;
+}
+.qela-pin.danger .qela-pin__area {
+  border: 1px solid #E20000;
+  background: rgba(226, 0, 0, 0.1);
+}
+.qela-pin.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.qela-pin.active .qela-pin__num {
+  transform: translateY(0px);
+}
+.qela-pin.active.secondary .qela-pin__dot {
+  background-color: transparent;
+}
+.qela-pin.active.success .qela-pin__dot {
+  background-color: transparent;
+}
+.qela-pin.active.danger .qela-pin__dot {
+  background-color: transparent;
+}
+.qela-pin.active .qela-pin__area {
+  opacity: 1;
+}
+@media (any-hover: hover) {
+  .qela-pin.active:hover .qela-pin__num {
+    transform: translateY(-10px);
+  }
+  .qela-pin.active:hover.secondary .qela-pin__dot {
+    background-color: #978fff;
+  }
+  .qela-pin.active:hover.success .qela-pin__dot {
+    background-color: #0F9178;
+  }
+  .qela-pin.active:hover.danger .qela-pin__dot {
+    background-color: #E20000;
+  }
+  .qela-pin.active:hover .qela-pin__area {
+    opacity: 0;
+  }
+}
+.qela-pin__num {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease 0.1s;
+  transform: translateY(-15px);
 }
-.qela-pin small, .qela-pin .small {
+.qela-pin__num small, .qela-pin__num .small {
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
-  border: 7px solid #E20000;
+  border: 7px solid;
   border-radius: 50%;
 }
-.qela-pin::after {
+.qela-pin__num::after {
   content: "";
   height: 27px;
   width: 3px;
-  background-color: #E20000;
 }
-
-.qela-triangl {
-  width: 0;
-  height: 0;
-  border-left: 9.5px solid transparent;
-  border-right: 9.5px solid transparent;
-  border-top: 32px solid;
-  position: relative;
-  z-index: 2;
-}
-.qela-triangl.secondary {
-  border-top-color: #978fff;
-}
-
-.qela-dot {
+.qela-pin__dot {
   width: 9px;
   height: 6px;
+  border-radius: 3px;
+  position: relative;
+  transition: background-color 0.2s ease 0.1s;
+  background-color: transparent;
 }
-
-.qela-area {
+.qela-pin__area {
   width: var(--diameter);
   height: var(--diameter);
   border-radius: 50%;
@@ -13918,10 +13995,8 @@ textarea.form-control-lg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.qela-area.secondary {
-  border: 2px solid #978fff;
-  background: rgba(151, 143, 255, 0.1);
+  transition: opacity 0.2s ease 0.1s;
+  opacity: 0;
 }
 
 .qela-avatar {
