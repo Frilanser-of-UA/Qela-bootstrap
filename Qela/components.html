@@ -21,7 +21,7 @@
 			<aside class="fixed-top pt-2 d-lg-block overflow-auto d-none" style="width: 280px; height: 100vh;">
 				<a class="text-center text-decoration-none d-block h3 my-2" href="https://andreyfront.owlweb.com.ua/Qela/">Qela</a>
 				<div class="p-2">
-					<input type="search" class="form-control" id="search-nav" placeholder="Search">
+					<input type="search" class="form-control" id="search-nav" placeholder="Search component">
 				</div>
 				<nav class="ps-2">
 					<ol class="d-flex flex-column gap-2 --elastic">
@@ -51,6 +51,7 @@
 						<li><a href="#h3Btn24" class="text-black">qr-code</a></li>
 						<li><a href="#h3Btn25" class="text-black">status</a></li>
 						<li><a href="#h3Btn26" class="text-black">toasts</a></li>
+						<li><a href="#h3Btn27" class="text-black">dialog</a></li>
 					</ol>
 				</nav>
 			</aside>
@@ -372,6 +373,12 @@
 		<button type="button" class="btn border-0 ico ic-minus" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Zoom In"></button>
 		<button type="button" class="btn border-0 ico ic-arrow-autofit-content" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="qela-tooltip-black" data-bs-title="Fit to all poins"></button>
 	</div>
+</div>
+<!-- FIX Buttons custom  -->
+<h4 class="mt-4">Buttons custom</h4>
+<div class="d-flex gap-2 flex-wrap">
+	<button type="button" class="btn btn-secondary custom">Secondary</button>
+	<button type="button" class="btn btn-outline-dark custom">Dark</button>
 </div>
 					<!-- FIX Text field  -->
 <h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
@@ -2110,7 +2117,7 @@
 				</div>
 				<div class="modal-body bg-body p-0">
 					<div class="qela-tab">
-						<ul class="nav nav-tabs flex-md-column align-items-start py-1 p-md-3" id="myTab" role="tablist">
+						<ul class="nav nav-tabs flex-md-column align-items-start py-1 p-mb-3" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation"><button class="nav-link border-0 bg-body active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All</button></li>
 							<li class="nav-item" role="presentation"><button class="nav-link border-0 bg-body" id="GEO-tab" data-bs-toggle="tab" data-bs-target="#GEO-tab-pane" type="button" role="tab" aria-controls="GEO-tab-pane" aria-selected="true">GEO-location</button></li>
 							<li class="nav-item" role="presentation"><button class="nav-link border-0 bg-body" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity-tab-pane" type="button" role="tab" aria-controls="activity-tab-pane" aria-selected="false" tabindex="-1">Online activity</button></li>
@@ -2832,9 +2839,11 @@
 <div class="qela-previews bg-info-400 text-white rounded ic-img img" style="--img-size: 42px;"></div>
 					<!-- FIX Card  -->
 <h2 class="h1 mt-4" id="h3Btn23">Cards</h2>
+<!-- FIX Card modal -->
+<h4>Card modal</h4>
 <div class="d-flex flex-wrap gap-2">
 	<a href="#" class="card qela-card" style="width: 13.625rem;">
-		<div class="qela-ibg">
+		<div class="qela-ibg card-img-top">
 			<img src="img/table-img-1.jpg" class="card-img-top" alt="img">
 		</div>
 		<div class="card-body pt-2">
@@ -2855,6 +2864,30 @@
 			<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
 		</div>
 	</a>
+</div>
+<!-- FIX Card Verification -->
+<h4 class="mt-4">Card verification</h4>
+<div class="card p-3 border-0 rounded-0" style="width: 244px;">
+	<div class="form-check pe-2 mb-2">
+		<input type="checkbox" class="form-check-input" id="Check1">
+	</div>
+	<a href="#" class="qela-ibg qela-img1x1 ic-arrows-maximize">
+		<img src="img/img-ver2.jpg" alt="img">
+	</a>
+	<div class="card-body p-0 pt-2">
+		<div class=" d-flex align-items-center w-100">
+			<button type="button" class="btn btn-danger me-1 flex-grow-1">Decline</button>
+			<button type="button" class="btn btn-success ic-check-big ico-right flex-grow-1">Verify</button>
+		</div>
+		<div class="pt-3">
+			<div class="mb-1 h6">Босик Ждана</div>
+			<div class="text-info-600">example@gmail.com</div>
+		</div>
+		<div class="pt-3">
+			<div class="text-info-600"><small>20/20/2023 12:02:23</small></div>
+			<div class="text-info-600"><small>ID: 02344</small></div>
+		</div>
+	</div>
 </div>
 					<!-- QR-code -->
 <!-- FIX QR-code  -->
@@ -2883,6 +2916,52 @@
 	</div>
 	<div class="toast-body">
 		Hello, world! This is a toast message.
+	</div>
+</div>
+					<!-- FIX Dialog  -->
+<h2 class="h1 mt-4" id="h3Btn27">Dialog</h2>
+<!-- FIX Dialog header -->
+<h4 class="mt-4">Dialog header</h4>
+<h2 class="h4 pb-4 text-center">😃 You’ve almost finished</h2>
+<h2 class="h5 pb-3 text-center">😃 You’ve almost finished</h2>
+<!-- FIX Dialog text -->
+<h4 class="mt-4">Dialog text</h4>
+<p class="fs-5 text-center"><small>You will be able to publish your Campaign after adding at least one quest</small></p>
+<p class="text-center">You will be able to publish your Campaign after adding at least one quest</p>
+<!-- FIX Dialog item -->
+<h4 class="mt-4">Dialog item</h4>
+<div class="text-center">
+	<div class="d-inline-flex align-items-center gap-1">
+		<span>After publishing Your Quest well start:</span>
+		<span class="badge bg-info-200 p-1 text-info-900 fs-6">3 December at 3 PM </span>
+	</div>
+</div>
+<!-- FIX Dialog action -->
+<h4 class="mt-4">Dialog action</h4>
+<div class="pt-4 text-center">
+	<button type="button" class="btn btn-primary">Save as draft and continue</button>
+</div>
+<div class="d-flex flex-wrap gap-1">
+	<button type="button" class="btn btn-outline-dark custom">Attend an assembly</button>
+	<button type="button" class="btn btn-outline-dark custom">Vigils</button>
+	<button type="button" class="btn btn-outline-dark custom">Motorcades attendance</button>
+	<button type="button" class="btn btn-outline-dark custom">Rally attendance</button>
+	<button type="button" class="btn btn-secondary custom">View all Templates</button>
+</div>
+<!-- FIX Dialog -->
+<h4 class="mt-4">Dialog</h4>
+<div class="px-3 py-5 qela-rounder-12 border border-primary bg-white">
+	<h2 class="h4 pb-4 text-center">😃 You’ve almost finished</h2>
+	<p class="fs-5 text-center"><small>You will be able to publish your Campaign after adding at least one quest</small></p>
+	<div class="pt-4 text-center">
+		<button type="button" class="btn btn-primary">Save as draft and continue</button>
+	</div>
+</div>
+<div class="px-3 py-5 qela-rounder-12 border border-secondary bg-white">
+	<h2 class="h4 pb-4 text-center">😃 You’ve almost finished</h2>
+	<p class="fs-5 text-center"><small>You will be able to publish your Campaign after adding at least one quest</small></p>
+	<div class="pt-4 text-center">
+		<button type="button" class="btn btn-primary">Save as draft and continue</button>
 	</div>
 </div>
 				</div>

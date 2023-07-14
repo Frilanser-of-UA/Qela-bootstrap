@@ -38,6 +38,12 @@
 		padding-right: 8px;
 		flex-direction: row-reverse;
 	}
+
+	&.custom {
+		padding: 8px;
+		border-radius: 10px;
+		font-weight: 400;
+	}
 }
 
 .btn-sm {
@@ -319,6 +325,16 @@
 	&:active {
 		background-color: $info-200  !important;
 		border-color: $info-200  !important;
+	}
+}
+
+.btn-outline-dark {
+	&:hover {
+		background-color: $info-600;
+	}
+
+	&:active {
+		background-color: $info-600  !important;
 	}
 }
 

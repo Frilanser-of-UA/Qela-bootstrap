@@ -323,3 +323,16 @@
 		display: block;
 	}
 }
+
+.nav-item {
+	position: relative;
+
+	.qela-badge {
+		&.small {
+			position: absolute;
+			top: 0;
+			transform: translateY(-50%);
+			right: 6px;
+		}
+	}
+}

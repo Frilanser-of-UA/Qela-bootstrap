@@ -1,4 +1,16 @@
-<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<title>Quests master</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/vendors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="qela-body">
+	<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
 	<div class="container-fluid h-100 px-0">
 		<div class="row h-100 position-relative gx-2">
 			<!-- item whith title and button burger-->
@@ -6,7 +18,7 @@
 				<button class="qela-burger border-0 p-0">
 					<img src="img/burger.svg" width="24" height="40" alt="burger button">
 				</button>
-				<h1 class="h5 qela-clamp">@@title</h1>
+				<h1 class="h5 qela-clamp">Quests > Start</h1>
 			</div>
 			<div class="col-2 col-xl col-md-4 d-flex align-items-center gap-2 justify-content-end">
 				<!--FIX form search -->
@@ -166,3 +178,101 @@
 	</div>
 
 </header>
+	<div id="app" v-cloak>
+		<main>
+			<!-- =====================Список користувачів==================== -->
+			<div class="container-fluid">
+				<div class="row mb-3 mt-3">
+					<div class="col-12">
+						<div class="border pb-3 pt-md-4 mb-3 bg-white rounded-2">
+							<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="master-tab" data-bs-toggle="tab" data-bs-target="#master-tab-pane" type="button" role="tab" aria-controls="master-tab-pane" aria-selected="true">
+										Campaign master
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="quest-list-tab" data-bs-toggle="tab" data-bs-target="#quest-list-tab-pane" type="button" role="tab" aria-controls="quest-list-tab-pane" aria-selected="true">Quest list</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="campaigns-tab" data-bs-toggle="tab" data-bs-target="#campaigns-tab-pane" type="button" role="tab" aria-controls="campaigns-tab-pane" aria-selected="false">Campaign list</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="quest-chains-tab" data-bs-toggle="tab" data-bs-target="#quest-chains-tab-pane" type="button" role="tab" aria-controls="quest-chains-tab-pane" aria-selected="false">Quest Chain list</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="guide-tab" data-bs-toggle="tab" data-bs-target="#guide-tab-pane" type="button" role="tab" aria-controls="guide-tab-pane" aria-selected="false">Guide</button>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<!-- Campaign master -->
+								<div class="tab-pane fade show active" id="master-tab-pane" role="tabpanel" aria-labelledby="master-tab" tabindex="0">
+									Campaign master
+								</div>
+								<!-- Quest list -->
+								<div class="tab-pane fade " id="quest-list-tab-pane" role="tabpanel" aria-labelledby="quest-list-tab" tabindex="0">
+									Quest list
+								</div>
+								<!-- Campaign list -->
+								<div class="tab-pane fade" id="campaigns-tab-pane" role="tabpanel" aria-labelledby="campaigns-tab" tabindex="0">
+									Campaign list
+								</div>
+								<!-- Quest Chain list -->
+								<div class="tab-pane fade" id="quest-chains-tab-pane" role="tabpanel" aria-labelledby="quest-chains-tab" tabindex="0">
+									Quest Chain list
+								</div>
+								<!-- Guide -->
+								<div class="tab-pane fade" id="guide-tab-pane" role="tabpanel" aria-labelledby="guide-tab" tabindex="0">
+									Guide
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+	<script type="text/javascript">
+		let app = Vue.createApp({
+			components: {
+				"v-date-picker": VueDatePicker,
+				"v-multi-select": VueMultiselect.default
+			},
+			data() {
+				return {
+					date: [new Date(), new Date()],
+					value1: '',
+					value2: '',
+					value3: '',
+					value4: '',
+					options: [
+						'Пункт 1 sadafdf',
+						'Пункт 2',
+						'Пункт 3',
+						'Пункт 4',
+						'Пункт 1 assadafdf',
+						'Пункт 2sades',
+						'Пункт 3sd',
+						'Пункт 4sd'
+					]
+				}
+			},
+			methods: {
+				click() {
+					alert(1);
+					this.message += " clicked!";
+				}
+			}
+		});
+		console.dir(app);
+		app.mount('#app')
+	</script>
+	<!-- =========================== -->
+	<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
