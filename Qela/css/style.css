@@ -14029,6 +14029,12 @@ textarea.form-control-lg {
   opacity: 0;
 }
 
+.qela-line {
+  height: 4px;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
 .qela-avatar {
   font-size: 1.5rem;
   display: flex;
