@@ -14505,6 +14505,10 @@ header {
   background-color: #fff;
 }
 
+.qela-menu .qela-badge.small {
+  transform: translate(0%, 0%);
+}
+
 .qela-statistics {
   background-color: #fff;
   border-radius: 10px;
