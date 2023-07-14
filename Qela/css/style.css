@@ -13865,8 +13865,8 @@ textarea.form-control-lg {
 .nav-item .qela-badge.small {
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
-  right: 6px;
+  transform: translate(-100%, -50%);
+  left: calc(100% - 6px);
 }
 
 .tooltip-inner {
@@ -14218,6 +14218,78 @@ textarea.form-control-lg {
 .qelas-toast .toast-header [class^=ic-]::before,
 .qelas-toast .toast-header [class*=ic-]::before {
   font-size: 20px;
+}
+
+.qela-awards {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 75px;
+  min-width: 75px;
+}
+
+.qela-awards.red .qela-badge {
+  background-color: #EE6666;
+}
+
+.qela-awards.red .badge-text {
+  color: #EE6666;
+}
+
+.qela-awards.violet .qela-badge {
+  background-color: #988AC6;
+}
+
+.qela-awards.violet .badge-text {
+  color: #988AC6;
+}
+
+.qela-awards.green .qela-badge {
+  background-color: #6FBDAE;
+}
+
+.qela-awards.green .badge-text {
+  color: #6FBDAE;
+}
+
+.qela-awards.orange .qela-badge {
+  background-color: #DDA466;
+}
+
+.qela-awards.orange .badge-text {
+  color: #DDA466;
+}
+
+.qela-awards.lightgreen .qela-badge {
+  background-color: #75D182;
+}
+
+.qela-awards.lightgreen .badge-text {
+  color: #75D182;
+}
+
+.qela-awards.lightblue .qela-badge {
+  background-color: #74B9DF;
+}
+
+.qela-awards.lightblue .badge-text {
+  color: #74B9DF;
+}
+
+.qela-awards.blue .qela-badge {
+  background-color: #6E9ADA;
+}
+
+.qela-awards.blue .badge-text {
+  color: #6E9ADA;
+}
+
+.qela-awards.pink .qela-badge {
+  background-color: #DA6ECF;
+}
+
+.qela-awards.pink .badge-text {
+  color: #DA6ECF;
 }
 
 header {
