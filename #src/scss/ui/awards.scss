@@ -2,8 +2,6 @@
 	display: inline-flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 75px;
-	min-width: 75px;
 }
 
 .qela-awards.red .qela-badge {
@@ -68,4 +66,44 @@
 
 .qela-awards.pink .badge-text {
 	color: #DA6ECF;
+}
+
+.qela-telent {
+	display: flex;
+	padding: 8.5px 12px;
+	text-align: left;
+	border-radius: 8px;
+	color: $white;
+
+	&.red {
+		background: #FF8484;
+	}
+
+	&.violet {
+		background: #B191FF;
+	}
+
+	&.green {
+		background: #66D9C3;
+	}
+
+	&.orange {
+		background: #FFB966;
+	}
+
+	&.lightgreen {
+		background: #75D182;
+	}
+
+	&.lightblue {
+		background: #8CCAF4;
+	}
+
+	&.blue {
+		background: #7EABF3;
+	}
+
+	&.pink {
+		background: #F37EE7;
+	}
 }

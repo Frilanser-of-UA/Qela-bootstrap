@@ -68,7 +68,7 @@
 							<div class="w-100 qela-scroll">
 								<div class="tab-content d-flex flex-column w-100 h-100vh overflow-auto" id="myTabContent">
 									<!-- ==========General========== -->
-									<div class="tab-pane fade show active row g-0 flex-grow-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+									<div class="tab-pane fade  row g-0 flex-grow-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 										<div class="col-lg-10 mx-auto">
 											<!-- Badge -->
 											<div class="px-3 pt-5 d-flex flex-wrap gap-1">
@@ -409,10 +409,246 @@
 										</div>
 									</div>
 									<!-- ==========Awards========== -->
-									<div class="tab-pane flex-grow-1 fade" id="awards-tab-pane" role="tabpanel" aria-labelledby="awards-tab" tabindex="0">
+									<div class="tab-pane flex-grow-1 fade show active" id="awards-tab-pane" role="tabpanel" aria-labelledby="awards-tab" tabindex="0">
 										<!-- Subtitle -->
 										<div class="p-3 border-bottom qela-rounded-et">
 											<h2 class="h5">Awards</h2>
+										</div>
+										<div class="col-lg-10 p-3 mx-auto">
+											<!-- label -->
+											<div class="pt-4 pb-2">
+												<div class="pb-2">Vote weight</div>
+											</div>
+											<!-- item -->
+											<div class="bg-primary-100 border-primary border p-3 qela-rounder-12">
+												<div class="row g-3 g-lg-4">
+													<div class="col-xl-6">
+														<div>
+															<img src="img/orden-red.svg" width="46" height="46" alt="">
+														</div>
+														<div class="row">
+															<div class="col-xl-8">
+																<div class="d-flex justify-content-between gap-1">
+																	<div class="d-flex align-items-start gap-1">
+																		<label for="inputNumber" class="form-label">Vote weight value <span class="text-danger">*</span></label>
+																	</div>
+																</div>
+																<input type="number" class="form-control text-end" id="inputNumber" placeholder="0">
+																<div class="invalid-feedback">Error text</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="m-0">Vote weight is the sum of influence points, determining the supporter's contribution to the organization's development and achieving its goal. After registration, it equals 1, but it can grow to infinity with participation in quests and campaigns.</p>
+													</div>
+												</div>
+											</div>
+											<!-- Talents -->
+											<div class="pt-6 pb-2">
+												<div class="pb-2">Vote weight</div>
+											</div>
+											<!-- text -->
+											<p>Qela allows you to influence the organization's activities and develop the talents necessary for every active member of civil society. The quests you go through in Qela are aimed at acquiring one of those skills:</p>
+											<!-- awards item -->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent red">Fundraising</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item violet-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent violet">Recruiting</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item green-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent green">Endurance</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item orange-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent orange">Eloquence</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item lightgreen-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent lightgreen">Determination</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item lightblue-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent lightblue">Originality</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item blue-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent blue">Management </div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- awards item pink-->
+											<div class="py-3 border-bottom">
+												<div class="row g-4">
+													<div class="col-xl-6">
+														<div class="row g-2">
+															<div class="col-sm-6">
+																<div class="qela-telent pink">Savvy</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="input-group has-validation">
+																	<button class="btn btn-outline-light btn-input ico-right ic-minus" type="button" id="button-addon3"></button>
+																	<input type="number" class="form-control text-end" placeholder="0" aria-label="Text" id="inputNumber2" aria-describedby="button-addon3">
+																	<button class="btn btn-outline-light btn-input ico-right ic-plus" type="button" id="button-addon3"></button>
+																	<div class="invalid-feedback">Error text</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xl-6">
+														<p class="mb-0">
+															Fundraising — the ability to attract material resources for the activities of the organization
+														</p>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<!-- ==========Notifications========== -->
