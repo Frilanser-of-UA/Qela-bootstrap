@@ -29,6 +29,12 @@
 	height: auto;
 }
 
+.qela-clamp3 {
+	-webkit-line-clamp: 3;
+	white-space: normal;
+	display: -webkit-box;
+}
+
 .qela-pad-r {
 	padding-right: 65px;
 
