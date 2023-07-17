@@ -68,7 +68,7 @@
 							<div class="w-100 qela-scroll">
 								<div class="tab-content d-flex flex-column w-100 h-100vh overflow-auto" id="myTabContent">
 									<!-- ==========General========== -->
-									<div class="tab-pane fade show active row g-0 flex-grow-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+									<div class="tab-pane fade  row g-0 flex-grow-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 										<div class="col-lg-10 mx-auto">
 											<!-- Badge -->
 											<div class="px-3 pt-5 d-flex flex-wrap gap-1">
@@ -171,7 +171,7 @@
 										</div>
 									</div>
 									<!-- ==========Map========== -->
-									<div class="tab-pane flex-grow-1 fade" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab" tabindex="0">
+									<div class="tab-pane flex-grow-1 fade show active" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab" tabindex="0">
 										<!-- Subtitle -->
 										<div class="p-3 border-bottom qela-rounded-et">
 											<h2 class="h5">March checkpoints</h2>
@@ -290,79 +290,75 @@
 										<div class="p-3">
 											<h3 class="h6">Checkpoins list</h3>
 										</div>
-										<!-- Labels -->
-										<div class="bg-body py-2 px-3 d-none d-xl-block border-bottom">
-											<div class="row gx-2">
-												<div class="form-label mb-0 col-lg-auto">Order</div>
-												<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
-													<span class="form-label">Official Address of checkpoint</span>
-													<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
-												</div>
-												<div class="form-label mb-0 col-lg d-flex align-items-start gap-1">
-													<span class="form-label">Radius</span>
-													<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
-												</div>
-												<div class="form-label mb-0 col-lg-auto">Actions</div>
-											</div>
-										</div>
-										<!-- Map item checkpoint -->
-										<div class="bg-body border-bottom px-3 py-2">
-											<div class="row g-2 align-items-md-baseline">
-												<div class="col-auto text-center">
-													<div style="width:42px;">2</div>
-												</div>
-												<div class="col">
-													<div class="row g-2">
-														<div class="col-lg-7">
-															<input type="text" class="form-control" placeholder="Placeholder">
-															<div class="invalid-feedback">Error text</div>
-														</div>
-														<div class="col-lg">
-															<div>
-																<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+										<!-- Map table -->
+										<div class="table-responsive table-qela">
+											<table class="table table-hover">
+												<thead class="table-light">
+													<tr>
+														<th width="40px" scope="col">
+															<div class="text-info-600 fs-6 fw-normal">Order</div>
+														</th>
+														<th scope="col">
+															<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
+																<span class="text-info-600 fs-6 fw-normal">Official Address of checkpoint</span>
+																<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
 															</div>
-															<div class="invalid-feedback">Error text</div>
-														</div>
-														<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-															<div class="btn-group" role="group" aria-label="button group">
-																<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-																<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														</th>
+														<th scope="col">
+															<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
+																<span class="text-info-600 fs-6 fw-normal">Radius</span>
+																<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
 															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- Map item checkpoint -->
-										<div class="bg-body px-3 py-2 pb-6 qela-rounded-eb">
-											<div class="row g-2 align-items-md-baseline">
-												<div class="col-auto text-center">
-													<div style="width:42px;">1</div>
-												</div>
-												<div class="col">
-													<div class="row g-2">
-														<div class="col-lg-7">
-															<input type="text" class="form-control" placeholder="Placeholder">
-															<div class="invalid-feedback">Error text</div>
-														</div>
-														<div class="col-lg">
-															<div>
-																<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+														</th>
+														<th class="text-end" scope="col">
+															<div class="text-info-600 fs-6 fw-normal">Actions</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody class="bg-white">
+													<tr>
+														<td class="text-end">
+															1
+														</td>
+														<td>
+															Shovkovychna St, 24, Kyiv
+														</td>
+														<td>
+															300m
+														</td>
+														<td>
+															<div class="text-end">
+																<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																	<button type="button" class="btn btn-light ico ic-delete"></button>
+																	<button type="button" class="btn btn-light ico ic-edit"></button>
+																</div>
 															</div>
-															<div class="invalid-feedback">Error text</div>
-														</div>
-														<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-															<div class="btn-group" role="group" aria-label="button group">
-																<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-																<button type="button" class="btn btn-outline-info ico ic-edit"></button>
+														</td>
+													</tr>
+													<tr>
+														<td class="text-end">
+															1
+														</td>
+														<td>
+															Shovkovychna St, 24, Kyiv
+														</td>
+														<td>
+															300m
+														</td>
+														<td>
+															<div class="text-end">
+																<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																	<button type="button" class="btn btn-light ico ic-delete"></button>
+																	<button type="button" class="btn btn-light ico ic-edit"></button>
+																</div>
 															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
 										<!-- tetx non items -->
-										<p class="m-0 px-4 py-2 text-center text-info-900">There is no any checkpoints yet</p>
+										<p class="m-0 px-2 py-4 text-center text-info-900">There is no any checkpoints yet</p>
 									</div>
 									<!-- ==========Targeting========== -->
 									<div class="tab-pane flex-grow-1 fade" id="targeting-tab-pane" role="tabpanel" aria-labelledby="targeting-tab" tabindex="0">
