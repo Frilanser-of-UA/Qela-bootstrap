@@ -19,6 +19,7 @@
 
 	&.is-invalid {
 		background-image: none;
+		padding-right: 1rem;
 
 		&:hover {
 			border-color: $danger;

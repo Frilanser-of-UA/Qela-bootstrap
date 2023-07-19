@@ -80,6 +80,12 @@
 	&:active {
 		color: $white  !important;
 	}
+
+	&.custom {
+		&:hover {
+			background-color: $secondary-600;
+		}
+	}
 }
 
 .btn-success {
@@ -340,6 +346,21 @@
 
 	&:active {
 		background-color: $info-600  !important;
+	}
+
+	&.custom {
+		background-color: transparent;
+
+		&:hover {
+			border-radius: 10px;
+			border-color: rgba(33, 37, 41, 0.20);
+			background-color: transparent;
+			color: $info-900;
+		}
+
+		&:active {
+			background-color: transparent !important;
+		}
 	}
 }
 

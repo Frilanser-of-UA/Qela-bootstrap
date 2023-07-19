@@ -22,4 +22,17 @@
 	p {
 		font-size: 1.125rem;
 	}
+
+	.qela-list {
+		p {
+			font-size: 1rem;
+			text-align: left;
+		}
+
+		.list-group-item {
+			&:not(:last-child) {
+				margin-bottom: 0.25rem;
+			}
+		}
+	}
 }
