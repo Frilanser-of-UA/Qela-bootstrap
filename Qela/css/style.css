@@ -12295,7 +12295,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.qela-left {
+.qela-right {
   background-color: #f8f9fa;
   height: 100%;
   max-height: 100vh;
@@ -12303,42 +12303,42 @@ body {
   overflow: auto;
 }
 @media (max-width: 990.98px) {
-  .qela-left {
+  .qela-right {
     border-bottom-left-radius: 12px;
     max-height: none;
   }
 }
 @media (min-width: 990.98px) {
-  .qela-left {
+  .qela-right {
     border-left: 1px solid #ced4da;
   }
 }
-.qela-left .qela-actions {
+.qela-right .qela-actions {
   padding: 1rem;
 }
 @media (min-width: 990.98px) {
-  .qela-left .qela-actions {
+  .qela-right .qela-actions {
     border-bottom: 1px solid #ced4da;
   }
 }
-.qela-left .typography {
+.qela-right .typography {
   padding: 1.5rem 1rem;
 }
 @media (max-width: 990.98px) {
-  .qela-left .typography {
+  .qela-right .typography {
     padding: 0.5rem 1rem;
   }
 }
-.qela-left .typography p {
+.qela-right .typography p {
   margin-bottom: 0;
 }
-.qela-left .typography h2, .qela-left .typography .h2 {
+.qela-right .typography h2, .qela-right .typography .h2 {
   padding: 2rem 0 1rem 0;
   color: #ced4da;
   font-size: 1.5em;
 }
 @media (max-width: 990.98px) {
-  .qela-left .typography h2, .qela-left .typography .h2 {
+  .qela-right .typography h2, .qela-right .typography .h2 {
     padding: 1rem 0 0.5rem 0;
   }
 }
