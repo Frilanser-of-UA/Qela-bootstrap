@@ -1,0 +1,95 @@
+.qela-list {
+	&.no-outline {
+		.list-group-item {
+			border: none;
+		}
+	}
+
+	.list-group-item {
+		border-radius: 0.5rem;
+		padding: 1rem 0.5rem 1rem 1rem;
+		display: flex;
+		align-items: center;
+		border-color: $info-400;
+		position: relative;
+
+
+		&+.list-group-item {
+			border-top-width: 1px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+
+		&>*:not(:last-child) {
+			margin-right: 1rem;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				.btns {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+
+		.qela-clamp {
+			-webkit-line-clamp: 2;
+			white-space: normal;
+			display: -webkit-box;
+			margin-bottom: 0;
+		}
+
+		.btns {
+			display: flex;
+			align-items: center;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s;
+
+			.btn {
+				&:not(:last-child) {
+					margin-left: 2px;
+				}
+			}
+		}
+
+		.badge {
+			position: absolute;
+			right: 10px;
+			top: -5px;
+		}
+	}
+}
+
+
+.qela-chain {
+	background-color: $white;
+	border-radius: 12px;
+	border: 1px solid $info-400;
+	padding: 0.5rem;
+	padding-top: 0;
+
+	hr {
+		margin: 0 -0.5rem;
+	}
+
+	.qela-actions {
+		margin-left: 0.5rem;
+		padding-top: 0.5rem;
+
+		h2 {
+			font-size: 1rem;
+		}
+	}
+
+	.qela-toolbar {
+		margin-bottom: 0.5rem;
+	}
+
+	.qela-list .list-group-item:not(:last-child) {
+		margin-bottom: 0;
+	}
+}

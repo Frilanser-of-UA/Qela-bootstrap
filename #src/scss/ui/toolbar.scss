@@ -1,0 +1,34 @@
+.qela-toolbar {
+	padding: 0.5rem;
+	padding-left: 1rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.5rem;
+	border: 1px solid $info-400;
+	background: $white;
+
+	.form-check {
+		margin-right: 0.5rem;
+	}
+
+	.form-check-input {
+		margin-right: 1rem;
+	}
+
+	.form-check-label {
+		color: $info-900;
+		font-size: 16px;
+
+	}
+
+	.btn {
+		&:not(:last-child) {
+			margin-right: 0.25rem;
+		}
+	}
+
+	&.no-outline {
+		border: none;
+		background: $body-bg;
+	}
+}

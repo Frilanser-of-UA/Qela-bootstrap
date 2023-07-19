@@ -30,25 +30,34 @@
 }
 
 .qela-video {
-	aspect-ratio: 16/9;
-	max-width: 170px;
-	border-radius: 0.5rem;
-
-	&::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background: rgba($black, 0.2);
-		pointer-events: none;
-		z-index: 1;
+	.qela-ibg {
+		aspect-ratio: 16/9;
+		max-width: 170px;
 		border-radius: 0.5rem;
+		margin: 1.5rem auto 1rem auto;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba($black, 0.2);
+			pointer-events: none;
+			z-index: 1;
+			border-radius: 0.5rem;
+		}
 	}
 
 	video {
 		border-radius: 0.5rem;
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 

@@ -1,0 +1,25 @@
+.qela-dialog {
+	padding: 2rem 1rem;
+	border-radius: 0.75rem;
+	background-color: $white;
+	text-align: center;
+	border-width: 2px;
+	border-style: solid;
+
+	&.primary-outline {
+		border-color: $primary;
+	}
+
+	&.secondary-outline {
+		border-color: $secondary;
+	}
+
+	h2 {
+		padding-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	p {
+		font-size: 1.125rem;
+	}
+}

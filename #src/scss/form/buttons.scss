@@ -157,7 +157,7 @@
 }
 
 .btn-light {
-	background-color: $white;
+	border-color: $white;
 	background-color: $white;
 
 	&:hover {
@@ -177,13 +177,18 @@
 }
 
 .btn-custom {
+	padding: 0;
+
 	&.ico-right {
+		padding-right: 1.5rem;
+
 		&::before {
 			font-size: 18px;
 			padding: 1.5px;
 			background-color: $primary;
 			border-radius: 50%;
 			right: 0;
+			margin-left: 2px;
 		}
 	}
 
@@ -522,4 +527,27 @@
 			}
 		}
 	}
+}
+
+.btns-center {
+	display: flex;
+	justify-content: center;
+	padding-top: 1.5rem;
+
+	@media (max-width:($md1+px)) {
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+
+	button {
+		&:not(:first-child) {
+			margin-left: 0.25rem;
+		}
+	}
+}
+
+.btns-inline {
+	display: flex;
+	gap: 0.25rem;
+	flex-wrap: wrap;
 }

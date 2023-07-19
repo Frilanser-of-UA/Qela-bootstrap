@@ -2,12 +2,102 @@
 	--body-pad-top: 56px;
 	padding-top: var(--body-pad-top);
 	padding-left: 80px;
-	min-height: 100vh;
+	height: 100vh;
 
 	@media (max-width:($md3+px)) {
 		padding-left: 0;
 	}
 }
+
+// ======================= master
+.qela-main {
+	padding: 0.5rem 0;
+	height: 100%;
+
+	.container {
+		height: 100%;
+	}
+}
+
+.qela-page {
+	min-height: 100%;
+	border: 1px solid $info-300;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+
+	.nav.nav-tabs {
+		padding: 1rem 1.5rem 0 1.5rem;
+		border-radius: 0.5rem 0.5rem 0 0;
+		background-color: $body-bg;
+	}
+
+	.row-grow {
+		padding: 1rem;
+		border-radius: 0.5rem;
+		--bs-gutter-x: 1rem;
+		flex: 1 1 auto;
+
+		[class^="col-"] {
+			.card {
+				height: 100%;
+				padding: 0.5rem;
+				background-color: $body-bg;
+				border: none;
+			}
+
+			.card-text {
+				&.empty {
+					padding: 2.5rem 1rem;
+					text-align: center;
+					color: $info-700;
+				}
+
+				&.info {
+					padding: 1rem;
+				}
+			}
+
+			.img-fluid {
+				width: 100%;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.child-mb-2>*:not(:last-child) {
+	margin-bottom: 0.5rem;
+}
+
+.child-mb-2 .qela-chain:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+// ======================= master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .qela-shadow {
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);

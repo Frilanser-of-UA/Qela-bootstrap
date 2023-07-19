@@ -9247,7 +9247,7 @@ textarea.form-control-lg {
 
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
-  --bs-dropdown-min-width: 15rem;
+  --bs-dropdown-min-width: 22.5rem;
   --bs-dropdown-padding-x: 0rem;
   --bs-dropdown-padding-y: 0.5rem;
   --bs-dropdown-spacer: 0.125rem;
@@ -12220,12 +12220,69 @@ textarea.form-control-lg {
   --body-pad-top: 56px;
   padding-top: var(--body-pad-top);
   padding-left: 80px;
-  min-height: 100vh;
+  height: 100vh;
 }
 @media (max-width: 767.98px) {
   .qela-body {
     padding-left: 0;
   }
+}
+
+.qela-main {
+  padding: 0.5rem 0;
+  height: 100%;
+}
+.qela-main .container {
+  height: 100%;
+}
+
+.qela-page {
+  min-height: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.qela-page .nav.nav-tabs {
+  padding: 1rem 1.5rem 0 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #f8f9fa;
+}
+.qela-page .row-grow {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  --bs-gutter-x: 1rem;
+  flex: 1 1 auto;
+}
+.qela-page .row-grow [class^=col-] .card {
+  height: 100%;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border: none;
+}
+.qela-page .row-grow [class^=col-] .card-text.empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #495057;
+}
+.qela-page .row-grow [class^=col-] .card-text.info {
+  padding: 1rem;
+}
+.qela-page .row-grow [class^=col-] .img-fluid {
+  width: 100%;
+}
+.qela-page h2, .qela-page .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.child-mb-2 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.child-mb-2 .qela-chain:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .qela-shadow {
@@ -12435,7 +12492,7 @@ textarea.form-control-lg {
 }
 
 .btn-light {
-  background-color: #fff;
+  border-color: #fff;
   background-color: #fff;
 }
 .btn-light:hover {
@@ -12450,12 +12507,19 @@ textarea.form-control-lg {
   background-color: transparent;
 }
 
+.btn-custom {
+  padding: 0;
+}
+.btn-custom.ico-right {
+  padding-right: 1.5rem;
+}
 .btn-custom.ico-right::before {
   font-size: 18px;
   padding: 1.5px;
   background-color: #FFE000;
   border-radius: 50%;
   right: 0;
+  margin-left: 2px;
 }
 .btn-custom:hover {
   color: #978fff;
@@ -12733,6 +12797,27 @@ textarea.form-control-lg {
   .qela-btn-map .btn:hover {
     background: black;
   }
+}
+
+.btns-center {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .btns-center {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}
+.btns-center button:not(:first-child) {
+  margin-left: 0.25rem;
+}
+
+.btns-inline {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 @media (any-hover: hover) {
@@ -13537,6 +13622,14 @@ input::-webkit-inner-spin-button {
   min-width: 14px;
 }
 
+.badge.message {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 9px;
+  padding: 4px;
+  border-radius: 6px;
+}
+
 .qela-badge-primary {
   background-color: rgba(255, 224, 0, 0.1);
   color: #FF7A00;
@@ -13885,6 +13978,78 @@ input::-webkit-inner-spin-button {
   left: calc(100% - 6px);
 }
 
+.qela-list.no-outline .list-group-item {
+  border: none;
+}
+.qela-list .list-group-item {
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  border-color: #ced4da;
+  position: relative;
+}
+.qela-list .list-group-item + .list-group-item {
+  border-top-width: 1px;
+}
+.qela-list .list-group-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.qela-list .list-group-item > *:not(:last-child) {
+  margin-right: 1rem;
+}
+@media (any-hover: hover) {
+  .qela-list .list-group-item:hover .btns {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.qela-list .list-group-item .qela-clamp {
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  display: -webkit-box;
+  margin-bottom: 0;
+}
+.qela-list .list-group-item .btns {
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s;
+}
+.qela-list .list-group-item .btns .btn:not(:last-child) {
+  margin-left: 2px;
+}
+.qela-list .list-group-item .badge {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+
+.qela-chain {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  padding-top: 0;
+}
+.qela-chain hr {
+  margin: 0 -0.5rem;
+}
+.qela-chain .qela-actions {
+  margin-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+.qela-chain .qela-actions h2, .qela-chain .qela-actions .h2 {
+  font-size: 1rem;
+}
+.qela-chain .qela-toolbar {
+  margin-bottom: 0.5rem;
+}
+.qela-chain .qela-list .list-group-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
 .tooltip-inner {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -14081,12 +14246,13 @@ input::-webkit-inner-spin-button {
   object-fit: cover;
 }
 
-.qela-video {
+.qela-video .qela-ibg {
   aspect-ratio: 16/9;
   max-width: 170px;
   border-radius: 0.5rem;
+  margin: 1.5rem auto 1rem auto;
 }
-.qela-video::after {
+.qela-video .qela-ibg::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -14100,6 +14266,9 @@ input::-webkit-inner-spin-button {
 }
 .qela-video video {
   border-radius: 0.5rem;
+}
+.qela-video p:last-child {
+  margin-bottom: 0;
 }
 
 .qela-play {
@@ -14383,6 +14552,72 @@ input::-webkit-inner-spin-button {
   background: #F37EE7;
 }
 
+.qela-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.qela-actions .dropdown-item {
+  white-space: normal;
+}
+.qela-actions h2, .qela-actions .h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.qela-dialog {
+  padding: 2rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+}
+.qela-dialog.primary-outline {
+  border-color: #FFE000;
+}
+.qela-dialog.secondary-outline {
+  border-color: #978fff;
+}
+.qela-dialog h2, .qela-dialog .h2 {
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.qela-dialog p {
+  font-size: 1.125rem;
+}
+
+.qela-toolbar {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  background: #fff;
+}
+.qela-toolbar .form-check {
+  margin-right: 0.5rem;
+}
+.qela-toolbar .form-check-input {
+  margin-right: 1rem;
+}
+.qela-toolbar .form-check-label {
+  color: #212529;
+  font-size: 16px;
+}
+.qela-toolbar .btn:not(:last-child) {
+  margin-right: 0.25rem;
+}
+.qela-toolbar.no-outline {
+  border: none;
+  background: #f8f9fa;
+}
+
 header {
   height: 56px;
   z-index: 3;
@@ -14598,65 +14833,6 @@ header {
 
 .qela-menu .qela-badge.small {
   transform: translate(0%, 0%);
-}
-
-.qela-statistics {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 40px;
-  margin-bottom: 40px;
-}
-@media (max-width: 767.98px) {
-  .qela-statistics {
-    padding: 20px;
-  }
-}
-.qela-statistics .row {
-  text-align: center;
-  align-items: center;
-  position: relative;
-}
-.qela-statistics .row > div {
-  position: relative;
-}
-@media (max-width: 1200px) {
-  .qela-statistics .row > div:nth-child(3) .qela-hv {
-    display: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .qela-statistics .row > div .qela-hv {
-    display: none;
-  }
-}
-.qela-statistics img {
-  display: block;
-  margin: 0 auto;
-}
-
-.qela-number {
-  font-size: 32px;
-  line-height: 39px;
-}
-
-.qela-label {
-  font-size: 11px;
-  line-height: 13px;
-  color: #6c757d;
-}
-
-.qela-hv {
-  border-left: 1px solid #ced4da;
-  position: absolute;
-  height: 90px;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (max-width: 1200px) {
-  .qela-hv {
-    height: 70px;
-  }
 }
 
 .table-qela {
