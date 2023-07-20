@@ -5,6 +5,7 @@
 	text-align: center;
 	border-width: 2px;
 	border-style: solid;
+	flex-grow: 1;
 
 	&.primary-outline {
 		border-color: $primary;
@@ -21,6 +22,15 @@
 
 	p {
 		font-size: 1.125rem;
+	}
+
+	&.small {
+		padding: 1rem;
+
+		h2 {
+			font-size: 1.25rem;
+			padding-bottom: 0;
+		}
 	}
 
 	.qela-list {
