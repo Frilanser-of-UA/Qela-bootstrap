@@ -232,7 +232,7 @@
 	@media (any-hover:hover) {
 		&:hover {
 			.head {
-				background-color: $info-200;
+				background-color: $info-100;
 			}
 
 			.btn {
@@ -316,6 +316,7 @@
 	opacity: 0;
 	visibility: hidden;
 	display: none;
+	background-color: $body-bg;
 
 	&.active {
 		opacity: 1;

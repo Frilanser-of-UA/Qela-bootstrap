@@ -14017,7 +14017,7 @@ input::-webkit-inner-spin-button {
 }
 @media (any-hover: hover) {
   .qela-quest:hover .head {
-    background-color: #e9ecef;
+    background-color: #f8f9fa;
   }
   .qela-quest:hover .btn {
     opacity: 1;
@@ -14093,6 +14093,7 @@ input::-webkit-inner-spin-button {
   opacity: 0;
   visibility: hidden;
   display: none;
+  background-color: #f8f9fa;
 }
 .qela-content.active {
   opacity: 1;
