@@ -204,6 +204,34 @@ input::-webkit-inner-spin-button {
 			display: flex;
 		}
 	}
+
+	&.small {
+		div {
+			&:first-child {
+				position: relative;
+				display: inline-block;
+			}
+		}
+
+		.form-label {
+			flex-direction: row;
+			background-color: $body-bg;
+			height: auto;
+			width: auto;
+			gap: 0.25rem;
+			padding: 0.25rem 0.5rem;
+		}
+
+		[class^="ic-"],
+		[class*="ic-"] {
+			color: $black;
+		}
+
+		small {
+			font-weight: 500;
+			color: $black;
+		}
+	}
 }
 
 .qela-preview {

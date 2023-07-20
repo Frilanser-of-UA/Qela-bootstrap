@@ -13055,6 +13055,26 @@ input::-webkit-inner-spin-button {
 .qela-file.filled ~ .qela-preview {
   display: flex;
 }
+.qela-file.small div:first-child {
+  position: relative;
+  display: inline-block;
+}
+.qela-file.small .form-label {
+  flex-direction: row;
+  background-color: #f8f9fa;
+  height: auto;
+  width: auto;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.qela-file.small [class^=ic-],
+.qela-file.small [class*=ic-] {
+  color: #000;
+}
+.qela-file.small small, .qela-file.small .small {
+  font-weight: 500;
+  color: #000;
+}
 
 .qela-preview {
   display: none;
@@ -13664,6 +13684,36 @@ input::-webkit-inner-spin-button {
 .dropdown > .btn.show::before {
   transform: matrix(1, 0, 0, -1, 0, 0);
   color: #000;
+}
+
+.qela-organization {
+  border-bottom: 1px solid #ced4da;
+  padding: 1.5rem 0;
+}
+.qela-organization.row {
+  justify-content: space-between;
+  align-items: end;
+}
+.qela-organization .qela-avatar {
+  border: 0;
+  margin-right: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .qela-organization .qela-avatar {
+    margin-right: 0.5rem;
+  }
+}
+.qela-organization .qela-avatar.white {
+  background-color: white;
+  border-width: 1px;
+}
+.qela-organization .col-btns {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.qela-organization .col-btns > *:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 576px) {
