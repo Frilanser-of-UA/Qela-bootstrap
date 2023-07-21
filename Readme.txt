@@ -1,5 +1,8 @@
 
 ================= Дата 20.07.23 ======================================
+-- В navigation.html во вкладке conditions добавлены компоненты rating, 
+	dialog small title + text
+-- Добавлены компонент rating, dialog small title + text
 -- Добавлен компонент dialog в components и map
 -- Правки компонента input file small
 -- Правки компонента и добавление новых вариантов Organization items

@@ -14812,6 +14812,12 @@ input::-webkit-inner-spin-button {
   font-size: 1.25rem;
   padding-bottom: 0;
 }
+.qela-dialog.small h2:not(:last-child), .qela-dialog.small .h2:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+.qela-dialog.small p {
+  margin-bottom: 0;
+}
 .qela-dialog .qela-list p {
   font-size: 1rem;
   text-align: left;
@@ -14845,6 +14851,38 @@ input::-webkit-inner-spin-button {
 .qela-toolbar.no-outline {
   border: none;
   background: #f8f9fa;
+}
+
+.qela-rating {
+  padding: 2rem 1rem 0 1rem;
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 767.98px) {
+  .qela-rating {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 567.98px) {
+  .qela-rating {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 0 0 0;
+  }
+}
+.qela-rating > div {
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  text-align: center;
+}
+.qela-rating > div img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
 }
 
 header {
