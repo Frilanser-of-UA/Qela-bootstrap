@@ -14113,6 +14113,7 @@ input::-webkit-inner-spin-button {
 
 .qela-list.no-outline .list-group-item {
   border: none;
+  border-radius: 0;
 }
 .qela-list.primary .list-group-item {
   border-color: #ccb300;
@@ -14131,19 +14132,24 @@ input::-webkit-inner-spin-button {
   }
 }
 .qela-list .list-group-item {
+  border-color: #ced4da;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+.qela-list .list-group-item > a {
   border-radius: 0.5rem;
   padding: 1rem 0.5rem 1rem 1rem;
   display: flex;
-  align-items: center;
-  border-color: #ced4da;
-  position: relative;
-}
-.qela-list .list-group-item > a {
-  display: flex;
   text-decoration: none;
   align-items: center;
-  gap: 1rem;
   color: #212529;
+}
+.qela-list .list-group-item > a p {
+  transition: color 0.3s ease 0s;
+}
+.qela-list .list-group-item > a .qela-previews {
+  margin-right: 1rem;
 }
 .qela-list .list-group-item + .list-group-item {
   border-top-width: 1px;
@@ -14155,9 +14161,8 @@ input::-webkit-inner-spin-button {
   margin-right: 1rem;
 }
 @media (any-hover: hover) {
-  .qela-list .list-group-item:hover .btns {
-    visibility: visible;
-    opacity: 1;
+  .qela-list .list-group-item:hover > a p {
+    color: #978fff;
   }
 }
 .qela-list .list-group-item .qela-clamp {
@@ -14165,16 +14170,6 @@ input::-webkit-inner-spin-button {
   white-space: normal;
   display: -webkit-box;
   margin-bottom: 0;
-}
-.qela-list .list-group-item .btns {
-  display: flex;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s;
-}
-.qela-list .list-group-item .btns .btn:not(:last-child) {
-  margin-left: 2px;
 }
 .qela-list .list-group-item .badge {
   position: absolute;
@@ -14790,7 +14785,6 @@ input::-webkit-inner-spin-button {
   text-align: center;
   border-width: 2px;
   border-style: solid;
-  flex-grow: 1;
 }
 .qela-dialog.primary-outline {
   border-color: #FFE000;
