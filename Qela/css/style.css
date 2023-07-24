@@ -14113,6 +14113,8 @@ input::-webkit-inner-spin-button {
 
 .qela-list.no-outline .list-group-item {
   border: none;
+}
+.qela-list.no-rounded .list-group-item {
   border-radius: 0;
 }
 .qela-list.primary .list-group-item {
@@ -14181,24 +14183,26 @@ input::-webkit-inner-spin-button {
   background-color: #fff;
   border-radius: 12px;
   border: 1px solid #ced4da;
-  padding: 0.5rem;
   padding-top: 0;
 }
-.qela-chain hr {
-  margin: 0 -0.5rem;
-}
 .qela-chain .qela-actions {
-  margin-left: 0.5rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 .qela-chain .qela-actions h2, .qela-chain .qela-actions .h2 {
   font-size: 1rem;
 }
+.qela-chain .qela-actions p {
+  margin-bottom: 0;
+}
 .qela-chain .qela-toolbar {
   margin-bottom: 0.5rem;
 }
-.qela-chain .qela-list .list-group-item:not(:last-child) {
+.qela-chain .qela-list .list-group-item {
   margin-bottom: 0;
+}
+.qela-chain .qela-list .list-group-item:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .qela-steps {
