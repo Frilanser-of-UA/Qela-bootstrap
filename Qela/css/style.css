@@ -14907,6 +14907,18 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0.5rem;
 }
 
+.qela-orden {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ced4da;
+}
+.qela-orden p {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
 header {
   height: 56px;
   z-index: 3;
