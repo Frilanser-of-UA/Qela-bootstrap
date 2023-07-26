@@ -12215,6 +12215,30 @@ textarea.form-control-lg {
   content: "\e98c";
 }
 
+.ic-img-plus-40:before {
+  content: "\e98d";
+}
+
+.ic-fb:before {
+  content: "\e98e";
+}
+
+.ic-inst:before {
+  content: "\e98f";
+}
+
+.ic-teleg:before {
+  content: "\e990";
+}
+
+.ic-twit:before {
+  content: "\e991";
+}
+
+.ic-youtube:before {
+  content: "\e992";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
@@ -13947,10 +13971,10 @@ input::-webkit-inner-spin-button {
   background-color: #978fff;
 }
 .qela-nav-item .nav-link.error {
-  color: #E20000;
+  color: #212529;
 }
 .qela-nav-item .nav-link.error::before {
-  content: "\e94d";
+  content: "\e92c";
   font-family: "Icons";
   font-size: 16px;
   border: 3px solid #f9cccc;
