@@ -12817,7 +12817,7 @@ body {
 .qela-btn-tooltip {
   border: none;
   color: #ced4da;
-  padding: 0.125rem 0px 0px 0px;
+  padding: 0;
 }
 .qela-btn-tooltip:hover {
   color: #978fff;
@@ -13019,6 +13019,25 @@ input::-webkit-inner-spin-button {
 
 .has-validation.is-invalid ~ .helper-text {
   display: none;
+}
+
+.required.form-label::after {
+  content: "*";
+  color: #FF453A;
+  padding-left: 4px;
+}
+
+.qela-form-labels {
+  display: flex;
+  justify-content: space-between;
+}
+.qela-form-labels > div {
+  display: flex;
+  align-items: baseline;
+  margin-right: 4px;
+}
+.qela-form-labels > div .qela-btn-tooltip {
+  margin-left: 4px;
 }
 
 .form-range:disabled::-webkit-slider-runnable-track {
@@ -13366,8 +13385,14 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
+.form-check {
+  vertical-align: baseline;
+}
 .form-check .invalid-feedback {
   font-size: 0.875rem;
+}
+.form-check .qela-btn-tooltip {
+  margin-bottom: 0.125rem;
 }
 
 .form-check-input:hover {
