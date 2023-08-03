@@ -239,11 +239,11 @@
 											<h2 class="h5">March checkpoints</h2>
 										</div>
 										<!-- dialog whith buttons-->
-										<div class="p-3 border-bottom d-flex align-items-end gap-2 flex-wrap">
+										<div class="p-3 border-bottom d-flex align-items-end justify-content-between gap-2 flex-wrap">
 											<div class="qela-dialog secondary-outline small">
 												<h2>Your supporters will be asked to choose the emoji</h2>
 											</div>
-											<div class="d-flex gap-1 ms-auto">
+											<div class="d-flex gap-1">
 												<button type="button" class="btn btn-outline-info ico ic-delete"></button>
 												<!-- modal btn -->
 												<button type="button" class="btn btn-primary ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modal-map">Save checkpoint</button>
@@ -344,72 +344,86 @@
 										<div class="p-3">
 											<h3 class="h6">Checkpoins list</h3>
 										</div>
-										<!-- Map table -->
-										<div class="table-responsive table-qela">
-											<table class="table table-hover">
-												<thead class="table-light">
-													<tr>
-														<th width="40px" scope="col">
-															<div class="text-info-600 fs-6 fw-normal">Order</div>
-														</th>
-														<th scope="col">
-															<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
-																<span class="text-info-600 fs-6 fw-normal">Official Address of checkpoint</span>
-																<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
-															</div>
-														</th>
-														<th scope="col">
-															<div class="mb-0 col d-flex align-items-start gap-1" style="min-width: 56%;">
-																<span class="text-info-600 fs-6 fw-normal">Radius</span>
-																<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet."></button>
-															</div>
-														</th>
-														<th class="text-end" scope="col">
-															<div class="text-info-600 fs-6 fw-normal">Actions</div>
-														</th>
-													</tr>
-												</thead>
-												<tbody class="bg-white">
-													<tr>
-														<td class="text-end">
-															1
-														</td>
-														<td>
-															Shovkovychna St, 24, Kyiv
-														</td>
-														<td>
-															300m
-														</td>
-														<td>
-															<div class="text-end">
-																<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-																	<button type="button" class="btn btn-light ico ic-delete"></button>
-																	<button type="button" class="btn btn-light ico ic-edit"></button>
+										<!-- Map item checkpoint -->
+										<div class="qela-map-items">
+											<div class="row g-0">
+												<div class="col-auto text-center">
+													<span class="form-label">Order</span>
+												</div>
+												<div class="col">
+													<div class="row g-2">
+														<div class="col-lg-6">
+															<div class="qela-form-labels">
+																<div>
+																	<span class="form-label"> Official Address of checkpoint</span>
+																	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet"></button>
 																</div>
 															</div>
-														</td>
-													</tr>
-													<tr>
-														<td class="text-end">
-															1
-														</td>
-														<td>
-															Shovkovychna St, 24, Kyiv
-														</td>
-														<td>
-															300m
-														</td>
-														<td>
-															<div class="text-end">
-																<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-																	<button type="button" class="btn btn-light ico ic-delete"></button>
-																	<button type="button" class="btn btn-light ico ic-edit"></button>
+														</div>
+														<div class="col-lg">
+															<div class="qela-form-labels">
+																<div>
+																	<span class="form-label"> Radius</span>
+																	<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet"></button>
 																</div>
 															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+														</div>
+														<div class="col-12 col-lg-auto">
+															<span class="form-label">Actions</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-0">
+												<div class="col-auto text-center">
+													<div style="width:42px;">1</div>
+												</div>
+												<div class="col">
+													<div class="row g-2">
+														<div class="col-lg-6">
+															<input type="text" class="form-control" placeholder="Placeholder">
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<div class="col-lg">
+															<div>
+																<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+															</div>
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<div class="col-12 col-lg-auto">
+															<div class="btns-inline" role="group" aria-label="button group">
+																<button type="button" class="btn btn-outline-info ic-mark ico-right">Edit coordinates</button>
+																<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-0">
+												<div class="col-auto text-center">
+													<div style="width:42px;">2</div>
+												</div>
+												<div class="col">
+													<div class="row g-2">
+														<div class="col-lg-6">
+															<input type="text" class="form-control" placeholder="Placeholder">
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<div class="col-lg">
+															<div>
+																<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+															</div>
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<div class="col-12 col-lg-auto">
+															<div class="btns-inline" role="group" aria-label="button group">
+																<button type="button" class="btn btn-outline-info ic-mark ico-right">Edit coordinates</button>
+																<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<!-- tetx non items -->
 										<p class="m-0 px-2 py-4 text-center text-info-900">There is no any checkpoints yet</p>
@@ -525,7 +539,7 @@
 												<div class="py-4">
 													<div class="row g-4">
 														<div class="col-xl-4">
-															<div class="row g-2 align-items-center">
+															<div class="row g-2 align-items-baseline">
 																<div class="col-auto">
 																	<img src="img/icons/fb-circle.svg" width="38" height="38" alt="#">
 																</div>
@@ -547,7 +561,7 @@
 												<div class="pb-4">
 													<div class="row g-4">
 														<div class="col-xl-4">
-															<div class="row g-2 align-items-center">
+															<div class="row g-2 align-items-baseline">
 																<div class="col-auto">
 																	<img src="img/icons/twitter-new-circle.svg" width="38" height="38" alt="#">
 																</div>
@@ -569,7 +583,7 @@
 												<div class="pb-4">
 													<div class="row g-4">
 														<div class="col-xl-4">
-															<div class="row g-2 align-items-center">
+															<div class="row g-2 align-items-baseline">
 																<div class="col-auto">
 																	<img src="img/icons/inst-circle.svg" width="38" height="38" alt="#">
 																</div>
@@ -591,7 +605,7 @@
 												<div class="pb-4">
 													<div class="row g-4">
 														<div class="col-xl-4">
-															<div class="row g-2 align-items-center">
+															<div class="row g-2 align-items-baseline">
 																<div class="col-auto">
 																	<img src="img/icons/link-circle.svg" width="38" height="38" alt="#">
 																</div>

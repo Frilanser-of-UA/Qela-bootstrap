@@ -61,7 +61,7 @@
 				</nav>
 			</aside>
 			<!-- Навигация (якоря) -->
-			<div style="max-width: 680px;" class="mx-auto px-3">
+			<div style="max-width: 900px;" class="mx-auto px-3">
 				<div class="mt-3 pb-3 d-flex flex-column gap-3">
 					<!-- FIX Buttons  -->
 <h2 class="h1" id="h3Btn1">Buttons</h2>
@@ -391,7 +391,6 @@
 <h4>Input outline</h4>
 <!-- default -->
 <div>
-	c
 	<input type="text" class="form-control" id="inputText1" placeholder="Name">
 	<div class="invalid-feedback">Error text</div>
 	<div class="helper-text">Helper text</div>
@@ -1872,30 +1871,46 @@
 	</div>
 </div>
 <!-- FIX Map item checkpoint  -->
-<h4 class="mt-5">Map item checkpoint</h4>
-<div class="bg-body border-bottom px-3 py-2">
-	<div class="row g-2 align-items-center">
-		<div class="col-auto align-self-start">
-			<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-				<button type="button" class="btn btn-outline-info py-1 py-lg-0 ico ic-triangle-small"></button>
-				<button type="button" class="btn btn-outline-info py-1 py-lg-0 ico ic-triangle-inverted-small"></button>
-			</div>
-		</div>
-		<div class="col-auto">
-			<div class="text-info-900 ps-1 pe-3 d-none d-lg-block">Checkpoint</div>
+<h4 class="mt-5">Map item checkpoint*</h4>
+<!-- Map item checkpoint -->
+<div class="qela-map-items">
+	<div class="row g-0">
+		<div class="col-auto text-center">
+			<span class="form-label">Order</span>
 		</div>
 		<div class="col">
 			<div class="row g-2">
-				<div class="col-lg">
-					<input type="text" class="form-control" placeholder="Placeholder">
-					<div class="invalid-feedback">Error text</div>
+				<div class="col-lg-6">
+					<div class="qela-form-labels">
+						<div>
+							<span class="form-label"> Official Address of checkpoint</span>
+							<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet"></button>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg">
-					<div class="input-group has-validation">
-						<input type="text" class="form-control" placeholder="Placeholder" aria-label="Password" aria-describedby="button-addon25">
-						<button class="btn btn-input ic-eye-close" type="button" id="button-addon25"></button>
-						<div class="invalid-feedback">Error text</div>
+					<div class="qela-form-labels">
+						<div>
+							<span class="form-label"> Radius</span>
+							<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet"></button>
+						</div>
 					</div>
+				</div>
+				<div class="col-12 col-lg-auto">
+					<span class="form-label">Actions</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row g-0">
+		<div class="col-auto text-center">
+			<div style="width:42px;">1</div>
+		</div>
+		<div class="col">
+			<div class="row g-2">
+				<div class="col-lg-6">
+					<input type="text" class="form-control" placeholder="Placeholder">
+					<div class="invalid-feedback">Error text</div>
 				</div>
 				<div class="col-lg">
 					<div>
@@ -1903,24 +1918,22 @@
 					</div>
 					<div class="invalid-feedback">Error text</div>
 				</div>
-				<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-					<div class="btn-group" role="group" aria-label="button group">
+				<div class="col-12 col-lg-auto">
+					<div class="btns-inline" role="group" aria-label="button group">
+						<button type="button" class="btn btn-outline-info ic-mark ico-right">Edit coordinates</button>
 						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- Map item checkpoint -->
-<div class="bg-body border-bottom px-3 py-2 qela-rounded-eb">
-	<div class="row g-2 align-items-md-baseline">
+	<div class="row g-0">
 		<div class="col-auto text-center">
 			<div style="width:42px;">2</div>
 		</div>
 		<div class="col">
 			<div class="row g-2">
-				<div class="col-lg-7">
+				<div class="col-lg-6">
 					<input type="text" class="form-control" placeholder="Placeholder">
 					<div class="invalid-feedback">Error text</div>
 				</div>
@@ -1930,10 +1943,10 @@
 					</div>
 					<div class="invalid-feedback">Error text</div>
 				</div>
-				<div class="col-12 col-lg-auto d-flex gap-2 align-items-center justify-content-end justify-content-lg-center">
-					<div class="btn-group" role="group" aria-label="button group">
+				<div class="col-12 col-lg-auto">
+					<div class="btns-inline" role="group" aria-label="button group">
+						<button type="button" class="btn btn-outline-info ic-mark ico-right">Edit coordinates</button>
 						<button type="button" class="btn btn-outline-info ico ic-delete"></button>
-						<button type="button" class="btn btn-outline-info ico ic-edit"></button>
 					</div>
 				</div>
 			</div>
@@ -2071,13 +2084,13 @@
 		</div>
 	</div>
 </div>
-<!-- =============== -->
+<!--===============-->
 <!-- soc item Other social media #1 -->
 <h4 class="mt-5">Soc item*</h4>
 <div class="pb-4">
 	<div class="row g-4">
 		<div class="col-xl-4">
-			<div class="row g-2 align-items-center">
+			<div class="row g-2 align-items-baseline">
 				<div class="col-auto">
 					<img src="img/icons/link-circle.svg" width="38" height="38" alt="#">
 				</div>
@@ -3428,11 +3441,11 @@
 					value3: '',
 					value4: '',
 					options: [
-						'Пункт 1 sadafdf',
+						'Пункт 1',
 						'Пункт 2',
 						'Пункт 3',
 						'Пункт 4',
-						'Пункт 1 assadafdf',
+						'Пункт 1',
 						'Пункт 2sades',
 						'Пункт 3sd',
 						'Пункт 4sd'
