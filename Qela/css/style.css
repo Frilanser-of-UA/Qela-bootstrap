@@ -12383,6 +12383,15 @@ body {
   background-color: transparent;
   border: none;
 }
+@media (max-width: 990.98px) {
+  .qela-wrap-telent .row-grow {
+    --bs-gutter-y: 1rem;
+  }
+}
+
+.qela-telent-left {
+  padding-bottom: 2.5rem;
+}
 .qela-telent-left > div:first-child {
   padding: 48px 24px 24px 24px;
   display: flex;
@@ -12397,9 +12406,46 @@ body {
 .qela-telent-left > div:first-child .qela-avatar {
   margin-bottom: 0.5rem;
 }
+.qela-telent-left .list-group {
+  padding: 1rem;
+}
+.qela-telent-left .row [class^=col]:first-child,
+.qela-telent-left .row [class*=col]:first-child {
+  width: 37%;
+}
+@media (max-width: 567.98px) {
+  .qela-telent-left .row [class^=col]:first-child,
+.qela-telent-left .row [class*=col]:first-child {
+    width: 100%;
+  }
+}
+.qela-telent-left .qela-badge-telent {
+  margin-left: auto;
+}
 
-[class^=qela-telent-],
-[class*=qela-telent-] {
+.qela-telent-right {
+  padding-bottom: 1rem;
+}
+.qela-telent-right > div:first-child {
+  padding: 2rem 1rem 0 1rem;
+}
+.qela-telent-right .qela-telent-text {
+  margin-bottom: 2rem;
+}
+.qela-telent-right .qela-form-labels {
+  margin-top: 4rem;
+}
+.qela-telent-right .btns-inline {
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+.qela-telent-right .alert {
+  margin-top: 0.75rem;
+}
+
+.qela-telent-left,
+.qela-telent-right {
   background-color: #fff;
   height: 100%;
   border-radius: 0.5rem;
@@ -15196,6 +15242,36 @@ input::-webkit-inner-spin-button {
   border-color: #DD80FE;
   color: #B327E5;
   background-color: #FCF4FF;
+}
+
+.qela-telent-text {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.qela-telent-text.red {
+  color: #E21E2A;
+}
+.qela-telent-text.violet {
+  color: #7B58DF;
+}
+.qela-telent-text.green {
+  color: #39B340;
+}
+.qela-telent-text.orange {
+  color: #FA7312;
+}
+.qela-telent-text.lightgreen {
+  color: #29917D;
+}
+.qela-telent-text.lightblue {
+  color: #1B94E3;
+}
+.qela-telent-text.blue {
+  color: #2170E5;
+}
+.qela-telent-text.pink {
+  color: #B327E5;
 }
 
 .qela-actions {

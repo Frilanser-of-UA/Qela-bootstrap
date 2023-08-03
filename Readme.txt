@@ -1,5 +1,6 @@
 
 ================= Дата 03.08.23 ======================================
+-- Добавлена страница telent2.html (Change Talent)
 -- Правки компонент Map item checkpoint
 -- Правки в navigation.html вкладка Map
 -- Переработан компонент Map item checkpoint
