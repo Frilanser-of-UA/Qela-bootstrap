@@ -13848,9 +13848,6 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0.5rem;
 }
 
-.qela-map-items {
-  width: 100%;
-}
 .qela-map-items > .row {
   border-bottom: 1px solid #dee2e6;
   padding: 8px 16px;
@@ -13864,6 +13861,10 @@ input::-webkit-inner-spin-button {
   .qela-map-items > .row:first-child {
     display: none;
   }
+}
+.qela-map-items > .row [class^=col]:first-child,
+.qela-map-items > .row [class*=col]:first-child {
+  margin-right: 8px;
 }
 .qela-map-items .btns-inline {
   gap: 0.5rem;
