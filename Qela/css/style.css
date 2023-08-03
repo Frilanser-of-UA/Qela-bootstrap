@@ -12389,8 +12389,8 @@ body {
   }
 }
 
-.qela-telent-left {
-  padding-bottom: 2.5rem;
+.qela-telent-left:not(:last-child) {
+  margin-bottom: 1rem;
 }
 .qela-telent-left > div:first-child {
   padding: 48px 24px 24px 24px;
@@ -12398,13 +12398,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.qela-telent-left > div:first-child h2, .qela-telent-left > div:first-child .h2 {
-  margin-bottom: 0;
-  font-size: 24px;
-  color: #343a40;
-}
 .qela-telent-left > div:first-child .qela-avatar {
   margin-bottom: 0.5rem;
+}
+.qela-telent-left .qela-telent-text {
+  margin-bottom: 0.5rem;
+}
+.qela-telent-left p {
+  margin-bottom: 0;
 }
 .qela-telent-left .list-group {
   padding: 1rem;
@@ -12428,6 +12429,11 @@ body {
 }
 .qela-telent-right > div:first-child {
   padding: 2rem 1rem 0 1rem;
+}
+.qela-telent-right h2, .qela-telent-right .h2 {
+  margin-bottom: 0;
+  align-self: flex-start;
+  font-size: 20px;
 }
 .qela-telent-right .qela-telent-text {
   margin-bottom: 2rem;
@@ -14721,6 +14727,10 @@ input::-webkit-inner-spin-button {
   border-left-color: #000;
 }
 
+.telent-tooltip .tooltip-inner {
+  --bs-tooltip-max-width: 300px;
+}
+
 .qela-map {
   height: 440px;
 }
@@ -15248,6 +15258,7 @@ input::-webkit-inner-spin-button {
   font-size: 28px;
   font-weight: 500;
   line-height: 120%;
+  text-align: left;
 }
 .qela-telent-text.red {
   color: #E21E2A;
