@@ -13281,6 +13281,9 @@ input::-webkit-inner-spin-button {
   border-color: #ced4da;
   color: #6c757d;
 }
+.multiselect.multiselect--disabled .multiselect__single {
+  background-color: #e9ecef;
+}
 
 .multiselect--active .multiselect__tags {
   border-color: #978fff;
