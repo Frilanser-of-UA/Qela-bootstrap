@@ -10186,7 +10186,7 @@ textarea.form-control-lg {
 
 .badge {
   --bs-badge-padding-x: 0.25rem;
-  --bs-badge-padding-y: 0.15625rem;
+  --bs-badge-padding-y: 0.25rem;
   --bs-badge-font-size: 0.75rem;
   --bs-badge-font-weight: 500;
   --bs-badge-color: #fff;
@@ -12410,18 +12410,13 @@ body {
 .qela-telent-left .list-group {
   padding: 1rem;
 }
-.qela-telent-left .row [class^=col]:first-child,
-.qela-telent-left .row [class*=col]:first-child {
-  width: 37%;
-}
-@media (max-width: 567.98px) {
-  .qela-telent-left .row [class^=col]:first-child,
-.qela-telent-left .row [class*=col]:first-child {
-    width: 100%;
-  }
-}
 .qela-telent-left .qela-badge-telent {
   margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .qela-telent-left .qela-badge-telent {
+    margin-left: 0;
+  }
 }
 
 .qela-telent-right {
@@ -13968,11 +13963,11 @@ input::-webkit-inner-spin-button {
   border-radius: 6px;
 }
 .badge.large {
-  padding: 3px 6px;
+  padding: 5px 6px;
   font-size: 15px;
 }
 .badge.large-xl {
-  padding: 8px 12px;
+  padding: 10.5px 12px;
   font-size: 16px;
   border-radius: 8px;
 }
@@ -14058,7 +14053,7 @@ input::-webkit-inner-spin-button {
   background-color: #FCF4FF;
 }
 .qela-badge-telent.vote {
-  color: #000000;
+  color: #000;
   background-color: #F7EFC0;
   display: inline-flex;
   align-items: center;
@@ -14707,6 +14702,25 @@ input::-webkit-inner-spin-button {
 }
 .qela-steps .list-group-item:nth-child(-n+9)::before {
   content: "0" counters(ol-steps, "");
+}
+
+.qela-flush .list-group-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 1200px) {
+  .qela-flush .list-group-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.qela-flush .list-group-item > *:first-child {
+  color: #6c757d;
+  flex: 0 0 37%;
+}
+.qela-flush .list-group-item a {
+  text-decoration: none;
 }
 
 .tooltip-inner {
