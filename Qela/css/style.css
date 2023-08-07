@@ -12379,74 +12379,74 @@ body {
   margin-bottom: 1rem;
 }
 
-.qela-wrap-telent {
+.qela-wrap {
   background-color: transparent;
   border: none;
 }
 @media (max-width: 990.98px) {
-  .qela-wrap-telent .row-grow {
+  .qela-wrap .row-grow {
     --bs-gutter-y: 1rem;
   }
 }
 
-.qela-telent-left:not(:last-child) {
+.qela-start:not(:last-child) {
   margin-bottom: 1rem;
 }
-.qela-telent-left > div:first-child {
+.qela-start > div:first-child {
   padding: 48px 24px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.qela-telent-left > div:first-child .qela-avatar {
+.qela-start > div:first-child .qela-avatar {
   margin-bottom: 0.5rem;
 }
-.qela-telent-left .qela-telent-text {
+.qela-start .qela-telent-text {
   margin-bottom: 0.5rem;
 }
-.qela-telent-left p {
+.qela-start p {
   margin-bottom: 0;
 }
-.qela-telent-left .list-group {
+.qela-start .list-group {
   padding: 1rem;
 }
-.qela-telent-left .qela-badge-telent {
+.qela-start .qela-badge-telent {
   margin-left: auto;
 }
 @media (max-width: 1200px) {
-  .qela-telent-left .qela-badge-telent {
+  .qela-start .qela-badge-telent {
     margin-left: 0;
   }
 }
 
-.qela-telent-right {
+.qela-end {
   padding-bottom: 1rem;
 }
-.qela-telent-right > div:first-child {
+.qela-end > div:first-child {
   padding: 2rem 1rem 0 1rem;
 }
-.qela-telent-right h2, .qela-telent-right .h2 {
+.qela-end h2, .qela-end .h2 {
   margin-bottom: 0;
   align-self: flex-start;
   font-size: 20px;
 }
-.qela-telent-right .qela-telent-text {
+.qela-end .qela-telent-text {
   margin-bottom: 2rem;
 }
-.qela-telent-right .qela-form-labels {
+.qela-end .qela-form-labels {
   margin-top: 4rem;
 }
-.qela-telent-right .btns-inline {
+.qela-end .btns-inline {
   gap: 0.5rem;
   justify-content: flex-end;
   padding: 1rem 0;
 }
-.qela-telent-right .alert {
+.qela-end .alert {
   margin-top: 0.75rem;
 }
 
-.qela-telent-left,
-.qela-telent-right {
+.qela-start,
+.qela-end {
   background-color: #fff;
   height: 100%;
   border-radius: 0.5rem;
@@ -12515,10 +12515,12 @@ body {
 
 .h-100vh {
   height: calc(100vh - (var(--body-pad-top) + 1rem + 1rem));
+  overflow-x: hidden;
 }
 @media (max-width: 990.98px) {
   .h-100vh {
     height: auto;
+    overflow-x: auto;
   }
 }
 
@@ -13845,6 +13847,9 @@ input::-webkit-inner-spin-button {
 .qela-alert.alert-danger {
   background-color: #FFE9EA;
 }
+.qela-alert.alert-warning {
+  --bs-alert-bg: $warning-100;
+}
 .qela-alert.small {
   padding: 0.5rem 2.25rem;
 }
@@ -13987,6 +13992,14 @@ input::-webkit-inner-spin-button {
   text-align: center;
   min-width: 14px;
   color: #fff !important;
+}
+.qela-badge.item {
+  padding: 6px 4px 6px 6px;
+  border-radius: 6px;
+  background-color: #F4F3FF;
+  color: #212529;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .qela-badge-primary {
