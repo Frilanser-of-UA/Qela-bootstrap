@@ -1251,22 +1251,22 @@
 
 .text-primary-100 {
   --bs-text-opacity: 1;
-  color: #fff9cc !important;
+  color: #FFFDF2 !important;
 }
 
 .text-primary-200 {
   --bs-text-opacity: 1;
-  color: #fff399 !important;
+  color: #FFFCE5 !important;
 }
 
 .text-primary-300 {
   --bs-text-opacity: 1;
-  color: #ffec66 !important;
+  color: #FFF399 !important;
 }
 
 .text-primary-400 {
   --bs-text-opacity: 1;
-  color: #ffe633 !important;
+  color: #FFEC66 !important;
 }
 
 .text-primary-500 {
@@ -1276,22 +1276,22 @@
 
 .text-primary-600 {
   --bs-text-opacity: 1;
-  color: #ccb300 !important;
+  color: #FFD600 !important;
 }
 
 .text-primary-700 {
   --bs-text-opacity: 1;
-  color: #998600 !important;
+  color: #FFC700 !important;
 }
 
 .text-primary-800 {
   --bs-text-opacity: 1;
-  color: #665a00 !important;
+  color: #FEB804 !important;
 }
 
 .text-primary-900 {
   --bs-text-opacity: 1;
-  color: #332d00 !important;
+  color: #FFA903 !important;
 }
 
 .text-secondary-100 {
@@ -1597,22 +1597,22 @@
 
 .bg-primary-100 {
   --bs-bg-opacity: 1;
-  background-color: #fff9cc !important;
+  background-color: #FFFDF2 !important;
 }
 
 .bg-primary-200 {
   --bs-bg-opacity: 1;
-  background-color: #fff399 !important;
+  background-color: #FFFCE5 !important;
 }
 
 .bg-primary-300 {
   --bs-bg-opacity: 1;
-  background-color: #ffec66 !important;
+  background-color: #FFF399 !important;
 }
 
 .bg-primary-400 {
   --bs-bg-opacity: 1;
-  background-color: #ffe633 !important;
+  background-color: #FFEC66 !important;
 }
 
 .bg-primary-500 {
@@ -1622,22 +1622,22 @@
 
 .bg-primary-600 {
   --bs-bg-opacity: 1;
-  background-color: #ccb300 !important;
+  background-color: #FFD600 !important;
 }
 
 .bg-primary-700 {
   --bs-bg-opacity: 1;
-  background-color: #998600 !important;
+  background-color: #FFC700 !important;
 }
 
 .bg-primary-800 {
   --bs-bg-opacity: 1;
-  background-color: #665a00 !important;
+  background-color: #FEB804 !important;
 }
 
 .bg-primary-900 {
   --bs-bg-opacity: 1;
-  background-color: #332d00 !important;
+  background-color: #FFA903 !important;
 }
 
 .bg-secondary-100 {
@@ -14042,27 +14042,27 @@ input::-webkit-inner-spin-button {
   background-color: #F9F7FF;
 }
 .qela-badge-telent.lightgreen {
-  color: #29917D;
-  background-color: #F5FAF9;
+  color: #39B349;
+  background-color: #F5FCF7;
 }
 .qela-badge-telent.orange {
   color: #FA7312;
   background-color: #FFF9F3;
 }
 .qela-badge-telent.green {
-  color: #39B340;
-  background-color: #F5FCF6;
+  color: #29917D;
+  background-color: #F5FAF9;
 }
 .qela-badge-telent.lightblue {
-  color: #1B94E3;
-  background-color: #F4FAFF;
+  color: #0A8FE9;
+  background-color: #F4FCFF;
 }
 .qela-badge-telent.blue {
-  color: #2170E5;
-  background-color: #F4F8FF;
+  color: #1677E7;
+  background-color: #F4F9FF;
 }
 .qela-badge-telent.pink {
-  color: #B327E5;
+  color: #C732FC;
   background-color: #FCF4FF;
 }
 .qela-badge-telent.vote {
@@ -14501,34 +14501,34 @@ input::-webkit-inner-spin-button {
   border-right-color: #7B58DF;
 }
 .qela-telent-nav .nav-link.lightgreen::before {
-  background-color: #82C7B9;
+  background-color: #70EB8D;
 }
 .qela-telent-nav .nav-link.lightgreen::after {
-  border-right-color: #29917D;
+  border-right-color: #39B349;
 }
 .qela-telent-nav .nav-link.orange::before {
-  background-color: #FEB46D;
+  background-color: #FFAC5C;
 }
 .qela-telent-nav .nav-link.orange::after {
   border-right-color: #FA7312;
 }
 .qela-telent-nav .nav-link.green::before {
-  background-color: #8CDD91;
+  background-color: #59D7BE;
 }
 .qela-telent-nav .nav-link.green::after {
-  border-right-color: #39B340;
+  border-right-color: #29917D;
 }
 .qela-telent-nav .nav-link.blue::before {
-  background-color: #7CB0FF;
+  background-color: #8BB3F4;
 }
 .qela-telent-nav .nav-link.blue::after {
-  border-right-color: #2170E5;
+  border-right-color: #1677E7;
 }
 .qela-telent-nav .nav-link.pink::before {
-  background-color: #DD80FE;
+  background-color: #DD7CFF;
 }
 .qela-telent-nav .nav-link.pink::after {
-  border-right-color: #B327E5;
+  border-right-color: #C732FC;
 }
 .qela-telent-nav .nav-link.current {
   padding-right: 1rem;
@@ -14572,7 +14572,7 @@ input::-webkit-inner-spin-button {
   border-radius: 0;
 }
 .qela-list.primary .list-group-item {
-  border-color: #ccb300;
+  border-color: #FFD600;
 }
 .qela-list.info .list-group-item {
   border-color: #f8f9fa;
@@ -15226,22 +15226,22 @@ input::-webkit-inner-spin-button {
   background: #7B58DF;
 }
 .qela-telent.green {
-  background: #39B340;
+  background: #29917D;
 }
 .qela-telent.orange {
   background: #FA7312;
 }
 .qela-telent.lightgreen {
-  background: #29917D;
+  background: #39B349;
 }
 .qela-telent.lightblue {
-  background: #1B94E3;
+  background: #0A8FE9;
 }
 .qela-telent.blue {
-  background: #2170E5;
+  background: #1677E7;
 }
 .qela-telent.pink {
-  background: #B327E5;
+  background: #C732FC;
 }
 .qela-telent.outline-red {
   border-color: #FF8484;
@@ -15254,33 +15254,33 @@ input::-webkit-inner-spin-button {
   background-color: #F9F7FF;
 }
 .qela-telent.outline-lightgreen {
-  border-color: #82C7B9;
-  color: #29917D;
-  background-color: #F5FAF9;
+  border-color: #70EB8D;
+  color: #39B349;
+  background-color: #F5FCF7;
 }
 .qela-telent.outline-orange {
-  border-color: #FEB46D;
+  border-color: #FFAC5C;
   color: #FA7312;
   background-color: #FFF9F3;
 }
 .qela-telent.outline-green {
-  border-color: #8CDD91;
-  color: #39B340;
-  background-color: #F5FCF6;
+  border-color: #59D7BE;
+  color: #29917D;
+  background-color: #F5FAF9;
 }
 .qela-telent.outline-lightblue {
-  border-color: #78C9FD;
-  color: #1B94E3;
-  background-color: #F4FAFF;
+  border-color: #97CFF5;
+  color: #0A8FE9;
+  background-color: #F4FCFF;
 }
 .qela-telent.outline-blue {
-  border-color: #7CB0FF;
-  color: #2170E5;
-  background-color: #F4F8FF;
+  border-color: #8BB3F4;
+  color: #1677E7;
+  background-color: #F4F9FF;
 }
 .qela-telent.outline-pink {
-  border-color: #DD80FE;
-  color: #B327E5;
+  border-color: #DD7CFF;
+  color: #C732FC;
   background-color: #FCF4FF;
 }
 
@@ -15297,22 +15297,22 @@ input::-webkit-inner-spin-button {
   color: #7B58DF;
 }
 .qela-telent-text.green {
-  color: #39B340;
+  color: #29917D;
 }
 .qela-telent-text.orange {
   color: #FA7312;
 }
 .qela-telent-text.lightgreen {
-  color: #29917D;
+  color: #39B349;
 }
 .qela-telent-text.lightblue {
-  color: #1B94E3;
+  color: #0A8FE9;
 }
 .qela-telent-text.blue {
-  color: #2170E5;
+  color: #1677E7;
 }
 .qela-telent-text.pink {
-  color: #B327E5;
+  color: #C732FC;
 }
 
 .qela-actions {
