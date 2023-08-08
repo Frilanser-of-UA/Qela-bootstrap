@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 <head>
-	<title>Talent management</title>
+	<title>User info</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/vendors.css">
@@ -18,7 +18,7 @@
 				<button class="qela-burger">
 					<img src="img/burger.svg" width="24" height="40" alt="burger button">
 				</button>
-				<h1 class="h5 qela-clamp">Awards > Talent management</h1>
+				<h1 class="h5 qela-clamp">User info</h1>
 			</div>
 			<div class="col-2 col-xl col-md-4">
 				<!--FIX form search -->
@@ -178,168 +178,131 @@
 	</div>
 
 </header>
-	<main class="qela-main">
+	<main class="qela-main py-3">
 		<!-- =====================Список користувачів==================== -->
 		<div class="container">
-			<div class="qela-page" id="app" v-cloak>
-				<div class="row">
-					<div class="col-12">
-						<ul class="nav nav-tabs">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link">Vote weight managment</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active">Talent management</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row row-grow gy-3 gy-lg-0">
+			<div class="qela-page qela-wrap" id="app" v-cloak>
+				<div class="row row-grow no-pad">
 					<!-- left -->
 					<div class="col-lg-4">
-						<h2 class="h5 mb-3">Select the Talent</h2>
-						<ul class="nav qela-telent-nav">
-							<li class="nav-item">
-								<a href="#" class="nav-link red">
-									<span>Fundraising</span>
-									<span class="badge qela-badge-telent text-red">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link violet current">
-									<span>Recruiting</span>
-									<span class="badge qela-badge-telent text-violet">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link green">
-									<span>Endurance</span>
-									<span class="badge qela-badge-telent text-green">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link orange">
-									<span>Endurance</span>
-									<span class="badge qela-badge-telent text-orange">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link lightgreen">
-									<span>Determination</span>
-									<span class="badge qela-badge-telent text-lightgreen">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link lightblue">
-									<span>Originality</span>
-									<span class="badge qela-badge-telent text-lightblue">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link blue">
-									<span>Management</span>
-									<span class="badge qela-badge-telent text-blue">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link pink">
-									<span>Savvy</span>
-									<span class="badge qela-badge-telent text-pink">10 000. 0</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- right -->
-					<div class="col-lg-8">
-						<h2 class="h5 px-3">Recruiting user talent list</h2>
-						<div class="row g-3 mb-3 align-items-end">
-							<div class="col-sm">
-								<div class="input-group">
-									<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-									<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
+						<div class="qela-start h-auto">
+							<!-- block whtith avatar + name-->
+							<div>
+								<div class="qela-avatar qela-ibg" style="--img-size: 100px;">
+									<img src="img/avatar.jpg" width="100" height="100" alt="#">
 								</div>
+								<div class="h4 text-info-800">Gary Simon</div>
 							</div>
-							<div class="col-sm-auto">
-								<div class="mb-1">Total value of Originality: </div>
-								<div class="qela-telent violet text-end">100 000.0</div>
-							</div>
-						</div>
-						<div class="table-responsive table-qela large">
-							<table class="table table-hover">
-								<thead class="table-light">
-									<tr>
-										<th class="ps-4" width="45" scope="col">
-											Photo
-										</th>
-										<th scope="col">
-											User Name
-										</th>
-										<th scope="col">
-											First Name
-										</th>
-										<th scope="col">
-											Last Name
-										</th>
-										<th scope="col">
-											Phone Number
-										</th>
-										<th class="text-end" width="150" scope="col">
-											Value
-										</th>
-										<th class="text-end" width="65" scope="col">
-											Actions
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td width="45">
-											<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
-										</td>
-										<td width="150">
-											<div class="qela-clamp" style="width:150px">alexey.bubymka@hmayl.com</div>
-										</td>
-										<td>
-											Gary
-										</td>
-										<td>
-											Simon
-										</td>
-										<td width="150">
-											<div class="qela-clamp" style="width:150px">+ 38 067 000 00 00</div>
-										</td>
-										<td class="text-end" width="150">
-											<span class="badge qela-badge-telent text-violet">10 000. 0</span>
-										</td>
-										<td width="65">
-											<div class="btn-group qela-btn-group" role="group">
-												<button type="button" class="btn btn-light ico ic-edit"></button>
-												<button type="button" class="btn btn-light ico ic-book"></button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<nav class="px-3 py-2" aria-label="Page navigation">
-							<ul class="pagination justify-content-end pagination-sm mb-0">
-								<li class="page-item disabled">
-									<a class="page-link" href="#" aria-label="Previous">
-										<span aria-hidden="true">Prev</span>
-									</a>
-								</li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">...</a></li>
-								<li class="page-item"><a class="page-link" href="#">24</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#" aria-label="Next">
-										<span aria-hidden="true">Next</span>
-									</a>
+							<!-- list -->
+							<ul class="list-group list-group-flush qela-flush">
+								<li class="list-group-item">
+									<span>Status:</span>
+									<span class="badge qela-badge-success large-xl ic-success w-100 justify-content-between">Verified</span>
 								</li>
 							</ul>
-						</nav>
+						</div>
+						<div class="qela-start h-auto">
+							<!-- list -->
+							<ul class="list-group list-group-flush qela-flush">
+								<li class="list-group-item">
+									<span>User Id:</span>
+									<span>C124950D7F6</span>
+								</li>
+								<li class="list-group-item">
+									<span>Phone:</span>
+									<span>+380958811688</span>
+								</li>
+								<li class="list-group-item">
+									<span>User Name:</span>
+									<span class="word-break">alex.kukhtin@gmail.com</span>
+								</li>
+								<li class="list-group-item">
+									<span>Organization:</span>
+									<span>Unity for Planet</span>
+								</li>
+								<li class="list-group-item">
+									<span>ZIP code:</span>
+									<span>00 00 00</span>
+								</li>
+								<li class="list-group-item">
+									<span>Country:</span>
+									<span>Ukraine</span>
+								</li>
+								<li class="list-group-item">
+									<span>Voting for branch children:</span>
+									<span>Branch #1, Branch #2, Very long name of the Branch #3</span>
+								</li>
+								<li class="list-group-item">
+									<span>Date Created:</span>
+									<span>2023-03-01, 09:40:23</span>
+								</li>
+								<li class="list-group-item">
+									<span>Date last visit:</span>
+									<span>2023-03-01, 09:40:23</span>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<!-- right -->
+					<div class="col-lg-8 ">
+						<div class="qela-end h-auto">
+							<div class="row gx-3 p-3 align-items-center">
+								<div class="col-sm">
+									<h2>User Talents History</h2>
+								</div>
+								<div class="col-sm-auto">
+									<div class="mb-1">Total value of Originality: </div>
+								</div>
+								<div class="col-sm-auto">
+									<div class="qela-telent lightblue">+ 100 000.0</div>
+								</div>
+							</div>
+							<div class="table-responsive table-qela large">
+								<table class="table table-hover">
+									<thead class="table-light">
+										<tr>
+											<th scope="col"> Date </th>
+											<th scope="col"> Source </th>
+											<th>Link/Reason</th>
+											<th scope="col"> Admin </th>
+											<th class="text-end" width="150" scope="col"> Value </th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												28/07/2023, 14:56
+											</td>
+											<td>Manual</td>
+											<td width="175px">
+												<button type="button" class="qela-clamp p-0 bg-transparent border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="telent-tooltip" data-bs-title="Lorem ipsum dolor sit amet consectetur. Urna rhoncus sem est viverra quisque pellentesque. Tellus mattis eget purus turpis ornare scelerisque auctor massa. Sapien duis morbi arcu tristique tristique egestas dignissim integer. Pharetra ac egestas ut ornare viverra imperdiet euismod ornare proin." style="width: 175px;">Lorem ipsum dolor sit amet consectetur. Urna rhoncus sem est viverra quisque pellentesque. Tellus mattis eget purus turpis ornare scelerisque auctor massa. Sapien duis morbi arcu tristique tristique egestas dignissim integer. Pharetra ac egestas ut ornare viverra imperdiet euismod ornare proin.</button>
+											</td>
+
+											<td width="175">
+												<div class="qela-clamp" style="width: 175px;">alexey.bubymka@hmayl.com</div>
+											</td>
+											<td class="text-end" width="150"><span class="badge qela-badge-telent red">- 6. 0</span></td>
+										</tr>
+										<tr>
+											<td>
+												28/07/2023, 14:56
+											</td>
+											<td>Manual</td>
+											<td width="175px">
+												<button type="button" class="qela-clamp p-0 bg-transparent border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="telent-tooltip" data-bs-title="Lorem ipsum dolor sit amet consectetur. Urna rhoncus sem est viverra quisque pellentesque. Tellus mattis eget purus turpis ornare scelerisque auctor massa. Sapien duis morbi arcu tristique tristique egestas dignissim integer. Pharetra ac egestas ut ornare viverra imperdiet euismod ornare proin." style="width: 175px;">Lorem ipsum dolor sit amet consectetur. Urna rhoncus sem est viverra quisque pellentesque. Tellus mattis eget purus turpis ornare scelerisque auctor massa. Sapien duis morbi arcu tristique tristique egestas dignissim integer. Pharetra ac egestas ut ornare viverra imperdiet euismod ornare proin.</button>
+											</td>
+
+											<td width="175">
+												<div class="qela-clamp" style="width: 175px;">alexey.bubymka@hmayl.com</div>
+											</td>
+											<td class="text-end" width="150"><span class="badge qela-badge-telent green">+ 10 000. 0</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

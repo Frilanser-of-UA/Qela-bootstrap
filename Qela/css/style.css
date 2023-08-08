@@ -12998,6 +12998,34 @@ body {
   }
 }
 
+.qela-btn-slide > :not(.btn-check:first-child) + .btn {
+  margin-left: 0;
+}
+.qela-btn-slide .btn {
+  padding: 4px 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+  --bs-btn-border-width: 0;
+  --bs-btn-border-radius: 0.75rem;
+  color: #adb5bd;
+  transition-duration: 0.2s;
+}
+@media (any-hover: hover) {
+  .qela-btn-slide .btn:hover {
+    color: #fff;
+  }
+}
+.qela-btn-slide .btn:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ced4da;
+}
+.qela-btn-slide .btn:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #adb5bd;
+}
+.qela-btn-slide .btn[class^=ic-]:before, .qela-btn-slide .btn[class*=ic-]:before {
+  font-size: 24px;
+}
+
 .btns-center {
   display: flex;
   justify-content: center;
@@ -14034,38 +14062,63 @@ input::-webkit-inner-spin-button {
   padding: 8px 12px;
   border-radius: 8px;
   line-height: 131%;
+  color: #fff;
 }
-.qela-badge-telent.red {
-  color: #E51D1D;
+.qela-badge-telent.text-red {
+  color: #E24242;
   background-color: #FFF4F4;
 }
-.qela-badge-telent.violet {
-  color: #7B58DF;
+.qela-badge-telent.text-violet {
+  color: #8F6CF1;
   background-color: #F9F7FF;
 }
-.qela-badge-telent.lightgreen {
-  color: #39B349;
+.qela-badge-telent.text-lightgreen {
+  color: #50BE60;
   background-color: #F5FCF7;
 }
-.qela-badge-telent.orange {
-  color: #FA7312;
+.qela-badge-telent.text-orange {
+  color: #F58920;
   background-color: #FFF9F3;
 }
-.qela-badge-telent.green {
-  color: #29917D;
+.qela-badge-telent.text-green {
+  color: #01A888;
   background-color: #F5FAF9;
 }
-.qela-badge-telent.lightblue {
-  color: #0A8FE9;
+.qela-badge-telent.text-lightblue {
+  color: #36A4ED;
   background-color: #F4FCFF;
 }
-.qela-badge-telent.blue {
-  color: #1677E7;
+.qela-badge-telent.text-blue {
+  color: #258BFF;
   background-color: #F4F9FF;
 }
-.qela-badge-telent.pink {
-  color: #C732FC;
+.qela-badge-telent.text-pink {
+  color: #CA4EF5;
   background-color: #FCF4FF;
+}
+.qela-badge-telent.red {
+  background-color: #F16E77;
+}
+.qela-badge-telent.violet {
+  background-color: #A386F2;
+}
+.qela-badge-telent.lightgreen {
+  background-color: #75D182;
+}
+.qela-badge-telent.orange {
+  background-color: #F2A152;
+}
+.qela-badge-telent.green {
+  background-color: #37C3A8;
+}
+.qela-badge-telent.lightblue {
+  background-color: #72C1F4;
+}
+.qela-badge-telent.blue {
+  background-color: #71A9FF;
+}
+.qela-badge-telent.pink {
+  background-color: #CF6EF1;
 }
 .qela-badge-telent.vote {
   color: #000;
@@ -14508,6 +14561,12 @@ input::-webkit-inner-spin-button {
 .qela-telent-nav .nav-link.lightgreen::after {
   border-right-color: #39B349;
 }
+.qela-telent-nav .nav-link.lightblue::before {
+  background-color: #97CFF5;
+}
+.qela-telent-nav .nav-link.lightblue::after {
+  border-right-color: #0A8FE9;
+}
 .qela-telent-nav .nav-link.orange::before {
   background-color: #FFAC5C;
 }
@@ -14578,9 +14637,6 @@ input::-webkit-inner-spin-button {
 }
 .qela-list.info .list-group-item {
   border-color: #f8f9fa;
-  background-color: #f8f9fa;
-}
-.qela-list.info .list-group-item {
   background-color: #f8f9fa;
   transition: background-color 0.3s ease 0s;
 }
@@ -15149,35 +15205,35 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-awards.red .qela-badge {
-  background-color: #EE6666;
+  background-color: #F16E77;
 }
 
 .qela-awards.red .badge-text {
-  color: #EE6666;
+  color: #F16E77;
 }
 
 .qela-awards.violet .qela-badge {
-  background-color: #988AC6;
+  background-color: #A386F2;
 }
 
 .qela-awards.violet .badge-text {
-  color: #988AC6;
+  color: #A386F2;
 }
 
 .qela-awards.green .qela-badge {
-  background-color: #6FBDAE;
+  background-color: #37C3A8;
 }
 
 .qela-awards.green .badge-text {
-  color: #6FBDAE;
+  color: #37C3A8;
 }
 
 .qela-awards.orange .qela-badge {
-  background-color: #DDA466;
+  background-color: #F2A152;
 }
 
 .qela-awards.orange .badge-text {
-  color: #DDA466;
+  color: #F2A152;
 }
 
 .qela-awards.lightgreen .qela-badge {
@@ -15189,27 +15245,27 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-awards.lightblue .qela-badge {
-  background-color: #74B9DF;
+  background-color: #72C1F4;
 }
 
 .qela-awards.lightblue .badge-text {
-  color: #74B9DF;
+  color: #72C1F4;
 }
 
 .qela-awards.blue .qela-badge {
-  background-color: #6E9ADA;
+  background-color: #71A9FF;
 }
 
 .qela-awards.blue .badge-text {
-  color: #6E9ADA;
+  color: #71A9FF;
 }
 
 .qela-awards.pink .qela-badge {
-  background-color: #DA6ECF;
+  background-color: #CF6EF1;
 }
 
 .qela-awards.pink .badge-text {
-  color: #DA6ECF;
+  color: #CF6EF1;
 }
 
 .qela-telent {
@@ -15222,28 +15278,28 @@ input::-webkit-inner-spin-button {
   border: 1px solid transparent;
 }
 .qela-telent.red {
-  background: #E51D1D;
+  background: #F16E77;
 }
 .qela-telent.violet {
-  background: #7B58DF;
+  background: #A386F2;
 }
 .qela-telent.green {
-  background: #29917D;
+  background: #37C3A8;
 }
 .qela-telent.orange {
-  background: #FA7312;
+  background: #F2A152;
 }
 .qela-telent.lightgreen {
-  background: #39B349;
+  background: #75D182;
 }
 .qela-telent.lightblue {
-  background: #0A8FE9;
+  background: #72C1F4;
 }
 .qela-telent.blue {
-  background: #1677E7;
+  background: #71A9FF;
 }
 .qela-telent.pink {
-  background: #C732FC;
+  background: #CF6EF1;
 }
 .qela-telent.outline-red {
   border-color: #FF8484;
@@ -15315,6 +15371,20 @@ input::-webkit-inner-spin-button {
 }
 .qela-telent-text.pink {
   color: #C732FC;
+}
+
+.qela-list-telents .list-group-item {
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+.qela-list-telents .list-group-item + .list-group-item {
+  border-top-width: 1px;
+}
+.qela-list-telents .list-group-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.qela-list-telents .list-group-item > *:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .qela-actions {
