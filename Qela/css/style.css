@@ -12956,6 +12956,8 @@ body {
 
 .qela-burger {
   display: none;
+  border: 0;
+  padding: 0;
 }
 @media (max-width: 767.98px) {
   .qela-burger {
@@ -15449,6 +15451,12 @@ header {
   height: 56px;
   z-index: 3;
   padding-left: 80px;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 767.98px) {
   header {
@@ -15456,11 +15464,57 @@ header {
     padding-right: 16px;
   }
 }
+header .container-fluid, header .container-sm, header .container-md, header .container-lg, header .container-xl, header .container-xxl {
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+header .container-fluid > .row, header .container-sm > .row, header .container-md > .row, header .container-lg > .row, header .container-xl > .row, header .container-xxl > .row {
+  --bs-gutter-x: 0.5rem;
+  height: 100%;
+  position: relative;
+}
+header .container-fluid > .row [class^=col], header .container-sm > .row [class^=col], header .container-md > .row [class^=col], header .container-lg > .row [class^=col], header .container-xl > .row [class^=col], header .container-xxl > .row [class^=col],
+header .container-fluid > .row [class*=col],
+header .container-sm > .row [class*=col],
+header .container-md > .row [class*=col],
+header .container-lg > .row [class*=col],
+header .container-xl > .row [class*=col],
+header .container-xxl > .row [class*=col] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .container-fluid > .row [class^=col]:last-child, header .container-sm > .row [class^=col]:last-child, header .container-md > .row [class^=col]:last-child, header .container-lg > .row [class^=col]:last-child, header .container-xl > .row [class^=col]:last-child, header .container-xxl > .row [class^=col]:last-child,
+header .container-fluid > .row [class*=col]:last-child,
+header .container-sm > .row [class*=col]:last-child,
+header .container-md > .row [class*=col]:last-child,
+header .container-lg > .row [class*=col]:last-child,
+header .container-xl > .row [class*=col]:last-child,
+header .container-xxl > .row [class*=col]:last-child {
+  justify-content: end;
+}
 
 .qela-search {
   display: flex;
   justify-content: flex-end;
   flex: 1 1 auto;
+  margin-left: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .qela-search {
+    display: none;
+  }
+}
+.qela-search.mobile {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .qela-search.mobile {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
 }
 .qela-search > button {
   color: #adb5bd;
@@ -15505,6 +15559,7 @@ header {
   font-size: 24px;
 }
 .qela-notification .qela-badge {
+  position: absolute;
   top: 5px;
   right: 0;
 }
@@ -15512,6 +15567,32 @@ header {
   color: #000;
 }
 
+.qela-user {
+  display: flex;
+  padding-right: 1rem;
+}
+@media (max-width: 767.98px) {
+  .qela-user {
+    padding-right: 0.25rem;
+    display: none;
+  }
+}
+.qela-user.mobile {
+  display: none;
+  padding: 0.5rem 1rem;
+  --bs-gutter-x: 0.5rem;
+}
+.qela-user.mobile [class^=col]:first-child,
+.qela-user.mobile [class*=col]:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 767.98px) {
+  .qela-user.mobile {
+    display: flex;
+  }
+}
 .qela-user > .btn {
   display: flex;
   align-items: center;
@@ -15594,52 +15675,13 @@ header {
     transition: visibility 0s linear 0.3s;
   }
 }
-.qela-menu .nav {
-  padding: 20px;
-}
-@media (max-width: 767.98px) {
-  .qela-menu .nav {
-    padding: 20px 16px;
-  }
-}
-.qela-menu .nav-item:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-.qela-menu .nav-link {
-  padding: 0;
-}
-@media (any-hover: hover) {
-  .qela-menu .nav-link:hover span {
-    color: #000;
-  }
-}
-.qela-menu .nav-link > span {
-  color: #adb5bd;
-  font-weight: 500;
-  transition: color 0.3s ease 0s;
-}
-@media (max-width: 767.98px) {
-  .qela-menu .nav-link > span {
-    font-size: 18px;
-  }
-}
-.qela-menu .nav-link > span:first-child {
-  margin: 0px 20px 0px 0px;
-}
-@media (max-width: 767.98px) {
-  .qela-menu .nav-link > span:first-child {
-    margin: 0px 16px 0px 0px;
-  }
-}
-.qela-menu .nav-link.active span {
-  color: #000;
-}
-.qela-menu .nav-link.active span:first-child {
-  background-color: #FFE000;
-}
-
-.qela-nav {
+.qela-menu .qela-nav {
   z-index: 3;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
 }
 
 .qela-logo {
@@ -15656,8 +15698,83 @@ header {
   overflow-x: hidden;
   flex: 1 1 auto;
   background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.qela-nav__wrapper .nav {
+  padding: 20px;
+  flex-direction: column;
+}
+.qela-nav__wrapper .nav:first-child {
+  margin-bottom: auto;
+}
+.qela-nav__wrapper .nav:last-child {
+  padding-top: 0;
+}
+@media (max-width: 767.98px) {
+  .qela-nav__wrapper .nav {
+    padding: 20px 16px;
+  }
+}
+.qela-nav__wrapper .nav-item:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+.qela-nav__wrapper .nav-link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+@media (any-hover: hover) {
+  .qela-nav__wrapper .nav-link:hover span {
+    color: #000;
+  }
+}
+.qela-nav__wrapper .nav-link > span {
+  color: #adb5bd;
+  font-weight: 500;
+  transition: color 0.3s ease 0s;
+}
+@media (max-width: 767.98px) {
+  .qela-nav__wrapper .nav-link > span {
+    font-size: 18px;
+  }
+}
+.qela-nav__wrapper .nav-link [class^=ic-],
+.qela-nav__wrapper .nav-link [class*=ic-] {
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin: 0px 20px 0px 0px;
+}
+.qela-nav__wrapper .nav-link [class^=ic-].quantity,
+.qela-nav__wrapper .nav-link [class*=ic-].quantity {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.qela-nav__wrapper .nav-link [class^=ic-].quantity .badge,
+.qela-nav__wrapper .nav-link [class*=ic-].quantity .badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+@media (max-width: 767.98px) {
+  .qela-nav__wrapper .nav-link [class^=ic-],
+.qela-nav__wrapper .nav-link [class*=ic-] {
+    margin: 0px 16px 0px 0px;
+  }
+}
+.qela-nav__wrapper .nav-link.active [class^=ic-],
+.qela-nav__wrapper .nav-link.active [class*=ic-] {
+  background-color: #FFE000;
+}
+.qela-nav__wrapper .nav-link.active span {
+  color: #000;
 }
 
+.qela-menu {
+  height: 100%;
+}
 .qela-menu .qela-badge.small {
   transform: translate(0%, 0%);
 }

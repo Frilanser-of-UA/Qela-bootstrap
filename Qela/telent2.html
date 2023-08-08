@@ -10,19 +10,19 @@
 </head>
 
 <body class="qela-body">
-	<header class="bg-white w-100 position-fixed top-0 start-0 qela-shadow">
-	<div class="container-fluid h-100 px-0">
-		<div class="row h-100 position-relative gx-2">
+	<header>
+	<div class="container-fluid">
+		<div class="row">
 			<!-- item whith title and button burger-->
-			<div class="col-10 col-xl-auto col-md-8 d-flex align-items-center gap-3">
-				<button class="qela-burger border-0 p-0">
+			<div class="col-10 col-xl-auto col-md-8 gap-3">
+				<button class="qela-burger">
 					<img src="img/burger.svg" width="24" height="40" alt="burger button">
 				</button>
 				<h1 class="h5 qela-clamp">User > Change Talent</h1>
 			</div>
-			<div class="col-2 col-xl col-md-4 d-flex align-items-center gap-2 justify-content-end">
+			<div class="col-2 col-xl col-md-4">
 				<!--FIX form search -->
-				<form class="qela-search d-none d-md-flex ms-4" role="search">
+				<form class="qela-search" role="search">
 					<div class="qela-search__wrapper">
 						<div class="input-group">
 							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
@@ -33,10 +33,10 @@
 				</form>
 				<!--FIX badge -->
 				<button type="button" class="btn ic-bell p-2 qela-notification active">
-					<span class="position-absolute badge rounded-pill text-bg-danger qela-badge small">25</span>
+					<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
 				</button>
 				<!--FIX user -->
-				<div class="dropdown qela-user d-none d-md-flex pe-1 pe-mb-3">
+				<div class="dropdown qela-user">
 					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user">
 					</button>
@@ -69,23 +69,23 @@
 		</div>
 	</div>
 	<!--FIX menu -->
-	<div class="h-100 qela-menu">
+	<div class="qela-menu">
 		<!--FIX buttons -->
 		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
 		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button>
-		<nav class="d-flex flex-column position-relative h-100 qela-nav bg-white">
+		<nav class="qela-nav">
 			<!--FIX mobile logo -->
 			<a class="navbar-brand qela-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40"></a>
 			<!--FIX mobile search -->
-			<form class="flex-grow-1 py-2 px-3 d-block d-md-none" role="search">
+			<form class="qela-search mobile" role="search">
 				<div class="input-group">
 					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
 					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
 				</div>
 			</form>
 			<!--FIX mobile user -->
-			<div class="py-2 px-3 row gx-2 d-flex d-md-none">
-				<div class="col d-flex align-items-center gap-3">
+			<div class="row qela-user mobile">
+				<div class="col">
 					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user">
 					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
 				</div>
@@ -94,81 +94,81 @@
 				</div>
 			</div>
 			<!--FIX nav wrapper -->
-			<div class="qela-nav__wrapper d-flex flex-column position-relative">
-				<ul class="nav flex-column mb-auto">
+			<div class="qela-nav__wrapper">
+				<ul class="nav">
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center active" aria-current="page">
-							<span class="ic-spead p-2 rounded-5"></span>
+						<a href="#" class="nav-link active" aria-current="page">
+							<span class="ic-spead"></span>
 							<span>Дашборд</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-people p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-people"></span>
 							<span>Користувачі</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-box-arrow p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-box-arrow"></span>
 							<span>Голосування</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-notes p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-notes"></span>
 							<span>Новини</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-calendar p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-calendar"></span>
 							<span>Квести</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-dollar p-2 rounded-5 position-relative">
-								<span class="position-absolute top-0 start-50 badge rounded-pill text-bg-danger qela-badge small">25</span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-dollar quantity">
+								<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
 							</span>
 							<span>Донати</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-lattice p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-lattice"></span>
 							<span>Теги</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-speaker p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-speaker"></span>
 							<span>Маркетинг</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-jostik p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-jostik"></span>
 							<span>Гейміфікація</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-city p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-city"></span>
 							<span>Організація</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-tent p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-tent"></span>
 							<span>Магазин</span>
 						</a>
 					</li>
 				</ul>
-				<ul class="nav flex-column pt-0">
+				<ul class="nav">
 					<li class="nav-item">
-						<a href="#" class="nav-link d-flex align-items-center" aria-current="page">
-							<span class="ic-settings p-2 rounded-5"></span>
+						<a href="#" class="nav-link" aria-current="page">
+							<span class="ic-settings"></span>
 							<span>Налаштування</span>
 						</a>
 					</li>
