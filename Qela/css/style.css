@@ -15163,6 +15163,7 @@ input::-webkit-inner-spin-button {
 }
 .qela-description.active {
   display: block;
+  height: auto;
 }
 
 .qela-card.card {
