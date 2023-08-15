@@ -14000,6 +14000,33 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0;
 }
 
+.qela-votes {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  color: #343a40;
+}
+@media (max-width: 1200px) {
+  .qela-votes {
+    flex-wrap: wrap;
+  }
+}
+.qela-votes .qela-vote {
+  padding-left: 0.5rem;
+}
+.qela-votes > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.qela-votes > div:first-child {
+  align-items: flex-end;
+}
+.qela-votes > div:last-child {
+  align-self: flex-start;
+  color: #6c757d;
+}
+
 @media (min-width: 576px) {
   .qela-modal-xl.modal-xl {
     --bs-modal-width: 962px;
@@ -14856,6 +14883,18 @@ input::-webkit-inner-spin-button {
 }
 .qela-flush .list-group-item a {
   text-decoration: none;
+}
+.qela-flush .qela-comment {
+  justify-content: space-between;
+  align-items: baseline;
+}
+.qela-flush .qela-comment > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.qela-flush .qela-comment > div p {
+  margin: 0px 0px 10px 0px;
 }
 
 .tooltip-inner {
