@@ -15163,9 +15163,35 @@ input::-webkit-inner-spin-button {
   width: var(--img-size);
   height: var(--img-size);
   flex: 0 0 var(--img-size);
-  overflow: hidden;
   border-radius: 50%;
   border: 1px solid #e9ecef;
+}
+.qela-avatar img {
+  border-radius: 50%;
+}
+.qela-avatar.online, .qela-avatar.online-sm {
+  position: relative;
+}
+.qela-avatar.online::before, .qela-avatar.online-sm::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background-color: #30ce57;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.qela-avatar.online::before {
+  width: 13px;
+  height: 13px;
+  right: 8px;
+  bottom: 8px;
+}
+.qela-avatar.online-sm::before {
+  width: 10px;
+  height: 10px;
+  right: 1px;
+  bottom: 1px;
 }
 
 .qela-ibg {
