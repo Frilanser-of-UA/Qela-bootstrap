@@ -12550,6 +12550,11 @@ body {
   }
 }
 
+.qela-stiky {
+  position: sticky;
+  top: 0;
+}
+
 .qela-rounded-st {
   border-top-left-radius: 0.5rem !important;
 }
