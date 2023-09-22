@@ -15801,6 +15801,44 @@ input::-webkit-inner-spin-button {
   color: #adb5bd;
 }
 
+.qela-status-badge {
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 20px;
+}
+.qela-status-badge[class*=ic-]::before {
+  font-size: 20px;
+  margin: 0px 4px 0px 0px;
+}
+.qela-status-badge.secondary {
+  color: #6e63fa;
+  border: 1px solid #bdb8ff;
+  background: #f9f9ff;
+}
+.qela-status-badge.success {
+  color: #26a546;
+  border: 1px solid #59d879;
+  background: #f5fdf7;
+}
+.qela-status-badge.warning {
+  color: #ff6b00;
+  border: 1px solid #ffaf66;
+  background: #fff8f2;
+}
+.qela-status-badge.circel {
+  padding: 0;
+  border-width: 0;
+}
+.qela-status-badge.circel[class*=ic-]::before {
+  margin: 0;
+}
+
 header {
   height: 56px;
   z-index: 3;
