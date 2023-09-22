@@ -1396,12 +1396,12 @@
 
 .text-success-300 {
   --bs-text-opacity: 1;
-  color: #83e29a !important;
+  color: #a2eab3 !important;
 }
 
 .text-success-400 {
   --bs-text-opacity: 1;
-  color: #59d879 !important;
+  color: #79d891 !important;
 }
 
 .text-success-500 {
@@ -1742,12 +1742,12 @@
 
 .bg-success-300 {
   --bs-bg-opacity: 1;
-  background-color: #83e29a !important;
+  background-color: #a2eab3 !important;
 }
 
 .bg-success-400 {
   --bs-bg-opacity: 1;
-  background-color: #59d879 !important;
+  background-color: #79d891 !important;
 }
 
 .bg-success-500 {
@@ -12820,7 +12820,7 @@ body {
 }
 
 .btn-outline-success {
-  border-color: #83e29a;
+  border-color: #a2eab3;
 }
 .btn-outline-success:hover {
   color: #30ce57;
@@ -15823,7 +15823,7 @@ input::-webkit-inner-spin-button {
 }
 .qela-status-badge.success {
   color: #26a546;
-  border: 1px solid #59d879;
+  border: 1px solid #79d891;
   background: #f5fdf7;
 }
 .qela-status-badge.warning {
