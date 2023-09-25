@@ -12532,6 +12532,11 @@ body {
   display: -webkit-box;
 }
 
+.qela-clamp-btn {
+  white-space: normal;
+  display: -webkit-box;
+}
+
 .qela-pad-r {
   padding-right: 65px;
 }
@@ -13147,6 +13152,10 @@ body {
 }
 .form-control.is-invalid ~ .helper-text {
   display: none;
+}
+
+textarea {
+  color: #495057;
 }
 
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
@@ -14848,7 +14857,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0.5rem;
 }
 .qela-list .list-group-item > *:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 @media (any-hover: hover) {
   .qela-list .list-group-item:hover > a p {
@@ -14962,8 +14971,15 @@ input::-webkit-inner-spin-button {
     gap: 8px;
   }
 }
+.qela-flush .list-group-item > * {
+  font-size: 14px;
+}
 .qela-flush .list-group-item > *:first-child {
   color: #6c757d;
+  flex: 0 0 37%;
+}
+.qela-flush .list-group-item > *:last-child {
+  color: #212529;
   flex: 0 0 37%;
 }
 .qela-flush .list-group-item a {
@@ -15299,6 +15315,7 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-description {
+  color: #495057;
   height: 92px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -15868,6 +15885,60 @@ input::-webkit-inner-spin-button {
   height: 28px;
 }
 
+.qela-subscription {
+  border-color: #ced4da;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #212529;
+  transition: border-color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s;
+  background-color: #fff;
+}
+@media (any-hover: hover) {
+  .qela-subscription:hover {
+    border-color: #9188ff;
+  }
+}
+.qela-subscription.current {
+  border-color: #2bb94e;
+}
+.qela-subscription.current .qela-price {
+  color: #2bb94e;
+}
+.qela-subscription.coming-soon {
+  border-color: #e9ecef;
+  background-color: #f8f9fa;
+}
+.qela-subscription .card-header {
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+}
+.qela-subscription .card-header,
+.qela-subscription .card-footer {
+  border: 0;
+}
+.qela-subscription .card-body,
+.qela-subscription .card-footer {
+  background-color: transparent;
+}
+.qela-subscription .card-body {
+  padding: 1.5rem 1rem;
+}
+.qela-subscription .card-footer {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.qela-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #9188ff;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  gap: 2px;
+  transition: color 0.3s ease-out 0s;
+}
+
 header {
   height: 56px;
   z-index: 3;
@@ -16309,4 +16380,9 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-novector::before {
   font-size: 16px;
+}
+
+.qela-sticky {
+  position: sticky;
+  top: 0;
 }
