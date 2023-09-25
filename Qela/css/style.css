@@ -15839,6 +15839,35 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.qela-under {
+  padding: 4rem 1rem 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #212529;
+}
+.qela-under > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.qela-under small, .qela-under .small {
+  color: #495057;
+}
+.qela-under img {
+  width: 39px;
+  height: 39px;
+}
+.qela-under .btn {
+  margin-top: 1rem;
+}
+.qela-under.small small, .qela-under.small .small {
+  font-size: 12px;
+}
+.qela-under.small img {
+  width: 28px;
+  height: 28px;
+}
+
 header {
   height: 56px;
   z-index: 3;
