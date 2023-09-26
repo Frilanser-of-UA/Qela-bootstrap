@@ -12267,6 +12267,30 @@ textarea.form-control-lg {
   content: "\e999";
 }
 
+.ic-chevron-sm:before {
+  content: "\e99a";
+}
+
+.ic-triangle-2-up:before {
+  content: "\e99b";
+}
+
+.ic-triangle-2-down-right:before {
+  content: "\e99c";
+}
+
+.ic-chevron-down-right:before {
+  content: "\e99d";
+}
+
+.ic-bill:before {
+  content: "\e99e";
+}
+
+.ic-triangle-2-down:before {
+  content: "\e99f";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
@@ -12579,11 +12603,11 @@ body {
 .h-100vh {
   height: calc(100vh - (var(--body-pad-top) + 1rem + 1rem));
   overflow-x: hidden;
+  overflow-y: auto;
 }
 @media (max-width: 990.98px) {
   .h-100vh {
     height: auto;
-    overflow-x: auto;
   }
 }
 
@@ -12610,6 +12634,118 @@ body {
 }
 .qela-vote .badge {
   margin-left: 1rem;
+}
+
+.qela-help {
+  display: flex;
+  margin-top: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  .qela-help {
+    flex-direction: column;
+  }
+}
+.qela-help .nav {
+  padding-top: 1rem;
+  flex: 0 0 230px;
+  flex-direction: column;
+  border-right: 1px solid #ced4da;
+  background: #fff;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  .qela-help .nav {
+    border-right: none;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+  }
+}
+.qela-help .nav .nav-item ul {
+  padding: 0;
+}
+.qela-help .nav .nav-item ul li {
+  list-style: none;
+}
+.qela-help .nav .nav-item ul li .nav-link {
+  padding-left: 40px;
+}
+.qela-help .nav .nav-item ul li .nav-link.current {
+  background-color: #e9ecef;
+}
+.qela-help .nav .nav-link {
+  padding: 0.375rem 1rem;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-out 0s;
+}
+.qela-help .nav .nav-link::before {
+  font-size: 20px;
+  margin: 0px 4px 0px 0px;
+  color: #adb5bd;
+  transition: color 0.3s ease-out 0s, transform 0.3s ease-out 0s;
+}
+.qela-help .nav .nav-link.active::before {
+  transform: rotate(-45deg);
+}
+.qela-help .nav .nav-link.active.current {
+  background-color: #e9ecef;
+}
+.qela-help .nav .nav-link.current {
+  color: #6e63fa;
+}
+.qela-help .nav .nav-link.current::before {
+  color: #6e63fa;
+}
+.qela-help .nav .nav-link.child-no.active.current {
+  background-color: transparent;
+}
+.qela-help .nav .nav-link.child-no.current::before {
+  transform: rotate(0deg);
+}
+@media (any-hover: hover) {
+  .qela-help .nav .nav-link:hover {
+    color: #6e63fa;
+  }
+  .qela-help .nav .nav-link:hover::before {
+    color: #6e63fa;
+  }
+}
+.qela-help .card {
+  text-decoration: none;
+  padding: 1.5rem;
+  color: #212529;
+  border-color: #dee2e6;
+  background-color: #f8f9fa;
+  transition: color 0.3s ease-out 0s;
+}
+.qela-help .card [class*=ic-] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  color: #495057;
+  font-size: 14px;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease-out 0s;
+}
+.qela-help .card [class*=ic-]::before {
+  font-size: 20px;
+}
+@media (any-hover: hover) {
+  .qela-help .card:hover {
+    color: #6e63fa;
+  }
+  .qela-help .card:hover [class*=ic-] {
+    color: #9188ff;
+  }
 }
 
 .btn {
@@ -16385,4 +16521,48 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-sticky {
   position: sticky;
   top: 0;
+}
+
+.text-editor {
+  padding: 1.5rem 0;
+}
+.text-editor h2, .text-editor .h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  padding-bottom: 1rem;
+}
+.text-editor h2:not(:first-child), .text-editor .h2:not(:first-child) {
+  padding-top: 2rem;
+}
+.text-editor a {
+  text-decoration: none;
+  color: #6e63fa;
+}
+.text-editor img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding-bottom: 1.5rem;
+}
+.text-editor ul {
+  padding-left: 0;
+}
+.text-editor ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+.text-editor ul li::before {
+  content: "\e99a";
+  font-family: "icons";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 14px;
+  color: #9188ff;
+}
+.text-editor ol {
+  padding-left: 1.5rem;
 }
