@@ -13279,12 +13279,12 @@ body {
   border-color: #ff453a;
 }
 .form-control.is-invalid ~ .btn-input:hover {
-  border-color: #ff453a;
-  color: #ff453a;
+  color: #000;
+  border-color: #ced4da;
 }
 .form-control.is-invalid ~ .btn-input:active {
-  color: #ff453a !important;
-  border-color: #ff453a !important;
+  color: #000 !important;
+  border-color: #ced4da !important;
 }
 .form-control.is-invalid ~ .helper-text {
   display: none;
