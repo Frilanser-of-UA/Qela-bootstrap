@@ -12748,6 +12748,24 @@ body {
   }
 }
 
+.qela-device-alert {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.qela-device-alert img {
+  width: 120px;
+  margin: 42px 0;
+}
+.qela-device-alert h5, .qela-device-alert .h5 {
+  margin-bottom: 1rem;
+}
+.qela-device-alert p {
+  color: #212529;
+}
+.qela-device-alert button {
+  margin-top: 1.5rem;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
