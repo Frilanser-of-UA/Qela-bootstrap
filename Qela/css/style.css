@@ -14473,6 +14473,64 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
 }
 
+.qela-progress-new {
+  height: 26px;
+}
+.qela-progress-new .label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: transparent;
+  color: #212529;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+.qela-progress-new .progress-bar {
+  position: absolute;
+  height: 100%;
+}
+.qela-progress-new .progress-bar:last-child {
+  z-index: 1;
+}
+.qela-progress-new .progress-bar:nth-child(2) {
+  z-index: 2;
+}
+.qela-progress-new .progress-bar:first-child {
+  z-index: 3;
+}
+.qela-progress-new button {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.progressbar-tooltip {
+  padding: 8px;
+}
+.progressbar-tooltip .tooltip-inner {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
+}
+.progressbar-tooltip .tooltip-arrow {
+  --bs-tooltip-arrow-width: 1rem;
+  --bs-tooltip-arrow-height: 0.5rem;
+}
+
 .qela-progress {
   min-width: 150px;
   position: relative;
