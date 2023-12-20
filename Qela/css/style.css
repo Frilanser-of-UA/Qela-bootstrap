@@ -1104,7 +1104,7 @@
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: 600 !important;
 }
 
 .lh-1 {
@@ -5803,7 +5803,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 small, .small {
@@ -12307,6 +12307,10 @@ textarea.form-control-lg {
   content: "\e9a3";
 }
 
+.ic-credit-card:before {
+  content: "\e9a4";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
@@ -15208,7 +15212,7 @@ input::-webkit-inner-spin-button {
 }
 .qela-flush .list-group-item > *:last-child {
   color: #212529;
-  flex: 0 0 37%;
+  flex: 0 1 auto;
 }
 .qela-flush .list-group-item a {
   text-decoration: none;
@@ -15224,6 +15228,22 @@ input::-webkit-inner-spin-button {
 }
 .qela-flush .qela-comment > div p {
   margin: 0px 0px 10px 0px;
+}
+
+.qela-plan .list-group-item {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 14px;
+  padding: 0;
+  border: none;
+}
+.qela-plan .list-group-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.qela-plan .list-group-item > * {
+  color: #343a40;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 130%;
 }
 
 .tooltip-inner {
