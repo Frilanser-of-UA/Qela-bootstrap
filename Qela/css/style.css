@@ -10188,7 +10188,7 @@ textarea.form-control-lg {
   --bs-badge-padding-x: 0.25rem;
   --bs-badge-padding-y: 0.25rem;
   --bs-badge-font-size: 0.75rem;
-  --bs-badge-font-weight: 500;
+  --bs-badge-font-weight: 400;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: 0.25rem;
   display: inline-block;
@@ -13568,6 +13568,9 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   min-height: 38px;
 }
+.multiselect__option {
+  font-size: 14px;
+}
 .multiselect.multiselect--disabled {
   opacity: 1;
 }
@@ -14330,6 +14333,17 @@ input::-webkit-inner-spin-button {
   display: block;
 }
 
+.badge[class*=ic-] {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.badge[class*=ic-]::before {
+  margin-left: 2px;
+  font-size: 16px;
+}
 .badge.message {
   font-size: 11px;
   font-weight: 600;
@@ -14338,20 +14352,23 @@ input::-webkit-inner-spin-button {
   border-radius: 6px;
 }
 .badge.large {
-  padding: 5px 6px;
-  font-size: 15px;
+  padding: 5.5px 6px;
+  font-size: 14px;
+}
+.badge.large[class*=ic-] {
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+}
+.badge.large[class*=ic-]::before {
+  margin-left: 5px;
 }
 .badge.large-xl {
-  padding: 10.5px 12px;
+  padding: 8px 12px;
   font-size: 16px;
   border-radius: 8px;
+  line-height: 131%;
 }
-.badge[class^=ic-], .badge[class*=ic-] {
-  display: inline-flex;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.badge[class^=ic-]::before, .badge[class*=ic-]::before {
+.badge.large-xl[class*=ic-]::before {
   margin-left: 10px;
   font-size: 20px;
 }
@@ -14397,15 +14414,6 @@ input::-webkit-inner-spin-button {
   color: #ff9533;
 }
 
-.qela-badge-telent {
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  line-height: 131%;
-  color: #fff;
-  min-width: 37px;
-  text-align: center;
-}
 .qela-badge-telent.text-red {
   color: #e24242;
   background-color: #fff4f4;
@@ -14467,16 +14475,18 @@ input::-webkit-inner-spin-button {
   background-color: #F7EFC0;
   display: inline-flex;
   align-items: center;
-  padding: 6.5px 8px 6.5px 12px;
 }
-.qela-badge-telent.vote.img {
-  padding: 4.5px;
+.qela-badge-telent.vote.large-xl.img {
+  position: relative;
+  padding-right: 40px;
 }
-.qela-badge-telent.vote.img img {
+.qela-badge-telent.vote.large-xl.img img {
+  width: 28px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   margin-left: 0;
-}
-.qela-badge-telent.vote img {
-  margin-left: 4px;
 }
 
 .page-item.active {
