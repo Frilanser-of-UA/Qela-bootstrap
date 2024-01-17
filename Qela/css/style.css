@@ -12311,6 +12311,10 @@ textarea.form-control-lg {
   content: "\e9a4";
 }
 
+.ic-tag:before {
+  content: "\e9a5";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
