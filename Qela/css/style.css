@@ -14761,7 +14761,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .qela-nav-item .nav-link.success::before {
-  content: "\e953";
+  content: "\e965";
   font-family: "Icons";
   font-size: 16px;
   border: 3px solid #e5e3ff;
@@ -14780,7 +14780,7 @@ input::-webkit-inner-spin-button {
   color: #212529;
 }
 .qela-nav-item .nav-link.error::before {
-  content: "\e92c";
+  content: "\e93e";
   font-family: "Icons";
   font-size: 16px;
   border: 3px solid #fff4f5;
