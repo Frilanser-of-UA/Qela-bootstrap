@@ -14450,6 +14450,10 @@ input::-webkit-inner-spin-button {
   color: #ca4ef5;
   background-color: #fcf4ff;
 }
+.qela-badge-telent.text-gray {
+  color: #495057;
+  background-color: #f8f9fa;
+}
 .qela-badge-telent.red {
   background-color: #f16e77;
 }
