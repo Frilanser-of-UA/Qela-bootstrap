@@ -16211,7 +16211,7 @@ input::-webkit-inner-spin-button {
 
 header {
   height: 56px;
-  z-index: 3;
+  z-index: 100;
   padding-left: 80px;
   background-color: #fff;
   width: 100%;
