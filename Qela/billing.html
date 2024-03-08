@@ -74,9 +74,8 @@
     </div>
 </header>
     <main class="qela-main py-3">
-        <div class="container">
+        <div class="container-xxl">
             <div class="qela-page qela-wrap">
-                <!-- left -->
                 <div class="row g-3">
                     <div class="col-12">
                         <div class="alert alert-danger qela-alert fade show ">
@@ -86,7 +85,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
+                     <!-- left -->
+                    <div class="col-lg-4">
                         <div class="qela-start"><!-- block whtith avatar + name-->
                             <div class="position-relative">
                                 <button type="button"
@@ -112,9 +112,10 @@
                                         09:40:23</span></li>
                             </ul>
                         </div>
-                    </div><!-- right -->
-                    <div class="col-xl-8">
-                        <div class="qela-end ">
+                    </div>
+                    <!-- right -->
+                    <div class="col-lg-8">
+                        <div class="qela-end">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item" role="presentation"><button class="nav-link">Roles</button>
                                 </li>
@@ -127,10 +128,10 @@
                             </ul>
                             <div class="py-4 px-3">
                                 <div class="row g-3">
-                                    <div class="col-xl-8 ">
+                                    <div class="col-lg-8 ">
                                         <div class="p-3 border rounded">
                                             <div class="row justify-content-center">
-                                                <div class="col-xl-10">
+                                                <div class="col-lg-10">
                                                     <!-- balance -->
                                                     <div class="d-flex justify-content-end gap-2 pb-3">
                                                         <span class="h2">Balance:</span>
@@ -149,22 +150,17 @@
                                                                 placeholder="Name">
                                                             <div class="invalid-feedback">Error text</div>
                                                         </div>
-                                                        <div class="helper-text mt-2">$950 according to Your Pricing
-                                                            Plan
-                                                        </div>
                                                     </div>
                                                     <!-- btns -->
                                                     <div class="d-grid gap-2 py-4">
                                                         <div class="text-center text-info-900">Pay with</div>
                                                         <button class="btn btn-secondary ico-left ic-text-doc"
                                                             type="button">Invoice</button>
-                                                        <button class="btn btn-secondary ico-left ic-credit-card"
+                                                        <button class="btn btn-secondary ico-left ic-credit-card disabled"
                                                             type="button">Card</button>
-                                                        <button class="btn btn-info" type="button">Chose more payment
-                                                            options </button>
                                                     </div>
                                                     <!-- credit logos -->
-                                                    <div class="px-2 d-flex gap-1 flex-wrap justify-content-center">
+                                                    <!-- <div class="px-2 d-flex gap-1 flex-wrap justify-content-center">
                                                         <img src="img/credits-logo/PayPal.svg" alt="PayPal">
                                                         <img src="img/credits-logo/Stripe.svg" alt="Stripe">
                                                         <img src="img/credits-logo/GooglePay.svg" alt="GooglePay">
@@ -173,54 +169,96 @@
                                                         <img src="img/credits-logo/Discover.svg" alt="Discover">
                                                         <img src="img/credits-logo/Amex.svg" alt="Amex">
                                                         <img src="img/credits-logo/Visa.svg" alt="Visa">
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="col-xl-4">
-                                        <div class="p-3 border rounded h-100 d-flex flex-column">
+                                    <div class="col-lg-4">
+                                        <div class="p-3 border rounded bg-body h-100 d-flex flex-column">
                                             <h5 class="pb-3">Your Pricing Plan</h5>
-                                            <ul class="list-group list-group-flush qela-plan">
-                                                <li class="list-group-item">
-                                                    <span class="flex-grow-1"><small>Your Pricing Plan</small><br>
-                                                        <small> 101 - 1 000 users</small></span>
-                                                    <span class="text-end "><small class="fw-bolder">
+                                            <ul class="list-group list-group-flush qela-plan flex-grow-1">
+                                                <li class="list-group-item bg-body">
+                                                    <span class="flex-grow-1 fw-semibold">
+                                                        <small>101 - 1 000 users</small>
+                                                    </span>
+                                                    <span class="text-end ">
+                                                        <small class="fw-semibold">
                                                             $350.00</small><br>
                                                         <small> /month</small></span>
                                                 </li>
-                                                <li class="list-group-item">
-                                                    <span class="flex-grow-1"><small>Donations</small>
+                                                <li class="list-group-item bg-body">
+                                                    <span class="flex-grow-1"><small class="fw-semibold">Total</small>
                                                     </span>
-                                                    <span class="text-end "><small class="fw-bolder">
-                                                            $500.00</small>
-                                                    </span>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="flex-grow-1"><small>Service name</small>
-                                                    </span>
-                                                    <span class="text-end "><small class="fw-bolder">
-                                                            $100.00</small>
-                                                    </span>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="flex-grow-1"><small class="fw-bolder">Total</small>
-                                                    </span>
-                                                    <span class="text-end "><small class="fw-bolder">
+                                                    <span class="text-end "><small class="fw-semibold">
                                                             $950.00</small>
                                                     </span>
                                                 </li>
                                             </ul>
-                                            <div class="p-3 flex-grow-1 d-flex align-items-end">
+                                            <ul class="list-group list-group-flush qela-plan ">
+                                                <li class="list-group-item bg-body">
+                                                    <span class="flex-grow-1"><small class="fw-semibold">Next Billing</small>
+                                                    </span>
+                                                    <span class="text-end "><small class="fw-semibold">
+                                                        3/5/2024</small>
+                                                    </span>
+                                                </li>
+                                                <li class="list-group-item bg-body">
+                                                    <span class="flex-grow-1"><small>You joined Qela</small>
+                                                    </span>
+                                                    <span class="text-end "><small>
+                                                        12/5/2023</small>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <!-- <div class="p-3 flex-grow-1 d-flex align-items-end">
                                                 <div class="text-secondary fw-semibold text-center w-100">details
                                                 </div>
-                                            </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between pb-3">
+                                            <span class="fw-semibold">Payment details</span>
+                                            <span class="fw-semibold text-secondary">more</span>
+                                        </div>
+                                        <div class="table-responsive table-qela">
+                                            <table class="table table-hover ">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="ps-0">Date</th>
+                                                        <th>Info</th>
+                                                        <th>Period</th>
+                                                        <th class="text-end">Dropped</th>
+                                                        <th class="text-end">Paid</th>
+                                                        <th class="pe-0">Method</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="ps-0">
+                                                            <span>1.02.2024 12:30</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>Нараховано за <a class="text-decoration-none fw-semibold" href="#">період</a></span>
+                                                        </td>
+                                                        <td>5.01.2024 - 4.02.2024</td>
+                                                        <td class="text-end"></td>
+                                                        <td class="text-success-500 text-end">2 100. 00</td>
+                                                        <td>
+                                                            <img src="img/credits-logo/Mastercard.svg" class="me-2" alt="Mastercard">
+                                                            <span>44 ....3644</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6" class="text-center py-4 ps-0 fs-6">There is no data yet</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
