@@ -12519,7 +12519,7 @@ body {
 .qela-end > div:first-child {
   padding: 2rem 1rem 0 1rem;
 }
-.qela-end h2, .qela-end .h2 {
+.qela-end > h2, .qela-end > .h2 {
   margin-bottom: 0;
   align-self: flex-start;
   font-size: 20px;
@@ -12785,6 +12785,16 @@ body {
 }
 .qela-device-alert button {
   margin-top: 1.5rem;
+}
+
+.qela-benifist {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffc700;
+}
+.qela-benifist ul li::before {
+  content: "";
 }
 
 .btn {
@@ -16156,24 +16166,14 @@ input::-webkit-inner-spin-button {
   border-color: #ced4da;
   padding: 1.5rem 0;
   text-align: center;
-  color: #212529;
+  color: #343a40;
+  min-height: 245px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: border-color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s;
   background-color: #fff;
-}
-@media (any-hover: hover) {
-  .qela-subscription:hover {
-    border-color: #9188ff;
-  }
-}
-.qela-subscription.current {
-  border-color: #2bb94e;
-}
-.qela-subscription.current .qela-price {
-  color: #2bb94e;
-}
-.qela-subscription.coming-soon {
-  border-color: #e9ecef;
-  background-color: #f8f9fa;
 }
 .qela-subscription .card-header {
   padding: 0.5rem 1rem;
@@ -16193,13 +16193,20 @@ input::-webkit-inner-spin-button {
 .qela-subscription .card-footer {
   padding: 1rem 1rem 0 1rem;
 }
+.qela-subscription .card-footer [class*=ic-] {
+  padding-bottom: 0.5rem;
+}
+.qela-subscription .card-footer [class*=ic-]::before {
+  font-size: 20px;
+  color: #9188ff;
+}
 
 .qela-price {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #9188ff;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 120%;
   gap: 2px;
