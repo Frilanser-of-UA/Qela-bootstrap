@@ -14151,25 +14151,52 @@ input::-webkit-inner-spin-button {
   position: relative;
   font-size: 14px;
   letter-spacing: 0.2px;
+  border-width: 1px;
+  border-style: solid;
 }
-.qela-alert.alert span[class^=ic-],
-.qela-alert.alert span [class*=ic-] {
+.qela-alert.alert span[class*=ic-] {
   position: absolute;
   left: 16px;
   top: 1rem;
 }
-.qela-alert.alert span[class^=ic-]::before,
-.qela-alert.alert span [class*=ic-]::before {
+.qela-alert.alert span[class*=ic-]::before {
   font-size: 16px;
 }
 .qela-alert.alert a {
   text-decoration: none;
 }
+.qela-alert.custom {
+  text-align: center;
+}
+.qela-alert.custom.alert-secondary {
+  border-color: transparent;
+}
+.qela-alert.custom span[class*=ic-] {
+  position: static;
+  padding-bottom: 0.5rem;
+}
+.qela-alert.custom span[class*=ic-]::before {
+  font-size: 38px;
+}
+.qela-alert.alert-secondary {
+  background-color: #f4f3ff;
+  border-color: #bdb8ff;
+}
 .qela-alert.alert-danger {
   background-color: #ffe9ea;
+  border-color: #ff6a61;
 }
 .qela-alert.alert-warning {
-  --bs-alert-bg: $warning-100;
+  background-color: #fff2e5;
+  border-color: #ffaf66;
+}
+.qela-alert.alert-info {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+}
+.qela-alert.alert-success {
+  background-color: #f5fdf7;
+  border-color: #79d891;
 }
 .qela-alert.small {
   padding: 0.5rem 2.25rem;
