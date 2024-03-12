@@ -12617,6 +12617,10 @@ body {
   border-bottom-right-radius: 0.5rem !important;
 }
 
+.qela-rounded-12 {
+  border-radius: 12px !important;
+}
+
 .word-break {
   word-break: break-word !important;
 }
@@ -12793,8 +12797,25 @@ body {
   border-radius: 8px;
   border: 1px solid #ffc700;
 }
+.qela-benifist ul {
+  padding-left: 0;
+  padding-bottom: 16px;
+}
+.qela-benifist ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 8px;
+}
 .qela-benifist ul li::before {
   content: "";
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  top: 3px;
+  left: 5px;
+  background: url("../img/icons/marcer-list.svg") center/100% no-repeat;
 }
 
 .btn {
