@@ -14402,6 +14402,7 @@ input::-webkit-inner-spin-button {
 .badge[class*=ic-]::before {
   margin-left: 2px;
   font-size: 16px;
+  line-height: 1;
 }
 .badge.message {
   font-size: 11px;
@@ -14535,7 +14536,7 @@ input::-webkit-inner-spin-button {
 }
 .qela-badge-telent.vote {
   color: #000;
-  background-color: #F7EFC0;
+  background-color: #f7efc0;
   display: inline-flex;
   align-items: center;
 }
@@ -15970,8 +15971,13 @@ input::-webkit-inner-spin-button {
 .qela-list-telents .list-group-item span:first-child {
   margin-right: 1rem;
 }
+.qela-list-telents .list-group-item span:first-child.large-xl {
+  font-size: 14px;
+  line-height: 18px;
+}
 .qela-list-telents .list-group-item span:nth-child(2) {
   flex-grow: 1;
+  margin-right: 8px;
 }
 
 .qela-actions {
