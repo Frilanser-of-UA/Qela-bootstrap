@@ -13447,7 +13447,7 @@ input::-webkit-inner-spin-button {
   background: #e9ecef;
 }
 
-.qela-file .form-label {
+.qela-file label {
   height: 140px;
   width: 100%;
   background-color: #fff;
@@ -13460,6 +13460,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .qela-file .form-control {
   position: absolute;
@@ -13469,28 +13470,28 @@ input::-webkit-inner-spin-button {
   height: 100%;
   opacity: 0;
   font-size: 0;
-  cursor: pointer;
+  z-index: 1;
 }
-.qela-file .form-control:hover ~ .form-label {
+.qela-file .form-control:hover ~ label {
   border-color: #6c757d;
 }
-.qela-file .form-control:focus ~ .form-label {
+.qela-file .form-control:focus ~ label {
   border-color: #9188ff;
   box-shadow: 0 0 0 0.125rem rgba(145, 136, 255, 0.3);
 }
 .qela-file .form-control:disabled {
   cursor: auto;
 }
-.qela-file .form-control:disabled ~ .form-label {
+.qela-file .form-control:disabled ~ label {
   color: #6c757d;
   background-color: #e9ecef;
   border-color: #ced4da;
   opacity: 1;
 }
-.qela-file .form-control.is-invalid ~ .form-label {
+.qela-file .form-control.is-invalid ~ label {
   border-color: #ff453a;
 }
-.qela-file .form-control.is-invalid:focus ~ .form-label {
+.qela-file .form-control.is-invalid:focus ~ label {
   box-shadow: 0 0 0 0.125rem rgba(255, 69, 58, 0.3);
 }
 .qela-file.has-validation .helper-text {
@@ -13509,7 +13510,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   display: inline-block;
 }
-.qela-file.small .form-label {
+.qela-file.small label {
   flex-direction: row;
   background-color: #f8f9fa;
   height: auto;
@@ -13524,6 +13525,18 @@ input::-webkit-inner-spin-button {
 .qela-file.small small, .qela-file.small .small {
   font-weight: 500;
   color: #000;
+}
+.qela-file.add-img label {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  height: auto;
+}
+.qela-file.add-img .qela-avatar {
+  margin-right: 0;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
 }
 
 .qela-preview {
@@ -15324,6 +15337,54 @@ input::-webkit-inner-spin-button {
   line-height: 130%;
 }
 
+.qela-extended .list-group-item {
+  padding: 0;
+  overflow: hidden;
+  transition: background-color 0.25s ease 0s;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .qela-extended .list-group-item:hover {
+    background-color: #f4f3ff;
+  }
+}
+.qela-extended .form-check {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.qela-extended .form-check-input {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin-left: 0;
+  float: none;
+}
+.qela-extended .form-check-input:checked ~ .qela-collapse {
+  grid-template-rows: 1fr;
+  padding-bottom: 1rem;
+  background-color: #f4f3ff;
+}
+.qela-extended .form-check-input:checked ~ .form-check-label {
+  background-color: #f4f3ff;
+}
+.qela-extended .form-check-label {
+  padding: 1rem 1rem 1rem 3rem;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.qela-extended .qela-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.8s ease 0s, padding 0.4s ease 0s, background-color 0.3s ease;
+  padding: 0px 1rem;
+}
+.qela-extended .qela-collapse > * {
+  min-height: 0;
+  margin: 0;
+}
+
 .tooltip-inner {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -15536,11 +15597,11 @@ input::-webkit-inner-spin-button {
   bottom: 1px;
 }
 
-.qela-ibg {
+.ql-ibg {
   position: relative;
 }
-.qela-ibg img,
-.qela-ibg video {
+.ql-ibg img,
+.ql-ibg video {
   display: block;
   position: absolute;
   top: 0;
@@ -15550,13 +15611,13 @@ input::-webkit-inner-spin-button {
   object-fit: cover;
 }
 
-.qela-video .qela-ibg {
+.qela-video .ql-ibg {
   aspect-ratio: 16/9;
   max-width: 170px;
   border-radius: 0.5rem;
   margin: 1.5rem auto 1rem auto;
 }
-.qela-video .qela-ibg::after {
+.qela-video .ql-ibg::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -15596,35 +15657,75 @@ input::-webkit-inner-spin-button {
   margin-left: -10px;
 }
 
-.qela-previews {
+.ql-previews {
+  --img-size: 38px;
+  font-size: 14px;
+  display: flex;
   width: var(--img-size);
   height: var(--img-size);
   flex: 0 0 var(--img-size);
-  display: flex;
+  font-weight: 500;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.3s ease-out 0s;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 2px solid #e9ecef;
+  overflow: hidden;
+  transition: all 0.3s ease-out 0s;
+  cursor: pointer;
 }
-.qela-previews:not(:last-child) {
+.ql-previews::before {
+  font-size: 20px;
+}
+.ql-previews:not(:last-child) {
   margin-right: 2px;
 }
 @media (any-hover: hover) {
-  .qela-previews:hover:not(.qela-empty, .img) {
-    transform: translateY(-5px);
-  }
-  .qela-previews:hover.qela-empty {
-    background-color: #f9f9ff;
-    border-color: #9188ff;
+  .ql-previews:hover {
+    border: 1px solid #bdb8ff;
   }
 }
-
-.qela-empty {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  transition: all 0.3s ease-out 0s;
-  color: #8278ff;
+.ql-previews.current {
+  border: 2px solid #9188ff;
+  box-shadow: 0px 0px 0px 0px #dcd9fb inset;
+}
+.ql-previews.ql-lg {
+  --img-size: 42px;
+}
+.ql-previews.ql-sm {
+  --img-size: 31px;
+}
+.ql-previews.ql-icon, .ql-previews.ql-text {
+  border: 1px solid transparent;
+}
+@media (any-hover: hover) {
+  .ql-previews.ql-icon:hover, .ql-previews.ql-text:hover {
+    border: 1px solid #bdb8ff;
+  }
+}
+.ql-previews.ql-icon.current, .ql-previews.ql-text.current {
+  border-width: 1px;
+  border: 1px solid #9188ff;
+  box-shadow: 0px 0px 0px 3px #dcd9fb inset;
+}
+.ql-previews.ql-icon {
+  color: #495057;
+}
+@media (any-hover: hover) {
+  .ql-previews.ql-icon:hover {
+    background-color: #f4f3ff;
+    color: #9188ff;
+  }
+}
+.ql-previews.ql-text {
+  color: #6e63fa;
+}
+@media (any-hover: hover) {
+  .ql-previews.ql-text:hover {
+    background-color: #e5e3ff;
+  }
 }
 
 .qela-qr {
@@ -15668,14 +15769,14 @@ input::-webkit-inner-spin-button {
   color: #212529;
   background-color: #f8f9fa;
 }
-.qela-card.card:hover .qela-ibg::after {
+.qela-card.card:hover .ql-ibg::after {
   opacity: 1;
 }
-.qela-card .qela-ibg {
+.qela-card .ql-ibg {
   padding-top: 55%;
   overflow: hidden;
 }
-.qela-card .qela-ibg::after {
+.qela-card .ql-ibg::after {
   content: "";
   width: 100%;
   height: 100%;

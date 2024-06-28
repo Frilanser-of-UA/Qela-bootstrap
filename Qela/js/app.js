@@ -83,3 +83,14 @@ quest.forEach(function (link, index) {
 	});
 });
 // quest items show content right
+// let itemList = document.querySelectorAll('.qela-extended .list-group-item');
+
+// itemList.forEach(function (link, index) {
+//     link.addEventListener('click', function () {
+//         const activeLink = document.querySelector('.qela-extended .list-group-item.current');
+//         if (activeLink) {
+//             activeLink.classList.remove('current');
+//         }
+//         this.classList.add('current');
+//     });
+// });
