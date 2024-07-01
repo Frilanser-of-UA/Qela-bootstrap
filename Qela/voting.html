@@ -9,34 +9,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="qela-body">
+<body class="ql-body">
 	<header>
 	<div class="container-fluid">
 		<div class="row">
 			<!-- item whith title and button burger-->
 			<div class="col-10 col-xl-auto col-md-8 gap-3">
-				<button class="qela-burger">
+				<button class="ql-burger">
 					<img src="img/burger.svg" width="24" height="40" alt="burger button" />
 				</button>
-				<h1 class="h6 qela-clamp">Voting</h1>
+				<h1 class="h6 ql-clamp">Voting</h1>
 			</div>
 			<div class="col-2 col-xl col-md-4">
 				<!--FIX form search -->
-				<form class="qela-search" role="search">
-					<div class="qela-search__wrapper">
+				<form class="ql-search" role="search">
+					<div class="ql-search__wrapper">
 						<div class="input-group">
 							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
 							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
 						</div>
 					</div>
-					<button class="btn ic-search p-2 qela-search-btn" type="button"></button>
+					<button class="btn ic-search p-2 ql-search-btn" type="button"></button>
 				</form>
 				<!--FIX badge -->
-				<button type="button" class="btn ic-bell p-2 qela-notification active">
-					<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
+				<button type="button" class="btn ic-bell p-2 ql-notification active">
+					<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
 				</button>
 				<!--FIX user -->
-				<div class="dropdown qela-user">
+				<div class="dropdown ql-user">
 					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user" />
 					</button>
@@ -69,22 +69,22 @@
 		</div>
 	</div>
 	<!--FIX menu -->
-	<div class="qela-menu">
+	<div class="ql-menu">
 		<!--FIX buttons -->
-		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button>
-		<nav class="qela-nav">
+		<button type="button" class="ic-chevron border-0 ql-btn-menu ql-shadow"></button>
+		<button type="button" class="ic-cloze p-2 border-0 position-absolute ql-btn-close" aria-label="Close"></button>
+		<nav class="ql-nav">
 			<!--FIX mobile logo -->
-			<a class="navbar-brand qela-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
+			<a class="navbar-brand ql-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
 			<!--FIX mobile search -->
-			<form class="qela-search mobile" role="search">
+			<form class="ql-search mobile" role="search">
 				<div class="input-group">
 					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
 					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
 				</div>
 			</form>
 			<!--FIX mobile user -->
-			<div class="row qela-user mobile">
+			<div class="row ql-user mobile">
 				<div class="col">
 					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
 					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
@@ -94,7 +94,7 @@
 				</div>
 			</div>
 			<!--FIX nav wrapper -->
-			<div class="qela-nav__wrapper">
+			<div class="ql-nav__wrapper">
 				<ul class="nav">
 					<li class="nav-item">
 						<a href="#" class="nav-link active" aria-current="page">
@@ -129,7 +129,7 @@
 					<li class="nav-item">
 						<a href="#" class="nav-link" aria-current="page">
 							<span class="ic-dollar quantity">
-								<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
+								<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
 							</span>
 							<span>Донати</span>
 						</a>
@@ -178,10 +178,10 @@
 	</div>
 </header>
 
-	<main class="qela-main py-3">
+	<main class="ql-main py-3">
 		<!-- =====================Список користувачів==================== -->
 		<div class="container">
-			<div class="qela-page" id="app" v-cloak>
+			<div class="ql-page" id="app" v-cloak>
 				<div class="row p-3 g-3">
 					<form class="col-sm" role="search">
 						<div class="input-group">
@@ -209,22 +209,22 @@
 						<tbody>
 							<tr>
 								<td class="text-center" width="80px">
-									<span class="badge qela-badge-warning large">Draft</span>
+									<span class="badge ql-badge-warning large">Draft</span>
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
+									<div class="ql-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
 								</td>
 								<td>
 									Branch #1, Branch #2
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+									<div class="ql-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 								</td>
 								<td class="text-center" width="80px">
 									Not required
 								</td>
 								<td class="text-end">
-									<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+									<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
 										<button type="button" class="btn btn-light ico ic-delete"></button>
 										<button type="button" class="btn btn-light ico ic-edit"></button>
 									</div>
@@ -232,22 +232,22 @@
 							</tr>
 							<tr>
 								<td class="text-center" width="80px">
-									<span class="badge qela-badge-success large">Published</span>
+									<span class="badge ql-badge-success large">Published</span>
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
+									<div class="ql-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
 								</td>
 								<td>
 									Branch #1, Branch #2
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+									<div class="ql-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 								</td>
 								<td class="text-center" width="80px">
 									<span class="badge bg-danger large">Required</span>
 								</td>
 								<td class="text-end">
-									<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+									<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
 										<button type="button" class="btn btn-light ico ic-delete"></button>
 										<button type="button" class="btn btn-light ico ic-edit"></button>
 									</div>
@@ -255,22 +255,22 @@
 							</tr>
 							<tr>
 								<td class="text-center" width="80px">
-									<span class="badge qela-badge-success large">Published</span>
+									<span class="badge ql-badge-success large">Published</span>
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
+									<div class="ql-clamp" style="width: 326px;">Regarding support for the Eighth Requirement of the Equality March 2021 Manifesto</div>
 								</td>
 								<td>
 									Branch #1, Branch #2
 								</td>
 								<td>
-									<div class="qela-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+									<div class="ql-clamp" style="width: 326px;">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 								</td>
 								<td class="text-center" width="80px">
-									<span class="badge qela-badge-success large">Done</span>
+									<span class="badge ql-badge-success large">Done</span>
 								</td>
 								<td class="text-end">
-									<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+									<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
 										<button type="button" class="btn btn-light ico ic-delete"></button>
 										<button type="button" class="btn btn-light ico ic-eye"></button>
 									</div>

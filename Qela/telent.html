@@ -9,34 +9,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="qela-body">
+<body class="ql-body">
 	<header>
 	<div class="container-fluid">
 		<div class="row">
 			<!-- item whith title and button burger-->
 			<div class="col-10 col-xl-auto col-md-8 gap-3">
-				<button class="qela-burger">
+				<button class="ql-burger">
 					<img src="img/burger.svg" width="24" height="40" alt="burger button" />
 				</button>
-				<h1 class="h6 qela-clamp">Awards > Talent management</h1>
+				<h1 class="h6 ql-clamp">Awards > Talent management</h1>
 			</div>
 			<div class="col-2 col-xl col-md-4">
 				<!--FIX form search -->
-				<form class="qela-search" role="search">
-					<div class="qela-search__wrapper">
+				<form class="ql-search" role="search">
+					<div class="ql-search__wrapper">
 						<div class="input-group">
 							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
 							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
 						</div>
 					</div>
-					<button class="btn ic-search p-2 qela-search-btn" type="button"></button>
+					<button class="btn ic-search p-2 ql-search-btn" type="button"></button>
 				</form>
 				<!--FIX badge -->
-				<button type="button" class="btn ic-bell p-2 qela-notification active">
-					<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
+				<button type="button" class="btn ic-bell p-2 ql-notification active">
+					<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
 				</button>
 				<!--FIX user -->
-				<div class="dropdown qela-user">
+				<div class="dropdown ql-user">
 					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user" />
 					</button>
@@ -69,22 +69,22 @@
 		</div>
 	</div>
 	<!--FIX menu -->
-	<div class="qela-menu">
+	<div class="ql-menu">
 		<!--FIX buttons -->
-		<button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button>
-		<nav class="qela-nav">
+		<button type="button" class="ic-chevron border-0 ql-btn-menu ql-shadow"></button>
+		<button type="button" class="ic-cloze p-2 border-0 position-absolute ql-btn-close" aria-label="Close"></button>
+		<nav class="ql-nav">
 			<!--FIX mobile logo -->
-			<a class="navbar-brand qela-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
+			<a class="navbar-brand ql-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
 			<!--FIX mobile search -->
-			<form class="qela-search mobile" role="search">
+			<form class="ql-search mobile" role="search">
 				<div class="input-group">
 					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
 					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
 				</div>
 			</form>
 			<!--FIX mobile user -->
-			<div class="row qela-user mobile">
+			<div class="row ql-user mobile">
 				<div class="col">
 					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
 					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
@@ -94,7 +94,7 @@
 				</div>
 			</div>
 			<!--FIX nav wrapper -->
-			<div class="qela-nav__wrapper">
+			<div class="ql-nav__wrapper">
 				<ul class="nav">
 					<li class="nav-item">
 						<a href="#" class="nav-link active" aria-current="page">
@@ -129,7 +129,7 @@
 					<li class="nav-item">
 						<a href="#" class="nav-link" aria-current="page">
 							<span class="ic-dollar quantity">
-								<span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
+								<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
 							</span>
 							<span>Донати</span>
 						</a>
@@ -178,10 +178,10 @@
 	</div>
 </header>
 
-	<main class="qela-main">
+	<main class="ql-main">
 		<!-- =====================Список користувачів==================== -->
 		<div class="container">
-			<div class="qela-page" id="app" v-cloak>
+			<div class="ql-page" id="app" v-cloak>
 				<div class="row">
 					<div class="col-12">
 						<ul class="nav nav-tabs">
@@ -198,53 +198,53 @@
 					<!-- left -->
 					<div class="col-lg-4">
 						<h2 class="h5 mb-3">Select the Talent</h2>
-						<ul class="nav qela-telent-nav">
+						<ul class="nav ql-telent-nav">
 							<li class="nav-item">
 								<a href="#" class="nav-link red">
 									<span>Fundraising</span>
-									<span class="badge qela-badge-telent text-red">10 000. 0</span>
+									<span class="badge ql-badge-telent text-red">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link violet current">
 									<span>Recruiting</span>
-									<span class="badge qela-badge-telent text-violet">10 000. 0</span>
+									<span class="badge ql-badge-telent text-violet">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link green">
 									<span>Endurance</span>
-									<span class="badge qela-badge-telent text-green">10 000. 0</span>
+									<span class="badge ql-badge-telent text-green">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link orange">
 									<span>Endurance</span>
-									<span class="badge qela-badge-telent text-orange">10 000. 0</span>
+									<span class="badge ql-badge-telent text-orange">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link lightgreen">
 									<span>Determination</span>
-									<span class="badge qela-badge-telent text-lightgreen">10 000. 0</span>
+									<span class="badge ql-badge-telent text-lightgreen">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link lightblue">
 									<span>Originality</span>
-									<span class="badge qela-badge-telent text-lightblue">10 000. 0</span>
+									<span class="badge ql-badge-telent text-lightblue">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link blue">
 									<span>Management</span>
-									<span class="badge qela-badge-telent text-blue">10 000. 0</span>
+									<span class="badge ql-badge-telent text-blue">10 000. 0</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link pink">
 									<span>Savvy</span>
-									<span class="badge qela-badge-telent text-pink">10 000. 0</span>
+									<span class="badge ql-badge-telent text-pink">10 000. 0</span>
 								</a>
 							</li>
 						</ul>
@@ -261,7 +261,7 @@
 							</div>
 							<div class="col-sm-auto">
 								<div class="mb-1">Total value of Originality: </div>
-								<div class="qela-telent violet text-end">100 000.0</div>
+								<div class="ql-telent violet text-end">100 000.0</div>
 							</div>
 						</div>
 						<div class="table-responsive table-qela large">
@@ -294,10 +294,10 @@
 								<tbody>
 									<tr>
 										<td width="45">
-											<a href="#" class="qela-avatar ql-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
+											<a href="#" class="ql-avatar ql-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
 										</td>
 										<td width="150">
-											<div class="qela-clamp" style="width:150px">alexey.bubymka@hmayl.com</div>
+											<div class="ql-clamp" style="width:150px">alexey.bubymka@hmayl.com</div>
 										</td>
 										<td>
 											Gary
@@ -306,13 +306,13 @@
 											Simon
 										</td>
 										<td width="150">
-											<div class="qela-clamp" style="width:150px">+ 38 067 000 00 00</div>
+											<div class="ql-clamp" style="width:150px">+ 38 067 000 00 00</div>
 										</td>
 										<td class="text-end" width="150">
-											<span class="badge qela-badge-telent text-violet">10 000. 0</span>
+											<span class="badge ql-badge-telent text-violet">10 000. 0</span>
 										</td>
 										<td width="65">
-											<div class="btn-group qela-btn-group" role="group">
+											<div class="btn-group ql-btn-group" role="group">
 												<button type="button" class="btn btn-light ico ic-edit"></button>
 												<button type="button" class="btn btn-light ico ic-book"></button>
 											</div>

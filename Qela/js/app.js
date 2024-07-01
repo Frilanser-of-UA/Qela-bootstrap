@@ -5,22 +5,22 @@ window.onload = function () {
 	function documentActions(e) {
 		const targetElement = e.target;
 		// ====== Меню
-		if (targetElement.classList.contains('qela-btn-menu') || targetElement.classList.contains('qela-burger')) {
-			if (document.querySelector('.qela-btn-menu') || document.querySelector('.qela-burger')) {
-				document.querySelector('.qela-menu').classList.toggle('active');
-				document.querySelector('.qela-btn-menu').classList.toggle('active');
+		if (targetElement.classList.contains('ql-btn-menu') || targetElement.classList.contains('ql-burger')) {
+			if (document.querySelector('.ql-btn-menu') || document.querySelector('.ql-burger')) {
+				document.querySelector('.ql-menu').classList.toggle('active');
+				document.querySelector('.ql-btn-menu').classList.toggle('active');
 			}
-		} else if (!targetElement.closest('.qela-nav') && document.querySelector('.qela-menu.active') || targetElement.classList.contains('qela-btn-close')) {
-			document.querySelector('.qela-menu').classList.remove('active');
-			document.querySelector('.qela-btn-menu').classList.remove('active');
+		} else if (!targetElement.closest('.ql-nav') && document.querySelector('.ql-menu.active') || targetElement.classList.contains('ql-btn-close')) {
+			document.querySelector('.ql-menu').classList.remove('active');
+			document.querySelector('.ql-btn-menu').classList.remove('active');
 		}
 		//== випадашки search
-		if (targetElement.classList.contains('qela-search-btn')) {
-			if (document.querySelector('.qela-search-btn')) {
-				document.querySelector('.qela-search__wrapper').classList.toggle('active');
+		if (targetElement.classList.contains('ql-search-btn')) {
+			if (document.querySelector('.ql-search-btn')) {
+				document.querySelector('.ql-search__wrapper').classList.toggle('active');
 			}
-		} else if (!targetElement.closest('.qela-search__wrapper') && document.querySelector('.qela-search__wrapper.active')) {
-			document.querySelector('.qela-search__wrapper').classList.remove('active');
+		} else if (!targetElement.closest('.ql-search__wrapper') && document.querySelector('.ql-search__wrapper.active')) {
+			document.querySelector('.ql-search__wrapper').classList.remove('active');
 		}
 	}
 }
@@ -46,7 +46,7 @@ for (let i = 0; i < coll.length; i++) {
 	coll[i].addEventListener('click', function () {
 		let self = event.currentTarget;
 		let valueAtribute = self.getAttribute('data-ql-target');
-		let content = document.querySelector(`.qela-description[id="${valueAtribute}"]`);
+		let content = document.querySelector(`.ql-description[id="${valueAtribute}"]`);
 		content.classList.toggle('active');
 		this.classList.toggle('active');
 		if (content.style.height) {
@@ -65,12 +65,12 @@ quest.forEach(function (link, index) {
 	link.addEventListener('click', function () {
 		let self = event.currentTarget;
 		let valueAtribute = self.getAttribute('data-quest');
-		let content = document.querySelector(`.qela-content[id="${valueAtribute}"]`);
-		if (this.classList.contains('qela-quest.active')) {
+		let content = document.querySelector(`.ql-content[id="${valueAtribute}"]`);
+		if (this.classList.contains('ql-quest.active')) {
 			this.classList.remove('active');
 		} else {
-			const activeItem = document.querySelector('.qela-quest.active');
-			const activeContent = document.querySelectorAll('.qela-content.active');
+			const activeItem = document.querySelector('.ql-quest.active');
+			const activeContent = document.querySelectorAll('.ql-content.active');
 			activeContent.forEach(function (e) {
 				e.classList.remove('active');
 			});
@@ -83,11 +83,11 @@ quest.forEach(function (link, index) {
 	});
 });
 // quest items show content right
-// let itemList = document.querySelectorAll('.qela-extended .list-group-item');
+// let itemList = document.querySelectorAll('.ql-extended .list-group-item');
 
 // itemList.forEach(function (link, index) {
 //     link.addEventListener('click', function () {
-//         const activeLink = document.querySelector('.qela-extended .list-group-item.current');
+//         const activeLink = document.querySelector('.ql-extended .list-group-item.current');
 //         if (activeLink) {
 //             activeLink.classList.remove('current');
 //         }
