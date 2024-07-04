@@ -122,9 +122,9 @@
         .--elastic a{
           transition: all 0.3s ease 0s;
         }
-        .link--active{
+        /* .link--active{
             color: red !important;
-        }
+        } */
     </style>
     <div id="app" v-cloak>
         <header class="p-1 h-auto">
@@ -201,9 +201,9 @@
                 <div class="mt-3 pb-3 d-flex flex-column gap-3">
                     <!-- FIX Buttons  -->
 <section class="d-grid gap-3">
-<h2 class="h1" id="h3Btn1">Buttons</h2>
-<!-- FIX Large filled  -->
-<h4>Large filled</h4>
+<h2 class="h1 mt-4">Buttons</h2>
+<!-- FIX Large buttons  -->
+<h4>Large buttons</h4>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-primary">Primary</button>
 	<button type="button" class="btn btn-primary" disabled>Primary</button>
@@ -268,8 +268,8 @@
 	<button type="button" class="btn btn-light ic-plus ico-right">Light</button>
 	<button type="button" class="btn btn-light ic-plus ico-right" disabled>Light</button>
 </div>
-<!-- FIX Small filled  -->
-<h4 class="mt-4">Small filled</h4>
+<!-- FIX Small buttons  -->
+<h4 class="mt-4">Small buttons</h4>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-sm btn-primary">Primary</button>
 	<button type="button" class="btn btn-sm btn-primary" disabled>Primary</button>
@@ -334,8 +334,8 @@
 	<button type="button" class="btn btn-sm btn-light ic-plus ico-right">Light</button>
 	<button type="button" class="btn btn-sm btn-light ic-plus ico-right" disabled>Light</button>
 </div>
-<!-- FIX Large outlined  -->
-<h4 class="mt-4">Large outlined</h4>
+<!-- FIX Large outlined buttons -->
+<h4 class="mt-4">Large outlined buttons</h4>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-outline-primary">Primary</button>
 	<button type="button" class="btn btn-outline-primary" disabled>Primary</button>
@@ -392,8 +392,8 @@
 	<button type="button" class="btn btn-outline-light ic-plus ico-right">Light</button>
 	<button type="button" class="btn btn-outline-light ic-plus ico-right" disabled>Light</button>
 </div>
-<!-- FIX Small outlined  -->
-<h4 class="mt-4">Small outlined</h4>
+<!-- FIX Small outlined  buttons -->
+<h4 class="mt-4">Small outlined buttons</h4>
 <div class="d-flex gap-2 flex-wrap">
 	<button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
 	<button type="button" class="btn btn-sm btn-outline-primary" disabled>Primary</button>
@@ -533,7 +533,7 @@
 </section>
                     <!-- FIX Text field  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn2">Text field</h2>
+    <h2 class="h1 mt-4">Text field</h2>
     <!-- FIX Input outline-->
     <h4>Input outline</h4>
     <!-- default -->
@@ -1070,9 +1070,92 @@
     </div>
 </section>
 
+                    <!-- FIX Multi-select  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Multi-select</h2>
+    <h4>Multi-select</h4>
+    <!-- default -->
+    <div>
+        <div class="ql-form-labels">
+            <div>
+                <label class="form-label required">Select multiple</label>
+                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+            </div>
+            <label class="form-label">hint text</label>
+        </div>
+        <div>
+            <v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
+        </div>
+        <div class="invalid-feedback">Error text</div>
+        <div class="helper-text">Helper text</div>
+    </div>
+    <!-- disabled -->
+    <div>
+        <div class="ql-form-labels">
+            <div>
+                <label class="form-label required">Select multiple</label>
+                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+            </div>
+            <label class="form-label">hint text</label>
+        </div>
+        <div>
+            <v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" :disabled="true"></v-multi-select>
+        </div>
+        <div class="invalid-feedback">Error text</div>
+        <div class="helper-text">Helper text</div>
+    </div>
+    <!-- error -->
+    <div>
+        <div class="ql-form-labels">
+            <div>
+                <label class="form-label required">Select multiple</label>
+                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+            </div>
+            <label class="form-label">hint text</label>
+        </div>
+        <div class="is-invalid">
+            <v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
+        </div>
+        <div class="invalid-feedback">Error text</div>
+        <div class="helper-text">Helper text</div>
+    </div>
+    <!-- default select-->
+    <h4>Select</h4>
+    <div>
+        <div class="ql-form-labels">
+            <div>
+                <label class="form-label required">Select</label>
+                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+            </div>
+            <label class="form-label">hint text</label>
+        </div>
+        <div>
+            <v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+        </div>
+        <div class="invalid-feedback">Error text</div>
+        <div class="helper-text">Helper text</div>
+    </div>
+</section>
+                    <!-- FIX Datapiker  -->
+<section class="d-grid gap-3">
+<h2 class="h1 mt-4">Datapiker</h2>
+<div>
+	<div class="ql-form-labels">
+		<div>
+			<label class="form-label required">Datapiker</label>
+			<button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+		</div>
+		<label class="form-label">hint text</label>
+	</div>
+	<div>
+		<v-date-picker v-model="date" range multi-calendars />
+	</div>
+	<span class="invalid-feedback">Set start date and time</span>
+</div>
+</section>
                     <!-- FIX Checkbox  -->
 <section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn3">Checkbox</h2>
+<h2 class="h1 mt-4">Checkbox</h2>
 <!-- FIX Checkbox-->
 <h4>Checkbox</h4>
 <div>
@@ -1183,7 +1266,7 @@
 </section>
                     <!-- FIX Radiobutton  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn4">Radiobutton</h2>
+    <h2 class="h1 mt-4">Radiobutton</h2>
     <!-- FIX Radiobutton-->
     <h4>Radiobutton</h4>
     <div>
@@ -1337,127 +1420,9 @@
         </div>
     </div>
 </section>
-                    <!-- FIX Tooltip  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn5">Tooltip</h2>
-    <div>
-        <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
-    </div>
-    <div class="ql-form-labels">
-        <div>
-            <span class="form-label">Tooltip Label</span>
-            <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-        </div>
-    </div>
-    <!-- Tooltip admin -->
-    <h2 class="mt-4" id="h3Btn5">Tooltip admin</h2>
-    <div class="d-flex gap-1">
-        <!-- Tooltip super-admin -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-secondary-600 bg-secondary-100 ic-key" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
-        <!-- Tooltip quests-admin -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-success bg-success-100 ic-diamond-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch quests admin"></button>
-        <!-- Tooltip reader -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-warning-600 bg-warning-100 ic-eye" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch reader"></button>
-        <!-- Tooltip voting-admin -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-success-600 bg-success-100 ic-voting-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch voting admin"></button>
-        <!-- Tooltip users-admin -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-success-600 bg-success-100 ic-people" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch users admin"></button>
-        <!-- Tooltip branch-super-admin -->
-        <button type="button" class="btn ql-btn-tooltip ql-admin text-secondary-600 bg-secondary-100 ic-branch" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
-    </div>
-    <!-- Tooltip text -->
-    <h2 class="mt-4" id="h3Btn5">Tooltip text</h2>
-    <div class="d-flex gap-1">
-        <!-- Tooltip super-admin -->
-        <button type="button" class="ql-clamp p-0 bg-transparent border-0" style="width: 265px;" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
-    </div>
-</section>
-                    <!-- FIX Multi-select  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn6">Multi-select</h2>
-    <h4>Multi-select</h4>
-    <!-- default -->
-    <div>
-        <div class="ql-form-labels">
-            <div>
-                <label class="form-label required">Select multiple</label>
-                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-            </div>
-            <label class="form-label">hint text</label>
-        </div>
-        <div>
-            <v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
-        </div>
-        <div class="invalid-feedback">Error text</div>
-        <div class="helper-text">Helper text</div>
-    </div>
-    <!-- disabled -->
-    <div>
-        <div class="ql-form-labels">
-            <div>
-                <label class="form-label required">Select multiple</label>
-                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-            </div>
-            <label class="form-label">hint text</label>
-        </div>
-        <div>
-            <v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" :disabled="true"></v-multi-select>
-        </div>
-        <div class="invalid-feedback">Error text</div>
-        <div class="helper-text">Helper text</div>
-    </div>
-    <!-- error -->
-    <div>
-        <div class="ql-form-labels">
-            <div>
-                <label class="form-label required">Select multiple</label>
-                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-            </div>
-            <label class="form-label">hint text</label>
-        </div>
-        <div class="is-invalid">
-            <v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
-        </div>
-        <div class="invalid-feedback">Error text</div>
-        <div class="helper-text">Helper text</div>
-    </div>
-    <!-- default select-->
-    <h4>Select</h4>
-    <div>
-        <div class="ql-form-labels">
-            <div>
-                <label class="form-label required">Select</label>
-                <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-            </div>
-            <label class="form-label">hint text</label>
-        </div>
-        <div>
-            <v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-        </div>
-        <div class="invalid-feedback">Error text</div>
-        <div class="helper-text">Helper text</div>
-    </div>
-</section>
-                    <!-- FIX Datapiker  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn7">Datapiker</h2>
-<div>
-	<div class="ql-form-labels">
-		<div>
-			<label class="form-label required">Datapiker</label>
-			<button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-		</div>
-		<label class="form-label">hint text</label>
-	</div>
-	<div>
-		<v-date-picker v-model="date" range multi-calendars />
-	</div>
-	<span class="invalid-feedback">Set start date and time</span>
-</div>
-</section>
                     <!-- FIX Range  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn8">Range</h2>
+    <h2 class="h1 mt-4">Range</h2>
     <div>
         <label for="Range1" class="form-label">Example range</label>
         <input type="range" class="form-range" value="90" min="0" max="100" id="Range1">
@@ -1467,103 +1432,261 @@
         <input type="range" class="form-range" value="50" min="0" max="100" id="Range1" disabled>
     </div>
 </section>
-                    <!-- FIX с  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn9">Dropdown</h2>
-<div class="dropdown">
-    <button class="btn btn-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        View all types </button>
-    <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
-        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
-        <li>
-            <hr class="dropdown-divider" />
-        </li>
-        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
-        <li><button type="button" class="dropdown-item">Видалити</button></li>
-    </ul>
-</div>
-<div class="dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Дії з обраним </button>
-    <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
-        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
-        <li>
-            <hr class="dropdown-divider" />
-        </li>
-        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
-        <li><button type="button" class="dropdown-item">Видалити</button></li>
-    </ul>
-</div>
-<div class="dropdown ql-user">
-    <button type="button" class="btn p-1 border-0 pe-4 ic-chevron position-relative" data-bs-toggle="dropdown"
-        aria-expanded="false" data-bs-auto-close="outside">
-        <img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
-    </button>
-    <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow" style="">
-        <form class="gy-5 p-2">
-            <div class="mb-3">
-                <label for="UserEmail" class="form-label">Email</label>
-                <input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
-                <div class="invalid-feedback">Error text</div>
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword1" class="form-label">Password</label>
-                <div class="input-group input-group-sm has-validation">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password"
-                        id="inputPassword1" aria-describedby="button-addon1" />
-                    <button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
-                    <div class="invalid-feedback">Error text</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="Check" />
-                    <label class="form-check-label" for="Check">Запамятати мене</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Відправити</button>
-        </form>
+                    <!-- FIX Alert  -->
+ <section class="d-grid gap-3">
+    <h2 class="h1">Alert</h2>
+    <!-- FIX Alert defoult -->
+    <h4 class="mt-4">Alert defoult</h4>
+    <!-- =========== secondary-->
+    <div class="alert alert-secondary ql-alert fade show" role="alert">
+        <span class="ic-alert-triangle text-secondary"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
     </div>
-</div>
-<!-- Dropdown no icons -->
-<div class="dropdown ql-dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Dropdown </button>
-    <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Change status</button></li>
-        <li><button type="button" class="dropdown-item">Change status</button></li>
-        <li><button type="button" class="dropdown-item active">Change status</button></li>
-        <li><button type="button" class="dropdown-item danger">Change status</button></li>
-        <li><button type="button" class="dropdown-item success">Change status</button></li>
-        <li><button type="button" class="dropdown-item warning">Change status</button></li>
-    </ul>
-</div>
-<!-- Dropdown  icons -->
-<div class="dropdown ql-dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Dropdown icons</button>
-    <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item ic-edit">Edit user</button></li>
-        <li>
-            <button type="button" class="dropdown-item ic-edit">
-                Edit user
-                <span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-            </button>
+    <div class="alert alert-secondary px-3 ql-alert fade show" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-alert-triangle text-secondary position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
+    </div>
+    <div class="alert alert-secondary px-3 ql-alert fade show d-flex justify-content-between" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-alert-triangle text-secondary position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
+    </div>
+    <!-- =========== danger-->
+    <div class="alert alert-danger ql-alert fade show" role="alert">
+        <span class="ic-error-warning-fill text-danger"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="text-danger">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger px-3 ql-alert fade show" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-error-warning-fill text-danger position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
+    </div>
+    <div class="alert alert-danger px-3 ql-alert fade show d-flex justify-content-between" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-error-warning-fill text-danger position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
+    </div>
+    <!-- =========== warning-->
+    <div class="alert alert-warning ql-alert fade show" role="alert">
+        <span class="ic-error-warning-fill text-warning"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="text-warning">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-warning px-3 ql-alert fade show" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-error-warning-fill text-warning position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
+    </div>
+    <div class="alert alert-warning px-3 ql-alert fade show d-flex justify-content-between" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-error-warning-fill text-warning position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
+    </div>
+    <!-- =========== info-->
+    <div class="alert alert-info ql-alert fade show" role="alert">
+        <span class="ic-alert-triangle text-secondary"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-info px-3 ql-alert fade show" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-alert-triangle text-secondary position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
+    </div>
+    <div class="alert alert-info px-3 ql-alert fade show d-flex justify-content-between" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-alert-triangle text-secondary position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
+    </div>
+    <!-- =========== success-->
+    <div class="alert alert-success ql-alert fade show" role="alert">
+        <span class="ic-check-filled text-success"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="text-success-700">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-success px-3 ql-alert fade show" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-check-filled text-success position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-success btn-sm">Підтвердити</a>
+    </div>
+    <div class="alert alert-success px-3 ql-alert fade show d-flex justify-content-between" role="alert">
+        <div class="mb-2 d-flex gap-1">
+            <span class="ic-check-filled text-success position-static"></span>
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="btn btn-success btn-sm">Підтвердити</a>
+    </div>
+    <!-- =============== -->
+    <div class="alert alert-info ql-alert p-3 fade show" role="alert">
+        <p> ☝️Official Address of checkpoint </p>
+        <p class="m-0"><small>Displayed to users on quest Quest conditions screen lake official recognizable name of
+                location</small></p>
+    </div>
+    <!-- FIX Alert small -->
+    <h4 class="mt-4">Alert small</h4>
+    <div class="alert alert-secondary ql-alert fade show small" role="alert">
+        <span class="ic-alert-triangle text-secondary"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger ql-alert fade show small" role="alert">
+        <span class="ic-error-warning-fill text-danger"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="text-danger">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-warning ql-alert fade show small" role="alert">
+        <span class="ic-error-warning-fill text-warning"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#" class="text-warning">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <div class="alert alert-info ql-alert fade show small" role="alert">
+        <span class="ic-error-warning-fill text-secondary"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#">Підтвердити</a>
+        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+    </div>
+    <!-- =========== secondary custom-->
+    <div class="alert alert-secondary ql-alert custom fade show" role="alert">
+        <span class="ic-success text-secondary"></span>
+        <div class="mb-2">
+            Увага! Підписка тільки на місяць
+        </div>
+        <a href="#">Підтвердити</a>
+    </div>
+ </section>
 
-        </li>
-        <li><button type="button" class="dropdown-item ic-stop">Block user</button></li>
-        <li><button type="button" class="dropdown-item active ic-success-2">Unblock user</button></li>
-        <li><button type="button" class="dropdown-item ic-delete danger">Delete user</button></li>
-        <li><button type="button" class="dropdown-item ic-success-2 success">Change status</button></li>
-        <li><button type="button" class="dropdown-item ic-success-2 warning">Change status</button></li>
-    </ul>
+                    <!-- FIX Avatars  -->
+<section class="d-grid gap-3">
+<h2 class="h1 mt-4">Avatars</h2>
+<!-- FIX Avatars 100-->
+<h4>Avatars 100</h4>
+<div class="d-inline-flex gap-2 flex-wrap">
+    <a href="#" class="ql-avatar ql-ibg border-0 online" style="--img-size:100px">
+        <img src="img/avatar.jpg" width="100" height="100" alt="#">
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0" style="--img-size:100px">
+        J
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-white border-0" style="--img-size:100px">
+        <img src="img/type-logo.svg" width="100" height="100" alt="#">
+    </a>
+    <a href="#" class="ql-avatar bg-white" style="--img-size:100px">
+        <span class="ic-img-plus text-info-500"></span>
+    </a>
+</div>
+<!-- FIX Avatars 70-->
+<h4>Avatars 70</h4>
+<div class="d-inline-flex gap-2 flex-wrap">
+    <a href="#" class="ql-avatar ql-ibg border-0" style="--img-size:70px">
+        <img src="img/avatar.jpg" width="70" height="70" alt="#">
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0" style="--img-size:70px">
+        J
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-white border-0" style="--img-size:70px">
+        <img src="img/type-logo.svg" width="70" height="70" alt="#">
+    </a>
+</div>
+<!-- FIX Avatars 40-->
+<h4>Avatars 40</h4>
+<div class="d-inline-flex gap-2 flex-wrap">
+    <a href="#" class="ql-avatar ql-ibg border-2 online-sm" style="--img-size:40px">
+        <img src="img/avatar.jpg" width="40" height="40" alt="#">
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:40px">
+        <small>J</small>
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:40px">
+        <img src="img/type-logo.svg" width="40" height="40" alt="#">
+    </a>
+</div>
+<!-- FIX Avatars 30-->
+<h4>Avatars 30</h4>
+<div class="d-inline-flex gap-2 flex-wrap">
+    <a href="#" class="ql-avatar ql-ibg border-2" style="--img-size:30px">
+        <img src="img/avatar.jpg" width="30" height="30" alt="#">
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
+        <small><small>J</small></small>
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:30px">
+        <img src="img/type-logo.svg" width="30" height="30" alt="#">
+    </a>
+</div>
+<!-- FIX Avatars 30 Users-->
+<h4>Avatars 30 (Users)</h4>
+<div class="d-inline-flex align-items-center ql-users">
+    <a href="#" class="ql-avatar ql-ibg border-2" style="--img-size:30px">
+        <img src="img/avatar.jpg" width="30" height="30" alt="#">
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
+        <small><small>J</small></small>
+    </a>
+    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:30px">
+        <img src="img/type-logo.svg" width="30" height="30" alt="#">
+    </a>
+    <span class="text-info-900 ms-2">120</span>
 </div>
 </section>
                     <!-- FIX Badge  -->
 <section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn10">Badge</h2>
+<h2 class="h1 mt-4">Badge</h2>
 <!-- FIX Default badges  -->
 <h4>Default badges</h4>
 <div class="d-flex gap-2 flex-wrap">
@@ -1769,298 +1892,357 @@
     </div>
 </div>
 </section>
-                    <!-- FIX Pagination  -->
+                    <!-- FIX Breadcrumb  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn11">Pagination</h2>
-    <!-- FIX Pagination  default -->
-    <h4>Pagination default</h4>
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">Prev</span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">24</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">Next</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li class="page-item disabled">
-                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
-                    <span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">24</a></li>
-            <li class="page-item">
-                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
-                    <span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- FIX Pagination small -->
-    <h4>Pagination small</h4>
-    <nav aria-label="Page navigation">
-        <ul class="pagination pagination-sm">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">Prev</span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">24</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">Next</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <nav aria-label="Page navigation">
-        <ul class="pagination pagination-sm">
-            <li class="page-item disabled">
-                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
-                    <span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">24</a></li>
-            <li class="page-item">
-                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
-                    <span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<h2 class="h1 mt-4">Breadcrumb</h2>
+<div class="ql-breadcrumb">
+    <a class="ql-clamp">asdsadasdasd sadasdasdsad asdasdsadasd asdasdsadasd</a>
+    <span class="ic-chevron-left"></span>
+    <a class="ql-clamp word-break ">asdasdasd</a>
+    <span class="ic-chevron-left"></span>
+    <a class="ql-clamp word-break">asdadasda</a>
+    <span class="ic-chevron-left"></span>
+    <span class="ql-clamp">sadasdasdsad sadasdasdsad</span>
+</div>
 </section>
-                    <!-- FIX Alert  -->
+                    <!-- FIX Card  -->
  <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn12">Alert</h2>
-    <!-- FIX Alert defoult -->
-    <h4 class="mt-4">Alert defoult</h4>
-    <!-- =========== secondary-->
-    <div class="alert alert-secondary ql-alert fade show" role="alert">
-        <span class="ic-alert-triangle text-secondary"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-secondary px-3 ql-alert fade show" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-alert-triangle text-secondary position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-    </div>
-    <div class="alert alert-secondary px-3 ql-alert fade show d-flex justify-content-between" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-alert-triangle text-secondary position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-    </div>
-    <!-- =========== danger-->
-    <div class="alert alert-danger ql-alert fade show" role="alert">
-        <span class="ic-error-warning-fill text-danger"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="text-danger">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-danger px-3 ql-alert fade show" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-error-warning-fill text-danger position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
-    </div>
-    <div class="alert alert-danger px-3 ql-alert fade show d-flex justify-content-between" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-error-warning-fill text-danger position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
-    </div>
-    <!-- =========== warning-->
-    <div class="alert alert-warning ql-alert fade show" role="alert">
-        <span class="ic-error-warning-fill text-warning"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="text-warning">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning px-3 ql-alert fade show" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-error-warning-fill text-warning position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
-    </div>
-    <div class="alert alert-warning px-3 ql-alert fade show d-flex justify-content-between" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-error-warning-fill text-warning position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
-    </div>
-    <!-- =========== info-->
-    <div class="alert alert-info ql-alert fade show" role="alert">
-        <span class="ic-alert-triangle text-secondary"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-info px-3 ql-alert fade show" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-alert-triangle text-secondary position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-    </div>
-    <div class="alert alert-info px-3 ql-alert fade show d-flex justify-content-between" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-alert-triangle text-secondary position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-    </div>
-    <!-- =========== success-->
-    <div class="alert alert-success ql-alert fade show" role="alert">
-        <span class="ic-check-filled text-success"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="text-success-700">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-success px-3 ql-alert fade show" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-check-filled text-success position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-success btn-sm">Підтвердити</a>
-    </div>
-    <div class="alert alert-success px-3 ql-alert fade show d-flex justify-content-between" role="alert">
-        <div class="mb-2 d-flex gap-1">
-            <span class="ic-check-filled text-success position-static"></span>
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="btn btn-success btn-sm">Підтвердити</a>
-    </div>
-    <!-- =============== -->
-    <div class="alert alert-info ql-alert p-3 fade show" role="alert">
-        <p> ☝️Official Address of checkpoint </p>
-        <p class="m-0"><small>Displayed to users on quest Quest conditions screen lake official recognizable name of
-                location</small></p>
-    </div>
-    <!-- FIX Alert small -->
-    <h4 class="mt-4">Alert small</h4>
-    <div class="alert alert-secondary ql-alert fade show small" role="alert">
-        <span class="ic-alert-triangle text-secondary"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-danger ql-alert fade show small" role="alert">
-        <span class="ic-error-warning-fill text-danger"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="text-danger">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning ql-alert fade show small" role="alert">
-        <span class="ic-error-warning-fill text-warning"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#" class="text-warning">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <div class="alert alert-info ql-alert fade show small" role="alert">
-        <span class="ic-error-warning-fill text-secondary"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#">Підтвердити</a>
-        <button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert"
-            aria-label="Close"></button>
-    </div>
-    <!-- =========== secondary custom-->
-    <div class="alert alert-secondary ql-alert custom fade show" role="alert">
-        <span class="ic-success text-secondary"></span>
-        <div class="mb-2">
-            Увага! Підписка тільки на місяць
-        </div>
-        <a href="#">Підтвердити</a>
-    </div>
- </section>
-
-                    <!-- FIX Logos  -->
+<h2 class="h1 mt-4">Cards</h2>
+<!-- FIX Card modal -->
+<h4>Card modal</h4>
+<div class="d-flex flex-wrap gap-2">
+	<a href="#" class="card ql-card" style="width: 13.625rem;">
+		<div class="ql-ibg card-img-top">
+			<img src="img/table-img-1.jpg" class="card-img-top" alt="img">
+		</div>
+		<div class="card-body pt-2">
+			<div class="text-end pb-2">
+				<span class="badge ql-badge-success">Published</span>
+			</div>
+			<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+		</div>
+	</a>
+	<a href="#" class="card ql-card" style="width: 13.625rem;">
+		<div class="ql-ibg ql-noimg bg-info-100">
+			<span class="ic-img text-info"></span>
+		</div>
+		<div class="card-body pt-2">
+			<div class="text-end pb-2">
+				<span class="badge ql-badge-success">Published</span>
+			</div>
+			<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+		</div>
+	</a>
+</div>
+<!-- FIX Card Verification -->
+<h4 class="mt-4">Card verification</h4>
+<div class="card p-3 border-0 rounded-0" style="width: 244px;">
+	<div class="form-check pe-2 mb-2">
+		<input type="checkbox" class="form-check-input" id="Check1">
+	</div>
+	<a href="#" class="ql-ibg ql-img1x1 ic-arrows-maximize">
+		<img src="img/img-ver2.jpg" alt="img">
+	</a>
+	<div class="card-body p-0 pt-2">
+		<div class=" d-flex align-items-center w-100">
+			<button type="button" class="btn btn-danger me-1 flex-grow-1">Decline</button>
+			<button type="button" class="btn btn-success ic-check-big ico-right flex-grow-1">Verify</button>
+		</div>
+		<div class="pt-3">
+			<div class="mb-1 h6">Босик Ждана</div>
+			<div class="text-info-600">example@gmail.com</div>
+		</div>
+		<div class="pt-3">
+			<div class="text-info-600"><small>20/20/2023 12:02:23</small></div>
+			<div class="text-info-600"><small>ID: 02344</small></div>
+		</div>
+	</div>
+</div>
+</section>
+                    <!-- FIX Delimiter  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn13">Logos</h2>
-    <div class="mt-3 mb-3 d-flex flex-column gap-3">
-        <a class="navbar-brand d-inline-flex" href="#">
-            <img src="img/logo-2.svg" alt="Logo" width="40" height="40">
+<h2 class="h1 mt-4">Delimiter</h2>
+<!-- FIX Delimiter sx -->
+<h4 class="mt-4">Delimiter large</h4>
+<div class="ql-delimiter ql-delimiter-lg">
+    <hr>
+    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
+</div>
+<h4 class="mt-4">Delimiter middle</h4>
+<div class="ql-delimiter ql-delimiter-md">
+    <hr>
+    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
+</div>
+<h4 class="mt-4">Delimiter small</h4>
+<div class="ql-delimiter ql-delimiter-sm">
+    <hr>
+    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
+</div>
+<h4 class="mt-4">Delimiter small x</h4>
+<div class="ql-delimiter ql-delimiter-smx">
+    <hr>
+    <span class="badge bg-white text-info-900 large-xl px-2 py-1">or</span>
+</div>
+</section>
+                    <!-- FIX Description  -->
+<section class="d-grid gap-3">
+<h2 class="h1 mt-4">Description</h2>
+<div class="px-4 py-3">
+    <h3 class="h6 text-info-600 pb-2">Description</h3>
+    <div id="#text-more" class="ql-description mb-3">
+        "Unity for Planet" is a non-profit organization dedicated to protecting the environment through community
+        involvement and volunteerism. Our mission is to inspire and empower individuals to take action to preserve and
+        protect the planet for future generations. We believe that everyone has a role to play in creating a sustainable
+        future, and that small actions taken by individuals can lead to significant positive changes for the
+        environment. Through various initiatives such as beach cleanups, tree planting campaigns, and educational
+        programs, we work to engage and educate people about the importance of environmental conservation. Join us in
+        our efforts to create a greener and healthier planet by volunteering with Unity for Planet today!"
+    </div>
+    <div class="text-end">
+        <button type="button" class="btn btn-sm btn-link" data-ql-target="#text-more">Reed more</button>
+    </div>
+</div>
+</section>
+                    <!-- FIX Dialog  -->
+<section class="d-grid gap-3">
+<h2 class="h1 mt-4">Dialog</h2>
+<!-- FIX Dialog header -->
+<h4 class="mt-4">Dialog header</h4>
+<h2 class="h4 pb-4 text-center">😃 You’ve almost finished</h2>
+<h2 class="h5 pb-3 text-center">😃 You’ve almost finished</h2>
+<!-- FIX Dialog text -->
+<h4 class="mt-4">Dialog text</h4>
+<p class="fs-5 text-center"><small>You will be able to publish your Campaign after adding at least one quest</small></p>
+<p class="text-center">You will be able to publish your Campaign after adding at least one quest</p>
+<!-- FIX Dialog item -->
+<h4 class="mt-4">Dialog item</h4>
+<div class="text-center">
+	<div class="d-inline-flex align-items-center gap-1">
+		<span>After publishing Your Quest well start:</span>
+		<span class="badge bg-info-200 p-1 text-info-900 fs-6">3 December at 3 PM </span>
+	</div>
+</div>
+<!-- FIX Dialog action -->
+<h4 class="mt-4">Dialog action</h4>
+<div class="pt-4 text-center">
+	<button type="button" class="btn btn-primary">Save as draft and continue</button>
+</div>
+<div class="btns-inline">
+	<button type="button" class="btn btn-outline-dark custom">Attend an assembly</button>
+	<button type="button" class="btn btn-outline-dark custom">Vigils</button>
+	<button type="button" class="btn btn-outline-dark custom">Motorcades attendance</button>
+	<button type="button" class="btn btn-outline-dark custom">Rally attendance</button>
+	<button type="button" class="btn btn-secondary custom">View all Templates</button>
+</div>
+<!-- FIX Dialog -->
+<h4 class="mt-4">Dialog*</h4>
+<div class="ql-dialog primary-outline">
+	<h2>😃 You’ve almost finished</h2>
+	<p>You will be able to publish your Campaign after adding at least one quest</p>
+	<div class="btns-center">
+		<button type="button" class="btn btn-primary">Save as draft and continue</button>
+	</div>
+</div>
+<div class="ql-dialog secondary-outline">
+	<h2>😃 You’ve almost finished</h2>
+	<p>You will be able to publish your Campaign after adding at least one quest</p>
+	<div class="btns-center">
+		<button type="button" class="btn btn-primary">Save as draft and continue</button>
+	</div>
+</div>
+<!-- FIX Dialog small title-->
+<h4 class="mt-4">Dialog small title*</h4>
+<div class="ql-dialog secondary-outline small">
+	<h2>Your supporters will be asked to choose the emoji</h2>
+</div>
+<!-- FIX Dialog small title + tetx-->
+<h4 class="mt-4">Dialog small title + text*</h4>
+<div class="ql-dialog secondary-outline small">
+	<h2>Your supporters will be asked to choose the emoji</h2>
+	<p>Use search or click anywhere on the map to add a checkpoint </p>
+</div>
+</section>
+                    <!-- FIX с  -->
+<section class="d-grid gap-3">
+<h2 class="h1 mt-4">Dropdown</h2>
+<div class="dropdown">
+    <button class="btn btn-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        View all types </button>
+    <ul class="dropdown-menu shadow">
+        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
+        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
+        <li>
+            <hr class="dropdown-divider" />
+        </li>
+        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
+        <li><button type="button" class="dropdown-item">Видалити</button></li>
+    </ul>
+</div>
+<div class="dropdown">
+    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false"> Дії з обраним </button>
+    <ul class="dropdown-menu shadow">
+        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
+        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
+        <li>
+            <hr class="dropdown-divider" />
+        </li>
+        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
+        <li><button type="button" class="dropdown-item">Видалити</button></li>
+    </ul>
+</div>
+<div class="dropdown ql-user">
+    <button type="button" class="btn p-1 border-0 pe-4 ic-chevron position-relative" data-bs-toggle="dropdown"
+        aria-expanded="false" data-bs-auto-close="outside">
+        <img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
+    </button>
+    <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow" style="">
+        <form class="gy-5 p-2">
+            <div class="mb-3">
+                <label for="UserEmail" class="form-label">Email</label>
+                <input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
+                <div class="invalid-feedback">Error text</div>
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <div class="input-group input-group-sm has-validation">
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                        id="inputPassword1" aria-describedby="button-addon1" />
+                    <button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
+                    <div class="invalid-feedback">Error text</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="Check" />
+                    <label class="form-check-label" for="Check">Запамятати мене</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Відправити</button>
+        </form>
+    </div>
+</div>
+<!-- Dropdown no icons -->
+<div class="dropdown ql-dropdown">
+    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false"> Dropdown </button>
+    <ul class="dropdown-menu shadow">
+        <li><button type="button" class="dropdown-item">Change status</button></li>
+        <li><button type="button" class="dropdown-item">Change status</button></li>
+        <li><button type="button" class="dropdown-item active">Change status</button></li>
+        <li><button type="button" class="dropdown-item danger">Change status</button></li>
+        <li><button type="button" class="dropdown-item success">Change status</button></li>
+        <li><button type="button" class="dropdown-item warning">Change status</button></li>
+    </ul>
+</div>
+<!-- Dropdown  icons -->
+<div class="dropdown ql-dropdown">
+    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false"> Dropdown icons</button>
+    <ul class="dropdown-menu shadow">
+        <li><button type="button" class="dropdown-item ic-edit">Edit user</button></li>
+        <li>
+            <button type="button" class="dropdown-item ic-edit">
+                Edit user
+                <span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
+            </button>
+
+        </li>
+        <li><button type="button" class="dropdown-item ic-stop">Block user</button></li>
+        <li><button type="button" class="dropdown-item active ic-success-2">Unblock user</button></li>
+        <li><button type="button" class="dropdown-item ic-delete danger">Delete user</button></li>
+        <li><button type="button" class="dropdown-item ic-success-2 success">Change status</button></li>
+        <li><button type="button" class="dropdown-item ic-success-2 warning">Change status</button></li>
+    </ul>
+</div>
+</section>
+                    <!-- FIX Icon svg -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Icon-svg</h2>
+    <div class="d-inline-flex gap-2 flex-wrap">
+        <img src="img/icons/fb.svg" width="38" height="38" alt="#">
+        <img src="img/icons/twitter.svg" width="38" height="38" alt="#">
+        <img src="img/icons/inst.svg" width="38" height="38" alt="#">
+        <img src="img/icons/link.svg" width="38" height="38" alt="#">
+        <img src="img/icons/twitter-new.svg" width="38" height="38" alt="#">
+    </div>
+    <div class="d-inline-flex gap-2 flex-wrap">
+        <img src="img/icons/fb-circle.svg" width="38" height="38" alt="#">
+        <img src="img/icons/twitter-circle.svg" width="38" height="38" alt="#">
+        <img src="img/icons/inst-circle.svg" width="38" height="38" alt="#">
+        <img src="img/icons/link-circle.svg" width="38" height="38" alt="#">
+        <img src="img/icons/twitter-new-circle.svg" width="38" height="38" alt="#">
+    </div>
+</section>
+                    <!-- FIX Img-preview  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Img-preview</h2>
+    <h4>Large</h4>
+    <div class="d-flex gap-2">
+        <div class=" ql-previews ql-ibg ql-lg">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class=" ql-previews ql-ibg ql-lg current">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class="ql-previews ql-icon ql-lg ic-files"></div>
+        <div class="ql-previews ql-icon ql-lg ic-files current"></div>
+        <div class="ql-previews ql-text ql-lg">+2</div>
+        <div class="ql-previews ql-text ql-lg current">+2</div>
+    </div>
+    <h4>Default</h4>
+    <div class="d-flex gap-2">
+        <div class=" ql-previews ql-ibg">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class=" ql-previews ql-ibg current">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class="ql-previews ql-icon ic-files"></div>
+        <div class="ql-previews ql-icon ic-files current"></div>
+        <div class="ql-previews ql-text">+2</div>
+        <div class="ql-previews ql-text current">+2</div>
+    </div>
+    <h4>Small</h4>
+    <div class="d-flex gap-2">
+        <div class=" ql-previews ql-ibg ql-sm">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class=" ql-previews ql-ibg ql-sm current">
+            <img src="img/table-img-1.jpg" alt="" />
+        </div>
+        <div class="ql-previews ql-icon ql-sm ic-files"></div>
+        <div class="ql-previews ql-icon ql-sm ic-files current"></div>
+        <div class="ql-previews ql-text ql-sm">+2</div>
+        <div class="ql-previews ql-text ql-sm current">+2</div>
+    </div>
+    <h4>layouts</h4>
+    <div class="d-flex gap-2 flex-wrap mb-2">
+        <a href="#" class=" ql-previews ql-ibg">
+            <img src="img/table-img-1.jpg" alt="" />
         </a>
-        <a class="navbar-brand  d-inline-flex" href="#">
-            <img src="img/logo.svg" alt="Logo" width="86" height="40">
-        </a>
-        <a class="navbar-brand  d-inline-flex" href="#">
-            <img src="img/logo-3.svg" alt="Logo" width="57" height="40">
-        </a>
-        <a class="navbar-brand  d-inline-flex" href="#">
-            <img src="img/logo.svg" alt="Logo" width="125" height="50">
-        </a>
-        <a class="navbar-brand  d-inline-flex" href="#">
-            <img src="img/logo.svg" alt="Logo" width="200" height="82">
-        </a>
-        <a class="d-inline-flex" href="#">
-            <img src="img/burger.svg" alt="Logo" width="24" height="40">
-        </a>
-        <h4 class="mt-5">Logo block</h4>
-        <div class="text-center">
-            <a class="navbar-brand d-inline-flex" href="#">
-                <img src="img/logo.svg" alt="Logo" width="86" height="40">
+        <a href="#" class="ql-previews ql-text">+2</a>
+    </div>
+    <div class="mb-2">
+        <div class="d-inline-flex bg-info-100 p-1 rounded-2">
+            <a href="#" class="ql-ibg ql-previews" style="--img-size: 38px">
+                <img class="rounded-3" src="img/table-img-1.jpg" width="38" height="38" alt="" />
             </a>
+            <a href="#" class="ql-ibg ql-previews" style="--img-size: 38px">
+                <img class="rounded-3" src="img/table-img-2.jpg" width="38" height="38" alt="" />
+            </a>
+            <a href="#" class="ql-previews ql-empty rounded-3" style="--img-size: 38px"> 2+ </a>
+        </div>
+    </div>
+    <div>
+        <div class="d-inline-flex w-100 bg-info-100 p-1 rounded-2">
+            <a href="#" class="ql-previews ql-empty rounded-3" style="--img-size: 38px"> 2+ </a>
         </div>
     </div>
 </section>
                     <!-- FIX Items  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn14">Items</h2>
+    <h2 class="h1 mt-4">Items</h2>
     <!-- Answer-item-2 -->
     <h4 class="mt-5">Answer-item-2</h4>
     <div class="bg-body ql-pad-l py-2 pe-3">
@@ -2619,7 +2801,7 @@
 </section>
                     <!-- FIX Labels  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn15">Labels</h2>
+    <h2 class="h1 mt-4">Labels</h2>
     <div class="bg-body py-1 ql-pad-l ql-pad-r d-none d-md-block">
         <div class="row gx-3">
             <div class="form-label col-6 mb-0">Talent Type</div>
@@ -2642,9 +2824,243 @@
         </div>
     </div>
 </section>
+                    <!-- FIX Lists  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Lists</h2>
+    <!-- FIX Lists whith button -->
+    <ul class="list-group list-group-flush ql-flush pb-3 ">
+        <li class="list-group-item">
+            <span class="flex-grow-1 ">Organization user site link:</span>
+            <button type="button" class="btn btn-info ic-file-copy ico-right">
+                <span class="ql-clamp ql-clamp-btn text-start">
+                    www.ql-appwww.ql-appwww.ql-appwww.ql-appwww.ql-app
+                </span>
+            </button>
+        </li>
+    </ul>
+    <!-- FIX Lists whith text -->
+    <ul class="list-group list-group-flush ql-flush">
+        <li class="list-group-item">
+            <span>Address:</span>
+            <span>Mykhaila Hrushevskoho St, Kyiv, 01008</span>
+        </li>
+        <li class="list-group-item ">
+            <span>Phone Number:</span>
+            <span>+38 067 000 00 00</span>
+        </li>
+        <li class="list-group-item ">
+            <span>Phone Number:</span>
+            <span>+38 067 000 00 00</span>
+        </li>
+        <li class="list-group-item ">
+            <span>Email:</span>
+            <span>alex.kukhtin@gmail.com</span>
+        </li>
+        <li class="list-group-item ">
+            <span>Organization website link</span>
+            <a href="#">www.unityforplanet.com</a>
+        </li>
+    </ul>
+    <!-- FIX List item card -->
+    <h4 class="mt-4">List item card </h4>
+    <ul class="list-group ql-list">
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                </div>
+                <p class="ql-clamp">Share invite to the Climate Unity March! Share invite to the Climate Unity March!</p>
+                <span class="badge bg-secondary message">Just Added</span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                </div>
+                <p class="ql-clamp">Share invite to the Climate Unity March! Share invite to the Climate Unity March!</p>
+                <span class="badge bg-secondary message">Just Added</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="list-group ql-list no-outline no-rounded">
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                </div>
+                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+                <span class="badge bg-secondary message">Just Added</span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                </div>
+                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+                <span class="badge bg-secondary message">Just Added</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="list-group ql-list primary">
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;"><img class="rounded"
+                        src="img/table-img-1.jpg" width="42" height="42" alt=""></div>
+                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="list-group ql-list no-outline info">
+        <li class="list-group-item">
+            <a href="#">
+                <div class="ql-ibg ql-previews img" style="--img-size: 42px;"><img class="rounded"
+                        src="img/table-img-1.jpg" width="42" height="42" alt=""></div>
+                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+            </a>
+        </li>
+    </ul>
+    <!-- FIX Chain-item + list-->
+    <h4 class="mt-4">Chain-item + list</h4>
+    <div class="ql-chain">
+        <div class="ql-actions">
+            <h2>Climate Unity March</h2>
+            <button type="button" class="btn btn-sm btn-info ico ic-edit"></button>
+        </div>
+        <hr>
+        <div class="ql-actions bg-info-100">
+            <p>Quests in Chain</p>
+        </div>
+        <ul class="list-group ql-list no-outline no-rounded">
+            <li class="list-group-item">
+                <a href="#">
+                    <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                        <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                    </div>
+                    <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">
+                    <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
+                        <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
+                    </div>
+                    <p class="ql-clamp">Share invite to the Climate Unity March!</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- FIX Extended list + button + radiobutton-->
+    <h4 class="mt-4">Extended list + button + radiobutton</h4>
+    <ul class="list-group ql-extended">
+        <li class="list-group-item">
+            <div class="form-check" >
+                <input type="radio" name="ExtendedList" class="form-check-input" id="ExtendedList1" checked>
+                <label class="form-check-label" for="ExtendedList1">
+                    <div class="d-flex flex-column gap-2 mb-2">
+                        <span class="helper-text">За номером телефону.</span>
+                        <span class="helper-text">За номером телефону.</span>
+                    </div>
+                </label>
+                <div  class="ql-collapse">
+                    <div>
+                        <div class="ql-form-labels mt-2">
+                            <div>
+                                <label for="textarea1" class="form-label required">Label</label>
+                        
+                            </div>
+                            <label class="form-label">0/<span>2500</span>
+                            </label>
+                        </div>
+                        <textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
+                        <div class="invalid-feedback">Error text</div>
+                        <div class="helper-text">Helper text</div>
+                    </div>
+                </div>
+            </div>
+        
+        </li>
+        <li class="list-group-item">
+            <div class="form-check">
+                <input type="radio" name="ExtendedList" class="form-check-input" id="ExtendedList2">
+                <label class="form-check-label" for="ExtendedList2">
+                    <span class="helper-text">За номером телефону.</span>
+                    <span class="helper-text">За номером телефону.</span>
+                </label>
+            </div>
+        </li>
+    </ul>
+</section>
+
+                    <!-- FIX Logos  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Logos</h2>
+    <div class="mt-3 mb-3 d-flex flex-column gap-3">
+        <a class="navbar-brand d-inline-flex" href="#">
+            <img src="img/logo-2.svg" alt="Logo" width="40" height="40">
+        </a>
+        <a class="navbar-brand  d-inline-flex" href="#">
+            <img src="img/logo.svg" alt="Logo" width="86" height="40">
+        </a>
+        <a class="navbar-brand  d-inline-flex" href="#">
+            <img src="img/logo-3.svg" alt="Logo" width="57" height="40">
+        </a>
+        <a class="navbar-brand  d-inline-flex" href="#">
+            <img src="img/logo.svg" alt="Logo" width="125" height="50">
+        </a>
+        <a class="navbar-brand  d-inline-flex" href="#">
+            <img src="img/logo.svg" alt="Logo" width="200" height="82">
+        </a>
+        <a class="d-inline-flex" href="#">
+            <img src="img/burger.svg" alt="Logo" width="24" height="40">
+        </a>
+        <h4 class="mt-5">Logo block</h4>
+        <div class="text-center">
+            <a class="navbar-brand d-inline-flex" href="#">
+                <img src="img/logo.svg" alt="Logo" width="86" height="40">
+            </a>
+        </div>
+    </div>
+</section>
+                    <!-- FIX Map-pin  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Map-pin</h2>
+    <!-- С помощью класса актив пины анимировано появляються и кнему же привязан ховер-->
+    <div class="d-flex flex-column align-items-start gap-6 ps-6">
+        <div class="ql-pin secondary active">
+            <div class="ql-pin__num">
+                <small>1</small>
+            </div>
+            <div class="ql-pin__dot ">
+                <div class="ql-pin__area" style="--diameter:85px"></div>
+            </div>
+        </div>
+        <div class="ql-pin danger active">
+            <div class="ql-pin__num">
+                <small>1</small>
+            </div>
+            <div class="ql-pin__dot">
+                <div class="ql-pin__area" style="--diameter:85px"></div>
+            </div>
+        </div>
+        <div class="ql-pin success active">
+            <div class="ql-pin__num">
+                <small>1</small>
+            </div>
+            <div class="ql-pin__dot">
+                <div class="ql-pin__area" style="--diameter:85px"></div>
+            </div>
+        </div>
+    </div>
+    <h2 class="h4 mt-4">Map-Line</h2>
+    <div class="ql-line bg-secondary"></div>
+    <div class="ql-line bg-success"></div>
+    <div class="ql-line bg-danger"></div>
+</section>
                     <!-- FIX Modals  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn16">Modals</h2>
+    <h2 class="h1 mt-4">Modals</h2>
     <!-- Button trigger modal -->
     <div>
         <div class="pt-3 d-flex flex-wrap gap-2">
@@ -3375,44 +3791,97 @@
         </div>
     </div>
 </section>
-                    <!-- FIX Map-pin  -->
+                    <!-- FIX Orden  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn17">Map-pin</h2>
-    <!-- С помощью класса актив пины анимировано появляються и кнему же привязан ховер-->
-    <div class="d-flex flex-column align-items-start gap-6 ps-6">
-        <div class="ql-pin secondary active">
-            <div class="ql-pin__num">
-                <small>1</small>
-            </div>
-            <div class="ql-pin__dot ">
-                <div class="ql-pin__area" style="--diameter:85px"></div>
-            </div>
-        </div>
-        <div class="ql-pin danger active">
-            <div class="ql-pin__num">
-                <small>1</small>
-            </div>
-            <div class="ql-pin__dot">
-                <div class="ql-pin__area" style="--diameter:85px"></div>
-            </div>
-        </div>
-        <div class="ql-pin success active">
-            <div class="ql-pin__num">
-                <small>1</small>
-            </div>
-            <div class="ql-pin__dot">
-                <div class="ql-pin__area" style="--diameter:85px"></div>
-            </div>
-        </div>
+    <h2 class="h1 mt-4">Orden*</h2>
+    <div class="ql-orden">
+        <img src="img/orden-red.svg" alt="orden-red" width="46" height="46">
+        <p>Vote weight is the sum of influence points, determining the supporter's contribution to the organization's development and achieving its goal. After registration, it equals 1, but it can grow to infinity with participation in quests and campaigns.</p>
     </div>
-    <h2 class="h4 mt-4">Map-Line</h2>
-    <div class="ql-line bg-secondary"></div>
-    <div class="ql-line bg-success"></div>
-    <div class="ql-line bg-danger"></div>
+</section>
+                    <!-- FIX Pagination  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Pagination</h2>
+    <!-- FIX Pagination  default -->
+    <h4>Pagination default</h4>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">Prev</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">24</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
+                    <span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">24</a></li>
+            <li class="page-item">
+                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
+                    <span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- FIX Pagination small -->
+    <h4>Pagination small</h4>
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">Prev</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">24</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm">
+            <li class="page-item disabled">
+                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
+                    <span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">24</a></li>
+            <li class="page-item">
+                <a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
+                    <span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </section>
                     <!-- FIX Progress  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn18">Progress*</h2>
+    <h2 class="h1 mt-4">Progress*</h2>
     <div class="progress ql-progress large" style="--percent:17.5%">
         <div class="left">
             <div>Another voting answer</div>
@@ -3465,390 +3934,9 @@
         <div class="label"><span>Yes, I fully support</span> <span>75.02%</span> </div>
     </div>
 </section>
-                    <!-- FIX Avatars  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn19">Avatars</h2>
-<!-- FIX Avatars 100-->
-<h4>Avatars 100</h4>
-<div class="d-inline-flex gap-2 flex-wrap">
-    <a href="#" class="ql-avatar ql-ibg border-0 online" style="--img-size:100px">
-        <img src="img/avatar.jpg" width="100" height="100" alt="#">
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0" style="--img-size:100px">
-        J
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-white border-0" style="--img-size:100px">
-        <img src="img/type-logo.svg" width="100" height="100" alt="#">
-    </a>
-    <a href="#" class="ql-avatar bg-white" style="--img-size:100px">
-        <span class="ic-img-plus text-info-500"></span>
-    </a>
-</div>
-<!-- FIX Avatars 70-->
-<h4>Avatars 70</h4>
-<div class="d-inline-flex gap-2 flex-wrap">
-    <a href="#" class="ql-avatar ql-ibg border-0" style="--img-size:70px">
-        <img src="img/avatar.jpg" width="70" height="70" alt="#">
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0" style="--img-size:70px">
-        J
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-white border-0" style="--img-size:70px">
-        <img src="img/type-logo.svg" width="70" height="70" alt="#">
-    </a>
-</div>
-<!-- FIX Avatars 40-->
-<h4>Avatars 40</h4>
-<div class="d-inline-flex gap-2 flex-wrap">
-    <a href="#" class="ql-avatar ql-ibg border-2 online-sm" style="--img-size:40px">
-        <img src="img/avatar.jpg" width="40" height="40" alt="#">
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:40px">
-        <small>J</small>
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:40px">
-        <img src="img/type-logo.svg" width="40" height="40" alt="#">
-    </a>
-</div>
-<!-- FIX Avatars 30-->
-<h4>Avatars 30</h4>
-<div class="d-inline-flex gap-2 flex-wrap">
-    <a href="#" class="ql-avatar ql-ibg border-2" style="--img-size:30px">
-        <img src="img/avatar.jpg" width="30" height="30" alt="#">
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
-        <small><small>J</small></small>
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:30px">
-        <img src="img/type-logo.svg" width="30" height="30" alt="#">
-    </a>
-</div>
-<!-- FIX Avatars 30 Users-->
-<h4>Avatars 30 (Users)</h4>
-<div class="d-inline-flex align-items-center ql-users">
-    <a href="#" class="ql-avatar ql-ibg border-2" style="--img-size:30px">
-        <img src="img/avatar.jpg" width="30" height="30" alt="#">
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-secondary text-white border-0 fs-6" style="--img-size:30px">
-        <small><small>J</small></small>
-    </a>
-    <a href="#" class="ql-avatar ql-ibg bg-white border-2" style="--img-size:30px">
-        <img src="img/type-logo.svg" width="30" height="30" alt="#">
-    </a>
-    <span class="text-info-900 ms-2">120</span>
-</div>
-</section>
-                    <!-- FIX Lists  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn20">Lists</h2>
-    <!-- FIX Lists whith button -->
-    <ul class="list-group list-group-flush ql-flush pb-3 ">
-        <li class="list-group-item">
-            <span class="flex-grow-1 ">Organization user site link:</span>
-            <button type="button" class="btn btn-info ic-file-copy ico-right">
-                <span class="ql-clamp ql-clamp-btn text-start">
-                    www.ql-appwww.ql-appwww.ql-appwww.ql-appwww.ql-app
-                </span>
-            </button>
-        </li>
-    </ul>
-    <!-- FIX Lists whith text -->
-    <ul class="list-group list-group-flush ql-flush">
-        <li class="list-group-item">
-            <span>Address:</span>
-            <span>Mykhaila Hrushevskoho St, Kyiv, 01008</span>
-        </li>
-        <li class="list-group-item ">
-            <span>Phone Number:</span>
-            <span>+38 067 000 00 00</span>
-        </li>
-        <li class="list-group-item ">
-            <span>Phone Number:</span>
-            <span>+38 067 000 00 00</span>
-        </li>
-        <li class="list-group-item ">
-            <span>Email:</span>
-            <span>alex.kukhtin@gmail.com</span>
-        </li>
-        <li class="list-group-item ">
-            <span>Organization website link</span>
-            <a href="#">www.unityforplanet.com</a>
-        </li>
-    </ul>
-    <!-- FIX List item card -->
-    <h4 class="mt-4">List item card </h4>
-    <ul class="list-group ql-list">
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                </div>
-                <p class="ql-clamp">Share invite to the Climate Unity March! Share invite to the Climate Unity March!</p>
-                <span class="badge bg-secondary message">Just Added</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                </div>
-                <p class="ql-clamp">Share invite to the Climate Unity March! Share invite to the Climate Unity March!</p>
-                <span class="badge bg-secondary message">Just Added</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="list-group ql-list no-outline no-rounded">
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                </div>
-                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-                <span class="badge bg-secondary message">Just Added</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                    <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                </div>
-                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-                <span class="badge bg-secondary message">Just Added</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="list-group ql-list primary">
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;"><img class="rounded"
-                        src="img/table-img-1.jpg" width="42" height="42" alt=""></div>
-                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="list-group ql-list no-outline info">
-        <li class="list-group-item">
-            <a href="#">
-                <div class="ql-ibg ql-previews img" style="--img-size: 42px;"><img class="rounded"
-                        src="img/table-img-1.jpg" width="42" height="42" alt=""></div>
-                <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-            </a>
-        </li>
-    </ul>
-    <!-- FIX Chain-item + list-->
-    <h4 class="mt-4">Chain-item + list</h4>
-    <div class="ql-chain">
-        <div class="ql-actions">
-            <h2>Climate Unity March</h2>
-            <button type="button" class="btn btn-sm btn-info ico ic-edit"></button>
-        </div>
-        <hr>
-        <div class="ql-actions bg-info-100">
-            <p>Quests in Chain</p>
-        </div>
-        <ul class="list-group ql-list no-outline no-rounded">
-            <li class="list-group-item">
-                <a href="#">
-                    <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                        <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                    </div>
-                    <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">
-                    <div class="ql-ibg ql-previews img" style="--img-size: 42px;">
-                        <img class="rounded" src="img/table-img-1.jpg" width="42" height="42" alt="">
-                    </div>
-                    <p class="ql-clamp">Share invite to the Climate Unity March!</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- FIX Extended list + button + radiobutton-->
-    <h4 class="mt-4">Extended list + button + radiobutton</h4>
-    <ul class="list-group ql-extended">
-        <li class="list-group-item">
-            <div class="form-check" >
-                <input type="radio" name="ExtendedList" class="form-check-input" id="ExtendedList1" checked>
-                <label class="form-check-label" for="ExtendedList1">
-                    <div class="d-flex flex-column gap-2 mb-2">
-                        <span class="helper-text">За номером телефону.</span>
-                        <span class="helper-text">За номером телефону.</span>
-                    </div>
-                </label>
-                <div  class="ql-collapse">
-                    <div>
-                        <div class="ql-form-labels mt-2">
-                            <div>
-                                <label for="textarea1" class="form-label required">Label</label>
-                        
-                            </div>
-                            <label class="form-label">0/<span>2500</span>
-                            </label>
-                        </div>
-                        <textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
-                        <div class="invalid-feedback">Error text</div>
-                        <div class="helper-text">Helper text</div>
-                    </div>
-                </div>
-            </div>
-        
-        </li>
-        <li class="list-group-item">
-            <div class="form-check">
-                <input type="radio" name="ExtendedList" class="form-check-input" id="ExtendedList2">
-                <label class="form-check-label" for="ExtendedList2">
-                    <span class="helper-text">За номером телефону.</span>
-                    <span class="helper-text">За номером телефону.</span>
-                </label>
-            </div>
-        </li>
-    </ul>
-</section>
-
-                    <!-- FIX Description  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn21">Description</h2>
-<div class="px-4 py-3">
-    <h3 class="h6 text-info-600 pb-2">Description</h3>
-    <div id="#text-more" class="ql-description mb-3">
-        "Unity for Planet" is a non-profit organization dedicated to protecting the environment through community
-        involvement and volunteerism. Our mission is to inspire and empower individuals to take action to preserve and
-        protect the planet for future generations. We believe that everyone has a role to play in creating a sustainable
-        future, and that small actions taken by individuals can lead to significant positive changes for the
-        environment. Through various initiatives such as beach cleanups, tree planting campaigns, and educational
-        programs, we work to engage and educate people about the importance of environmental conservation. Join us in
-        our efforts to create a greener and healthier planet by volunteering with Unity for Planet today!"
-    </div>
-    <div class="text-end">
-        <button type="button" class="btn btn-sm btn-link" data-ql-target="#text-more">Reed more</button>
-    </div>
-</div>
-</section>
-                    <!-- FIX Img-preview  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn22">Img-preview</h2>
-    <h4>Large</h4>
-    <div class="d-flex gap-2">
-        <div class=" ql-previews ql-ibg ql-lg">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class=" ql-previews ql-ibg ql-lg current">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class="ql-previews ql-icon ql-lg ic-files"></div>
-        <div class="ql-previews ql-icon ql-lg ic-files current"></div>
-        <div class="ql-previews ql-text ql-lg">+2</div>
-        <div class="ql-previews ql-text ql-lg current">+2</div>
-    </div>
-    <h4>Default</h4>
-    <div class="d-flex gap-2">
-        <div class=" ql-previews ql-ibg">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class=" ql-previews ql-ibg current">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class="ql-previews ql-icon ic-files"></div>
-        <div class="ql-previews ql-icon ic-files current"></div>
-        <div class="ql-previews ql-text">+2</div>
-        <div class="ql-previews ql-text current">+2</div>
-    </div>
-    <h4>Small</h4>
-    <div class="d-flex gap-2">
-        <div class=" ql-previews ql-ibg ql-sm">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class=" ql-previews ql-ibg ql-sm current">
-            <img src="img/table-img-1.jpg" alt="" />
-        </div>
-        <div class="ql-previews ql-icon ql-sm ic-files"></div>
-        <div class="ql-previews ql-icon ql-sm ic-files current"></div>
-        <div class="ql-previews ql-text ql-sm">+2</div>
-        <div class="ql-previews ql-text ql-sm current">+2</div>
-    </div>
-    <h4>layouts</h4>
-    <div class="d-flex gap-2 flex-wrap mb-2">
-        <a href="#" class=" ql-previews ql-ibg">
-            <img src="img/table-img-1.jpg" alt="" />
-        </a>
-        <a href="#" class="ql-previews ql-text">+2</a>
-    </div>
-    <div class="mb-2">
-        <div class="d-inline-flex bg-info-100 p-1 rounded-2">
-            <a href="#" class="ql-ibg ql-previews" style="--img-size: 38px">
-                <img class="rounded-3" src="img/table-img-1.jpg" width="38" height="38" alt="" />
-            </a>
-            <a href="#" class="ql-ibg ql-previews" style="--img-size: 38px">
-                <img class="rounded-3" src="img/table-img-2.jpg" width="38" height="38" alt="" />
-            </a>
-            <a href="#" class="ql-previews ql-empty rounded-3" style="--img-size: 38px"> 2+ </a>
-        </div>
-    </div>
-    <div>
-        <div class="d-inline-flex w-100 bg-info-100 p-1 rounded-2">
-            <a href="#" class="ql-previews ql-empty rounded-3" style="--img-size: 38px"> 2+ </a>
-        </div>
-    </div>
-</section>
-                    <!-- FIX Card  -->
- <section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn23">Cards</h2>
-<!-- FIX Card modal -->
-<h4>Card modal</h4>
-<div class="d-flex flex-wrap gap-2">
-	<a href="#" class="card ql-card" style="width: 13.625rem;">
-		<div class="ql-ibg card-img-top">
-			<img src="img/table-img-1.jpg" class="card-img-top" alt="img">
-		</div>
-		<div class="card-body pt-2">
-			<div class="text-end pb-2">
-				<span class="badge ql-badge-success">Published</span>
-			</div>
-			<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
-		</div>
-	</a>
-	<a href="#" class="card ql-card" style="width: 13.625rem;">
-		<div class="ql-ibg ql-noimg bg-info-100">
-			<span class="ic-img text-info"></span>
-		</div>
-		<div class="card-body pt-2">
-			<div class="text-end pb-2">
-				<span class="badge ql-badge-success">Published</span>
-			</div>
-			<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
-		</div>
-	</a>
-</div>
-<!-- FIX Card Verification -->
-<h4 class="mt-4">Card verification</h4>
-<div class="card p-3 border-0 rounded-0" style="width: 244px;">
-	<div class="form-check pe-2 mb-2">
-		<input type="checkbox" class="form-check-input" id="Check1">
-	</div>
-	<a href="#" class="ql-ibg ql-img1x1 ic-arrows-maximize">
-		<img src="img/img-ver2.jpg" alt="img">
-	</a>
-	<div class="card-body p-0 pt-2">
-		<div class=" d-flex align-items-center w-100">
-			<button type="button" class="btn btn-danger me-1 flex-grow-1">Decline</button>
-			<button type="button" class="btn btn-success ic-check-big ico-right flex-grow-1">Verify</button>
-		</div>
-		<div class="pt-3">
-			<div class="mb-1 h6">Босик Ждана</div>
-			<div class="text-info-600">example@gmail.com</div>
-		</div>
-		<div class="pt-3">
-			<div class="text-info-600"><small>20/20/2023 12:02:23</small></div>
-			<div class="text-info-600"><small>ID: 02344</small></div>
-		</div>
-	</div>
-</div>
-</section>
                     <!-- FIX QR-code  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn24">QR -code 1</h2>
+    <h2 class="h1 mt-4">QR -code 1</h2>
     <div class="pt-4 px-3 pb-6 bg-white rounded-2 text-center">
         <h2 class="py-6 h4">
             Show this unique QR code to quest’s volunteers to verify their participation 👇
@@ -3858,9 +3946,35 @@
         </div>
     </div>
 </section>
+                    <!-- FIX Rating  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Rating*</h2>
+    <div class="ql-rating">
+        <div>
+            <img src="img/rating/rating1.svg" width="50" height="50" alt="">
+            <div>Not satisfied</div>
+        </div>
+        <div>
+            <img src="img/rating/rating2.svg" width="50" height="50" alt="">
+            <div>Somewhat dissatisfied</div>
+        </div>
+        <div>
+            <img src="img/rating/rating3.svg" width="50" height="50" alt="">
+            <div>Neutral</div>
+        </div>
+        <div>
+            <img src="img/rating/rating4.svg" width="50" height="50" alt="">
+            <div>Satisfied</div>
+        </div>
+        <div>
+            <img src="img/rating/rating5.svg" width="50" height="50" alt="">
+            <div>Extremely happy</div>
+        </div>
+    </div>
+</section>
                     <!-- FIX Status  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn25">Status</h2>
+    <h2 class="h1 mt-4">Status</h2>
     <small class="tetx-info">Status: <span class="text-warning">Draft</span></small>
     <small class="tetx-info">Status: <span class="text-success">Published</span></small>
     <small class="tetx-info">Status: <span class="text-info-900">New</span></small>
@@ -3880,83 +3994,122 @@
         <span class="ql-status-badge secondary ic-branch">branch-superadmin</span>
     </div>
 </section>
-                    <!-- FIX Toasts  -->
+                    <!-- FIX Subscription  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn26">Toasts</h2>
-    <div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <span class="me-2 ic-check-big bg-primary text-white"></span>
-            <strong class="me-auto">Checkpoint 1 added</strong>
-            <small class="text-info-600">11 mins ago</small>
-            <button type="button" class="btn-close small ic-cloze" data-bs-dismiss="toast" aria-label="Close"></button>
+    <h2 class="h1 mt-4">Subscription</h2>
+    <!-- FIX Subscription whith numbers -->
+    <h4 class="mt-4">Subscription whith numbers</h4>
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
         </div>
-        <div class="toast-body">
-            Hello, world! This is a toast message.
+        <div class="card-body flex-grow-1">
+            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
+            <div class="text-info-600"><small>month</small></div>
+        </div>
+        <div class="card-footer">
+            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+            <div class="text-secondary"><small>Current plan</small></div>
+        </div>
+    </div>
+    <!-- ============== -->
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
+            <div class="text-info-600"><small>month</small></div>
+        </div>
+    </div>
+    <!-- ============== -->
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
+            <div class="text-info-600"><small>month</small></div>
+        </div>
+        <div class="card-footer">
+            <div class="btn btn-secondary btn-sm">Request</div>
+        </div>
+    </div>
+    <!-- FIX Subscription whith text -->
+    <h4 class="mt-4">Subscription whith text</h4>
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+        <small class="text-secondary fw-bolder">let’s talk</small>
+        </div>
+        <div class="card-footer">
+            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+            <div class="text-secondary"><small>Current plan</small></div>
+        </div>
+    </div>
+    <!-- ============== -->
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+            <small class="text-secondary fw-bolder">let’s talk</small>
+        </div>
+    </div>
+    <!-- ============== -->
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+            <small class="text-secondary fw-bolder">let’s talk</small>
+        </div>
+        <div class="card-footer">
+            <div class="btn btn-secondary btn-sm">Request</div>
+        </div>
+    </div>
+    <!-- FIX Subscription whith text (green)-->
+    <h4 class="mt-4">Subscription whith text (green)</h4>
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+        <small class="text-success-600 fw-bolder">free</small>
+        </div>
+        <div class="card-footer">
+            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+            <div class="text-secondary"><small>Current plan</small></div>
+        </div>
+    </div>
+    <!-- ============== -->
+    <div class="card ql-subscription">
+        <div class="card-header px-3">
+            <h3 class="h6">101 - 1 000</h3>
+            <div><small>users</small></div>
+        </div>
+        <div class="card-body flex-grow-1">
+            <div class="ql-price text-success-600"><span class="fw-normal">$</span><span>0</span></div>
+            <div class="text-info-600"><small>month</small></div>
+        </div>
+        <div class="card-footer">
+            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+            <div class="text-secondary"><small>Current plan</small></div>
         </div>
     </div>
 </section>
-                    <!-- FIX Dialog  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn27">Dialog</h2>
-<!-- FIX Dialog header -->
-<h4 class="mt-4">Dialog header</h4>
-<h2 class="h4 pb-4 text-center">😃 You’ve almost finished</h2>
-<h2 class="h5 pb-3 text-center">😃 You’ve almost finished</h2>
-<!-- FIX Dialog text -->
-<h4 class="mt-4">Dialog text</h4>
-<p class="fs-5 text-center"><small>You will be able to publish your Campaign after adding at least one quest</small></p>
-<p class="text-center">You will be able to publish your Campaign after adding at least one quest</p>
-<!-- FIX Dialog item -->
-<h4 class="mt-4">Dialog item</h4>
-<div class="text-center">
-	<div class="d-inline-flex align-items-center gap-1">
-		<span>After publishing Your Quest well start:</span>
-		<span class="badge bg-info-200 p-1 text-info-900 fs-6">3 December at 3 PM </span>
-	</div>
-</div>
-<!-- FIX Dialog action -->
-<h4 class="mt-4">Dialog action</h4>
-<div class="pt-4 text-center">
-	<button type="button" class="btn btn-primary">Save as draft and continue</button>
-</div>
-<div class="btns-inline">
-	<button type="button" class="btn btn-outline-dark custom">Attend an assembly</button>
-	<button type="button" class="btn btn-outline-dark custom">Vigils</button>
-	<button type="button" class="btn btn-outline-dark custom">Motorcades attendance</button>
-	<button type="button" class="btn btn-outline-dark custom">Rally attendance</button>
-	<button type="button" class="btn btn-secondary custom">View all Templates</button>
-</div>
-<!-- FIX Dialog -->
-<h4 class="mt-4">Dialog*</h4>
-<div class="ql-dialog primary-outline">
-	<h2>😃 You’ve almost finished</h2>
-	<p>You will be able to publish your Campaign after adding at least one quest</p>
-	<div class="btns-center">
-		<button type="button" class="btn btn-primary">Save as draft and continue</button>
-	</div>
-</div>
-<div class="ql-dialog secondary-outline">
-	<h2>😃 You’ve almost finished</h2>
-	<p>You will be able to publish your Campaign after adding at least one quest</p>
-	<div class="btns-center">
-		<button type="button" class="btn btn-primary">Save as draft and continue</button>
-	</div>
-</div>
-<!-- FIX Dialog small title-->
-<h4 class="mt-4">Dialog small title*</h4>
-<div class="ql-dialog secondary-outline small">
-	<h2>Your supporters will be asked to choose the emoji</h2>
-</div>
-<!-- FIX Dialog small title + tetx-->
-<h4 class="mt-4">Dialog small title + text*</h4>
-<div class="ql-dialog secondary-outline small">
-	<h2>Your supporters will be asked to choose the emoji</h2>
-	<p>Use search or click anywhere on the map to add a checkpoint </p>
-</div>
-</section>
                     <!-- FIX Telents  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn28">Telents</h2>
+    <h2 class="h1 mt-4">Telents</h2>
     <!-- awards item red-->
     <div class="ql-telent red">Recruiting</div>
     <!-- awards item violet-->
@@ -4086,9 +4239,24 @@
         </li>
     </ul>
 </section>
+                    <!-- FIX Toasts  -->
+<section class="d-grid gap-3">
+    <h2 class="h1 mt-4">Toasts</h2>
+    <div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <span class="me-2 ic-check-big bg-primary text-white"></span>
+            <strong class="me-auto">Checkpoint 1 added</strong>
+            <small class="text-info-600">11 mins ago</small>
+            <button type="button" class="btn-close small ic-cloze" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</section>
                     <!-- FIX Toolbar  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn29">Toolbar</h2>
+    <h2 class="h1 mt-4">Toolbar</h2>
     <div class="ql-toolbar">
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="Check5x">
@@ -4122,70 +4290,40 @@
         <button type="button" class="btn btn-light ico ic-delete" disabled></button>
     </div>
 </section>
-                    <!-- FIX Rating  -->
+                    <!-- FIX Tooltip  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn30">Rating*</h2>
-    <div class="ql-rating">
+    <h2 class="h1 mt-4">Tooltip</h2>
+    <div>
+        <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit nulla accumsan sodales ornare."></button>
+    </div>
+    <div class="ql-form-labels">
         <div>
-            <img src="img/rating/rating1.svg" width="50" height="50" alt="">
-            <div>Not satisfied</div>
-        </div>
-        <div>
-            <img src="img/rating/rating2.svg" width="50" height="50" alt="">
-            <div>Somewhat dissatisfied</div>
-        </div>
-        <div>
-            <img src="img/rating/rating3.svg" width="50" height="50" alt="">
-            <div>Neutral</div>
-        </div>
-        <div>
-            <img src="img/rating/rating4.svg" width="50" height="50" alt="">
-            <div>Satisfied</div>
-        </div>
-        <div>
-            <img src="img/rating/rating5.svg" width="50" height="50" alt="">
-            <div>Extremely happy</div>
+            <span class="form-label">Tooltip Label</span>
+            <button type="button" class="btn ql-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
         </div>
     </div>
-</section>
-                    <!-- FIX Orden  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn31">Orden*</h2>
-    <div class="ql-orden">
-        <img src="img/orden-red.svg" alt="orden-red" width="46" height="46">
-        <p>Vote weight is the sum of influence points, determining the supporter's contribution to the organization's development and achieving its goal. After registration, it equals 1, but it can grow to infinity with participation in quests and campaigns.</p>
+    <!-- Tooltip admin -->
+    <h2 class="mt-4">Tooltip admin</h2>
+    <div class="d-flex gap-1">
+        <!-- Tooltip super-admin -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-secondary-600 bg-secondary-100 ic-key" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
+        <!-- Tooltip quests-admin -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-success bg-success-100 ic-diamond-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch quests admin"></button>
+        <!-- Tooltip reader -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-warning-600 bg-warning-100 ic-eye" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch reader"></button>
+        <!-- Tooltip voting-admin -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-success-600 bg-success-100 ic-voting-24" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch voting admin"></button>
+        <!-- Tooltip users-admin -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-success-600 bg-success-100 ic-people" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch users admin"></button>
+        <!-- Tooltip branch-super-admin -->
+        <button type="button" class="btn ql-btn-tooltip ql-admin text-secondary-600 bg-secondary-100 ic-branch" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Branch super admin"></button>
     </div>
-</section>
-                    <!-- FIX Icon svg -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn32">Icon-svg</h2>
-    <div class="d-inline-flex gap-2 flex-wrap">
-        <img src="img/icons/fb.svg" width="38" height="38" alt="#">
-        <img src="img/icons/twitter.svg" width="38" height="38" alt="#">
-        <img src="img/icons/inst.svg" width="38" height="38" alt="#">
-        <img src="img/icons/link.svg" width="38" height="38" alt="#">
-        <img src="img/icons/twitter-new.svg" width="38" height="38" alt="#">
+    <!-- Tooltip text -->
+    <h2 class="mt-4">Tooltip text</h2>
+    <div class="d-flex gap-1">
+        <!-- Tooltip super-admin -->
+        <button type="button" class="ql-clamp p-0 bg-transparent border-0" style="width: 265px;" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
     </div>
-    <div class="d-inline-flex gap-2 flex-wrap">
-        <img src="img/icons/fb-circle.svg" width="38" height="38" alt="#">
-        <img src="img/icons/twitter-circle.svg" width="38" height="38" alt="#">
-        <img src="img/icons/inst-circle.svg" width="38" height="38" alt="#">
-        <img src="img/icons/link-circle.svg" width="38" height="38" alt="#">
-        <img src="img/icons/twitter-new-circle.svg" width="38" height="38" alt="#">
-    </div>
-</section>
-                    <!-- FIX Breadcrumb  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn33">Breadcrumb</h2>
-<div class="ql-breadcrumb">
-    <a class="ql-clamp">asdsadasdasd sadasdasdsad asdasdsadasd asdasdsadasd</a>
-    <span class="ic-chevron-left"></span>
-    <a class="ql-clamp word-break ">asdasdasd</a>
-    <span class="ic-chevron-left"></span>
-    <a class="ql-clamp word-break">asdadasda</a>
-    <span class="ic-chevron-left"></span>
-    <span class="ql-clamp">sadasdasdsad sadasdasdsad</span>
-</div>
 </section>
                     <!-- FIX Under  -->
 <section class="d-grid gap-3">
@@ -4202,144 +4340,6 @@
         <p> <small>Sorry for the inconvenience but we're performing some maintenance at the moment</small></p>
         <button type="button" class="btn btn-secondary">Go back</button>
     </div>
-</section>
-                    <!-- FIX Subscription  -->
-<section class="d-grid gap-3">
-    <h2 class="h1 mt-4" id="h3Btn35">Subscription</h2>
-    <!-- FIX Subscription whith numbers -->
-    <h4 class="mt-4">Subscription whith numbers</h4>
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
-            <div class="text-info-600"><small>month</small></div>
-        </div>
-        <div class="card-footer">
-            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
-            <div class="text-secondary"><small>Current plan</small></div>
-        </div>
-    </div>
-    <!-- ============== -->
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
-            <div class="text-info-600"><small>month</small></div>
-        </div>
-    </div>
-    <!-- ============== -->
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <div class="ql-price"><span class="fw-normal">$</span><span>350</span></div>
-            <div class="text-info-600"><small>month</small></div>
-        </div>
-        <div class="card-footer">
-            <div class="btn btn-secondary btn-sm">Request</div>
-        </div>
-    </div>
-    <!-- FIX Subscription whith text -->
-    <h4 class="mt-4">Subscription whith text</h4>
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-        <small class="text-secondary fw-bolder">let’s talk</small>
-        </div>
-        <div class="card-footer">
-            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
-            <div class="text-secondary"><small>Current plan</small></div>
-        </div>
-    </div>
-    <!-- ============== -->
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <small class="text-secondary fw-bolder">let’s talk</small>
-        </div>
-    </div>
-    <!-- ============== -->
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <small class="text-secondary fw-bolder">let’s talk</small>
-        </div>
-        <div class="card-footer">
-            <div class="btn btn-secondary btn-sm">Request</div>
-        </div>
-    </div>
-    <!-- FIX Subscription whith text (green)-->
-    <h4 class="mt-4">Subscription whith text (green)</h4>
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-        <small class="text-success-600 fw-bolder">free</small>
-        </div>
-        <div class="card-footer">
-            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
-            <div class="text-secondary"><small>Current plan</small></div>
-        </div>
-    </div>
-    <!-- ============== -->
-    <div class="card ql-subscription">
-        <div class="card-header px-3">
-            <h3 class="h6">101 - 1 000</h3>
-            <div><small>users</small></div>
-        </div>
-        <div class="card-body flex-grow-1">
-            <div class="ql-price text-success-600"><span class="fw-normal">$</span><span>0</span></div>
-            <div class="text-info-600"><small>month</small></div>
-        </div>
-        <div class="card-footer">
-            <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
-            <div class="text-secondary"><small>Current plan</small></div>
-        </div>
-    </div>
-</section>
-                    <!-- FIX Delimiter  -->
-<section class="d-grid gap-3">
-<h2 class="h1 mt-4" id="h3Btn36">Delimiter</h2>
-<!-- FIX Delimiter sx -->
-<h4 class="mt-4">Delimiter large</h4>
-<div class="ql-delimiter ql-delimiter-lg">
-    <hr>
-    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
-</div>
-<h4 class="mt-4">Delimiter middle</h4>
-<div class="ql-delimiter ql-delimiter-md">
-    <hr>
-    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
-</div>
-<h4 class="mt-4">Delimiter small</h4>
-<div class="ql-delimiter ql-delimiter-sm">
-    <hr>
-    <span class="badge bg-white text-info-900 large-xl px-2">or</span>
-</div>
-<h4 class="mt-4">Delimiter small x</h4>
-<div class="ql-delimiter ql-delimiter-smx">
-    <hr>
-    <span class="badge bg-white text-info-900 large-xl px-2 py-1">or</span>
-</div>
 </section>
                 </div>
             </div>
@@ -4461,7 +4461,7 @@
                         });
                     }
                 });
-            },{threshold: 0.7});
+            },{threshold: 0.33});
 
             sections.forEach((section) => observer.observe(section),);
         }
