@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
+  <head>
 	<title>Talent management</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
@@ -9,382 +9,501 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="ql-body">
-	<header>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- item whith title and button burger-->
-			<div class="col-10 col-xl-auto col-md-8 gap-3">
-				<button class="ql-burger">
-					<img src="img/burger.svg" width="24" height="40" alt="burger button" />
-				</button>
-				<h1 class="h6 ql-clamp">Awards > Talent management</h1>
-			</div>
-			<div class="col-2 col-xl col-md-4">
-				<!--FIX form search -->
-				<form class="ql-search" role="search">
-					<div class="ql-search__wrapper">
-						<div class="input-group">
-							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-						</div>
-					</div>
-					<button class="btn ic-search p-2 ql-search-btn" type="button"></button>
-				</form>
-				<!--FIX badge -->
-				<button type="button" class="btn ic-bell p-2 ql-notification active">
-					<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-				</button>
-				<!--FIX user -->
-				<div class="dropdown ql-user">
-					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user" />
-					</button>
-					<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
-						<form class="gy-5 p-2">
-							<div class="mb-3">
-								<label for="UserEmail" class="form-label">Email</label>
-								<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="mb-3">
-								<label for="inputPassword1" class="form-label">Password</label>
-								<div class="input-group input-group-sm has-validation">
-									<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1" />
-									<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
-									<div class="invalid-feedback">Error text</div>
-								</div>
-							</div>
-							<div class="mb-3">
-								<div class="form-check">
-									<input type="checkbox" class="form-check-input" id="Check" />
-									<label class="form-check-label" for="Check">Запамятати мене</label>
-								</div>
-							</div>
-							<button type="submit" class="btn btn-primary w-100">Відправити</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--FIX menu -->
-	<div class="ql-menu">
-		<!--FIX buttons -->
-		<button type="button" class="ic-chevron border-0 ql-btn-menu ql-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute ql-btn-close" aria-label="Close"></button>
-		<nav class="ql-nav">
-			<!--FIX mobile logo -->
-			<a class="navbar-brand ql-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
-			<!--FIX mobile search -->
-			<form class="ql-search mobile" role="search">
-				<div class="input-group">
-					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-				</div>
-			</form>
-			<!--FIX mobile user -->
-			<div class="row ql-user mobile">
-				<div class="col">
-					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
-					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
-				</div>
-				<div class="col-auto">
-					<button type="button" class="btn btn-info ico ic-log-out"></button>
-				</div>
-			</div>
-			<!--FIX nav wrapper -->
-			<div class="ql-nav__wrapper">
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link active" aria-current="page">
-							<span class="ic-spead"></span>
-							<span>Дашборд</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-people"></span>
-							<span>Користувачі</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-box-arrow"></span>
-							<span>Голосування</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-notes"></span>
-							<span>Новини</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-calendar"></span>
-							<span>Квести</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-dollar quantity">
-								<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-							</span>
-							<span>Донати</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-lattice"></span>
-							<span>Теги</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-speaker"></span>
-							<span>Маркетинг</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-jostik"></span>
-							<span>Гейміфікація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-city"></span>
-							<span>Організація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-tent"></span>
-							<span>Магазин</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-settings"></span>
-							<span>Налаштування</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+  <body class="qela-body">
+    <header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- item whith title and button burger-->
+      <div class="col-10 col-xl-auto col-md-8 gap-3">
+        <button class="qela-burger">
+          <img
+            src="img/burger.svg"
+            width="24"
+            height="40"
+            alt="burger button"
+          />
+        </button>
+        <h1 class="h6 qela-clamp">Awards > Talent management</h1>
+      </div>
+      <div class="col-2 col-xl col-md-4">
+        <!--FIX form search -->
+        <form class="qela-search" role="search">
+          <div class="qela-search__wrapper">
+            <div class="input-group">
+              <button
+                class="btn btn-input ic-search"
+                type="button"
+                id="button-search"
+              ></button>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Пошук"
+                aria-label="Search"
+                aria-describedby="button-search"
+              />
+            </div>
+          </div>
+          <button
+            class="btn ic-search p-2 qela-search-btn"
+            type="button"
+          ></button>
+        </form>
+        <!--FIX badge -->
+        <button type="button" class="btn ic-bell p-2 qela-notification active">
+          <span class="badge rounded-pill text-bg-danger qela-badge small"
+            >25</span
+          >
+        </button>
+        <!--FIX user -->
+        <div class="dropdown qela-user">
+          <button
+            type="button"
+            class="btn p-0 border-0 ic-chevron position-relative"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            <img
+              class="rounded-circle"
+              src="img/header/user.jpg"
+              width="32"
+              height="32"
+              alt="user"
+            />
+          </button>
+          <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
+            <form class="gy-5 p-2">
+              <div class="mb-3">
+                <label for="UserEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  id="UserEmail"
+                  placeholder="Email"
+                />
+                <div class="invalid-feedback">Error text</div>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <div class="input-group input-group-sm has-validation">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    aria-label="Password"
+                    id="inputPassword1"
+                    aria-describedby="button-addon1"
+                  />
+                  <button
+                    class="btn btn-input ic-eye-close"
+                    type="button"
+                    id="button-addon1"
+                  ></button>
+                  <div class="invalid-feedback">Error text</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Check" />
+                  <label class="form-check-label" for="Check"
+                    >Запамятати мене</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Відправити
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FIX menu -->
+  <div class="qela-menu">
+    <!--FIX buttons -->
+    <button
+      type="button"
+      class="ic-chevron border-0 qela-btn-menu qela-shadow"
+    ></button>
+    <button
+      type="button"
+      class="ic-cloze p-2 border-0 position-absolute qela-btn-close"
+      aria-label="Close"
+    ></button>
+    <nav class="qela-nav">
+      <!--FIX mobile logo -->
+      <a class="navbar-brand qela-logo" href="#"
+        ><img src="img/logo-3.svg" alt="Logo" width="57" height="40"
+      /></a>
+      <!--FIX mobile search -->
+      <form class="qela-search mobile" role="search">
+        <div class="input-group">
+          <button
+            class="btn btn-input ic-search"
+            type="button"
+            id="button-search"
+          ></button>
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Пошук"
+            aria-label="Search"
+            aria-describedby="button-search"
+          />
+        </div>
+      </form>
+      <!--FIX mobile user -->
+      <div class="row qela-user mobile">
+        <div class="col">
+          <img
+            class="rounded-circle"
+            src="img/header/user.jpg"
+            width="40"
+            height="40"
+            alt="user"
+          />
+          <span class="fw-semibold fs-5"><small>Uzer Name</small></span>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-info ico ic-log-out"></button>
+        </div>
+      </div>
+      <!--FIX nav wrapper -->
+      <div class="qela-nav__wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <span class="ic-spead"></span>
+              <span>Дашборд</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-people"></span>
+              <span>Користувачі</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-box-arrow"></span>
+              <span>Голосування</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-notes"></span>
+              <span>Новини</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-calendar"></span>
+              <span>Квести</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-dollar quantity">
+                <span class="badge rounded-pill text-bg-danger qela-badge small"
+                  >25</span
+                >
+              </span>
+              <span>Донати</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-lattice"></span>
+              <span>Теги</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-speaker"></span>
+              <span>Маркетинг</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-jostik"></span>
+              <span>Гейміфікація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-city"></span>
+              <span>Організація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-tent"></span>
+              <span>Магазин</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-settings"></span>
+              <span>Налаштування</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 
-	<main class="ql-main">
-		<!-- =====================Список користувачів==================== -->
-		<div class="container">
-			<div class="ql-page" id="app" v-cloak>
-				<div class="row">
-					<div class="col-12">
-						<ul class="nav nav-tabs">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link">Vote weight managment</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active">Talent management</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row row-grow gy-3 gy-lg-0">
-					<!-- left -->
-					<div class="col-lg-4">
-						<h2 class="h5 mb-3">Select the Talent</h2>
-						<ul class="nav ql-telent-nav">
-							<li class="nav-item">
-								<a href="#" class="nav-link red">
-									<span>Fundraising</span>
-									<span class="badge ql-badge-telent text-red">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link violet current">
-									<span>Recruiting</span>
-									<span class="badge ql-badge-telent text-violet">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link green">
-									<span>Endurance</span>
-									<span class="badge ql-badge-telent text-green">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link orange">
-									<span>Endurance</span>
-									<span class="badge ql-badge-telent text-orange">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link lightgreen">
-									<span>Determination</span>
-									<span class="badge ql-badge-telent text-lightgreen">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link lightblue">
-									<span>Originality</span>
-									<span class="badge ql-badge-telent text-lightblue">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link blue">
-									<span>Management</span>
-									<span class="badge ql-badge-telent text-blue">10 000. 0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link pink">
-									<span>Savvy</span>
-									<span class="badge ql-badge-telent text-pink">10 000. 0</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- right -->
-					<div class="col-lg-8">
-						<h2 class="h5 px-3">Recruiting user talent list</h2>
-						<div class="row g-3 mb-3 align-items-end">
-							<div class="col-sm">
-								<div class="input-group">
-									<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-									<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search">
-								</div>
-							</div>
-							<div class="col-sm-auto">
-								<div class="mb-1">Total value of Originality: </div>
-								<div class="ql-telent violet text-end">100 000.0</div>
-							</div>
-						</div>
-						<div class="table-responsive table-qela large">
-							<table class="table table-hover">
-								<thead class="table-light">
-									<tr>
-										<th class="ps-4" width="45" scope="col">
-											Photo
-										</th>
-										<th scope="col">
-											User Name
-										</th>
-										<th scope="col">
-											First Name
-										</th>
-										<th scope="col">
-											Last Name
-										</th>
-										<th scope="col">
-											Phone Number
-										</th>
-										<th class="text-end" width="150" scope="col">
-											Value
-										</th>
-										<th class="text-end" width="65" scope="col">
-											Actions
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td width="45">
-											<a href="#" class="ql-avatar ql-ibg border-2" style="--img-size: 40px;"><img src="img/avatar.jpg" width="40" height="40" alt="#"></a>
-										</td>
-										<td width="150">
-											<div class="ql-clamp" style="width:150px">alexey.bubymka@hmayl.com</div>
-										</td>
-										<td>
-											Gary
-										</td>
-										<td>
-											Simon
-										</td>
-										<td width="150">
-											<div class="ql-clamp" style="width:150px">+ 38 067 000 00 00</div>
-										</td>
-										<td class="text-end" width="150">
-											<span class="badge ql-badge-telent text-violet">10 000. 0</span>
-										</td>
-										<td width="65">
-											<div class="btn-group ql-btn-group" role="group">
-												<button type="button" class="btn btn-light ico ic-edit"></button>
-												<button type="button" class="btn btn-light ico ic-book"></button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<nav class="px-3 py-2" aria-label="Page navigation">
-							<ul class="pagination justify-content-end pagination-sm mb-0">
-								<li class="page-item disabled">
-									<a class="page-link" href="#" aria-label="Previous">
-										<span aria-hidden="true">Prev</span>
-									</a>
-								</li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">...</a></li>
-								<li class="page-item"><a class="page-link" href="#">24</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#" aria-label="Next">
-										<span aria-hidden="true">Next</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-	<script type="text/javascript">
-		let app = Vue.createApp({
-			components: {
-				"v-date-picker": VueDatePicker,
-				"v-multi-select": VueMultiselect.default
-			},
-			data() {
-				return {
-					date: [new Date(), new Date()],
-					value1: '',
-					value2: '',
-					value3: '',
-					value4: '',
-					options: [
-						'Пункт 1 sadafdf',
-						'Пункт 2',
-						'Пункт 3',
-						'Пункт 4',
-						'Пункт 1 assadafdf',
-						'Пункт 2sades',
-						'Пункт 3sd',
-						'Пункт 4sd'
-					]
-				}
-			},
-			methods: {
-				click() {
-					alert(1);
-					this.message += " clicked!";
-				}
-			}
-		});
-		console.dir(app);
-		app.mount('#app')
-	</script>
-	<!-- =========================== -->
-	<script src="js/vendors.js"></script>
+    <main class="qela-main">
+      <!-- =====================Список користувачів==================== -->
+      <div class="container">
+        <div class="qela-page" id="app" v-cloak>
+          <div class="row">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link">Vote weight managment</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active">Talent management</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row row-grow gy-3 gy-lg-0">
+            <!-- left -->
+            <div class="col-lg-4">
+              <h2 class="h5 mb-3">Select the Talent</h2>
+              <ul class="nav qela-telent-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link red">
+                    <span>Fundraising</span>
+                    <span class="badge qela-badge-telent text-red"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link violet current">
+                    <span>Recruiting</span>
+                    <span class="badge qela-badge-telent text-violet"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link green">
+                    <span>Endurance</span>
+                    <span class="badge qela-badge-telent text-green"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link orange">
+                    <span>Endurance</span>
+                    <span class="badge qela-badge-telent text-orange"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link lightgreen">
+                    <span>Determination</span>
+                    <span class="badge qela-badge-telent text-lightgreen"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link lightblue">
+                    <span>Originality</span>
+                    <span class="badge qela-badge-telent text-lightblue"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link blue">
+                    <span>Management</span>
+                    <span class="badge qela-badge-telent text-blue"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link pink">
+                    <span>Savvy</span>
+                    <span class="badge qela-badge-telent text-pink"
+                      >10 000. 0</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- right -->
+            <div class="col-lg-8">
+              <h2 class="h5 px-3">Recruiting user talent list</h2>
+              <div class="row g-3 mb-3 align-items-end">
+                <div class="col-sm">
+                  <div class="input-group">
+                    <button
+                      class="btn btn-input ic-search"
+                      type="button"
+                      id="button-search"
+                    ></button>
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Пошук"
+                      aria-label="Search"
+                      aria-describedby="button-search"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-auto">
+                  <div class="mb-1">Total value of Originality:</div>
+                  <div class="qela-telent violet text-end">100 000.0</div>
+                </div>
+              </div>
+              <div class="table-responsive table-qela large">
+                <table class="table table-hover">
+                  <thead class="table-light">
+                    <tr>
+                      <th class="ps-4" width="45" scope="col">Photo</th>
+                      <th scope="col">User Name</th>
+                      <th scope="col">First Name</th>
+                      <th scope="col">Last Name</th>
+                      <th scope="col">Phone Number</th>
+                      <th class="text-end" width="150" scope="col">Value</th>
+                      <th class="text-end" width="65" scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td width="45">
+                        <a
+                          href="#"
+                          class="qela-avatar ql-ibg border-2"
+                          style="--img-size: 40px"
+                          ><img
+                            src="img/avatar.jpg"
+                            width="40"
+                            height="40"
+                            alt="#"
+                        /></a>
+                      </td>
+                      <td width="150">
+                        <div class="qela-clamp" style="width: 150px">
+                          alexey.bubymka@hmayl.com
+                        </div>
+                      </td>
+                      <td>Gary</td>
+                      <td>Simon</td>
+                      <td width="150">
+                        <div class="qela-clamp" style="width: 150px">
+                          + 38 067 000 00 00
+                        </div>
+                      </td>
+                      <td class="text-end" width="150">
+                        <span class="badge qela-badge-telent text-violet"
+                          >10 000. 0</span
+                        >
+                      </td>
+                      <td width="65">
+                        <div class="btn-group qela-btn-group" role="group">
+                          <button
+                            type="button"
+                            class="btn btn-light ico ic-edit"
+                          ></button>
+                          <button
+                            type="button"
+                            class="btn btn-light ico ic-book"
+                          ></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav class="px-3 py-2" aria-label="Page navigation">
+                <ul class="pagination justify-content-end pagination-sm mb-0">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">Prev</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">...</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">24</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"
+    ></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+      let app = Vue.createApp({
+        components: {
+          "v-date-picker": VueDatePicker,
+          "v-multi-select": VueMultiselect.default,
+        },
+        data() {
+          return {
+            date: [new Date(), new Date()],
+            value1: "",
+            value2: "",
+            value3: "",
+            value4: "",
+            options: [
+              "Пункт 1 sadafdf",
+              "Пункт 2",
+              "Пункт 3",
+              "Пункт 4",
+              "Пункт 1 assadafdf",
+              "Пункт 2sades",
+              "Пункт 3sd",
+              "Пункт 4sd",
+            ],
+          };
+        },
+        methods: {
+          click() {
+            alert(1);
+            this.message += " clicked!";
+          },
+        },
+      });
+      console.dir(app);
+      app.mount("#app");
+    </script>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

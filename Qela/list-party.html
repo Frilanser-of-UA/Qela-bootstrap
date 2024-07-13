@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
+  <head>
 	<title>List-party</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
@@ -9,330 +9,481 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="ql-body">
-	<header>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- item whith title and button burger-->
-			<div class="col-10 col-xl-auto col-md-8 gap-3">
-				<button class="ql-burger">
-					<img src="img/burger.svg" width="24" height="40" alt="burger button" />
-				</button>
-				<h1 class="h6 ql-clamp">Sokira Party</h1>
-			</div>
-			<div class="col-2 col-xl col-md-4">
-				<!--FIX form search -->
-				<form class="ql-search" role="search">
-					<div class="ql-search__wrapper">
-						<div class="input-group">
-							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-						</div>
-					</div>
-					<button class="btn ic-search p-2 ql-search-btn" type="button"></button>
-				</form>
-				<!--FIX badge -->
-				<button type="button" class="btn ic-bell p-2 ql-notification active">
-					<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-				</button>
-				<!--FIX user -->
-				<div class="dropdown ql-user">
-					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user" />
-					</button>
-					<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
-						<form class="gy-5 p-2">
-							<div class="mb-3">
-								<label for="UserEmail" class="form-label">Email</label>
-								<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="mb-3">
-								<label for="inputPassword1" class="form-label">Password</label>
-								<div class="input-group input-group-sm has-validation">
-									<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1" />
-									<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
-									<div class="invalid-feedback">Error text</div>
-								</div>
-							</div>
-							<div class="mb-3">
-								<div class="form-check">
-									<input type="checkbox" class="form-check-input" id="Check" />
-									<label class="form-check-label" for="Check">Запамятати мене</label>
-								</div>
-							</div>
-							<button type="submit" class="btn btn-primary w-100">Відправити</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--FIX menu -->
-	<div class="ql-menu">
-		<!--FIX buttons -->
-		<button type="button" class="ic-chevron border-0 ql-btn-menu ql-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute ql-btn-close" aria-label="Close"></button>
-		<nav class="ql-nav">
-			<!--FIX mobile logo -->
-			<a class="navbar-brand ql-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
-			<!--FIX mobile search -->
-			<form class="ql-search mobile" role="search">
-				<div class="input-group">
-					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-				</div>
-			</form>
-			<!--FIX mobile user -->
-			<div class="row ql-user mobile">
-				<div class="col">
-					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
-					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
-				</div>
-				<div class="col-auto">
-					<button type="button" class="btn btn-info ico ic-log-out"></button>
-				</div>
-			</div>
-			<!--FIX nav wrapper -->
-			<div class="ql-nav__wrapper">
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link active" aria-current="page">
-							<span class="ic-spead"></span>
-							<span>Дашборд</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-people"></span>
-							<span>Користувачі</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-box-arrow"></span>
-							<span>Голосування</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-notes"></span>
-							<span>Новини</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-calendar"></span>
-							<span>Квести</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-dollar quantity">
-								<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-							</span>
-							<span>Донати</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-lattice"></span>
-							<span>Теги</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-speaker"></span>
-							<span>Маркетинг</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-jostik"></span>
-							<span>Гейміфікація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-city"></span>
-							<span>Організація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-tent"></span>
-							<span>Магазин</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-settings"></span>
-							<span>Налаштування</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+  <body class="qela-body">
+    <header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- item whith title and button burger-->
+      <div class="col-10 col-xl-auto col-md-8 gap-3">
+        <button class="qela-burger">
+          <img
+            src="img/burger.svg"
+            width="24"
+            height="40"
+            alt="burger button"
+          />
+        </button>
+        <h1 class="h6 qela-clamp">Sokira Party</h1>
+      </div>
+      <div class="col-2 col-xl col-md-4">
+        <!--FIX form search -->
+        <form class="qela-search" role="search">
+          <div class="qela-search__wrapper">
+            <div class="input-group">
+              <button
+                class="btn btn-input ic-search"
+                type="button"
+                id="button-search"
+              ></button>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Пошук"
+                aria-label="Search"
+                aria-describedby="button-search"
+              />
+            </div>
+          </div>
+          <button
+            class="btn ic-search p-2 qela-search-btn"
+            type="button"
+          ></button>
+        </form>
+        <!--FIX badge -->
+        <button type="button" class="btn ic-bell p-2 qela-notification active">
+          <span class="badge rounded-pill text-bg-danger qela-badge small"
+            >25</span
+          >
+        </button>
+        <!--FIX user -->
+        <div class="dropdown qela-user">
+          <button
+            type="button"
+            class="btn p-0 border-0 ic-chevron position-relative"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            <img
+              class="rounded-circle"
+              src="img/header/user.jpg"
+              width="32"
+              height="32"
+              alt="user"
+            />
+          </button>
+          <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
+            <form class="gy-5 p-2">
+              <div class="mb-3">
+                <label for="UserEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  id="UserEmail"
+                  placeholder="Email"
+                />
+                <div class="invalid-feedback">Error text</div>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <div class="input-group input-group-sm has-validation">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    aria-label="Password"
+                    id="inputPassword1"
+                    aria-describedby="button-addon1"
+                  />
+                  <button
+                    class="btn btn-input ic-eye-close"
+                    type="button"
+                    id="button-addon1"
+                  ></button>
+                  <div class="invalid-feedback">Error text</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Check" />
+                  <label class="form-check-label" for="Check"
+                    >Запамятати мене</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Відправити
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FIX menu -->
+  <div class="qela-menu">
+    <!--FIX buttons -->
+    <button
+      type="button"
+      class="ic-chevron border-0 qela-btn-menu qela-shadow"
+    ></button>
+    <button
+      type="button"
+      class="ic-cloze p-2 border-0 position-absolute qela-btn-close"
+      aria-label="Close"
+    ></button>
+    <nav class="qela-nav">
+      <!--FIX mobile logo -->
+      <a class="navbar-brand qela-logo" href="#"
+        ><img src="img/logo-3.svg" alt="Logo" width="57" height="40"
+      /></a>
+      <!--FIX mobile search -->
+      <form class="qela-search mobile" role="search">
+        <div class="input-group">
+          <button
+            class="btn btn-input ic-search"
+            type="button"
+            id="button-search"
+          ></button>
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Пошук"
+            aria-label="Search"
+            aria-describedby="button-search"
+          />
+        </div>
+      </form>
+      <!--FIX mobile user -->
+      <div class="row qela-user mobile">
+        <div class="col">
+          <img
+            class="rounded-circle"
+            src="img/header/user.jpg"
+            width="40"
+            height="40"
+            alt="user"
+          />
+          <span class="fw-semibold fs-5"><small>Uzer Name</small></span>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-info ico ic-log-out"></button>
+        </div>
+      </div>
+      <!--FIX nav wrapper -->
+      <div class="qela-nav__wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <span class="ic-spead"></span>
+              <span>Дашборд</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-people"></span>
+              <span>Користувачі</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-box-arrow"></span>
+              <span>Голосування</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-notes"></span>
+              <span>Новини</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-calendar"></span>
+              <span>Квести</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-dollar quantity">
+                <span class="badge rounded-pill text-bg-danger qela-badge small"
+                  >25</span
+                >
+              </span>
+              <span>Донати</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-lattice"></span>
+              <span>Теги</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-speaker"></span>
+              <span>Маркетинг</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-jostik"></span>
+              <span>Гейміфікація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-city"></span>
+              <span>Організація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-tent"></span>
+              <span>Магазин</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-settings"></span>
+              <span>Налаштування</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 
-	<main>
-		<!-- =====================Список користувачів==================== -->
-		<div class="container">
-			<div class="row mb-3 mt-3">
-				<div class="col-12">
-					<div class="border pb-3 pb-md-4 mb-3 bg-white rounded-2">
-						<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Organization</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Branches</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Admins</button>
-							</li>
-						</ul>
-						<div class="tab-content" id="myTabContent">
-							<!-- Organization -->
-							<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-								<div class="table-responsive table-qela p-3">
-									<table class="table table-hover">
-										<tbody>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Id
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														6ab4c473-a7ae-4b5e-b53a-ba5d537dc847
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Name
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														Name
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Description
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														Sokira party short description
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Phone Number
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														+38 067 000 00 00
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Email
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														mailto:alex.kukhtin@gmail.com
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														Memo
-													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
-														-
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
-														DateCreated
-													</span>
-												</td>
-												<td class="pe-2">s
-													<span class="fs-6">
-														2023-03-01T09:40:23.963Z
-													</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<!-- Branches -->
-							<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-								<div class=" py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
-									<h2 class="h6">Branche List</h2>
-									<button type="button" class="btn btn-primary ic-plus ico-right">Create New Branch</button>
-								</div>
-								<div class="table-responsive table-qela">
-									<table class="table table-hover">
-										<thead class="table-light">
-											<tr>
-												<th scope="col">
-													Branches Name
-												</th>
-												<th scope="col">
-													ID
-												</th>
-												<th scope="col">
-													Description
-												</th>
-												<th scope="col" class="text-center">
-													Users
-												</th>
-												<th class="text-end" scope="col">
-													Дії
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
+    <main>
+      <!-- =====================Список користувачів==================== -->
+      <div class="container">
+        <div class="row mb-3 mt-3">
+          <div class="col-12">
+            <div class="border pb-3 pb-md-4 mb-3 bg-white rounded-2">
+              <ul
+                class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="home-tab-pane"
+                    aria-selected="true"
+                  >
+                    Organization
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-tab-pane"
+                    aria-selected="false"
+                  >
+                    Branches
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="contact-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#contact-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="contact-tab-pane"
+                    aria-selected="false"
+                  >
+                    Admins
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <!-- Organization -->
+                <div
+                  class="tab-pane fade show active"
+                  id="home-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                  tabindex="0"
+                >
+                  <div class="table-responsive table-qela p-3">
+                    <table class="table table-hover">
+                      <tbody>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700"> Id </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6">
+                              6ab4c473-a7ae-4b5e-b53a-ba5d537dc847
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700"> Name </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6"> Name </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700">
+                              Description
+                            </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6">
+                              Sokira party short description
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700">
+                              Phone Number
+                            </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6"> +38 067 000 00 00 </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700"> Email </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6">
+                              mailto:alex.kukhtin@gmail.com
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700"> Memo </span>
+                          </td>
+                          <td class="pe-2">
+                            <span class="fs-6"> - </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-2" width="200">
+                            <span class="fs-6 text-info-700">
+                              DateCreated
+                            </span>
+                          </td>
+                          <td class="pe-2">
+                            s
+                            <span class="fs-6"> 2023-03-01T09:40:23.963Z </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Branches -->
+                <div
+                  class="tab-pane fade"
+                  id="profile-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4"
+                  >
+                    <h2 class="h6">Branche List</h2>
+                    <button
+                      type="button"
+                      class="btn btn-primary ic-plus ico-right"
+                    >
+                      Create New Branch
+                    </button>
+                  </div>
+                  <div class="table-responsive table-qela">
+                    <table class="table table-hover">
+                      <thead class="table-light">
+                        <tr>
+                          <th scope="col">Branches Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Description</th>
+                          <th scope="col" class="text-center">Users</th>
+                          <th class="text-end" scope="col">Дії</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a href="#">Branch #1</a>
+                          </td>
+                          <td width="27.25%">
+                            dad60bc3-0941-4ce2-b151-462734c6d81a
+                          </td>
+                          <td width="auto">
+                            <div class="qela-clamp">
+                              The eighth requirement. Raise the healthcare
+                              system's focus on the epidemic well-being of the
+                              LGBTQ+ communities, mental, sexual and
+                              reproductive health, and expand stable state and
+                              municipal funding for quality public health
+                              services for all key groups of population.
+                            </div>
+                          </td>
+                          <td class="text-center">20</td>
+                          <td>
+                            <div class="text-end">
+                              <div
+                                class="btn-group qela-btn-group"
+                                role="group"
+                                aria-label="Basic example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-edit"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-delete"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-writing danger"
+                                ></button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- <tr>
+												<td width="27.25%">
 													<a href="#">Branch #1</a>
 												</td>
 												<td width="27.25%">
 													dad60bc3-0941-4ce2-b151-462734c6d81a
 												</td>
-												<td width="auto">
-													<div class="ql-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+												<td width="27.25%">
+													<div class="qela-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 												</td>
 												<td class="text-center">
 													20
 												</td>
 												<td>
 													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
+														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
 															<button type="button" class="btn btn-light ico ic-edit"></button>
 															<button type="button" class="btn btn-light ico ic-delete"></button>
 															<button type="button" class="btn btn-light ico ic-writing danger"></button>
@@ -340,7 +491,7 @@
 													</div>
 												</td>
 											</tr>
-											<!-- <tr>
+											<tr>
 												<td width="27.25%">
 													<a href="#">Branch #1</a>
 												</td>
@@ -348,14 +499,14 @@
 													dad60bc3-0941-4ce2-b151-462734c6d81a
 												</td>
 												<td width="27.25%">
-													<div class="ql-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+													<div class="qela-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 												</td>
 												<td class="text-center">
 													20
 												</td>
 												<td>
 													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
+														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
 															<button type="button" class="btn btn-light ico ic-edit"></button>
 															<button type="button" class="btn btn-light ico ic-delete"></button>
 															<button type="button" class="btn btn-light ico ic-writing danger"></button>
@@ -371,37 +522,14 @@
 													dad60bc3-0941-4ce2-b151-462734c6d81a
 												</td>
 												<td width="27.25%">
-													<div class="ql-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
+													<div class="qela-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
 												</td>
 												<td class="text-center">
 													20
 												</td>
 												<td>
 													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-light ico ic-edit"></button>
-															<button type="button" class="btn btn-light ico ic-delete"></button>
-															<button type="button" class="btn btn-light ico ic-writing danger"></button>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="27.25%">
-													<a href="#">Branch #1</a>
-												</td>
-												<td width="27.25%">
-													dad60bc3-0941-4ce2-b151-462734c6d81a
-												</td>
-												<td width="27.25%">
-													<div class="ql-clamp">The eighth requirement. Raise the healthcare system's focus on the epidemic well-being of the LGBTQ+ communities, mental, sexual and reproductive health, and expand stable state and municipal funding for quality public health services for all key groups of population.</div>
-												</td>
-												<td class="text-center">
-													20
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
+														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
 															<button type="button" class="btn btn-light ico ic-edit"></button>
 															<button type="button" class="btn btn-light ico ic-delete"></button>
 															<button type="button" class="btn btn-light ico ic-writing danger"></button>
@@ -409,182 +537,223 @@
 													</div>
 												</td>
 											</tr> -->
-
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<!-- Admins -->
-							<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-								<div class=" py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
-									<h2 class="h6">Admin List</h2>
-									<button type="button" class="btn btn-primary ic-plus ico-right">Create New Branch</button>
-								</div>
-								<div class="table-responsive table-qela">
-									<table class="table table-hover">
-										<thead class="table-light">
-											<tr>
-												<th width="18.5%" scope="col">
-													Branches Name
-												</th>
-												<th width="18.5%" scope="col">
-													ID
-												</th>
-												<th width="18.5%" scope="col">
-													Persone Name
-												</th>
-												<th width="18.5%" scope="col">
-													Persone Data
-												</th>
-												<th scope="col" class="text-center">
-													Role
-												</th>
-												<th scope="col" class="text-center">
-													Confirmed
-												</th>
-												<th class="text-end" scope="col">
-													Дії
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="ql-clamp w-75">dad60bc3-0941-4ce2-b151-462734c6d81a</div>
-												</td>
-												<td width="18.5%">
-													Босик Ждана
-												</td>
-												<td width="18.5%">
-													01/03/2023, 11:39
-												</td>
-												<td class="text-center">
-													owner
-												</td>
-												<td>
-													<div class="ql-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-light ico ic-edit"></button>
-															<button type="button" class="btn btn-light ico ic-delete"></button>
-															<button type="button" class="btn btn-light ico ic-writing danger"></button>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="ql-clamp w-75">dad60bc3-0941-4ce2-b151-462734c6d81a</div>
-												</td>
-												<td width="18.5%">
-													Босик Ждана
-												</td>
-												<td width="18.5%">
-													01/03/2023, 11:39
-												</td>
-												<td class="text-center">
-													owner
-												</td>
-												<td>
-													<div class="ql-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-light ico ic-edit"></button>
-															<button type="button" class="btn btn-light ico ic-delete"></button>
-															<button type="button" class="btn btn-light ico ic-writing danger"></button>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="ql-clamp w-75">dad60bc3-0941-4ce2-b151-462734c6d81a</div>
-												</td>
-												<td width="18.5%">
-													Босик Ждана
-												</td>
-												<td width="18.5%">
-													01/03/2023, 11:39
-												</td>
-												<td class="text-center">
-													owner
-												</td>
-												<td>
-													<div class="ql-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-light ico ic-edit"></button>
-															<button type="button" class="btn btn-light ico ic-delete"></button>
-															<button type="button" class="btn btn-light ico ic-writing danger"></button>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="ql-clamp w-75">dad60bc3-0941-4ce2-b151-462734c6d81a</div>
-												</td>
-												<td width="18.5%">
-													Босик Ждана
-												</td>
-												<td width="18.5%">
-													01/03/2023, 11:39
-												</td>
-												<td class="text-center">
-													owner
-												</td>
-												<td>
-													<div class="ql-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group ql-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-light ico ic-edit"></button>
-															<button type="button" class="btn btn-light ico ic-delete"></button>
-															<button type="button" class="btn btn-light ico ic-writing danger"></button>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	<!-- =========================== -->
-	<script src="js/vendors.js"></script>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Admins -->
+                <div
+                  class="tab-pane fade"
+                  id="contact-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4"
+                  >
+                    <h2 class="h6">Admin List</h2>
+                    <button
+                      type="button"
+                      class="btn btn-primary ic-plus ico-right"
+                    >
+                      Create New Branch
+                    </button>
+                  </div>
+                  <div class="table-responsive table-qela">
+                    <table class="table table-hover">
+                      <thead class="table-light">
+                        <tr>
+                          <th width="18.5%" scope="col">Branches Name</th>
+                          <th width="18.5%" scope="col">ID</th>
+                          <th width="18.5%" scope="col">Persone Name</th>
+                          <th width="18.5%" scope="col">Persone Data</th>
+                          <th scope="col" class="text-center">Role</th>
+                          <th scope="col" class="text-center">Confirmed</th>
+                          <th class="text-end" scope="col">Дії</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="18.5%">
+                            <a href="#">example@gmail.com</a>
+                          </td>
+                          <td width="18.5%">
+                            <div class="qela-clamp w-75">
+                              dad60bc3-0941-4ce2-b151-462734c6d81a
+                            </div>
+                          </td>
+                          <td width="18.5%">Босик Ждана</td>
+                          <td width="18.5%">01/03/2023, 11:39</td>
+                          <td class="text-center">owner</td>
+                          <td>
+                            <div class="qela-verification">
+                              <span
+                                class="ic-success bg-success-100 text-success"
+                              ></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text-end">
+                              <div
+                                class="btn-group qela-btn-group"
+                                role="group"
+                                aria-label="Basic example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-edit"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-delete"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-writing danger"
+                                ></button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="18.5%">
+                            <a href="#">example@gmail.com</a>
+                          </td>
+                          <td width="18.5%">
+                            <div class="qela-clamp w-75">
+                              dad60bc3-0941-4ce2-b151-462734c6d81a
+                            </div>
+                          </td>
+                          <td width="18.5%">Босик Ждана</td>
+                          <td width="18.5%">01/03/2023, 11:39</td>
+                          <td class="text-center">owner</td>
+                          <td>
+                            <div class="qela-verification">
+                              <span
+                                class="ic-success bg-success-100 text-success"
+                              ></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text-end">
+                              <div
+                                class="btn-group qela-btn-group"
+                                role="group"
+                                aria-label="Basic example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-edit"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-delete"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-writing danger"
+                                ></button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="18.5%">
+                            <a href="#">example@gmail.com</a>
+                          </td>
+                          <td width="18.5%">
+                            <div class="qela-clamp w-75">
+                              dad60bc3-0941-4ce2-b151-462734c6d81a
+                            </div>
+                          </td>
+                          <td width="18.5%">Босик Ждана</td>
+                          <td width="18.5%">01/03/2023, 11:39</td>
+                          <td class="text-center">owner</td>
+                          <td>
+                            <div class="qela-verification">
+                              <span
+                                class="ic-success bg-success-100 text-success"
+                              ></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text-end">
+                              <div
+                                class="btn-group qela-btn-group"
+                                role="group"
+                                aria-label="Basic example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-edit"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-delete"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-writing danger"
+                                ></button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="18.5%">
+                            <a href="#">example@gmail.com</a>
+                          </td>
+                          <td width="18.5%">
+                            <div class="qela-clamp w-75">
+                              dad60bc3-0941-4ce2-b151-462734c6d81a
+                            </div>
+                          </td>
+                          <td width="18.5%">Босик Ждана</td>
+                          <td width="18.5%">01/03/2023, 11:39</td>
+                          <td class="text-center">owner</td>
+                          <td>
+                            <div class="qela-verification">
+                              <span
+                                class="ic-success bg-success-100 text-success"
+                              ></span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text-end">
+                              <div
+                                class="btn-group qela-btn-group"
+                                role="group"
+                                aria-label="Basic example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-edit"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-delete"
+                                ></button>
+                                <button
+                                  type="button"
+                                  class="btn btn-light ico ic-writing danger"
+                                ></button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

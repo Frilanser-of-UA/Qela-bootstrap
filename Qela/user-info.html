@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
+  <head>
 	<title>User info</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
@@ -9,649 +9,910 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="ql-body">
+  <body class="qela-body">
     <header>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- item whith title and button burger-->
-			<div class="col-10 col-xl-auto col-md-8 gap-3">
-				<button class="ql-burger">
-					<img src="img/burger.svg" width="24" height="40" alt="burger button" />
-				</button>
-				<h1 class="h6 ql-clamp">User info</h1>
-			</div>
-			<div class="col-2 col-xl col-md-4">
-				<!--FIX form search -->
-				<form class="ql-search" role="search">
-					<div class="ql-search__wrapper">
-						<div class="input-group">
-							<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-							<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-						</div>
-					</div>
-					<button class="btn ic-search p-2 ql-search-btn" type="button"></button>
-				</form>
-				<!--FIX badge -->
-				<button type="button" class="btn ic-bell p-2 ql-notification active">
-					<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-				</button>
-				<!--FIX user -->
-				<div class="dropdown ql-user">
-					<button type="button" class="btn p-0 border-0 ic-chevron position-relative" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<img class="rounded-circle" src="img/header/user.jpg" width="32" height="32" alt="user" />
-					</button>
-					<div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
-						<form class="gy-5 p-2">
-							<div class="mb-3">
-								<label for="UserEmail" class="form-label">Email</label>
-								<input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
-								<div class="invalid-feedback">Error text</div>
-							</div>
-							<div class="mb-3">
-								<label for="inputPassword1" class="form-label">Password</label>
-								<div class="input-group input-group-sm has-validation">
-									<input type="password" class="form-control" placeholder="Password" aria-label="Password" id="inputPassword1" aria-describedby="button-addon1" />
-									<button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
-									<div class="invalid-feedback">Error text</div>
-								</div>
-							</div>
-							<div class="mb-3">
-								<div class="form-check">
-									<input type="checkbox" class="form-check-input" id="Check" />
-									<label class="form-check-label" for="Check">Запамятати мене</label>
-								</div>
-							</div>
-							<button type="submit" class="btn btn-primary w-100">Відправити</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--FIX menu -->
-	<div class="ql-menu">
-		<!--FIX buttons -->
-		<button type="button" class="ic-chevron border-0 ql-btn-menu ql-shadow"></button>
-		<button type="button" class="ic-cloze p-2 border-0 position-absolute ql-btn-close" aria-label="Close"></button>
-		<nav class="ql-nav">
-			<!--FIX mobile logo -->
-			<a class="navbar-brand ql-logo" href="#"><img src="img/logo-3.svg" alt="Logo" width="57" height="40" /></a>
-			<!--FIX mobile search -->
-			<form class="ql-search mobile" role="search">
-				<div class="input-group">
-					<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-					<input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
-				</div>
-			</form>
-			<!--FIX mobile user -->
-			<div class="row ql-user mobile">
-				<div class="col">
-					<img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
-					<span class="fw-semibold fs-5"><small>Uzer Name</small></span>
-				</div>
-				<div class="col-auto">
-					<button type="button" class="btn btn-info ico ic-log-out"></button>
-				</div>
-			</div>
-			<!--FIX nav wrapper -->
-			<div class="ql-nav__wrapper">
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link active" aria-current="page">
-							<span class="ic-spead"></span>
-							<span>Дашборд</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-people"></span>
-							<span>Користувачі</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-box-arrow"></span>
-							<span>Голосування</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-notes"></span>
-							<span>Новини</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-calendar"></span>
-							<span>Квести</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-dollar quantity">
-								<span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-							</span>
-							<span>Донати</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-lattice"></span>
-							<span>Теги</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-speaker"></span>
-							<span>Маркетинг</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-jostik"></span>
-							<span>Гейміфікація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-city"></span>
-							<span>Організація</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-tent"></span>
-							<span>Магазин</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#" class="nav-link" aria-current="page">
-							<span class="ic-settings"></span>
-							<span>Налаштування</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- item whith title and button burger-->
+      <div class="col-10 col-xl-auto col-md-8 gap-3">
+        <button class="qela-burger">
+          <img
+            src="img/burger.svg"
+            width="24"
+            height="40"
+            alt="burger button"
+          />
+        </button>
+        <h1 class="h6 qela-clamp">User info</h1>
+      </div>
+      <div class="col-2 col-xl col-md-4">
+        <!--FIX form search -->
+        <form class="qela-search" role="search">
+          <div class="qela-search__wrapper">
+            <div class="input-group">
+              <button
+                class="btn btn-input ic-search"
+                type="button"
+                id="button-search"
+              ></button>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Пошук"
+                aria-label="Search"
+                aria-describedby="button-search"
+              />
+            </div>
+          </div>
+          <button
+            class="btn ic-search p-2 qela-search-btn"
+            type="button"
+          ></button>
+        </form>
+        <!--FIX badge -->
+        <button type="button" class="btn ic-bell p-2 qela-notification active">
+          <span class="badge rounded-pill text-bg-danger qela-badge small"
+            >25</span
+          >
+        </button>
+        <!--FIX user -->
+        <div class="dropdown qela-user">
+          <button
+            type="button"
+            class="btn p-0 border-0 ic-chevron position-relative"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            <img
+              class="rounded-circle"
+              src="img/header/user.jpg"
+              width="32"
+              height="32"
+              alt="user"
+            />
+          </button>
+          <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
+            <form class="gy-5 p-2">
+              <div class="mb-3">
+                <label for="UserEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  id="UserEmail"
+                  placeholder="Email"
+                />
+                <div class="invalid-feedback">Error text</div>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <div class="input-group input-group-sm has-validation">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    aria-label="Password"
+                    id="inputPassword1"
+                    aria-describedby="button-addon1"
+                  />
+                  <button
+                    class="btn btn-input ic-eye-close"
+                    type="button"
+                    id="button-addon1"
+                  ></button>
+                  <div class="invalid-feedback">Error text</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Check" />
+                  <label class="form-check-label" for="Check"
+                    >Запамятати мене</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Відправити
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FIX menu -->
+  <div class="qela-menu">
+    <!--FIX buttons -->
+    <button
+      type="button"
+      class="ic-chevron border-0 qela-btn-menu qela-shadow"
+    ></button>
+    <button
+      type="button"
+      class="ic-cloze p-2 border-0 position-absolute qela-btn-close"
+      aria-label="Close"
+    ></button>
+    <nav class="qela-nav">
+      <!--FIX mobile logo -->
+      <a class="navbar-brand qela-logo" href="#"
+        ><img src="img/logo-3.svg" alt="Logo" width="57" height="40"
+      /></a>
+      <!--FIX mobile search -->
+      <form class="qela-search mobile" role="search">
+        <div class="input-group">
+          <button
+            class="btn btn-input ic-search"
+            type="button"
+            id="button-search"
+          ></button>
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Пошук"
+            aria-label="Search"
+            aria-describedby="button-search"
+          />
+        </div>
+      </form>
+      <!--FIX mobile user -->
+      <div class="row qela-user mobile">
+        <div class="col">
+          <img
+            class="rounded-circle"
+            src="img/header/user.jpg"
+            width="40"
+            height="40"
+            alt="user"
+          />
+          <span class="fw-semibold fs-5"><small>Uzer Name</small></span>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-info ico ic-log-out"></button>
+        </div>
+      </div>
+      <!--FIX nav wrapper -->
+      <div class="qela-nav__wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <span class="ic-spead"></span>
+              <span>Дашборд</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-people"></span>
+              <span>Користувачі</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-box-arrow"></span>
+              <span>Голосування</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-notes"></span>
+              <span>Новини</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-calendar"></span>
+              <span>Квести</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-dollar quantity">
+                <span class="badge rounded-pill text-bg-danger qela-badge small"
+                  >25</span
+                >
+              </span>
+              <span>Донати</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-lattice"></span>
+              <span>Теги</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-speaker"></span>
+              <span>Маркетинг</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-jostik"></span>
+              <span>Гейміфікація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-city"></span>
+              <span>Організація</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-tent"></span>
+              <span>Магазин</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" aria-current="page">
+              <span class="ic-settings"></span>
+              <span>Налаштування</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 
-    <main class="ql-main py-3">
-        <!-- =====================Список користувачів==================== -->
-        <div class="container">
-            <div class="ql-page ql-wrap" id="app" v-cloak>
-                <div class="row row-grow no-pad">
-                    <!-- left -->
-                    <div class="col-lg-4">
-                        <div class="ql-start h-auto">
-                            <!-- block whtith avatar + name-->
-                            <div>
-                                <div class="ql-avatar ql-ibg" style="--img-size: 100px">
-                                    <img src="img/avatar.jpg" width="100" height="100" alt="#" />
-                                </div>
-                                <div class="h4 text-info-800">Gary Simon</div>
-                            </div>
-                            <!-- list -->
-                            <ul class="list-group list-group-flush ql-flush">
-                                <li class="list-group-item">
-                                    <span>Status:</span>
-                                    <span
-                                        class="badge ql-badge-success large-xl ic-success w-100 justify-content-between">Verified</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="ql-start h-auto">
-                            <!-- list -->
-                            <ul class="list-group list-group-flush ql-flush">
-                                <li class="list-group-item">
-                                    <span>User Id:</span>
-                                    <span>C124950D7F6</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Phone:</span>
-                                    <span>+380958811688</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>User Name:</span>
-                                    <span class="word-break">alex.kukhtin@gmail.com</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Organization:</span>
-                                    <span>Unity for Planet</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>ZIP code:</span>
-                                    <span>00 00 00</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Country:</span>
-                                    <span>Ukraine</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Voting for branch children:</span>
-                                    <span>Branch #1, Branch #2, Very long name of the Branch #3</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Date Created:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Date last visit:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item ql-comment">
-                                    <span>Comment:</span>
-                                    <div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore,
-                                            necessitatibus.</p>
-                                        <button type="button" class="btn btn-info ico ic-edit"></button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- right -->
-                    <div class="col-lg-8">
-                        <!-- top item -->
-                        <div class="row ql-top-item">
-                            <div class="col-sm-auto">
-                                <div class="ql-vote">
-                                    <div>Vote weight:</div>
-                                    <span class="badge ql-badge-telent vote">
-                                        10 000. 0
-                                        <img src="img/orden-red.svg" alt="orden-red" width="28" height="28" />
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="btns-inline">
-                                    <button type="button" class="btn btn-info ic-files ico-left">Files</button>
-                                    <button type="button" class="btn btn-info ic-print ico-left">Print Page</button>
-                                    <button type="button" class="btn btn-info ic-latter ico-left">Send email</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- diagramma -->
-                        <div class="ql-end p-4 h-auto">
-                            <div class="row g-3 align-items-center p-0">
-                                <div class="col-12">
-                                    <h2>Talents</h2>
-                                </div>
-                                <div class="col-lg-7">
-                                    <!-- Img для наглядности -->
-                                    <div class="py-4 pe-4">
-                                        <img class="w-100" src="img/diagramma.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <ul class="list-group ql-list-telents">
-                                        <li class="list-group-item outline-red"><span
-                                                class="badge ql-badge-telent text-red">F</span><span>Fundraising</span><span
-                                                class="badge ql-badge-telent red">10. 0</span></li>
-                                        <li class="list-group-item outline-violet"><span
-                                                class="badge ql-badge-telent text-violet">R</span><span>Recruiting</span><span
-                                                class="badge ql-badge-telent violet">10 000. 0</span></li>
-                                        <li class="list-group-item outline-green"><span
-                                                class="badge ql-badge-telent text-green">E</span><span>Endurance</span><span
-                                                class="badge ql-badge-telent green">10 000. 0</span></li>
-                                        <li class="list-group-item outline-orange"><span
-                                                class="badge ql-badge-telent text-orange">E</span><span>Eloquence</span><span
-                                                class="badge ql-badge-telent orange">100. 0</span></li>
-                                        <li class="list-group-item outline-lightgreen"><span
-                                                class="badge ql-badge-telent text-lightgreen">D</span><span>Determination</span><span
-                                                class="badge ql-badge-telent lightgreen">10 000. 0</span></li>
-                                        <li class="list-group-item outline-lightblue"><span
-                                                class="badge ql-badge-telent text-lightblue">O</span><span>Originality</span><span
-                                                class="badge ql-badge-telent lightblue">10 000. 0</span></li>
-                                        <li class="list-group-item outline-blue"><span
-                                                class="badge ql-badge-telent text-blue">M</span><span>Management</span><span
-                                                class="badge ql-badge-telent blue">100. 0</span></li>
-                                        <li class="list-group-item outline-pink"><span
-                                                class="badge ql-badge-telent text-pink">S</span><span>Savvy</span><span
-                                                class="badge ql-badge-telent pink">10 000. 0</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- graffik -->
-                        <div class="ql-end p-4 h-auto">
-                            <div class="row g-4 align-items-center p-0">
-                                <div class="col-12">
-                                    <h2>Donations <span class="fs-2 ps-2">12 000.</span><span>00</span> <span>$</span>
-                                    </h2>
-                                </div>
-                                <div class="col-12">
-                                    <!-- Img для наглядности -->
-                                    <div class="py-4 pe-4">
-                                        <img class="w-100" src="img/grafik.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- table scroll 1-->
-                        <div class="ql-end ql-tables">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h2>Awards history</h2>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-light">view all</button>
-                                </div>
-                            </div>
-                            <div class="table-responsive table-qela large">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th scope="col"> Talent </th>
-                                            <th scope="col"> Date </th>
-                                            <th scope="col"> Link/Reason </th>
-                                            <th scope="col" class="text-end">Value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent vote img">
-                                                    <img src="img/orden-red.svg" alt="orden-red" width="28"
-                                                        height="28" />
-                                                </span>
-                                                Vote weight
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent red">F</span>
-                                                Fundraising
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="img/icons/medal.svg" alt="" />
-                                                Bronze medal
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-danger large-xl">- 1</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent green">E</span>
-                                                Endurance
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent blue">O</span>
-                                                Originality
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent blue">O</span>
-                                                Originality
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent blue">O</span>
-                                                Originality
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="badge ql-badge-telent blue">O</span>
-                                                Originality
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td width="285">
-                                                <div class="ql-clamp" style="width: 285px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-end" width="150">
-                                                <span class="badge ql-badge-success large-xl">+ 6. 0</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- table scroll 2-->
-                        <div class="ql-end ql-tables">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h2>Campaigns</h2>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-light">view all</button>
-                                </div>
-                            </div>
-                            <div class="table-responsive table-qela">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th width="42" class="text-center" scope="col">Image</th>
-                                            <th width="310" scope="col"> Name </th>
-                                            <th scope="col"> Started </th>
-                                            <th scope="col" class="text-center"> Quests </th>
-                                            <th scope="col" class="text-center"> Status </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div width="42px" class="ql-ibg ql-previews img"
-                                                    style="--img-size: 42px"><img class="rounded"
-                                                        src="img/table-img-1.jpg" width="0" height="42" alt="" /></div>
-                                            </td>
-                                            <td width="310">
-                                                <div class="ql-clamp" style="width: 310px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-info-600">28 jul 2023, 14:56</td>
-                                            <td class="text-center">12</td>
-                                            <td>
-                                                <div class="progress ql-progress small" style="--percent: 17.5%">
-                                                    <div class="left">
-                                                        <div class="mr-0">17.5%</div>
-                                                    </div>
-                                                    <div class="right">
-                                                        <div>17.5%</div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- table scroll 3-->
-                        <div class="ql-end ql-tables">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h2>Quests</h2>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-light">view all</button>
-                                </div>
-                            </div>
-                            <div class="table-responsive table-qela">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th width="42" class="text-center" scope="col">Image</th>
-                                            <th width="385" scope="col"> Name </th>
-                                            <th scope="col"> Started </th>
-                                            <th scope="col" class="text-center"> Status </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div width="42px" class="ql-ibg ql-previews img"
-                                                    style="--img-size: 42px"><img class="rounded"
-                                                        src="img/table-img-1.jpg" width="0" height="42" alt="" /></div>
-                                            </td>
-                                            <td width="385">
-                                                <div class="ql-clamp" style="width: 385px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-info-600">
-                                                28 jul 2023, 14:56
-                                                <br />
-                                                28 jul 2023, 14:56
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge ql-badge-warning">Taken</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div width="42px" class="ql-ibg ql-previews img"
-                                                    style="--img-size: 42px"><img class="rounded"
-                                                        src="img/table-img-1.jpg" width="0" height="42" alt="" /></div>
-                                            </td>
-                                            <td width="385">
-                                                <div class="ql-clamp" style="width: 385px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-info-600">
-                                                28 jul 2023, 14:56
-                                                <br />
-                                                28 jul 2023, 14:56
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge ql-badge-success">Successfully
-                                                    completed</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div width="42px" class="ql-ibg ql-previews img"
-                                                    style="--img-size: 42px"><img class="rounded"
-                                                        src="img/table-img-1.jpg" width="0" height="42" alt="" /></div>
-                                            </td>
-                                            <td width="385">
-                                                <div class="ql-clamp" style="width: 385px">Share info on the benefits
-                                                    of medical cannabis benefits of benefits of cannabis benefits
-                                                    cannabis benefits </div>
-                                            </td>
-                                            <td class="text-info-600">
-                                                28 jul 2023, 14:56
-                                                <br />
-                                                28 jul 2023, 14:56
-                                            </td>
-                                            <td class="text-center">
-                                                <span class="badge ql-badge-danger">Failed</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+    <main class="qela-main py-3">
+      <!-- =====================Список користувачів==================== -->
+      <div class="container">
+        <div class="qela-page qela-wrap" id="app" v-cloak>
+          <div class="row row-grow no-pad">
+            <!-- left -->
+            <div class="col-lg-4">
+              <div class="qela-start h-auto">
+                <!-- block whtith avatar + name-->
+                <div>
+                  <div class="qela-avatar ql-ibg" style="--img-size: 100px">
+                    <img
+                      src="img/avatar.jpg"
+                      width="100"
+                      height="100"
+                      alt="#"
+                    />
+                  </div>
+                  <div class="h4 text-info-800">Gary Simon</div>
                 </div>
+                <!-- list -->
+                <ul class="list-group list-group-flush qela-flush">
+                  <li class="list-group-item">
+                    <span>Status:</span>
+                    <span
+                      class="badge qela-badge-success large-xl ic-success w-100 justify-content-between"
+                      >Verified</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="qela-start h-auto">
+                <!-- list -->
+                <ul class="list-group list-group-flush qela-flush">
+                  <li class="list-group-item">
+                    <span>User Id:</span>
+                    <span>C124950D7F6</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Phone:</span>
+                    <span>+380958811688</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>User Name:</span>
+                    <span class="word-break">alex.kukhtin@gmail.com</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Organization:</span>
+                    <span>Unity for Planet</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>ZIP code:</span>
+                    <span>00 00 00</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Country:</span>
+                    <span>Ukraine</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Voting for branch children:</span>
+                    <span
+                      >Branch #1, Branch #2, Very long name of the Branch
+                      #3</span
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <span>Date Created:</span>
+                    <span>2023-03-01, 09:40:23</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Date last visit:</span>
+                    <span>2023-03-01, 09:40:23</span>
+                  </li>
+                  <li class="list-group-item qela-comment">
+                    <span>Comment:</span>
+                    <div>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Inventore, necessitatibus.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-info ico ic-edit"
+                      ></button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- right -->
+            <div class="col-lg-8">
+              <!-- top item -->
+              <div class="row qela-top-item">
+                <div class="col-sm-auto">
+                  <div class="qela-vote">
+                    <div>Vote weight:</div>
+                    <span class="badge qela-badge-telent vote">
+                      10 000. 0
+                      <img
+                        src="img/orden-red.svg"
+                        alt="orden-red"
+                        width="28"
+                        height="28"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div class="col-sm-auto">
+                  <div class="btns-inline">
+                    <button
+                      type="button"
+                      class="btn btn-info ic-files ico-left"
+                    >
+                      Files
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info ic-print ico-left"
+                    >
+                      Print Page
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info ic-latter ico-left"
+                    >
+                      Send email
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- diagramma -->
+              <div class="qela-end p-4 h-auto">
+                <div class="row g-3 align-items-center p-0">
+                  <div class="col-12">
+                    <h2>Talents</h2>
+                  </div>
+                  <div class="col-lg-7">
+                    <!-- Img для наглядности -->
+                    <div class="py-4 pe-4">
+                      <img class="w-100" src="img/diagramma.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <ul class="list-group qela-list-telents">
+                      <li class="list-group-item outline-red">
+                        <span class="badge qela-badge-telent text-red">F</span
+                        ><span>Fundraising</span
+                        ><span class="badge qela-badge-telent red">10. 0</span>
+                      </li>
+                      <li class="list-group-item outline-violet">
+                        <span class="badge qela-badge-telent text-violet"
+                          >R</span
+                        ><span>Recruiting</span
+                        ><span class="badge qela-badge-telent violet"
+                          >10 000. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-green">
+                        <span class="badge qela-badge-telent text-green">E</span
+                        ><span>Endurance</span
+                        ><span class="badge qela-badge-telent green"
+                          >10 000. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-orange">
+                        <span class="badge qela-badge-telent text-orange"
+                          >E</span
+                        ><span>Eloquence</span
+                        ><span class="badge qela-badge-telent orange"
+                          >100. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-lightgreen">
+                        <span class="badge qela-badge-telent text-lightgreen"
+                          >D</span
+                        ><span>Determination</span
+                        ><span class="badge qela-badge-telent lightgreen"
+                          >10 000. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-lightblue">
+                        <span class="badge qela-badge-telent text-lightblue"
+                          >O</span
+                        ><span>Originality</span
+                        ><span class="badge qela-badge-telent lightblue"
+                          >10 000. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-blue">
+                        <span class="badge qela-badge-telent text-blue">M</span
+                        ><span>Management</span
+                        ><span class="badge qela-badge-telent blue"
+                          >100. 0</span
+                        >
+                      </li>
+                      <li class="list-group-item outline-pink">
+                        <span class="badge qela-badge-telent text-pink">S</span
+                        ><span>Savvy</span
+                        ><span class="badge qela-badge-telent pink"
+                          >10 000. 0</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- graffik -->
+              <div class="qela-end p-4 h-auto">
+                <div class="row g-4 align-items-center p-0">
+                  <div class="col-12">
+                    <h2>
+                      Donations <span class="fs-2 ps-2">12 000.</span
+                      ><span>00</span> <span>$</span>
+                    </h2>
+                  </div>
+                  <div class="col-12">
+                    <!-- Img для наглядности -->
+                    <div class="py-4 pe-4">
+                      <img class="w-100" src="img/grafik.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- table scroll 1-->
+              <div class="qela-end qela-tables">
+                <div class="row">
+                  <div class="col-sm">
+                    <h2>Awards history</h2>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-light">
+                      view all
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive table-qela large">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">Talent</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Link/Reason</th>
+                        <th scope="col" class="text-end">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent vote img">
+                            <img
+                              src="img/orden-red.svg"
+                              alt="orden-red"
+                              width="28"
+                              height="28"
+                            />
+                          </span>
+                          Vote weight
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent red">F</span>
+                          Fundraising
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="img/icons/medal.svg" alt="" />
+                          Bronze medal
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-danger large-xl"
+                            >- 1</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent green">E</span>
+                          Endurance
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent blue">O</span>
+                          Originality
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent blue">O</span>
+                          Originality
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent blue">O</span>
+                          Originality
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge qela-badge-telent blue">O</span>
+                          Originality
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td width="285">
+                          <div class="qela-clamp" style="width: 285px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-end" width="150">
+                          <span class="badge qela-badge-success large-xl"
+                            >+ 6. 0</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- table scroll 2-->
+              <div class="qela-end qela-tables">
+                <div class="row">
+                  <div class="col-sm">
+                    <h2>Campaigns</h2>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-light">
+                      view all
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive table-qela">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th width="42" class="text-center" scope="col">
+                          Image
+                        </th>
+                        <th width="310" scope="col">Name</th>
+                        <th scope="col">Started</th>
+                        <th scope="col" class="text-center">Quests</th>
+                        <th scope="col" class="text-center">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div
+                            width="42px"
+                            class="ql-ibg ql-previews img"
+                            style="--img-size: 42px"
+                          >
+                            <img
+                              class="rounded"
+                              src="img/table-img-1.jpg"
+                              width="0"
+                              height="42"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td width="310">
+                          <div class="qela-clamp" style="width: 310px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-info-600">28 jul 2023, 14:56</td>
+                        <td class="text-center">12</td>
+                        <td>
+                          <div
+                            class="progress qela-progress small"
+                            style="--percent: 17.5%"
+                          >
+                            <div class="left">
+                              <div class="mr-0">17.5%</div>
+                            </div>
+                            <div class="right">
+                              <div>17.5%</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- table scroll 3-->
+              <div class="qela-end qela-tables">
+                <div class="row">
+                  <div class="col-sm">
+                    <h2>Quests</h2>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-light">
+                      view all
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive table-qela">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th width="42" class="text-center" scope="col">
+                          Image
+                        </th>
+                        <th width="385" scope="col">Name</th>
+                        <th scope="col">Started</th>
+                        <th scope="col" class="text-center">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div
+                            width="42px"
+                            class="ql-ibg ql-previews img"
+                            style="--img-size: 42px"
+                          >
+                            <img
+                              class="rounded"
+                              src="img/table-img-1.jpg"
+                              width="0"
+                              height="42"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td width="385">
+                          <div class="qela-clamp" style="width: 385px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-info-600">
+                          28 jul 2023, 14:56
+                          <br />
+                          28 jul 2023, 14:56
+                        </td>
+                        <td class="text-center">
+                          <span class="badge qela-badge-warning">Taken</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            width="42px"
+                            class="ql-ibg ql-previews img"
+                            style="--img-size: 42px"
+                          >
+                            <img
+                              class="rounded"
+                              src="img/table-img-1.jpg"
+                              width="0"
+                              height="42"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td width="385">
+                          <div class="qela-clamp" style="width: 385px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-info-600">
+                          28 jul 2023, 14:56
+                          <br />
+                          28 jul 2023, 14:56
+                        </td>
+                        <td class="text-center">
+                          <span class="badge qela-badge-success"
+                            >Successfully completed</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            width="42px"
+                            class="ql-ibg ql-previews img"
+                            style="--img-size: 42px"
+                          >
+                            <img
+                              class="rounded"
+                              src="img/table-img-1.jpg"
+                              width="0"
+                              height="42"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td width="385">
+                          <div class="qela-clamp" style="width: 385px">
+                            Share info on the benefits of medical cannabis
+                            benefits of benefits of cannabis benefits cannabis
+                            benefits
+                          </div>
+                        </td>
+                        <td class="text-info-600">
+                          28 jul 2023, 14:56
+                          <br />
+                          28 jul 2023, 14:56
+                        </td>
+                        <td class="text-center">
+                          <span class="badge qela-badge-danger">Failed</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-    <script type="text/javascript"
-        src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script
+      src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"
+    ></script>
     <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
     <script type="text/javascript">
-        let app = Vue.createApp({
-            components: {
-                "v-date-picker": VueDatePicker,
-                "v-multi-select": VueMultiselect.default,
-            },
-            data() {
-                return {
-                    date: [new Date(), new Date()],
-                    value1: "",
-                    value2: "",
-                    value3: "",
-                    value4: "",
-                    options: ["Пункт 1 sadafdf", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1 assadafdf", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
-                };
-            },
-            methods: {
-                click() {
-                    alert(1);
-                    this.message += " clicked!";
-                },
-            },
-        });
-        console.dir(app);
-        app.mount("#app");
+      let app = Vue.createApp({
+        components: {
+          "v-date-picker": VueDatePicker,
+          "v-multi-select": VueMultiselect.default,
+        },
+        data() {
+          return {
+            date: [new Date(), new Date()],
+            value1: "",
+            value2: "",
+            value3: "",
+            value4: "",
+            options: [
+              "Пункт 1 sadafdf",
+              "Пункт 2",
+              "Пункт 3",
+              "Пункт 4",
+              "Пункт 1 assadafdf",
+              "Пункт 2sades",
+              "Пункт 3sd",
+              "Пункт 4sd",
+            ],
+          };
+        },
+        methods: {
+          click() {
+            alert(1);
+            this.message += " clicked!";
+          },
+        },
+      });
+      console.dir(app);
+      app.mount("#app");
     </script>
     <!-- =========================== -->
     <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

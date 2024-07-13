@@ -1,94 +1,193 @@
 <!-- FIX с  -->
 <section class="d-grid gap-3">
-<h2 class="h1 mt-4">Dropdown</h2>
-<div class="dropdown">
-    <button class="btn btn-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        View all types </button>
+  <h2 class="h1 mt-4">Dropdown</h2>
+  <div class="dropdown">
+    <button
+      class="btn btn-info ic-chevron ico-right"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      View all types
+    </button>
     <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
-        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
-        <li>
-            <hr class="dropdown-divider" />
-        </li>
-        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
-        <li><button type="button" class="dropdown-item">Видалити</button></li>
+      <li>
+        <button type="button" class="dropdown-item">Змінити статус</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item">Відправити Email</button>
+      </li>
+      <li>
+        <hr class="dropdown-divider" />
+      </li>
+      <li><button type="button" class="dropdown-item">Заблокувати</button></li>
+      <li><button type="button" class="dropdown-item">Видалити</button></li>
     </ul>
-</div>
-<div class="dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Дії з обраним </button>
+  </div>
+  <div class="dropdown">
+    <button
+      class="btn btn-sm btn-outline-light ic-chevron ico-right"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Дії з обраним
+    </button>
     <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Змінити статус</button></li>
-        <li><button type="button" class="dropdown-item">Відправити Email</button></li>
-        <li>
-            <hr class="dropdown-divider" />
-        </li>
-        <li><button type="button" class="dropdown-item">Заблокувати</button></li>
-        <li><button type="button" class="dropdown-item">Видалити</button></li>
+      <li>
+        <button type="button" class="dropdown-item">Змінити статус</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item">Відправити Email</button>
+      </li>
+      <li>
+        <hr class="dropdown-divider" />
+      </li>
+      <li><button type="button" class="dropdown-item">Заблокувати</button></li>
+      <li><button type="button" class="dropdown-item">Видалити</button></li>
     </ul>
-</div>
-<div class="dropdown ql-user">
-    <button type="button" class="btn p-1 border-0 pe-4 ic-chevron position-relative" data-bs-toggle="dropdown"
-        aria-expanded="false" data-bs-auto-close="outside">
-        <img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
+  </div>
+  <div class="dropdown qela-user">
+    <button
+      type="button"
+      class="btn p-1 border-0 pe-4 ic-chevron position-relative"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      data-bs-auto-close="outside"
+    >
+      <img
+        class="rounded-circle"
+        src="img/header/user.jpg"
+        width="40"
+        height="40"
+        alt="user"
+      />
     </button>
     <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow" style="">
-        <form class="gy-5 p-2">
-            <div class="mb-3">
-                <label for="UserEmail" class="form-label">Email</label>
-                <input type="email" class="form-control form-control-sm" id="UserEmail" placeholder="Email" />
-                <div class="invalid-feedback">Error text</div>
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword1" class="form-label">Password</label>
-                <div class="input-group input-group-sm has-validation">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password"
-                        id="inputPassword1" aria-describedby="button-addon1" />
-                    <button class="btn btn-input ic-eye-close" type="button" id="button-addon1"></button>
-                    <div class="invalid-feedback">Error text</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="Check" />
-                    <label class="form-check-label" for="Check">Запамятати мене</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Відправити</button>
-        </form>
+      <form class="gy-5 p-2">
+        <div class="mb-3">
+          <label for="UserEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control form-control-sm"
+            id="UserEmail"
+            placeholder="Email"
+          />
+          <div class="invalid-feedback">Error text</div>
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword1" class="form-label">Password</label>
+          <div class="input-group input-group-sm has-validation">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              aria-label="Password"
+              id="inputPassword1"
+              aria-describedby="button-addon1"
+            />
+            <button
+              class="btn btn-input ic-eye-close"
+              type="button"
+              id="button-addon1"
+            ></button>
+            <div class="invalid-feedback">Error text</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="Check" />
+            <label class="form-check-label" for="Check">Запамятати мене</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Відправити</button>
+      </form>
     </div>
-</div>
-<!-- Dropdown no icons -->
-<div class="dropdown ql-dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Dropdown </button>
+  </div>
+  <!-- Dropdown no icons -->
+  <div class="dropdown qela-dropdown">
+    <button
+      class="btn btn-sm btn-outline-light ic-chevron ico-right"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
     <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item">Change status</button></li>
-        <li><button type="button" class="dropdown-item">Change status</button></li>
-        <li><button type="button" class="dropdown-item active">Change status</button></li>
-        <li><button type="button" class="dropdown-item danger">Change status</button></li>
-        <li><button type="button" class="dropdown-item success">Change status</button></li>
-        <li><button type="button" class="dropdown-item warning">Change status</button></li>
+      <li>
+        <button type="button" class="dropdown-item">Change status</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item">Change status</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item active">
+          Change status
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item danger">
+          Change status
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item success">
+          Change status
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item warning">
+          Change status
+        </button>
+      </li>
     </ul>
-</div>
-<!-- Dropdown  icons -->
-<div class="dropdown ql-dropdown">
-    <button class="btn btn-sm btn-outline-light ic-chevron ico-right" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false"> Dropdown icons</button>
+  </div>
+  <!-- Dropdown  icons -->
+  <div class="dropdown qela-dropdown">
+    <button
+      class="btn btn-sm btn-outline-light ic-chevron ico-right"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown icons
+    </button>
     <ul class="dropdown-menu shadow">
-        <li><button type="button" class="dropdown-item ic-edit">Edit user</button></li>
-        <li>
-            <button type="button" class="dropdown-item ic-edit">
-                Edit user
-                <span class="badge rounded-pill text-bg-danger ql-badge small">25</span>
-            </button>
-
-        </li>
-        <li><button type="button" class="dropdown-item ic-stop">Block user</button></li>
-        <li><button type="button" class="dropdown-item active ic-success-2">Unblock user</button></li>
-        <li><button type="button" class="dropdown-item ic-delete danger">Delete user</button></li>
-        <li><button type="button" class="dropdown-item ic-success-2 success">Change status</button></li>
-        <li><button type="button" class="dropdown-item ic-success-2 warning">Change status</button></li>
+      <li>
+        <button type="button" class="dropdown-item ic-edit">Edit user</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item ic-edit">
+          Edit user
+          <span class="badge rounded-pill text-bg-danger qela-badge small"
+            >25</span
+          >
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item ic-stop">Block user</button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item active ic-success-2">
+          Unblock user
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item ic-delete danger">
+          Delete user
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item ic-success-2 success">
+          Change status
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item ic-success-2 warning">
+          Change status
+        </button>
+      </li>
     </ul>
-</div>
+  </div>
 </section>
