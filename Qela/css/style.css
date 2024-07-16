@@ -13154,7 +13154,7 @@ body {
 }
 
 .btn-close {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 50%;
   padding: 7px;
 }
