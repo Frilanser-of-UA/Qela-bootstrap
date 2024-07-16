@@ -13314,7 +13314,7 @@ body {
   justify-content: center;
   padding-top: 1.5rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .btns-center {
     flex-wrap: wrap;
     gap: 0.25rem;
@@ -13832,6 +13832,13 @@ input::-webkit-inner-spin-button {
 
 .form-check {
   vertical-align: baseline;
+}
+.form-check.ql-sm {
+  font-size: 14px;
+  padding-left: 1.25rem;
+}
+.form-check.ql-sm .form-check-input {
+  margin-left: -1.25rem;
 }
 .form-check .invalid-feedback {
   font-size: 0.875rem;
