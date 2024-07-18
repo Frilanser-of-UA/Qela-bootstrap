@@ -8618,6 +8618,141 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
+.accordion {
+  --bs-accordion-color: #212529;
+  --bs-accordion-bg: #fff;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-border-color: #e9ecef;
+  --bs-accordion-border-width: 1px;
+  --bs-accordion-border-radius: 0.5rem;
+  --bs-accordion-inner-border-radius: calc(0.5rem - 1px);
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-color: #212529;
+  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon-width: 0.875rem;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
+  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-active-color: #212529;
+  --bs-accordion-active-bg: #f8f9fa;
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: var(--bs-accordion-btn-color);
+  text-align: left;
+  background-color: var(--bs-accordion-btn-bg);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: var(--bs-accordion-active-bg);
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: var(--bs-accordion-btn-focus-border-color);
+  outline: 0;
+  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--bs-accordion-bg);
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: var(--bs-accordion-border-radius);
+  border-top-right-radius: var(--bs-accordion-border-radius);
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+.accordion-item:last-of-type {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+}
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+
+.accordion-body {
+  padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+}
+
+.accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+.accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+  border-radius: 0;
+}
+
 .btn {
   --bs-btn-padding-x: 1rem;
   --bs-btn-padding-y: 0.5rem;
@@ -12317,6 +12452,62 @@ textarea.form-control-lg {
   content: "\e9a5";
 }
 
+.ic-grip-horizontal:before {
+  content: "\e9a6";
+}
+
+.ic-hand:before {
+  content: "\e9a7";
+}
+
+.ic-hand-28:before {
+  content: "\e9a8";
+}
+
+.ic-maps-global:before {
+  content: "\e9a9";
+}
+
+.ic-maps-global-28:before {
+  content: "\e9aa";
+}
+
+.ic-message-circle:before {
+  content: "\e9ab";
+}
+
+.ic-message-circle-28:before {
+  content: "\e9ac";
+}
+
+.ic-message-circle-filled-28:before {
+  content: "\e9ad";
+}
+
+.ic-player-play:before {
+  content: "\e9ae";
+}
+
+.ic-radiobutton:before {
+  content: "\e9af";
+}
+
+.ic-scroll:before {
+  content: "\e9b0";
+}
+
+.ic-scroll-28:before {
+  content: "\e9b1";
+}
+
+.ic-square-check:before {
+  content: "\e9b2";
+}
+
+.ic-star:before {
+  content: "\e9b3";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
@@ -13309,6 +13500,20 @@ body {
   font-size: 24px;
 }
 
+.btn-apple,
+.btn-google {
+  padding: 0;
+  height: 31px;
+}
+.btn-apple:active,
+.btn-google:active {
+  border-color: transparent !important;
+}
+.btn-apple img,
+.btn-google img {
+  width: 100%;
+}
+
 .btns-center {
   display: flex;
   justify-content: center;
@@ -13453,10 +13658,10 @@ input::-webkit-inner-spin-button {
   background: #e9ecef;
 }
 
-.ql-file {
+.qela-file {
   font-size: 14px;
 }
-.ql-file label {
+.qela-file label {
   height: 140px;
   width: 100%;
   background-color: #fff;
@@ -13471,7 +13676,7 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   position: relative;
 }
-.ql-file .form-control {
+.qela-file .form-control {
   position: absolute;
   top: 0;
   left: 0;
@@ -13481,48 +13686,48 @@ input::-webkit-inner-spin-button {
   font-size: 0;
   z-index: 1;
 }
-.ql-file .form-control:hover ~ label {
+.qela-file .form-control:hover ~ label {
   border-color: #6c757d;
 }
-.ql-file .form-control:focus ~ label {
+.qela-file .form-control:focus ~ label {
   border-color: #9188ff;
   box-shadow: 0 0 0 0.125rem rgba(145, 136, 255, 0.3);
 }
-.ql-file .form-control:disabled {
+.qela-file .form-control:disabled {
   cursor: auto;
 }
-.ql-file .form-control:disabled ~ label {
+.qela-file .form-control:disabled ~ label {
   color: #6c757d;
   background-color: #e9ecef;
   border-color: #ced4da;
   opacity: 1;
 }
-.ql-file .form-control.is-invalid ~ label {
+.qela-file .form-control.is-invalid ~ label {
   border-color: #ff453a;
 }
-.ql-file .form-control.is-invalid:focus ~ label {
+.qela-file .form-control.is-invalid:focus ~ label {
   box-shadow: 0 0 0 0.125rem rgba(255, 69, 58, 0.3);
 }
-.ql-file.has-validation .helper-text {
+.qela-file.has-validation .helper-text {
   display: none;
 }
-.ql-file.has-validation .invalid-feedback {
+.qela-file.has-validation .invalid-feedback {
   display: block;
 }
-.ql-file.filled {
+.qela-file.filled {
   display: none;
 }
-.ql-file.filled ~ .ql-preview {
+.qela-file.filled ~ .qela-preview {
   display: flex;
 }
-.ql-file.small {
+.qela-file.small {
   font-size: 14px;
 }
-.ql-file.small div:first-child {
+.qela-file.small div:first-child {
   position: relative;
   display: inline-block;
 }
-.ql-file.small label {
+.qela-file.small label {
   flex-direction: row;
   background-color: #f8f9fa;
   height: auto;
@@ -13530,48 +13735,47 @@ input::-webkit-inner-spin-button {
   gap: 0.25rem;
   padding: 0.25rem 0.5rem;
 }
-.ql-file.small [class^=ic-],
-.ql-file.small [class*=ic-] {
+.qela-file.small [class^=ic-],
+.qela-file.small [class*=ic-] {
   color: #000;
 }
-.ql-file.small small, .ql-file.small .small {
+.qela-file.small small, .qela-file.small .small {
   font-weight: 500;
   color: #000;
 }
-.ql-file.add-img label {
+.qela-file.add-img label {
   padding: 0;
   border: none;
   background-color: transparent;
   border-radius: 50%;
   height: auto;
 }
-.ql-file.add-img .qela-avatar {
+.qela-file.add-img .qela-avatar {
   margin-right: 0;
   background-color: #fff;
   border: 1px solid #e9ecef;
 }
 
-.ql-preview {
+.qela-preview {
   display: none;
   gap: 0.5rem;
   font-size: 14px;
 }
 @media (max-width: 575.98px) {
-  .ql-preview {
+  .qela-preview {
     flex-direction: column;
   }
 }
-.ql-preview > div {
+.qela-preview > div {
   height: 70px;
 }
-.ql-preview > div:first-child {
-  display: flex;
+.qela-preview > div:first-child {
   background-color: #fff;
   border-radius: 0.375rem;
   overflow: hidden;
   border: 1px solid #ced4da;
 }
-.ql-preview div:first-child[class*=ic-] {
+.qela-preview > div:first-child[class*=ic-] {
   width: 70px;
   height: 100%;
   border-right: 1px solid #ced4da;
@@ -13581,10 +13785,14 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
 }
-.ql-preview div img {
+.qela-preview > div:first-child img {
   aspect-ratio: 1/1;
   max-width: 100%;
   object-fit: cover;
+}
+.qela-preview .btn.ico-left {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
 
 .qela-input-group .form-control {
@@ -14210,6 +14418,24 @@ input::-webkit-inner-spin-button {
 
 .form-label.small {
   font-size: 15px;
+}
+
+.qela-accordion .accordion-item {
+  border-top: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+.qela-accordion .accordion-item:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.qela-accordion .accordion-button {
+  border-radius: 8px;
+}
+.qela-accordion .accordion-button:not(.collapsed) {
+  border-radius: 8px 8px 0 0;
+  box-shadow: none;
+}
+.qela-accordion .accordion-button:not(.collapsed):focus {
+  box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
 }
 
 .qela-alert {
