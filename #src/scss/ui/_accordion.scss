@@ -25,9 +25,6 @@
 					}
 				}
 				&:not(.collapsed) {
-					border-radius: 8px 8px 0 0;
-					box-shadow: none;
-
 					&:focus {
 						box-shadow: $accordion-button-focus-box-shadow;
 					}
@@ -36,7 +33,7 @@
 		}
 	}
 	.accordion-button {
-		border-radius: 8px;
+		border-radius: 7px;
 		font-weight: 500;
 		&::after {
 			transition: all 0.25s ease 0s;
@@ -51,7 +48,7 @@
 			}
 		}
 		&:not(.collapsed) {
-			border-radius: 8px 8px 0 0;
+			border-radius: 7px 7px 0 0;
 			box-shadow: none;
 
 			&:focus {
