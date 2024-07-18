@@ -1,0 +1,38 @@
+.qela-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > * {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px;
+        color: $info-700;
+        &.disabled {
+            color: $info-500;
+            pointer-events: none;
+        }
+    }
+    a {
+        cursor: pointer;
+        max-width: 220px;
+        -webkit-line-clamp: 1;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+    span {
+        pointer-events: none;
+        color: $info-500;
+        &[class*="ic-"] {
+            padding: 0;
+            &::before {
+                font-size: 18px;
+                color: $info-500;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.qela-status-badge {
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 20px;
+    &[class*="ic-"] {
+        &::before {
+            font-size: 20px;
+            margin: 0px 4px 0px 0px;
+        }
+    }
+    &.secondary {
+        color: $secondary-700;
+        border: 1px solid $secondary-400;
+        background: $secondary-100;
+    }
+    &.success {
+        color: $success-700;
+        border: 1px solid $success-400;
+        background: $success-100;
+    }
+    &.warning {
+        color: $warning-700;
+        border: 1px solid $warning-400;
+        background: $warning-100;
+    }
+    &.circel {
+        padding: 0;
+        border-width: 0;
+        &[class*="ic-"] {
+            &::before {
+                margin: 0;
+            }
+        }
+    }
+}

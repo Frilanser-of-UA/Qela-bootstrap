@@ -1,0 +1,27 @@
+.qela-delimiter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    hr {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+    }
+    .badge {
+        z-index: 2;
+    }
+}
+.qela-delimiter-lg {
+    height: 97px;
+}
+.qela-delimiter-lg {
+    height: 65px;
+}
+.qela-delimiter-sm {
+    height: 49px;
+}
+.qela-delimiter-smx {
+    height: 33px;
+}

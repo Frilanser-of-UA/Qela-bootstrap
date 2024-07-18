@@ -1,0 +1,165 @@
+.progress {
+    position: relative;
+    min-width: 150px;
+
+    &.small {
+        .progress-bar {
+            position: absolute;
+            height: 100%;
+
+            &:last-child {
+                z-index: 1;
+            }
+
+            &:nth-child(2) {
+                z-index: 2;
+                border-top-right-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+
+            &:first-child {
+                z-index: 3;
+                border-top-right-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+        }
+
+        button {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+        }
+    }
+}
+.qela-progress-new {
+    height: 26px;
+    .label {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-color: transparent;
+        color: $gray-900;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 4;
+    }
+    .progress-bar {
+        position: absolute;
+        height: 100%;
+        &:last-child {
+            z-index: 1;
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+        }
+
+        &:first-child {
+            z-index: 3;
+        }
+    }
+    button {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+    }
+}
+.progressbar-tooltip {
+    padding: 8px;
+    .tooltip-inner {
+        border-radius: 10px;
+        border: 1px solid $gray-300;
+        box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
+    }
+    .tooltip-arrow {
+        --bs-tooltip-arrow-width: 1rem;
+        --bs-tooltip-arrow-height: 0.5rem;
+    }
+}
+.qela-progress {
+    min-width: 150px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    font-size: 1rem;
+
+    > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%;
+        background: $secondary;
+        color: $white;
+    }
+
+    .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $secondary-300;
+        color: $black;
+        clip-path: inset(-1px -1px -1px var(--percent));
+    }
+
+    &.large {
+        height: 2.125rem;
+        border-radius: 0.375rem;
+
+        > div {
+            justify-content: flex-start;
+
+            div {
+                &:first-child {
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .left {
+            &:first-child {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+
+        .right {
+            &:last-child {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+    }
+
+    &.small {
+        height: 1rem;
+        font-size: 12px;
+        border-radius: 15px;
+
+        > div {
+            justify-content: center;
+        }
+    }
+}

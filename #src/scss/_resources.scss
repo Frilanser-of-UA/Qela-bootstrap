@@ -1,0 +1,22 @@
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src:
+            url("../fonts/#{$file_name}.woff2") format("woff2"),
+            url("../fonts/#{$file_name}.woff") format("woff");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+//</ШРИФТЫ>==========================================================
+
+//<ПЕРЕМЕННЫЕ>========================================================
+$minWidth: 320px;
+$maxWidth: 1440; //@include media-breakpoint-down(xxl) { ... }
+$md1: 1200; //@include media-breakpoint-down(xl) { ... }
+$md2: 990.98; //@include media-breakpoint-down(lg) { ... }
+$md3: 767.98; //@include media-breakpoint-down(md) { ... }
+$md4: 567.98; //@include media-breakpoint-down(sm) { ... }

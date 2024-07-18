@@ -1,0 +1,27 @@
+.qela-accordion {
+
+	.accordion-item {
+
+		border-top: 1px solid $accordion-border-color;
+
+		&:not(:last-child) {
+			margin-bottom: 0.25rem;
+		}
+
+		border-radius: 8px;
+	}
+
+	.accordion-button {
+		border-radius: 8px;
+
+
+		&:not(.collapsed) {
+			border-radius: 8px 8px 0 0;
+			box-shadow: none;
+
+			&:focus {
+				box-shadow: $accordion-button-focus-box-shadow;
+			}
+		}
+	}
+}

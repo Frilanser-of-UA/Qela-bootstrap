@@ -1,0 +1,322 @@
+.qela-list {
+    &.no-outline {
+        .list-group-item {
+            border: none;
+        }
+    }
+
+    &.no-rounded {
+        .list-group-item {
+            border-radius: 0;
+        }
+    }
+
+    &.primary {
+        .list-group-item {
+            border-color: $primary-600;
+        }
+    }
+
+    &.info {
+        .list-group-item {
+            border-color: $info-100;
+            background-color: $info-100;
+            transition: background-color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $info-200;
+                }
+            }
+        }
+    }
+
+    .list-group-item {
+        border-color: $info-400;
+        position: relative;
+        border-radius: 0.5rem;
+        padding: 0;
+
+        > a {
+            border-radius: 0.5rem;
+            padding: 1rem 0.5rem 1rem 1rem;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            color: $info-900;
+
+            p {
+                transition: color 0.3s ease 0s;
+            }
+
+            .ql-previews {
+                margin-right: 1rem;
+            }
+        }
+
+        & + .list-group-item {
+            border-top-width: 1px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                > a {
+                    p {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+
+        .qela-clamp {
+            -webkit-line-clamp: 2;
+            white-space: normal;
+            display: -webkit-box;
+            margin-bottom: 0;
+        }
+
+        .badge {
+            position: absolute;
+            right: 10px;
+            top: -5px;
+        }
+    }
+}
+
+.qela-chain {
+    background-color: $white;
+    border-radius: 12px;
+    border: 1px solid $info-400;
+    padding-top: 0;
+
+    .qela-actions {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .qela-toolbar {
+        margin-bottom: 0.5rem;
+    }
+
+    .qela-list {
+        .list-group-item {
+            margin-bottom: 0;
+
+            &:last-child {
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        }
+    }
+}
+
+.qela-steps {
+    counter-reset: ol-steps;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    .list-group-item {
+        display: flex;
+        position: relative;
+        --diameter: 32px;
+        --gap-num: 10px;
+
+        h3 {
+            font-size: 1em;
+            margin-bottom: 0.25rem;
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            right: 0;
+            top: -15px;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 1em;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &::before {
+            counter-increment: ol-steps;
+            content: "" counters(ol-steps, "");
+            flex: 0 0 var(--diameter);
+            width: var(--diameter);
+            height: var(--diameter);
+            font-weight: 500;
+            font-size: 14px;
+            color: $info-900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $secondary;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: calc(100% - (var(--diameter) + var(--gap-num)));
+            background-color: $secondary;
+            position: absolute;
+            left: calc(var(--diameter) / 2);
+            bottom: 0;
+        }
+
+        &:nth-child(-n + 9) {
+            &::before {
+                content: "0" counters(ol-steps, "");
+            }
+        }
+    }
+}
+
+.qela-flush {
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media (max-width: ($md1+px)) {
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        > * {
+            font-size: 14px;
+            &:first-child {
+                color: $info-600;
+                flex: 0 0 37%;
+            }
+            &:last-child {
+                color: $info-900;
+                flex: 0 1 auto;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+    .qela-comment {
+        justify-content: space-between;
+        align-items: baseline;
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            p {
+                margin: 0px 0px 10px 0px;
+            }
+        }
+    }
+}
+.qela-plan {
+    .list-group-item {
+        display: flex;
+        gap: 0.25rem;
+        font-size: 14px;
+        padding: 0;
+        border: none;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        > * {
+            color: $gray-800;
+            font-variant-numeric: lining-nums tabular-nums;
+            line-height: 130%;
+        }
+    }
+}
+.qela-extended {
+    .list-group-item {
+        padding: 0;
+        overflow: hidden;
+        transition: background-color 0.25s ease 0s;
+        cursor: pointer;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $secondary-100;
+            }
+        }
+    }
+    .form-check {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .form-check-input {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        margin-left: 0;
+        float: none;
+        &:checked {
+            & ~ .qela-collapse {
+                grid-template-rows: 1fr;
+                padding-bottom: 1rem;
+                background-color: $secondary-100;
+            }
+            & ~ .form-check-label {
+                background-color: $secondary-100;
+            }
+        }
+        &:disabled,
+        .disabled {
+            & ~ .qela-collapse {
+                background-color: $white;
+                * {
+                    color: $gray-600 !important;
+                }
+            }
+            & ~ .form-check-label {
+                background-color: $white;
+                * {
+                    color: $gray-600 !important;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    .form-check-label {
+        padding: 1rem 1rem 1rem 3rem;
+        display: block;
+        transition: all 0.3s ease 0s;
+    }
+    .qela-collapse {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition:
+            grid-template-rows 0.8s ease 0s,
+            padding 0.4s ease 0s,
+            background-color 0.3s ease;
+        padding: 0px 1rem;
+        > * {
+            min-height: 0;
+            margin: 0;
+        }
+    }
+}

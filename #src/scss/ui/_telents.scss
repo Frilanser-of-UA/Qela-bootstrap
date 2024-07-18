@@ -1,0 +1,263 @@
+.qela-awards {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qela-awards.red .qela-badge {
+    background-color: $telent-red-600;
+}
+
+.qela-awards.red .badge-text {
+    color: $telent-red-600;
+}
+
+.qela-awards.violet .qela-badge {
+    background-color: $telent-violet-600;
+}
+
+.qela-awards.violet .badge-text {
+    color: $telent-violet-600;
+}
+
+.qela-awards.green .qela-badge {
+    background-color: $telent-green-600;
+}
+
+.qela-awards.green .badge-text {
+    color: $telent-green-600;
+}
+
+.qela-awards.orange .qela-badge {
+    background-color: $telent-orange-600;
+}
+
+.qela-awards.orange .badge-text {
+    color: $telent-orange-600;
+}
+
+.qela-awards.lightgreen .qela-badge {
+    background-color: $telent-lightgreen-600;
+}
+
+.qela-awards.lightgreen .badge-text {
+    color: $telent-lightgreen-600;
+}
+
+.qela-awards.lightblue .qela-badge {
+    background-color: $telent-lightblue-600;
+}
+
+.qela-awards.lightblue .badge-text {
+    color: $telent-lightblue-600;
+}
+
+.qela-awards.blue .qela-badge {
+    background-color: $telent-blue-600;
+}
+
+.qela-awards.blue .badge-text {
+    color: $telent-blue-600;
+}
+
+.qela-awards.pink .qela-badge {
+    background-color: $telent-pink-600;
+}
+
+.qela-awards.pink .badge-text {
+    color: $telent-pink-600;
+}
+
+.qela-telent {
+    padding: 5px 12px;
+    text-align: left;
+    border-radius: 8px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid transparent;
+
+    &.red {
+        background: $telent-red-600;
+    }
+
+    &.violet {
+        background: $telent-violet-600;
+    }
+
+    &.green {
+        background: $telent-green-600;
+    }
+
+    &.orange {
+        background: $telent-orange-600;
+    }
+
+    &.lightgreen {
+        background: $telent-lightgreen-600;
+    }
+
+    &.lightblue {
+        background: $telent-lightblue-600;
+    }
+
+    &.blue {
+        background: $telent-blue-600;
+    }
+
+    &.pink {
+        background: $telent-pink-600;
+    }
+
+    &.outline-red {
+        border-color: $telent-red-500;
+        color: $telent-red-800;
+        background-color: $telent-red-100;
+    }
+
+    &.outline-violet {
+        border-color: $telent-violet-500;
+        color: $telent-violet-800;
+        background-color: $telent-violet-100;
+    }
+
+    &.outline-lightgreen {
+        border-color: $telent-lightgreen-500;
+        color: $telent-lightgreen-800;
+        background-color: $telent-lightgreen-100;
+    }
+
+    &.outline-orange {
+        border-color: $telent-orange-500;
+        color: $telent-orange-800;
+        background-color: $telent-orange-100;
+    }
+
+    &.outline-green {
+        border-color: $telent-green-500;
+        color: $telent-green-800;
+        background-color: $telent-green-100;
+    }
+
+    &.outline-lightblue {
+        border-color: $telent-lightblue-500;
+        color: $telent-lightblue-800;
+        background-color: $telent-lightblue-100;
+    }
+
+    &.outline-blue {
+        border-color: $telent-blue-500;
+        color: $telent-blue-800;
+        background-color: $telent-blue-100;
+    }
+
+    &.outline-pink {
+        border-color: $telent-pink-500;
+        color: $telent-pink-800;
+        background-color: $telent-pink-100;
+    }
+}
+
+.qela-telent-text {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: left;
+
+    &.red {
+        color: $telent-red-800;
+    }
+
+    &.violet {
+        color: $telent-violet-800;
+    }
+
+    &.green {
+        color: $telent-green-800;
+    }
+
+    &.orange {
+        color: $telent-orange-800;
+    }
+
+    &.lightgreen {
+        color: $telent-lightgreen-800;
+    }
+
+    &.lightblue {
+        color: $telent-lightblue-800;
+    }
+
+    &.blue {
+        color: $telent-blue-800;
+    }
+
+    &.pink {
+        color: $telent-pink-800;
+    }
+}
+
+.qela-list-telents {
+    .list-group-item {
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+        display: flex;
+        align-items: center;
+        color: $gray-900;
+
+        &.outline-red {
+            border-color: $telent-red-400;
+        }
+
+        &.outline-violet {
+            border-color: $telent-violet-400;
+        }
+
+        &.outline-lightgreen {
+            border-color: $telent-lightgreen-400;
+        }
+
+        &.outline-orange {
+            border-color: $telent-orange-400;
+        }
+
+        &.outline-green {
+            border-color: $telent-green-400;
+        }
+
+        &.outline-lightblue {
+            border-color: $telent-lightblue-400;
+        }
+
+        &.outline-blue {
+            border-color: $telent-blue-400;
+        }
+
+        &.outline-pink {
+            border-color: $telent-pink-400;
+        }
+
+        & + .list-group-item {
+            border-top-width: 1px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.25rem;
+        }
+
+        span {
+            &:first-child {
+                margin-right: 1rem;
+                &.large-xl {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+
+            &:nth-child(2) {
+                flex-grow: 1;
+                margin-right: 8px;
+            }
+        }
+    }
+}

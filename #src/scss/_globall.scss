@@ -1,0 +1,541 @@
+html,
+body {
+    height: 100%;
+}
+
+.qela-body {
+    --body-pad-top: 56px;
+    padding-top: var(--body-pad-top);
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: ($md3+px)) {
+        padding-left: 0;
+    }
+}
+
+// ======================= master
+.qela-main {
+    padding: 0.5rem 0;
+    flex: 1 1 auto;
+
+    .container {
+        height: 100%;
+    }
+}
+
+.qela-page {
+    min-height: 100%;
+    border: 1px solid $info-300;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    .nav.nav-tabs {
+        padding: 1rem 1.5rem 0 1.5rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        background-color: $body-bg;
+    }
+
+    .row-grow {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        --bs-gutter-x: 1rem;
+        flex: 1 1 auto;
+
+        &.no-pad {
+            padding: 0;
+        }
+
+        .pad-top-6 {
+            padding-top: 2.5rem;
+
+            @media (max-width: ($md2+px)) {
+                padding-top: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        [class^="col-"] {
+            .card {
+                height: 100%;
+                padding: 0.5rem;
+                background-color: $body-bg;
+                border: none;
+            }
+
+            .card-text {
+                &.empty {
+                    padding: 2.5rem 1rem;
+                    text-align: center;
+                    color: cheqela-main$info-700;
+                }
+
+                &.info {
+                    padding: 1rem;
+                }
+            }
+
+            .img-fluid {
+                width: 100%;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.qela-right {
+    background-color: $info-100;
+    height: 100%;
+    max-height: 100vh;
+    border-bottom-right-radius: 12px;
+    overflow: auto;
+
+    @media (max-width: ($md2+px)) {
+        border-bottom-left-radius: 12px;
+        max-height: none;
+    }
+
+    @media (min-width: ($md2+px)) {
+        border-left: 1px solid $info-400;
+    }
+
+    .qela-actions {
+        padding: 1rem;
+
+        @media (min-width: ($md2+px)) {
+            border-bottom: 1px solid $info-400;
+        }
+    }
+
+    .typography {
+        padding: 1.5rem 1rem;
+
+        @media (max-width: ($md2+px)) {
+            padding: 0.5rem 1rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            padding: 2rem 0 1rem 0;
+            color: $info-400;
+            font-size: 1.5em;
+
+            @media (max-width: ($md2+px)) {
+                padding: 1rem 0 0.5rem 0;
+            }
+        }
+    }
+}
+
+.child-mb-2 > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.child-mb-2 .qela-chain:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+// ======================= master
+// ======================= telent
+.qela-wrap {
+    background-color: transparent;
+    border: none;
+
+    .row-grow {
+        @media (max-width: ($md2+px)) {
+            --bs-gutter-y: 1rem;
+        }
+    }
+}
+
+.qela-start {
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    > div {
+        &:first-child {
+            padding: 48px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .qela-avatar {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .qela-telent-text {
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .list-group {
+        padding: 1rem;
+    }
+
+    .qela-badge-telent {
+        margin-left: auto;
+
+        @media (max-width: ($md1+px)) {
+            margin-left: 0;
+        }
+    }
+}
+
+.qela-end {
+    padding-bottom: 1rem;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &.qela-tables {
+        padding: 0;
+        padding-bottom: 1.5rem;
+        height: auto;
+
+        > .row {
+            --bs-gutter-x: 1rem;
+            padding: 1rem 1.5rem;
+            align-items: center;
+        }
+
+        .table-qela {
+            max-height: 410px;
+            overflow: auto;
+
+            td {
+                &:first-child {
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                }
+            }
+        }
+    }
+
+    > div {
+        &:first-child {
+            padding: 2rem 1rem 0 1rem;
+        }
+    }
+
+    > h2 {
+        margin-bottom: 0;
+        align-self: flex-start;
+        font-size: 20px;
+    }
+
+    .qela-telent-text {
+        margin-bottom: 2rem;
+    }
+
+    .btns-inline {
+        gap: 0.5rem;
+        justify-content: flex-end;
+        padding: 1rem 0;
+    }
+
+    .alert {
+        margin-top: 0.75rem;
+    }
+}
+
+.qela-start,
+.qela-end {
+    background-color: $white;
+    height: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid $gray-400;
+}
+
+.qela-top-item {
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    --bs-gutter-x: 1rem;
+}
+
+// ======================= telent
+
+.qela-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.qela-conatiner-sm {
+    max-width: 432px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.qela-clamp {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    height: auto;
+}
+
+.qela-clamp3 {
+    -webkit-line-clamp: 3;
+    white-space: normal;
+    display: -webkit-box;
+}
+.qela-clamp-btn {
+    white-space: normal;
+    display: -webkit-box;
+}
+
+.qela-pad-r {
+    padding-right: 65px;
+
+    @media (max-width: ($md3+px)) {
+        padding-right: 16px;
+    }
+}
+
+.qela-pad-l {
+    padding-left: 65px;
+
+    @media (max-width: ($md3+px)) {
+        padding-left: 16px;
+    }
+}
+.qela-stiky {
+    position: sticky;
+    top: 0;
+}
+.qela-rounded-st {
+    border-top-left-radius: $border-radius !important;
+}
+
+.qela-rounded-et {
+    border-top-right-radius: $border-radius !important;
+}
+
+.qela-rounded-eb {
+    border-bottom-right-radius: $border-radius !important;
+}
+.qela-rounded-12 {
+    border-radius: 12px !important;
+}
+.word-break {
+    word-break: break-word !important;
+}
+
+.h-100vh {
+    height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
+    overflow-x: hidden;
+    overflow-y: auto;
+    @media (max-width: ($md2+px)) {
+        height: auto;
+    }
+}
+// .form-control.is-invalid ~ .btn-input:hover {
+// border-color: #ff453a;
+// color: #ff453a;
+// }
+.qela-scroll {
+    overflow: hidden;
+
+    @media (max-width: ($md2+px)) {
+        overflow: auto;
+    }
+}
+
+.qela-rounder-12 {
+    border-radius: 12px !important;
+}
+
+.qela-vote {
+    display: flex;
+    align-items: center;
+    border: 1px solid $info-400;
+    border-radius: 0.5rem;
+    background-color: $white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+    .badge {
+        margin-left: 1rem;
+    }
+}
+.qela-help {
+    display: flex;
+    margin-top: 1rem;
+    border: 1px solid $gray-400;
+    border-radius: 0.5rem;
+    @media (max-width: ($md3 + px)) {
+        flex-direction: column;
+    }
+    .nav {
+        padding-top: 1rem;
+        flex: 0 0 230px;
+        flex-direction: column;
+        border-right: 1px solid $gray-400;
+        background: $white;
+        border-bottom-left-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        @media (max-width: ($md3 + px)) {
+            border-right: none;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0.5rem;
+        }
+        .nav-item {
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                    .nav-link {
+                        padding-left: 40px;
+                        &.current {
+                            background-color: $info-200;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            padding: 0.375rem 1rem;
+            color: $gray-700;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease-out 0s;
+            &::before {
+                font-size: 20px;
+                margin: 0px 4px 0px 0px;
+                color: $gray-500;
+                transition:
+                    color 0.3s ease-out 0s,
+                    transform 0.3s ease-out 0s;
+            }
+            &.active {
+                &::before {
+                    transform: rotate(-45deg);
+                }
+                &.current {
+                    background-color: $info-200;
+                }
+            }
+            &.current {
+                color: $secondary-700;
+                &::before {
+                    color: $secondary-700;
+                }
+            }
+            &.child-no {
+                &.active {
+                    &.current {
+                        background-color: transparent;
+                    }
+                }
+                &.current {
+                    &::before {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $secondary-700;
+                    &::before {
+                        color: $secondary-700;
+                    }
+                }
+            }
+        }
+    }
+    .card {
+        text-decoration: none;
+        padding: 1.5rem;
+        color: $gray-900;
+        border-color: $gray-300;
+        background-color: $gray-100;
+        transition: color 0.3s ease-out 0s;
+        [class*="ic-"] {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            color: $info-700;
+            font-size: 14px;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease-out 0s;
+            &::before {
+                font-size: 20px;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $secondary-700;
+                [class*="ic-"] {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+.qela-device-alert {
+    padding: 2rem 1rem;
+    text-align: center;
+    img {
+        width: 120px;
+        margin: 42px 0;
+    }
+    h5 {
+        margin-bottom: 1rem;
+    }
+    p {
+        color: $gray-900;
+    }
+    button {
+        margin-top: 1.5rem;
+    }
+}
+.qela-benifist {
+    background-color: $white;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid $primary-700;
+    ul {
+        padding-left: 0;
+        padding-bottom: 16px;
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 24px;
+            padding-bottom: 8px;
+            &::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                top: 3px;
+                left: 5px;
+                background: url("../img/icons/marcer-list.svg") center/100% no-repeat;
+            }
+        }
+    }
+}

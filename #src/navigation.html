@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{ "title":"Vertical tabs nav" })
+
+<body class="qela-body ps-0 qela-scroll">
+    @@include('./components/_header-logo.html',{ "title":"New quest" })
+    <div id="app" v-cloak>
+        <main style="overflow: auto">
+            <!-- =====================Список користувачів==================== -->
+            <div class="container">
+                <div class="row gx-3 my-3">
+                    <div class="col-lg-9 mb-lg-0 mb-5">
+                        <div class="qela-tab border rounded-2">
+                            <ul class="nav nav-tabs w-auto bg-white flex-md-column py-0 py-md-3" id="myTab"
+                                role="tablist">
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0 success active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="line line-start"></span>
+                                        <span class="link-name">General</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0 success" id="map-tab" data-bs-toggle="tab"
+                                        data-bs-target="#map-tab-pane" type="button" role="tab"
+                                        aria-controls="map-tab-pane" aria-selected="true">
+                                        <span class="line"></span>
+                                        <span class="link-name">Map</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0" id="targeting-tab" data-bs-toggle="tab"
+                                        data-bs-target="#targeting-tab-pane" type="button" role="tab"
+                                        aria-controls="targeting-tab-pane" aria-selected="false">
+                                        <span class="line"></span>
+                                        <span class="link-name">Targeting</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0" id="conditions-tab" data-bs-toggle="tab"
+                                        data-bs-target="#conditions-tab-pane" type="button" role="tab"
+                                        aria-controls="conditions-tab-pane" aria-selected="false">
+                                        <span class="line"></span>
+                                        <span class="link-name">Conditions</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0" id="awards-tab" data-bs-toggle="tab"
+                                        data-bs-target="#awards-tab-pane" type="button" role="tab"
+                                        aria-controls="awards-tab-pane" aria-selected="false">
+                                        <span class="line"></span>
+                                        <span class="link-name">Awards</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0 error" id="notifications-tab" data-bs-toggle="tab"
+                                        data-bs-target="#notifications-tab-pane" type="button" role="tab"
+                                        aria-controls="notifications-tab-pane" aria-selected="false">
+                                        <span class="line"></span>
+                                        <span class="link-name">Notifications</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item qela-nav-item" role="presentation"
+                                    style="--step-diametr: 28px; --step-pad-start: 16px">
+                                    <button class="nav-link border-0" id="publishing-tab" data-bs-toggle="tab"
+                                        data-bs-target="#publishing-tab-pane" type="button" role="tab"
+                                        aria-controls="publishing-tab-pane" aria-selected="false">
+                                        <span class="line line-end"></span>
+                                        <span class="link-name">Publishing</span>
+                                    </button>
+                                </li>
+                                <li class="d-none d-md-block">
+                                    <hr />
+                                </li>
+                                <li class="nav-item d-none d-md-block" role="presentation">
+                                    <button class="nav-link p-3 border-0" id="analytics-tab" data-bs-toggle="tab"
+                                        data-bs-target="#analytics-tab-pane" type="button" role="tab"
+                                        aria-controls="analytics-tab-pane" aria-selected="false">
+                                        Analytics
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="w-100 qela-scroll">
+                                <div class="tab-content d-flex flex-column w-100 h-100vh overflow-auto"
+                                    id="myTabContent">
+                                    <!-- ==========General========== -->
+                                    <div class="tab-pane fade show active row g-0 flex-grow-1" id="home-tab-pane"
+                                        role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                        <div class="col-lg-10 mx-auto">
+                                            <!-- Badge -->
+                                            <div class="px-3 pt-5 d-flex flex-wrap gap-1">
+                                                <span
+                                                    class="badge bg-primary px-2 py-1 text-info-900 fs-6 fw-normal"><small>TShare
+                                                        invite to the event online</small></span>
+                                            </div>
+                                            <!-- Quest name -->
+                                            <div class="pt-4 px-3">
+                                                <div class="d-flex justify-content-between gap-1">
+                                                    <div class="d-flex align-items-start gap-1">
+                                                        <label for="inputText1" class="form-label">Quest Name
+                                                            <span class="text-danger">*</span></label>
+                                                        <button type="button"
+                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                    </div>
+                                                    <label class="form-label">0/<span>2500</span></label>
+                                                </div>
+                                                <input type="text" class="form-control" id="inputText1"
+                                                    placeholder="Name" />
+                                                <div class="invalid-feedback">Error text</div>
+                                            </div>
+                                            <!-- Selects -->
+                                            <div class="pt-4 px-3">
+                                                <div class="row gx-2">
+                                                    <div class="col-md-6">
+                                                        <div class="d-flex justify-content-between gap-1">
+                                                            <div class="d-flex align-items-start gap-1">
+                                                                <label class="form-label">Campaign<span
+                                                                        class="text-danger">*</span></label>
+                                                                <button type="button"
+                                                                    class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                                    data-bs-custom-class="custom-tooltip"
+                                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <v-multi-select v-model="value4" :searchable="false"
+                                                                open-direction="bottom" :options="options"
+                                                                :single="true"></v-multi-select>
+                                                        </div>
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="d-flex justify-content-between gap-1">
+                                                            <div class="d-flex align-items-start gap-1">
+                                                                <label class="form-label">Chain
+                                                                    <span class="text-danger">*</span></label>
+                                                                <button type="button"
+                                                                    class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                                    data-bs-custom-class="custom-tooltip"
+                                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <v-multi-select v-model="value4" :searchable="false"
+                                                                open-direction="bottom" :options="options"
+                                                                :single="true"></v-multi-select>
+                                                        </div>
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Input type file -->
+                                            <div class="pt-4 px-3">
+                                                <div class="d-flex justify-content-between gap-1">
+                                                    <div class="d-flex align-items-start gap-1">
+                                                        <label for="inputFile" class="form-label">Label <span
+                                                                class="text-danger">*</span></label>
+                                                        <button type="button"
+                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                    </div>
+                                                    <label class="form-label">hint text</label>
+                                                </div>
+                                                <div class="ql-file">
+                                                    <div class="position-relative">
+                                                        <input id="inputFile" type="file" class="form-control" />
+                                                        <label for="2" class="form-label gap-2">
+                                                            <span class="ic-img-plus text-info-500"></span>
+                                                            <span class="text-info-900">Click to browse for file</span>
+                                                            <span class="text-info-600">️Aspect ratio 16/9, max width
+                                                                1000px, max
+                                                                weight 2 Mb</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="helper-text">Helper text</div>
+                                                    <div class="invalid-feedback">Error text</div>
+                                                </div>
+                                            </div>
+                                            <!-- Input group -->
+                                            <div class="pt-4 px-3">
+                                                <div>
+                                                    <div class="d-flex justify-content-between gap-1">
+                                                        <div class="d-flex align-items-start gap-1">
+                                                            <label for="inputText5" class="form-label">Maine video
+                                                                <span class="text-danger">*</span></label>
+                                                            <button type="button"
+                                                                class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                                data-bs-custom-class="custom-tooltip"
+                                                                data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group has-validation">
+                                                        <button class="btn btn-input ic-link" type="button"
+                                                            id="button-addon3"></button>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Placeholder" aria-label="Text" id="inputText5"
+                                                            aria-describedby="button-addon3" />
+                                                        <button class="btn btn-input" type="button" id="button-addon3">
+                                                            Paste
+                                                        </button>
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- datapiker -->
+                                            <div class="py-4 px-3">
+                                                <div class="d-flex justify-content-between gap-1">
+                                                    <div class="d-flex align-items-start gap-1">
+                                                        <label class="form-label">Time<span
+                                                                class="text-danger">*</span></label>
+                                                        <button type="button"
+                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                            data-bs-custom-class="custom-tooltip"
+                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                    </div>
+                                                    <label class="form-label">hint text</label>
+                                                </div>
+                                                <div>
+                                                    <v-date-picker v-model="date" range multi-calendars />
+                                                </div>
+                                                <span class="invalid-feedback">Set start date and time</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Map========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="map-tab-pane" role="tabpanel"
+                                        aria-labelledby="map-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">March checkpoints</h2>
+                                        </div>
+                                        <!-- dialog whith buttons-->
+                                        <div
+                                            class="p-3 border-bottom d-flex align-items-end justify-content-between gap-2 flex-wrap">
+                                            <div class="qela-dialog secondary-outline small">
+                                                <h2>
+                                                    Your supporters will be asked to choose the emoji
+                                                </h2>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button type="button"
+                                                    class="btn btn-outline-info ico ic-delete"></button>
+                                                <!-- modal btn -->
+                                                <button type="button" class="btn btn-primary ic-check-big ico-right"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-map">
+                                                    Save checkpoint
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!--  map-->
+                                        <div class="position-relative qela-map" aria-live="polite" aria-atomic="true">
+                                            <!-- map search -->
+                                            <form class="px-3 pt-2 position-absolute w-100 top-0 start-0" role="search">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control"
+                                                        placeholder="Search on a map" aria-label="Search"
+                                                        aria-describedby="button-search" />
+                                                    <button class="btn btn-input ic-search" type="button"
+                                                        id="button-search"></button>
+                                                </div>
+                                            </form>
+                                            <!-- Кнопки карты -->
+                                            <div class="btn-group-vertical qela-btn-map" role="group"
+                                                aria-label="Vertical button group">
+                                                <button type="button" class="btn border-0 ico ic-plus"
+                                                    data-bs-toggle="tooltip" data-bs-placement="left"
+                                                    data-bs-custom-class="qela-tooltip-black"
+                                                    data-bs-title="Zoom Out"></button>
+                                                <button type="button" class="btn border-0 ico ic-minus"
+                                                    data-bs-toggle="tooltip" data-bs-placement="left"
+                                                    data-bs-custom-class="qela-tooltip-black"
+                                                    data-bs-title="Zoom In"></button>
+                                                <button type="button" class="btn border-0 ico ic-arrow-autofit-content"
+                                                    data-bs-toggle="tooltip" data-bs-placement="left"
+                                                    data-bs-custom-class="qela-tooltip-black"
+                                                    data-bs-title="Fit to all poins"></button>
+                                            </div>
+                                            <!-- Изображение карты для примера -->
+                                            <div class="ql-ibg h-100">
+                                                <img class="w-100" src="img/map.jpg" alt="" />
+                                            </div>
+                                            <!-- Toast -->
+                                            <div
+                                                class="toast-container toast-container p-3 bottom-0 start-50 translate-middle-x">
+                                                <div class="toast qelas-toast show" role="alert" aria-live="assertive"
+                                                    aria-atomic="true">
+                                                    <div class="toast-header">
+                                                        <span class="me-2 ic-check-big bg-primary text-white"></span>
+                                                        <strong class="me-auto">Checkpoint 1 added</strong>
+                                                        <small class="text-info-600">11 mins ago</small>
+                                                        <button type="button" class="btn-close small ic-cloze"
+                                                            data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="toast-body">
+                                                        Hello, world! This is a toast message.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal lg map-->
+                                            <div class="modal fade" id="modal-map" tabindex="-1"
+                                                aria-labelledby="modal1Label" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                Add more info
+                                                            </h1>
+                                                            <button type="button" class="btn-close ic-cloze"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body bg-body">
+                                                            <!-- text field -->
+                                                            <div class="pb-3">
+                                                                <div class="d-flex justify-content-between gap-1">
+                                                                    <div class="d-flex align-items-start gap-1">
+                                                                        <label for="inputText1"
+                                                                            class="form-label">Official Address of
+                                                                            checkpoint</label>
+                                                                        <button type="button"
+                                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="bottom"
+                                                                            data-bs-custom-class="custom-tooltip"
+                                                                            data-bs-title="Lorem ipsum dolor sit amet"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="inputText1"
+                                                                    placeholder="Placeholder" />
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                            <!-- text -->
+                                                            <p class="mb-0 pb-6">
+                                                                ☝️Official Address of checkpoint. Displayed to
+                                                                users on quest Quest conditions screen lake
+                                                                official recognizable name of location
+                                                            </p>
+                                                            <!-- select -->
+                                                            <div class="pb-3">
+                                                                <div class="d-flex justify-content-between gap-1">
+                                                                    <div class="d-flex align-items-start gap-1">
+                                                                        <label class="form-label">Radius</label>
+                                                                        <button type="button"
+                                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="bottom"
+                                                                            data-bs-custom-class="custom-tooltip"
+                                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <v-multi-select v-model="value4" :searchable="false"
+                                                                        open-direction="bottom" :options="options"
+                                                                        :single="true"></v-multi-select>
+                                                                </div>
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                            <!-- text -->
+                                                            <p class="mb-0">
+                                                                ☝️Checkpoint Radius. Radius of area where
+                                                                checkin in is available for user
+                                                            </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary">
+                                                                Save
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Item Coordinates -->
+                                        <div class="px-3 py-2 bg-info-200">
+                                            <div class="row gx-4 gy-2">
+                                                <div class="col-lg-6">
+                                                    <span class="text-info-600 pe-1"><small>Address:</small></span>
+                                                    <span class="text-info-900"><small>Shovkovychna St, 24, Kyiv,
+                                                            02000</small></span>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <span class="text-info-600 pe-1"><small>Coordinates:</small></span>
+                                                    <span class="text-info-900"><small>Lng: -0.0921766494496712 Lat:
+                                                            51.50160440542524</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Subtitle h4 and map-->
+                                        <div class="p-3">
+                                            <h3 class="h6">Checkpoins list</h3>
+                                        </div>
+                                        <!-- Map item checkpoint -->
+                                        <div class="qela-map-items">
+                                            <div class="row g-0">
+                                                <div class="col-auto text-center">
+                                                    <span class="form-label">Order</span>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="row g-2">
+                                                        <div class="col-lg-6">
+                                                            <div class="qela-form-labels">
+                                                                <div>
+                                                                    <span class="form-label">
+                                                                        Official Address of checkpoint</span>
+                                                                    <button type="button"
+                                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="bottom"
+                                                                        data-bs-custom-class="custom-tooltip"
+                                                                        data-bs-title="Lorem ipsum dolor sit amet"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg">
+                                                            <div class="qela-form-labels">
+                                                                <div>
+                                                                    <span class="form-label"> Radius</span>
+                                                                    <button type="button"
+                                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                        data-bs-toggle="tooltip"
+                                                                        data-bs-placement="bottom"
+                                                                        data-bs-custom-class="custom-tooltip"
+                                                                        data-bs-title="Lorem ipsum dolor sit amet"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-auto">
+                                                            <span class="form-label">Actions</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0">
+                                                <div class="col-auto text-center">
+                                                    <div style="width: 42px">1</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="row g-2">
+                                                        <div class="col-lg-6">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Placeholder" />
+                                                            <div class="invalid-feedback">Error text</div>
+                                                        </div>
+                                                        <div class="col-lg">
+                                                            <div>
+                                                                <v-multi-select v-model="value4" :searchable="false"
+                                                                    open-direction="bottom" :options="options"
+                                                                    :single="true"></v-multi-select>
+                                                            </div>
+                                                            <div class="invalid-feedback">Error text</div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-auto">
+                                                            <div class="btns-inline" role="group"
+                                                                aria-label="button group">
+                                                                <button type="button"
+                                                                    class="btn btn-outline-info ic-mark ico-right">
+                                                                    Edit coordinates
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-info ico ic-delete"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-0">
+                                                <div class="col-auto text-center">
+                                                    <div style="width: 42px">2</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="row g-2">
+                                                        <div class="col-lg-6">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Placeholder" />
+                                                            <div class="invalid-feedback">Error text</div>
+                                                        </div>
+                                                        <div class="col-lg">
+                                                            <div>
+                                                                <v-multi-select v-model="value4" :searchable="false"
+                                                                    open-direction="bottom" :options="options"
+                                                                    :single="true"></v-multi-select>
+                                                            </div>
+                                                            <div class="invalid-feedback">Error text</div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-auto">
+                                                            <div class="btns-inline" role="group"
+                                                                aria-label="button group">
+                                                                <button type="button"
+                                                                    class="btn btn-outline-info ic-mark ico-right">
+                                                                    Edit coordinates
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-info ico ic-delete"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- tetx non items -->
+                                        <p class="m-0 px-2 py-4 text-center text-info-900">
+                                            There is no any checkpoints yet
+                                        </p>
+                                    </div>
+                                    <!-- ==========Targeting========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="targeting-tab-pane" role="tabpanel"
+                                        aria-labelledby="targeting-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">targeting:</h2>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Conditions========== -->
+                                    <div class="tab-pane flex-grow-1 row g-0 fade" id="conditions-tab-pane"
+                                        role="tabpanel" aria-labelledby="conditions-tab" tabindex="0">
+                                        <div>
+                                            <!-- Subtitle -->
+                                            <div class="p-3 border-bottom qela-rounded-et">
+                                                <h2 class="h5">Quests QR Code</h2>
+                                            </div>
+                                            <div class="col-lg-10 mx-auto p-3 pb-5">
+                                                <div class="qela-organization row g-md-2">
+                                                    <div class="col-auto">
+                                                        <div class="row g-0 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="qela-avatar bg-secondary"
+                                                                    style="--img-size: 100px">
+                                                                    <span class="text-white">J</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <div class="form-label">
+                                                                    Supervisor Photo (optional)
+                                                                </div>
+                                                                <div class="col-btns">
+                                                                    <div class="ql-file small">
+                                                                        <div>
+                                                                            <input id="inputFile" type="file"
+                                                                                class="form-control" /><label
+                                                                                for="inputFile" class="form-label"><span
+                                                                                    class="ic-upload ico-md"></span><small>Upload
+                                                                                    logo</small></label>
+                                                                        </div>
+                                                                        <div class="helper-text">
+                                                                            Allowed JPG, GIF or PNG. Max size of
+                                                                            800K
+                                                                        </div>
+                                                                        <div class="invalid-feedback">
+                                                                            Error text
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Input name -->
+                                                <div class="pt-4">
+                                                    <div class="d-flex justify-content-between gap-1">
+                                                        <div class="d-flex align-items-start gap-1">
+                                                            <label for="inputText12" class="form-label">Supervisor
+                                                                name<span class="text-danger">*</span></label>
+                                                            <button type="button"
+                                                                class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                                data-bs-custom-class="custom-tooltip"
+                                                                data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                        </div>
+                                                        <label class="form-label">0/<span>2500</span></label>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inputText12"
+                                                        placeholder="Name" />
+                                                    <div class="invalid-feedback">Error text</div>
+                                                    <div class="helper-text">Helper text</div>
+                                                </div>
+                                                <!--Input name -->
+                                                <div class="pt-4">
+                                                    <div class="d-flex justify-content-between gap-1">
+                                                        <div class="d-flex align-items-start gap-1">
+                                                            <label for="inputNum" class="form-label">Contact number<span
+                                                                    class="text-danger">*</span></label>
+                                                            <button type="button"
+                                                                class="btn qela-btn-tooltip ic-help-circle-filled"
+                                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                                data-bs-custom-class="custom-tooltip"
+                                                                data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                                        </div>
+                                                        <label class="form-label">0/<span>2500</span></label>
+                                                    </div>
+                                                    <input type="number" class="form-control" id="inputNum"
+                                                        placeholder="+ 38 (067) 000 00 00 " />
+                                                    <div class="invalid-feedback">Error text</div>
+                                                    <div class="helper-text">Helper text</div>
+                                                </div>
+                                                <!-- QR-code -->
+                                                <div class="pt-6">
+                                                    <div class="pt-4 px-3 pb-6 bg-white rounded-2 text-center">
+                                                        <h2 class="py-6 h4">
+                                                            Show this unique QR code to quest’s volunteers
+                                                            to verify their participation 👇
+                                                        </h2>
+                                                        <div class="qela-qr p-4">
+                                                            <img src="img/QRCode.svg" alt="QR Code" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- buttons -->
+                                                <div class="pt-4 d-flex gap-1 justify-content-center flex-wrap">
+                                                    <button type="button" class="btn btn-secondary ic-print ico-right">
+                                                        Print QR Code
+                                                    </button>
+                                                    <button type="button"
+                                                        class="btn btn-secondary ic-download ico-right">
+                                                        Download QR Code
+                                                    </button>
+                                                </div>
+                                                <!-- dialog -->
+                                                <div class="qela-dialog secondary-outline small my-4">
+                                                    <h2>
+                                                        Your supporters will be asked to choose the emoji
+                                                    </h2>
+                                                </div>
+                                                <!-- alert -->
+                                                <div class="alert alert-danger qela-alert fade show" role="alert">
+                                                    <span class="ic-error-warning-fill text-danger"></span>
+                                                    <div class="mb-2">Fill at least one field</div>
+                                                </div>
+                                                <!-- rating -->
+                                                <div class="qela-rating">
+                                                    <div>
+                                                        <img src="img/rating/rating1.svg" width="50" height="50"
+                                                            alt="" />
+                                                        <div>Not satisfied</div>
+                                                    </div>
+                                                    <div>
+                                                        <img src="img/rating/rating2.svg" width="50" height="50"
+                                                            alt="" />
+                                                        <div>Somewhat dissatisfied</div>
+                                                    </div>
+                                                    <div>
+                                                        <img src="img/rating/rating3.svg" width="50" height="50"
+                                                            alt="" />
+                                                        <div>Neutral</div>
+                                                    </div>
+                                                    <div>
+                                                        <img src="img/rating/rating4.svg" width="50" height="50"
+                                                            alt="" />
+                                                        <div>Satisfied</div>
+                                                    </div>
+                                                    <div>
+                                                        <img src="img/rating/rating5.svg" width="50" height="50"
+                                                            alt="" />
+                                                        <div>Extremely happy</div>
+                                                    </div>
+                                                </div>
+                                                <!-- soc item facebook -->
+                                                <div class="py-4">
+                                                    <div class="row g-4">
+                                                        <div class="col-xl-4">
+                                                            <div class="row g-2 align-items-baseline">
+                                                                <div class="col-auto">
+                                                                    <img src="img/icons/fb-circle.svg" width="38"
+                                                                        height="38" alt="#" />
+                                                                </div>
+                                                                <div class="col">Facebook</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8">
+                                                            <div class="input-group has-validation">
+                                                                <button class="btn btn-input ic-link"
+                                                                    type="button"></button>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="facebook.com" aria-label="Password" />
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- soc item Twitter -->
+                                                <div class="pb-4">
+                                                    <div class="row g-4">
+                                                        <div class="col-xl-4">
+                                                            <div class="row g-2 align-items-baseline">
+                                                                <div class="col-auto">
+                                                                    <img src="img/icons/twitter-new-circle.svg"
+                                                                        width="38" height="38" alt="#" />
+                                                                </div>
+                                                                <div class="col">Twitter</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8">
+                                                            <div class="input-group has-validation">
+                                                                <button class="btn btn-input ic-link"
+                                                                    type="button"></button>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="twitter.com" aria-label="Password" />
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- soc item Instagram -->
+                                                <div class="pb-4">
+                                                    <div class="row g-4">
+                                                        <div class="col-xl-4">
+                                                            <div class="row g-2 align-items-baseline">
+                                                                <div class="col-auto">
+                                                                    <img src="img/icons/inst-circle.svg" width="38"
+                                                                        height="38" alt="#" />
+                                                                </div>
+                                                                <div class="col">Instagram</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8">
+                                                            <div class="input-group has-validation">
+                                                                <button class="btn btn-input ic-link"
+                                                                    type="button"></button>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="instagram.com" aria-label="Password" />
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- soc item Other social media #1 -->
+                                                <div class="pb-4">
+                                                    <div class="row g-4">
+                                                        <div class="col-xl-4">
+                                                            <div class="row g-2 align-items-baseline">
+                                                                <div class="col-auto">
+                                                                    <img src="img/icons/link-circle.svg" width="38"
+                                                                        height="38" alt="#" />
+                                                                </div>
+                                                                <div class="col">Other social media #1</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8">
+                                                            <div class="input-group has-validation">
+                                                                <button class="btn btn-input ic-link"
+                                                                    type="button"></button>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Other social media #1"
+                                                                    aria-label="Password" />
+                                                                <button class="btn btn-input ic-delete"
+                                                                    type="button"></button>
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Awards========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="awards-tab-pane" role="tabpanel"
+                                        aria-labelledby="awards-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">Awards</h2>
+                                        </div>
+                                        <div class="col-lg-10 p-3 mx-auto">
+                                            <!-- label -->
+                                            <div class="pt-4 pb-2">
+                                                <div class="pb-2">Vote weight</div>
+                                            </div>
+                                            <!-- item -->
+                                            <div class="bg-primary-100 border-primary border p-3 qela-rounder-12">
+                                                <div class="row g-3 g-lg-4">
+                                                    <div class="col-xl-6">
+                                                        <div>
+                                                            <img src="img/orden-red.svg" width="46" height="46"
+                                                                alt="" />
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-8">
+                                                                <div class="d-flex justify-content-between gap-1">
+                                                                    <div class="d-flex align-items-start gap-1">
+                                                                        <label for="inputNumber" class="form-label">Vote
+                                                                            weight value
+                                                                            <span class="text-danger">*</span></label>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="number" class="form-control text-end"
+                                                                    id="inputNumber" placeholder="0" />
+                                                                <div class="invalid-feedback">Error text</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="m-0">
+                                                            Vote weight is the sum of influence points,
+                                                            determining the supporter's contribution to the
+                                                            organization's development and achieving its
+                                                            goal. After registration, it equals 1, but it
+                                                            can grow to infinity with participation in
+                                                            quests and campaigns.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Talents -->
+                                            <div class="pt-6 pb-2">
+                                                <div class="pb-2">Vote weight</div>
+                                            </div>
+                                            <!-- text -->
+                                            <p>
+                                                Qela allows you to influence the organization's
+                                                activities and develop the talents necessary for every
+                                                active member of civil society. The quests you go
+                                                through in Qela are aimed at acquiring one of those
+                                                skills:
+                                            </p>
+                                            <!-- awards item -->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent red">Fundraising</div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item violet-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent violet">
+                                                                    Recruiting
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item green-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent green">Endurance</div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item orange-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent orange">
+                                                                    Eloquence
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item lightgreen-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent lightgreen">
+                                                                    Determination
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item lightblue-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent lightblue">
+                                                                    Originality
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item blue-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent blue">Management</div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- awards item pink-->
+                                            <div class="py-3 border-bottom">
+                                                <div class="row g-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="row g-2">
+                                                            <div class="col-sm-6">
+                                                                <div class="qela-telent pink">Savvy</div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group has-validation">
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-minus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <input type="number" class="form-control text-end"
+                                                                        placeholder="0" aria-label="Text"
+                                                                        id="inputNumber2"
+                                                                        aria-describedby="button-addon3" />
+                                                                    <button
+                                                                        class="btn btn-outline-light btn-input ico-right ic-plus"
+                                                                        type="button" id="button-addon3"></button>
+                                                                    <div class="invalid-feedback">
+                                                                        Error text
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <p class="mb-0">
+                                                            Fundraising — the ability to attract material
+                                                            resources for the activities of the organization
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Notifications========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="notifications-tab-pane" role="tabpanel"
+                                        aria-labelledby="notifications-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">Notifications</h2>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Analytics========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="analytics-tab-pane" role="tabpanel"
+                                        aria-labelledby="analytics-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">Analytics</h2>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Publishing========== -->
+                                    <div class="tab-pane flex-grow-1 fade" id="publishing-tab-pane" role="tabpanel"
+                                        aria-labelledby="publishing-tab" tabindex="0">
+                                        <!-- Subtitle -->
+                                        <div class="p-3 border-bottom qela-rounded-et">
+                                            <h2 class="h5">Publishing</h2>
+                                        </div>
+                                        <div class="col-lg-10 mx-auto">
+                                            <div class="pt-6 p-3 text-center">
+                                                <h2 class="pb-5 h4">😊 You’v almost finished.</h2>
+                                                <div class="d-inline-flex align-items-center gap-1">
+                                                    <span>After publishing Your Quest well start:</span>
+                                                    <span class="badge bg-info-200 p-1 text-info-900 fs-6">3 December at
+                                                        3 PM
+                                                    </span>
+                                                </div>
+                                                <div class="pt-6 pb-4">
+                                                    <button type="button" class="btn btn-primary">
+                                                        Publish Now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="pt-6 p-3 text-center">
+                                                <h2 class="pb-5 h4">
+                                                    ❗️ You have some issues in next steps: General,
+                                                    Awards
+                                                </h2>
+                                                <p class="m-auto" style="max-width: 400px">
+                                                    Check steps and fill each one required field
+                                                    properly. Then you well be allowed to publish quest
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ==========Buttons Prev Next============ -->
+                                    <div class="p-3 d-lg-inline-flex d-none w-100 justify-content-between">
+                                        <button type="button" class="btn btn-light ic-chevron-left ico-left">
+                                            Prev
+                                        </button>
+                                        <button type="button" class="btn btn-primary ic-chevron-right ico-right">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======= -->
+                    <div class="col-lg-3">
+                        <div class="btn-group border mb-2 w-100">
+                            <button type="button" class="btn btn-info ic-chevron-left ico-left">
+                                Prev
+                            </button>
+                            <button type="button" class="btn btn-primary ic-chevron-right ico-right">
+                                Next
+                            </button>
+                        </div>
+                        <div class="border bg-white rounded-2">
+                            <div class="text-info-600 p-3 p-sm-4">
+                                <small>Status: <span class="text-info-900">New</span></small>
+                            </div>
+                            <hr />
+                            <div class="p-3 p-sm-4 d-flex flex-column gap-2">
+                                <button type="button" class="btn btn-info">
+                                    Save as draft
+                                </button>
+                                <button type="button" class="btn btn-info">Cancel</button>
+                            </div>
+                            <hr />
+                            <div class="p-3">
+                                <div class="alert alert-warning qela-alert fade show" role="alert">
+                                    <span class="ic-error-warning-fill text-warning"></span>
+                                    <div class="mb-2">
+                                        Alert! Editing will not be possible after publication
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+        let app = Vue.createApp({
+            components: {
+                "v-date-picker": VueDatePicker,
+                "v-multi-select": VueMultiselect.default,
+            },
+            data() {
+                return {
+                    date: [new Date(), new Date()],
+                    value1: "",
+                    value2: "",
+                    value3: "",
+                    value4: "",
+                    options: [
+                        "Пункт 1 sadafdf",
+                        "Пункт 2",
+                        "Пункт 3",
+                        "Пункт 4",
+                        "Пункт 1 assadafdf",
+                        "Пункт 2sades",
+                        "Пункт 3sd",
+                        "Пункт 4sd",
+                    ],
+                };
+            },
+            methods: {
+                click() {
+                    alert(1);
+                    this.message += " clicked!";
+                },
+            },
+        });
+        console.dir(app);
+        app.mount("#app");
+    </script>
+    <!-- =========================== -->
+    @@include('_js.html',{})
+</body>
+
+</html>

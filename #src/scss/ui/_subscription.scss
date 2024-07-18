@@ -1,0 +1,53 @@
+.qela-subscription {
+    border-color: $info-400;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: $info-800;
+    min-height: 245px;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:
+        border-color 0.3s ease-in-out 0s,
+        background-color 0.3s ease-in-out 0s;
+    background-color: $white;
+
+    .card-header {
+        padding: 0.5rem 1rem;
+        border-radius: 0;
+    }
+    .card-header,
+    .card-footer {
+        border: 0;
+    }
+    .card-body,
+    .card-footer {
+        background-color: transparent;
+    }
+    .card-body {
+        padding: 1.5rem 1rem;
+    }
+    .card-footer {
+        padding: 1rem 1rem 0 1rem;
+
+        [class*="ic-"] {
+            padding-bottom: 0.5rem;
+            &::before {
+                font-size: 20px;
+                color: $secondary;
+            }
+        }
+    }
+}
+.qela-price {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-500;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 120%;
+    gap: 2px;
+    transition: color 0.3s ease-out 0s;
+}

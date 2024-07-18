@@ -1,0 +1,78 @@
+.qela-alert {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    border-width: 1px;
+    border-style: solid;
+    &.alert {
+        span {
+            &[class*="ic-"] {
+                position: absolute;
+                left: 16px;
+                top: 1rem;
+                &::before {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+    &.custom {
+        text-align: center;
+        &.alert-secondary {
+            border-color: transparent;
+        }
+        span {
+            &[class*="ic-"] {
+                position: static;
+                padding-bottom: 0.5rem;
+                &::before {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+    &.alert-secondary {
+        background-color: $secondary-200;
+        border-color: $secondary-400;
+    }
+    &.alert-danger {
+        background-color: $danger-200;
+        border-color: $danger-400;
+    }
+
+    &.alert-warning {
+        background-color: $warning-200;
+        border-color: $warning-400;
+    }
+    &.alert-info {
+        background-color: $info-100;
+        border-color: $info-400;
+    }
+    &.alert-success {
+        background-color: $success-100;
+        border-color: $success-400;
+    }
+
+    &.small {
+        padding: 0.5rem 2.25rem;
+
+        span {
+            &[class^="ic-"],
+            [class*="ic-"] {
+                left: 12px;
+                top: 0.5rem;
+            }
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        opacity: 1;
+    }
+}

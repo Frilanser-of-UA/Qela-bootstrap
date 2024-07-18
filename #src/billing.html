@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ua">
+  @@include('_head.html',{ "title":"Voting decision" })
+
+  <body class="qela-body ps-0">
+    @@include('./components/_header-logo.html',{ "title":"Voting decision" })
+    <main class="qela-main py-3">
+      <div class="container-xxl">
+        <div class="qela-page qela-wrap">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="alert alert-danger qela-alert fade show">
+                <span class="ic-error-warning-fill text-danger"></span>
+                <div>
+                  Alert! Your account does not have enough money to consume the
+                  service. Top up your account to continue using
+                  <a href="#" class="text-danger">Recharge</a>
+                </div>
+              </div>
+            </div>
+            <!-- left -->
+            <div class="col-lg-4">
+              <div class="qela-start">
+                <!-- block whtith avatar + name-->
+                <div class="position-relative">
+                  <button
+                    type="button"
+                    class="btn btn-info ico-right ic-edit position-absolute end-0 top-0 me-3 mt-3"
+                  >
+                    Edit
+                  </button>
+                  <div
+                    class="qela-avatar ql-ibg online"
+                    style="--img-size: 100px"
+                  >
+                    <img
+                      src="img/avatar.jpg"
+                      width="100"
+                      height="100"
+                      alt="#"
+                    />
+                  </div>
+                  <div class="h4 text-info-800">Gary Simon</div>
+                  <span class="qela-status-badge secondary ic-key mt-3"
+                    >superadmin</span
+                  >
+                </div>
+                <!-- list -->
+                <ul class="list-group list-group-flush qela-flush">
+                  <li class="list-group-item">
+                    <span>User Name:</span
+                    ><span class="word-break">alex.kukhtin@gmail.com</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Organization:</span
+                    ><span>Unity for Planet, Another one Organization</span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <span>Phone Number:</span><span>+38 067 000 00 00</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Date Created:</span><span>2023-03-01, 09:40:23</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Date last visit:</span
+                    ><span>2023-03-01, 09:40:23</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="col-lg-8">
+              <div class="qela-end">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link">Roles</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link">Pricing Plans</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active">Billing</button>
+                    <span
+                      class="badge rounded-pill text-bg-danger qela-badge small"
+                      >!</span
+                    >
+                  </li>
+                </ul>
+                <div class="py-4 px-3">
+                  <div class="row g-3">
+                    <div class="col-lg-8">
+                      <div class="p-3 border rounded">
+                        <div class="row justify-content-center">
+                          <div class="col-lg-10">
+                            <!-- balance -->
+                            <div class="d-flex justify-content-end gap-2 pb-3">
+                              <span class="h2">Balance:</span>
+                              <span class="h2 text-danger">-$10. 00</span>
+                            </div>
+                            <!-- input -->
+                            <div class="py-2">
+                              <div>
+                                <div class="qela-form-labels">
+                                  <div>
+                                    <label for="inputText2" class="form-label"
+                                      >Сума поповнення</label
+                                    >
+                                  </div>
+                                </div>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputText2"
+                                  placeholder="Name"
+                                />
+                                <div class="invalid-feedback">Error text</div>
+                              </div>
+                            </div>
+                            <!-- btns -->
+                            <div class="d-grid gap-2 py-4">
+                              <div class="text-center text-info-900">
+                                Pay with
+                              </div>
+                              <button
+                                class="btn btn-secondary ico-left ic-text-doc"
+                                type="button"
+                              >
+                                Invoice
+                              </button>
+                              <button
+                                class="btn btn-secondary ico-left ic-credit-card disabled"
+                                type="button"
+                              >
+                                Card
+                              </button>
+                            </div>
+                            <!-- credit logos -->
+                            <!-- <div class="px-2 d-flex gap-1 flex-wrap justify-content-center">
+                                                        <img src="img/credits-logo/PayPal.svg" alt="PayPal">
+                                                        <img src="img/credits-logo/Stripe.svg" alt="Stripe">
+                                                        <img src="img/credits-logo/GooglePay.svg" alt="GooglePay">
+                                                        <img src="img/credits-logo/ApplePay.svg" alt="ApplePay">
+                                                        <img src="img/credits-logo/Mastercard.svg" alt="Mastercard">
+                                                        <img src="img/credits-logo/Discover.svg" alt="Discover">
+                                                        <img src="img/credits-logo/Amex.svg" alt="Amex">
+                                                        <img src="img/credits-logo/Visa.svg" alt="Visa">
+                                                    </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div
+                        class="p-3 border rounded bg-body h-100 d-flex flex-column"
+                      >
+                        <h5 class="pb-3">Your Pricing Plan</h5>
+                        <ul
+                          class="list-group list-group-flush qela-plan flex-grow-1"
+                        >
+                          <li class="list-group-item bg-body">
+                            <span class="flex-grow-1 fw-semibold">
+                              <small>101 - 1 000 users</small>
+                            </span>
+                            <span class="text-end">
+                              <small class="fw-semibold"> $350.00</small><br />
+                              <small> /month</small></span
+                            >
+                          </li>
+                          <li class="list-group-item bg-body">
+                            <span class="flex-grow-1"
+                              ><small class="fw-semibold">Total</small>
+                            </span>
+                            <span class="text-end"
+                              ><small class="fw-semibold"> $950.00</small>
+                            </span>
+                          </li>
+                        </ul>
+                        <ul class="list-group list-group-flush qela-plan">
+                          <li class="list-group-item bg-body">
+                            <span class="flex-grow-1"
+                              ><small class="fw-semibold">Next Billing</small>
+                            </span>
+                            <span class="text-end"
+                              ><small class="fw-semibold"> 3/5/2024</small>
+                            </span>
+                          </li>
+                          <li class="list-group-item bg-body">
+                            <span class="flex-grow-1"
+                              ><small>You joined Qela</small>
+                            </span>
+                            <span class="text-end"
+                              ><small> 12/5/2023</small>
+                            </span>
+                          </li>
+                        </ul>
+                        <!-- <div class="p-3 flex-grow-1 d-flex align-items-end">
+                                                <div class="text-secondary fw-semibold text-center w-100">details
+                                                </div>
+                                            </div> -->
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-flex justify-content-between pb-3">
+                        <span class="fw-semibold">Payment details</span>
+                        <span class="fw-semibold text-secondary">more</span>
+                      </div>
+                      <div class="table-responsive table-qela">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th class="ps-0">Date</th>
+                              <th>Info</th>
+                              <th>Period</th>
+                              <th class="text-end">Dropped</th>
+                              <th class="text-end">Paid</th>
+                              <th class="pe-0">Method</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="ps-0">
+                                <span>1.02.2024 12:30</span>
+                              </td>
+                              <td>
+                                <span
+                                  >Нараховано за
+                                  <a
+                                    class="text-decoration-none fw-semibold"
+                                    href="#"
+                                    >період</a
+                                  ></span
+                                >
+                              </td>
+                              <td>5.01.2024 - 4.02.2024</td>
+                              <td class="text-end"></td>
+                              <td class="text-success-500 text-end">
+                                2 100. 00
+                              </td>
+                              <td>
+                                <img
+                                  src="img/credits-logo/Mastercard.svg"
+                                  class="me-2"
+                                  alt="Mastercard"
+                                />
+                                <span>44 ....3644</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                colspan="6"
+                                class="text-center py-4 ps-0 fs-6"
+                              >
+                                There is no data yet
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"
+    ></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+      let app = Vue.createApp({
+        components: {
+          "v-date-picker": VueDatePicker,
+          "v-multi-select": VueMultiselect.default,
+        },
+        data() {
+          return {
+            date: [new Date(), new Date()],
+            value1: "",
+            value2: "",
+            value3: "",
+            value4: "",
+            options: [
+              "Пункт 1 sadafdf",
+              "Пункт 2",
+              "Пункт 3",
+              "Пункт 4",
+              "Пункт 1 assadafdf",
+              "Пункт 2sades",
+              "Пункт 3sd",
+              "Пункт 4sd",
+            ],
+          };
+        },
+        methods: {
+          click() {
+            alert(1);
+            this.message += " clicked!";
+          },
+        },
+      });
+      console.dir(app);
+      app.mount("#app");
+    </script>
+    <!-- =========================== -->
+    @@include('_js.html',{})
+  </body>
+</html>

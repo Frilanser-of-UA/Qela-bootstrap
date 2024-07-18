@@ -1,0 +1,12 @@
+.qela-orden {
+	display: flex;
+	align-items: flex-end;
+	padding: 1rem;
+	border-radius: 12px;
+	border: 1px solid $gray-400;
+
+	p {
+		margin-left: 1rem;
+		margin-bottom: 0;
+	}
+}
