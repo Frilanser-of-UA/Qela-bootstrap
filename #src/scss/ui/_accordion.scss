@@ -70,4 +70,14 @@
             }
         }
     }
+    .qela-icon {
+        [class*="ic-"] {
+            color: $info;
+            background-color: $info-100;
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+    }
 }
