@@ -1,385 +1,397 @@
 .form-control {
-    @media (any-hover: hover) {
-        &:hover {
-            border-color: $secondary;
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: $secondary;
 
-            &:focus {
-                border-color: $secondary;
-            }
-        }
-    }
+			&:focus {
+				border-color: $secondary;
+			}
+		}
+	}
 
-    &:disabled {
-        @media (any-hover: hover) {
-            &:hover {
-                border-color: $gray-400;
-            }
-        }
-    }
+	&:disabled {
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $gray-400;
+			}
+		}
+	}
 
-    &.is-invalid {
-        background-image: none;
-        padding-right: 1rem;
+	&.is-invalid {
+		background-image: none;
+		padding-right: 1rem;
 
-        &:hover {
-            border-color: $danger;
-        }
+		&:hover {
+			border-color: $danger;
+		}
 
-        & ~ .btn-input {
-            &:hover {
-                color: $black;
-                border-color: $gray-400;
-            }
+		&~.btn-input {
+			&:hover {
+				color: $black;
+				border-color: $gray-400;
+			}
 
-            &:active {
-                color: $black !important;
-                border-color: $gray-400 !important;
-            }
-        }
+			&:active {
+				color: $black !important;
+				border-color: $gray-400 !important;
+			}
+		}
 
-        & ~ .helper-text {
-            display: none;
-        }
-    }
+		&~.helper-text {
+			display: none;
+		}
+	}
 }
+
 textarea {
-    color: $info-700;
+	color: $info-700;
 }
-.input-group
-    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(
-        .invalid-feedback
-    ) {
-    margin-left: 0px;
+
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+	margin-left: 0px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 .helper-text {
-    display: block;
-    color: $gray-600;
-    margin-top: 4px;
-    width: 100%;
-    font-size: 0.9375rem;
+	display: block;
+	color: $gray-600;
+	margin-top: 4px;
+	width: 100%;
+	font-size: 0.9375rem;
 }
 
 .invalid-feedback {
-    font-size: $font-size-sm;
+	font-size: $font-size-sm;
 }
 
 .btn-input {
-    padding: 4px 8px;
-    border-color: $gray-400;
-    background: $white;
+	padding: 4px 8px;
+	border-color: $gray-400;
+	background: $white;
 
-    &::before {
-        font-size: 18px;
-    }
+	&::before {
+		font-size: 18px;
+	}
 
-    &:hover {
-        background: $white;
-        border-color: $gray-600;
-        color: $gray-600;
-    }
+	&:hover {
+		background: $white;
+		border-color: $gray-600;
+		color: $gray-600;
+	}
 
-    &:active {
-        color: $gray-600 !important;
-        border-color: $gray-600 !important;
-        background: $white !important;
-    }
+	&:active {
+		color: $gray-600 !important;
+		border-color: $gray-600 !important;
+		background: $white !important;
+	}
 
-    &:disabled {
-        border-color: $gray-400;
-    }
+	&:disabled {
+		border-color: $gray-400;
+	}
 }
 
 .has-validation {
-    &.is-invalid {
-        & ~ .helper-text {
-            display: none;
-        }
-    }
+	&.is-invalid {
+		&~.helper-text {
+			display: none;
+		}
+	}
 }
 
 .required {
-    &.form-label::after {
-        content: "*";
-        color: $danger;
-        padding-left: 4px;
-    }
+	&.form-label::after {
+		content: "*";
+		color: $danger;
+		padding-left: 4px;
+	}
 }
 
 .qela-form-labels {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-    > div {
-        display: flex;
-        align-items: baseline;
-        margin-right: 4px;
+	>div {
+		display: flex;
+		align-items: baseline;
+		margin-right: 4px;
 
-        .qela-btn-tooltip {
-            margin-left: 4px;
-        }
-    }
-    .form-label {
-        &:last-child {
-            color: $gray-700;
-            font-weight: 400;
-        }
-    }
+		.qela-btn-tooltip {
+			margin-left: 4px;
+		}
+	}
+
+	.form-label {
+		&:last-child {
+			color: $gray-700;
+			font-weight: 400;
+		}
+	}
 }
 
 .form-range {
-    &:disabled {
-        &::-webkit-slider-runnable-track {
-            background: $input-disabled-bg;
-        }
+	&:disabled {
+		&::-webkit-slider-runnable-track {
+			background: $input-disabled-bg;
+		}
 
-        &::-moz-range-track {
-            background: $input-disabled-bg;
-        }
+		&::-moz-range-track {
+			background: $input-disabled-bg;
+		}
 
-        &::-ms-track {
-            background: $input-disabled-bg;
-        }
+		&::-ms-track {
+			background: $input-disabled-bg;
+		}
 
-        &::-ms-fill-lower {
-            background: $input-disabled-bg;
-        }
+		&::-ms-fill-lower {
+			background: $input-disabled-bg;
+		}
 
-        &::-ms-fill-upper {
-            background: $input-disabled-bg;
-        }
-    }
+		&::-ms-fill-upper {
+			background: $input-disabled-bg;
+		}
+	}
 }
 
 .qela-file {
-    font-size: 14px;
-    label {
-        height: 140px;
-        width: 100%;
-        background-color: $input-bg;
-        padding: 0.75rem $input-padding-x;
-        border-radius: $input-border-radius;
-        border: $input-border-width solid $input-border-color;
-        margin: 0;
-        transition: border-color 0.2s ease 0s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
+	font-size: 14px;
 
-    .form-control {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        font-size: 0;
-        z-index: 1;
-        &:hover {
-            & ~ label {
-                border-color: $gray-600;
-            }
-        }
+	label {
+		height: 140px;
+		width: 100%;
+		background-color: $input-bg;
+		padding: 0.75rem $input-padding-x;
+		border-radius: $input-border-radius;
+		border: $input-border-width solid $input-border-color;
+		margin: 0;
+		transition: border-color 0.2s ease 0s;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
 
-        &:focus {
-            & ~ label {
-                border-color: $input-focus-border-color;
-                box-shadow: $input-focus-box-shadow;
-            }
-        }
+	.form-control {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		font-size: 0;
+		z-index: 1;
 
-        &:disabled {
-            cursor: auto;
+		&:hover {
+			&~label {
+				border-color: $gray-600;
+			}
+		}
 
-            & ~ label {
-                color: $input-disabled-color;
-                background-color: $input-disabled-bg;
-                border-color: $input-disabled-border-color;
-                opacity: 1;
-            }
-        }
+		&:focus {
+			&~label {
+				border-color: $input-focus-border-color;
+				box-shadow: $input-focus-box-shadow;
+			}
+		}
 
-        &.is-invalid {
-            & ~ label {
-                border-color: $danger;
-            }
+		&:disabled {
+			cursor: auto;
 
-            &:focus {
-                & ~ label {
-                    box-shadow: 0 0 0 0.125rem rgba($danger, 0.3);
-                }
-            }
-        }
-    }
+			&~label {
+				color: $input-disabled-color;
+				background-color: $input-disabled-bg;
+				border-color: $input-disabled-border-color;
+				opacity: 1;
+			}
+		}
 
-    &.has-validation {
-        .helper-text {
-            display: none;
-        }
+		&.is-invalid {
+			&~label {
+				border-color: $danger;
+			}
 
-        .invalid-feedback {
-            display: block;
-        }
-    }
+			&:focus {
+				&~label {
+					box-shadow: 0 0 0 0.125rem rgba($danger, 0.3);
+				}
+			}
+		}
+	}
 
-    &.filled {
-        display: none;
+	&.has-validation {
+		.helper-text {
+			display: none;
+		}
 
-        & ~ .qela-preview {
-            display: flex;
-        }
-    }
+		.invalid-feedback {
+			display: block;
+		}
+	}
 
-    &.small {
-        font-size: 14px;
-        div {
-            &:first-child {
-                position: relative;
-                display: inline-block;
-            }
-        }
+	&.filled {
+		display: none;
 
-        label {
-            flex-direction: row;
-            background-color: $body-bg;
-            height: auto;
-            width: auto;
-            gap: 0.25rem;
-            padding: 0.25rem 0.5rem;
-        }
+		&~.qela-preview {
+			display: flex;
+		}
+	}
 
-        [class^="ic-"],
-        [class*="ic-"] {
-            color: $black;
-        }
+	&.small {
+		font-size: 14px;
 
-        small {
-            font-weight: 500;
-            color: $black;
-        }
-    }
-    &.add-img {
-        label {
-            padding: 0;
-            border: none;
-            background-color: transparent;
-            border-radius: 50%;
-            height: auto;
-        }
-        .qela-avatar {
-            margin-right: 0;
-            background-color: $white;
-            border: 1px solid $gray-200;
-        }
-    }
+		div {
+			&:first-child {
+				position: relative;
+				display: inline-block;
+			}
+		}
+
+		label {
+			flex-direction: row;
+			background-color: $body-bg;
+			height: auto;
+			width: auto;
+			gap: 0.25rem;
+			padding: 0.25rem 0.5rem;
+		}
+
+		[class^="ic-"],
+		[class*="ic-"] {
+			color: $black;
+		}
+
+		small {
+			font-weight: 500;
+			color: $black;
+		}
+	}
+
+	&.add-img {
+		label {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			border-radius: 50%;
+			height: auto;
+		}
+
+		.qela-avatar {
+			margin-right: 0;
+			background-color: $white;
+			border: 1px solid $gray-200;
+		}
+	}
 }
 
 .qela-preview {
-    display: none;
-    gap: 0.5rem;
-    font-size: 14px;
-    @include media-breakpoint-down(sm) {
-        flex-direction: column;
-    }
-    > div {
-        height: 70px;
-        &:first-child {
-            background-color: $white;
-            border-radius: 0.375rem;
-            overflow: hidden;
-            border: 1px solid $gray-400;
-            &[class*="ic-"] {
-                width: 70px;
-                height: 100%;
-                border-right: 1px solid $gray-400;
-                font-size: 24px;
-                color: $gray-400;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            img {
-                aspect-ratio: 1/1;
-                max-width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-    .btn {
-        &.ico-left {
-            padding-top: 7.5px;
-            padding-bottom: 7.5px;
-        }
-    }
+	display: none;
+	gap: 0.5rem;
+	font-size: 14px;
+
+	@include media-breakpoint-down(sm) {
+		flex-direction: column;
+	}
+
+	>div {
+		height: 70px;
+
+		&:first-child {
+			display: flex;
+			background-color: $white;
+			border-radius: 0.375rem;
+			overflow: hidden;
+			border: 1px solid $gray-400;
+
+			[class*="ic-"] {
+				width: 70px;
+				height: 100%;
+				border-right: 1px solid $gray-400;
+				font-size: 24px;
+				color: $gray-400;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			img {
+				aspect-ratio: 1/1;
+				max-width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.btn {
+		&.ico-left {
+			padding-top: 7.5px;
+			padding-bottom: 7.5px;
+		}
+	}
 }
 
 .qela-input-group {
-    .form-control {
-        text-align: right;
-        background:
-            url("../img/icons/crossed-round.svg") calc(100% - 12px) center/18px 18px no-repeat,
-            $white;
-        padding-right: 38px;
-        position: relative;
-        z-index: 5;
+	.form-control {
+		text-align: right;
+		background:
+			url("../img/icons/crossed-round.svg") calc(100% - 12px) center/18px 18px no-repeat,
+			$white;
+		padding-right: 38px;
+		position: relative;
+		z-index: 5;
 
-        &.success {
-            background:
-                url("../img/icons/arrow-big-up.svg") calc(100% - 12px) center/18px 18px no-repeat,
-                $white;
-            border-color: $success-600;
-            border-color: $success-600;
-            box-shadow:
-                2px 2px 0px 0px rgba($success, 0.3),
-                -2px -2px 0px 0px rgba($success, 0.3);
+		&.success {
+			background:
+				url("../img/icons/arrow-big-up.svg") calc(100% - 12px) center/18px 18px no-repeat,
+				$white;
+			border-color: $success-600;
+			border-color: $success-600;
+			box-shadow:
+				2px 2px 0px 0px rgba($success, 0.3),
+				-2px -2px 0px 0px rgba($success, 0.3);
 
-            &:hover {
-                border-color: $success-600;
-            }
+			&:hover {
+				border-color: $success-600;
+			}
 
-            &:focus {
-                border-color: $success-600;
-                box-shadow:
-                    2px 2px 0px 0px rgba($success, 0.3),
-                    -2px -2px 0px 0px rgba($success, 0.3);
-            }
-        }
+			&:focus {
+				border-color: $success-600;
+				box-shadow:
+					2px 2px 0px 0px rgba($success, 0.3),
+					-2px -2px 0px 0px rgba($success, 0.3);
+			}
+		}
 
-        &.danger {
-            background:
-                url("../img/icons/arrow-big-down.svg") calc(100% - 12px) center/18px 18px no-repeat,
-                $white;
-            border-color: $danger-600;
-            box-shadow:
-                2px 2px 0px 0px rgba($danger, 0.3),
-                -2px -2px 0px 0px rgba($danger, 0.3);
-            border-color: $danger-600;
+		&.danger {
+			background:
+				url("../img/icons/arrow-big-down.svg") calc(100% - 12px) center/18px 18px no-repeat,
+				$white;
+			border-color: $danger-600;
+			box-shadow:
+				2px 2px 0px 0px rgba($danger, 0.3),
+				-2px -2px 0px 0px rgba($danger, 0.3);
+			border-color: $danger-600;
 
-            &:hover {
-                border-color: $danger-600;
-            }
+			&:hover {
+				border-color: $danger-600;
+			}
 
-            &:focus {
-                border-color: $danger-600;
-                box-shadow:
-                    2px 2px 0px 0px rgba($danger, 0.3),
-                    -2px -2px 0px 0px rgba($danger, 0.3);
-            }
-        }
+			&:focus {
+				border-color: $danger-600;
+				box-shadow:
+					2px 2px 0px 0px rgba($danger, 0.3),
+					-2px -2px 0px 0px rgba($danger, 0.3);
+			}
+		}
 
-        &.active {
-            box-shadow:
-                2px 2px 0px 0px rgba(145, 136, 255, 0.3),
-                -2px -2px 0px 0px rgba(145, 136, 255, 0.3);
-        }
-    }
+		&.active {
+			box-shadow:
+				2px 2px 0px 0px rgba(145, 136, 255, 0.3),
+				-2px -2px 0px 0px rgba(145, 136, 255, 0.3);
+		}
+	}
 }

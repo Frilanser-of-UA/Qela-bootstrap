@@ -3,654 +3,654 @@
 @@include('_head.html',{ "title":"Vertical tabs" })
 
 <body class="qela-body ps-0">
-    @@include('./components/_header-logo.html',{ "title":"Edit - kurylo.kon@gmail.cofdsfdfsdfsdfsm" })
-    <div id="app" v-cloak>
-        <main>
-            <!-- =====================Список користувачів==================== -->
-            <div class="container">
-                <div class="row gx-3 my-3">
-                    <div class="col-lg-9 mb-lg-0 mb-3">
-                        <div class="qela-tab border rounded-2">
-                            <ul class="nav nav-tabs w-auto flex-md-column py-1 py-mb-3 px-2" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-body" id="home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#home-tab-pane" type="button" role="tab"
-                                        aria-controls="home-tab-pane" aria-selected="true">
-                                        General
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-body active" id="steps-tab" data-bs-toggle="tab"
-                                        data-bs-target="#steps-tab-pane" type="button" role="tab"
-                                        aria-controls="steps-tab-pane" aria-selected="false">
-                                        Steps
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-body" id="awards-tab" data-bs-toggle="tab"
-                                        data-bs-target="#awards-tab-pane" type="button" role="tab"
-                                        aria-controls="awards-tab-pane" aria-selected="false">
-                                        Awards
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-body" id="notifications-tab"
-                                        data-bs-toggle="tab" data-bs-target="#notifications-tab-pane" type="button"
-                                        role="tab" aria-controls="notifications-tab-pane" aria-selected="false">
-                                        Notifications
-                                    </button>
-                                </li>
-                                <li class="my-1">
-                                    <hr />
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-body" id="analytics-tab" data-bs-toggle="tab"
-                                        data-bs-target="#analytics-tab-pane" type="button" role="tab"
-                                        aria-controls="analytics-tab-pane" aria-selected="false">
-                                        Analytics
-                                    </button>
-                                </li>
-                            </ul>
-                            <div class="tab-content w-100" id="myTabContent">
-                                <!-- ==========General========== -->
-                                <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                                    tabindex="0">
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom qela-rounded-et">
-                                        <h2 class="h5">General</h2>
-                                    </div>
-                                    <!-- Badge -->
-                                    <div class="px-3 pt-3 d-flex flex-wrap gap-1">
-                                        <span
-                                            class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Quest</small></span>
-                                        <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Watch
-                                                the video</small></span>
-                                        <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Type:
-                                                In-app</small></span>
-                                    </div>
-                                    <!-- Quest name -->
-                                    <div class="pt-4 px-3">
-                                        <div class="d-flex justify-content-between gap-1">
-                                            <div class="d-flex align-items-start gap-1">
-                                                <label for="inputText1" class="form-label">Quest Name
-                                                    <span class="text-danger">*</span></label>
-                                                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    data-bs-custom-class="custom-tooltip"
-                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                            </div>
-                                            <label class="form-label">0/<span>2500</span></label>
-                                        </div>
-                                        <input type="text" class="form-control" id="inputText1" placeholder="Name" />
-                                        <div class="invalid-feedback">Error text</div>
-                                    </div>
-                                    <!-- Selects -->
-                                    <div class="pt-4 px-3">
-                                        <div class="row gx-2">
-                                            <div class="col-md-6">
-                                                <div class="d-flex justify-content-between gap-1">
-                                                    <div class="d-flex align-items-start gap-1">
-                                                        <label class="form-label">Campaign<span
-                                                                class="text-danger">*</span></label>
-                                                        <button type="button"
-                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                            data-bs-custom-class="custom-tooltip"
-                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <v-multi-select v-model="value4" :searchable="false"
-                                                        open-direction="bottom" :options="options"
-                                                        :single="true"></v-multi-select>
-                                                </div>
-                                                <div class="invalid-feedback">Error text</div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="d-flex justify-content-between gap-1">
-                                                    <div class="d-flex align-items-start gap-1">
-                                                        <label class="form-label">Chain <span
-                                                                class="text-danger">*</span></label>
-                                                        <button type="button"
-                                                            class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                            data-bs-custom-class="custom-tooltip"
-                                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <v-multi-select v-model="value4" :searchable="false"
-                                                        open-direction="bottom" :options="options"
-                                                        :single="true"></v-multi-select>
-                                                </div>
-                                                <div class="invalid-feedback">Error text</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Input type file -->
-                                    <div class="pt-4 px-3">
-                                        <div class="d-flex justify-content-between gap-1">
-                                            <div class="d-flex align-items-start gap-1">
-                                                <label for="inputFile" class="form-label">Label <span
-                                                        class="text-danger">*</span></label>
-                                                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    data-bs-custom-class="custom-tooltip"
-                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                            </div>
-                                            <label class="form-label">hint text</label>
-                                        </div>
-                                        <div class="ql-file">
-                                            <div class="position-relative">
-                                                <input id="inputFile" type="file" class="form-control" />
-                                                <label for="2" class="form-label gap-2">
-                                                    <span class="ic-img-plus text-info-500"></span>
-                                                    <span class="text-info-900">Click to browse for file</span>
-                                                    <span class="text-info-600">️Aspect ratio 16/9, max width 1000px,
-                                                        max weight
-                                                        2 Mb</span>
-                                                </label>
-                                            </div>
-                                            <div class="helper-text">Helper text</div>
-                                            <div class="invalid-feedback">Error text</div>
-                                        </div>
-                                    </div>
-                                    <!-- Input group -->
-                                    <div class="pt-4 px-3">
-                                        <div>
-                                            <div class="d-flex justify-content-between gap-1">
-                                                <div class="d-flex align-items-start gap-1">
-                                                    <label for="inputText5" class="form-label">Maine video
-                                                        <span class="text-danger">*</span></label>
-                                                    <button type="button"
-                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        data-bs-custom-class="custom-tooltip"
-                                                        data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                </div>
-                                            </div>
-                                            <div class="input-group has-validation">
-                                                <button class="btn btn-input ic-link" type="button"
-                                                    id="button-addon3"></button>
-                                                <input type="text" class="form-control" placeholder="Placeholder"
-                                                    aria-label="Text" id="inputText5"
-                                                    aria-describedby="button-addon3" />
-                                                <button class="btn btn-input" type="button" id="button-addon3">
-                                                    Paste
-                                                </button>
-                                                <div class="invalid-feedback">Error text</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- datapiker -->
-                                    <div class="py-4 px-3">
-                                        <div class="d-flex justify-content-between gap-1">
-                                            <div class="d-flex align-items-start gap-1">
-                                                <label class="form-label">Time<span class="text-danger">*</span></label>
-                                                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    data-bs-custom-class="custom-tooltip"
-                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                            </div>
-                                            <label class="form-label">hint text</label>
-                                        </div>
-                                        <div>
-                                            <v-date-picker v-model="date" range multi-calendars />
-                                        </div>
-                                        <span class="invalid-feedback">Set start date and time</span>
-                                    </div>
-                                </div>
-                                <!-- ==========Steps========== -->
-                                <div class="tab-pane fade show active" id="steps-tab-pane" role="tabpanel"
-                                    aria-labelledby="steps-tab" tabindex="0">
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom">
-                                        <h2 class="h5">1.Video to watch</h2>
-                                    </div>
-                                    <!-- input group -->
-                                    <div class="p-3 pb-6 border-bottom">
-                                        <div>
-                                            <div class="d-flex justify-content-between gap-1">
-                                                <div class="d-flex align-items-start gap-1">
-                                                    <label for="inputText25" class="form-label">Link to share
-                                                        <span class="text-danger">*</span></label><button type="button"
-                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        data-bs-custom-class="custom-tooltip"
-                                                        data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                </div>
-                                            </div>
-                                            <div class="input-group has-validation">
-                                                <button class="btn btn-input ic-link" type="button"
-                                                    id="button-addon23"></button>
-                                                <input type="text" class="form-control" placeholder="Placeholder"
-                                                    aria-label="Text" id="inputText25"
-                                                    aria-describedby="button-addon23" />
-                                                <button class="btn btn-input" type="button" id="button-addon23">
-                                                    Paste
-                                                </button>
-                                                <div class="invalid-feedback">Error text</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom">
-                                        <h2 class="h5">2.Poll</h2>
-                                    </div>
-                                    <!-- Question-item -->
-                                    <div>
-                                        <!-- Question-item header-->
-                                        <div class="bg-body p-3">
-                                            <div class="row g-2 align-items-md-baseline">
-                                                <div class="col-auto d-none d-md-block" style="width: 24px">
-                                                    1
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Vertical button group">
-                                                        <button type="button"
-                                                            class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button
-                                                            type="button"
-                                                            class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="row g-2">
-                                                        <div class="col-md">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="What are some of the challenges of addressing global warming?" />
-                                                            <div class="invalid-feedback">Error text</div>
-                                                        </div>
-                                                        <div
-                                                            class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
-                                                            <div class="btn-group" role="group"
-                                                                aria-label="button group">
-                                                                <button type="button"
-                                                                    class="btn btn-outline-info ico ic-edit"></button><button
-                                                                    type="button"
-                                                                    class="btn btn-outline-info ico ic-delete"></button><button
-                                                                    type="button"
-                                                                    class="btn btn-outline-info ico ic-chevron collapsed"
-                                                                    data-bs-toggle="collapse"
-                                                                    data-bs-target="#collapseItems1"
-                                                                    aria-expanded="false"
-                                                                    aria-controls="collapseItems1"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Question-item collapsed body-->
-                                        <div class="collapse" id="collapseItems1">
-                                            <div class="card card-body rounded-0 border-0 bg-body p-0">
-                                                <!-- Radiobutton group -->
-                                                <div class="qela-pad-l pe-3 py-4">
-                                                    <div class="form-check form-check-inline me-5">
-                                                        <input type="radio" class="form-check-input"
-                                                            id="Radio5#" /><label class="form-check-label"
-                                                            for="Radio5#">Single-choice questions</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input type="radio" class="form-check-input" id="Radio6#"
-                                                            checked /><label class="form-check-label"
-                                                            for="Radio6#">Multiple-choice questions</label>
-                                                    </div>
-                                                </div>
-                                                <!-- Labels -->
-                                                <div class="bg-body qela-pad-l pt-2 pe-3 pb-1 d-none d-md-block">
-                                                    <div class="row gx-3">
-                                                        <div class="form-label mb-0 col">
-                                                            Answer options
-                                                        </div>
-                                                        <div class="form-label mb-0 col-auto me-2">
-                                                            Correct
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Answer-item-2 -->
-                                                <div class="bg-body qela-pad-l py-2 pe-3">
-                                                    <div class="row g-2 align-items-md-baseline">
-                                                        <div class="col-auto d-none d-md-block" style="width: 24px">
-                                                            1
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div class="btn-group-vertical" role="group"
-                                                                aria-label="Vertical button group">
-                                                                <button type="button"
-                                                                    class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button
-                                                                    type="button"
-                                                                    class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="row g-1 g-md-2 align-items-baseline">
-                                                                <div class="col">
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Placeholder" />
-                                                                    <div class="invalid-feedback">
-                                                                        Error text
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
-                                                                    <div class="btn-group" role="group"
-                                                                        aria-label="button group">
-                                                                        <button type="button"
-                                                                            class="btn btn-outline-info ico ic-delete"></button>
-                                                                    </div>
-                                                                    <div class="form-check form-switch px-0 px-md-2">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            role="switch" id="SwitchCheck17" checked />
-                                                                        <label
-                                                                            class="form-check-label d-block d-md-none"
-                                                                            for="SwitchCheck17">Correct</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Button sm -->
-                                                <div class="bg-info-200 qela-pad-l py-2">
-                                                    <button type="button"
-                                                        class="btn btn-sm btn-secondary ic-plus ico-right">
-                                                        Add answer
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="p-3 qela-rounded-eb">
-                                        <button type="button" class="btn btn-secondary ic-plus ico-right">
-                                            Add question
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- ==========Awards========== -->
-                                <div class="tab-pane fade" id="awards-tab-pane" role="tabpanel"
-                                    aria-labelledby="awards-tab" tabindex="0">
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom qela-rounded-et">
-                                        <h2 class="h5">Awards</h2>
-                                    </div>
-                                    <!-- input type text -->
-                                    <div class="p-3 pb-4">
-                                        <div class="d-flex justify-content-between gap-1">
-                                            <div class="d-flex align-items-start gap-1">
-                                                <label for="inputText41" class="form-label">Vote weight
-                                                    <span class="text-danger">*</span></label>
-                                                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    data-bs-custom-class="custom-tooltip"
-                                                    data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="inputText41"
-                                            placeholder="Insert value" />
-                                        <div class="invalid-feedback">Error text</div>
-                                    </div>
-                                    <!-- Tooltip -->
-                                    <div class="d-flex align-items-start gap-1 px-3 pt-4">
-                                        <span class="form-label">Talents</span>
-                                        <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            data-bs-custom-class="custom-tooltip"
-                                            data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                    </div>
-                                    <!-- Labels -->
-                                    <div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
-                                        <div class="row gx-3">
-                                            <div class="form-label mb-0 col-6">Talent Type</div>
-                                            <div class="form-label mb-0 col-6">Talent Type</div>
-                                        </div>
-                                    </div>
-                                    <!-- Talent-item -->
-                                    <div class="bg-body border-bottom border-top p-3">
-                                        <div class="row g-2">
-                                            <div class="col-auto">
-                                                <div class="btn-group-vertical" role="group"
-                                                    aria-label="Vertical button group">
-                                                    <button type="button"
-                                                        class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-                                                    <button type="button"
-                                                        class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="row g-2">
-                                                    <div class="col-md">
-                                                        <div>
-                                                            <v-multi-select v-model="value4" :searchable="false"
-                                                                open-direction="bottom" :options="options"
-                                                                :single="true"></v-multi-select>
-                                                        </div>
-                                                        <div class="invalid-feedback">Error text</div>
-                                                    </div>
-                                                    <div class="col-md">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Insert talent value" />
-                                                        <div class="invalid-feedback">Error text</div>
-                                                    </div>
-                                                    <div
-                                                        class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
-                                                        <div class="btn-group" role="group" aria-label="button group">
-                                                            <button type="button"
-                                                                class="btn btn-outline-info ico ic-delete"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Talent-item -->
-                                    <div class="bg-body border-bottom p-3">
-                                        <div class="row g-2">
-                                            <div class="col-auto">
-                                                <div class="btn-group-vertical" role="group"
-                                                    aria-label="Vertical button group">
-                                                    <button type="button"
-                                                        class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
-                                                    <button type="button"
-                                                        class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="row g-2">
-                                                    <div class="col-md">
-                                                        <div>
-                                                            <v-multi-select v-model="value4" :searchable="false"
-                                                                open-direction="bottom" :options="options"
-                                                                :single="true"></v-multi-select>
-                                                        </div>
-                                                        <div class="invalid-feedback">Error text</div>
-                                                    </div>
-                                                    <div class="col-md">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Insert talent value" disabled />
-                                                        <div class="invalid-feedback">Error text</div>
-                                                    </div>
-                                                    <div
-                                                        class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
-                                                        <div class="btn-group" role="group" aria-label="button group">
-                                                            <button type="button"
-                                                                class="btn btn-outline-info ico ic-delete"
-                                                                disabled></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Button -->
-                                    <div class="p-3">
-                                        <button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">
-                                            Add talent
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- ==========Notifications========== -->
-                                <div class="tab-pane fade" id="notifications-tab-pane" role="tabpanel"
-                                    aria-labelledby="notifications-tab" tabindex="0">
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom qela-rounded-et">
-                                        <h2 class="h5">Notifications</h2>
-                                    </div>
-                                    <!-- textarea whith buttons -->
-                                    <div class="border-bottom px-3 py-4">
-                                        <div>
-                                            <div class="d-flex justify-content-between gap-1">
-                                                <div class="d-flex align-items-start gap-1">
-                                                    <label for="textarea12" class="form-label">Success text
-                                                        <span class="text-danger">*</span></label>
-                                                    <button type="button"
-                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        data-bs-custom-class="custom-tooltip"
-                                                        data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                </div>
-                                                <label class="form-label">0/<span>2500</span></label>
-                                            </div>
-                                            <textarea class="form-control" placeholder="Placeholder" id="textarea12"
-                                                rows="3"></textarea>
-                                            <div class="invalid-feedback">Error text</div>
-                                        </div>
-                                        <div class="pt-2 d-flex gap-1">
-                                            <button type="button" class="btn btn-outline-info">
-                                                # “quest name”
-                                            </button>
-                                            <button type="button" class="btn btn-outline-info">
-                                                # user name
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- textarea whith buttons -->
-                                    <div class="border-bottom px-3 py-4">
-                                        <div>
-                                            <div class="d-flex justify-content-between gap-1">
-                                                <div class="d-flex align-items-start gap-1">
-                                                    <label for="textarea13" class="form-label">Error text
-                                                        <span class="text-danger">*</span></label>
-                                                    <button type="button"
-                                                        class="btn qela-btn-tooltip ic-help-circle-filled"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        data-bs-custom-class="custom-tooltip"
-                                                        data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-                                                </div>
-                                                <label class="form-label">0/<span>2500</span></label>
-                                            </div>
-                                            <textarea class="form-control" placeholder="Placeholder" id="textarea13"
-                                                rows="3"></textarea>
-                                            <div class="invalid-feedback">Error text</div>
-                                        </div>
-                                        <div class="pt-2 d-flex gap-1">
-                                            <button type="button" class="btn btn-outline-info">
-                                                # “quest name”
-                                            </button>
-                                            <button type="button" class="btn btn-outline-info">
-                                                # user name
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- Buttons -->
-                                    <div class="d-flex flex-wrap gap-1 px-3 py-4">
-                                        <button type="button" class="btn btn-outline-light ic-plus ico-right">
-                                            Add fail notification
-                                        </button>
-                                        <button type="button" class="btn btn-outline-light ic-plus ico-right">
-                                            Add fail notification
-                                        </button>
-                                        <button type="button" class="btn btn-outline-light ic-plus ico-right">
-                                            Add fail notification
-                                        </button>
-                                        <button type="button" class="btn btn-outline-light ic-plus ico-right">
-                                            Add fail notification
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- ==========Analytics========== -->
-                                <div class="tab-pane fade" id="analytics-tab-pane" role="tabpanel"
-                                    aria-labelledby="analytics-tab" tabindex="0">
-                                    <!-- Subtitle -->
-                                    <div class="p-3 border-bottom qela-rounded-et">
-                                        <h2 class="h5">Analytics</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ======= -->
-                    <div class="col-lg-3">
-                        <div class="border bg-white rounded-2">
-                            <div class="text-info-600 p-3 p-sm-4">
-                                <small class="tetx-info">Status: <span class="text-info-900">New</span></small>
-                            </div>
-                            <hr />
-                            <div class="p-3 p-sm-4 d-flex flex-column gap-2">
-                                <button type="button" class="btn btn-primary ic-check-big ico-right">
-                                    Publish
-                                </button>
-                                <button type="button" class="btn btn-info">
-                                    Save as draft
-                                </button>
-                                <button type="button" class="btn btn-info">Cancel</button>
-                            </div>
-                            <hr />
-                            <div class="p-3">
-                                <div class="alert alert-warning qela-alert fade show" role="alert">
-                                    <span class="ic-error-warning-fill text-warning"></span>
-                                    <div class="mb-2">
-                                        Alert! Editing will not be possible after publication
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-    <script type="text/javascript"
-        src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-    <script type="text/javascript">
-        let app = Vue.createApp({
-            components: {
-                "v-date-picker": VueDatePicker,
-                "v-multi-select": VueMultiselect.default,
-            },
-            data() {
-                return {
-                    date: [new Date(), new Date()],
-                    value1: "",
-                    value2: "",
-                    value3: "",
-                    value4: "",
-                    options: [
-                        "Пункт 1 sadafdf",
-                        "Пункт 2",
-                        "Пункт 3",
-                        "Пункт 4",
-                        "Пункт 1 assadafdf",
-                        "Пункт 2sades",
-                        "Пункт 3sd",
-                        "Пункт 4sd",
-                    ],
-                };
-            },
-            methods: {
-                click() {
-                    alert(1);
-                    this.message += " clicked!";
-                },
-            },
-        });
-        console.dir(app);
-        app.mount("#app");
-    </script>
-    <!-- =========================== -->
-    @@include('_js.html',{})
+	@@include('./components/_header-logo.html',{ "title":"Edit - kurylo.kon@gmail.cofdsfdfsdfsdfsm" })
+	<div id="app" v-cloak>
+		<main>
+			<!-- =====================Список користувачів==================== -->
+			<div class="container">
+				<div class="row gx-3 my-3">
+					<div class="col-lg-9 mb-lg-0 mb-3">
+						<div class="qela-tab border rounded-2">
+							<ul class="nav nav-tabs w-auto flex-md-column py-1 py-mb-3 px-2" id="myTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 bg-body" id="home-tab" data-bs-toggle="tab"
+										data-bs-target="#home-tab-pane" type="button" role="tab"
+										aria-controls="home-tab-pane" aria-selected="true">
+										General
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 bg-body active" id="steps-tab" data-bs-toggle="tab"
+										data-bs-target="#steps-tab-pane" type="button" role="tab"
+										aria-controls="steps-tab-pane" aria-selected="false">
+										Steps
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 bg-body" id="awards-tab" data-bs-toggle="tab"
+										data-bs-target="#awards-tab-pane" type="button" role="tab"
+										aria-controls="awards-tab-pane" aria-selected="false">
+										Awards
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 bg-body" id="notifications-tab"
+										data-bs-toggle="tab" data-bs-target="#notifications-tab-pane" type="button"
+										role="tab" aria-controls="notifications-tab-pane" aria-selected="false">
+										Notifications
+									</button>
+								</li>
+								<li class="my-1">
+									<hr />
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 bg-body" id="analytics-tab" data-bs-toggle="tab"
+										data-bs-target="#analytics-tab-pane" type="button" role="tab"
+										aria-controls="analytics-tab-pane" aria-selected="false">
+										Analytics
+									</button>
+								</li>
+							</ul>
+							<div class="tab-content w-100" id="myTabContent">
+								<!-- ==========General========== -->
+								<div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+									tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">General</h2>
+									</div>
+									<!-- Badge -->
+									<div class="px-3 pt-3 d-flex flex-wrap gap-1">
+										<span
+											class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Quest</small></span>
+										<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Watch
+												the video</small></span>
+										<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>Type:
+												In-app</small></span>
+									</div>
+									<!-- Quest name -->
+									<div class="pt-4 px-3">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText1" class="form-label">Quest Name
+													<span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
+													data-bs-toggle="tooltip" data-bs-placement="bottom"
+													data-bs-custom-class="custom-tooltip"
+													data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">0/<span>2500</span></label>
+										</div>
+										<input type="text" class="form-control" id="inputText1" placeholder="Name" />
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<!-- Selects -->
+									<div class="pt-4 px-3">
+										<div class="row gx-2">
+											<div class="col-md-6">
+												<div class="d-flex justify-content-between gap-1">
+													<div class="d-flex align-items-start gap-1">
+														<label class="form-label">Campaign<span
+																class="text-danger">*</span></label>
+														<button type="button"
+															class="btn qela-btn-tooltip ic-help-circle-filled"
+															data-bs-toggle="tooltip" data-bs-placement="bottom"
+															data-bs-custom-class="custom-tooltip"
+															data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+													</div>
+												</div>
+												<div>
+													<v-multi-select v-model="value4" :searchable="false"
+														open-direction="bottom" :options="options"
+														:single="true"></v-multi-select>
+												</div>
+												<div class="invalid-feedback">Error text</div>
+											</div>
+											<div class="col-md-6">
+												<div class="d-flex justify-content-between gap-1">
+													<div class="d-flex align-items-start gap-1">
+														<label class="form-label">Chain <span
+																class="text-danger">*</span></label>
+														<button type="button"
+															class="btn qela-btn-tooltip ic-help-circle-filled"
+															data-bs-toggle="tooltip" data-bs-placement="bottom"
+															data-bs-custom-class="custom-tooltip"
+															data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+													</div>
+												</div>
+												<div>
+													<v-multi-select v-model="value4" :searchable="false"
+														open-direction="bottom" :options="options"
+														:single="true"></v-multi-select>
+												</div>
+												<div class="invalid-feedback">Error text</div>
+											</div>
+										</div>
+									</div>
+									<!-- Input type file -->
+									<div class="pt-4 px-3">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputFile" class="form-label">Label <span
+														class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
+													data-bs-toggle="tooltip" data-bs-placement="bottom"
+													data-bs-custom-class="custom-tooltip"
+													data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">hint text</label>
+										</div>
+										<div class="qela-file">
+											<div class="position-relative">
+												<input id="inputFile" type="file" class="form-control" />
+												<label for="2" class="form-label gap-2">
+													<span class="ic-img-plus text-info-500"></span>
+													<span class="text-info-900">Click to browse for file</span>
+													<span class="text-info-600">️Aspect ratio 16/9, max width 1000px,
+														max weight
+														2 Mb</span>
+												</label>
+											</div>
+											<div class="helper-text">Helper text</div>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+									</div>
+									<!-- Input group -->
+									<div class="pt-4 px-3">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="inputText5" class="form-label">Maine video
+														<span class="text-danger">*</span></label>
+													<button type="button"
+														class="btn qela-btn-tooltip ic-help-circle-filled"
+														data-bs-toggle="tooltip" data-bs-placement="bottom"
+														data-bs-custom-class="custom-tooltip"
+														data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+											</div>
+											<div class="input-group has-validation">
+												<button class="btn btn-input ic-link" type="button"
+													id="button-addon3"></button>
+												<input type="text" class="form-control" placeholder="Placeholder"
+													aria-label="Text" id="inputText5"
+													aria-describedby="button-addon3" />
+												<button class="btn btn-input" type="button" id="button-addon3">
+													Paste
+												</button>
+												<div class="invalid-feedback">Error text</div>
+											</div>
+										</div>
+									</div>
+									<!-- datapiker -->
+									<div class="py-4 px-3">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label class="form-label">Time<span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
+													data-bs-toggle="tooltip" data-bs-placement="bottom"
+													data-bs-custom-class="custom-tooltip"
+													data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+											<label class="form-label">hint text</label>
+										</div>
+										<div>
+											<v-date-picker v-model="date" range multi-calendars />
+										</div>
+										<span class="invalid-feedback">Set start date and time</span>
+									</div>
+								</div>
+								<!-- ==========Steps========== -->
+								<div class="tab-pane fade show active" id="steps-tab-pane" role="tabpanel"
+									aria-labelledby="steps-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom">
+										<h2 class="h5">1.Video to watch</h2>
+									</div>
+									<!-- input group -->
+									<div class="p-3 pb-6 border-bottom">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="inputText25" class="form-label">Link to share
+														<span class="text-danger">*</span></label><button type="button"
+														class="btn qela-btn-tooltip ic-help-circle-filled"
+														data-bs-toggle="tooltip" data-bs-placement="bottom"
+														data-bs-custom-class="custom-tooltip"
+														data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+											</div>
+											<div class="input-group has-validation">
+												<button class="btn btn-input ic-link" type="button"
+													id="button-addon23"></button>
+												<input type="text" class="form-control" placeholder="Placeholder"
+													aria-label="Text" id="inputText25"
+													aria-describedby="button-addon23" />
+												<button class="btn btn-input" type="button" id="button-addon23">
+													Paste
+												</button>
+												<div class="invalid-feedback">Error text</div>
+											</div>
+										</div>
+									</div>
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom">
+										<h2 class="h5">2.Poll</h2>
+									</div>
+									<!-- Question-item -->
+									<div>
+										<!-- Question-item header-->
+										<div class="bg-body p-3">
+											<div class="row g-2 align-items-md-baseline">
+												<div class="col-auto d-none d-md-block" style="width: 24px">
+													1
+												</div>
+												<div class="col-auto">
+													<div class="btn-group-vertical" role="group"
+														aria-label="Vertical button group">
+														<button type="button"
+															class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button
+															type="button"
+															class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row g-2">
+														<div class="col-md">
+															<input type="text" class="form-control"
+																placeholder="What are some of the challenges of addressing global warming?" />
+															<div class="invalid-feedback">Error text</div>
+														</div>
+														<div
+															class="col-12 col-md-auto d-flex gap-2 align-items-start justify-content-end">
+															<div class="btn-group" role="group"
+																aria-label="button group">
+																<button type="button"
+																	class="btn btn-outline-info ico ic-edit"></button><button
+																	type="button"
+																	class="btn btn-outline-info ico ic-delete"></button><button
+																	type="button"
+																	class="btn btn-outline-info ico ic-chevron collapsed"
+																	data-bs-toggle="collapse"
+																	data-bs-target="#collapseItems1"
+																	aria-expanded="false"
+																	aria-controls="collapseItems1"></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Question-item collapsed body-->
+										<div class="collapse" id="collapseItems1">
+											<div class="card card-body rounded-0 border-0 bg-body p-0">
+												<!-- Radiobutton group -->
+												<div class="qela-pad-l pe-3 py-4">
+													<div class="form-check form-check-inline me-5">
+														<input type="radio" class="form-check-input"
+															id="Radio5#" /><label class="form-check-label"
+															for="Radio5#">Single-choice questions</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input type="radio" class="form-check-input" id="Radio6#"
+															checked /><label class="form-check-label"
+															for="Radio6#">Multiple-choice questions</label>
+													</div>
+												</div>
+												<!-- Labels -->
+												<div class="bg-body qela-pad-l pt-2 pe-3 pb-1 d-none d-md-block">
+													<div class="row gx-3">
+														<div class="form-label mb-0 col">
+															Answer options
+														</div>
+														<div class="form-label mb-0 col-auto me-2">
+															Correct
+														</div>
+													</div>
+												</div>
+												<!-- Answer-item-2 -->
+												<div class="bg-body qela-pad-l py-2 pe-3">
+													<div class="row g-2 align-items-md-baseline">
+														<div class="col-auto d-none d-md-block" style="width: 24px">
+															1
+														</div>
+														<div class="col-auto">
+															<div class="btn-group-vertical" role="group"
+																aria-label="Vertical button group">
+																<button type="button"
+																	class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button><button
+																	type="button"
+																	class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+															</div>
+														</div>
+														<div class="col">
+															<div class="row g-1 g-md-2 align-items-baseline">
+																<div class="col">
+																	<input type="text" class="form-control"
+																		placeholder="Placeholder" />
+																	<div class="invalid-feedback">
+																		Error text
+																	</div>
+																</div>
+																<div
+																	class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+																	<div class="btn-group" role="group"
+																		aria-label="button group">
+																		<button type="button"
+																			class="btn btn-outline-info ico ic-delete"></button>
+																	</div>
+																	<div class="form-check form-switch px-0 px-md-2">
+																		<input class="form-check-input" type="checkbox"
+																			role="switch" id="SwitchCheck17" checked />
+																		<label
+																			class="form-check-label d-block d-md-none"
+																			for="SwitchCheck17">Correct</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Button sm -->
+												<div class="bg-info-200 qela-pad-l py-2">
+													<button type="button"
+														class="btn btn-sm btn-secondary ic-plus ico-right">
+														Add answer
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="p-3 qela-rounded-eb">
+										<button type="button" class="btn btn-secondary ic-plus ico-right">
+											Add question
+										</button>
+									</div>
+								</div>
+								<!-- ==========Awards========== -->
+								<div class="tab-pane fade" id="awards-tab-pane" role="tabpanel"
+									aria-labelledby="awards-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Awards</h2>
+									</div>
+									<!-- input type text -->
+									<div class="p-3 pb-4">
+										<div class="d-flex justify-content-between gap-1">
+											<div class="d-flex align-items-start gap-1">
+												<label for="inputText41" class="form-label">Vote weight
+													<span class="text-danger">*</span></label>
+												<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
+													data-bs-toggle="tooltip" data-bs-placement="bottom"
+													data-bs-custom-class="custom-tooltip"
+													data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+											</div>
+										</div>
+										<input type="text" class="form-control" id="inputText41"
+											placeholder="Insert value" />
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<!-- Tooltip -->
+									<div class="d-flex align-items-start gap-1 px-3 pt-4">
+										<span class="form-label">Talents</span>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled"
+											data-bs-toggle="tooltip" data-bs-placement="bottom"
+											data-bs-custom-class="custom-tooltip"
+											data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+									</div>
+									<!-- Labels -->
+									<div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
+										<div class="row gx-3">
+											<div class="form-label mb-0 col-6">Talent Type</div>
+											<div class="form-label mb-0 col-6">Talent Type</div>
+										</div>
+									</div>
+									<!-- Talent-item -->
+									<div class="bg-body border-bottom border-top p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group"
+													aria-label="Vertical button group">
+													<button type="button"
+														class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
+													<button type="button"
+														class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+												</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false"
+																open-direction="bottom" :options="options"
+																:single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-md">
+														<input type="text" class="form-control"
+															placeholder="Insert talent value" />
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div
+														class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button"
+																class="btn btn-outline-info ico ic-delete"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Talent-item -->
+									<div class="bg-body border-bottom p-3">
+										<div class="row g-2">
+											<div class="col-auto">
+												<div class="btn-group-vertical" role="group"
+													aria-label="Vertical button group">
+													<button type="button"
+														class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-small"></button>
+													<button type="button"
+														class="btn btn-outline-info py-1 py-md-0 ico ic-triangle-inverted-small"></button>
+												</div>
+											</div>
+											<div class="col">
+												<div class="row g-2">
+													<div class="col-md">
+														<div>
+															<v-multi-select v-model="value4" :searchable="false"
+																open-direction="bottom" :options="options"
+																:single="true"></v-multi-select>
+														</div>
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div class="col-md">
+														<input type="text" class="form-control"
+															placeholder="Insert talent value" disabled />
+														<div class="invalid-feedback">Error text</div>
+													</div>
+													<div
+														class="col-12 col-md-auto d-flex gap-2 align-items-center justify-content-end justify-content-md-center">
+														<div class="btn-group" role="group" aria-label="button group">
+															<button type="button"
+																class="btn btn-outline-info ico ic-delete"
+																disabled></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Button -->
+									<div class="p-3">
+										<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">
+											Add talent
+										</button>
+									</div>
+								</div>
+								<!-- ==========Notifications========== -->
+								<div class="tab-pane fade" id="notifications-tab-pane" role="tabpanel"
+									aria-labelledby="notifications-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Notifications</h2>
+									</div>
+									<!-- textarea whith buttons -->
+									<div class="border-bottom px-3 py-4">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="textarea12" class="form-label">Success text
+														<span class="text-danger">*</span></label>
+													<button type="button"
+														class="btn qela-btn-tooltip ic-help-circle-filled"
+														data-bs-toggle="tooltip" data-bs-placement="bottom"
+														data-bs-custom-class="custom-tooltip"
+														data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+												<label class="form-label">0/<span>2500</span></label>
+											</div>
+											<textarea class="form-control" placeholder="Placeholder" id="textarea12"
+												rows="3"></textarea>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+										<div class="pt-2 d-flex gap-1">
+											<button type="button" class="btn btn-outline-info">
+												# “quest name”
+											</button>
+											<button type="button" class="btn btn-outline-info">
+												# user name
+											</button>
+										</div>
+									</div>
+									<!-- textarea whith buttons -->
+									<div class="border-bottom px-3 py-4">
+										<div>
+											<div class="d-flex justify-content-between gap-1">
+												<div class="d-flex align-items-start gap-1">
+													<label for="textarea13" class="form-label">Error text
+														<span class="text-danger">*</span></label>
+													<button type="button"
+														class="btn qela-btn-tooltip ic-help-circle-filled"
+														data-bs-toggle="tooltip" data-bs-placement="bottom"
+														data-bs-custom-class="custom-tooltip"
+														data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+												</div>
+												<label class="form-label">0/<span>2500</span></label>
+											</div>
+											<textarea class="form-control" placeholder="Placeholder" id="textarea13"
+												rows="3"></textarea>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+										<div class="pt-2 d-flex gap-1">
+											<button type="button" class="btn btn-outline-info">
+												# “quest name”
+											</button>
+											<button type="button" class="btn btn-outline-info">
+												# user name
+											</button>
+										</div>
+									</div>
+									<!-- Buttons -->
+									<div class="d-flex flex-wrap gap-1 px-3 py-4">
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">
+											Add fail notification
+										</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">
+											Add fail notification
+										</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">
+											Add fail notification
+										</button>
+										<button type="button" class="btn btn-outline-light ic-plus ico-right">
+											Add fail notification
+										</button>
+									</div>
+								</div>
+								<!-- ==========Analytics========== -->
+								<div class="tab-pane fade" id="analytics-tab-pane" role="tabpanel"
+									aria-labelledby="analytics-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Analytics</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ======= -->
+					<div class="col-lg-3">
+						<div class="border bg-white rounded-2">
+							<div class="text-info-600 p-3 p-sm-4">
+								<small class="tetx-info">Status: <span class="text-info-900">New</span></small>
+							</div>
+							<hr />
+							<div class="p-3 p-sm-4 d-flex flex-column gap-2">
+								<button type="button" class="btn btn-primary ic-check-big ico-right">
+									Publish
+								</button>
+								<button type="button" class="btn btn-info">
+									Save as draft
+								</button>
+								<button type="button" class="btn btn-info">Cancel</button>
+							</div>
+							<hr />
+							<div class="p-3">
+								<div class="alert alert-warning qela-alert fade show" role="alert">
+									<span class="ic-error-warning-fill text-warning"></span>
+									<div class="mb-2">
+										Alert! Editing will not be possible after publication
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+	<script type="text/javascript"
+		src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+	<script type="text/javascript">
+		let app = Vue.createApp({
+			components: {
+				"v-date-picker": VueDatePicker,
+				"v-multi-select": VueMultiselect.default,
+			},
+			data() {
+				return {
+					date: [new Date(), new Date()],
+					value1: "",
+					value2: "",
+					value3: "",
+					value4: "",
+					options: [
+						"Пункт 1 sadafdf",
+						"Пункт 2",
+						"Пункт 3",
+						"Пункт 4",
+						"Пункт 1 assadafdf",
+						"Пункт 2sades",
+						"Пункт 3sd",
+						"Пункт 4sd",
+					],
+				};
+			},
+			methods: {
+				click() {
+					alert(1);
+					this.message += " clicked!";
+				},
+			},
+		});
+		console.dir(app);
+		app.mount("#app");
+	</script>
+	<!-- =========================== -->
+	@@include('_js.html',{})
 </body>
 
 </html>
