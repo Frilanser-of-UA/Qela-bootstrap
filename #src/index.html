@@ -63,7 +63,9 @@
 		}
 
 		aside.--aside {
-			z-index: 1;
+			width: 220px;
+			height: 100vh;
+			z-index: 10;
 			padding-top: 65px;
 			overflow: auto;
 			background-color: rgb(255, 255, 255);
@@ -114,14 +116,14 @@
 			counter-increment: olcounter;
 			list-style: none;
 			position: relative;
-			padding-left: 30px;
+			padding-left: 25px;
 		}
 
 		.--elastic li::before {
 			content: counters(olcounter, ".") "";
 			position: absolute;
-			width: 22px;
-			height: 22px;
+			width: 20px;
+			height: 20px;
 			border-radius: 50%;
 			background-color: #ffe000;
 			left: 0;
@@ -130,7 +132,7 @@
 			align-items: center;
 			justify-content: center;
 			color: inherit;
-			font-size: 12px;
+			font-size: 11px;
 			line-height: 1;
 			transition: background-color 0.3s ease 0s;
 		}
@@ -170,8 +172,8 @@
 		</header>
 		<main class="qela-body">
 			<!-- Навигация (якоря)-->
-			<aside class="fixed-top --aside" style="width: 280px; height: 100vh">
-				<h4 class="d-block px-2 my-2">Components</h4>
+			<aside class="fixed-top --aside">
+				<h4 class="px-2 my-2">Components</h4>
 				<nav class="ps-3">
 					<ol class="d-flex flex-column gap-2 ps-0 --elastic">
 						<li><a class="--link" href="#">buttons</a></li>

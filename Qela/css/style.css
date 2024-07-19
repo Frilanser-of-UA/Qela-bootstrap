@@ -14488,12 +14488,38 @@ input::-webkit-inner-spin-button {
 .qela-accordion .accordion-button:not(.collapsed):focus {
   box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
 }
+.qela-accordion .accordion-body > div {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+@media (max-width: 991.98px) {
+  .qela-accordion .accordion-body > div {
+    flex-wrap: wrap;
+  }
+}
+.qela-accordion .accordion-body > div:not(:last-child) {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+.qela-accordion .accordion-body > div:not(:first-child) {
+  padding-top: 1rem;
+}
+.qela-accordion .accordion-body > div .btn {
+  white-space: nowrap;
+}
 .qela-accordion .qela-icon [class*=ic-] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #adb5bd;
   background-color: #f8f9fa;
-  flex: 0 0 40px;
   width: 40px;
   height: 40px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+.qela-accordion .qela-icon [class*=ic-]::before {
   font-size: 20px;
 }
 

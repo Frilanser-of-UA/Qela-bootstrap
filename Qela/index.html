@@ -70,7 +70,9 @@
 		}
 
 		aside.--aside {
-			z-index: 1;
+			width: 220px;
+			height: 100vh;
+			z-index: 10;
 			padding-top: 65px;
 			overflow: auto;
 			background-color: rgb(255, 255, 255);
@@ -121,14 +123,14 @@
 			counter-increment: olcounter;
 			list-style: none;
 			position: relative;
-			padding-left: 30px;
+			padding-left: 25px;
 		}
 
 		.--elastic li::before {
 			content: counters(olcounter, ".") "";
 			position: absolute;
-			width: 22px;
-			height: 22px;
+			width: 20px;
+			height: 20px;
 			border-radius: 50%;
 			background-color: #ffe000;
 			left: 0;
@@ -137,7 +139,7 @@
 			align-items: center;
 			justify-content: center;
 			color: inherit;
-			font-size: 12px;
+			font-size: 11px;
 			line-height: 1;
 			transition: background-color 0.3s ease 0s;
 		}
@@ -177,8 +179,8 @@
 		</header>
 		<main class="qela-body">
 			<!-- Навигация (якоря)-->
-			<aside class="fixed-top --aside" style="width: 280px; height: 100vh">
-				<h4 class="d-block px-2 my-2">Components</h4>
+			<aside class="fixed-top --aside">
+				<h4 class="px-2 my-2">Components</h4>
 				<nav class="ps-3">
 					<ol class="d-flex flex-column gap-2 ps-0 --elastic">
 						<li><a class="--link" href="#">buttons</a></li>
@@ -2267,7 +2269,7 @@
 				<button class="accordion-button" type="button" data-bs-toggle="collapse"
 					data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
 					aria-controls="panelsStayOpen-collapseOne">
-                    <span class="ic-check-filled"></span> Heading1
+					<span class="ic-check-filled"></span> Heading1
 				</button>
 			</h2>
 			<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
@@ -2282,7 +2284,7 @@
 				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 					data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
 					aria-controls="panelsStayOpen-collapseTwo">
-                    <span class="ic-check-filled"></span> Heading2
+					<span class="ic-check-filled"></span> Heading2
 				</button>
 			</h2>
 			<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
@@ -2292,12 +2294,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="accordion-item success" >
+		<div class="accordion-item success">
 			<h2 class="accordion-header" id="panelsStayOpen-headingThree">
 				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 					data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
 					aria-controls="panelsStayOpen-collapseThree">
-                    <span class="ic-check-filled"></span> Heading3
+					<span class="ic-check-filled"></span> Heading3
 				</button>
 			</h2>
 			<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
@@ -2311,37 +2313,72 @@
 
 	<!-- FIX Accordion custom content-->
 	<h4 class="mt-4">Accordion custom content</h4>
-    <div class="accordion qela-accordion" id="accordionStart">
+	<div class="accordion qela-accordion" id="accordionStart">
 		<div class="accordion-item">
 			<h2 class="accordion-header" id="panelsStart-headingOne">
-				<button class="accordion-button" type="button" data-bs-toggle="collapse"
-					data-bs-target="#panelsStart1" aria-expanded="true"
-					aria-controls="panelsStart1">
-                    <span class="ic-check-filled"></span> Створіть свою першу кампанію
+				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStart1"
+					aria-expanded="true" aria-controls="panelsStart1">
+					<span class="ic-check-filled"></span> Створіть свою першу кампанію
 				</button>
 			</h2>
-			<div id="panelsStart1" class="accordion-collapse"
-				aria-labelledby="panelsStart-headingOne">
+			<div id="panelsStart1" class="accordion-collapse collapse show" aria-labelledby="panelsStart-headingOne">
 				<div class="accordion-body">
-                    <div class="d-flex gap-3">
-                        <div class="qela-icon">
-                            <span class="ic-maps-global"></span>
-                        </div>
-                        <div class="d-grid gap-3 flex-grow-1">
-                            <div class="d-grid gap-2">
-                                <span class="h6">Створіть свою першу кампанію. </span>
-                                <small class="text-info-600">Сплануйте перші кроки в кампанії, далі додайте назву, опис та обкладинку</small>
-                            </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <a href="#" class="text-decoration-none"><small>Детально про кампанії тут</small></a>
-                                <button class="btn btn-info btm-sm ico-right ic-player-play" type="button">Відео про кампанії</button>
-                            </div>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-secondary btm-sm ico-right ic-chevron-right" type="button">Створити кампанію</button>
-                            <button class="btn btn-info btm-sm" type="button">Пропустити</button>
-                        </div>
-                    </div>
+					<div>
+						<div class="d-flex gap-2 flex-grow-1">
+							<div class="qela-icon">
+								<span class="ic-maps-global"></span>
+							</div>
+							<div class="d-grid gap-3 flex-grow-1">
+								<div class="d-grid gap-2">
+									<span class="h6">Створіть свою першу кампанію. </span>
+									<small class="text-info-600">Сплануйте перші кроки в кампанії, далі додайте назву,
+										опис
+										та обкладинку</small>
+								</div>
+								<div class="d-flex align-items-center gap-3 flex-wrap flex-md-nowrap">
+									<a href="#" class="text-decoration-none"><small>Детально про кампанії
+											тут</small></a>
+									<button class="btn btn-info btm-sm ico-right ic-player-play" type="button">Відео про
+										кампанії</button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="d-grid gap-2 flex-lg-grow-0 flex-grow-1">
+							<button class="btn btn-secondary btm-sm ico-right ic-chevron-right" type="button">Створити
+								кампанію</button>
+							<button class="btn btn-info btm-sm" type="button">Пропустити</button>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex gap-2 flex-grow-1">
+							<div class="qela-icon">
+								<span class="ic-maps-global"></span>
+							</div>
+							<div class="d-grid gap-3 flex-grow-1">
+								<div class="d-grid gap-2">
+									<span class="h6">Створіть свою першу кампанію. </span>
+									<small class="text-info-600">Сплануйте перші кроки в кампанії, далі додайте назву,
+										опис
+										та обкладинку</small>
+								</div>
+								<div class="d-flex align-items-center gap-3 flex-wrap flex-md-nowrap">
+									<a href="#" class="text-decoration-none"><small>Детально про кампанії
+											тут</small></a>
+									<button class="btn btn-info btm-sm ico-right ic-player-play" type="button">Відео про
+										кампанії</button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="d-grid gap-2 flex-lg-grow-0 flex-grow-1">
+							<button class="btn btn-secondary btm-sm ico-right ic-chevron-right" type="button">Створити
+								кампанію</button>
+							<button class="btn btn-info btm-sm" type="button">Пропустити</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
