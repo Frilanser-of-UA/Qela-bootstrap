@@ -14433,10 +14433,15 @@ input::-webkit-inner-spin-button {
 }
 .qela-accordion .accordion-item.success .accordion-button {
   color: #2bb94e;
+  gap: 0.5rem;
 }
 .qela-accordion .accordion-item.success .accordion-button::after {
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(43, 185, 78, 0.99)'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(43, 185, 78, 0.99)'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+.qela-accordion .accordion-item.success .accordion-button [class*=ic-] {
+  display: block;
+  color: #30ce57;
 }
 @media (any-hover: hover) {
   .qela-accordion .accordion-item.success .accordion-button:hover {
@@ -14447,12 +14452,21 @@ input::-webkit-inner-spin-button {
     background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(43, 185, 78, 0.99)'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
   }
 }
+.qela-accordion .accordion-item.success .accordion-button:focus {
+  box-shadow: 0px 0px 0px 4px rgba(121, 216, 145, 0.2) inset;
+}
 .qela-accordion .accordion-item.success .accordion-button:not(.collapsed):focus {
-  box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
+  box-shadow: 0px 0px 0px 4px rgba(121, 216, 145, 0.2) inset;
 }
 .qela-accordion .accordion-button {
   border-radius: 7px;
   font-weight: 500;
+}
+.qela-accordion .accordion-button [class*=ic-] {
+  display: none;
+}
+.qela-accordion .accordion-button [class*=ic-]::before {
+  font-size: 1rem;
 }
 .qela-accordion .accordion-button::after {
   transition: all 0.25s ease 0s;
@@ -14472,6 +14486,14 @@ input::-webkit-inner-spin-button {
 }
 .qela-accordion .accordion-button:not(.collapsed):focus {
   box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
+}
+.qela-accordion .qela-icon [class*=ic-] {
+  color: #adb5bd;
+  background-color: #f8f9fa;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
 }
 
 .qela-alert {
