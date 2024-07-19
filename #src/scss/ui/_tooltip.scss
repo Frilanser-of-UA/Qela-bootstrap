@@ -1,32 +1,32 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
-	box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
 }
 
 .qela-admin {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 
-	&.btn[class^=ic-]:before,
-	&.btn[class*=ic-]:before {
-		font-size: 20px;
-	}
+    &.btn[class^="ic-"]:before,
+    &.btn[class*="ic-"]:before {
+        font-size: 20px;
+    }
 }
 
 .qela-tooltip-black {
-	.tooltip-inner {
-		background-color: $black;
-		color: $white;
-	}
+    .tooltip-inner {
+        background-color: $black;
+        color: $white;
+    }
 
-	&[data-popper-placement^=left] .tooltip-arrow::before {
-		border-left-color: $black
-	}
+    &[data-popper-placement^="left"] .tooltip-arrow::before {
+        border-left-color: $black;
+    }
 }
 
 .telent-tooltip {
-	.tooltip-inner {
-		--bs-tooltip-max-width: 300px;
-	}
+    .tooltip-inner {
+        --bs-tooltip-max-width: 300px;
+    }
 }
