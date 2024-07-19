@@ -1,59 +1,73 @@
 .qela-accordion {
-	.accordion-item {
-		border-top: 1px solid $accordion-border-color;
-		&:not(:last-child) {
-			margin-bottom: 0.25rem;
-		}
+    .accordion-item {
+        border-top: 1px solid $accordion-border-color;
+        &:not(:last-child) {
+            margin-bottom: 0.25rem;
+        }
 
-		border-radius: 8px;
-		&.success {
-			border-top: 1px solid $success-300;
-			border-color: $success-300;
-			.accordion-button {
-				color: $success-600;
-				&::after {
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-				}
-				@media (any-hover: hover) {
-					&:hover {
-						color: $success-600;
-						&::after {
-							background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-							background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-						}
-					}
-				}
-				&:not(.collapsed) {
-					&:focus {
-						box-shadow: $accordion-button-focus-box-shadow;
-					}
-				}
-			}
-		}
-	}
-	.accordion-button {
-		border-radius: 7px;
-		font-weight: 500;
-		&::after {
-			transition: all 0.25s ease 0s;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $secondary;
-				&::after {
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-				}
-			}
-		}
-		&:not(.collapsed) {
-			border-radius: 7px 7px 0 0;
-			box-shadow: none;
+        border-radius: 8px;
+        &.success {
+            border-top: 1px solid $success-300;
+            border-color: $success-300;
+            .accordion-button {
+                color: $success-600;
+                gap: 0.5rem;
+                &::after {
+                    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                }
+                [class*="ic-"] {
+                    display: block;
+                    color: $success;
+                }
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $success-600;
+                        &::after {
+                            background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                            background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                        }
+                    }
+                }
+                &:focus {
+                    box-shadow: 0px 0px 0px 4px rgba($success-400, 0.2) inset;
+                }
+                &:not(.collapsed) {
+                    &:focus {
+                        box-shadow: 0px 0px 0px 4px rgba($success-400, 0.2) inset;
+                    }
+                }
+            }
+        }
+    }
+    .accordion-button {
+        border-radius: 7px;
+        font-weight: 500;
+        [class*="ic-"] {
+            display: none;
+            &::before {
+                font-size: 1rem;
+            }
+        }
+        &::after {
+            transition: all 0.25s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $secondary;
+                &::after {
+                    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                }
+            }
+        }
+        &:not(.collapsed) {
+            border-radius: 7px 7px 0 0;
+            box-shadow: none;
 
-			&:focus {
-				box-shadow: $accordion-button-focus-box-shadow;
-			}
-		}
-	}
+            &:focus {
+                box-shadow: $accordion-button-focus-box-shadow;
+            }
+        }
+    }
 }
