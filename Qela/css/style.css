@@ -13366,17 +13366,22 @@ body {
 
 .qela-btn-tooltip {
   border: none;
-  color: #ced4da;
+  color: #9188ff;
   padding: 0;
+  border-radius: 50%;
 }
 .qela-btn-tooltip:hover {
-  color: #9188ff;
+  color: #8278ff;
 }
 .qela-btn-tooltip:active {
-  color: #9188ff !important;
+  color: #8278ff !important;
 }
 .qela-btn-tooltip.btn[class^=ic-]:before, .qela-btn-tooltip.btn[class*=ic-]:before {
   font-size: 16px;
+  line-height: 1;
+}
+.qela-btn-tooltip.btn-sm[class^=ic-]:before, .btn-group-sm > .qela-btn-tooltip[class^=ic-].btn:before, .qela-btn-tooltip.btn-sm[class*=ic-]:before, .btn-group-sm > .qela-btn-tooltip[class*=ic-].btn:before {
+  font-size: 14px;
 }
 
 .qela-btn-menu {
@@ -15956,6 +15961,20 @@ input::-webkit-inner-spin-button {
   bottom: 1px;
 }
 
+.ql-ibg {
+  position: relative;
+}
+.ql-ibg img,
+.ql-ibg video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .qela-video .ql-ibg {
   aspect-ratio: 16/9;
   max-width: 170px;
@@ -16000,85 +16019,6 @@ input::-webkit-inner-spin-button {
 
 .qela-users .qela-avatar:not(:first-child) {
   margin-left: -10px;
-}
-
-.qela-qr {
-  width: 63.5%;
-  display: inline-block;
-}
-@media (max-width: 567.98px) {
-  .qela-qr {
-    width: 100%;
-  }
-}
-.qela-qr img {
-  width: 100%;
-}
-
-.qela-description {
-  color: #495057;
-  height: 92px;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 130%;
-  display: -webkit-box;
-  transition: all 0.4s ease 0s;
-}
-.qela-description.active {
-  display: block;
-  height: auto;
-}
-
-.qela-card.card {
-  text-decoration: none;
-  color: #212529;
-  transition: background-color 0.3s ease 0s;
-}
-.qela-card.card:hover {
-  color: #212529;
-  background-color: #f8f9fa;
-}
-.qela-card.card:hover .ql-ibg::after {
-  opacity: 1;
-}
-.qela-card .ql-ibg {
-  padding-top: 55%;
-  overflow: hidden;
-}
-.qela-card .ql-ibg::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease 0s;
-}
-.qela-card .qela-noimg {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.ql-ibg {
-  position: relative;
-}
-.ql-ibg img,
-.ql-ibg video {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .ql-previews {
@@ -16152,6 +16092,68 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.qela-qr {
+  width: 63.5%;
+  display: inline-block;
+}
+@media (max-width: 567.98px) {
+  .qela-qr {
+    width: 100%;
+  }
+}
+.qela-qr img {
+  width: 100%;
+}
+
+.qela-description {
+  color: #495057;
+  height: 92px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  display: -webkit-box;
+  transition: all 0.4s ease 0s;
+}
+.qela-description.active {
+  display: block;
+  height: auto;
+}
+
+.qela-card.card {
+  text-decoration: none;
+  color: #212529;
+  transition: background-color 0.3s ease 0s;
+}
+.qela-card.card:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+.qela-card.card:hover .ql-ibg::after {
+  opacity: 1;
+}
+.qela-card .ql-ibg {
+  padding-top: 55%;
+  overflow: hidden;
+}
+.qela-card .ql-ibg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease 0s;
+}
+
 .qela-img1x1 {
   padding-top: 100%;
   overflow: auto;
@@ -16189,22 +16191,18 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-noimg {
-  border-radius: 0.25rem;
-  background-color: #dee2e6;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 .qela-noimg [class^=ic-],
 .qela-noimg [class*=ic-] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 .qela-noimg [class^=ic-]:before,
 .qela-noimg [class*=ic-]:before {
-  position: absolute;
   font-size: 32px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .qelas-toast .btn-close {
@@ -17132,6 +17130,11 @@ header .container-xxl > .row [class*=col]:last-child {
 .table-qela.large td {
   font-size: 16px;
 }
+.table-qela.qela-sticky th {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
 
 .qela-tag {
   display: inline-block;
@@ -17217,11 +17220,6 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-novector::before {
   font-size: 16px;
-}
-
-.qela-sticky {
-  position: sticky;
-  top: 0;
 }
 
 .text-editor {

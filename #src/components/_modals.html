@@ -52,19 +52,27 @@
       >
         modal lg Quests in Campaign
       </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCompany"
+      >
+        modal md Company
+      </button>
     </div>
     <!-- Modal sm-->
     <div
       class="modal fade"
       id="modal1"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel1"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modal1Label">Modal</h1>
+            <h1 class="modal-title fs-5" id="modalLabel1">Modal</h1>
             <button
               type="button"
               class="btn-close ic-cloze"
@@ -89,13 +97,13 @@
       class="modal fade"
       id="modal2"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel2"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title fs-5" id="exampleModalLabel2">
               Add more info about Location
             </h1>
             <button
@@ -185,13 +193,13 @@
       class="modal fade"
       id="modal3"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel3"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title fs-5" id="exampleModalLabel3">
               Invite administrator
             </h1>
             <button
@@ -398,13 +406,13 @@
       class="modal fade"
       id="modal4"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel4"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title fs-5" id="exampleModalLabel4">
               Quest templates
             </h1>
             <button
@@ -903,7 +911,7 @@
       class="modal fade"
       id="modalToggle1"
       aria-hidden="true"
-      aria-labelledby="modalToggle1"
+      aria-labelledby="modalToggle5"
       tabindex="-1"
     >
       <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
@@ -911,7 +919,7 @@
           <div class="modal-header">
             <button
               class="btn btn-sm btn-outline-light ico-left ic-chevron-left"
-              data-bs-target="#modal4"
+              data-bs-target="#modal5"
               data-bs-toggle="modal"
             >
               Back
@@ -970,7 +978,7 @@
       class="modal qela-modal fade"
       id="modal5"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel5"
       aria-hidden="true"
     >
       <div
@@ -978,7 +986,7 @@
       >
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title fs-5" id="exampleModalLabel5">
               Chains in Campaign
             </h1>
             <button
@@ -1174,7 +1182,7 @@
       class="modal qela-modal fade"
       id="modal6"
       tabindex="-1"
-      aria-labelledby="modal1Label"
+      aria-labelledby="modalLabel6"
       aria-hidden="true"
     >
       <div
@@ -1182,7 +1190,7 @@
       >
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <h1 class="modal-title fs-5" id="exampleModalLabel6">
               Chains in Campaign
             </h1>
             <button
@@ -1400,5 +1408,101 @@
         </div>
       </div>
     </div>
+        <!-- Modal md Company-->
+        <div
+        class="modal fade"
+        id="modalCompany"
+        tabindex="-1"
+        aria-labelledby="modalLabelCompany"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalLabelCompany">
+                Add more info about Location
+              </h1>
+              <button
+                type="button"
+                class="btn-close ic-cloze"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="pb-4">
+                  <div class="d-flex justify-content-between gap-1">
+                    <div class="d-flex align-items-start gap-1">
+                      <label class="form-label">Order</label>
+                    </div>
+                  </div>
+                  <div>
+                    <v-multi-select
+                      v-model="value4"
+                      :searchable="false"
+                      open-direction="bottom"
+                      :options="options"
+                      :single="true"
+                    ></v-multi-select>
+                  </div>
+                  <div class="invalid-feedback">Error text</div>
+                </div>
+                <div class="pb-4">
+                  <div class="d-flex justify-content-between gap-1">
+                    <div class="d-flex align-items-start gap-1">
+                      <label for="textarea1" class="form-label"
+                        >Address <span class="text-danger">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <textarea
+                    class="form-control"
+                    placeholder="Placeholder"
+                    id="textarea1"
+                    rows="3"
+                  ></textarea>
+                  <div class="invalid-feedback">Error text</div>
+                  <div class="helper-text">
+                    ☝️ Displayed to users like Location Name
+                  </div>
+                </div>
+                <div class="pb-4">
+                  <div class="d-flex justify-content-between gap-1">
+                    <div class="d-flex align-items-start gap-1">
+                      <label class="form-label">Radius of area</label>
+                    </div>
+                  </div>
+                  <div>
+                    <v-multi-select
+                      v-model="value4"
+                      :searchable="false"
+                      open-direction="bottom"
+                      :options="options"
+                      :single="true"
+                    ></v-multi-select>
+                  </div>
+                  <div class="invalid-feedback">Error text</div>
+                  <div class="helper-text">
+                    ☝️ Radius of area around location coordinates where check-in
+                    is available
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary ico-right ic-check-big"
+              >
+                Save point
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </section>

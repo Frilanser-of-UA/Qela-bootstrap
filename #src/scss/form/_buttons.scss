@@ -440,20 +440,25 @@
 
 .qela-btn-tooltip {
     border: none;
-    color: $info-400;
+    color: $secondary;
     padding: 0;
-
+    border-radius: 50%;
     &:hover {
-        color: $secondary;
+        color: $secondary-600;
     }
 
     &:active {
-        color: $secondary !important;
+        color: $secondary-600 !important;
     }
 
     &.btn[class^="ic-"]:before,
     &.btn[class*="ic-"]:before {
         font-size: 16px;
+        line-height: 1;
+    }
+    &.btn-sm[class^="ic-"]:before,
+    &.btn-sm[class*="ic-"]:before {
+        font-size: 14px;
     }
 }
 
