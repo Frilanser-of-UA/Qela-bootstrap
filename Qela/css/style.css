@@ -12560,7 +12560,7 @@ body {
 .qela-page .row-grow .pad-top-6 {
   padding-top: 2.5rem;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-page .row-grow .pad-top-6 {
     padding-top: 1rem;
     padding: 1rem;
@@ -12595,13 +12595,13 @@ body {
   border-bottom-right-radius: 12px;
   overflow: auto;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-right {
     border-bottom-left-radius: 12px;
     max-height: none;
   }
 }
-@media (min-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-right {
     border-left: 1px solid #ced4da;
   }
@@ -12609,7 +12609,7 @@ body {
 .qela-right .qela-actions {
   padding: 1rem;
 }
-@media (min-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-right .qela-actions {
     border-bottom: 1px solid #ced4da;
   }
@@ -12617,7 +12617,7 @@ body {
 .qela-right .typography {
   padding: 1.5rem 1rem;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-right .typography {
     padding: 0.5rem 1rem;
   }
@@ -12630,7 +12630,7 @@ body {
   color: #ced4da;
   font-size: 1.5em;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-right .typography h2, .qela-right .typography .h2 {
     padding: 1rem 0 0.5rem 0;
   }
@@ -12648,7 +12648,7 @@ body {
   background-color: transparent;
   border: none;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-wrap .row-grow {
     --bs-gutter-y: 1rem;
   }
@@ -12678,7 +12678,7 @@ body {
 .qela-start .qela-badge-telent {
   margin-left: auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .qela-start .qela-badge-telent {
     margin-left: 0;
   }
@@ -12823,7 +12823,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .h-100vh {
     height: auto;
   }
@@ -12832,7 +12832,7 @@ body {
 .qela-scroll {
   overflow: hidden;
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-scroll {
     overflow: auto;
   }
@@ -14672,12 +14672,12 @@ input::-webkit-inner-spin-button {
 .qela-map-items > .row {
   padding: 8px 16px;
 }
-@media (min-width: 767.98px) {
+@media (max-width: 767.98px) {
   .qela-map-items > .row {
     align-items: baseline;
   }
 }
-@media (max-width: 990.98px) {
+@media (max-width: 991.98px) {
   .qela-map-items > .row:first-child {
     display: none;
   }
@@ -14700,7 +14700,7 @@ input::-webkit-inner-spin-button {
   align-items: stretch;
   color: #343a40;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .qela-votes {
     flex-wrap: wrap;
   }
@@ -15075,7 +15075,7 @@ input::-webkit-inner-spin-button {
   border-radius: 0.5rem 0 0 0.5rem;
   counter-reset: step;
 }
-@media (min-width: 767.98px) {
+@media (max-width: 767.98px) {
   .qela-tab .nav-tabs {
     border-bottom: none;
   }
@@ -15275,7 +15275,7 @@ input::-webkit-inner-spin-button {
     pointer-events: auto;
   }
 }
-@media (min-width: 767.98px) {
+@media (max-width: 767.98px) {
   .qela-quest.active .head {
     background-color: #e9ecef;
   }
@@ -15315,7 +15315,7 @@ input::-webkit-inner-spin-button {
     pointer-events: auto;
   }
 }
-@media (max-width: 567.98px) {
+@media (max-width: 575.98px) {
   .qela-quest .btn {
     width: 100%;
   }
@@ -15635,7 +15635,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 16px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .qela-flush .list-group-item {
     flex-wrap: wrap;
     gap: 8px;
@@ -16096,7 +16096,7 @@ input::-webkit-inner-spin-button {
   width: 63.5%;
   display: inline-block;
 }
-@media (max-width: 567.98px) {
+@media (max-width: 575.98px) {
   .qela-qr {
     width: 100%;
   }
@@ -16542,7 +16542,7 @@ input::-webkit-inner-spin-button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 567.98px) {
+@media (max-width: 575.98px) {
   .qela-rating {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 0 0 0;

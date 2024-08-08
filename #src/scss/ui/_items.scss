@@ -11,7 +11,7 @@
         border: 0;
         margin-right: 1.5rem;
 
-        @media (max-width: ($md3+px)) {
+        @include media-breakpoint-down(md) {
             margin-right: 0.5rem;
         }
 
@@ -37,11 +37,11 @@
 .qela-map-items {
     > .row {
         padding: 8px 16px;
-        @media (min-width: ($md3+px)) {
+        @include media-breakpoint-down(md) {
             align-items: baseline;
         }
         &:first-child {
-            @media (max-width: ($md2+px)) {
+            @include media-breakpoint-down(lg) {
                 display: none;
             }
         }
@@ -68,7 +68,7 @@
     gap: 1rem;
     align-items: stretch;
     color: $gray-800;
-    @media (max-width: ($md1+px)) {
+    @include media-breakpoint-down(xl) {
         flex-wrap: wrap;
     }
     .qela-vote {

@@ -199,7 +199,7 @@
         align-items: center;
         gap: 16px;
 
-        @media (max-width: ($md1+px)) {
+        @include media-breakpoint-down(xl) {
             flex-wrap: wrap;
             gap: 8px;
         }
