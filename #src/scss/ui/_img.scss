@@ -44,6 +44,9 @@
     &.current {
         border: 2px solid $secondary;
         box-shadow: 0px 0px 0px 0px #dcd9fb inset;
+        &::before {
+            color: $secondary;
+        }
     }
     &.ql-lg {
         --img-size: 42px;
@@ -80,6 +83,23 @@
             &:hover {
                 background-color: $secondary-300;
             }
+        }
+    }
+    &.disabled {
+        pointer-events: none;
+        border-color: $info-200;
+        background-color: $info-100;
+        img {
+            opacity: 0.4;
+        }
+        &.ql-icon {
+            border-color: transparent;
+            &::before {
+                color: $info;
+            }
+        }
+        &.ql-text {
+            color: $secondary-400;
         }
     }
 }
@@ -139,6 +159,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         &:before {
             position: absolute;
             font-size: 32px;
@@ -147,4 +172,53 @@
             transform: translate(-50%, -50%);
         }
     }
+}
+
+.qela-video {
+    .ql-ibg {
+        aspect-ratio: 16/9;
+        max-width: 170px;
+        border-radius: 0.5rem;
+        margin: 1.5rem auto 1rem auto;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba($black, 0.2);
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 0.5rem;
+        }
+    }
+
+    video {
+        border-radius: 0.5rem;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.qela-play {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba($black, 0.3);
+    color: $white;
+    border-radius: 1rem;
+    cursor: pointer;
 }
