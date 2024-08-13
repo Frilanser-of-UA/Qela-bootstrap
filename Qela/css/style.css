@@ -14742,10 +14742,6 @@ input::-webkit-inner-spin-button {
 .qela-modal.modal:has(.card, .table) .qela-modal-empty {
   display: none;
 }
-.qela-modal .modal-header .btn-close {
-  margin: 0;
-  border-radius: 0;
-}
 .qela-modal .modal-body {
   max-height: 565px;
 }
@@ -15764,6 +15760,14 @@ input::-webkit-inner-spin-button {
 }
 .qela-admin.btn[class^=ic-]:before, .qela-admin.btn[class*=ic-]:before {
   font-size: 20px;
+  line-height: 1;
+}
+.qela-admin.ql-sm {
+  width: 24px;
+  height: 24px;
+}
+.qela-admin.ql-sm.btn[class^=ic-]:before, .qela-admin.ql-sm.btn[class*=ic-]:before {
+  font-size: 16px;
 }
 
 .qela-tooltip-black .tooltip-inner {
@@ -17169,6 +17173,30 @@ header .container-xxl > .row [class*=col]:last-child {
   position: sticky;
   top: 0;
   z-index: 90;
+}
+.table-qela .qela-light * {
+  color: #adb5bd;
+}
+.table-qela .qela-light .ql-previews {
+  pointer-events: none;
+  border-color: #e9ecef;
+  background-color: #f8f9fa;
+}
+.table-qela .qela-light .ql-previews img {
+  opacity: 0.4;
+}
+.table-qela .qela-light .ql-previews.ql-icon {
+  border-color: transparent;
+}
+.table-qela .qela-light .ql-previews.ql-icon::before {
+  color: #adb5bd;
+}
+.table-qela .qela-light .ql-previews.ql-text {
+  color: #bdb8ff;
+}
+.table-qela .qela-light .qela-btn-group .btn {
+  color: #adb5bd !important;
+  background-color: transparent !important;
 }
 
 .qela-tag {

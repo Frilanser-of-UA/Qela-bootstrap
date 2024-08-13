@@ -11,6 +11,16 @@
     &.btn[class^="ic-"]:before,
     &.btn[class*="ic-"]:before {
         font-size: 20px;
+        line-height: 1;
+    }
+    &.ql-sm {
+        width: 24px;
+        height: 24px;
+
+        &.btn[class^="ic-"]:before,
+        &.btn[class*="ic-"]:before {
+            font-size: 16px;
+        }
     }
 }
 
