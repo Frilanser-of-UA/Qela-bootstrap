@@ -1,0 +1,43 @@
+.qela-scroll-custom {
+    --scroll-pr: 0px;
+    --scroll-width: 5px;
+    --scroll-rounded: 8px;
+    --scroll-bg-track: transparent;
+    $scroll-bg-thumb: rgba($black, 0.6);
+    > * {
+        padding-right: var(--scroll-pr);
+    }
+
+    /* Для WebKit-браузеров */
+    ::-webkit-scrollbar {
+        width: var(--scroll-width);
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--scroll-bg-track);
+        border-radius: var(--scroll-rounded);
+
+        /* Цвет фона трека скроллбара */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: var(--scroll-rounded);
+        background: $scroll-bg-thumb;
+    }
+
+    /* Для Firefox */
+    scrollbar {
+        width: var(--scroll-width);
+        height: var(--scroll-width);
+    }
+
+    scrollbar-track {
+        background-color: var(--scroll-bg-track);
+        /* Цвет фона трека скроллбара */
+    }
+
+    scrollbar-thumb {
+        background: $scroll-bg-thumb;
+        /* Цвет ползунка скроллбара */
+    }
+}
