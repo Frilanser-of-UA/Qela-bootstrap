@@ -298,6 +298,11 @@ body {
     white-space: normal;
     display: -webkit-box;
 }
+.qela-clamp6 {
+    -webkit-line-clamp: 6;
+    white-space: normal;
+    display: -webkit-box;
+}
 .qela-clamp-btn {
     white-space: normal;
     display: -webkit-box;
@@ -539,3 +544,4 @@ body {
         }
     }
 }
+@import "scroll";
