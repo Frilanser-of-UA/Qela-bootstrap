@@ -12770,6 +12770,12 @@ body {
   display: -webkit-box;
 }
 
+.qela-clamp6 {
+  -webkit-line-clamp: 6;
+  white-space: normal;
+  display: -webkit-box;
+}
+
 .qela-clamp-btn {
   white-space: normal;
   display: -webkit-box;
@@ -13009,6 +13015,42 @@ body {
   top: 3px;
   left: 5px;
   background: url("../img/icons/marcer-list.svg") center/100% no-repeat;
+}
+
+.qela-scroll-custom {
+  --scroll-pr: 0px;
+  --scroll-width: 5px;
+  --scroll-rounded: 8px;
+  --scroll-bg-track: transparent;
+  /* Для WebKit-браузеров */
+  /* Для Firefox */
+}
+.qela-scroll-custom > * {
+  padding-right: var(--scroll-pr);
+}
+.qela-scroll-custom ::-webkit-scrollbar {
+  width: var(--scroll-width);
+}
+.qela-scroll-custom ::-webkit-scrollbar-track {
+  background: var(--scroll-bg-track);
+  border-radius: var(--scroll-rounded);
+  /* Цвет фона трека скроллбара */
+}
+.qela-scroll-custom ::-webkit-scrollbar-thumb {
+  border-radius: var(--scroll-rounded);
+  background: rgba(0, 0, 0, 0.6);
+}
+.qela-scroll-custom scrollbar {
+  width: var(--scroll-width);
+  height: var(--scroll-width);
+}
+.qela-scroll-custom scrollbar-track {
+  background-color: var(--scroll-bg-track);
+  /* Цвет фона трека скроллбара */
+}
+.qela-scroll-custom scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.6);
+  /* Цвет ползунка скроллбара */
 }
 
 .btn {
@@ -14744,6 +14786,30 @@ input::-webkit-inner-spin-button {
 }
 .qela-modal .modal-body {
   max-height: 565px;
+}
+.qela-modal .modal-header .btn-close {
+  padding: 7px;
+  margin: 0;
+  color: #adb5bd;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .qela-modal .modal-header .btn-close:hover {
+    color: #000;
+  }
+}
+
+.qela-modal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 1rem 1rem 3rem;
+}
+.qela-modal-nav [class^=ic-],
+.qela-modal-nav [class*=ic-] {
+  position: absolute;
+  left: 1rem;
 }
 
 .qela-modal-empty {

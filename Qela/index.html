@@ -10,225 +10,227 @@
 </head>
 
 <body>
-	<script>
-		function addDarkClass() {
-			try {
-				if (localStorage.getItem("theme") === "night-theme") {
-					document.body.classList.add("night-theme");
-				} else {
-					document.body.classList.remove("night-theme");
-				}
-			} catch (err) { }
-		}
-		addDarkClass();
-	</script>
-	<style>
-		html,
-		body {
-			scroll-behavior: smooth;
-		}
+    <script>
+        function addDarkClass() {
+            try {
+                if (localStorage.getItem("theme") === "night-theme") {
+                    document.body.classList.add("night-theme");
+                } else {
+                    document.body.classList.remove("night-theme");
+                }
+            } catch (err) { }
+        }
+        addDarkClass();
+    </script>
+    <style>
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
 
-		.--hide {
-			display: none;
-		}
+        .--hide {
+            display: none;
+        }
 
-		body,
-		header,
-		aside.--aside {
-			transition: background-color 0.25s ease 0s;
-		}
+        body,
+        header,
+        aside.--aside {
+            transition: background-color 0.25s ease 0s;
+        }
 
-		body.night-theme {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
+        body.night-theme {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-		body.night-theme header {
-			background-color: rgb(0, 0, 0);
-			box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-		}
+        body.night-theme header {
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
 
-		body.night-theme aside.--aside {
-			background-color: rgb(0, 0, 0);
-			color: #fff;
-		}
+        body.night-theme aside.--aside {
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
 
-		body.night-theme aside.--aside a {
-			color: #fff;
-		}
+        body.night-theme aside.--aside a {
+            color: #fff;
+        }
 
-		.night-theme #toggle-bg {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
+        .night-theme #toggle-bg {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-		.night-theme #toggle-bg::before {
-			content: "\e95d";
-			color: #fff;
-		}
+        .night-theme #toggle-bg::before {
+            content: "\e95d";
+            color: #fff;
+        }
 
-		.night-theme .--elastic li::before {
-			background-color: #9188ff;
-		}
+        .night-theme .--elastic li::before {
+            background-color: #9188ff;
+        }
 
-		aside.--aside {
-			width: 220px;
-			height: 100vh;
-			z-index: 10;
-			padding-top: 65px;
-			overflow: auto;
-			background-color: rgb(255, 255, 255);
-			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-		}
+        aside.--aside {
+            width: 220px;
+            height: 100vh;
+            z-index: 10;
+            padding-top: 65px;
+            overflow: auto;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        }
 
-		aside.--aside a {
-			color: #000000;
-			text-decoration: none;
-		}
+        aside.--aside a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-		.btn.--burger {
-			display: none;
-		}
+        .btn.--burger {
+            display: none;
+        }
 
-		.btn.--burger span {
-			width: 100%;
-			height: 3px;
-			background-color: #ffe000;
-		}
+        .btn.--burger span {
+            width: 100%;
+            height: 3px;
+            background-color: #ffe000;
+        }
 
-		@media (max-width: 1240px) {
-			aside.--aside {
-				left: 150%;
-			}
+        @media (max-width: 1240px) {
+            aside.--aside {
+                left: 150%;
+            }
 
-			aside.--aside.active {
-				left: 0;
-			}
+            aside.--aside.active {
+                left: 0;
+            }
 
-			.btn.--burger {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				width: 36px;
-				height: 36px;
-				gap: 8px;
-				padding: 2px;
-				margin-left: 4px;
-			}
-		}
+            .btn.--burger {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                gap: 8px;
+                padding: 2px;
+                margin-left: 4px;
+            }
+        }
 
-		.--elastic {
-			counter-reset: olcounter;
-		}
+        .--elastic {
+            counter-reset: olcounter;
+        }
 
-		.--elastic li {
-			counter-increment: olcounter;
-			list-style: none;
-			position: relative;
-			padding-left: 25px;
-		}
+        .--elastic li {
+            counter-increment: olcounter;
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
 
-		.--elastic li::before {
-			content: counters(olcounter, ".") "";
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			background-color: #ffe000;
-			left: 0;
-			top: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: inherit;
-			font-size: 11px;
-			line-height: 1;
-			transition: background-color 0.3s ease 0s;
-		}
+        .--elastic li::before {
+            content: counters(olcounter, ".") "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ffe000;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            font-size: 11px;
+            line-height: 1;
+            transition: background-color 0.3s ease 0s;
+        }
 
-		.--elastic a {
-			transition: all 0.3s ease 0s;
-		}
+        .--elastic a {
+            transition: all 0.3s ease 0s;
+        }
 
-		/* .link--active{
+        /* .link--active{
             color: red !important;
         } */
-	</style>
-	<div id="app" v-cloak>
-		<header class="p-1 h-auto">
-			<div class="container">
-				<div class="row g-1 align-items-center">
-					<div class="col-auto">
-						<a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
-							<img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
-						</a>
-					</div>
-					<div class="col">
-						<div class="p-2">
-							<input type="search" class="form-control" id="search-nav" placeholder="Search component" />
-						</div>
-					</div>
-					<div class="col-auto">
-						<a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
-					</div>
-					<div class="col-auto">
-						<button class="btn --burger">
-							<span></span><span></span><span></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</header>
-		<main class="qela-body">
-			<!-- Навигация (якоря)-->
-			<aside class="fixed-top --aside">
-				<h4 class="px-2 my-2">Components</h4>
-				<nav class="ps-3">
-					<ol class="d-flex flex-column gap-2 ps-0 --elastic">
-						<li><a class="--link" href="#">buttons</a></li>
-						<li><a class="--link" href="#">text field</a></li>
-						<li><a class="--link" href="#">checkbox</a></li>
-						<li><a class="--link" href="#">radiobutton</a></li>
-						<li><a class="--link" href="#">tooltip</a></li>
-						<li><a class="--link" href="#">multi-select</a></li>
-						<li><a class="--link" href="#">datapiker</a></li>
-						<li><a class="--link" href="#">range</a></li>
-						<li><a class="--link" href="#">dropdown</a></li>
-						<li><a class="--link" href="#">badge</a></li>
-						<li><a class="--link" href="#">pagination</a></li>
-						<li><a class="--link" href="#">alert</a></li>
-						<li><a class="--link" href="#">logos</a></li>
-						<li><a class="--link" href="#">items</a></li>
-						<li><a class="--link" href="#">labels</a></li>
-						<li><a class="--link" href="#">modals</a></li>
-						<li><a class="--link" href="#">map-pin</a></li>
-						<li><a class="--link" href="#">progress</a></li>
-						<li><a class="--link" href="#">avatars</a></li>
-						<li><a class="--link" href="#">lists</a></li>
-						<li><a class="--link" href="#">description</a></li>
-						<li><a class="--link" href="#">img-preview</a></li>
-						<li><a class="--link" href="#">cards</a></li>
-						<li><a class="--link" href="#">qr-code</a></li>
-						<li><a class="--link" href="#">status</a></li>
-						<li><a class="--link" href="#">toasts</a></li>
-						<li><a class="--link" href="#">dialog</a></li>
-						<li><a class="--link" href="#">telents</a></li>
-						<li><a class="--link" href="#">toolbar</a></li>
-						<li><a class="--link" href="#">rating</a></li>
-						<li><a class="--link" href="#">orden</a></li>
-						<li><a class="--link" href="#">icon-svg</a></li>
-						<li><a class="--link" href="#">breadcrumb</a></li>
-						<li><a class="--link" href="#">under</a></li>
-						<li><a class="--link" href="#">subscription</a></li>
-						<li><a class="--link" href="#">delimiter</a></li>
-						<li><a class="--link" href="#">accordion</a></li>
-						<li><a class="--link" href="#">icons</a></li>
-						<li><a class="--link" href="#">img</a></li>
-					</ol>
-				</nav>
-			</aside>
-			<!-- Навигация (якоря) -->
-			<div style="max-width: 1024px" class="mx-auto px-3">
-				<div class="mt-3 pb-3 d-flex flex-column gap-3">
-					<!-- FIX Buttons  -->
+    </style>
+    <div id="app" v-cloak>
+        <header class="p-1 h-auto">
+            <div class="container">
+                <div class="row g-1 align-items-center">
+                    <div class="col-auto">
+                        <a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
+                            <img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <div class="p-2">
+                            <input type="search" class="form-control" id="search-nav" placeholder="Search component" />
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn --burger">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="qela-body">
+            <!-- Навигация (якоря)-->
+            <aside class="fixed-top --aside">
+                <h4 class="px-2 my-2">Components</h4>
+                <nav class="ps-3">
+                    <ol class="d-flex flex-column gap-2 ps-0 --elastic">
+                        <li><a class="--link" href="#">buttons</a></li>
+                        <li><a class="--link" href="#">text field</a></li>
+                        <li><a class="--link" href="#">checkbox</a></li>
+                        <li><a class="--link" href="#">radiobutton</a></li>
+                        <li><a class="--link" href="#">tooltip</a></li>
+                        <li><a class="--link" href="#">multi-select</a></li>
+                        <li><a class="--link" href="#">datapiker</a></li>
+                        <li><a class="--link" href="#">range</a></li>
+                        <li><a class="--link" href="#">dropdown</a></li>
+                        <li><a class="--link" href="#">badge</a></li>
+                        <li><a class="--link" href="#">pagination</a></li>
+                        <li><a class="--link" href="#">alert</a></li>
+                        <li><a class="--link" href="#">logos</a></li>
+                        <li><a class="--link" href="#">items</a></li>
+                        <li><a class="--link" href="#">labels</a></li>
+                        <li><a class="--link" href="#">modals</a></li>
+                        <li><a class="--link" href="#">map-pin</a></li>
+                        <li><a class="--link" href="#">progress</a></li>
+                        <li><a class="--link" href="#">avatars</a></li>
+                        <li><a class="--link" href="#">lists</a></li>
+                        <li><a class="--link" href="#">description</a></li>
+                        <li><a class="--link" href="#">img-preview</a></li>
+                        <li><a class="--link" href="#">cards</a></li>
+                        <li><a class="--link" href="#">qr-code</a></li>
+                        <li><a class="--link" href="#">status</a></li>
+                        <li><a class="--link" href="#">toasts</a></li>
+                        <li><a class="--link" href="#">dialog</a></li>
+                        <li><a class="--link" href="#">telents</a></li>
+                        <li><a class="--link" href="#">toolbar</a></li>
+                        <li><a class="--link" href="#">rating</a></li>
+                        <li><a class="--link" href="#">orden</a></li>
+                        <li><a class="--link" href="#">icon-svg</a></li>
+                        <li><a class="--link" href="#">breadcrumb</a></li>
+                        <li><a class="--link" href="#">under</a></li>
+                        <li><a class="--link" href="#">subscription</a></li>
+                        <li><a class="--link" href="#">delimiter</a></li>
+                        <li><a class="--link" href="#">accordion</a></li>
+                        <li><a class="--link" href="#">icons</a></li>
+                        <li><a class="--link" href="#">img</a></li>
+                        <!-- <li><a class="--link" href="#">slider</a></li> -->
+                    </ol>
+                </nav>
+            </aside>
+            <!-- Навигация (якоря) -->
+            <div style="max-width: 1024px" class="mx-auto px-3">
+                <div class="mt-3 pb-3 d-flex flex-column gap-3">
+                    <!-- FIX Buttons  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Buttons</h2>
   <!-- FIX Large buttons  -->
@@ -1091,7 +1093,7 @@
     </div>
 </section>
 
-					<!-- FIX Text field  -->
+                    <!-- FIX Text field  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Text field</h2>
 	<!-- FIX Input outline-->
@@ -1710,7 +1712,7 @@
 		</div>
 	</div>
 </section>
-					<!-- FIX Multi-select  -->
+                    <!-- FIX Multi-select  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Multi-select</h2>
   <h4>Multi-select</h4>
@@ -1832,7 +1834,7 @@
   </div>
 </section>
 
-					<!-- FIX Datapiker  -->
+                    <!-- FIX Datapiker  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Datapiker</h2>
   <div>
@@ -1857,7 +1859,7 @@
   </div>
 </section>
 
-					<!-- FIX Checkbox  -->
+                    <!-- FIX Checkbox  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Checkbox</h2>
     <!-- FIX Checkbox-->
@@ -2005,7 +2007,7 @@
         <label class="form-check-label" for="SwitchCheck4">Default switch checkbox input</label>
     </div>
 </section>
-					<!-- FIX Radiobutton  -->
+                    <!-- FIX Radiobutton  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Radiobutton</h2>
     <!-- FIX Radiobutton-->
@@ -2256,7 +2258,7 @@
         </div>
     </div>
 </section>
-					<!-- FIX Range  -->
+                    <!-- FIX Range  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Range</h2>
     <div>
@@ -2268,7 +2270,7 @@
         <input type="range" class="form-range" value="50" min="0" max="100" id="Range1" disabled>
     </div>
 </section>
-					<!-- FIX Accordion  -->
+                    <!-- FIX Accordion  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Accordion</h2>
 	<!-- FIX Accordion-->
@@ -2394,7 +2396,7 @@
 		</div>
 	</div>
 </section>
-					<!-- FIX Alert  -->
+                    <!-- FIX Alert  -->
 <section class="d-grid gap-3">
 	<h2 class="h1">Alert</h2>
 	<!-- FIX Alert defoult -->
@@ -2554,7 +2556,7 @@
 		<a href="#">Підтвердити</a>
 	</div>
 </section>цц
-					<!-- FIX Avatars  -->
+                    <!-- FIX Avatars  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Avatars</h2>
   <!-- FIX Avatars 100-->
@@ -2676,7 +2678,7 @@
   </div>
 </section>
 
-					<!-- FIX Badges  -->
+                    <!-- FIX Badges  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Badge</h2>
 	<!-- FIX Default badges  -->
@@ -2915,7 +2917,7 @@
 		</div>
 	</div>
 </section>
-					<!-- FIX Breadcrumb  -->
+                    <!-- FIX Breadcrumb  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Breadcrumb</h2>
   <div class="qela-breadcrumb">
@@ -2931,7 +2933,7 @@
   </div>
 </section>
 
-					<!-- FIX Card  -->
+                    <!-- FIX Card  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Cards</h2>
   <!-- FIX Card modal -->
@@ -2993,7 +2995,7 @@
   </div>
 </section>
 
-					<!-- FIX Delimiter  -->
+                    <!-- FIX Delimiter  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Delimiter</h2>
   <!-- FIX Delimiter sx -->
@@ -3019,7 +3021,7 @@
   </div>
 </section>
 
-					<!-- FIX Description  -->
+                    <!-- FIX Description  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Description</h2>
   <div class="px-4 py-3">
@@ -3049,7 +3051,7 @@
   </div>
 </section>
 
-					<!-- FIX Dialog  -->
+                    <!-- FIX Dialog  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Dialog</h2>
   <!-- FIX Dialog header -->
@@ -3136,7 +3138,7 @@
   </div>
 </section>
 
-					<!-- FIX с  -->
+                    <!-- FIX с  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Dropdown</h2>
   <div class="dropdown">
@@ -3330,7 +3332,7 @@
   </div>
 </section>
 
-					<section class="d-grid gap-3">
+                    <section class="d-grid gap-3">
 	<!-- FIX Icons -->
 	<h2 class="h1">Icons</h2>
 		<div class="d-flex gap-3 flex-wrap">
@@ -3514,7 +3516,7 @@
 			<span class="ic-star"></span>
 		</div>
 </section>
-					<!-- FIX Icon svg -->
+                    <!-- FIX Icon svg -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Icon-svg</h2>
     <div class="d-inline-flex gap-2 flex-wrap">
@@ -3532,7 +3534,7 @@
         <img src="img/icons/twitter-new-circle.svg" width="38" height="38" alt="#">
     </div>
 </section>
-					<!-- FIX Img  -->
+                    <!-- FIX Img  -->
 <section class="d-grid gap-3">
 	<h2 class="h1  mt-4">Img</h2>
 	<!-- No img -->
@@ -3546,7 +3548,7 @@
 		 </div>
 	</div>
 </section>
-					<!-- FIX Img-preview  -->
+                    <!-- FIX Img-preview  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Img-preview</h2>
   <h4>Large</h4>
@@ -3652,7 +3654,7 @@
   </div>
 </section>
 
-					<!-- FIX Items  -->
+                    <!-- FIX Items  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Items</h2>
 	<!-- Answer-item-2 -->
@@ -4336,7 +4338,7 @@
 		</div>
 	</div>
 </section>
-					<!-- FIX Labels  -->
+                    <!-- FIX Labels  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Labels</h2>
   <div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
@@ -4366,7 +4368,7 @@
   </div>
 </section>
 
-					<!-- FIX Lists  -->
+                    <!-- FIX Lists  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Lists</h2>
   <!-- FIX Lists whith button -->
@@ -4604,7 +4606,7 @@
   </ul>
 </section>
 
-					<!-- FIX Logos  -->
+                    <!-- FIX Logos  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Logos</h2>
     <div class="mt-3 mb-3 d-flex flex-column gap-3">
@@ -4634,7 +4636,7 @@
         </div>
     </div>
 </section>
-					<!-- FIX Map-pin  -->
+                    <!-- FIX Map-pin  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Map-pin</h2>
   <!-- С помощью класса актив пины анимировано появляються и кнему же привязан ховер-->
@@ -4670,1460 +4672,1025 @@
   <div class="qela-line bg-danger"></div>
 </section>
 
-					<!-- FIX Modals  -->
+                    <!-- FIX Modals  -->
 <section class="d-grid gap-3">
-  <h2 class="h1 mt-4">Modals</h2>
-  <!-- Button trigger modal -->
-  <div>
-    <div class="pt-3 d-flex flex-wrap gap-2">
-      <button
-        type="button"
-        class="btn btn-primary me-2"
-        data-bs-toggle="modal"
-        data-bs-target="#modal1"
-      >
-        modal small
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary me-2"
-        data-bs-toggle="modal"
-        data-bs-target="#modal2"
-      >
-        modal middle
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#modal3"
-      >
-        modal lg Organization
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#modal4"
-      >
-        modal xl Quest templates
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#modal5"
-      >
-        modal lg Chains in Campaign
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#modal6"
-      >
-        modal lg Quests in Campaign
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#modalCompany"
-      >
-        modal md Company
-      </button>
-    </div>
-    <!-- Modal sm-->
-    <div
-      class="modal fade"
-      id="modal1"
-      tabindex="-1"
-      aria-labelledby="modalLabel1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-sm modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalLabel1">Modal</h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>Are you sure you want to post this way?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-              Cancel
+    <h2 class="h1 mt-4">Modals</h2>
+    <!-- Button trigger modal -->
+    <div>
+        <div class="pt-3 d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal1">
+                modal small
             </button>
-            <button type="button" class="btn btn-secondary">Publish Now</button>
-          </div>
+            <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal2">
+                modal middle
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                modal lg Organization
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+                modal xl Quest templates
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
+                modal lg Chains in Campaign
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">
+                modal lg Quests in Campaign
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCompany">
+                modal md Company
+            </button>
         </div>
-      </div>
-    </div>
-    <!-- Modal md-->
-    <div
-      class="modal fade"
-      id="modal2"
-      tabindex="-1"
-      aria-labelledby="modalLabel2"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-md modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel2">
-              Add more info about Location
-            </h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="pb-4">
-                <div class="d-flex justify-content-between gap-1">
-                  <div class="d-flex align-items-start gap-1">
-                    <label class="form-label">Order</label>
-                  </div>
+        <!-- Modal sm-->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalLabel1">Modal</h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to post this way?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary">Publish Now</button>
+                    </div>
                 </div>
-                <div>
-                  <v-multi-select
-                    v-model="value4"
-                    :searchable="false"
-                    open-direction="bottom"
-                    :options="options"
-                    :single="true"
-                  ></v-multi-select>
-                </div>
-                <div class="invalid-feedback">Error text</div>
-              </div>
-              <div class="pb-4">
-                <div class="d-flex justify-content-between gap-1">
-                  <div class="d-flex align-items-start gap-1">
-                    <label for="textarea1" class="form-label"
-                      >Address <span class="text-danger">*</span></label
-                    >
-                  </div>
-                </div>
-                <textarea
-                  class="form-control"
-                  placeholder="Placeholder"
-                  id="textarea1"
-                  rows="3"
-                ></textarea>
-                <div class="invalid-feedback">Error text</div>
-                <div class="helper-text">
-                  ☝️ Displayed to users like Location Name
-                </div>
-              </div>
-              <div class="pb-4">
-                <div class="d-flex justify-content-between gap-1">
-                  <div class="d-flex align-items-start gap-1">
-                    <label class="form-label">Radius of area</label>
-                  </div>
-                </div>
-                <div>
-                  <v-multi-select
-                    v-model="value4"
-                    :searchable="false"
-                    open-direction="bottom"
-                    :options="options"
-                    :single="true"
-                  ></v-multi-select>
-                </div>
-                <div class="invalid-feedback">Error text</div>
-                <div class="helper-text">
-                  ☝️ Radius of area around location coordinates where check-in
-                  is available
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary ico-right ic-check-big"
-            >
-              Save point
-            </button>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal lg Organization-->
-    <div
-      class="modal fade"
-      id="modal3"
-      tabindex="-1"
-      aria-labelledby="modalLabel3"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel3">
-              Invite administrator
-            </h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body bg-body">
-            <!-- form email -->
-            <form>
-              <div class="pb-5">
-                <div class="d-flex justify-content-between gap-1">
-                  <div class="d-flex align-items-start gap-1">
-                    <label for="inputEmail1" class="form-label"
-                      >Email <span class="text-danger">*</span></label
-                    >
-                  </div>
+        <!-- Modal md-->
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">
+                            Add more info about Location
+                        </h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="pb-4">
+                                <div class="d-flex justify-content-between gap-1">
+                                    <div class="d-flex align-items-start gap-1">
+                                        <label class="form-label">Order</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <v-multi-select v-model="value4" :searchable="false" open-direction="bottom"
+                                        :options="options" :single="true"></v-multi-select>
+                                </div>
+                                <div class="invalid-feedback">Error text</div>
+                            </div>
+                            <div class="pb-4">
+                                <div class="d-flex justify-content-between gap-1">
+                                    <div class="d-flex align-items-start gap-1">
+                                        <label for="textarea1" class="form-label">Address <span
+                                                class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                                <textarea class="form-control" placeholder="Placeholder" id="textarea1"
+                                    rows="3"></textarea>
+                                <div class="invalid-feedback">Error text</div>
+                                <div class="helper-text">
+                                    ☝️ Displayed to users like Location Name
+                                </div>
+                            </div>
+                            <div class="pb-4">
+                                <div class="d-flex justify-content-between gap-1">
+                                    <div class="d-flex align-items-start gap-1">
+                                        <label class="form-label">Radius of area</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <v-multi-select v-model="value4" :searchable="false" open-direction="bottom"
+                                        :options="options" :single="true"></v-multi-select>
+                                </div>
+                                <div class="invalid-feedback">Error text</div>
+                                <div class="helper-text">
+                                    ☝️ Radius of area around location coordinates where check-in
+                                    is available
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary ico-right ic-check-big">
+                            Save point
+                        </button>
+                    </div>
                 </div>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail1"
-                  placeholder="Type client email"
-                />
-                <div class="invalid-feedback">Error text</div>
-                <!-- <div class="helper-text">Helper text</div> -->
-              </div>
-            </form>
-            <!-- title h2 -->
-            <h2 class="h6 py-3">Roles</h2>
-            <!-- items label-->
-            <div class="pt-2 pb-1 d-none d-md-block">
-              <div class="row g-0">
-                <div class="col">
-                  <div class="text-info-600">Role</div>
-                </div>
-                <div class="col-auto">
-                  <div class="text-info-600 px-3">For Branch</div>
-                </div>
-                <div class="col">
-                  <div class="text-info-600 pe-2">Branch Name</div>
-                </div>
-                <div class="col-md-auto">
-                  <div class="text-info-600">Action</div>
-                </div>
-              </div>
             </div>
-            <div class="pt-2 pb-3">
-              <!-- items selects-->
-              <div class="pb-2">
-                <div class="row g-1 g-md-2">
-                  <div class="col">
-                    <div>
-                      <div>
-                        <v-multi-select
-                          v-model="value1"
-                          :searchable="false"
-                          open-direction="bottom"
-                          :options="options"
-                          :single="true"
-                        ></v-multi-select>
-                      </div>
-                      <div class="invalid-feedback">Error text</div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center"
-                  >
-                    <div class="form-check form-switch px-0 px-md-2">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="SwitchCheck17"
-                        checked
-                      />
-                      <label
-                        class="form-check-label d-block d-md-none"
-                        for="SwitchCheck17"
-                        >Correct</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div>
-                      <div>
-                        <v-multi-select
-                          v-model="value2"
-                          :searchable="false"
-                          open-direction="bottom"
-                          :options="options"
-                          :single="true"
-                        ></v-multi-select>
-                      </div>
-                      <div class="invalid-feedback">Error text</div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center"
-                  >
-                    <div
-                      class="btn-group"
-                      role="group"
-                      aria-label="button group"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-info ico ic-delete"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- items selects-->
-              <div>
-                <div class="row g-1 g-md-2">
-                  <div class="col">
-                    <div>
-                      <div>
-                        <v-multi-select
-                          v-model="value3"
-                          :searchable="false"
-                          open-direction="bottom"
-                          :options="options"
-                          :single="true"
-                        ></v-multi-select>
-                      </div>
-                      <div class="invalid-feedback">Error text</div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center"
-                  >
-                    <div class="form-check form-switch px-0 px-md-2">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="SwitchCheck17"
-                      />
-                      <label
-                        class="form-check-label d-block d-md-none"
-                        for="SwitchCheck17"
-                        >Correct</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div>
-                      <div>
-                        <v-multi-select
-                          v-model="value4"
-                          :searchable="false"
-                          open-direction="bottom"
-                          :options="options"
-                          :single="true"
-                        ></v-multi-select>
-                      </div>
-                      <div class="invalid-feedback">Error text</div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center"
-                  >
-                    <div
-                      class="btn-group"
-                      role="group"
-                      aria-label="button group"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-info ico ic-delete"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- button-->
-            <div class="pb-3">
-              <button
-                type="button"
-                class="btn btn-sm btn-secondary ico-right ic-plus"
-              >
-                Add New Role
-              </button>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button type="button" class="btn btn-primary">
-              Invite Administrator
-            </button>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal xl Quest templates-->
-    <div
-      class="modal fade"
-      id="modal4"
-      tabindex="-1"
-      aria-labelledby="modalLabel4"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel4">
-              Quest templates
-            </h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body p-0">
-            <div class="qela-tab">
-              <ul
-                class="nav nav-tabs flex-md-column align-items-start py-1 p-mb-3"
-                id="myTab"
-                role="tablist"
-              >
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0 active"
-                    id="all-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#all-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="all-tab-pane"
-                    aria-selected="true"
-                  >
-                    All
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="GEO-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#GEO-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="GEO-tab-pane"
-                    aria-selected="true"
-                  >
-                    GEO-location
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="activity-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#activity-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="activity-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Online activity
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="QR-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#QR-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="QR-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    QR-code
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="quiz-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#quiz-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="quiz-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Quiz
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="files-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#files-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="files-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Send files
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="link-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#link-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="link-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Send a link
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="feedback-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#feedback-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="feedback-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Feedback
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link border-0"
-                    id="donate-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#donate-tab-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="donate-tab-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Donate
-                  </button>
-                </li>
-              </ul>
-              <div class="tab-content w-100" id="myTabContent">
-                <!-- ==========All========== -->
-                <div
-                  class="tab-pane h-100 fade show active"
-                  id="all-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="all-tab"
-                  tabindex="0"
-                >
-                  <div class="row h-100 g-0">
-                    <div class="col-md-8 h-100 border-end">
-                      <form class="p-3" role="search">
-                        <div class="input-group">
-                          <input
-                            type="password"
-                            class="form-control"
-                            placeholder="Пошук"
-                            aria-label="Search"
-                            aria-describedby="button-search"
-                          />
-                          <button
-                            class="btn btn-input ic-search"
-                            type="button"
-                            id="button-search"
-                          ></button>
-                        </div>
-                      </form>
-                      <div class="qela-quest active" data-quest="quest1">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5"><small>Sign a petition</small></div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest2">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5">
-                              <small>Post on social media</small>
-                            </div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest3">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5">
-                              <small>Invite to the event</small>
-                            </div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest4">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5"><small>Online meeting</small></div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest5">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5"><small>Donate</small></div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest6">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5">
-                              <small>Share a visual online</small>
-                            </div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
-                      <div class="qela-quest" data-quest="quest7">
-                        <div class="head gap-3 p-3 pe-md-4 pe-3">
-                          <div class="flex-grow-1 pb-md-0 pb-3">
-                            <div class="h5">
-                              <small> Share on social media</small>
-                            </div>
-                          </div>
-                          <div class="d-flex gap-2 flex-column flex-sm-row">
-                            <a href="#" class="btn btn-secondary"
-                              >Use the template</a
-                            >
-                            <button
-                              type="button"
-                              class="btn d-block d-md-none btn-outline-info"
-                              data-bs-target="#modalToggle1"
-                              data-bs-toggle="modal"
-                            >
-                              About
-                            </button>
-                          </div>
-                          <span class="triangle"></span>
-                        </div>
-                      </div>
+        <!-- Modal lg Organization-->
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel3">
+                            Invite administrator
+                        </h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <!-- ---------===== -->
-                    <div class="col-md-4 pb-6 d-md-block d-none">
-                      <div id="quest1" class="qela-content active">
+                    <div class="modal-body bg-body">
+                        <!-- form email -->
+                        <form>
+                            <div class="pb-5">
+                                <div class="d-flex justify-content-between gap-1">
+                                    <div class="d-flex align-items-start gap-1">
+                                        <label for="inputEmail1" class="form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                                <input type="email" class="form-control" id="inputEmail1"
+                                    placeholder="Type client email" />
+                                <div class="invalid-feedback">Error text</div>
+                                <!-- <div class="helper-text">Helper text</div> -->
+                            </div>
+                        </form>
+                        <!-- title h2 -->
+                        <h2 class="h6 py-3">Roles</h2>
+                        <!-- items label-->
+                        <div class="pt-2 pb-1 d-none d-md-block">
+                            <div class="row g-0">
+                                <div class="col">
+                                    <div class="text-info-600">Role</div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="text-info-600 px-3">For Branch</div>
+                                </div>
+                                <div class="col">
+                                    <div class="text-info-600 pe-2">Branch Name</div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <div class="text-info-600">Action</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2 pb-3">
+                            <!-- items selects-->
+                            <div class="pb-2">
+                                <div class="row g-1 g-md-2">
+                                    <div class="col">
+                                        <div>
+                                            <div>
+                                                <v-multi-select v-model="value1" :searchable="false"
+                                                    open-direction="bottom" :options="options"
+                                                    :single="true"></v-multi-select>
+                                            </div>
+                                            <div class="invalid-feedback">Error text</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+                                        <div class="form-check form-switch px-0 px-md-2">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="SwitchCheck17" checked />
+                                            <label class="form-check-label d-block d-md-none"
+                                                for="SwitchCheck17">Correct</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div>
+                                            <div>
+                                                <v-multi-select v-model="value2" :searchable="false"
+                                                    open-direction="bottom" :options="options"
+                                                    :single="true"></v-multi-select>
+                                            </div>
+                                            <div class="invalid-feedback">Error text</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+                                        <div class="btn-group" role="group" aria-label="button group">
+                                            <button type="button" class="btn btn-outline-info ico ic-delete"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- items selects-->
+                            <div>
+                                <div class="row g-1 g-md-2">
+                                    <div class="col">
+                                        <div>
+                                            <div>
+                                                <v-multi-select v-model="value3" :searchable="false"
+                                                    open-direction="bottom" :options="options"
+                                                    :single="true"></v-multi-select>
+                                            </div>
+                                            <div class="invalid-feedback">Error text</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+                                        <div class="form-check form-switch px-0 px-md-2">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="SwitchCheck17" />
+                                            <label class="form-check-label d-block d-md-none"
+                                                for="SwitchCheck17">Correct</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div>
+                                            <div>
+                                                <v-multi-select v-model="value4" :searchable="false"
+                                                    open-direction="bottom" :options="options"
+                                                    :single="true"></v-multi-select>
+                                            </div>
+                                            <div class="invalid-feedback">Error text</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+                                        <div class="btn-group" role="group" aria-label="button group">
+                                            <button type="button" class="btn btn-outline-info ico ic-delete"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- button-->
+                        <div class="pb-3">
+                            <button type="button" class="btn btn-sm btn-secondary ico-right ic-plus">
+                                Add New Role
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Invite Administrator
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal xl Quest templates-->
+        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel4">
+                            Quest templates
+                        </h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="qela-tab">
+                            <ul class="nav nav-tabs flex-md-column align-items-start py-1 p-mb-3" id="myTab"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0 active" id="all-tab" data-bs-toggle="tab"
+                                        data-bs-target="#all-tab-pane" type="button" role="tab"
+                                        aria-controls="all-tab-pane" aria-selected="true">
+                                        All
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="GEO-tab" data-bs-toggle="tab"
+                                        data-bs-target="#GEO-tab-pane" type="button" role="tab"
+                                        aria-controls="GEO-tab-pane" aria-selected="true">
+                                        GEO-location
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="activity-tab" data-bs-toggle="tab"
+                                        data-bs-target="#activity-tab-pane" type="button" role="tab"
+                                        aria-controls="activity-tab-pane" aria-selected="false" tabindex="-1">
+                                        Online activity
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="QR-tab" data-bs-toggle="tab"
+                                        data-bs-target="#QR-tab-pane" type="button" role="tab"
+                                        aria-controls="QR-tab-pane" aria-selected="false" tabindex="-1">
+                                        QR-code
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="quiz-tab" data-bs-toggle="tab"
+                                        data-bs-target="#quiz-tab-pane" type="button" role="tab"
+                                        aria-controls="quiz-tab-pane" aria-selected="false" tabindex="-1">
+                                        Quiz
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="files-tab" data-bs-toggle="tab"
+                                        data-bs-target="#files-tab-pane" type="button" role="tab"
+                                        aria-controls="files-tab-pane" aria-selected="false" tabindex="-1">
+                                        Send files
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="link-tab" data-bs-toggle="tab"
+                                        data-bs-target="#link-tab-pane" type="button" role="tab"
+                                        aria-controls="link-tab-pane" aria-selected="false" tabindex="-1">
+                                        Send a link
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="feedback-tab" data-bs-toggle="tab"
+                                        data-bs-target="#feedback-tab-pane" type="button" role="tab"
+                                        aria-controls="feedback-tab-pane" aria-selected="false" tabindex="-1">
+                                        Feedback
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0" id="donate-tab" data-bs-toggle="tab"
+                                        data-bs-target="#donate-tab-pane" type="button" role="tab"
+                                        aria-controls="donate-tab-pane" aria-selected="false" tabindex="-1">
+                                        Donate
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content w-100" id="myTabContent">
+                                <!-- ==========All========== -->
+                                <div class="tab-pane h-100 fade show active" id="all-tab-pane" role="tabpanel"
+                                    aria-labelledby="all-tab" tabindex="0">
+                                    <div class="row h-100 g-0">
+                                        <div class="col-md-8 h-100 border-end">
+                                            <form class="p-3" role="search">
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" placeholder="Пошук"
+                                                        aria-label="Search" aria-describedby="button-search" />
+                                                    <button class="btn btn-input ic-search" type="button"
+                                                        id="button-search"></button>
+                                                </div>
+                                            </form>
+                                            <div class="qela-quest active" data-quest="quest1">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5"><small>Sign a petition</small></div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest2">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5">
+                                                            <small>Post on social media</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest3">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5">
+                                                            <small>Invite to the event</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest4">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5"><small>Online meeting</small></div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest5">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5"><small>Donate</small></div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest6">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5">
+                                                            <small>Share a visual online</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                            <div class="qela-quest" data-quest="quest7">
+                                                <div class="head gap-3 p-3 pe-md-4 pe-3">
+                                                    <div class="flex-grow-1 pb-md-0 pb-3">
+                                                        <div class="h5">
+                                                            <small> Share on social media</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-2 flex-column flex-sm-row">
+                                                        <a href="#" class="btn btn-secondary">Use the template</a>
+                                                        <button type="button"
+                                                            class="btn d-block d-md-none btn-outline-info"
+                                                            data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                                                            About
+                                                        </button>
+                                                    </div>
+                                                    <span class="triangle"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ---------===== -->
+                                        <div class="col-md-4 pb-6 d-md-block d-none">
+                                            <div id="quest1" class="qela-content active">
+                                                <div class="p-3 border-bottom">
+                                                    <h2 class="h5 px-2">Post on social media</h2>
+                                                </div>
+                                                <div class="px-3 pt-4">
+                                                    <h2 class="h6 pb-1">User flow</h2>
+                                                    <p class="mb-2">
+                                                        юзер бачить опис проблеми та зовнішнє посилання,
+                                                        переходить за зовнішнім посиланням, підписує,
+                                                        прінт-скрінить
+                                                    </p>
+                                                    <h2 class="h6 pb-1 pt-3">Verification</h2>
+                                                    <p class="mb-2">
+                                                        юзер бачить опис проблеми та зовнішнє посилання,
+                                                        переходить за зовнішнім посиланням, підписує,
+                                                        прінт-скрінить
+                                                    </p>
+                                                    <h2 class="h6 pb-1 pt-3">Tags</h2>
+                                                    <div class="d-flex gap-1 pb-1 flex-wrap">
+                                                        <span
+                                                            class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                                                manual check</small></span>
+                                                        <span
+                                                            class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                                                screenshot</small></span>
+                                                        <span
+                                                            class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                                                download image</small></span>
+                                                        <span
+                                                            class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                                                link</small></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="quest2" class="qela-content">
+                                                Post on social media Content 2 Content 2
+                                            </div>
+                                            <div id="quest3" class="qela-content">
+                                                Invite to the event Content 3 Content 3 Content 3
+                                            </div>
+                                            <div id="quest4" class="qela-content">
+                                                Online meeting Content 4 Content 4 Content 4 Content 4
+                                            </div>
+                                            <div id="quest5" class="qela-content">
+                                                Donate Content 5 Content 5 Content 5 Content 5
+                                            </div>
+                                            <div id="quest6" class="qela-content">
+                                                Share a visual online Content 6 Content 6 Content 6
+                                                Content 6
+                                            </div>
+                                            <div id="quest7" class="qela-content">
+                                                Share on social media Content 7 Content 7 Content 7
+                                                Content 7
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==========GEO-location========== -->
+                                <div class="tab-pane fade" id="GEO-tab-pane" role="tabpanel" aria-labelledby="GEO-tab"
+                                    tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">GEO-location</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========Online activity========== -->
+                                <div class="tab-pane fade" id="activity-tab-pane" role="tabpanel"
+                                    aria-labelledby="activity-tab" tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">Online activity</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========QR-code========== -->
+                                <div class="tab-pane fade" id="QR-tab-pane" role="tabpanel" aria-labelledby="QR-tab"
+                                    tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">QR-code</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========Quiz========== -->
+                                <div class="tab-pane fade" id="quiz-tab-pane" role="tabpanel" aria-labelledby="quiz-tab"
+                                    tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">Quiz</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========Send files========== -->
+                                <div class="tab-pane fade" id="files-tab-pane" role="tabpanel"
+                                    aria-labelledby="files-tab" tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">Send files</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========Send a link========== -->
+                                <div class="tab-pane fade" id="link-tab-pane" role="tabpanel" aria-labelledby="link-tab"
+                                    tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">Send a link</h2>
+                                    </div>
+                                </div>
+                                <!-- ==========Donate========== -->
+                                <div class="tab-pane fade" id="donate-tab-pane" role="tabpanel"
+                                    aria-labelledby="donate-tab" tabindex="0">
+                                    <!-- Subtitle -->
+                                    <div class="p-3 border-bottom qela-rounded-et">
+                                        <h2 class="h5">Donate</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal xl in modal xl -->
+        <div class="modal fade" id="modalToggle1" aria-hidden="true" aria-labelledby="modalToggle5" tabindex="-1">
+            <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-sm btn-outline-light ico-left ic-chevron-left" data-bs-target="#modal5"
+                            data-bs-toggle="modal">
+                            Back
+                        </button>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 pb-6">
                         <div class="p-3 border-bottom">
-                          <h2 class="h5 px-2">Post on social media</h2>
+                            <h2 class="h5 px-2">Post on social media</h2>
                         </div>
                         <div class="px-3 pt-4">
-                          <h2 class="h6 pb-1">User flow</h2>
-                          <p class="mb-2">
-                            юзер бачить опис проблеми та зовнішнє посилання,
-                            переходить за зовнішнім посиланням, підписує,
-                            прінт-скрінить
-                          </p>
-                          <h2 class="h6 pb-1 pt-3">Verification</h2>
-                          <p class="mb-2">
-                            юзер бачить опис проблеми та зовнішнє посилання,
-                            переходить за зовнішнім посиланням, підписує,
-                            прінт-скрінить
-                          </p>
-                          <h2 class="h6 pb-1 pt-3">Tags</h2>
-                          <div class="d-flex gap-1 pb-1 flex-wrap">
-                            <span
-                              class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                              ><small># manual check</small></span
-                            >
-                            <span
-                              class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                              ><small># screenshot</small></span
-                            >
-                            <span
-                              class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                              ><small># download image</small></span
-                            >
-                            <span
-                              class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                              ><small># link</small></span
-                            >
-                          </div>
+                            <h2 class="h6 pb-1">User flow</h2>
+                            <p class="mb-2">
+                                юзер бачить опис проблеми та зовнішнє посилання, переходить за
+                                зовнішнім посиланням, підписує, прінт-скрінить
+                            </p>
+                            <h2 class="h6 pb-1 pt-3">Verification</h2>
+                            <p class="mb-2">
+                                юзер бачить опис проблеми та зовнішнє посилання, переходить за
+                                зовнішнім посиланням, підписує, прінт-скрінить
+                            </p>
+                            <h2 class="h6 pb-1 pt-3">Tags</h2>
+                            <div class="d-flex gap-1 pb-1 flex-wrap">
+                                <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># manual
+                                        check</small></span>
+                                <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                        screenshot</small></span>
+                                <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># download
+                                        image</small></span>
+                                <span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small>#
+                                        link</small></span>
+                            </div>
                         </div>
-                      </div>
-                      <div id="quest2" class="qela-content">
-                        Post on social media Content 2 Content 2
-                      </div>
-                      <div id="quest3" class="qela-content">
-                        Invite to the event Content 3 Content 3 Content 3
-                      </div>
-                      <div id="quest4" class="qela-content">
-                        Online meeting Content 4 Content 4 Content 4 Content 4
-                      </div>
-                      <div id="quest5" class="qela-content">
-                        Donate Content 5 Content 5 Content 5 Content 5
-                      </div>
-                      <div id="quest6" class="qela-content">
-                        Share a visual online Content 6 Content 6 Content 6
-                        Content 6
-                      </div>
-                      <div id="quest7" class="qela-content">
-                        Share on social media Content 7 Content 7 Content 7
-                        Content 7
-                      </div>
                     </div>
-                  </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-secondary">Use the template</a>
+                    </div>
                 </div>
-                <!-- ==========GEO-location========== -->
-                <div
-                  class="tab-pane fade"
-                  id="GEO-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="GEO-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">GEO-location</h2>
-                  </div>
-                </div>
-                <!-- ==========Online activity========== -->
-                <div
-                  class="tab-pane fade"
-                  id="activity-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="activity-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">Online activity</h2>
-                  </div>
-                </div>
-                <!-- ==========QR-code========== -->
-                <div
-                  class="tab-pane fade"
-                  id="QR-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="QR-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">QR-code</h2>
-                  </div>
-                </div>
-                <!-- ==========Quiz========== -->
-                <div
-                  class="tab-pane fade"
-                  id="quiz-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="quiz-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">Quiz</h2>
-                  </div>
-                </div>
-                <!-- ==========Send files========== -->
-                <div
-                  class="tab-pane fade"
-                  id="files-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="files-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">Send files</h2>
-                  </div>
-                </div>
-                <!-- ==========Send a link========== -->
-                <div
-                  class="tab-pane fade"
-                  id="link-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="link-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">Send a link</h2>
-                  </div>
-                </div>
-                <!-- ==========Donate========== -->
-                <div
-                  class="tab-pane fade"
-                  id="donate-tab-pane"
-                  role="tabpanel"
-                  aria-labelledby="donate-tab"
-                  tabindex="0"
-                >
-                  <!-- Subtitle -->
-                  <div class="p-3 border-bottom qela-rounded-et">
-                    <h2 class="h5">Donate</h2>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal xl in modal xl -->
-    <div
-      class="modal fade"
-      id="modalToggle1"
-      aria-hidden="true"
-      aria-labelledby="modalToggle5"
-      tabindex="-1"
-    >
-      <div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              class="btn btn-sm btn-outline-light ico-left ic-chevron-left"
-              data-bs-target="#modal5"
-              data-bs-toggle="modal"
-            >
-              Back
-            </button>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body p-0 pb-6">
-            <div class="p-3 border-bottom">
-              <h2 class="h5 px-2">Post on social media</h2>
+        <!-- Modal lg Organization Chains in Campaign-->
+        <div class="modal qela-modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel5">
+                            Chains in Campaign
+                        </h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-body">
+                        <!-- button-->
+                        <div class="pb-3 text-end">
+                            <button type="button" class="btn btn-primary">
+                                Add New Chain
+                            </button>
+                        </div>
+                        <!-- Text empty -->
+                        <p class="qela-modal-empty px-8 py-4 text-info-600">
+                            There is no any Quest Chains yet
+                        </p>
+                        <!-- grid whit cards-->
+                        <div class="row g-3">
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-2.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg qela-noimg bg-info-100">
+                                        <span class="ic-img text-info"></span>
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-3.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-4.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-2.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card" style="width: 13.625rem">
+                                    <div class="ql-ibg qela-noimg bg-info-100">
+                                        <span class="ic-img text-info"></span>
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <a href="#" class="card qela-card">
+                                    <div class="ql-ibg">
+                                        <img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="text-end pb-2">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </div>
+                                        <h5 class="card-title h6">
+                                            Share invite to the Climate Unity March!
+                                        </h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="px-3 pt-4">
-              <h2 class="h6 pb-1">User flow</h2>
-              <p class="mb-2">
-                юзер бачить опис проблеми та зовнішнє посилання, переходить за
-                зовнішнім посиланням, підписує, прінт-скрінить
-              </p>
-              <h2 class="h6 pb-1 pt-3">Verification</h2>
-              <p class="mb-2">
-                юзер бачить опис проблеми та зовнішнє посилання, переходить за
-                зовнішнім посиланням, підписує, прінт-скрінить
-              </p>
-              <h2 class="h6 pb-1 pt-3">Tags</h2>
-              <div class="d-flex gap-1 pb-1 flex-wrap">
-                <span
-                  class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                  ><small># manual check</small></span
-                >
-                <span
-                  class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                  ><small># screenshot</small></span
-                >
-                <span
-                  class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                  ><small># download image</small></span
-                >
-                <span
-                  class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"
-                  ><small># link</small></span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#" class="btn btn-secondary">Use the template</a>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal lg Organization Chains in Campaign-->
-    <div
-      class="modal qela-modal fade"
-      id="modal5"
-      tabindex="-1"
-      aria-labelledby="modalLabel5"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel5">
-              Chains in Campaign
-            </h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body bg-body">
-            <!-- button-->
-            <div class="pb-3 text-end">
-              <button type="button" class="btn btn-primary">
-                Add New Chain
-              </button>
+        <!-- Modal lg Organization Quests in Campaign-->
+        <div class="modal qela-modal fade" id="modal6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel6">
+                            Chains in Campaign
+                        </h1>
+                        <button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-body px-0">
+                        <!-- button-->
+                        <div class="pb-3 px-3 text-end">
+                            <button type="button" class="btn btn-primary">
+                                Add New Chain
+                            </button>
+                        </div>
+                        <!-- Text empty -->
+                        <p class="qela-modal-empty px-8 py-4 text-info-600">
+                            There is no any Quest Chains yet
+                        </p>
+                        <!-- Таблица -->
+                        <div class="table-responsive table-qela">
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div width="42px" class="ql-ibg ql-previews img" style="--img-size: 42px">
+                                                <img class="rounded" src="img/table-img-1.jpg" width="42px" height="42"
+                                                    alt="" />
+                                            </div>
+                                        </td>
+                                        <td width="36px" class="position-relative">
+                                            <div class="qela-vector start"></div>
+                                        </td>
+                                        <td>
+                                            <button type="button"
+                                                class="qela-clamp text-start p-0 bg-transparent border-0"
+                                                style="max-width: 450px" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Full name of Campaign">
+                                                Share invite to the Climate Unity March! Climate Unity
+                                                March! Share invite to the Climate Unity March! Climate
+                                                Unity March!
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div width="42px" class="ql-ibg ql-previews img" style="--img-size: 42px">
+                                                <img class="rounded" src="img/table-img-1.jpg" width="42px" height="42"
+                                                    alt="" />
+                                            </div>
+                                        </td>
+                                        <td width="36px" class="position-relative">
+                                            <div class="qela-vector"></div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="qela-clamp p-0 bg-transparent border-0"
+                                                style="max-width: 450px" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Full name of Campaign">
+                                                Share invite to the Climate Unity March! Climate Unity
+                                                March!
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="badge qela-badge-warning">Draft</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div width="42px" class="ql-ibg ql-previews img" style="--img-size: 42px">
+                                                <img class="rounded" src="img/table-img-1.jpg" width="42px" height="42"
+                                                    alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="position-relative">
+                                            <div width="36px" class="qela-vector end"></div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="qela-clamp p-0 bg-transparent border-0"
+                                                style="max-width: 450px" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Full name of Campaign">
+                                                Share invite to the Climate Unity March! Climate Unity
+                                                March!
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div width="42px" class="ql-ibg ql-previews img" style="--img-size: 42px">
+                                                <img class="rounded" src="img/table-img-1.jpg" width="42px" height="42"
+                                                    alt="" />
+                                            </div>
+                                        </td>
+                                        <td width="36px" class="text-center">
+                                            <span class="qela-novector ic-un-link"></span>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="qela-clamp p-0 bg-transparent border-0"
+                                                style="max-width: 450px" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Full name of Campaign">
+                                                Share invite to the Climate Unity March! Climate Unity
+                                                March!
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div width="42px" class="ql-ibg ql-previews img" style="--img-size: 42px">
+                                                <img class="rounded" src="img/table-img-1.jpg" width="42px" height="42"
+                                                    alt="" />
+                                            </div>
+                                        </td>
+                                        <td width="36px" class="text-center">
+                                            <span class="qela-novector ic-un-link"></span>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="qela-clamp p-0 bg-transparent border-0"
+                                                style="max-width: 450px" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Full name of Campaign">
+                                                Share invite to the Climate Unity March! Climate Unity
+                                                March!
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="badge qela-badge-success">Published</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Text empty -->
-            <p class="qela-modal-empty px-8 py-4 text-info-600">
-              There is no any Quest Chains yet
-            </p>
-            <!-- grid whit cards-->
-            <div class="row g-3">
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-2.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg qela-noimg bg-info-100">
-                    <span class="ic-img text-info"></span>
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-1.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-3.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-1.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-4.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-2.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card" style="width: 13.625rem">
-                  <div class="ql-ibg qela-noimg bg-info-100">
-                    <span class="ic-img text-info"></span>
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <a href="#" class="card qela-card">
-                  <div class="ql-ibg">
-                    <img
-                      src="img/cards/img-card-1.jpg"
-                      class="card-img-top"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="card-body pt-2">
-                    <div class="text-end pb-2">
-                      <span class="badge qela-badge-success">Published</span>
-                    </div>
-                    <h5 class="card-title h6">
-                      Share invite to the Climate Unity March!
-                    </h5>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal lg Organization Quests in Campaign-->
-    <div
-      class="modal qela-modal fade"
-      id="modal6"
-      tabindex="-1"
-      aria-labelledby="modalLabel6"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel6">
-              Chains in Campaign
-            </h1>
-            <button
-              type="button"
-              class="btn-close ic-cloze"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body bg-body px-0">
-            <!-- button-->
-            <div class="pb-3 px-3 text-end">
-              <button type="button" class="btn btn-primary">
-                Add New Chain
-              </button>
-            </div>
-            <!-- Text empty -->
-            <p class="qela-modal-empty px-8 py-4 text-info-600">
-              There is no any Quest Chains yet
-            </p>
-            <!-- Таблица -->
-            <div class="table-responsive table-qela">
-              <table class="table table-hover">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div
-                        width="42px"
-                        class="ql-ibg ql-previews img"
-                        style="--img-size: 42px"
-                      >
-                        <img
-                          class="rounded"
-                          src="img/table-img-1.jpg"
-                          width="42px"
-                          height="42"
-                          alt=""
-                        />
-                      </div>
-                    </td>
-                    <td width="36px" class="position-relative">
-                      <div class="qela-vector start"></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="qela-clamp text-start p-0 bg-transparent border-0"
-                        style="max-width: 450px"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Full name of Campaign"
-                      >
-                        Share invite to the Climate Unity March! Climate Unity
-                        March! Share invite to the Climate Unity March! Climate
-                        Unity March!
-                      </button>
-                    </td>
-                    <td class="text-center">
-                      <span class="badge qela-badge-success">Published</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div
-                        width="42px"
-                        class="ql-ibg ql-previews img"
-                        style="--img-size: 42px"
-                      >
-                        <img
-                          class="rounded"
-                          src="img/table-img-1.jpg"
-                          width="42px"
-                          height="42"
-                          alt=""
-                        />
-                      </div>
-                    </td>
-                    <td width="36px" class="position-relative">
-                      <div class="qela-vector"></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="qela-clamp p-0 bg-transparent border-0"
-                        style="max-width: 450px"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Full name of Campaign"
-                      >
-                        Share invite to the Climate Unity March! Climate Unity
-                        March!
-                      </button>
-                    </td>
-                    <td class="text-center">
-                      <span class="badge qela-badge-warning">Draft</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div
-                        width="42px"
-                        class="ql-ibg ql-previews img"
-                        style="--img-size: 42px"
-                      >
-                        <img
-                          class="rounded"
-                          src="img/table-img-1.jpg"
-                          width="42px"
-                          height="42"
-                          alt=""
-                        />
-                      </div>
-                    </td>
-                    <td class="position-relative">
-                      <div width="36px" class="qela-vector end"></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="qela-clamp p-0 bg-transparent border-0"
-                        style="max-width: 450px"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Full name of Campaign"
-                      >
-                        Share invite to the Climate Unity March! Climate Unity
-                        March!
-                      </button>
-                    </td>
-                    <td class="text-center">
-                      <span class="badge qela-badge-success">Published</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div
-                        width="42px"
-                        class="ql-ibg ql-previews img"
-                        style="--img-size: 42px"
-                      >
-                        <img
-                          class="rounded"
-                          src="img/table-img-1.jpg"
-                          width="42px"
-                          height="42"
-                          alt=""
-                        />
-                      </div>
-                    </td>
-                    <td width="36px" class="text-center">
-                      <span class="qela-novector ic-un-link"></span>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="qela-clamp p-0 bg-transparent border-0"
-                        style="max-width: 450px"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Full name of Campaign"
-                      >
-                        Share invite to the Climate Unity March! Climate Unity
-                        March!
-                      </button>
-                    </td>
-                    <td class="text-center">
-                      <span class="badge qela-badge-success">Published</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div
-                        width="42px"
-                        class="ql-ibg ql-previews img"
-                        style="--img-size: 42px"
-                      >
-                        <img
-                          class="rounded"
-                          src="img/table-img-1.jpg"
-                          width="42px"
-                          height="42"
-                          alt=""
-                        />
-                      </div>
-                    </td>
-                    <td width="36px" class="text-center">
-                      <span class="qela-novector ic-un-link"></span>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="qela-clamp p-0 bg-transparent border-0"
-                        style="max-width: 450px"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Full name of Campaign"
-                      >
-                        Share invite to the Climate Unity March! Climate Unity
-                        March!
-                      </button>
-                    </td>
-                    <td class="text-center">
-                      <span class="badge qela-badge-success">Published</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
         <!-- Modal md Company-->
-    <div
-        class="modal qela-modal fade"
-        id="modalCompany"
-        tabindex="-1"
-        aria-labelledby="modalLabelCompany"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-md modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header gap-3 p-1 ps-2">
-              <button class="btn-close ms-0 ic-grip-horizontal"></button>
-              <span class="modal-title fs-6" id="modalLabelCompany">
-                  <small>Попередній перегляд</small>
-                </span>
-              <button
-                type="button"
-                class="btn-close ic-cloze"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                style="background-color: red;"
-              ></button>
-            </div>
-            <div class="modal-body">
-            
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">
-                Cancel
-              </button>
-              <button
-                type="button"
-                class="btn btn-secondary ico-right ic-check-big"
-              >
-                Save point
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</section>
+        <div class="modal qela-modal fade" id="modalCompany" tabindex="-1" aria-labelledby="modalLabelCompany"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="qela-scroll-custom">
+                        <div class="modal-header gap-3 p-1 ps-2">
+                            <button class="btn-close ms-0 ic-grip-horizontal"></button>
+                            <span class="modal-title fs-6 text-info-600" id="modalLabelCompany">
+                                <small>Попередній перегляд</small>
+                            </span>
+                            <button type="button" class="btn-close ic-cloze ms-auto" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <nav class="qela-modal-nav">
+                            <span class="ic-chevron-left"></span>
+                            <span class="h6">Кампанія</span>
+                        </nav>
+                        <div class="modal-body p-0  overflow-auto">
+                            <h1 class="p-3 h3 bg-body">Зупиніть глобальне потепління</h1>
+                            <div class="qela-noimg ratio ratio-16x9"><span class="ic-img-32"></span></div>
+                            <div class="py-4 px-3" style="--percent: 39%;">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <h6 class="flex-grow-1">Виконано <span class="text-info ms-2">3/12</span></h6>
+                                    <span>39% до завершення</span>
+                                </div>
+                                <div class="progress qela-progress small">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                            <div class="px-3 pb-4">
+                                <h6 class="pb-2">Опис</h6>
+                                <p class="qela-clamp qela-clamp6 mb-0">Станьте частиною команди волонтерів, які мають
+                                    намір боротися із забрудненням пластиком. Завдяки прибиранню пляжів, громадській
+                                    освіті та екологічним практикам ми прагнемо звільнити наше довкілля від тиску
+                                    пластикових відходів. Давайте об’єднаємося, щоб створити чистіше, екологічніше
+                                    майбутнє для прийдешніх поколінь. Разом ми можемо переломити хвилю проти забруднення
+                                    навколишнього середовища пластиком і зробити тривалий вплив. #OperationPlasticFree
+                                    #CleanOcean #Sustainability" 🌱🌊</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer  py-4 px-3">
+                            <div class="d-grid flex-grow-1 m-0 gap-2">
+                                <button type="button" class="btn btn-outline-secondary ic-share-2 ico-right"
+                                    data-bs-dismiss="modal">
+                                    Take on quest
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    Take on quest
+                                </button>
+                            </div>
 
-					<!-- FIX Orden  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                    <!-- FIX Orden  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Orden*</h2>
   <div class="qela-orden">
@@ -6137,7 +5704,7 @@
   </div>
 </section>
 
-					<!-- FIX Pagination  -->
+                    <!-- FIX Pagination  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Pagination</h2>
     <!-- FIX Pagination  default -->
@@ -6217,7 +5784,7 @@
         </ul>
     </nav>
 </section>
-					<!-- FIX Progress  -->
+                    <!-- FIX Progress  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Progress*</h2>
   <div class="progress qela-progress large" style="--percent: 17.5%">
@@ -6344,9 +5911,20 @@
       <span>Yes, I fully support</span> <span>75.02%</span>
     </div>
   </div>
+  <h4 class="mt-4">Progress with complited info</h4>
+  <div class="pt-4 px-3" style="--percent: 39%;">
+    <div class="d-flex align-items-center gap-3 mb-3">
+        <h6 class="flex-grow-1">Виконано <span class="text-info ms-2">3/12</span></h6>
+        <span>39% до завершення</span>
+    </div>
+    <div class="progress qela-progress small" >
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
 </section>
 
-					<!-- FIX QR-code  -->
+                    <!-- FIX QR-code  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">QR -code 1</h2>
   <div class="pt-4 px-3 pb-6 bg-white rounded-2 text-center">
@@ -6360,7 +5938,7 @@
   </div>
 </section>
 
-					<!-- FIX Rating  -->
+                    <!-- FIX Rating  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Rating*</h2>
   <div class="qela-rating">
@@ -6387,7 +5965,8 @@
   </div>
 </section>
 
-					<!-- FIX Status  -->
+                    
+                    <!-- FIX Status  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Status</h2>
   <small class="tetx-info"
@@ -6418,7 +5997,7 @@
   </div>
 </section>
 
-					<!-- FIX Subscription  -->
+                    <!-- FIX Subscription  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Subscription</h2>
   <!-- FIX Subscription whith numbers -->
@@ -6540,7 +6119,7 @@
   </div>
 </section>
 
-					<!-- FIX Telents  -->
+                    <!-- FIX Telents  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Telents</h2>
   <!-- awards item red-->
@@ -6685,7 +6264,7 @@
   </ul>
 </section>
 
-					<!-- FIX Toasts  -->
+                    <!-- FIX Toasts  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Toasts</h2>
     <div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
@@ -6700,7 +6279,7 @@
         </div>
     </div>
 </section>
-					<!-- FIX Toolbar  -->
+                    <!-- FIX Toolbar  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Toolbar</h2>
   <div class="qela-toolbar">
@@ -6741,7 +6320,7 @@
   </div>
 </section>
 
-					<!-- FIX Tooltip  -->
+                    <!-- FIX Tooltip  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Tooltip</h2>
   <div>
@@ -6901,7 +6480,7 @@
   </div>
 </section>
 
-					<!-- FIX Under  -->
+                    <!-- FIX Under  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Under</h2>
   <div class="qela-under">
@@ -6928,160 +6507,160 @@
   </div>
 </section>
 
-				</div>
-			</div>
-		</main>
-	</div>
-	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-	<script type="text/javascript"
-		src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-	<script type="text/javascript">
-		let app = Vue.createApp({
-			components: {
-				"v-date-picker": VueDatePicker,
-				"v-multi-select": VueMultiselect.default,
-			},
-			data() {
-				return {
-					date: [new Date(), new Date()],
-					value1: "",
-					value2: "",
-					value3: "",
-					value4: "",
-					options: [
-						"Пункт 1",
-						"Пункт 2",
-						"Пункт 3",
-						"Пункт 4",
-						"Пункт 1",
-						"Пункт 2sades",
-						"Пункт 3sd",
-						"Пункт 4sd",
-					],
-				};
-			},
-			methods: {
-				click() {
-					alert(1);
-					this.message += " clicked!";
-				},
-			},
-		});
-		// console.dir(app);
-		app.mount("#app");
-	</script>
-	<!-- Search -->
-	<script defer type="text/javascript">
-		document.querySelector("#search-nav").oninput = function () {
-			let val = this.value.trim();
-			let elasticItems = document.querySelectorAll(".--elastic li");
-			if (val != "") {
-				elasticItems.forEach(function (elem) {
-					if (elem.innerText.search(val) == -1) {
-						elem.classList.add("--hide");
-					} else {
-						elem.classList.remove("--hide");
-					}
-				});
-			} else {
-				elasticItems.forEach(function (elem) {
-					elem.classList.remove("--hide");
-				});
-			}
-		};
-		// ===============================================
-		let togButton = document.querySelector("#toggle-bg");
-		togButton.addEventListener("click", (event) => {
-			event.preventDefault();
-			if (localStorage.getItem("theme") === "night-theme") {
-				localStorage.removeItem("theme");
-			} else {
-				localStorage.setItem("theme", "night-theme");
-			}
-			addDarkClass();
-		});
-		// ==================================================
-		const burgerBtn = document.querySelector(".--burger");
-		const asideMenu = document.querySelector(".--aside");
-		burgerBtn.addEventListener("click", () => {
-			burgerBtn.classList.toggle("active");
-			asideMenu.classList.toggle("active");
-		});
-		// ==================================================
-		let title = document.querySelectorAll("h2.h1");
-		let ul = document.querySelector(".--elastic");
-		let li = ul.querySelectorAll("a");
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+        let app = Vue.createApp({
+            components: {
+                "v-date-picker": VueDatePicker,
+                "v-multi-select": VueMultiselect.default,
+            },
+            data() {
+                return {
+                    date: [new Date(), new Date()],
+                    value1: "",
+                    value2: "",
+                    value3: "",
+                    value4: "",
+                    options: [
+                        "Пункт 1",
+                        "Пункт 2",
+                        "Пункт 3",
+                        "Пункт 4",
+                        "Пункт 1",
+                        "Пункт 2sades",
+                        "Пункт 3sd",
+                        "Пункт 4sd",
+                    ],
+                };
+            },
+            methods: {
+                click() {
+                    alert(1);
+                    this.message += " clicked!";
+                },
+            },
+        });
+        // console.dir(app);
+        app.mount("#app");
+    </script>
+    <!-- Search -->
+    <script defer type="text/javascript">
+        document.querySelector("#search-nav").oninput = function () {
+            let val = this.value.trim();
+            let elasticItems = document.querySelectorAll(".--elastic li");
+            if (val != "") {
+                elasticItems.forEach(function (elem) {
+                    if (elem.innerText.search(val) == -1) {
+                        elem.classList.add("--hide");
+                    } else {
+                        elem.classList.remove("--hide");
+                    }
+                });
+            } else {
+                elasticItems.forEach(function (elem) {
+                    elem.classList.remove("--hide");
+                });
+            }
+        };
+        // ===============================================
+        let togButton = document.querySelector("#toggle-bg");
+        togButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (localStorage.getItem("theme") === "night-theme") {
+                localStorage.removeItem("theme");
+            } else {
+                localStorage.setItem("theme", "night-theme");
+            }
+            addDarkClass();
+        });
+        // ==================================================
+        const burgerBtn = document.querySelector(".--burger");
+        const asideMenu = document.querySelector(".--aside");
+        burgerBtn.addEventListener("click", () => {
+            burgerBtn.classList.toggle("active");
+            asideMenu.classList.toggle("active");
+        });
+        // ==================================================
+        let title = document.querySelectorAll("h2.h1");
+        let ul = document.querySelector(".--elastic");
+        let li = ul.querySelectorAll("a");
 
-		let sections = document.querySelectorAll("section");
-		function ulSorted(type = "a") {
-			let res = [];
-			let res2 = [];
-			for (let i = 0; i < li.length; i++) {
-				res[i] = li[i].textContent;
-				switch (type) {
-					case "a":
-						res.sort(function (e1, e2) {
-							return e1 < e2 ? -1 : 1;
-						});
-						break;
-					case "z":
-						res.sort(function (e1, e2) {
-							return e1 > e2 ? -1 : 1;
-						});
-						break;
-				}
-			}
-			for (let i = 0; i < res.length; i++) {
-				li[i].innerText = res[i];
-				li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
-			}
-			for (let i = 0; i < title.length; i++) {
-				res2[i] = title[i].textContent;
-			}
-			for (let i = 0; i < sections.length; i++) {
-				sections[i].id = `${res2[i]
-					.replace(/\W|_/g, "")
-					.trim()
-					.toLowerCase()}`;
-			}
-		}
-		ulSorted("a");
-		if (li.length > 0 && sections.length > 0) {
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							li.forEach((link) => {
-								link.classList.toggle(
-									"link--active",
-									link.getAttribute("href").replace("#", "") ===
-									entry.target.id
-								);
-							});
-						}
-					});
-				},
-				{ threshold: 0.33 }
-			);
+        let sections = document.querySelectorAll("section");
+        function ulSorted(type = "a") {
+            let res = [];
+            let res2 = [];
+            for (let i = 0; i < li.length; i++) {
+                res[i] = li[i].textContent;
+                switch (type) {
+                    case "a":
+                        res.sort(function (e1, e2) {
+                            return e1 < e2 ? -1 : 1;
+                        });
+                        break;
+                    case "z":
+                        res.sort(function (e1, e2) {
+                            return e1 > e2 ? -1 : 1;
+                        });
+                        break;
+                }
+            }
+            for (let i = 0; i < res.length; i++) {
+                li[i].innerText = res[i];
+                li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
+            }
+            for (let i = 0; i < title.length; i++) {
+                res2[i] = title[i].textContent;
+            }
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].id = `${res2[i]
+                    .replace(/\W|_/g, "")
+                    .trim()
+                    .toLowerCase()}`;
+            }
+        }
+        ulSorted("a");
+        if (li.length > 0 && sections.length > 0) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            li.forEach((link) => {
+                                link.classList.toggle(
+                                    "link--active",
+                                    link.getAttribute("href").replace("#", "") ===
+                                    entry.target.id
+                                );
+                            });
+                        }
+                    });
+                },
+                { threshold: 0.33 }
+            );
 
-			sections.forEach((section) => observer.observe(section));
-		}
-		ul.addEventListener("click", (event) => {
-			if (event.target.classList.contains("--link")) {
-				event.preventDefault();
-				const id = event.target.getAttribute("href").replace("#", "");
-				window.scrollTo({
-					top:
-						document.getElementById(id).offsetTop -
-						document.querySelector("header").offsetHeight,
-					behavior: "smooth",
-				});
-			}
-		});
-	</script>
-	<!-- =========================== -->
-	<script src="js/vendors.js"></script>
+            sections.forEach((section) => observer.observe(section));
+        }
+        ul.addEventListener("click", (event) => {
+            if (event.target.classList.contains("--link")) {
+                event.preventDefault();
+                const id = event.target.getAttribute("href").replace("#", "");
+                window.scrollTo({
+                    top:
+                        document.getElementById(id).offsetTop -
+                        document.querySelector("header").offsetHeight,
+                    behavior: "smooth",
+                });
+            }
+        });
+    </script>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
 </body>
 
