@@ -46,6 +46,34 @@
             z-index: 90;
         }
     }
+    .qela-light {
+        * {
+            color: $info;
+        }
+        .ql-previews {
+            pointer-events: none;
+            border-color: $info-200;
+            background-color: $info-100;
+            img {
+                opacity: 0.4;
+            }
+            &.ql-icon {
+                border-color: transparent;
+                &::before {
+                    color: $info;
+                }
+            }
+            &.ql-text {
+                color: $secondary-400;
+            }
+        }
+        .qela-btn-group {
+            .btn {
+                color: $info !important;
+                background-color: transparent !important;
+            }
+        }
+    }
 }
 
 .qela-tag {
