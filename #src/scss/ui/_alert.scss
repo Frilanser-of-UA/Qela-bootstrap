@@ -4,14 +4,17 @@
     letter-spacing: 0.2px;
     border-width: 1px;
     border-style: solid;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     &.alert {
         span {
             &[class*="ic-"] {
                 position: absolute;
-                left: 16px;
+                left: 1rem;
                 top: 1rem;
                 &::before {
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
             }
         }
@@ -73,6 +76,10 @@
         position: absolute;
         top: 16px;
         right: 16px;
+        font-size: 1rem;
         opacity: 1;
+        &.small {
+            padding: 0;
+        }
     }
 }
