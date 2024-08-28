@@ -1,422 +1,365 @@
 <!DOCTYPE html>
 <html lang="ua">
-@@include('_head.html',{ "title":"Components" })
+  @@include('_head.html',{ "title":"Components" })
 
-<body>
+  <body>
     <script>
-        function addDarkClass() {
-            try {
-                if (localStorage.getItem("theme") === "night-theme") {
-                    document.body.classList.add("night-theme");
-                } else {
-                    document.body.classList.remove("night-theme");
-                }
-            } catch (err) { }
-        }
-        addDarkClass();
+      function addDarkClass() {
+        try {
+          if (localStorage.getItem("theme") === "night-theme") {
+            document.body.classList.add("night-theme");
+          } else {
+            document.body.classList.remove("night-theme");
+          }
+        } catch (err) {}
+      }
+      addDarkClass();
     </script>
     <style>
-        html,
-        body {
-            scroll-behavior: smooth;
-        }
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
 
-        .--hide {
-            display: none;
-        }
+      .--hide {
+        display: none;
+      }
 
-        body,
-        header,
+      body,
+      header,
+      aside.--aside {
+        transition: background-color 0.25s ease 0s;
+      }
+
+      body.night-theme {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      body.night-theme header {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+      }
+
+      body.night-theme aside.--aside {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+      }
+
+      body.night-theme aside.--aside a {
+        color: #fff;
+      }
+
+      .night-theme #toggle-bg {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .night-theme #toggle-bg::before {
+        content: "\e95d";
+        color: #fff;
+      }
+
+      .night-theme .--elastic li::before {
+        background-color: #9188ff;
+      }
+
+      aside.--aside {
+        width: 220px;
+        height: 100vh;
+        z-index: 10;
+        padding-top: 65px;
+        overflow: auto;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      aside.--aside a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .btn.--burger {
+        display: none;
+      }
+
+      .btn.--burger span {
+        width: 100%;
+        height: 3px;
+        background-color: #ffe000;
+      }
+
+      @media (max-width: 1240px) {
         aside.--aside {
-            transition: background-color 0.25s ease 0s;
+          left: 150%;
         }
 
-        body.night-theme {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        body.night-theme header {
-            background-color: rgb(0, 0, 0);
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        body.night-theme aside.--aside {
-            background-color: rgb(0, 0, 0);
-            color: #fff;
-        }
-
-        body.night-theme aside.--aside a {
-            color: #fff;
-        }
-
-        .night-theme #toggle-bg {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .night-theme #toggle-bg::before {
-            content: "\e95d";
-            color: #fff;
-        }
-
-        .night-theme .--elastic li::before {
-            background-color: #9188ff;
-        }
-
-        aside.--aside {
-            width: 220px;
-            height: 100vh;
-            z-index: 10;
-            padding-top: 65px;
-            overflow: auto;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        aside.--aside a {
-            color: #000000;
-            text-decoration: none;
-            font-size: 14px;
+        aside.--aside.active {
+          left: 0;
         }
 
         .btn.--burger {
-            display: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          gap: 8px;
+          padding: 2px;
+          margin-left: 4px;
         }
+      }
 
-        .btn.--burger span {
-            width: 100%;
-            height: 3px;
-            background-color: #ffe000;
-        }
+      .--elastic {
+        counter-reset: olcounter;
+      }
 
-        @media (max-width: 1240px) {
-            aside.--aside {
-                left: 150%;
-            }
+      .--elastic li {
+        counter-increment: olcounter;
+        list-style: none;
+        position: relative;
+        padding-left: 25px;
+      }
 
-            aside.--aside.active {
-                left: 0;
-            }
+      .--elastic li::before {
+        content: counters(olcounter, ".") "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ffe000;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        font-size: 11px;
+        line-height: 1;
+        transition: background-color 0.3s ease 0s;
+      }
 
-            .btn.--burger {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 36px;
-                height: 36px;
-                gap: 8px;
-                padding: 2px;
-                margin-left: 4px;
-            }
-        }
+      .--elastic a {
+        transition: all 0.3s ease 0s;
+      }
 
-        .--elastic {
-            counter-reset: olcounter;
-        }
-
-        .--elastic li {
-            counter-increment: olcounter;
-            list-style: none;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .--elastic li::before {
-            content: counters(olcounter, ".") "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #ffe000;
-            left: 0;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: inherit;
-            font-size: 11px;
-            line-height: 1;
-            transition: background-color 0.3s ease 0s;
-        }
-
-        .--elastic a {
-            transition: all 0.3s ease 0s;
-        }
-
-        /* .link--active{
+      /* .link--active{
             color: red !important;
         } */
     </style>
     <div id="app" v-cloak>
-        <header class="p-1 h-auto">
-            <div class="container">
-                <div class="row g-1 align-items-center">
-                    <div class="col-auto">
-                        <a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
-                            <img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
-                        </a>
-                    </div>
-                    <div class="col">
-                        <div class="p-2">
-                            <input type="search" class="form-control" id="search-nav" placeholder="Search component" />
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
-                    </div>
-                    <div class="col-auto">
-                        <button class="btn --burger">
-                            <span></span><span></span><span></span>
-                        </button>
-                    </div>
-                </div>
+      <header class="p-1 h-auto">
+        <div class="container">
+          <div class="row g-1 align-items-center">
+            <div class="col-auto">
+              <a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
+                <img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
+              </a>
             </div>
-        </header>
-        <main class="qela-body">
-            <!-- Навигация (якоря)-->
-            <aside class="fixed-top --aside">
-                <h4 class="px-2 my-2">Components</h4>
-                <nav class="ps-3">
-                    <ol class="d-flex flex-column gap-2 ps-0 --elastic">
-                        <li><a class="--link" href="#">buttons</a></li>
-                        <li><a class="--link" href="#">text field</a></li>
-                        <li><a class="--link" href="#">checkbox</a></li>
-                        <li><a class="--link" href="#">radiobutton</a></li>
-                        <li><a class="--link" href="#">tooltip</a></li>
-                        <li><a class="--link" href="#">multi-select</a></li>
-                        <li><a class="--link" href="#">datapiker</a></li>
-                        <li><a class="--link" href="#">range</a></li>
-                        <li><a class="--link" href="#">dropdown</a></li>
-                        <li><a class="--link" href="#">badge</a></li>
-                        <li><a class="--link" href="#">pagination</a></li>
-                        <li><a class="--link" href="#">alert</a></li>
-                        <li><a class="--link" href="#">logos</a></li>
-                        <li><a class="--link" href="#">items</a></li>
-                        <li><a class="--link" href="#">labels</a></li>
-                        <li><a class="--link" href="#">modals</a></li>
-                        <li><a class="--link" href="#">map-pin</a></li>
-                        <li><a class="--link" href="#">progress</a></li>
-                        <li><a class="--link" href="#">avatars</a></li>
-                        <li><a class="--link" href="#">lists</a></li>
-                        <li><a class="--link" href="#">description</a></li>
-                        <li><a class="--link" href="#">img-preview</a></li>
-                        <li><a class="--link" href="#">cards</a></li>
-                        <li><a class="--link" href="#">qr-code</a></li>
-                        <li><a class="--link" href="#">status</a></li>
-                        <li><a class="--link" href="#">toasts</a></li>
-                        <li><a class="--link" href="#">dialog</a></li>
-                        <li><a class="--link" href="#">telents</a></li>
-                        <li><a class="--link" href="#">toolbar</a></li>
-                        <li><a class="--link" href="#">rating</a></li>
-                        <li><a class="--link" href="#">orden</a></li>
-                        <li><a class="--link" href="#">icon-svg</a></li>
-                        <li><a class="--link" href="#">breadcrumb</a></li>
-                        <li><a class="--link" href="#">under</a></li>
-                        <li><a class="--link" href="#">subscription</a></li>
-                        <li><a class="--link" href="#">delimiter</a></li>
-                        <li><a class="--link" href="#">accordion</a></li>
-                        <li><a class="--link" href="#">icons</a></li>
-                        <li><a class="--link" href="#">img</a></li>
-                        <!-- <li><a class="--link" href="#">slider</a></li> -->
-                    </ol>
-                </nav>
-            </aside>
-            <!-- Навигация (якоря) -->
-            <div style="max-width: 1024px" class="mx-auto px-3">
-                <div class="mt-3 pb-3 d-flex flex-column gap-3">
-                    @@include('./components/_buttons.html',{})
-                    @@include('./components/_text-fild.html',{})
-                    @@include('./components/_multi-select.html',{})
-                    @@include('./components/_datapiker.html',{})
-                    @@include('./components/_checkbox.html',{})
-                    @@include('./components/_radiobutton.html',{})
-                    @@include('./components/_range.html',{})
-                    @@include('./components/_accordion.html',{})
-                    @@include('./components/_alert.html',{})цц
-                    @@include('./components/_avatars.html',{})
-                    @@include('./components/_badge.html',{})
-                    @@include('./components/_breadcrumb.html',{})
-                    @@include('./components/_card.html',{})
-                    @@include('./components/_delimiter.html',{})
-                    @@include('./components/_description.html',{})
-                    @@include('./components/_dialog.html',{})
-                    @@include('./components/_dropdown.html',{})
-                    @@include('./components/_icons.html',{})
-                    @@include('./components/_icon-svg.html',{})
-                    @@include('./components/_img.html',{})
-                    @@include('./components/_img-preview.html',{})
-                    @@include('./components/_items.html',{})
-                    @@include('./components/_labels.html',{})
-                    @@include('./components/_list.html',{})
-                    @@include('./components/_logo.html',{})
-                    @@include('./components/_map.html',{})
-                    @@include('./components/_modals.html',{})
-                    @@include('./components/_orden.html',{})
-                    @@include('./components/_pagination.html',{})
-                    @@include('./components/_progress.html',{})
-                    @@include('./components/_qr.html',{})
-                    @@include('./components/_rating.html',{})
-                    <!-- @@include('./components/_sliders.html',{}) -->
-                    @@include('./components/_status.html',{})
-                    @@include('./components/_subscription.html',{})
-                    @@include('./components/_telents.html',{})
-                    @@include('./components/_toasts.html',{})
-                    @@include('./components/_toolbar.html',{})
-                    @@include('./components/_tooltip.html',{})
-                    @@include('./components/_under.html',{})
-                </div>
+            <div class="col">
+              <div class="p-2">
+                <input type="search" class="form-control" id="search-nav" placeholder="Search component" />
+              </div>
             </div>
-        </main>
+            <div class="col-auto">
+              <a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
+            </div>
+            <div class="col-auto">
+              <button class="btn --burger"><span></span><span></span><span></span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="qela-body">
+        <!-- Навигация (якоря)-->
+        <aside class="fixed-top --aside">
+          <h4 class="px-2 my-2">Components</h4>
+          <nav class="ps-3">
+            <ol class="d-flex flex-column gap-2 ps-0 --elastic">
+              <li><a class="--link" href="#">buttons</a></li>
+              <li><a class="--link" href="#">text field</a></li>
+              <li><a class="--link" href="#">checkbox</a></li>
+              <li><a class="--link" href="#">radiobutton</a></li>
+              <li><a class="--link" href="#">tooltip</a></li>
+              <li><a class="--link" href="#">multi-select</a></li>
+              <li><a class="--link" href="#">datapiker</a></li>
+              <li><a class="--link" href="#">range</a></li>
+              <li><a class="--link" href="#">dropdown</a></li>
+              <li><a class="--link" href="#">badge</a></li>
+              <li><a class="--link" href="#">pagination</a></li>
+              <li><a class="--link" href="#">alert</a></li>
+              <li><a class="--link" href="#">logos</a></li>
+              <li><a class="--link" href="#">items</a></li>
+              <li><a class="--link" href="#">labels</a></li>
+              <li><a class="--link" href="#">modals</a></li>
+              <li><a class="--link" href="#">map-pin</a></li>
+              <li><a class="--link" href="#">progress</a></li>
+              <li><a class="--link" href="#">avatars</a></li>
+              <li><a class="--link" href="#">lists</a></li>
+              <li><a class="--link" href="#">description</a></li>
+              <li><a class="--link" href="#">img-preview</a></li>
+              <li><a class="--link" href="#">cards</a></li>
+              <li><a class="--link" href="#">qr-code</a></li>
+              <li><a class="--link" href="#">status</a></li>
+              <li><a class="--link" href="#">toasts</a></li>
+              <li><a class="--link" href="#">dialog</a></li>
+              <li><a class="--link" href="#">telents</a></li>
+              <li><a class="--link" href="#">toolbar</a></li>
+              <li><a class="--link" href="#">rating</a></li>
+              <li><a class="--link" href="#">orden</a></li>
+              <li><a class="--link" href="#">icon-svg</a></li>
+              <li><a class="--link" href="#">breadcrumb</a></li>
+              <li><a class="--link" href="#">under</a></li>
+              <li><a class="--link" href="#">subscription</a></li>
+              <li><a class="--link" href="#">delimiter</a></li>
+              <li><a class="--link" href="#">accordion</a></li>
+              <li><a class="--link" href="#">icons</a></li>
+              <li><a class="--link" href="#">img</a></li>
+              <!-- <li><a class="--link" href="#">slider</a></li> -->
+            </ol>
+          </nav>
+        </aside>
+        <!-- Навигация (якоря) -->
+        <div style="max-width: 1024px" class="mx-auto px-3">
+          <div class="mt-3 pb-3 d-flex flex-column gap-3">
+            @@include('./components/_buttons.html',{}) @@include('./components/_text-fild.html',{}) @@include('./components/_multi-select.html',{}) @@include('./components/_datapiker.html',{}) @@include('./components/_checkbox.html',{}) @@include('./components/_radiobutton.html',{}) @@include('./components/_range.html',{}) @@include('./components/_accordion.html',{}) @@include('./components/_alert.html',{})цц @@include('./components/_avatars.html',{}) @@include('./components/_badge.html',{}) @@include('./components/_breadcrumb.html',{}) @@include('./components/_card.html',{}) @@include('./components/_delimiter.html',{}) @@include('./components/_description.html',{}) @@include('./components/_dialog.html',{}) @@include('./components/_dropdown.html',{})
+            @@include('./components/_icons.html',{}) @@include('./components/_icon-svg.html',{}) @@include('./components/_img.html',{}) @@include('./components/_img-preview.html',{}) @@include('./components/_items.html',{}) @@include('./components/_labels.html',{}) @@include('./components/_list.html',{}) @@include('./components/_logo.html',{}) @@include('./components/_map.html',{}) @@include('./components/_modals.html',{}) @@include('./components/_orden.html',{}) @@include('./components/_pagination.html',{}) @@include('./components/_progress.html',{}) @@include('./components/_qr.html',{}) @@include('./components/_rating.html',{})
+            <!-- @@include('./components/_sliders.html',{}) -->
+            @@include('./components/_status.html',{}) @@include('./components/_subscription.html',{}) @@include('./components/_telents.html',{}) @@include('./components/_toasts.html',{}) @@include('./components/_toolbar.html',{}) @@include('./components/_tooltip.html',{}) @@include('./components/_under.html',{})
+          </div>
+        </div>
+      </main>
     </div>
-    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-    <script type="text/javascript"
-        src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-    <script type="text/javascript">
-        let app = Vue.createApp({
-            components: {
-                "v-date-picker": VueDatePicker,
-                "v-multi-select": VueMultiselect.default,
-            },
-            data() {
-                return {
-                    date: [new Date(), new Date()],
-                    value1: "",
-                    value2: "",
-                    value3: "",
-                    value4: "",
-                    options: [
-                        "Пункт 1",
-                        "Пункт 2",
-                        "Пункт 3",
-                        "Пункт 4",
-                        "Пункт 1",
-                        "Пункт 2sades",
-                        "Пункт 3sd",
-                        "Пункт 4sd",
-                    ],
-                };
-            },
-            methods: {
-                click() {
-                    alert(1);
-                    this.message += " clicked!";
-                },
-            },
-        });
-        // console.dir(app);
-        app.mount("#app");
-    </script>
     <!-- Search -->
     <script defer type="text/javascript">
-        document.querySelector("#search-nav").oninput = function () {
-            let val = this.value.trim();
-            let elasticItems = document.querySelectorAll(".--elastic li");
-            if (val != "") {
-                elasticItems.forEach(function (elem) {
-                    if (elem.innerText.search(val) == -1) {
-                        elem.classList.add("--hide");
-                    } else {
-                        elem.classList.remove("--hide");
-                    }
-                });
+      document.querySelector("#search-nav").oninput = function () {
+        let val = this.value.trim();
+        let elasticItems = document.querySelectorAll(".--elastic li");
+        if (val != "") {
+          elasticItems.forEach(function (elem) {
+            if (elem.innerText.search(val) == -1) {
+              elem.classList.add("--hide");
             } else {
-                elasticItems.forEach(function (elem) {
-                    elem.classList.remove("--hide");
-                });
+              elem.classList.remove("--hide");
             }
-        };
-        // ===============================================
-        let togButton = document.querySelector("#toggle-bg");
-        togButton.addEventListener("click", (event) => {
-            event.preventDefault();
-            if (localStorage.getItem("theme") === "night-theme") {
-                localStorage.removeItem("theme");
-            } else {
-                localStorage.setItem("theme", "night-theme");
-            }
-            addDarkClass();
-        });
-        // ==================================================
-        const burgerBtn = document.querySelector(".--burger");
-        const asideMenu = document.querySelector(".--aside");
-        burgerBtn.addEventListener("click", () => {
-            burgerBtn.classList.toggle("active");
-            asideMenu.classList.toggle("active");
-        });
-        // ==================================================
-        let title = document.querySelectorAll("h2.h1");
-        let ul = document.querySelector(".--elastic");
-        let li = ul.querySelectorAll("a");
-
-        let sections = document.querySelectorAll("section");
-        function ulSorted(type = "a") {
-            let res = [];
-            let res2 = [];
-            for (let i = 0; i < li.length; i++) {
-                res[i] = li[i].textContent;
-                switch (type) {
-                    case "a":
-                        res.sort(function (e1, e2) {
-                            return e1 < e2 ? -1 : 1;
-                        });
-                        break;
-                    case "z":
-                        res.sort(function (e1, e2) {
-                            return e1 > e2 ? -1 : 1;
-                        });
-                        break;
-                }
-            }
-            for (let i = 0; i < res.length; i++) {
-                li[i].innerText = res[i];
-                li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
-            }
-            for (let i = 0; i < title.length; i++) {
-                res2[i] = title[i].textContent;
-            }
-            for (let i = 0; i < sections.length; i++) {
-                sections[i].id = `${res2[i]
-                    .replace(/\W|_/g, "")
-                    .trim()
-                    .toLowerCase()}`;
-            }
+          });
+        } else {
+          elasticItems.forEach(function (elem) {
+            elem.classList.remove("--hide");
+          });
         }
-        ulSorted("a");
-        if (li.length > 0 && sections.length > 0) {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            li.forEach((link) => {
-                                link.classList.toggle(
-                                    "link--active",
-                                    link.getAttribute("href").replace("#", "") ===
-                                    entry.target.id
-                                );
-                            });
-                        }
-                    });
-                },
-                { threshold: 0.33 }
-            );
-
-            sections.forEach((section) => observer.observe(section));
+      };
+      // ===============================================
+      let togButton = document.querySelector("#toggle-bg");
+      togButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (localStorage.getItem("theme") === "night-theme") {
+          localStorage.removeItem("theme");
+        } else {
+          localStorage.setItem("theme", "night-theme");
         }
-        ul.addEventListener("click", (event) => {
-            if (event.target.classList.contains("--link")) {
-                event.preventDefault();
-                const id = event.target.getAttribute("href").replace("#", "");
-                window.scrollTo({
-                    top:
-                        document.getElementById(id).offsetTop -
-                        document.querySelector("header").offsetHeight,
-                    behavior: "smooth",
+        addDarkClass();
+      });
+      // ==================================================
+      const burgerBtn = document.querySelector(".--burger");
+      const asideMenu = document.querySelector(".--aside");
+      burgerBtn.addEventListener("click", () => {
+        burgerBtn.classList.toggle("active");
+        asideMenu.classList.toggle("active");
+      });
+      // ==================================================
+      let title = document.querySelectorAll("h2.h1");
+      let ul = document.querySelector(".--elastic");
+      let li = ul.querySelectorAll("a");
+
+      let sections = document.querySelectorAll("section");
+      function ulSorted(type = "a") {
+        let res = [];
+        let res2 = [];
+        for (let i = 0; i < li.length; i++) {
+          res[i] = li[i].textContent;
+          switch (type) {
+            case "a":
+              res.sort(function (e1, e2) {
+                return e1 < e2 ? -1 : 1;
+              });
+              break;
+            case "z":
+              res.sort(function (e1, e2) {
+                return e1 > e2 ? -1 : 1;
+              });
+              break;
+          }
+        }
+        for (let i = 0; i < res.length; i++) {
+          li[i].innerText = res[i];
+          li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
+        }
+        for (let i = 0; i < title.length; i++) {
+          res2[i] = title[i].textContent;
+        }
+        for (let i = 0; i < sections.length; i++) {
+          sections[i].id = `${res2[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
+        }
+      }
+      ulSorted("a");
+      if (li.length > 0 && sections.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                li.forEach((link) => {
+                  link.classList.toggle("link--active", link.getAttribute("href").replace("#", "") === entry.target.id);
                 });
-            }
-        });
+              }
+            });
+          },
+          { threshold: 0.33 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      }
+      ul.addEventListener("click", (event) => {
+        if (event.target.classList.contains("--link")) {
+          event.preventDefault();
+          const id = event.target.getAttribute("href").replace("#", "");
+          window.scrollTo({
+            top: document.getElementById(id).offsetTop - document.querySelector("header").offsetHeight,
+            behavior: "smooth",
+          });
+        }
+      });
     </script>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+      let app = Vue.createApp({
+        components: {
+          "v-date-picker": VueDatePicker,
+          "v-multi-select": VueMultiselect.default,
+        },
+        data() {
+          return {
+            date: [new Date(), new Date()],
+            value1: "",
+            value2: "",
+            value3: "",
+            value4: "",
+            options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
+          };
+        },
+        methods: {
+          click() {
+            alert(1);
+            this.message += " clicked!";
+          },
+        },
+      });
+      // console.dir(app);
+      app.mount("#app");
+    </script>
+
     <!-- =========================== -->
     @@include('_js.html',{})
-</body>
-
+  </body>
 </html>
