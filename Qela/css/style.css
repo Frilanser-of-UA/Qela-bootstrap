@@ -14787,30 +14787,6 @@ input::-webkit-inner-spin-button {
 .qela-modal .modal-body {
   max-height: 565px;
 }
-.qela-modal .modal-header .btn-close {
-  padding: 7px;
-  margin: 0;
-  color: #adb5bd;
-  transition: color 0.3s ease 0s;
-}
-@media (any-hover: hover) {
-  .qela-modal .modal-header .btn-close:hover {
-    color: #000;
-  }
-}
-
-.qela-modal-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 1rem 1rem 1rem 3rem;
-}
-.qela-modal-nav [class^=ic-],
-.qela-modal-nav [class*=ic-] {
-  position: absolute;
-  left: 1rem;
-}
 
 .qela-modal-empty {
   margin: 0;
