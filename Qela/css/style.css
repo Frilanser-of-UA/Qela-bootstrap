@@ -13090,6 +13090,7 @@ body {
 
 .btn-sm, .btn-group-sm > .btn {
   gap: 2px;
+  font-weight: 400;
 }
 .btn-sm[class^=ic-]:before, .btn-group-sm > [class^=ic-].btn:before, .btn-sm[class*=ic-]:before, .btn-group-sm > [class*=ic-].btn:before {
   font-size: 14px;
@@ -14593,6 +14594,8 @@ input::-webkit-inner-spin-button {
 }
 .qela-alert.custom {
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 .qela-alert.custom.alert-secondary {
   border-color: transparent;
@@ -14603,6 +14606,21 @@ input::-webkit-inner-spin-button {
 }
 .qela-alert.custom span[class*=ic-]::before {
   font-size: 38px;
+}
+.qela-alert.column {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.qela-alert.column > div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qela-alert.column > div span[class*=ic-] {
+  position: static;
 }
 .qela-alert.alert-secondary {
   background-color: #f4f3ff;
@@ -14625,12 +14643,16 @@ input::-webkit-inner-spin-button {
   border-color: #79d891;
 }
 .qela-alert.small {
-  padding: 0.5rem 2.25rem;
+  padding: 0.5rem 2rem;
 }
 .qela-alert.small span[class^=ic-],
 .qela-alert.small span [class*=ic-] {
   left: 12px;
   top: 0.5rem;
+}
+.qela-alert.small .btn-close {
+  top: 0.5rem;
+  right: 0.5rem;
 }
 .qela-alert .btn-close {
   position: absolute;

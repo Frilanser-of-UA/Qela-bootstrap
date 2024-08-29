@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
+	<head>
 	<title>Components</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
@@ -9,226 +9,226 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-  <body>
-    <script>
-      function addDarkClass() {
-        try {
-          if (localStorage.getItem("theme") === "night-theme") {
-            document.body.classList.add("night-theme");
-          } else {
-            document.body.classList.remove("night-theme");
-          }
-        } catch (err) {}
-      }
-      addDarkClass();
-    </script>
-    <style>
-      html,
-      body {
-        scroll-behavior: smooth;
-      }
+	<body>
+		<script>
+			function addDarkClass() {
+				try {
+					if (localStorage.getItem("theme") === "night-theme") {
+						document.body.classList.add("night-theme");
+					} else {
+						document.body.classList.remove("night-theme");
+					}
+				} catch (err) {}
+			}
+			addDarkClass();
+		</script>
+		<style>
+			html,
+			body {
+				scroll-behavior: smooth;
+			}
 
-      .--hide {
-        display: none;
-      }
+			.--hide {
+				display: none;
+			}
 
-      body,
-      header,
-      aside.--aside {
-        transition: background-color 0.25s ease 0s;
-      }
+			body,
+			header,
+			aside.--aside {
+				transition: background-color 0.25s ease 0s;
+			}
 
-      body.night-theme {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+			body.night-theme {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
 
-      body.night-theme header {
-        background-color: rgb(0, 0, 0);
-        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-      }
+			body.night-theme header {
+				background-color: rgb(0, 0, 0);
+				box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+			}
 
-      body.night-theme aside.--aside {
-        background-color: rgb(0, 0, 0);
-        color: #fff;
-      }
+			body.night-theme aside.--aside {
+				background-color: rgb(0, 0, 0);
+				color: #fff;
+			}
 
-      body.night-theme aside.--aside a {
-        color: #fff;
-      }
+			body.night-theme aside.--aside a {
+				color: #fff;
+			}
 
-      .night-theme #toggle-bg {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+			.night-theme #toggle-bg {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
 
-      .night-theme #toggle-bg::before {
-        content: "\e95d";
-        color: #fff;
-      }
+			.night-theme #toggle-bg::before {
+				content: "\e95d";
+				color: #fff;
+			}
 
-      .night-theme .--elastic li::before {
-        background-color: #9188ff;
-      }
+			.night-theme .--elastic li::before {
+				background-color: #9188ff;
+			}
 
-      aside.--aside {
-        width: 220px;
-        height: 100vh;
-        z-index: 10;
-        padding-top: 65px;
-        overflow: auto;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-      }
+			aside.--aside {
+				width: 220px;
+				height: 100vh;
+				z-index: 10;
+				padding-top: 65px;
+				overflow: auto;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+			}
 
-      aside.--aside a {
-        color: #000000;
-        text-decoration: none;
-        font-size: 14px;
-      }
+			aside.--aside a {
+				color: #000000;
+				text-decoration: none;
+				font-size: 14px;
+			}
 
-      .btn.--burger {
-        display: none;
-      }
+			.btn.--burger {
+				display: none;
+			}
 
-      .btn.--burger span {
-        width: 100%;
-        height: 3px;
-        background-color: #ffe000;
-      }
+			.btn.--burger span {
+				width: 100%;
+				height: 3px;
+				background-color: #ffe000;
+			}
 
-      @media (max-width: 1240px) {
-        aside.--aside {
-          left: 150%;
-        }
+			@media (max-width: 1240px) {
+				aside.--aside {
+					left: 150%;
+				}
 
-        aside.--aside.active {
-          left: 0;
-        }
+				aside.--aside.active {
+					left: 0;
+				}
 
-        .btn.--burger {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 36px;
-          height: 36px;
-          gap: 8px;
-          padding: 2px;
-          margin-left: 4px;
-        }
-      }
+				.btn.--burger {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					width: 36px;
+					height: 36px;
+					gap: 8px;
+					padding: 2px;
+					margin-left: 4px;
+				}
+			}
 
-      .--elastic {
-        counter-reset: olcounter;
-      }
+			.--elastic {
+				counter-reset: olcounter;
+			}
 
-      .--elastic li {
-        counter-increment: olcounter;
-        list-style: none;
-        position: relative;
-        padding-left: 25px;
-      }
+			.--elastic li {
+				counter-increment: olcounter;
+				list-style: none;
+				position: relative;
+				padding-left: 25px;
+			}
 
-      .--elastic li::before {
-        content: counters(olcounter, ".") "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #ffe000;
-        left: 0;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: inherit;
-        font-size: 11px;
-        line-height: 1;
-        transition: background-color 0.3s ease 0s;
-      }
+			.--elastic li::before {
+				content: counters(olcounter, ".") "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #ffe000;
+				left: 0;
+				top: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: inherit;
+				font-size: 11px;
+				line-height: 1;
+				transition: background-color 0.3s ease 0s;
+			}
 
-      .--elastic a {
-        transition: all 0.3s ease 0s;
-      }
+			.--elastic a {
+				transition: all 0.3s ease 0s;
+			}
 
-      /* .link--active{
+			/* .link--active{
             color: red !important;
         } */
-    </style>
-    <div id="app" v-cloak>
-      <header class="p-1 h-auto">
-        <div class="container">
-          <div class="row g-1 align-items-center">
-            <div class="col-auto">
-              <a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
-                <img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
-              </a>
-            </div>
-            <div class="col">
-              <div class="p-2">
-                <input type="search" class="form-control" id="search-nav" placeholder="Search component" />
-              </div>
-            </div>
-            <div class="col-auto">
-              <a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
-            </div>
-            <div class="col-auto">
-              <button class="btn --burger"><span></span><span></span><span></span></button>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main class="qela-body">
-        <!-- Навигация (якоря)-->
-        <aside class="fixed-top --aside">
-          <h4 class="px-2 my-2">Components</h4>
-          <nav class="ps-3">
-            <ol class="d-flex flex-column gap-2 ps-0 --elastic">
-              <li><a class="--link" href="#">buttons</a></li>
-              <li><a class="--link" href="#">text field</a></li>
-              <li><a class="--link" href="#">checkbox</a></li>
-              <li><a class="--link" href="#">radiobutton</a></li>
-              <li><a class="--link" href="#">tooltip</a></li>
-              <li><a class="--link" href="#">multi-select</a></li>
-              <li><a class="--link" href="#">datapiker</a></li>
-              <li><a class="--link" href="#">range</a></li>
-              <li><a class="--link" href="#">dropdown</a></li>
-              <li><a class="--link" href="#">badge</a></li>
-              <li><a class="--link" href="#">pagination</a></li>
-              <li><a class="--link" href="#">alert</a></li>
-              <li><a class="--link" href="#">logos</a></li>
-              <li><a class="--link" href="#">items</a></li>
-              <li><a class="--link" href="#">labels</a></li>
-              <li><a class="--link" href="#">modals</a></li>
-              <li><a class="--link" href="#">map-pin</a></li>
-              <li><a class="--link" href="#">progress</a></li>
-              <li><a class="--link" href="#">avatars</a></li>
-              <li><a class="--link" href="#">lists</a></li>
-              <li><a class="--link" href="#">description</a></li>
-              <li><a class="--link" href="#">img-preview</a></li>
-              <li><a class="--link" href="#">cards</a></li>
-              <li><a class="--link" href="#">qr-code</a></li>
-              <li><a class="--link" href="#">status</a></li>
-              <li><a class="--link" href="#">toasts</a></li>
-              <li><a class="--link" href="#">dialog</a></li>
-              <li><a class="--link" href="#">telents</a></li>
-              <li><a class="--link" href="#">toolbar</a></li>
-              <li><a class="--link" href="#">rating</a></li>
-              <li><a class="--link" href="#">orden</a></li>
-              <li><a class="--link" href="#">icon-svg</a></li>
-              <li><a class="--link" href="#">breadcrumb</a></li>
-              <li><a class="--link" href="#">under</a></li>
-              <li><a class="--link" href="#">subscription</a></li>
-              <li><a class="--link" href="#">delimiter</a></li>
-              <li><a class="--link" href="#">accordion</a></li>
-              <li><a class="--link" href="#">icons</a></li>
-              <li><a class="--link" href="#">img</a></li>
-              <!-- <li><a class="--link" href="#">slider</a></li> -->
-            </ol>
-          </nav>
-        </aside>
-        <!-- Навигация (якоря) -->
-        <div style="max-width: 1024px" class="mx-auto px-3">
-          <div class="mt-3 pb-3 d-flex flex-column gap-3">
-            <!-- FIX Buttons  -->
+		</style>
+		<div id="app" v-cloak>
+			<header class="p-1 h-auto">
+				<div class="container">
+					<div class="row g-1 align-items-center">
+						<div class="col-auto">
+							<a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
+								<img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
+							</a>
+						</div>
+						<div class="col">
+							<div class="p-2">
+								<input type="search" class="form-control" id="search-nav" placeholder="Search component" />
+							</div>
+						</div>
+						<div class="col-auto">
+							<a href="#" id="toggle-bg" type="button" class="btn btn-info p-sm-2 ico ic-circle"></a>
+						</div>
+						<div class="col-auto">
+							<button class="btn --burger"><span></span><span></span><span></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="qela-body">
+				<!-- Навигация (якоря)-->
+				<aside class="fixed-top --aside">
+					<h4 class="px-2 my-2">Components</h4>
+					<nav class="ps-3">
+						<ol class="d-flex flex-column gap-2 ps-0 --elastic">
+							<li><a class="--link" href="#">buttons</a></li>
+							<li><a class="--link" href="#">text field</a></li>
+							<li><a class="--link" href="#">checkbox</a></li>
+							<li><a class="--link" href="#">radiobutton</a></li>
+							<li><a class="--link" href="#">tooltip</a></li>
+							<li><a class="--link" href="#">multi-select</a></li>
+							<li><a class="--link" href="#">datapiker</a></li>
+							<li><a class="--link" href="#">range</a></li>
+							<li><a class="--link" href="#">dropdown</a></li>
+							<li><a class="--link" href="#">badge</a></li>
+							<li><a class="--link" href="#">pagination</a></li>
+							<li><a class="--link" href="#">alert</a></li>
+							<li><a class="--link" href="#">logos</a></li>
+							<li><a class="--link" href="#">items</a></li>
+							<li><a class="--link" href="#">labels</a></li>
+							<li><a class="--link" href="#">modals</a></li>
+							<li><a class="--link" href="#">map-pin</a></li>
+							<li><a class="--link" href="#">progress</a></li>
+							<li><a class="--link" href="#">avatars</a></li>
+							<li><a class="--link" href="#">lists</a></li>
+							<li><a class="--link" href="#">description</a></li>
+							<li><a class="--link" href="#">img-preview</a></li>
+							<li><a class="--link" href="#">cards</a></li>
+							<li><a class="--link" href="#">qr-code</a></li>
+							<li><a class="--link" href="#">status</a></li>
+							<li><a class="--link" href="#">toasts</a></li>
+							<li><a class="--link" href="#">dialog</a></li>
+							<li><a class="--link" href="#">telents</a></li>
+							<li><a class="--link" href="#">toolbar</a></li>
+							<li><a class="--link" href="#">rating</a></li>
+							<li><a class="--link" href="#">orden</a></li>
+							<li><a class="--link" href="#">icon-svg</a></li>
+							<li><a class="--link" href="#">breadcrumb</a></li>
+							<li><a class="--link" href="#">under</a></li>
+							<li><a class="--link" href="#">subscription</a></li>
+							<li><a class="--link" href="#">delimiter</a></li>
+							<li><a class="--link" href="#">accordion</a></li>
+							<li><a class="--link" href="#">icons</a></li>
+							<li><a class="--link" href="#">img</a></li>
+							<!-- <li><a class="--link" href="#">slider</a></li> -->
+						</ol>
+					</nav>
+				</aside>
+				<!-- Навигация (якоря) -->
+				<div style="max-width: 1024px" class="mx-auto px-3">
+					<div class="mt-3 pb-3 d-flex flex-column gap-3">
+						<!-- FIX Buttons  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Buttons</h2>
   <!-- FIX Large buttons  -->
@@ -1090,7 +1090,8 @@
         <button type="button" class="btn btn-google"><img src="/img/googleplay.svg" alt=""> </button>
     </div>
 </section>
- <!-- FIX Text field  -->
+
+                        <!-- FIX Text field  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Text field</h2>
 	<!-- FIX Input outline-->
@@ -1708,7 +1709,8 @@
 			<div class="invalid-feedback">Error text</div>
 		</div>
 	</div>
-</section> <!-- FIX Multi-select  -->
+</section> 
+                        <!-- FIX Multi-select  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Multi-select</h2>
   <h4>Multi-select</h4>
@@ -1829,7 +1831,8 @@
     <div class="helper-text">Helper text</div>
   </div>
 </section>
- <!-- FIX Datapiker  -->
+ 
+                        <!-- FIX Datapiker  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Datapiker</h2>
   <div>
@@ -1853,7 +1856,8 @@
     <span class="invalid-feedback">Set start date and time</span>
   </div>
 </section>
- <!-- FIX Checkbox  -->
+ 
+                        <!-- FIX Checkbox  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Checkbox</h2>
     <!-- FIX Checkbox-->
@@ -2000,7 +2004,8 @@
         <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck4" checked disabled>
         <label class="form-check-label" for="SwitchCheck4">Default switch checkbox input</label>
     </div>
-</section> <!-- FIX Radiobutton  -->
+</section> 
+                        <!-- FIX Radiobutton  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Radiobutton</h2>
     <!-- FIX Radiobutton-->
@@ -2250,7 +2255,8 @@
             </div>
         </div>
     </div>
-</section> <!-- FIX Range  -->
+</section> 
+                        <!-- FIX Range  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Range</h2>
     <div>
@@ -2261,7 +2267,8 @@
         <label for="Range1" class="form-label">Example range</label>
         <input type="range" class="form-range" value="50" min="0" max="100" id="Range1" disabled>
     </div>
-</section> <!-- FIX Accordion  -->
+</section> 
+                        <!-- FIX Accordion  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Accordion</h2>
 	<!-- FIX Accordion-->
@@ -2386,126 +2393,187 @@
 			</div>
 		</div>
 	</div>
-</section> <!-- FIX Alert  -->
+</section>
+                        <!-- FIX Alert  -->
 <section class="d-grid gap-3">
-	<h2 class="h1">Alert</h2>
-	<!-- FIX Alert defoult -->
-	<h4 class="mt-4">Alert defoult max variant</h4>
+	<h2 class="h1 mt-4">Alert</h2>
+	<!-- FIX Alert row -->
+	<h4 class="mt-4">Alert row</h4>
+	<h5>Alert row max variant</h5>
 	<!-- =========== secondary-->
 	<div class="alert alert-secondary qela-alert fade show" role="alert">
-        <div>
-            <span class="ic-alert-triangle text-secondary"></span>
-            <div>Увага! Підписка тільки на місяць</div>
-            <a href="#" class="d-block mt-2">Підтвердити</a>
-            <a href="#" class="btn btn-secondary btn-sm mt-2">Upgrade now</a>
-        </div>
-        <a href="#" class="btn btn-secondary btn-sm">Upgrade now</a>
+		<div>
+			<span class="ic-alert-triangle text-secondary"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-secondary btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-secondary btn-sm">Upgrade now</button>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>
-	<div class="alert alert-secondary px-3 qela-alert fade show" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-alert-triangle text-secondary position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-	</div>
-	<div class="alert alert-secondary px-3 qela-alert fade show d-flex justify-content-between" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-alert-triangle text-secondary position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
 	</div>
 	<!-- =========== danger-->
 	<div class="alert alert-danger qela-alert fade show" role="alert">
-		<span class="ic-error-warning-fill text-danger"></span>
-		<div class="mb-2">Увага! Підписка тільки на місяць</div>
-		<a href="#" class="text-danger">Підтвердити</a>
+		<div>
+			<span class="ic-error-warning-fill text-danger"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-danger mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-danger btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-danger btn-sm">Upgrade now</button>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>
-	<div class="alert alert-danger px-3 qela-alert fade show" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-error-warning-fill text-danger position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
-	</div>
-	<div class="alert alert-danger px-3 qela-alert fade show d-flex justify-content-between" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-error-warning-fill text-danger position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-danger btn-sm">Підтвердити</a>
 	</div>
 	<!-- =========== warning-->
 	<div class="alert alert-warning qela-alert fade show" role="alert">
-		<span class="ic-error-warning-fill text-warning"></span>
-		<div class="mb-2">Увага! Підписка тільки на місяць</div>
-		<a href="#" class="text-warning">Підтвердити</a>
+		<div>
+			<span class="ic-error-warning-fill text-warning"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-warning mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-warning btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-warning btn-sm">Upgrade now</button>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>
-	<div class="alert alert-warning px-3 qela-alert fade show" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-error-warning-fill text-warning position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
-	</div>
-	<div class="alert alert-warning px-3 qela-alert fade show d-flex justify-content-between" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-error-warning-fill text-warning position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-warning btn-sm">Підтвердити</a>
 	</div>
 	<!-- =========== info-->
 	<div class="alert alert-info qela-alert fade show" role="alert">
-		<span class="ic-alert-triangle text-secondary"></span>
-		<div class="mb-2">Увага! Підписка тільки на місяць</div>
-		<a href="#">Підтвердити</a>
+		<div>
+			<span class="ic-alert-triangle text-secondary"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-secondary btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-secondary btn-sm">Upgrade now</button>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>
-	<div class="alert alert-info px-3 qela-alert fade show" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-alert-triangle text-secondary position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
-	</div>
-	<div class="alert alert-info px-3 qela-alert fade show d-flex justify-content-between" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-alert-triangle text-secondary position-static"></span>
-			Увага! Підписка тільки на місяць
-		</div>
-		<a href="#" class="btn btn-secondary btn-sm">Підтвердити</a>
 	</div>
 	<!-- =========== success-->
 	<div class="alert alert-success qela-alert fade show" role="alert">
-		<span class="ic-check-filled text-success"></span>
-		<div class="mb-2">Увага! Підписка тільки на місяць</div>
-		<a href="#" class="text-success-700">Підтвердити</a>
+		<div>
+			<span class="ic-check-filled text-success"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-success-700 mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-success btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-success btn-sm">Upgrade now</button>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
-	<div class="alert alert-success px-3 qela-alert fade show" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-check-filled text-success position-static"></span>
-			Увага! Підписка тільки на місяць
+	<h5>Alert row min variant</h5>
+	<!-- =========== secondary-->
+	<div class="alert alert-secondary qela-alert px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
 		</div>
-		<a href="#" class="btn btn-success btn-sm">Підтвердити</a>
 	</div>
-	<div class="alert alert-success px-3 qela-alert fade show d-flex justify-content-between" role="alert">
-		<div class="mb-2 d-flex gap-1">
-			<span class="ic-check-filled text-success position-static"></span>
-			Увага! Підписка тільки на місяць
+	<!-- =========== danger-->
+	<div class="alert alert-danger qela-alert px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
 		</div>
-		<a href="#" class="btn btn-success btn-sm">Підтвердити</a>
 	</div>
-	<!-- =============== -->
-	<div class="alert alert-info qela-alert p-3 fade show" role="alert">
-		<p>☝️Official Address of checkpoint</p>
-		<p class="m-0">
-			<small>Displayed to users on quest Quest conditions screen lake official recognizable name of location</small>
-		</p>
+	<!-- =========== warning-->
+	<div class="alert alert-warning qela-alert px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== info-->
+	<div class="alert alert-info qela-alert px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== success-->
+	<div class="alert alert-success qela-alert px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- FIX Alert column -->
+	<h4 class="mt-4">Alert column</h4>
+	<h5>Alert column max variant</h5>
+	<!-- =========== secondary-->
+	<div class="alert alert-secondary qela-alert column fade show" role="alert">
+		<div>
+			<span class="ic-alert-triangle text-secondary"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-secondary btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-secondary btn-sm">Upgrade now</button>
+		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<!-- =========== danger-->
+	<div class="alert alert-danger qela-alert column fade show" role="alert">
+		<div>
+			<span class="ic-error-warning-fill text-danger"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-danger mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-danger btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-danger btn-sm">Upgrade now</button>
+		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<!-- =========== warning-->
+	<div class="alert alert-warning qela-alert column fade show" role="alert">
+		<div>
+			<span class="ic-error-warning-fill text-warning"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-warning mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-warning btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-warning btn-sm">Upgrade now</button>
+		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<!-- =========== info-->
+	<div class="alert alert-info qela-alert column fade show" role="alert">
+		<div>
+			<span class="ic-alert-triangle text-secondary"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-secondary btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-secondary btn-sm">Upgrade now</button>
+		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<!-- =========== success-->
+	<div class="alert alert-success qela-alert column fade show" role="alert">
+		<div>
+			<span class="ic-check-filled text-success"></span>
+			<div>Увага! Підписка тільки на місяць</div>
+			<a href="#" class="d-block text-success-700 mt-2">Підтвердити</a>
+			<button type="button" class="btn btn-success btn-sm mt-2">Upgrade now</button>
+		</div>
+		<button type="button" class="btn btn-success btn-sm">Upgrade now</button>
+		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<h5>Alert column min variant</h5>
+	<!-- =========== secondary-->
+	<div class="alert alert-secondary qela-alert column px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== danger-->
+	<div class="alert alert-danger qela-alert column px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== warning-->
+	<div class="alert alert-warning qela-alert column px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== info-->
+	<div class="alert alert-info qela-alert column px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
+	</div>
+	<!-- =========== success-->
+	<div class="alert alert-success qela-alert column px-3 fade show" role="alert">
+		<div>
+			<div>Увага! Підписка тільки на місяць</div>
+		</div>
 	</div>
 	<!-- FIX Alert small -->
 	<h4 class="mt-4">Alert small</h4>
@@ -2533,14 +2601,26 @@
 		<a href="#">Підтвердити</a>
 		<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
+
+	<h4 class="mt-4">Alert custom</h4>
 	<!-- =========== secondary custom-->
 	<div class="alert alert-secondary qela-alert custom fade show" role="alert">
 		<span class="ic-success text-secondary"></span>
 		<div class="mb-2">Увага! Підписка тільки на місяць</div>
 		<a href="#">Підтвердити</a>
 	</div>
+	<!-- ===============info custom-->
+	<div class="alert alert-info qela-alert p-3 fade show" role="alert">
+		<div>
+			<p>☝️Official Address of checkpoint</p>
+			<p class="m-0">
+				<small>Displayed to users on quest Quest conditions screen lake official recognizable name of location</small>
+			</p>
+		</div>
+	</div>
 </section>
-цц <!-- FIX Avatars  -->
+
+                        <!-- FIX Avatars  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Avatars</h2>
   <!-- FIX Avatars 100-->
@@ -2661,7 +2741,8 @@
     <span class="text-info-900 ms-2">120</span>
   </div>
 </section>
- <!-- FIX Badges  -->
+ 
+                        <!-- FIX Badges  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Badge</h2>
 	<!-- FIX Default badges  -->
@@ -2899,7 +2980,8 @@
 			<span class="badge rounded-pill text-bg-danger qela-badge small">Danger</span>
 		</div>
 	</div>
-</section> <!-- FIX Breadcrumb  -->
+</section> 
+                        <!-- FIX Breadcrumb  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Breadcrumb</h2>
   <div class="qela-breadcrumb">
@@ -2914,7 +2996,8 @@
     <span class="qela-clamp">sadasdasdsad sadasdasdsad</span>
   </div>
 </section>
- <!-- FIX Card  -->
+ 
+                        <!-- FIX Card  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Cards</h2>
   <!-- FIX Card modal -->
@@ -2975,7 +3058,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Delimiter  -->
+ 
+                        <!-- FIX Delimiter  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Delimiter</h2>
   <!-- FIX Delimiter sx -->
@@ -3000,7 +3084,8 @@
     <span class="badge bg-white text-info-900 large-xl px-2 py-1">or</span>
   </div>
 </section>
- <!-- FIX Description  -->
+ 
+                        <!-- FIX Description  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Description</h2>
   <div class="px-4 py-3">
@@ -3029,7 +3114,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Dialog  -->
+ 
+                        <!-- FIX Dialog  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Dialog</h2>
   <!-- FIX Dialog header -->
@@ -3115,7 +3201,8 @@
     <p>Use search or click anywhere on the map to add a checkpoint</p>
   </div>
 </section>
- <!-- FIX с  -->
+ 
+                        <!-- FIX с  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Dropdown</h2>
   <div class="dropdown">
@@ -3309,7 +3396,7 @@
   </div>
 </section>
 
-            <section class="d-grid gap-3">
+						<section class="d-grid gap-3">
 	<!-- FIX Icons -->
 	<h2 class="h1">Icons</h2>
 		<div class="d-flex gap-3 flex-wrap">
@@ -3492,7 +3579,8 @@
 			<span class="ic-square-check"></span>
 			<span class="ic-star"></span>
 		</div>
-</section> <!-- FIX Icon svg -->
+</section> 
+                        <!-- FIX Icon svg -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Icon-svg</h2>
     <div class="d-inline-flex gap-2 flex-wrap">
@@ -3509,7 +3597,8 @@
         <img src="img/icons/link-circle.svg" width="38" height="38" alt="#">
         <img src="img/icons/twitter-new-circle.svg" width="38" height="38" alt="#">
     </div>
-</section> <!-- FIX Img  -->
+</section> 
+                        <!-- FIX Img  -->
 <section class="d-grid gap-3">
 	<h2 class="h1  mt-4">Img</h2>
 	<!-- No img -->
@@ -3522,7 +3611,8 @@
 			<span class="ic-img-32"></span>
 		 </div>
 	</div>
-</section> <!-- FIX Img-preview  -->
+</section> 
+                        <!-- FIX Img-preview  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Img-preview</h2>
   <h4>Large</h4>
@@ -3627,7 +3717,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Items  -->
+ 
+                        <!-- FIX Items  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Items</h2>
 	<!-- Answer-item-2 -->
@@ -4310,7 +4401,8 @@
 			* this parameter could be set by superadmin in Organization directory
 		</div>
 	</div>
-</section> <!-- FIX Labels  -->
+</section> 
+                        <!-- FIX Labels  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Labels</h2>
   <div class="bg-body py-1 qela-pad-l qela-pad-r d-none d-md-block">
@@ -4339,7 +4431,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Lists  -->
+ 
+                        <!-- FIX Lists  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Lists</h2>
   <!-- FIX Lists whith button -->
@@ -4576,7 +4669,8 @@
     </li>
   </ul>
 </section>
- <!-- FIX Logos  -->
+ 
+                        <!-- FIX Logos  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Logos</h2>
   <div class="mt-3 mb-3 d-flex flex-column gap-3">
@@ -4614,7 +4708,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Map-pin  -->
+ 
+                        <!-- FIX Map-pin  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Map-pin</h2>
   <!-- С помощью класса актив пины анимировано появляються и кнему же привязан ховер-->
@@ -4649,7 +4744,8 @@
   <div class="qela-line bg-success"></div>
   <div class="qela-line bg-danger"></div>
 </section>
- <!-- FIX Modals  -->
+ 
+                        <!-- FIX Modals  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Modals</h2>
   <!-- Button trigger modal -->
@@ -6157,7 +6253,8 @@
       </div>
   </div>
 </section>
- <!-- FIX Orden  -->
+ 
+                        <!-- FIX Orden  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Orden*</h2>
   <div class="qela-orden">
@@ -6170,7 +6267,8 @@
     </p>
   </div>
 </section>
- <!-- FIX Pagination  -->
+ 
+                        <!-- FIX Pagination  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Pagination</h2>
     <!-- FIX Pagination  default -->
@@ -6249,7 +6347,8 @@
             </li>
         </ul>
     </nav>
-</section> <!-- FIX Progress  -->
+</section> 
+                        <!-- FIX Progress  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Progress*</h2>
   <div class="progress qela-progress large" style="--percent: 17.5%">
@@ -6388,7 +6487,8 @@
     </div>
 </div>
 </section>
- <!-- FIX QR-code  -->
+ 
+                        <!-- FIX QR-code  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">QR -code 1</h2>
   <div class="pt-4 px-3 pb-6 bg-white rounded-2 text-center">
@@ -6401,7 +6501,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Rating  -->
+ 
+                        <!-- FIX Rating  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Rating*</h2>
   <div class="qela-rating">
@@ -6428,8 +6529,8 @@
   </div>
 </section>
 
-            
-            <!-- FIX Status  -->
+						
+						<!-- FIX Status  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Status</h2>
   <small class="tetx-info"
@@ -6459,7 +6560,8 @@
     <span class="qela-status-badge secondary ic-branch">branch-superadmin</span>
   </div>
 </section>
- <!-- FIX Subscription  -->
+ 
+                        <!-- FIX Subscription  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Subscription</h2>
   <!-- FIX Subscription whith numbers -->
@@ -6580,7 +6682,8 @@
     </div>
   </div>
 </section>
- <!-- FIX Telents  -->
+ 
+                        <!-- FIX Telents  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Telents</h2>
   <!-- awards item red-->
@@ -6724,7 +6827,8 @@
     </li>
   </ul>
 </section>
- <!-- FIX Toasts  -->
+ 
+                        <!-- FIX Toasts  -->
 <section class="d-grid gap-3">
     <h2 class="h1 mt-4">Toasts</h2>
     <div class="toast qelas-toast show " role="alert" aria-live="assertive" aria-atomic="true">
@@ -6738,7 +6842,8 @@
             Hello, world! This is a toast message.
         </div>
     </div>
-</section> <!-- FIX Toolbar  -->
+</section> 
+                        <!-- FIX Toolbar  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Toolbar</h2>
   <div class="qela-toolbar">
@@ -6778,7 +6883,8 @@
     <button type="button" class="btn btn-light ico ic-delete" disabled></button>
   </div>
 </section>
- <!-- FIX Tooltip  -->
+ 
+                        <!-- FIX Tooltip  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Tooltip</h2>
   <div>
@@ -6937,7 +7043,8 @@
     </button>
   </div>
 </section>
- <!-- FIX Under  -->
+ 
+                        <!-- FIX Under  -->
 <section class="d-grid gap-3">
   <h2 class="h1 mt-4">Under</h2>
   <div class="qela-under">
@@ -6964,142 +7071,142 @@
   </div>
 </section>
 
-          </div>
-        </div>
-      </main>
-    </div>
+					</div>
+				</div>
+			</main>
+		</div>
 
-    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-    <script type="text/javascript">
-      let app = Vue.createApp({
-        components: {
-          "v-date-picker": VueDatePicker,
-          "v-multi-select": VueMultiselect.default,
-        },
-        data() {
-          return {
-            date: [new Date(), new Date()],
-            value1: "",
-            value2: "",
-            value3: "",
-            value4: "",
-            options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
-          };
-        },
-        methods: {
-          click() {
-            alert(1);
-            this.message += " clicked!";
-          },
-        },
-      });
-      // console.dir(app);
-      app.mount("#app");
-    </script>
-    <!-- Search -->
-    <script defer type="text/javascript">
-        document.querySelector("#search-nav").oninput = function () {
-          let val = this.value.trim();
-          let elasticItems = document.querySelectorAll(".--elastic li");
-          if (val != "") {
-            elasticItems.forEach(function (elem) {
-              if (elem.innerText.search(val) == -1) {
-                elem.classList.add("--hide");
-              } else {
-                elem.classList.remove("--hide");
-              }
-            });
-          } else {
-            elasticItems.forEach(function (elem) {
-              elem.classList.remove("--hide");
-            });
-          }
-        };
-        // ===============================================
-        let togButton = document.querySelector("#toggle-bg");
-        togButton.addEventListener("click", (event) => {
-          event.preventDefault();
-          if (localStorage.getItem("theme") === "night-theme") {
-            localStorage.removeItem("theme");
-          } else {
-            localStorage.setItem("theme", "night-theme");
-          }
-          addDarkClass();
-        });
-        // ==================================================
-        const burgerBtn = document.querySelector(".--burger");
-        const asideMenu = document.querySelector(".--aside");
-        burgerBtn.addEventListener("click", () => {
-          burgerBtn.classList.toggle("active");
-          asideMenu.classList.toggle("active");
-        });
-        // ==================================================
-        let title = document.querySelectorAll("h2.h1");
-        let ul = document.querySelector(".--elastic");
-        let li = ul.querySelectorAll("a");
-  
-        let sections = document.querySelectorAll("section");
-        function ulSorted(type = "a") {
-          let res = [];
-          let res2 = [];
-          for (let i = 0; i < li.length; i++) {
-            res[i] = li[i].textContent;
-            switch (type) {
-              case "a":
-                res.sort(function (e1, e2) {
-                  return e1 < e2 ? -1 : 1;
-                });
-                break;
-              case "z":
-                res.sort(function (e1, e2) {
-                  return e1 > e2 ? -1 : 1;
-                });
-                break;
-            }
-          }
-          for (let i = 0; i < res.length; i++) {
-            li[i].innerText = res[i];
-            li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
-          }
-          for (let i = 0; i < title.length; i++) {
-            res2[i] = title[i].textContent;
-          }
-          for (let i = 0; i < sections.length; i++) {
-            sections[i].id = `${res2[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
-          }
-        }
-        ulSorted("a");
-        if (li.length > 0 && sections.length > 0) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  li.forEach((link) => {
-                    link.classList.toggle("link--active", link.getAttribute("href").replace("#", "") === entry.target.id);
-                  });
-                }
-              });
-            },
-            { threshold: 0.33 }
-          );
-  
-          sections.forEach((section) => observer.observe(section));
-        }
-        ul.addEventListener("click", (event) => {
-          if (event.target.classList.contains("--link")) {
-            event.preventDefault();
-            const id = event.target.getAttribute("href").replace("#", "");
-            window.scrollTo({
-              top: document.getElementById(id).offsetTop - document.querySelector("header").offsetHeight,
-              behavior: "smooth",
-            });
-          }
-        });
-      </script>
-    <!-- =========================== -->
-    <script src="js/vendors.js"></script>
+		<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+		<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+		<script type="text/javascript">
+			let app = Vue.createApp({
+				components: {
+					"v-date-picker": VueDatePicker,
+					"v-multi-select": VueMultiselect.default,
+				},
+				data() {
+					return {
+						date: [new Date(), new Date()],
+						value1: "",
+						value2: "",
+						value3: "",
+						value4: "",
+						options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
+					};
+				},
+				methods: {
+					click() {
+						alert(1);
+						this.message += " clicked!";
+					},
+				},
+			});
+			// console.dir(app);
+			app.mount("#app");
+		</script>
+		<!-- Search -->
+		<script defer type="text/javascript">
+			document.querySelector("#search-nav").oninput = function () {
+				let val = this.value.trim();
+				let elasticItems = document.querySelectorAll(".--elastic li");
+				if (val != "") {
+					elasticItems.forEach(function (elem) {
+						if (elem.innerText.search(val) == -1) {
+							elem.classList.add("--hide");
+						} else {
+							elem.classList.remove("--hide");
+						}
+					});
+				} else {
+					elasticItems.forEach(function (elem) {
+						elem.classList.remove("--hide");
+					});
+				}
+			};
+			// ===============================================
+			let togButton = document.querySelector("#toggle-bg");
+			togButton.addEventListener("click", (event) => {
+				event.preventDefault();
+				if (localStorage.getItem("theme") === "night-theme") {
+					localStorage.removeItem("theme");
+				} else {
+					localStorage.setItem("theme", "night-theme");
+				}
+				addDarkClass();
+			});
+			// ==================================================
+			const burgerBtn = document.querySelector(".--burger");
+			const asideMenu = document.querySelector(".--aside");
+			burgerBtn.addEventListener("click", () => {
+				burgerBtn.classList.toggle("active");
+				asideMenu.classList.toggle("active");
+			});
+			// ==================================================
+			let title = document.querySelectorAll("h2.h1");
+			let ul = document.querySelector(".--elastic");
+			let li = ul.querySelectorAll("a");
+
+			let sections = document.querySelectorAll("section");
+			function ulSorted(type = "a") {
+				let res = [];
+				let res2 = [];
+				for (let i = 0; i < li.length; i++) {
+					res[i] = li[i].textContent;
+					switch (type) {
+						case "a":
+							res.sort(function (e1, e2) {
+								return e1 < e2 ? -1 : 1;
+							});
+							break;
+						case "z":
+							res.sort(function (e1, e2) {
+								return e1 > e2 ? -1 : 1;
+							});
+							break;
+					}
+				}
+				for (let i = 0; i < res.length; i++) {
+					li[i].innerText = res[i];
+					li[i].href = `#${res[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
+				}
+				for (let i = 0; i < title.length; i++) {
+					res2[i] = title[i].textContent;
+				}
+				for (let i = 0; i < sections.length; i++) {
+					sections[i].id = `${res2[i].replace(/\W|_/g, "").trim().toLowerCase()}`;
+				}
+			}
+			ulSorted("a");
+			if (li.length > 0 && sections.length > 0) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								li.forEach((link) => {
+									link.classList.toggle("link--active", link.getAttribute("href").replace("#", "") === entry.target.id);
+								});
+							}
+						});
+					},
+					{ threshold: 0.33 }
+				);
+
+				sections.forEach((section) => observer.observe(section));
+			}
+			ul.addEventListener("click", (event) => {
+				if (event.target.classList.contains("--link")) {
+					event.preventDefault();
+					const id = event.target.getAttribute("href").replace("#", "");
+					window.scrollTo({
+						top: document.getElementById(id).offsetTop - document.querySelector("header").offsetHeight,
+						behavior: "smooth",
+					});
+				}
+			});
+		</script>
+		<!-- =========================== -->
+		<script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-  </body>
+	</body>
 </html>

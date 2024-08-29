@@ -25,6 +25,8 @@
     }
     &.custom {
         text-align: center;
+        flex-direction: column;
+        align-items: center;
         &.alert-secondary {
             border-color: transparent;
         }
@@ -34,6 +36,23 @@
                 padding-bottom: 0.5rem;
                 &::before {
                     font-size: 38px;
+                }
+            }
+        }
+    }
+    &.column {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        > div {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                &[class*="ic-"] {
+                    position: static;
                 }
             }
         }
@@ -61,7 +80,7 @@
     }
 
     &.small {
-        padding: 0.5rem 2.25rem;
+        padding: 0.5rem 2rem;
 
         span {
             &[class^="ic-"],
@@ -69,6 +88,10 @@
                 left: 12px;
                 top: 0.5rem;
             }
+        }
+        .btn-close {
+            top: 0.5rem;
+            right: 0.5rem;
         }
     }
 
