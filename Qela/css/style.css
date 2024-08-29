@@ -13133,8 +13133,8 @@ body {
 }
 
 .btn-danger {
-  border-color: #fff4f5;
-  background-color: #fff4f5;
+  border-color: #ffe9ea;
+  background-color: #ffe9ea;
   color: #ff453a;
 }
 .btn-danger:hover {
@@ -13143,9 +13143,9 @@ body {
   color: #ff453a;
 }
 .btn-danger:active {
-  color: #ff453a !important;
-  border-color: #ffe9ea !important;
-  background-color: #ffe9ea !important;
+  color: #cc372e !important;
+  border-color: #ffb5b0 !important;
+  background-color: #ffb5b0 !important;
 }
 
 .btn-warning {

@@ -106,8 +106,8 @@
 }
 
 .btn-danger {
-    border-color: $danger-100;
-    background-color: $danger-100;
+    border-color: $danger-200;
+    background-color: $danger-200;
     color: $danger;
 
     &:hover {
@@ -117,9 +117,9 @@
     }
 
     &:active {
-        color: $danger !important;
-        border-color: $danger-200 !important;
-        background-color: $danger-200 !important;
+        color: $danger-700 !important;
+        border-color: $danger-300 !important;
+        background-color: $danger-300 !important;
     }
 }
 
