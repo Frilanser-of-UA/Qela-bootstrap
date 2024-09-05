@@ -392,7 +392,7 @@ $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
 $btn-border-width: $input-btn-border-width;
 $btn-border-radius: $border-radius-lg;
-$btn-font-weight: 500;
+$btn-font-weight: 400;
 $btn-disabled-opacity: 1;
 $btn-focus-box-shadow: none;
 $btn-link-color: $secondary-600;
@@ -690,6 +690,20 @@ $list-group-action-hover-color: $list-group-action-color;
 $list-group-action-active-color: $body-color;
 $list-group-action-active-bg: $gray-200;
 // List group end
+
+// Carousel
+
+// scss-docs-start carousel-variables
+$carousel-indicator-width: 33px;
+$carousel-indicator-height: 4px;
+$carousel-indicator-hit-area-height: 10px !default;
+$carousel-indicator-spacer: 8px;
+$carousel-indicator-opacity: 1;
+$carousel-indicator-active-bg: $secondary;
+$carousel-indicator-active-opacity: 1;
+$carousel-indicator-transition: opacity 0.6s ease;
+
+// scss-docs-end carousel-dark-variables
 // Progress start
 
 $progress-height: 0.5rem;
