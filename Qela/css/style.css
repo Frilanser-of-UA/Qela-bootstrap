@@ -15322,7 +15322,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .qela-tab .nav-tabs {
-  flex: 0 1 240px;
+  flex: 0 0 240px;
   border-right: 1px solid #dee2e6;
   border-radius: 0.5rem 0 0 0.5rem;
   counter-reset: step;
@@ -15367,7 +15367,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   width: 100%;
   position: relative;
-  padding: var(--step-pad-start) 48px 16px 16px;
+  padding: 16px 48px 16px var(--step-pad-start);
   border-radius: 0;
   background-color: #fff;
   margin-bottom: 0;
@@ -15440,6 +15440,7 @@ input::-webkit-inner-spin-button {
   background-color: #8278ff;
   color: #fff;
   transition: all 0.2s ease 0s;
+  line-height: 1;
 }
 .qela-nav-item .nav-link.success .line {
   background-color: #9188ff;
@@ -15459,6 +15460,7 @@ input::-webkit-inner-spin-button {
   background-color: #ff453a;
   color: #fff;
   transition: all 0.2s ease 0s;
+  line-height: 1;
 }
 .qela-nav-item .nav-link.error::after {
   border-right-color: #ff453a;
@@ -15512,6 +15514,89 @@ input::-webkit-inner-spin-button {
   .qela-nav-item .link-name {
     display: none;
   }
+}
+.qela-nav-item.small .nav-link {
+  padding: 8px 32px 8px var(--step-pad-start);
+}
+.qela-nav-item.small .nav-link::before {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.qela-nav-item.small .nav-link.success::before {
+  font-size: 12px;
+}
+.qela-nav-item.small .nav-link.error::before {
+  content: "\e95f";
+  font-size: 14px;
+  background-color: #ffe9ea;
+  color: #ff453a;
+}
+.qela-nav-item.small-light .nav-link {
+  padding: 6px 32px 6px var(--step-pad-start);
+  color: #6c757d;
+  background-color: transparent;
+}
+.qela-nav-item.small-light .nav-link::before {
+  font-size: 14px;
+  line-height: 1;
+  margin-right: 8px;
+  color: #6c757d;
+  border: 1px solid #e9ecef;
+  background-color: #e9ecef;
+}
+@media (any-hover: hover) {
+  .qela-nav-item.small-light .nav-link:hover {
+    color: #9188ff;
+  }
+  .qela-nav-item.small-light .nav-link:hover::before {
+    color: #9188ff;
+  }
+}
+.qela-nav-item.small-light .nav-link.active {
+  color: #9188ff;
+  background-color: #fff;
+}
+.qela-nav-item.small-light .nav-link.active .line {
+  background-color: #e9ecef;
+}
+.qela-nav-item.small-light .nav-link.active::before {
+  content: counter(step);
+  font-size: 14px;
+  color: #fff;
+  background-color: #9188ff;
+}
+.qela-nav-item.small-light .nav-link.success::before {
+  content: "\e934";
+  color: #30ce57;
+  border-color: #eafaee;
+  background-color: #eafaee;
+  font-size: 19px;
+}
+.qela-nav-item.small-light .nav-link.success::after {
+  border-right-color: #30ce57;
+}
+@media (any-hover: hover) {
+  .qela-nav-item.small-light .nav-link.success:hover {
+    color: #2bb94e;
+  }
+}
+.qela-nav-item.small-light .nav-link.success.active {
+  color: #2bb94e;
+}
+.qela-nav-item.small-light .nav-link.success.active::after {
+  border-right-color: #30ce57;
+}
+.qela-nav-item.small-light .nav-link.success .line {
+  background-color: #e9ecef;
+}
+.qela-nav-item.small-light .nav-link.error::before {
+  content: "\e95f";
+  font-size: 14px;
+  background-color: #ffe9ea;
+  color: #ff453a;
+}
+.qela-nav-item.small-light .line {
+  background-color: #e9ecef;
 }
 
 .qela-quest:not(:last-child) .head {
