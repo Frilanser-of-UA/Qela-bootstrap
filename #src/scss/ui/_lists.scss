@@ -320,3 +320,62 @@
         }
     }
 }
+.qela-list-wrap {
+    --bs-list-group-border-color: #e9ecef;
+}
+.qela-list-item {
+    --bs-list-group-item-padding-x: 1rem;
+    --bs-list-group-item-padding-y: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    background-color: $white;
+    border: none;
+    position: relative;
+    &:not(:last-child) {
+        &::before {
+            content: "";
+            width: calc(100% - (var(--bs-list-group-item-padding-x) * 2));
+            height: 1px;
+            position: absolute;
+            background-color: $info-200;
+            top: calc(100% - 1px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+    &.success {
+        .qela-icon {
+            [class*="ic-"] {
+                color: $success;
+                background-color: $success-200;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        flex-wrap: wrap;
+    }
+    .btn {
+        white-space: nowrap;
+    }
+    .qela-icon {
+        [class*="ic-"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $info;
+            background-color: $info-100;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            &::before {
+                font-size: 20px;
+            }
+        }
+    }
+    iframe {
+        width: 100%;
+    }
+}

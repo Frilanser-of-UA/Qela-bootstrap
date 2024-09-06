@@ -8626,7 +8626,7 @@ textarea.form-control-lg {
   --bs-accordion-border-width: 1px;
   --bs-accordion-border-radius: 0.5rem;
   --bs-accordion-inner-border-radius: calc(0.5rem - 1px);
-  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-x: 1rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
@@ -8637,7 +8637,7 @@ textarea.form-control-lg {
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-border-color: transparent;
   --bs-accordion-btn-focus-box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
-  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-x: 1rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #212529;
   --bs-accordion-active-bg: #f8f9fa;
@@ -14686,6 +14686,7 @@ input::-webkit-inner-spin-button {
 
 .qela-accordion .accordion-item {
   border-top: 1px solid #e9ecef;
+  overflow: hidden;
   border-radius: 8px;
 }
 .qela-accordion .accordion-item:not(:last-child) {
@@ -14751,47 +14752,6 @@ input::-webkit-inner-spin-button {
 .qela-accordion .accordion-button:not(.collapsed):focus {
   box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
 }
-.qela-accordion .accordion-body .qela-list-item {
-  padding: 0;
-}
-.qela-accordion .accordion-body .qela-list-item:not(:last-child) {
-  border-bottom: 1px solid #e9ecef;
-  padding-bottom: 1rem;
-}
-.qela-accordion .accordion-body .qela-list-item:not(:first-child) {
-  padding-top: 1rem;
-}
-
-.qela-list-item {
-  display: flex;
-  gap: 1rem;
-  align-items: start;
-  background-color: #fff;
-  padding: 1rem;
-}
-@media (max-width: 991.98px) {
-  .qela-list-item {
-    flex-wrap: wrap;
-  }
-}
-.qela-list-item .btn {
-  white-space: nowrap;
-}
-.qela-list-item .qela-icon [class*=ic-] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #adb5bd;
-  background-color: #f8f9fa;
-  width: 40px;
-  height: 40px;
-  background-color: #f8f9fa;
-  border-radius: 50%;
-}
-.qela-list-item .qela-icon [class*=ic-]::before {
-  font-size: 20px;
-}
-
 .qela-alert {
   position: relative;
   font-size: 14px;
@@ -16039,6 +15999,60 @@ input::-webkit-inner-spin-button {
 .qela-extended .qela-collapse > * {
   min-height: 0;
   margin: 0;
+}
+
+.qela-list-wrap {
+  --bs-list-group-border-color: #e9ecef;
+}
+
+.qela-list-item {
+  --bs-list-group-item-padding-x: 1rem;
+  --bs-list-group-item-padding-y: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  background-color: #fff;
+  border: none;
+  position: relative;
+}
+.qela-list-item:not(:last-child)::before {
+  content: "";
+  width: calc(100% - var(--bs-list-group-item-padding-x) * 2);
+  height: 1px;
+  position: absolute;
+  background-color: #e9ecef;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.qela-list-item.success .qela-icon [class*=ic-] {
+  color: #30ce57;
+  background-color: #eafaee;
+}
+@media (max-width: 991.98px) {
+  .qela-list-item {
+    flex-wrap: wrap;
+  }
+}
+.qela-list-item .btn {
+  white-space: nowrap;
+}
+.qela-list-item .qela-icon [class*=ic-] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  background-color: #f8f9fa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.qela-list-item .qela-icon [class*=ic-]::before {
+  font-size: 20px;
+}
+.qela-list-item iframe {
+  width: 100%;
 }
 
 .tooltip-inner {
