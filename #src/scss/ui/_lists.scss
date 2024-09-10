@@ -322,6 +322,7 @@
 }
 .qela-list-wrap {
     --bs-list-group-border-color: #e9ecef;
+    border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
 }
 .qela-list-item {
     --bs-list-group-item-padding-x: 1rem;

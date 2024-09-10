@@ -417,6 +417,19 @@ $btn-close-focus-opacity: 1;
 $btn-close-disabled-opacity: 1;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
 // scss-docs-end btn-variables
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+$offcanvas-padding-y: 0;
+$offcanvas-padding-x: 0;
+$offcanvas-horizontal-width: 100%;
+$offcanvas-vertical-height: 30vh !default;
+$offcanvas-transition-duration: 0.3s !default;
+// $offcanvas-border-color: $modal-content-border-color !default;
+// $offcanvas-border-width: $modal-content-border-width !default;
+$offcanvas-bg-color: $white;
+
 // scss-docs-start form-label-variables
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $gray-900;

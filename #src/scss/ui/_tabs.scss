@@ -35,6 +35,24 @@
         @include media-breakpoint-down(md) {
             width: auto;
         }
+        &:first-child {
+            .line {
+                height: 50%;
+                @include media-breakpoint-down(md) {
+                    height: 1px;
+                }
+            }
+        }
+        &:last-child {
+            .line {
+                height: 25%;
+                top: 0;
+                @include media-breakpoint-down(md) {
+                    height: 1px;
+                    top: auto;
+                }
+            }
+        }
     }
 
     .nav-link {
@@ -56,7 +74,6 @@
         border-radius: 0;
         background-color: $white;
         margin-bottom: 0;
-
         &::before {
             content: counter(step);
             counter-increment: step;
@@ -186,14 +203,14 @@
         z-index: 1;
         transition: background-color 0.2s linear 0s;
 
-        &.line-start {
-            height: 50%;
-        }
+        // &.line-start {
+        //     height: 50%;
+        // }
 
-        &.line-end {
-            height: 50%;
-            top: 0;
-        }
+        // &.line-end {
+        //     height: 50%;
+        //     top: 0;
+        // }
 
         @include media-breakpoint-down(md) {
             height: 1px;
@@ -202,18 +219,25 @@
             left: 0;
             transform: translateY(-50%);
 
-            &.line-start {
-                height: 1px;
-            }
+            // &.line-start {
+            //     height: 1px;
+            // }
 
-            &.line-end {
-                height: 1px;
-                top: auto;
-            }
+            // &.line-end {
+            //     height: 1px;
+            //     top: auto;
+            // }
         }
     }
 
     .link-name {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        white-space: normal;
+        display: -webkit-box;
         @include media-breakpoint-down(md) {
             display: none;
         }
@@ -245,6 +269,14 @@
             padding: 6px 32px 6px var(--step-pad-start);
             color: $info-600;
             background-color: transparent;
+            align-items: flex-start;
+            @include media-breakpoint-down(md) {
+                padding: 10px;
+                align-items: center;
+            }
+            @include media-breakpoint-down(sm) {
+                padding: 8px;
+            }
             &::before {
                 font-size: 14px;
                 line-height: 1;
@@ -252,6 +284,9 @@
                 color: $info-600;
                 border: 1px solid $info-200;
                 background-color: $info-200;
+                @include media-breakpoint-down(md) {
+                    margin-right: auto;
+                }
             }
             @media (any-hover: hover) {
                 &:hover {

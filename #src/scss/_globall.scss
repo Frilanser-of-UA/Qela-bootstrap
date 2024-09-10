@@ -346,6 +346,12 @@ body {
 .qela-rounded-12 {
     border-radius: 12px !important;
 }
+.qela-wrap-rounded {
+    border: 1px solid $info-400;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-grow: 1;
+}
 .word-break {
     word-break: break-word !important;
 }

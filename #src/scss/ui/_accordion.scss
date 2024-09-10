@@ -1,12 +1,30 @@
 .qela-accordion {
+    &.accordion-flush {
+        .accordion-item {
+            border-radius: 0;
+            border: none;
+            overflow: visible;
+            &:not(:last-child) {
+                margin-bottom: 2px;
+            }
+        }
+        .accordion-button {
+            border-radius: 0;
+            &:hover {
+                z-index: 3;
+            }
+            &:not(.collapsed) {
+                border-radius: 0;
+            }
+        }
+    }
     .accordion-item {
         border-top: 1px solid $accordion-border-color;
         overflow: hidden;
+        border-radius: 8px;
         &:not(:last-child) {
             margin-bottom: 0.25rem;
         }
-
-        border-radius: 8px;
 
         &.success {
             border-top: 1px solid $success-300;
@@ -53,7 +71,9 @@
     .accordion-button {
         border-radius: 7px;
         font-weight: 500;
-
+        position: relative;
+        align-items: flex-start;
+        gap: 8px;
         [class*="ic-"] {
             display: none;
 
@@ -72,7 +92,6 @@
 
                 &::after {
                     background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-                    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
                 }
             }
         }
@@ -85,8 +104,22 @@
                 box-shadow: $accordion-button-focus-box-shadow;
             }
         }
+        .badge {
+            position: absolute;
+            left: 9px;
+            top: 0;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
     }
 
     .accordion-body {
+    }
+    .qela-tab {
+        .nav-tabs {
+            flex: 1 1 auto;
+            border: none;
+            padding: 0;
+        }
     }
 }
