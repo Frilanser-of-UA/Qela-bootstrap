@@ -172,3 +172,149 @@
         font-size: 16px;
     }
 }
+.table-responsive {
+    &.qela-table-responsive {
+        overflow: visible;
+        @include media-breakpoint-down(sm) {
+            overflow-x: auto;
+        }
+    }
+}
+.qela-table-grid {
+    width: 100%;
+    font-size: 12px;
+    border-radius: 12px;
+    border: solid 1px $info-300;
+    background-color: $white;
+    @include media-breakpoint-down(sm) {
+        min-width: 640px;
+    }
+}
+.qela-table-row {
+    // display: grid;
+    // grid-template-columns: 31px minmax(120px, 195px) 90px minmax(200px, 1fr);
+    display: flex;
+    gap: 16px;
+    padding: 8px 40px;
+    position: relative;
+    @include media-breakpoint-down(md) {
+        // grid-template-columns: 31px 115px 90px minmax(200px, 1fr);
+        gap: 8px;
+    }
+    .td-1 {
+        flex: 0 0 31px;
+    }
+    .td-2 {
+        flex: 0 0 195px;
+        @include media-breakpoint-down(md) {
+            flex: 0 0 115px;
+        }
+    }
+    .td-3 {
+        flex: 0 1 90px;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .td-4 {
+        flex: 1 1 200px;
+    }
+
+    &:not(.subrow) {
+        border-top: solid 1px $info-300;
+        &:first-child {
+            border-top: none;
+            background: $info-200;
+            font-weight: 500;
+            line-height: 130%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        &:nth-child(2) {
+            border-top: 1px solid $info-200;
+        }
+    }
+
+    > * {
+        display: flex;
+        align-items: center;
+    }
+    .multiselect {
+    }
+    .btn-close {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease 0s;
+        &:not(.collapsed) {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    a {
+        --bs-link-color: #212529;
+        text-decoration: none;
+    }
+    &.subrow {
+        background-color: $info-100;
+        border-top: solid 1px $info-300;
+        &:last-child {
+            .qela-table-line {
+                hr {
+                    height: 50%;
+                    bottom: auto;
+                    top: 0;
+                }
+            }
+        }
+        .qela-table-line {
+            hr {
+                height: 100%;
+            }
+            [class*="ic-"] {
+                &::before {
+                    background-color: $info-100;
+                }
+            }
+        }
+    }
+}
+
+.qela-table-line {
+    position: absolute;
+    height: 100%;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $secondary-400;
+    hr {
+        display: block;
+        width: 1px;
+        height: 50%;
+        background-color: $secondary-400;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: -1;
+    }
+    [class*="ic-"] {
+        &::before {
+            background-color: $white;
+            font-size: 18px;
+            line-height: 1;
+        }
+    }
+}
+.qela-table-collapse {
+    &:last-child {
+        border-radius: 0 0 12px 12px;
+        .subrow {
+            &:last-child {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+        &.collapsing {
+        }
+        &.show {
+        }
+    }
+}
