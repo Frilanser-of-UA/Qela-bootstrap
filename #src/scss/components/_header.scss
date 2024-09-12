@@ -244,12 +244,12 @@ header {
         flex-direction: column;
         background-color: $white;
         ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
         }
         scrollbar {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
         }
 
         ::-webkit-scrollbar-track {
@@ -262,13 +262,13 @@ header {
         }
         ::-webkit-scrollbar-thumb {
             background-color: $gray-600;
-            border: 3px solid $gray-300;
+            border: 2px solid $gray-300;
             height: 20%;
             border-radius: 50px;
         }
         scrollbar-thumb {
             background-color: $gray-600;
-            border: 3px solid $gray-300;
+            border: 2px solid $gray-300;
             height: 20%;
         }
     }

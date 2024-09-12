@@ -18204,12 +18204,12 @@ header .container-xxl > .row [class*=col]:last-child {
   background-color: #fff;
 }
 .qela-menu .qela-nav ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 .qela-menu .qela-nav scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 .qela-menu .qela-nav ::-webkit-scrollbar-track {
   background-color: #dee2e6;
@@ -18221,13 +18221,13 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-menu .qela-nav ::-webkit-scrollbar-thumb {
   background-color: #6c757d;
-  border: 3px solid #dee2e6;
+  border: 2px solid #dee2e6;
   height: 20%;
   border-radius: 50px;
 }
 .qela-menu .qela-nav scrollbar-thumb {
   background-color: #6c757d;
-  border: 3px solid #dee2e6;
+  border: 2px solid #dee2e6;
   height: 20%;
 }
 
