@@ -54,15 +54,7 @@
                         }
                     }
                 }
-
                 &:focus {
-                    box-shadow: 0px 0px 0px 4px rgba($success-400, 0.2) inset;
-                }
-
-                &:not(.collapsed) {
-                    &:focus {
-                        box-shadow: 0px 0px 0px 4px rgba($success-400, 0.2) inset;
-                    }
                 }
             }
         }
@@ -74,18 +66,15 @@
         position: relative;
         align-items: flex-start;
         gap: 8px;
-        [class*="ic-"] {
-            display: none;
-
-            &::before {
-                font-size: 1rem;
-            }
-        }
-
         &::after {
             transition: all 0.25s ease 0s;
         }
-
+        &:focus {
+            color: $gray-700;
+            &::after {
+                background-image: var(--bs-accordion-btn-active-icon);
+            }
+        }
         @media (any-hover: hover) {
             &:hover {
                 color: $secondary;
@@ -95,13 +84,15 @@
                 }
             }
         }
-
         &:not(.collapsed) {
             border-radius: 7px 7px 0 0;
             box-shadow: none;
+        }
+        [class*="ic-"] {
+            display: none;
 
-            &:focus {
-                box-shadow: $accordion-button-focus-box-shadow;
+            &::before {
+                font-size: 1rem;
             }
         }
         .badge {
@@ -114,6 +105,13 @@
     }
 
     .accordion-body {
+    }
+
+    &.small {
+        .accordion-button {
+            font-size: 14px;
+            padding: 8px 8px 8px 16px;
+        }
     }
     .qela-tab {
         .nav-tabs {

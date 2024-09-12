@@ -8619,7 +8619,7 @@ textarea.form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: #212529;
+  --bs-accordion-color: #6c757d;
   --bs-accordion-bg: #fff;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: #e9ecef;
@@ -8628,18 +8628,18 @@ textarea.form-control-lg {
   --bs-accordion-inner-border-radius: calc(0.5rem - 1px);
   --bs-accordion-btn-padding-x: 1rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: #212529;
+  --bs-accordion-btn-color: #6c757d;
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-icon-width: 0.875rem;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236c757d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon-width: 1rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-border-color: transparent;
-  --bs-accordion-btn-focus-box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
+  --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-body-padding-x: 1rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: #212529;
+  --bs-accordion-active-color: #495057;
   --bs-accordion-active-bg: #f8f9fa;
 }
 
@@ -15300,12 +15300,6 @@ input::-webkit-inner-spin-button {
     background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(43, 185, 78, 0.99)'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
   }
 }
-.qela-accordion .accordion-item.success .accordion-button:focus {
-  box-shadow: 0px 0px 0px 4px rgba(121, 216, 145, 0.2) inset;
-}
-.qela-accordion .accordion-item.success .accordion-button:not(.collapsed):focus {
-  box-shadow: 0px 0px 0px 4px rgba(121, 216, 145, 0.2) inset;
-}
 .qela-accordion .accordion-button {
   border-radius: 7px;
   font-weight: 500;
@@ -15313,14 +15307,14 @@ input::-webkit-inner-spin-button {
   align-items: flex-start;
   gap: 8px;
 }
-.qela-accordion .accordion-button [class*=ic-] {
-  display: none;
-}
-.qela-accordion .accordion-button [class*=ic-]::before {
-  font-size: 1rem;
-}
 .qela-accordion .accordion-button::after {
   transition: all 0.25s ease 0s;
+}
+.qela-accordion .accordion-button:focus {
+  color: #495057;
+}
+.qela-accordion .accordion-button:focus::after {
+  background-image: var(--bs-accordion-btn-active-icon);
 }
 @media (any-hover: hover) {
   .qela-accordion .accordion-button:hover {
@@ -15334,8 +15328,11 @@ input::-webkit-inner-spin-button {
   border-radius: 7px 7px 0 0;
   box-shadow: none;
 }
-.qela-accordion .accordion-button:not(.collapsed):focus {
-  box-shadow: 0px 0px 0px 4px rgba(145, 136, 255, 0.2) inset;
+.qela-accordion .accordion-button [class*=ic-] {
+  display: none;
+}
+.qela-accordion .accordion-button [class*=ic-]::before {
+  font-size: 1rem;
 }
 .qela-accordion .accordion-button .badge {
   position: absolute;
@@ -15343,6 +15340,10 @@ input::-webkit-inner-spin-button {
   top: 0;
   transform: translateY(-50%);
   z-index: 3;
+}
+.qela-accordion.small .accordion-button {
+  font-size: 14px;
+  padding: 8px 8px 8px 16px;
 }
 .qela-accordion .qela-tab .nav-tabs {
   flex: 1 1 auto;
