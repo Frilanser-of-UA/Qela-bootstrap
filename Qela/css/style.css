@@ -16143,11 +16143,15 @@ input::-webkit-inner-spin-button {
   background-color: #ffe9ea;
   color: #ff453a;
 }
+.qela-nav-item.small-light:first-child {
+  margin-top: 2px;
+}
 .qela-nav-item.small-light .nav-link {
   padding: 6px 32px 6px var(--step-pad-start);
   color: #6c757d;
   background-color: transparent;
   align-items: flex-start;
+  border-radius: 6px 0px 0px 6px;
 }
 @media (max-width: 767.98px) {
   .qela-nav-item.small-light .nav-link {
@@ -16183,7 +16187,7 @@ input::-webkit-inner-spin-button {
 }
 .qela-nav-item.small-light .nav-link.active {
   color: #9188ff;
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 .qela-nav-item.small-light .nav-link.active .line {
   background-color: #e9ecef;
@@ -16223,6 +16227,14 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   background-color: #ffe9ea;
   color: #ff453a;
+}
+.qela-nav-item.small-light .nav-link.error.active {
+  color: #6c757d;
+}
+@media (any-hover: hover) {
+  .qela-nav-item.small-light .nav-link.error:hover {
+    color: #212529;
+  }
 }
 .qela-nav-item.small-light .line {
   background-color: #e9ecef;
@@ -16729,6 +16741,11 @@ input::-webkit-inner-spin-button {
   background-color: #fff;
   border: none;
   position: relative;
+}
+@media (max-width: 767.98px) {
+  .qela-list-item > div:first-child {
+    flex-direction: column;
+  }
 }
 .qela-list-item:not(:last-child)::before {
   content: "";
@@ -18185,6 +18202,33 @@ header .container-xxl > .row [class*=col]:last-child {
   display: flex;
   flex-direction: column;
   background-color: #fff;
+}
+.qela-menu .qela-nav ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.qela-menu .qela-nav scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.qela-menu .qela-nav ::-webkit-scrollbar-track {
+  background-color: #dee2e6;
+  border-radius: 50px;
+}
+.qela-menu .qela-nav scrollbar-track {
+  background-color: #dee2e6;
+  border-radius: 50px;
+}
+.qela-menu .qela-nav ::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
+  border: 3px solid #dee2e6;
+  height: 20%;
+  border-radius: 50px;
+}
+.qela-menu .qela-nav scrollbar-thumb {
+  background-color: #6c757d;
+  border: 3px solid #dee2e6;
+  height: 20%;
 }
 
 .qela-logo {

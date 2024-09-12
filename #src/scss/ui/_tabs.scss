@@ -80,7 +80,7 @@
             width: var(--step-diametr);
             height: var(--step-diametr);
             flex: 0 0 var(--step-diametr);
-            background-color: $info-200;
+            background-color: $gray-200;
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -118,7 +118,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: $info-100;
+                background-color: $gray-100;
             }
         }
 
@@ -133,7 +133,7 @@
             }
 
             @include media-breakpoint-down(md) {
-                background-color: $info-100;
+                background-color: $gray-100;
             }
         }
 
@@ -162,7 +162,7 @@
         }
 
         &.error {
-            color: $info-900;
+            color: $gray-900;
 
             &::before {
                 content: "\e93e";
@@ -198,7 +198,7 @@
         height: 100%;
         bottom: 0;
         width: 1px;
-        background-color: $info-400;
+        background-color: $gray-400;
         left: calc((var(--step-diametr) / 2) + var(--step-pad-start));
         z-index: 1;
         transition: background-color 0.2s linear 0s;
@@ -265,11 +265,15 @@
         }
     }
     &.small-light {
+        &:first-child {
+            margin-top: 2px;
+        }
         .nav-link {
             padding: 6px 32px 6px var(--step-pad-start);
-            color: $info-600;
+            color: $gray-600;
             background-color: transparent;
             align-items: flex-start;
+            border-radius: 6px 0px 0px 6px;
             @include media-breakpoint-down(md) {
                 padding: 10px;
                 align-items: center;
@@ -281,9 +285,9 @@
                 font-size: 14px;
                 line-height: 1;
                 margin-right: 8px;
-                color: $info-600;
-                border: 1px solid $info-200;
-                background-color: $info-200;
+                color: $gray-600;
+                border: 1px solid $gray-200;
+                background-color: $gray-200;
                 @include media-breakpoint-down(md) {
                     margin-right: auto;
                 }
@@ -298,9 +302,9 @@
             }
             &.active {
                 color: $secondary;
-                background-color: $white;
+                background-color: $gray-100;
                 .line {
-                    background-color: $info-200;
+                    background-color: $gray-200;
                 }
                 &::before {
                     content: counter(step);
@@ -332,7 +336,7 @@
                     }
                 }
                 .line {
-                    background-color: $info-200;
+                    background-color: $gray-200;
                 }
             }
             &.error {
@@ -342,10 +346,18 @@
                     background-color: $danger-200;
                     color: $danger;
                 }
+                &.active {
+                    color: $gray-600;
+                }
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $gray-900;
+                    }
+                }
             }
         }
         .line {
-            background-color: $info-200;
+            background-color: $gray-200;
         }
     }
 }
@@ -353,14 +365,14 @@
 .qela-quest {
     &:not(:last-child) {
         .head {
-            border-bottom: 1px solid $info-400;
+            border-bottom: 1px solid $gray-400;
         }
     }
 
     @media (any-hover: hover) {
         &:hover {
             .head {
-                background-color: $info-100;
+                background-color: $gray-100;
             }
 
             .btn {
@@ -374,7 +386,7 @@
     &.active {
         .head {
             @include media-breakpoint-down(md) {
-                background-color: $info-200;
+                background-color: $gray-200;
             }
         }
 
@@ -480,7 +492,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: $info-100;
+                background-color: $gray-100;
 
                 .nav-link {
                     padding-right: 0.75rem;
@@ -509,7 +521,7 @@
         padding: 0.25rem 0.5rem;
         font-weight: 500;
         line-height: 130%;
-        color: $info-900;
+        color: $gray-900;
         position: relative;
         transition: all 0.3s ease-out 0s;
 
