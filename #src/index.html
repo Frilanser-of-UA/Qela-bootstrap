@@ -49,6 +49,39 @@
             color: #fff;
         }
 
+        * ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        * scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        * ::-webkit-scrollbar-track {
+            background-color: #dee2e6;
+            border-radius: 50px;
+        }
+
+        * scrollbar-track {
+            background-color: #dee2e6;
+            border-radius: 50px;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #6c757d;
+            border: 2px solid #dee2e6;
+            height: 20%;
+            border-radius: 50px;
+        }
+
+        * scrollbar-thumb {
+            background-color: #6c757d;
+            border: 2px solid #dee2e6;
+            height: 20%;
+        }
+
         main.qela-body {
             padding-left: 220px;
         }
@@ -61,6 +94,28 @@
         .--btn svg {
             width: 26px;
             height: 100%;
+        }
+
+        .night-theme *::-webkit-scrollbar-track,
+        .night-theme::-webkit-scrollbar-track {
+            background-color: #343a40;
+        }
+
+        .night-theme * scrollbar-track,
+        .night-theme scrollbar-track {
+            background-color: #343a40;
+        }
+
+        .night-theme *::-webkit-scrollbar-thumb,
+        .night-theme::-webkit-scrollbar-thumb {
+            background-color: #6c757d;
+            border: 2px solid #343a40;
+        }
+
+        .night-theme * scrollbar-thumb,
+        .night-theme scrollbar-thumb {
+            background-color: #6c757d;
+            border: 2px solid #343a40;
         }
 
         .night-theme .--btn {
@@ -87,10 +142,11 @@
             width: 228px;
             height: 100vh;
             z-index: 10;
-            padding-top: 65px;
+            margin-top: 62px;
             overflow: auto;
             background-color: rgb(255, 255, 255);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
         }
 
         aside.--aside a {
