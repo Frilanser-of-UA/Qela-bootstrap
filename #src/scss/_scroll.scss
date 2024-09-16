@@ -1,9 +1,9 @@
 .qela-scroll-custom {
     --scroll-pr: 0px;
-    --scroll-width: 5px;
-    --scroll-rounded: 8px;
-    --scroll-bg-track: transparent;
-    $scroll-bg-thumb: rgba($black, 0.6);
+    --scroll-width: 8px;
+    --scroll-rounded: 50px;
+    --scroll-bg-track: #dee2e6;
+    --scroll-bg-thumb: #6c757d;
     > * {
         padding-right: var(--scroll-pr);
     }
@@ -12,32 +12,33 @@
     ::-webkit-scrollbar {
         width: var(--scroll-width);
     }
-
-    ::-webkit-scrollbar-track {
-        background: var(--scroll-bg-track);
-        border-radius: var(--scroll-rounded);
-
-        /* Цвет фона трека скроллбара */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: var(--scroll-rounded);
-        background: $scroll-bg-thumb;
-    }
-
     /* Для Firefox */
     scrollbar {
         width: var(--scroll-width);
-        height: var(--scroll-width);
     }
 
-    scrollbar-track {
-        background-color: var(--scroll-bg-track);
+    ::-webkit-scrollbar-track {
         /* Цвет фона трека скроллбара */
+        background: var(--scroll-bg-track);
+        border-radius: var(--scroll-rounded);
+    }
+    scrollbar-track {
+        /* Цвет фона трека скроллбара */
+        background-color: var(--scroll-bg-track);
+        border-radius: var(--scroll-rounded);
     }
 
+    ::-webkit-scrollbar-thumb {
+        background: var(--scroll-bg-thumb);
+        border-radius: var(--scroll-rounded);
+        height: 20%;
+        border: 2px solid $gray-300;
+    }
     scrollbar-thumb {
-        background: $scroll-bg-thumb;
         /* Цвет ползунка скроллбара */
+        background: var(--scroll-bg-thumb);
+        border-radius: var(--scroll-rounded);
+        height: 20%;
+        border: 2px solid $gray-300;
     }
 }

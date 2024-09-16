@@ -13948,9 +13948,10 @@ body {
 
 .qela-scroll-custom {
   --scroll-pr: 0px;
-  --scroll-width: 5px;
-  --scroll-rounded: 8px;
-  --scroll-bg-track: transparent;
+  --scroll-width: 8px;
+  --scroll-rounded: 50px;
+  --scroll-bg-track: #dee2e6;
+  --scroll-bg-thumb: #6c757d;
   /* Для WebKit-браузеров */
   /* Для Firefox */
 }
@@ -13960,26 +13961,31 @@ body {
 .qela-scroll-custom ::-webkit-scrollbar {
   width: var(--scroll-width);
 }
-.qela-scroll-custom ::-webkit-scrollbar-track {
-  background: var(--scroll-bg-track);
-  border-radius: var(--scroll-rounded);
-  /* Цвет фона трека скроллбара */
-}
-.qela-scroll-custom ::-webkit-scrollbar-thumb {
-  border-radius: var(--scroll-rounded);
-  background: rgba(0, 0, 0, 0.6);
-}
 .qela-scroll-custom scrollbar {
   width: var(--scroll-width);
-  height: var(--scroll-width);
+}
+.qela-scroll-custom ::-webkit-scrollbar-track {
+  /* Цвет фона трека скроллбара */
+  background: var(--scroll-bg-track);
+  border-radius: var(--scroll-rounded);
 }
 .qela-scroll-custom scrollbar-track {
-  background-color: var(--scroll-bg-track);
   /* Цвет фона трека скроллбара */
+  background-color: var(--scroll-bg-track);
+  border-radius: var(--scroll-rounded);
+}
+.qela-scroll-custom ::-webkit-scrollbar-thumb {
+  background: var(--scroll-bg-thumb);
+  border-radius: var(--scroll-rounded);
+  height: 20%;
+  border: 2px solid #dee2e6;
 }
 .qela-scroll-custom scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.6);
   /* Цвет ползунка скроллбара */
+  background: var(--scroll-bg-thumb);
+  border-radius: var(--scroll-rounded);
+  height: 20%;
+  border: 2px solid #dee2e6;
 }
 
 .btn {
@@ -18415,33 +18421,6 @@ header .container-xxl > .row [class*=col]:last-child {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-}
-.qela-menu .qela-nav ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-.qela-menu .qela-nav scrollbar {
-  width: 8px;
-  height: 8px;
-}
-.qela-menu .qela-nav ::-webkit-scrollbar-track {
-  background-color: #dee2e6;
-  border-radius: 50px;
-}
-.qela-menu .qela-nav scrollbar-track {
-  background-color: #dee2e6;
-  border-radius: 50px;
-}
-.qela-menu .qela-nav ::-webkit-scrollbar-thumb {
-  background-color: #6c757d;
-  border: 2px solid #dee2e6;
-  height: 20%;
-  border-radius: 50px;
-}
-.qela-menu .qela-nav scrollbar-thumb {
-  background-color: #6c757d;
-  border: 2px solid #dee2e6;
-  height: 20%;
 }
 
 .qela-logo {
