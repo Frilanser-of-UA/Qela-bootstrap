@@ -781,6 +781,37 @@ $accordion-icon-transform: rotate(-180deg);
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 // scss-docs-end accordion-variables
+// Popovers
+
+// scss-docs-start popover-variables
+$popover-font-size: $font-size-sm;
+$popover-bg: $white;
+$popover-max-width: 364px;
+$popover-border-width: $border-width;
+$popover-border-color: $gray-300;
+$popover-border-radius: 0.5rem;
+$popover-inner-border-radius: subtract($popover-border-radius, $popover-border-width);
+$popover-box-shadow: none;
+
+$popover-header-font-size: $font-size-base;
+$popover-header-bg: $popover-bg;
+$popover-header-color: $black;
+$popover-header-padding-y: $spacer;
+$popover-header-padding-x: $spacer;
+
+$popover-body-color: $body-color;
+$popover-body-padding-y: $spacer;
+$popover-body-padding-x: $spacer;
+
+// $popover-arrow-width: 1rem !default;
+// $popover-arrow-height: .5rem !default;
+// scss-docs-end popover-variables
+
+// fusv-disable
+// Deprecated in Bootstrap 5.2.0 for CSS variables
+// $popover-arrow-color: $popover-bg  !default;
+// $popover-arrow-outer-color: var(--#{$prefix}border-color-translucent) !default;
+// fusv-enable
 $toast-max-width: 350px;
 $toast-padding-x: 0.75rem;
 $toast-padding-y: 0.5rem;
