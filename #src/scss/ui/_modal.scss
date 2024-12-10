@@ -1,39 +1,37 @@
 .qela-modal-xl {
-	&.modal-xl {
-		@media (min-width: 576px) {
-			--bs-modal-width: 962px;
-			padding-right: 8px;
-			padding-left: 8px;
-		}
+    &.modal-xl {
+        @media (min-width: 576px) {
+            --bs-modal-width: 962px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
 
-		@media (min-width: 992px) {
-			--bs-modal-width: 962px;
-		}
+        @media (min-width: 992px) {
+            --bs-modal-width: 962px;
+        }
 
-		@media (min-width: 1200px) {
-			--bs-modal-width: 1170px;
-		}
-	}
+        @media (min-width: 1200px) {
+            --bs-modal-width: 1170px;
+        }
+    }
 }
 
 .qela-modal {
-	&.modal {
-		&:has(.card, .table) {
-			.qela-modal-empty {
-				display: none;
-			}
-		}
+    &.modal {
+        &:has(.card, .table) {
+            .qela-modal-empty {
+                display: none;
+            }
+        }
+    }
 
-	}
-
-	.modal-body {
-		max-height: 565px;
-	}
-
+    .modal-body {
+        max-height: 565px;
+    }
 }
 
 .qela-modal-empty {
-	margin: 0;
-	text-align: center;
-	display: block;
+    margin: 0;
+    text-align: center;
+    display: block;
 }

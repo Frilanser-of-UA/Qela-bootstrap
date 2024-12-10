@@ -13,6 +13,9 @@ body {
     @include media-breakpoint-down(md) {
         padding-left: 0;
     }
+    .modal-dialog {
+        padding-top: var(--body-pad-top);
+    }
 }
 
 // ======================= master
@@ -218,14 +221,6 @@ body {
         .table-qela {
             max-height: 410px;
             overflow: auto;
-
-            td {
-                &:first-child {
-                    display: flex;
-                    align-items: center;
-                    gap: 14px;
-                }
-            }
         }
     }
 

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Qela.WebApp.Admin/wwwroot/css/vendors.css" />
+    <link rel="stylesheet" href="/Qela.WebApp.Admin/wwwroot/css/style.css" />
+    <link rel="stylesheet" href="/Qela.WebApp.Admin/wwwroot/css/fix.css" />
+  </head>
+
+  <body class="qela-body">
+    <!-- header -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col gap-3">
+                    <button class="qela-burger">
+                        <img src="/Qela.WebApp.Admin/wwwroot/img/burger.svg" width="24" height="40" alt="burger button">
+                    </button>
+                    <h1 class="h5">Lorem, ipsum.</h1>
+                </div>
+                <div class="col-auto d-md-flex d-none">
+                    <a href="https://userhelp.qela.tech" target="_blank" class="btn btn-info ico-right ic-help-circle">User App Guideline</a>
+                    <a href="https://adminhelp.qela.tech" target="_blank" class="btn btn-info ico-right ic-help-circle">Admin Guideline</a>
+                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="User Site">
+                        <a href="https://localhost:7281/powerua/account/login" target="_blank" class="btn btn-secondary ico ic-player-play" data-bs-title="loc["usersitetitle"]"=""></a>
+                    </span>
+                </div>
+                <div class="col-auto">
+                    <div class="row h-100 position-relative">
+                        <div class="col d-flex align-items-center justify-content-end">
+                            <div class="dropdown qela-dropdown">
+                                <button type="button" class="p-2 btn p-0 border-0 position-relative online-sm" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                    <img class="rounded-circle online-sm" src="/blob/download/729de26c-83c9-42de-8d8c-6eb9901537c6" style="object-fit: cover;" v-bind:style="{'--img-size': '40px'}" width="40" height="40" alt="">
+                                </button>
+                                <ul class="dropdown-menu shadow" style="width:350px">
+                                    <li>
+                                        <div class="col bg-white p-3 p-lg-4 d-flex align-items-start gap-4 rounded-2">
+                                            <img class="rounded-circle online-sm" src="/blob/download/729de26c-83c9-42de-8d8c-6eb9901537c6" style="object-fit: cover;" v-bind:style="{'--img-size': '40px'}" width="40" height="40" alt="">
+                                            <div class="flex-grow-1">
+                                                <div class="h3 mb-1" v-text="UserStatistic.VotingFinished"></div>
+                                                <span>qelatesting1+100@gmail.com</span>
+                                                <div class="text-info-600">
+                                                    <small>Owner</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item ic-user-24 p-3" href="/profile/index/b8746e3a-a8c8-4645-8c28-d1d66dfe279e">Profile</a>
+
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item ic-edit p-3" href="/profile/edit/b8746e3a-a8c8-4645-8c28-d1d66dfe279e">Edit Profile</a>
+                                    </li>
+                                    <li><a class="dropdown-item ic-dollar p-3" href="/profile/billing">Billing</a></li>
+                                    <li><a class="dropdown-item ic-dollar p-3" href="/profile/subscription">Subscription</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item ic-success-2 p-3" href="/powerua?tab=rules">FAQ</a></li>
+                                    <li><a class="dropdown-item ic-success-2 p-3" target="_blank" href="https://adminhelp.qela.tech">Help</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item ic-log-out p-3" href="/account/logout">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        <div class="h-100 qela-menu">
+            <button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
+            <button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close " aria-label="Close"></button>
+            <nav id="gela-nav" class="d-flex flex-column position-relative h-100 qela-nav qela-scroll-custom">
+                <a class="position-relative qela-logo qela-shadow" href="/powerua">
+                    <!-- <img src="\img\header\logo-3.svg" alt=""> -->
+                    <img src="..\..\wwwroot\img\header\logo.svg" alt="">
+                </a>
+                <div class="qela-nav__wrapper d-flex flex-column position-relative">
+                    <div class="d-md-none d-flex">
+                        <a href="#" class="btn btn-info ico-right ic-help-circle">User App Guideline</a>
+                        <a href="#" class="btn btn-info ico-right ic-help-circle">Admin Guideline</a>
+                    </div>
+                    <ul class="nav flex-column mb-auto">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center active" aria-current="page" href="/powerua">
+                                <span class="ic-city p-2 rounded-5 quantity" title="Organization" id="sidebar-organization">
+                                </span>
+                                <span>Organization</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/home">
+                                <span class="ic-chart-pie p-2 rounded-5 quantity" title="Dashboard" id="sidebar-home">
+                                </span>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/user">
+                                <span class="ic-people p-2 rounded-5 quantity" title="Users" id="sidebar-user">
+                                </span>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/voting">
+                                <span class="ic-voting-24 p-2 rounded-5 quantity" title="Voting" id="sidebar-voting">
+                                </span>
+                                <span>Voting</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/quest">
+                                <span class="ic-diamond-24 p-2 rounded-5 quantity" title="Quests" id="sidebar-quest">
+                                </span>
+                                <span>Quests</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/donate">
+                                <span class="ic-dollar p-2 rounded-5 quantity" title="Donations" id="sidebar-donate">
+                                </span>
+                                <span>Donations</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/awards">
+                                <span class="ic-trophy p-2 rounded-5 quantity" title="Awards management" id="sidebar-awards">
+                                </span>
+                                <span>Awards management</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/news">
+                                <span class="ic-notes p-2 rounded-5 quantity" title="News" id="sidebar-news">
+                                </span>
+                                <span>News</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/task">
+                                <span class="ic-bulb p-2 rounded-5 quantity" title="Tasks" id="sidebar-task">
+                                    <span class="badge rounded-pill text-bg-danger qela-badge small">86</span>
+                                </span>
+                                <span>Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" href="/powerua/tag">
+                                <span class="ic-tag p-2 rounded-5 quantity" title="Tags" id="sidebar-tag">
+                                </span>
+                                <span>Tags</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav flex-column pt-0">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center " aria-current="page" id="sidebar-settings" href="/powerua/settings/logs">
+                                <span class="ic-settings p-2 rounded-5" title="Organization Settings"></span>
+                                <span>Settings</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+      <!-- =====================Список користувачів==================== -->
+      <div class="container-fluid">
+        <div class="bg-white rounded-3 border mb-2 pb-4">
+          <div class="border-bottom p-3">
+            <h2 class="h6">Leaderboard</h2>
+          </div>
+          <div class="px-4 py-3 border-bottom">
+            <div class="d-flex gap-2 align-items-center ">
+              <small>Filters</small>
+              <div class="d-flex">
+                <div tabindex="-1" class="multiselect" role="combobox" aria-owns="listbox-null">
+                  <div class="multiselect__select"></div>
+                  <div class="multiselect__tags">
+                    <div class="multiselect__tags-wrap" style="display: none;"></div>
+                    <div class="multiselect__spinner" style="display: none;"></div><input name="" type="text" autocomplete="off" spellcheck="false" placeholder="Select tags" tabindex="0" class="multiselect__input" aria-controls="listbox-null" style="width: 0px; position: absolute; padding: 0px;">
+                    <span class="multiselect__placeholder">Select tags</span>
+                  </div>
+                  <div class="multiselect__content-wrapper" tabindex="-1" style="max-height: 300px; display: none;">
+                    <ul class="multiselect__content" role="listbox" id="listbox-null" style="display: inline-block;">
+                      <li class="multiselect__element" id="null-0" role="option"><span class="multiselect__option--highlight multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-red">Fundraising Beginner</span></span>
+                      </li>
+                      <li class="multiselect__element" id="null-1" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-red">Fundraising Advanced</span></span>
+                      </li>
+                      <li class="multiselect__element" id="null-2" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-red">Fundraising Professional</span></span>
+                      </li>
+                      <li class="multiselect__element" id="null-3" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-red">Fundraising Legend</span></span>
+                      </li>
+                      <li class="multiselect__element" id="null-4" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-violet">Recruiting Beginner</span></span>
+                      </li>
+                      <li class="multiselect__element" id="null-5" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-violet">Recruiting Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-6" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-violet">Recruiting Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-7" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-violet">Recruiting Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-8" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-green">Endurance Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-9" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-green">Endurance Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-10" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-green">Endurance Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-11" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-green">Endurance Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-12" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-orange">Eloquence Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-13" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-orange">Eloquence Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-14" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-orange">Eloquence Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-15" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-orange">Eloquence Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-16" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightgreen">Determination Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-17" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightgreen">Determination Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-18" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightgreen">Determination Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-19" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightgreen">Determination Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-20" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightblue">Originality Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-21" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightblue">Originality Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-22" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightblue">Originality Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-23" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-lightblue">Originality Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-24" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-blue">Management Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-25" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-blue">Management Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-26" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-blue">Management Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-27" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-blue">Management Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-28" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-pink">Savvy Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-29" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-pink">Savvy Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-30" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-pink">Savvy Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-31" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-pink">Savvy Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-32" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large vote">Vote Weight Beginner</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-33" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large vote">Vote Weight Advanced</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-34" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large vote">Vote Weight Professional</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-35" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large vote">Vote Weight Legend</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-36" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-gray">Tag A</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-37" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-gray">Tag B</span></span>
+                        
+                      </li>
+                      <li class="multiselect__element" id="null-38" role="option"><span class="multiselect__option" data-select="Press enter to select" data-selected="Selected" data-deselect="Press enter to remove"><span class="badge qela-badge-telent large text-gray">Tag C</span></span>
+                        
+                      </li>
+                      <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                      <li style="display: none;"><span class="multiselect__option">List is empty.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive table-qela">
+            <table class="table table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>Email</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone Number</th>
+                  <th>Tags</th>
+                  <th>Branches</th>
+                  <th class="text-nowrap">Vote weight</th>
+                  <th>Verified</th>
+                  <th class="text-end" style="position: sticky; right: 0px; background-color: var(--bs-body-bg);">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="form-check form-check-inline me-2"><input type="checkbox" autocomplete="off" class="form-check-input"></div>
+                    </div>
+                  </td>
+                  <td><a href="/newtest12/user/show/b0bf08e8-4012-4ee2-9def-134b424be282" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><small><small>EW</small></small></a></td>
+                  <td class="qela-clamp" title="qelatesting1+1727@gmail.com" style="max-width: 180px;">qelatesting1+1727@gmail.com</td>
+                  <td class="qela-clamp" title="Elijah" style="max-width: 100px;">Elijah</td>
+                  <td class="qela-clamp" title="Walker" style="max-width: 100px;">Walker</td>
+                  <td title="+380930139390">+380930139390</td>
+                  <td style="max-width: 180px;">
+                    <div class="d-flex gap-2 flex-wrap align-items-start"><span class="badge qela-badge-telent mx-1 text-green">Endurance Beginner</span><span class="badge qela-badge-telent mx-1 text-pink">Savvy Beginner</span><button type="button" class="btn btn-sm btn-outline-light check-readonly ic-dots-row" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" data-bs-title="<div class=&quot;d-flex gap-2 flex-wrap align-items-start&quot;><span class=&quot;badge qela-badge-telent mx-1 text-violet&quot;>Recruiting Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 text-blue&quot;>Management Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 vote&quot;>Vote Weight Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 text-orange&quot;>Eloquence Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 text-lightgreen&quot;>Determination Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 text-red&quot;>Fundraising Beginner</span> <span class=&quot;badge qela-badge-telent mx-1 text-lightblue&quot;>Originality Beginner</span></div>" style="max-width: 20px; max-height: 20px; margin: 0px;"></button></div>
+                  </td>
+                  <td><span>-</span></td>
+                  <td>
+                    <div class="qela-voice">
+                      <div class="body-voice p-1 bg-primary-200"><img src="/img/users/coin.svg" width="18" height="18" alt="coin"><span>1</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qela-verification"><span class="ic-no-success bg-danger-100 text-danger"></span></div>
+                  </td>
+                  <td width="50" class="text-end" style="width: 0px; position: sticky; right: 0px; background-color: white;">
+                    <div class="btn-group qela-btn-group"><button class="btn btn-light ico ic-eye" title="View"></button><button class="btn btn-light ico ic-mail check-readonly" title="Send email"></button></div>
+                  </td>
+                </tr>
+
+  
+                
+              </tbody>
+            </table>
+          </div>
+          <div class="px-4 py-3">
+            <nav aria-label="Page navigation" class="d-flex justify-content-end">
+              <div class="d-flex flex-wrap align-items-baseline gap-3">
+                <select class="form-control w-auto">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select><span style="flex: 0 0 auto;">1 - 10 from 20</span>
+                <ul class="pagination pagination-sm">
+                  <li class="page-item disabled"><button class="page-link" aria-label="Previous page">Prev</button></li>
+                  <li class="page-item active"><button class="page-link">1</button></li>
+                  <li class="page-item "><button class="page-link">2</button></li>
+                  <li class="page-item "><button class="page-link" aria-label="Next Page">Next</button></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/Qela.WebApp.Admin/wwwroot/js/vendors.js"></script>
+    <script src="/Qela.WebApp.Admin/wwwroot/js/app.js"></script>
+    <script src="~/lib/vue/vue.global.js"></script>
+    <script src="~/lib/a2v10/platform.js"></script>
+  </body>
+</html>
