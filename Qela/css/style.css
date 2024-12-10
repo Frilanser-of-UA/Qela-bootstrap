@@ -11952,7 +11952,7 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .modal {
-    --bs-modal-margin: 1.75rem;
+    --bs-modal-margin: 1.5rem;
     --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 
@@ -13436,6 +13436,9 @@ body {
     padding-left: 0;
   }
 }
+.qela-body .modal-dialog {
+  padding-top: var(--body-pad-top);
+}
 
 .qela-main {
   padding: 0.5rem 0;
@@ -13613,11 +13616,6 @@ body {
 .qela-end.qela-tables .table-qela {
   max-height: 410px;
   overflow: auto;
-}
-.qela-end.qela-tables .table-qela td:first-child {
-  display: flex;
-  align-items: center;
-  gap: 14px;
 }
 .qela-end > div:first-child {
   padding: 2rem 1rem 0 1rem;
