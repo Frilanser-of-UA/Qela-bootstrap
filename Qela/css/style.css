@@ -14831,6 +14831,15 @@ input::-webkit-inner-spin-button {
   box-shadow: 2px 2px 0px 0px rgba(145, 136, 255, 0.3), -2px -2px 0px 0px rgba(145, 136, 255, 0.3);
 }
 
+.qela-select-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.qela-select-inner .multiselect {
+  flex: 0 1 215px;
+}
+
 .multiselect {
   cursor: pointer;
   min-height: 38px;
@@ -17337,10 +17346,10 @@ input::-webkit-inner-spin-button {
   height: var(--img-size);
   flex: 0 0 var(--img-size);
   border-radius: 50%;
-  border: 1px solid #e9ecef;
 }
 .qela-avatar img {
   border-radius: 50%;
+  border: var(--bs-border-width) solid #e9ecef;
 }
 .qela-avatar.online, .qela-avatar.online-sm {
   position: relative;
@@ -18554,10 +18563,14 @@ header .container-xxl > .row [class*=col]:last-child {
 .table-qela {
   overflow-y: hidden;
   font-size: 14px;
+  table-layout: auto;
 }
 .table-qela .table {
   width: 100%;
   margin-bottom: 0;
+}
+.table-qela th i::before {
+  font-size: 16px;
 }
 .table-qela th,
 .table-qela td {

@@ -1,3 +1,12 @@
+.qela-select-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .multiselect {
+        flex: 0 1 215px;
+    }
+}
+
 .multiselect {
     cursor: pointer;
     min-height: 38px;

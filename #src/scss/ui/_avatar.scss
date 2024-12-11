@@ -10,9 +10,10 @@
     height: var(--img-size);
     flex: 0 0 var(--img-size);
     border-radius: 50%;
-    border: 1px solid $info-200;
+
     img {
         border-radius: 50%;
+        border: var(--bs-border-width) solid $info-200;
     }
     &.online,
     &.online-sm {
