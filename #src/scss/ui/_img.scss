@@ -1,4 +1,4 @@
-.ql-ibg {
+.qela-ibg {
     position: relative;
 
     img,
@@ -12,7 +12,7 @@
         object-fit: cover;
     }
 }
-.ql-previews {
+.qela-previews {
     --img-size: 38px;
     font-size: 14px;
     display: flex;
@@ -48,14 +48,14 @@
             color: $secondary;
         }
     }
-    &.ql-lg {
+    &.qela-lg {
         --img-size: 42px;
     }
-    &.ql-sm {
+    &.qela-sm {
         --img-size: 31px;
     }
-    &.ql-icon,
-    &.ql-text {
+    &.qela-icon,
+    &.qela-text {
         border: 1px solid transparent;
         @media (any-hover: hover) {
             &:hover {
@@ -68,7 +68,7 @@
             box-shadow: 0px 0px 0px 3px #dcd9fb inset;
         }
     }
-    &.ql-icon {
+    &.qela-icon {
         color: $info-700;
         @media (any-hover: hover) {
             &:hover {
@@ -77,7 +77,7 @@
             }
         }
     }
-    &.ql-text {
+    &.qela-text {
         color: $secondary-700;
         @media (any-hover: hover) {
             &:hover {
@@ -92,13 +92,13 @@
         img {
             opacity: 0.4;
         }
-        &.ql-icon {
+        &.qela-icon {
             border-color: transparent;
             &::before {
                 color: $info;
             }
         }
-        &.ql-text {
+        &.qela-text {
             color: $secondary-400;
         }
     }
@@ -175,7 +175,7 @@
 }
 
 .qela-video {
-    .ql-ibg {
+    .qela-ibg {
         aspect-ratio: 16/9;
         max-width: 170px;
         border-radius: 0.5rem;

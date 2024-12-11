@@ -50,20 +50,20 @@
         * {
             color: $info;
         }
-        .ql-previews {
+        .qela-previews {
             pointer-events: none;
             border-color: $info-200;
             background-color: $info-100;
             img {
                 opacity: 0.4;
             }
-            &.ql-icon {
+            &.qela-icon {
                 border-color: transparent;
                 &::before {
                     color: $info;
                 }
             }
-            &.ql-text {
+            &.qela-text {
                 color: $secondary-400;
             }
         }
@@ -186,9 +186,7 @@
     border-radius: 12px;
     border: solid 1px $info-300;
     background-color: $white;
-    @include media-breakpoint-down(sm) {
-        min-width: 640px;
-    }
+    overflow: hidden;
 }
 .qela-table-row {
     // display: grid;
@@ -205,10 +203,7 @@
         flex: 0 0 31px;
     }
     .td-2 {
-        flex: 0 0 195px;
-        @include media-breakpoint-down(md) {
-            flex: 0 0 115px;
-        }
+        flex: 0 0 140px;
     }
     .td-3 {
         flex: 0 1 90px;
@@ -306,7 +301,6 @@
 }
 .qela-table-collapse {
     &:last-child {
-        border-radius: 0 0 12px 12px;
         .subrow {
             &:last-child {
                 border-radius: 0 0 12px 12px;
@@ -315,6 +309,8 @@
         &.collapsing {
         }
         &.show {
+        }
+        &.collapse {
         }
     }
 }

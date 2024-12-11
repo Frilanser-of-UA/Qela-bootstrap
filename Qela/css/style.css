@@ -13424,6 +13424,11 @@ body {
   height: 100%;
 }
 
+main {
+  padding: 18px;
+  height: 100%;
+}
+
 .qela-body {
   --body-pad-top: 56px;
   padding-top: var(--body-pad-top);
@@ -15053,11 +15058,11 @@ input::-webkit-inner-spin-button {
 .form-check {
   vertical-align: baseline;
 }
-.form-check.ql-sm {
+.form-check.qela-sm {
   font-size: 14px;
   padding-left: 1.25rem;
 }
-.form-check.ql-sm .form-check-input {
+.form-check.qela-sm .form-check-input {
   margin-left: -1.25rem;
 }
 .form-check .invalid-feedback {
@@ -16677,7 +16682,7 @@ input::-webkit-inner-spin-button {
 .qela-list .list-group-item > a p {
   transition: color 0.3s ease 0s;
 }
-.qela-list .list-group-item > a .ql-previews {
+.qela-list .list-group-item > a .qela-previews {
   margin-right: 1rem;
 }
 .qela-list .list-group-item + .list-group-item {
@@ -17114,11 +17119,11 @@ input::-webkit-inner-spin-button {
   border: 1px solid #fff;
 }
 
-.ql-ibg {
+.qela-ibg {
   position: relative;
 }
-.ql-ibg img,
-.ql-ibg video {
+.qela-ibg img,
+.qela-ibg video {
   display: block;
   position: absolute;
   top: 0;
@@ -17128,7 +17133,7 @@ input::-webkit-inner-spin-button {
   object-fit: cover;
 }
 
-.ql-previews {
+.qela-previews {
   --img-size: 38px;
   font-size: 14px;
   display: flex;
@@ -17147,75 +17152,75 @@ input::-webkit-inner-spin-button {
   transition: all 0.3s ease-out 0s;
   cursor: pointer;
 }
-.ql-previews::before {
+.qela-previews::before {
   font-size: 20px;
 }
-.ql-previews:not(:last-child) {
+.qela-previews:not(:last-child) {
   margin-right: 2px;
 }
 @media (any-hover: hover) {
-  .ql-previews:hover {
+  .qela-previews:hover {
     border: 1px solid #bdb8ff;
   }
 }
-.ql-previews.current {
+.qela-previews.current {
   border: 2px solid #9188ff;
   box-shadow: 0px 0px 0px 0px #dcd9fb inset;
 }
-.ql-previews.current::before {
+.qela-previews.current::before {
   color: #9188ff;
 }
-.ql-previews.ql-lg {
+.qela-previews.qela-lg {
   --img-size: 42px;
 }
-.ql-previews.ql-sm {
+.qela-previews.qela-sm {
   --img-size: 31px;
 }
-.ql-previews.ql-icon, .ql-previews.ql-text {
+.qela-previews.qela-icon, .qela-previews.qela-text {
   border: 1px solid transparent;
 }
 @media (any-hover: hover) {
-  .ql-previews.ql-icon:hover, .ql-previews.ql-text:hover {
+  .qela-previews.qela-icon:hover, .qela-previews.qela-text:hover {
     border: 1px solid #bdb8ff;
   }
 }
-.ql-previews.ql-icon.current, .ql-previews.ql-text.current {
+.qela-previews.qela-icon.current, .qela-previews.qela-text.current {
   border-width: 1px;
   border: 1px solid #9188ff;
   box-shadow: 0px 0px 0px 3px #dcd9fb inset;
 }
-.ql-previews.ql-icon {
+.qela-previews.qela-icon {
   color: #495057;
 }
 @media (any-hover: hover) {
-  .ql-previews.ql-icon:hover {
+  .qela-previews.qela-icon:hover {
     background-color: #f4f3ff;
     color: #9188ff;
   }
 }
-.ql-previews.ql-text {
+.qela-previews.qela-text {
   color: #6e63fa;
 }
 @media (any-hover: hover) {
-  .ql-previews.ql-text:hover {
+  .qela-previews.qela-text:hover {
     background-color: #e5e3ff;
   }
 }
-.ql-previews.disabled {
+.qela-previews.disabled {
   pointer-events: none;
   border-color: #e9ecef;
   background-color: #f8f9fa;
 }
-.ql-previews.disabled img {
+.qela-previews.disabled img {
   opacity: 0.4;
 }
-.ql-previews.disabled.ql-icon {
+.qela-previews.disabled.qela-icon {
   border-color: transparent;
 }
-.ql-previews.disabled.ql-icon::before {
+.qela-previews.disabled.qela-icon::before {
   color: #adb5bd;
 }
-.ql-previews.disabled.ql-text {
+.qela-previews.disabled.qela-text {
   color: #bdb8ff;
 }
 
@@ -17278,13 +17283,13 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
 }
 
-.qela-video .ql-ibg {
+.qela-video .qela-ibg {
   aspect-ratio: 16/9;
   max-width: 170px;
   border-radius: 0.5rem;
   margin: 1.5rem auto 1rem auto;
 }
-.qela-video .ql-ibg::after {
+.qela-video .qela-ibg::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -17407,14 +17412,14 @@ input::-webkit-inner-spin-button {
   color: #212529;
   background-color: #f8f9fa;
 }
-.qela-card.card:hover .ql-ibg::after {
+.qela-card.card:hover .qela-ibg::after {
   opacity: 1;
 }
-.qela-card .ql-ibg {
+.qela-card .qela-ibg {
   padding-top: 55%;
   overflow: hidden;
 }
-.qela-card .ql-ibg::after {
+.qela-card .qela-ibg::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -18066,11 +18071,11 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   line-height: 1;
 }
-.qela-admin.ql-sm {
+.qela-admin.qela-sm {
   width: 24px;
   height: 24px;
 }
-.qela-admin.ql-sm.btn[class^=ic-]:before, .qela-admin.ql-sm.btn[class*=ic-]:before {
+.qela-admin.qela-sm.btn[class^=ic-]:before, .qela-admin.qela-sm.btn[class*=ic-]:before {
   font-size: 16px;
 }
 
@@ -18578,21 +18583,21 @@ header .container-xxl > .row [class*=col]:last-child {
 .table-qela .qela-light * {
   color: #adb5bd;
 }
-.table-qela .qela-light .ql-previews {
+.table-qela .qela-light .qela-previews {
   pointer-events: none;
   border-color: #e9ecef;
   background-color: #f8f9fa;
 }
-.table-qela .qela-light .ql-previews img {
+.table-qela .qela-light .qela-previews img {
   opacity: 0.4;
 }
-.table-qela .qela-light .ql-previews.ql-icon {
+.table-qela .qela-light .qela-previews.qela-icon {
   border-color: transparent;
 }
-.table-qela .qela-light .ql-previews.ql-icon::before {
+.table-qela .qela-light .qela-previews.qela-icon::before {
   color: #adb5bd;
 }
-.table-qela .qela-light .ql-previews.ql-text {
+.table-qela .qela-light .qela-previews.qela-text {
   color: #bdb8ff;
 }
 .table-qela .qela-light .qela-btn-group .btn {
@@ -18701,11 +18706,7 @@ header .container-xxl > .row [class*=col]:last-child {
   border-radius: 12px;
   border: solid 1px #dee2e6;
   background-color: #fff;
-}
-@media (max-width: 575.98px) {
-  .qela-table-grid {
-    min-width: 640px;
-  }
+  overflow: hidden;
 }
 
 .qela-table-row {
@@ -18723,12 +18724,7 @@ header .container-xxl > .row [class*=col]:last-child {
   flex: 0 0 31px;
 }
 .qela-table-row .td-2 {
-  flex: 0 0 195px;
-}
-@media (max-width: 767.98px) {
-  .qela-table-row .td-2 {
-    flex: 0 0 115px;
-  }
+  flex: 0 0 140px;
 }
 .qela-table-row .td-3 {
   flex: 0 1 90px;
@@ -18810,9 +18806,6 @@ header .container-xxl > .row [class*=col]:last-child {
   line-height: 1;
 }
 
-.qela-table-collapse:last-child {
-  border-radius: 0 0 12px 12px;
-}
 .qela-table-collapse:last-child .subrow:last-child {
   border-radius: 0 0 12px 12px;
 }

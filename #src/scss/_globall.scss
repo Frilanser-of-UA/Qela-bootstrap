@@ -2,7 +2,10 @@ html,
 body {
     height: 100%;
 }
-
+main {
+    padding: 18px;
+    height: 100%;
+}
 .qela-body {
     --body-pad-top: 56px;
     padding-top: var(--body-pad-top);
