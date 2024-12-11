@@ -259,56 +259,55 @@
 
 		<main>
 			<div class="container-fluid" id="app">
-				<div class="bg-white rounded-3 border mb-2 pb-4">
+				<div class="bg-white rounded-3 border">
 					<div class="border-bottom p-3">
 						<h2 class="h6">Leaderboard</h2>
 					</div>
 					<div class="px-4 py-3 border-bottom">
-						<div class="d-flex gap-4 align-items-center">
+						<div class="qela-select-inner">
 							<small>Filters</small>
-							<div>
-								<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-							</div>
-							<div>
-								<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-							</div>
-							<div>
-								<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-							</div>
-							<div>
-								<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-							</div>
-							<div>
-								<v-multi-select v-model="value5" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
-							</div>
+							<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+							<v-multi-select v-model="value5" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
 						</div>
 					</div>
 					<div class="table-responsive table-qela">
 						<table class="table table-hover">
-							<thead class="table-light">
+							<thead class="table-light text-info-600">
 								<tr>
 									<th>Place</th>
-									<th></th>
-									<th>Name</th>
+									<th>
+										<span class="d-flex align-items-center gap-1">Name<i class="ic-arrows-down-up"></i></span>
+									</th>
 									<th>Email</th>
 									<th>Phone Number</th>
 									<th>Talents Achieved</th>
-									<th>Vote weight</th>
-									<th>Completed Quests</th>
-									<th>Volunteer Hours</th>
+									<th width="124px">
+										<span class="d-flex align-items-center gap-1">CVote weight<i class="ic-arrows-down-up"></i></span>
+									</th>
+									<th width="158px">
+										<span class="d-flex align-items-center gap-1">Completed Quests<i class="ic-arrows-down-up"></i></span>
+									</th>
+									<th width="150px">
+										<span class="d-flex align-items-center gap-1">Volunteer Hours<i class="ic-arrows-down-up"></i></span>
+									</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>
-										<img src="img/Place-1.svg" alt="">
+									<td width="58">
+										<div class="d-flex gap-3">
+											<!-- <span class="qela-avatar qela-ibg border-1" style="--img-size: 40px"><img src="img/Place-1.svg" alt="Place 1" /></span>
+											<span class="qela-avatar qela-ibg border-1" style="--img-size: 40px"><img src="img/Place-2.svg" alt="Place 2" /></span> -->
+											<span class="qela-avatar qela-ibg" style="--img-size: 40px"><img src="img/Place-3.svg" alt="Place 3" /></span>
+											<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px"><img class="border-1" src="img/avatar.jpg" alt="#" /></span>
+										</div>
 									</td>
-									<td>
-										<a href="#" class="qela-avatar qela-ibg border-2" style="--img-size: 40px"
-											><small><small>EW</small></small></a
-										>
+									<td class="qela-clamp">
+										<div class="d-grid">Gary Simon<small>Kharkiv</small></div>
 									</td>
-									<td class="qela-clamp">Gary Simon</td>
 									<td class="qela-clamp">garysimon@mail.com</td>
 									<td class="qela-clamp">+38 066 128 121 0</td>
 									<td>
@@ -325,14 +324,41 @@
 											></button>
 										</div>
 									</td>
-									<td>+380930139390</td>
-									<td class="text-end"><span>321</span></td>
-									<td class="text-end"><span>483:00</span></tr>
+									<td width="124px" class="text-center">
+										<div class="qela-voice">
+											<div class="body-voice p-1 bg-primary-200"><img src="/img/users/coin.svg" width="18" height="18" alt="coin" /><span>2110</span></div>
+										</div>
+									</td>
+									<td width="158px" class="text-end fw-semibold"><span>321</span></td>
+									<td width="150px" class="text-end fw-semibold"><span>483:00</span></td>
+								</tr>
+								<tr>
+									<td width="58">
+										<div class="d-flex gap-3">
+											<span href="#" class="qela-avatar border-0" style="--img-size: 40px"
+												><span class="fs-5 text-info-700"><small>4</small></span></span
+											>
+											<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px"><img class="border-1" src="img/avatar.jpg" alt="#" /></span>
+										</div>
+									</td>
+									<td class="qela-clamp">
+										<div class="d-grid">Gary Simon<small>Kharkiv</small></div>
+									</td>
+									<td class="qela-clamp">garysimon@mail.com</td>
+									<td class="qela-clamp">+38 066 128 121 0</td>
+									<td>-</td>
+									<td width="124px" class="text-center">
+										<div class="qela-voice">
+											<div class="body-voice p-1 bg-primary-200"><img src="/img/users/coin.svg" width="18" height="18" alt="coin" /><span>2110</span></div>
+										</div>
+									</td>
+									<td width="158px" class="text-end fw-semibold"><span>321</span></td>
+									<td width="150px" class="text-end fw-semibold"><span>483:00</span></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="px-4 py-3">
+					<div class="p-3">
 						<nav aria-label="Page navigation" class="d-flex justify-content-end">
 							<div class="d-flex flex-wrap align-items-baseline gap-3">
 								<select class="form-control w-auto">
