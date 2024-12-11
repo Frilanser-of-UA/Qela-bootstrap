@@ -15960,6 +15960,10 @@ input::-webkit-inner-spin-button {
   margin-left: 0;
 }
 
+.pagination {
+  margin-bottom: 0;
+}
+
 .page-item.active {
   z-index: 2;
 }
@@ -18643,6 +18647,9 @@ header .container-xxl > .row [class*=col]:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
+  line-height: 1;
+  padding: 4px 10px 4px 8px;
 }
 
 .qela-verification {
