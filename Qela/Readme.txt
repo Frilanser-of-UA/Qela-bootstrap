@@ -218,7 +218,7 @@
 -- Переработаны компоненты Items, Dropdown
 -- Правки в tabs .nav-link убрали отрицательний отступ вниз
 ================= Дата 10.07.23 ======================================
--- В компонентах Img-preview класс qela-preview заменили на ql-previews
+-- В компонентах Img-preview класс qela-preview заменили на qela-previews
 -- Правки вкладки Steps в page-sign.html
 -- Правки компонентов Answer-item-2, Question-item
 -- Добавлена карта во вкладку map в navigation.html (без попапа и пинов)

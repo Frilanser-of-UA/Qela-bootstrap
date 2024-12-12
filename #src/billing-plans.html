@@ -1,293 +1,256 @@
 <!DOCTYPE html>
 <html lang="ua">
-  @@include('_head.html',{ "title":"Billing plans" })
+@@include('_head.html',{ "title":"Billing plans" })
 
-  <body class="qela-body ps-0">
+<body class="qela-body ps-0">
     @@include('./components/_header-logo.html',{ "title":"Billing plans" })
     <main class="qela-main py-3">
-      <div class="container-xxl">
-        <div class="qela-page qela-wrap">
-          <div class="row g-3">
-            <!-- left -->
-            <div class="col-lg-4">
-              <div class="qela-start">
-                <!-- block whtith avatar + name-->
-                <div class="position-relative">
-                  <button
-                    type="button"
-                    class="btn btn-info ico-right ic-edit position-absolute end-0 top-0 me-3 mt-3"
-                  >
-                    Edit
-                  </button>
-                  <div
-                    class="qela-avatar ql-ibg online"
-                    style="--img-size: 100px"
-                  >
-                    <img
-                      src="img/avatar.jpg"
-                      width="100"
-                      height="100"
-                      alt="#"
-                    />
-                  </div>
-                  <div class="h4 text-info-800">Gary Simon</div>
-                  <span class="qela-status-badge secondary ic-key mt-3"
-                    >superadmin</span
-                  >
-                </div>
-                <!-- list -->
-                <ul class="list-group list-group-flush qela-flush">
-                  <li class="list-group-item">
-                    <span>User Name:</span
-                    ><span class="word-break">alex.kukhtin@gmail.com</span>
-                  </li>
-                  <li class="list-group-item">
-                    <span>Organization:</span
-                    ><span>Unity for Planet, Another one Organization</span>
-                  </li>
+        <div class="container-xxl">
+            <div class="qela-page qela-wrap">
+                <div class="row g-3">
+                    <!-- left -->
+                    <div class="col-lg-4">
+                        <div class="qela-start">
+                            <!-- block whtith avatar + name-->
+                            <div class="position-relative">
+                                <button type="button" class="btn btn-info ico-right ic-edit position-absolute end-0 top-0 me-3 mt-3">
+                                    Edit
+                                </button>
+                                <div class="qela-avatar qela-ibg online" style="--img-size: 100px">
+                                    <img src="img/avatar.jpg" width="100" height="100" alt="#" />
+                                </div>
+                                <div class="h4 text-info-800">Gary Simon</div>
+                                <span class="qela-status-badge secondary ic-key mt-3">superadmin</span>
+                            </div>
+                            <!-- list -->
+                            <ul class="list-group list-group-flush qela-flush">
+                                <li class="list-group-item">
+                                    <span>User Name:</span><span class="word-break">alex.kukhtin@gmail.com</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization:</span><span>Unity for Planet, Another one Organization</span>
+                                </li>
 
-                  <li class="list-group-item">
-                    <span>Phone Number:</span><span>+38 067 000 00 00</span>
-                  </li>
-                  <li class="list-group-item">
-                    <span>Date Created:</span><span>2023-03-01, 09:40:23</span>
-                  </li>
-                  <li class="list-group-item">
-                    <span>Date last visit:</span
-                    ><span>2023-03-01, 09:40:23</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- right -->
-            <div class="col-lg-8">
-              <div class="qela-end">
-                <ul class="nav nav-tabs">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link">Roles</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active">Pricing Plans</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link">Billing</button>
-                  </li>
-                </ul>
-                <div class="py-4 px-3">
-                  <div class="text-center mb-4">
-                    <h2 class="fs-6 mb-1 text-info-900">SAAS solution</h2>
-                    <div class="text-info-600">pricing plans</div>
-                  </div>
-                  <!-- cards -->
-                  <div class="row gx-3 pb-5 flex-nowrap overflow-auto">
-                    <div class="col">
-                      <div class="card qela-subscription">
-                        <div class="card-header px-3">
-                          <h3 class="h6">101 - 1 000</h3>
-                          <div><small>users</small></div>
+                                <li class="list-group-item">
+                                    <span>Phone Number:</span><span>+38 067 000 00 00</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Date Created:</span><span>2023-03-01, 09:40:23</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Date last visit:</span><span>2023-03-01, 09:40:23</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="card-body flex-grow-1">
-                          <div class="qela-price">
-                            <span class="fw-normal">$</span><span>350</span>
-                          </div>
-                          <div class="text-info-600"><small>month</small></div>
-                        </div>
-                        <div class="card-footer">
-                          <span
-                            class="ic-checkmark-starburst-filled d-inline-flex"
-                          ></span>
-                          <div class="text-secondary">
-                            <small>Current plan</small>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col">
-                      <div class="card qela-subscription">
-                        <div class="card-header px-3">
-                          <h3 class="h6">101 - 1 000</h3>
-                          <div><small>users</small></div>
+                    <!-- right -->
+                    <div class="col-lg-8">
+                        <div class="qela-end">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link">Roles</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active">Pricing Plans</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link">Billing</button>
+                                </li>
+                            </ul>
+                            <div class="py-4 px-3">
+                                <div class="text-center mb-4">
+                                    <h2 class="fs-6 mb-1 text-info-900">SAAS solution</h2>
+                                    <div class="text-info-600">pricing plans</div>
+                                </div>
+                                <!-- cards -->
+                                <div class="row gx-3 pb-5 flex-nowrap overflow-auto">
+                                    <div class="col">
+                                        <div class="card qela-subscription">
+                                            <div class="card-header px-3">
+                                                <h3 class="h6">101 - 1 000</h3>
+                                                <div><small>users</small></div>
+                                            </div>
+                                            <div class="card-body flex-grow-1">
+                                                <div class="qela-price">
+                                                    <span class="fw-normal">$</span><span>350</span>
+                                                </div>
+                                                <div class="text-info-600"><small>month</small></div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+                                                <div class="text-secondary">
+                                                    <small>Current plan</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card qela-subscription">
+                                            <div class="card-header px-3">
+                                                <h3 class="h6">101 - 1 000</h3>
+                                                <div><small>users</small></div>
+                                            </div>
+                                            <div class="card-body flex-grow-1">
+                                                <div class="qela-price">
+                                                    <span class="fw-normal">$</span><span>350</span>
+                                                </div>
+                                                <div class="text-info-600"><small>month</small></div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+                                                <div class="text-secondary">
+                                                    <small>Current plan</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card qela-subscription">
+                                            <div class="card-header px-3">
+                                                <h3 class="h6">101 - 1 000</h3>
+                                                <div><small>users</small></div>
+                                            </div>
+                                            <div class="card-body flex-grow-1">
+                                                <div class="qela-price">
+                                                    <span class="fw-normal">$</span><span>350</span>
+                                                </div>
+                                                <div class="text-info-600"><small>month</small></div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+                                                <div class="text-secondary">
+                                                    <small>Current plan</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card qela-subscription">
+                                            <div class="card-header px-3">
+                                                <h3 class="h6">101 - 1 000</h3>
+                                                <div><small>users</small></div>
+                                            </div>
+                                            <div class="card-body flex-grow-1">
+                                                <div class="qela-price">
+                                                    <span class="fw-normal">$</span><span>350</span>
+                                                </div>
+                                                <div class="text-info-600"><small>month</small></div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+                                                <div class="text-secondary">
+                                                    <small>Current plan</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card qela-subscription">
+                                            <div class="card-header px-3">
+                                                <h3 class="h6">101 - 1 000</h3>
+                                                <div><small>users</small></div>
+                                            </div>
+                                            <div class="card-body flex-grow-1">
+                                                <div class="qela-price">
+                                                    <span class="fw-normal">$</span><span>350</span>
+                                                </div>
+                                                <div class="text-info-600"><small>month</small></div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <span class="ic-checkmark-starburst-filled d-inline-flex"></span>
+                                                <div class="text-secondary">
+                                                    <small>Current plan</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pb-5">
+                                    <div class="bg-secondary-200 text-center px-4 py-3 rounded">
+                                        <img src="img/flag.svg" class="mb-2" alt="" />
+                                        <p class="h6 mb-1">
+                                            Special offer for Ukrainian organisations
+                                        </p>
+                                        <p class="m-0">
+                                            Talk to our reps
+                                            <a href="#" class="text-decoration-none fw-semibold">marketing@qela.app</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="py-4">
+                                    <div class="bg-info-100 py-4 px-3 qela-rounded-12">
+                                        <h2 class="fs-5 text-info-900 p-3 pt-0 text-center">
+                                            White-label solution
+                                        </h2>
+                                        <div class="qela-benifist">
+                                            <ul>
+                                                <li>
+                                                    Own application (all available Qela functionality +
+                                                    adaptation logo book interface) + own icon in the
+                                                    Apple Store, Play Market
+                                                </li>
+                                                <li>Support (updates and technical support)</li>
+                                                <li>
+                                                    Deployment in a separate account in the chosen cloud
+                                                    service (Azure)
+                                                </li>
+                                            </ul>
+                                            <div class="bg-secondary-200 text-center px-4 py-3 rounded">
+                                                <p class="m-0">
+                                                    Talk to our reps
+                                                    <a href="#" class="text-decoration-none fw-semibold">marketing@qela.app</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body flex-grow-1">
-                          <div class="qela-price">
-                            <span class="fw-normal">$</span><span>350</span>
-                          </div>
-                          <div class="text-info-600"><small>month</small></div>
-                        </div>
-                        <div class="card-footer">
-                          <span
-                            class="ic-checkmark-starburst-filled d-inline-flex"
-                          ></span>
-                          <div class="text-secondary">
-                            <small>Current plan</small>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col">
-                      <div class="card qela-subscription">
-                        <div class="card-header px-3">
-                          <h3 class="h6">101 - 1 000</h3>
-                          <div><small>users</small></div>
-                        </div>
-                        <div class="card-body flex-grow-1">
-                          <div class="qela-price">
-                            <span class="fw-normal">$</span><span>350</span>
-                          </div>
-                          <div class="text-info-600"><small>month</small></div>
-                        </div>
-                        <div class="card-footer">
-                          <span
-                            class="ic-checkmark-starburst-filled d-inline-flex"
-                          ></span>
-                          <div class="text-secondary">
-                            <small>Current plan</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card qela-subscription">
-                        <div class="card-header px-3">
-                          <h3 class="h6">101 - 1 000</h3>
-                          <div><small>users</small></div>
-                        </div>
-                        <div class="card-body flex-grow-1">
-                          <div class="qela-price">
-                            <span class="fw-normal">$</span><span>350</span>
-                          </div>
-                          <div class="text-info-600"><small>month</small></div>
-                        </div>
-                        <div class="card-footer">
-                          <span
-                            class="ic-checkmark-starburst-filled d-inline-flex"
-                          ></span>
-                          <div class="text-secondary">
-                            <small>Current plan</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card qela-subscription">
-                        <div class="card-header px-3">
-                          <h3 class="h6">101 - 1 000</h3>
-                          <div><small>users</small></div>
-                        </div>
-                        <div class="card-body flex-grow-1">
-                          <div class="qela-price">
-                            <span class="fw-normal">$</span><span>350</span>
-                          </div>
-                          <div class="text-info-600"><small>month</small></div>
-                        </div>
-                        <div class="card-footer">
-                          <span
-                            class="ic-checkmark-starburst-filled d-inline-flex"
-                          ></span>
-                          <div class="text-secondary">
-                            <small>Current plan</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pb-5">
-                    <div class="bg-secondary-200 text-center px-4 py-3 rounded">
-                      <img src="img/flag.svg" class="mb-2" alt="" />
-                      <p class="h6 mb-1">
-                        Special offer for Ukrainian organisations
-                      </p>
-                      <p class="m-0">
-                        Talk to our reps
-                        <a href="#" class="text-decoration-none fw-semibold"
-                          >marketing@qela.app</a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                  <div class="py-4">
-                    <div class="bg-info-100 py-4 px-3 qela-rounded-12">
-                      <h2 class="fs-5 text-info-900 p-3 pt-0 text-center">
-                        White-label solution
-                      </h2>
-                      <div class="qela-benifist">
-                        <ul>
-                          <li>
-                            Own application (all available Qela functionality +
-                            adaptation logo book interface) + own icon in the
-                            Apple Store, Play Market
-                          </li>
-                          <li>Support (updates and technical support)</li>
-                          <li>
-                            Deployment in a separate account in the chosen cloud
-                            service (Azure)
-                          </li>
-                        </ul>
-                        <div
-                          class="bg-secondary-200 text-center px-4 py-3 rounded"
-                        >
-                          <p class="m-0">
-                            Talk to our reps
-                            <a href="#" class="text-decoration-none fw-semibold"
-                              >marketing@qela.app</a
-                            >
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </main>
-    <script
-      src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"
-      type="text/javascript"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"
-    ></script>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
     <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
     <script type="text/javascript">
-      let app = Vue.createApp({
-        components: {
-          "v-date-picker": VueDatePicker,
-          "v-multi-select": VueMultiselect.default,
-        },
-        data() {
-          return {
-            date: [new Date(), new Date()],
-            value1: "",
-            value2: "",
-            value3: "",
-            value4: "",
-            options: [
-              "Пункт 1 sadafdf",
-              "Пункт 2",
-              "Пункт 3",
-              "Пункт 4",
-              "Пункт 1 assadafdf",
-              "Пункт 2sades",
-              "Пункт 3sd",
-              "Пункт 4sd",
-            ],
-          };
-        },
-        methods: {
-          click() {
-            alert(1);
-            this.message += " clicked!";
-          },
-        },
-      });
-      console.dir(app);
-      app.mount("#app");
+        let app = Vue.createApp({
+            components: {
+                "v-date-picker": VueDatePicker,
+                "v-multi-select": VueMultiselect.default,
+            },
+            data() {
+                return {
+                    date: [new Date(), new Date()],
+                    value1: "",
+                    value2: "",
+                    value3: "",
+                    value4: "",
+                    options: [
+                        "Пункт 1 sadafdf",
+                        "Пункт 2",
+                        "Пункт 3",
+                        "Пункт 4",
+                        "Пункт 1 assadafdf",
+                        "Пункт 2sades",
+                        "Пункт 3sd",
+                        "Пункт 4sd",
+                    ],
+                };
+            },
+            methods: {
+                click() {
+                    alert(1);
+                    this.message += " clicked!";
+                },
+            },
+        });
+        console.dir(app);
+        app.mount("#app");
     </script>
     <!-- =========================== -->
     @@include('_js.html',{})
-  </body>
+</body>
+
 </html>

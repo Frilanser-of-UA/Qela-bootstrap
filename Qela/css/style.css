@@ -14905,6 +14905,7 @@ input::-webkit-inner-spin-button {
   line-height: 120%;
   background: #f9f9ff;
   display: inline-flex;
+  white-space: wrap;
 }
 
 .multiselect__tag-icon {
@@ -18726,7 +18727,6 @@ header .container-xxl > .row [class*=col]:last-child {
   border-radius: 12px;
   border: solid 1px #dee2e6;
   background-color: #fff;
-  overflow: hidden;
 }
 
 .qela-table-row {
