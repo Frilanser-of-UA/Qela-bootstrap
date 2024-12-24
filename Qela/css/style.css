@@ -15209,13 +15209,8 @@ input::-webkit-inner-spin-button {
   color: #6c757d;
   border-color: #ced4da;
 }
-@media (any-hover: hover) {
-  .dp__input:hover {
-    border-color: #6c757d;
-  }
-  .dp__input:hover:focus {
-    border-color: #6c757d;
-  }
+.dp__input:hover {
+  border-color: #9188ff;
 }
 .dp__input::placeholder {
   color: #6c757d;
@@ -15227,6 +15222,10 @@ input::-webkit-inner-spin-button {
   .dp__input:disabled:hover {
     border-color: #d1d1d2;
   }
+}
+
+.dp__input:hover:not(.dp__input_focus) {
+  --dp-border-color-hover: #9188ff;
 }
 
 .dp__input_icon_pad {
@@ -15241,12 +15240,17 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
+.dp--menu-wrapper {
+  min-width: 360px;
+  z-index: 5;
+}
+
 .dp__menu {
+  --dp-menu-min-width: 100%;
   border-radius: 17px;
-  min-width: 300px;
   font-family: "Inter";
   font-size: 12px;
-  top: calc(100% + 10px);
+  overflow: hidden;
 }
 
 .dp__month_year_row {
@@ -15410,6 +15414,11 @@ input::-webkit-inner-spin-button {
   .dp__action_button:hover {
     color: #8278ff;
   }
+}
+
+.dp__action_select {
+  --dp-primary-color: transparent;
+  --dp-primary-text-color: #978fff;
 }
 
 .is-invalid .dp__input {
