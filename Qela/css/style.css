@@ -14533,6 +14533,9 @@ main {
   flex-wrap: wrap;
 }
 
+.form-control {
+  --input-number-width: 56px;
+}
 @media (any-hover: hover) {
   .form-control:hover {
     border-color: #9188ff;

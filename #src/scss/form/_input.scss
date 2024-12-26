@@ -1,4 +1,5 @@
 .form-control {
+	--input-number-width: 56px;
 	@media (any-hover: hover) {
 		&:hover {
 			border-color: $secondary;
@@ -25,7 +26,7 @@
 			border-color: $danger;
 		}
 
-		&~.btn-input {
+		& ~ .btn-input {
 			&:hover {
 				color: $black;
 				border-color: $gray-400;
@@ -37,7 +38,7 @@
 			}
 		}
 
-		&~.helper-text {
+		& ~ .helper-text {
 			display: none;
 		}
 	}
@@ -47,7 +48,10 @@ textarea {
 	color: $info-700;
 }
 
-.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group
+	> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(
+		.invalid-feedback
+	) {
 	margin-left: 0px;
 }
 
@@ -97,7 +101,7 @@ input::-webkit-inner-spin-button {
 
 .has-validation {
 	&.is-invalid {
-		&~.helper-text {
+		& ~ .helper-text {
 			display: none;
 		}
 	}
@@ -115,7 +119,7 @@ input::-webkit-inner-spin-button {
 	display: flex;
 	justify-content: space-between;
 
-	>div {
+	> div {
 		display: flex;
 		align-items: baseline;
 		margin-right: 4px;
@@ -187,13 +191,13 @@ input::-webkit-inner-spin-button {
 		z-index: 1;
 
 		&:hover {
-			&~label {
+			& ~ label {
 				border-color: $gray-600;
 			}
 		}
 
 		&:focus {
-			&~label {
+			& ~ label {
 				border-color: $input-focus-border-color;
 				box-shadow: $input-focus-box-shadow;
 			}
@@ -202,7 +206,7 @@ input::-webkit-inner-spin-button {
 		&:disabled {
 			cursor: auto;
 
-			&~label {
+			& ~ label {
 				color: $input-disabled-color;
 				background-color: $input-disabled-bg;
 				border-color: $input-disabled-border-color;
@@ -211,12 +215,12 @@ input::-webkit-inner-spin-button {
 		}
 
 		&.is-invalid {
-			&~label {
+			& ~ label {
 				border-color: $danger;
 			}
 
 			&:focus {
-				&~label {
+				& ~ label {
 					box-shadow: 0 0 0 0.125rem rgba($danger, 0.3);
 				}
 			}
@@ -236,7 +240,7 @@ input::-webkit-inner-spin-button {
 	&.filled {
 		display: none;
 
-		&~.qela-preview {
+		& ~ .qela-preview {
 			display: flex;
 		}
 	}
@@ -297,7 +301,7 @@ input::-webkit-inner-spin-button {
 		flex-direction: column;
 	}
 
-	>div {
+	> div {
 		height: 70px;
 
 		&:first-child {
