@@ -1,341 +1,323 @@
 .table-qela {
-	overflow-y: hidden;
-	font-size: 14px;
-	table-layout: auto;
-	.table {
-		width: 100%;
-		margin-bottom: 0;
-	}
-	th {
-		i {
-			&::before {
-				font-size: 16px;
-			}
-		}
-	}
-	th,
-	td {
-		white-space: nowrap;
-		vertical-align: middle;
-		// overflow: hidden;
-		// -o-text-overflow: ellipsis;
-		// text-overflow: ellipsis;
-		// -webkit-box-orient: vertical;
-		// -webkit-line-clamp: 1;
-		// white-space: nowrap;
-		// height: auto;
-		// max-width: 50px;
-	}
+    overflow-y: hidden;
+    font-size: 14px;
+    table-layout: auto;
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    th {
+        i {
+            &::before {
+                font-size: 16px;
+            }
+        }
+    }
+    th,
+    td {
+        white-space: nowrap;
+        vertical-align: middle;
+        // overflow: hidden;
+        // -o-text-overflow: ellipsis;
+        // text-overflow: ellipsis;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 1;
+        // white-space: nowrap;
+        // height: auto;
+        // max-width: 50px;
+    }
 
-	tr {
-		th,
-		td {
-			&:first-child {
-				padding-left: 16px;
-			}
+    tr {
+        th,
+        td {
+            &:first-child {
+                padding-left: 16px;
+            }
 
-			&:last-child {
-				padding-right: 16px;
-			}
-		}
-	}
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+    }
 
-	&.large {
-		td {
-			font-size: 16px;
-		}
-	}
-	&.qela-sticky {
-		th {
-			position: sticky;
-			top: 0;
-			z-index: 90;
-		}
-	}
-	.qela-light {
-		* {
-			color: $info;
-		}
-		.qela-previews {
-			pointer-events: none;
-			border-color: $info-200;
-			background-color: $info-100;
-			img {
-				opacity: 0.4;
-			}
-			&.qela-icon {
-				border-color: transparent;
-				&::before {
-					color: $info;
-				}
-			}
-			&.qela-text {
-				color: $secondary-400;
-			}
-		}
-		.qela-btn-group {
-			.btn {
-				color: $info !important;
-				background-color: transparent !important;
-			}
-		}
-	}
+    &.large {
+        td {
+            font-size: 16px;
+        }
+    }
+    &.qela-sticky {
+        th {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+    }
+    .qela-light {
+        * {
+            color: $info;
+        }
+        .qela-previews {
+            pointer-events: none;
+            border-color: $info-200;
+            background-color: $info-100;
+            img {
+                opacity: 0.4;
+            }
+            &.qela-icon {
+                border-color: transparent;
+                &::before {
+                    color: $info;
+                }
+            }
+            &.qela-text {
+                color: $secondary-400;
+            }
+        }
+        .qela-btn-group {
+            .btn {
+                color: $info !important;
+                background-color: transparent !important;
+            }
+        }
+    }
 }
 
 .qela-tag {
-	display: inline-block;
-	color: $black;
-	transition: color 0.2s ease 0s;
-	text-decoration: none;
+    display: inline-block;
+    color: $black;
+    transition: color 0.2s ease 0s;
+    text-decoration: none;
 
-	&:not(:last-child) {
-		margin-right: 3px;
-	}
+    &:not(:last-child) {
+        margin-right: 3px;
+    }
 
-	@media (any-hover: hover) {
-		&:hover {
-			color: $purple;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            color: $purple;
+        }
+    }
 }
 
 .qela-voice {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	.body-voice {
-		border-radius: 10px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 4px;
-		line-height: 1;
-		padding: 4px 10px 4px 8px;
-	}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .body-voice {
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        line-height: 1;
+        padding: 4px 10px 4px 8px;
+    }
 }
 
 .qela-verification {
-	text-align: center;
-	width: 100%;
+    text-align: center;
+    width: 100%;
 
-	span {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
+    span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
 
-		&::before {
-			font-size: 16px;
-		}
-	}
+        &::before {
+            font-size: 16px;
+        }
+    }
 }
 
 .qela-vector {
-	position: absolute;
-	width: 20px;
-	border-left: 2px solid $secondary;
-	right: 0;
-	top: -1px;
-	bottom: -1px;
+    position: absolute;
+    width: 20px;
+    border-left: 2px solid $secondary;
+    right: 0;
+    top: -1px;
+    bottom: -1px;
 
-	&::before {
-		content: "";
-		display: block;
-		width: 100%;
-		background-color: $secondary;
-		top: 50%;
-		transform: translateY(-50%);
-		height: 2px;
-		position: absolute;
-	}
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: $secondary;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        position: absolute;
+    }
 
-	&.start {
-		border-top: 2px solid $secondary;
-		border-top-left-radius: 10px;
-		height: calc(50% + 1px);
-		top: 50%;
+    &.start {
+        border-top: 2px solid $secondary;
+        border-top-left-radius: 10px;
+        height: calc(50% + 1px);
+        top: 50%;
 
-		&::before {
-			display: none;
-		}
-	}
+        &::before {
+            display: none;
+        }
+    }
 
-	&.end {
-		height: calc(50% + 1px);
-		border-bottom-left-radius: 10px;
-		border-bottom: 2px solid $secondary;
+    &.end {
+        height: calc(50% + 1px);
+        border-bottom-left-radius: 10px;
+        border-bottom: 2px solid $secondary;
 
-		&::before {
-			display: none;
-		}
-	}
+        &::before {
+            display: none;
+        }
+    }
 }
 
 .qela-novector {
-	color: $info-500;
+    color: $info-500;
 
-	&::before {
-		font-size: 16px;
-	}
+    &::before {
+        font-size: 16px;
+    }
 }
 .table-responsive {
-	&.qela-table-responsive {
-		overflow: visible;
-		@include media-breakpoint-down(sm) {
-			overflow-x: auto;
-		}
-	}
+    &.qela-table-responsive {
+        overflow: visible;
+        @include media-breakpoint-down(sm) {
+            overflow-x: auto;
+        }
+    }
 }
 .qela-table-grid {
-	width: 100%;
-	font-size: 12px;
-	border-radius: 12px;
-	border: solid 1px $info-300;
-	background-color: $white;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 12px;
+    border: solid 1px $info-300;
+    background-color: $white;
 }
-
 .qela-table-row {
-	display: flex;
-	gap: 16px;
-	padding: 8px 40px;
-	position: relative;
-	@include media-breakpoint-down(md) {
-		gap: 8px;
-	}
-	.td-1 {
-		flex: 0 0 31px;
-	}
-	.td-2 {
-		flex: 0 0 140px;
-		a {
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: underline;
-					color: $gray-900;
-				}
-			}
-		}
-	}
-	.td-3 {
-		flex: 0 1 90px;
-		justify-content: center;
-		white-space: nowrap;
-	}
-	.td-4 {
-		flex: 1 1 200px;
-	}
+    // display: grid;
+    // grid-template-columns: 31px minmax(120px, 195px) 90px minmax(200px, 1fr);
+    display: flex;
+    gap: 16px;
+    padding: 8px 40px;
+    position: relative;
+    @include media-breakpoint-down(md) {
+        // grid-template-columns: 31px 115px 90px minmax(200px, 1fr);
+        gap: 8px;
+    }
+    .td-1 {
+        flex: 0 0 31px;
+    }
+    .td-2 {
+        flex: 0 0 140px;
+    }
+    .td-3 {
+        flex: 0 1 90px;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .td-4 {
+        flex: 1 1 200px;
+    }
 
-	&:not(.subrow) {
-		border-top: solid 1px $info-300;
-		&:nth-child(2) {
-			border-top: 1px solid $info-200;
-		}
-	}
+    &:not(.subrow) {
+        border-top: solid 1px $info-300;
+        &:first-child {
+            border-top: none;
+            background: $info-200;
+            font-weight: 500;
+            line-height: 130%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        &:nth-child(2) {
+            border-top: 1px solid $info-200;
+        }
+    }
 
-	> * {
-		display: flex;
-		align-items: center;
-	}
-	.multiselect {
-	}
-	.btn-close {
-		position: absolute;
-		right: 16px;
-		top: 50%;
-		transform: translateY(-50%);
-		transition: transform 0.3s ease 0s;
-		&:not(.collapsed) {
-			transform: translateY(-50%) rotate(180deg);
-		}
-	}
-	a {
-		--bs-link-color: #212529;
-		text-decoration: none;
-	}
-	&.subrow {
-		background-color: $info-100;
-		border-top: solid 1px $info-300;
-		&:last-child {
-			.qela-table-line {
-				hr {
-					height: 50%;
-					bottom: auto;
-					top: 0;
-				}
-			}
-		}
-		.qela-table-line {
-			hr {
-				height: 100%;
-			}
-			[class*="ic-"] {
-				&::before {
-					background-color: $info-100;
-				}
-			}
-		}
-	}
-	&.qela-table-head {
-		border-top: none;
-		background: $info-200;
-		font-weight: 500;
-		line-height: 130%;
-		border-top-left-radius: 12px;
-		border-top-right-radius: 12px;
-	}
+    > * {
+        display: flex;
+        align-items: center;
+    }
+    .multiselect {
+    }
+    .btn-close {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease 0s;
+        &:not(.collapsed) {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    a {
+        --bs-link-color: #212529;
+        text-decoration: none;
+    }
+    &.subrow {
+        background-color: $info-100;
+        border-top: solid 1px $info-300;
+        &:last-child {
+            .qela-table-line {
+                hr {
+                    height: 50%;
+                    bottom: auto;
+                    top: 0;
+                }
+            }
+        }
+        .qela-table-line {
+            hr {
+                height: 100%;
+            }
+            [class*="ic-"] {
+                &::before {
+                    background-color: $info-100;
+                }
+            }
+        }
+    }
 }
 
 .qela-table-line {
-	position: absolute;
-	height: 100%;
-	left: 8px;
-	top: 50%;
-	transform: translateY(-50%);
-	color: $secondary-400;
-	hr {
-		display: block;
-		width: 1px;
-		height: 50%;
-		background-color: $secondary-400;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		z-index: -1;
-	}
-	[class*="ic-"] {
-		&::before {
-			background-color: $white;
-			font-size: 18px;
-			line-height: 1;
-		}
-	}
+    position: absolute;
+    height: 100%;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $secondary-400;
+    hr {
+        display: block;
+        width: 1px;
+        height: 50%;
+        background-color: $secondary-400;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: -1;
+    }
+    [class*="ic-"] {
+        &::before {
+            background-color: $white;
+            font-size: 18px;
+            line-height: 1;
+        }
+    }
 }
 .qela-table-collapse {
-	&:last-child {
-		.subrow {
-			&:last-child {
-				border-radius: 0 0 12px 12px;
-			}
-		}
-		&.collapsing {
-		}
-		&.show {
-		}
-		&.collapse {
-		}
-	}
-}
-
-.qela-dialog {
-	.qela-table-grid {
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top-width: 0;
-	}
-	.qela-table-grid,
-	.qela-table-row {
-		border-radius: 0;
-	}
+    &:last-child {
+        .subrow {
+            &:last-child {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+        &.collapsing {
+        }
+        &.show {
+        }
+        &.collapse {
+        }
+    }
 }
