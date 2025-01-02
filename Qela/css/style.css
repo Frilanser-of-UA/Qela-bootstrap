@@ -15307,14 +15307,12 @@ input::-webkit-inner-spin-button {
 
 .dp__calendar_header {
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .dp__calendar_header_item {
   font-size: 12px;
   line-height: 16px;
-  height: 32px;
-  width: 40px;
-  flex: 0 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17363,6 +17361,7 @@ input::-webkit-inner-spin-button {
   height: var(--img-size);
   flex: 0 0 var(--img-size);
   border-radius: 50%;
+  color: #9188ff;
   border: 1px solid #e9ecef;
   background-color: #fff;
 }
@@ -17717,9 +17716,6 @@ input::-webkit-inner-spin-button {
 }
 .qela-dialog.secondary-outline {
   border-color: #9188ff;
-}
-.qela-dialog.secondary-outline-400 {
-  border-color: #bdb8ff;
 }
 .qela-dialog h2, .qela-dialog .h2 {
   padding-bottom: 0.5rem;
@@ -18762,12 +18758,6 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-table-row .td-2 {
   flex: 0 0 140px;
 }
-@media (any-hover: hover) {
-  .qela-table-row .td-2 a:hover {
-    text-decoration: underline;
-    color: #212529;
-  }
-}
 .qela-table-row .td-3 {
   flex: 0 1 90px;
   justify-content: center;
@@ -18778,6 +18768,14 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-table-row:not(.subrow) {
   border-top: solid 1px #dee2e6;
+}
+.qela-table-row:not(.subrow):first-child {
+  border-top: none;
+  background: #e9ecef;
+  font-weight: 500;
+  line-height: 130%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .qela-table-row:not(.subrow):nth-child(2) {
   border-top: 1px solid #e9ecef;
@@ -18815,14 +18813,6 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-table-row.subrow .qela-table-line [class*=ic-]::before {
   background-color: #f8f9fa;
 }
-.qela-table-row.qela-table-head {
-  border-top: none;
-  background: #e9ecef;
-  font-weight: 500;
-  line-height: 130%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
 
 .qela-table-line {
   position: absolute;
@@ -18851,16 +18841,6 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-table-collapse:last-child .subrow:last-child {
   border-radius: 0 0 12px 12px;
 }
-.qela-dialog .qela-table-grid {
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-}
-.qela-dialog .qela-table-grid,
-.qela-dialog .qela-table-row {
-  border-radius: 0;
-}
-
 .text-editor {
   padding: 1.5rem 0;
 }
