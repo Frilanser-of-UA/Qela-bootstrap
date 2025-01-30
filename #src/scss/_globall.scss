@@ -3,16 +3,21 @@ body {
     height: 100%;
 }
 main {
-    padding: 18px;
+    padding: rem(18);
     height: 100%;
 }
 .qela-body {
     --body-pad-top: 56px;
+    --body-aside-pad: 168px;
+    --body-aside-pad-close: 56px;
     padding-top: var(--body-pad-top);
-    padding-left: 80px;
+    padding-left: var(--body-aside-pad);
     display: flex;
     flex-direction: column;
-
+    // transition: padding-left 0.2s linear 0s;
+    // &.active {
+    //     padding-left: var(--body-aside-pad-close);
+    // }
     @include media-breakpoint-down(md) {
         padding-left: 0;
     }
@@ -23,7 +28,7 @@ main {
 
 // ======================= master
 .qela-main {
-    padding: 0.5rem 0;
+    padding: rem(8) 0;
     flex: 1 1 auto;
 
     .container {
@@ -34,14 +39,14 @@ main {
 .qela-page {
     min-height: 100%;
     border: 1px solid $info-300;
-    border-radius: 0.5rem;
+    border-radius: rem(8);
     display: flex;
     flex-direction: column;
     background-color: $white;
 
     .nav.nav-tabs {
-        padding: 1rem 1.5rem 0 1.5rem;
-        border-radius: 0.5rem 0.5rem 0 0;
+        padding: rem(16) 1.5rem 0 1.5rem;
+        border-radius: rem(8) rem(8) 0 0;
         background-color: $body-bg;
     }
 

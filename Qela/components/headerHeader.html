@@ -1,0 +1,113 @@
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col gap-3">
+                <button class="qela-burger">
+                    <img src="~/img/burger.svg" width="24" height="40" alt="burger button">
+                </button>
+                @if (ViewBag.Back != null && ViewBag.Back)
+                {
+                <a class="btn btn-sm btn-info ic-chevron-left ico-left me-3" href="javascript:window.history.back()">@loc["GoBack"]</a>
+                }
+                <h1 class="h5">@ViewBag.PageTitle</h1>
+            </div>
+            <div class="col-auto d-md-flex d-none">
+                <a href="@userHelpLink" target="_blank" class="btn btn-info btn-sm ico-right ic-help-circle">@loc["UserAppGuideline"]</a>
+                <a href="@adminHelpLink" target="_blank" class="btn btn-info btn-sm ico-right ic-help-circle">@loc["AdminGuideline"]</a>
+                <span data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="@loc[" UserSiteTitle"]">
+                    @if (user.UserInfo.IsOpenedUser)
+                    {
+                    <a href="@userSiteLink" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-title="loc[" UserSiteTitle"]"></a>
+                    }
+                    else
+                    {
+                    <a data-bs-toggle="modal" data-bs-target="#user-site-dialog" class="btn btn-info btn-sm ico ic-player-play" data-bs-title="loc[" UserSiteTitle"]"></a>
+                    }
+                </span>
+
+
+
+            </div>
+            <div class="col-auto">
+                <div class="row h-100 position-relative">
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="dropdown qela-dropdown">
+                            <button type="button" class="p-2 btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                @if (@user.UserInfo.Avatar != null)
+                                {
+                                <div class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                                    <img src="/blob/download/@user.UserInfo.Avatar" alt="">
+                                </div>
+                                }
+                                else
+                                {
+                                <a class="qela-avatar qela-ibg fs-6" style="--img-size: 40px;"><small>@User?.Identity?.Name?.Substring(0, 1).ToUpper()</small></a>
+                                }
+                            </button>
+                            <ul class="dropdown-menu shadow" style="width:350px">
+                                <li>
+                                    <div class="col bg-white p-3 p-lg-4 d-flex align-items-start gap-4 rounded-2">
+                                        @if (@user.UserInfo.Avatar != null)
+                                        {
+                                        <img class="rounded-circle online-sm" src="/blob/download/@user.UserInfo.Avatar" style="object-fit: cover;" v-bind:style="{'--img-size': '40px'}" style="width:40px;height:40px" width="40" height="40" alt="">
+                                        }
+                                        else
+                                        {
+                                        <a class="qela-avatar qela-ibg fs-6" style="--img-size: 40px;"><small>@User?.Identity?.Name?.Substring(0, 1).ToUpper()</small></a>
+                                        }
+                                        <div class="flex-grow-1">
+                                            <div class="h3 mb-1" v-text="UserStatistic.VotingFinished"></div>
+                                            <span>@User?.Identity?.Name</span>
+                                            <div class="text-info-600">
+                                                @if (@user.UserInfo.IsOwner)
+                                                {
+                                                <small>@loc["BigOwner"]</small>
+                                                }
+                                                else
+                                                {
+                                                @if (user.Roles != null)
+                                                @foreach (var role in user.Roles)
+                                                {
+                                                <small>@role</small>
+                                                }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item ic-user-24 p-3" href="/profile/index/@user.Id">@loc["Profile"]</a>
+
+                                </li>
+                                <li><a class="dropdown-item ic-edit p-3" href="/profile/edit/@user.Id">@loc["EditProfile"]</a></li>
+                                @if (@user.UserInfo.IsOwner)
+                                {
+                                <li><a class="dropdown-item ic-dollar p-3" href="/profile/billing">@loc["Billing"]</a></li>
+                                <li><a class="dropdown-item ic-dollar p-3" href="/profile/subscription">@loc["Subscription"]</a></li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item ic-success-2 p-3" href="/@user.OrganizationKey?tab=rules">@loc["FAQ"]</a></li>
+                                <li><a class="dropdown-item ic-success-2 p-3" target="_blank" href="@adminHelpLink">@loc["Help"]</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item ic-log-out p-3" href="/account/logout">@loc["Logout"]</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- menu -->
+    <div class="h-100 qela-menu">
+        <button type="button" class="ic-chevron border-0 qela-btn-menu qela-shadow"></button>
+        <button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close " aria-label="Close"></button>
+        <partial name="_SidebarPartial.cshtml" />
+    </div>
+</header>

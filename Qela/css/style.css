@@ -13425,14 +13425,16 @@ body {
 }
 
 main {
-  padding: 18px;
+  padding: 1.125rem;
   height: 100%;
 }
 
 .qela-body {
   --body-pad-top: 56px;
+  --body-aside-pad: 168px;
+  --body-aside-pad-close: 56px;
   padding-top: var(--body-pad-top);
-  padding-left: 80px;
+  padding-left: var(--body-aside-pad);
   display: flex;
   flex-direction: column;
 }
@@ -14374,13 +14376,17 @@ main {
 
 .qela-btn-menu {
   position: absolute;
-  z-index: 1;
   left: calc(100% - 16px);
-  top: 40%;
-  border-radius: 50%;
-  padding: 9px 4px 9px 14px;
-  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
   color: #adb5bd;
+  border-radius: 18px;
+  padding: 0.1875rem 0.5rem;
+  line-height: 1;
+  background-color: #fff;
+  border: 1px solid #fff;
+  transition: border-color 0.3s ease 0s;
 }
 @media (max-width: 767.98px) {
   .qela-btn-menu {
@@ -14389,36 +14395,16 @@ main {
 }
 @media (any-hover: hover) {
   .qela-btn-menu:hover {
-    background-color: #fff;
-  }
-  .qela-btn-menu:hover::before {
-    color: #000;
+    border-color: #ced4da;
   }
 }
 .qela-btn-menu::before {
   transition: transform 0.3s ease 0s, color 0.2s;
-  font-size: 14px;
+  font-size: 16px;
   color: #adb5bd;
-  transform: rotate(-90deg);
 }
-.qela-btn-menu.active::before {
-  transform: rotate(90deg);
-}
-
-.qela-btn-close {
-  background-color: transparent;
-  z-index: 4;
-  top: 4px;
-  right: 4px;
-  display: none;
-}
-@media (max-width: 767.98px) {
-  .qela-btn-close {
-    display: block;
-  }
-}
-.qela-btn-close::before {
-  font-size: 28px;
+.qela-btn-menu.close::before {
+  transform: rotate(180deg);
 }
 
 .qela-burger {
@@ -15668,6 +15654,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
 }
 .qela-dropdown .dropdown-item[class*=ic-]::before {
   font-size: 18px;
@@ -15695,6 +15682,15 @@ input::-webkit-inner-spin-button {
   .qela-dropdown .dropdown-item.warning:hover {
     background-color: #fff8f2;
   }
+}
+
+.qela-item-user {
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  border-radius: 0.5rem;
 }
 
 .qela-organization {
@@ -18117,6 +18113,10 @@ input::-webkit-inner-spin-button {
   --bs-tooltip-max-width: 300px;
 }
 
+.qela-sidebar-tooltip {
+  z-index: 1200;
+}
+
 .qelas-toast .btn-close {
   border-radius: 0;
   padding: 0;
@@ -18237,14 +18237,14 @@ input::-webkit-inner-spin-button {
 
 header {
   height: 56px;
-  z-index: 1111;
-  padding-left: 80px;
-  background-color: #fff;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 1rem 0.5rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+  z-index: 1111;
 }
 @media (max-width: 767.98px) {
   header {
@@ -18402,12 +18402,19 @@ header .container-xxl > .row [class*=col]:last-child {
   width: 280px;
 }
 
+.qela-logo {
+  padding: 0 0.5rem;
+  z-index: 2;
+}
+
 .qela-menu {
-  width: 80px;
-  transition: width 0.3s linear 0s, left 0.3s linear 0s;
+  height: calc(100% - var(--body-aside-pad-close));
+  width: var(--body-aside-pad);
+  transition: width 0.2s linear 0s, left 0.3s linear 0s;
   position: fixed;
   left: 0;
-  top: 0;
+  top: var(--body-pad-top);
+  border-right: 1px solid #e9ecef;
 }
 @media (max-width: 767.98px) {
   .qela-menu {
@@ -18420,48 +18427,11 @@ header .container-xxl > .row [class*=col]:last-child {
     width: 100%;
   }
 }
-.qela-menu.active {
-  width: 230px;
+.qela-menu.close {
+  width: var(--body-aside-pad-close);
 }
-.qela-menu.active::before {
-  opacity: 0.2;
-  pointer-events: auto;
-}
-@media (max-width: 767.98px) {
-  .qela-menu.active::before {
-    visibility: visible;
-  }
-}
-@media (max-width: 767.98px) {
-  .qela-menu.active {
-    width: 430px;
-    left: 0;
-  }
-}
-@media (max-width: 575.98px) {
-  .qela-menu.active {
-    width: 100%;
-  }
-}
-.qela-menu::before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s linear 0s;
-  z-index: 1;
-  left: 0;
-  top: 0;
-}
-@media (max-width: 767.98px) {
-  .qela-menu::before {
-    transition: none;
-    visibility: hidden;
-    transition: visibility 0s linear 0.3s;
-  }
+.qela-menu.close .qela-nav-wrapper .nav-link > small:not(.small), .qela-menu.close .qela-nav-wrapper .nav-link > .small:not(.small) {
+  width: 40px;
 }
 .qela-menu .qela-nav {
   z-index: 3;
@@ -18471,17 +18441,11 @@ header .container-xxl > .row [class*=col]:last-child {
   flex-direction: column;
   background-color: #fff;
 }
-
-.qela-logo {
-  padding: 8px 12px;
-  height: 56px;
-  flex: 0 0 56px;
-  background-color: #fff;
-  z-index: 2;
-  align-items: center;
+.qela-menu .qela-scroll-custom {
+  --scroll-width: 0;
 }
 
-.qela-nav__wrapper {
+.qela-nav-wrapper {
   overflow: auto;
   overflow-x: hidden;
   flex: 1 1 auto;
@@ -18490,91 +18454,59 @@ header .container-xxl > .row [class*=col]:last-child {
   display: flex;
   flex-direction: column;
 }
-.qela-nav__wrapper > div:first-child {
-  display: flex;
-  padding: 0.5rem 1.25rem;
+.qela-nav-wrapper .nav {
+  padding: 0.5rem;
+  flex-direction: column;
   gap: 0.5rem;
 }
-@media (max-width: 575.98px) {
-  .qela-nav__wrapper > div:first-child {
-    flex-direction: column;
-  }
-}
-.qela-nav__wrapper .nav {
-  padding: 20px;
-  flex-direction: column;
-}
-.qela-nav__wrapper .nav:first-child {
+.qela-nav-wrapper .nav:first-child {
   margin-bottom: auto;
 }
-.qela-nav__wrapper .nav:last-child {
+.qela-nav-wrapper .nav:last-child {
   padding-top: 0;
 }
 @media (max-width: 767.98px) {
-  .qela-nav__wrapper .nav {
+  .qela-nav-wrapper .nav {
     padding: 20px 16px;
   }
 }
-.qela-nav__wrapper .nav-item:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-.qela-nav__wrapper .nav-link {
+.qela-nav-wrapper .nav-link {
+  display: block;
+  border-radius: 30px;
   padding: 0;
-  display: flex;
-  align-items: center;
 }
 @media (any-hover: hover) {
-  .qela-nav__wrapper .nav-link:hover span {
-    color: #000;
+  .qela-nav-wrapper .nav-link:hover > small:not(.small), .qela-nav-wrapper .nav-link:hover > .small:not(.small) {
+    background-color: #fff399;
   }
 }
-.qela-nav__wrapper .nav-link > span {
-  color: #adb5bd;
+.qela-nav-wrapper .nav-link > small:not(.small), .qela-nav-wrapper .nav-link > .small:not(.small) {
+  width: 100%;
+  height: 40px;
+  color: #495057;
   font-weight: 500;
-  transition: color 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: background-color 0.3s ease 0s, width 0.2s linear 0s;
 }
-@media (max-width: 767.98px) {
-  .qela-nav__wrapper .nav-link > span {
-    font-size: 18px;
-  }
+.qela-nav-wrapper .nav-link > small:not(.small)::before, .qela-nav-wrapper .nav-link > .small:not(.small)::before {
+  line-height: 1;
+  padding: 0 0.5rem;
 }
-.qela-nav__wrapper .nav-link [class^=ic-],
-.qela-nav__wrapper .nav-link [class*=ic-] {
-  padding: 0.5rem;
-  border-radius: 50%;
-  margin: 0px 20px 0px 0px;
-}
-.qela-nav__wrapper .nav-link [class^=ic-].quantity,
-.qela-nav__wrapper .nav-link [class*=ic-].quantity {
-  position: relative;
-  padding: 0.5rem;
-  border-radius: 50%;
-}
-.qela-nav__wrapper .nav-link [class^=ic-].quantity .badge,
-.qela-nav__wrapper .nav-link [class*=ic-].quantity .badge {
+.qela-nav-wrapper .nav-link .qela-badge {
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 3.5px;
+  left: 22px;
 }
-@media (max-width: 767.98px) {
-  .qela-nav__wrapper .nav-link [class^=ic-],
-.qela-nav__wrapper .nav-link [class*=ic-] {
-    margin: 0px 16px 0px 0px;
-  }
-}
-.qela-nav__wrapper .nav-link.active [class^=ic-],
-.qela-nav__wrapper .nav-link.active [class*=ic-] {
-  background-color: #ffe000;
-}
-.qela-nav__wrapper .nav-link.active span {
-  color: #000;
-}
-
-.qela-menu {
-  height: 100%;
-}
-.qela-menu .qela-badge.small {
+.qela-nav-wrapper .nav-link .qela-badge.small {
   transform: translate(0%, 0%);
+  font-size: 0.5625rem;
+}
+.qela-nav-wrapper .nav-link.active > small:not(.small), .qela-nav-wrapper .nav-link.active > .small:not(.small) {
+  background-color: #ffe000;
 }
 
 .table-qela {

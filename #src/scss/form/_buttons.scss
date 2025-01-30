@@ -465,13 +465,17 @@
 
 .qela-btn-menu {
     position: absolute;
-    z-index: 1;
     left: calc(100% - 16px);
-    top: 40%;
-    border-radius: 50%;
-    padding: 9px 4px 9px 14px;
-    background-color: $white;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
     color: $info-500;
+    border-radius: 18px;
+    padding: rem(3) rem(8);
+    line-height: 1;
+    background-color: $white;
+    border: 1px solid $white;
+    transition: border-color 0.3s ease 0s;
 
     @include media-breakpoint-down(md) {
         display: none;
@@ -479,11 +483,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: $white;
-
-            &::before {
-                color: $black;
-            }
+            border-color: $info-400;
         }
     }
 
@@ -491,33 +491,32 @@
         transition:
             transform 0.3s ease 0s,
             color 0.2s;
-        font-size: 14px;
+        font-size: 16px;
         color: $info-500;
-        transform: rotate(-90deg);
     }
 
-    &.active {
+    &.close {
         &::before {
-            transform: rotate(90deg);
+            transform: rotate(180deg);
         }
     }
 }
 
-.qela-btn-close {
-    background-color: transparent;
-    z-index: 4;
-    top: 4px;
-    right: 4px;
-    display: none;
+// .qela-btn-close {
+//     background-color: transparent;
+//     z-index: 4;
+//     top: 4px;
+//     right: 4px;
+//     display: none;
 
-    @include media-breakpoint-down(md) {
-        display: block;
-    }
+//     @include media-breakpoint-down(md) {
+//         display: block;
+//     }
 
-    &::before {
-        font-size: 28px;
-    }
-}
+//     &::before {
+//         font-size: 28px;
+//     }
+// }
 
 .qela-burger {
     display: none;

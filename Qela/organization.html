@@ -11,255 +11,168 @@
 
 <body class="qela-body">
     <header>
-  <div class="container-fluid">
-    <div class="row">
-      <!-- item whith title and button burger-->
-      <div class="col-10 col-xl-auto col-md-8 gap-3">
-        <button class="qela-burger">
-          <img
-            src="img/burger.svg"
-            width="24"
-            height="40"
-            alt="burger button"
-          />
-        </button>
-        <h1 class="h6 qela-clamp">Organization</h1>
-      </div>
-      <div class="col-2 col-xl col-md-4">
-        <!--FIX form search -->
-        <form class="qela-search" role="search">
-          <div class="qela-search__wrapper">
-            <div class="input-group">
-              <button
-                class="btn btn-input ic-search"
-                type="button"
-                id="button-search"
-              ></button>
-              <input
-                type="search"
-                class="form-control"
-                placeholder="Пошук"
-                aria-label="Search"
-                aria-describedby="button-search"
-              />
-            </div>
-          </div>
-          <button
-            class="btn ic-search p-2 qela-search-btn"
-            type="button"
-          ></button>
-        </form>
-        <!--FIX badge -->
-        <button type="button" class="btn ic-bell p-2 qela-notification active">
-          <span class="badge rounded-pill text-bg-danger qela-badge small"
-            >25</span
-          >
-        </button>
-        <!--FIX user -->
-        <div class="dropdown qela-user">
-          <button
-            type="button"
-            class="btn p-0 border-0 ic-chevron position-relative"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            data-bs-auto-close="outside"
-          >
-            <img
-              class="rounded-circle"
-              src="img/header/user.jpg"
-              width="32"
-              height="32"
-              alt="user"
-            />
-          </button>
-          <div class="dropdown-menu dropdown-caret dropdown-menu-end shadow">
-            <form class="gy-5 p-2">
-              <div class="mb-3">
-                <label for="UserEmail" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control form-control-sm"
-                  id="UserEmail"
-                  placeholder="Email"
-                />
-                <div class="invalid-feedback">Error text</div>
-              </div>
-              <div class="mb-3">
-                <label for="inputPassword1" class="form-label">Password</label>
-                <div class="input-group input-group-sm has-validation">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Password"
-                    aria-label="Password"
-                    id="inputPassword1"
-                    aria-describedby="button-addon1"
-                  />
-                  <button
-                    class="btn btn-input ic-eye-close"
-                    type="button"
-                    id="button-addon1"
-                  ></button>
-                  <div class="invalid-feedback">Error text</div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="Check" />
-                  <label class="form-check-label" for="Check"
-                    >Запамятати мене</label
-                  >
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">
-                Відправити
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--FIX menu -->
-  <div class="qela-menu">
-    <!--FIX buttons -->
-    <button
-      type="button"
-      class="ic-chevron border-0 qela-btn-menu qela-shadow"
-    ></button>
-    <button
-      type="button"
-      class="ic-cloze p-2 border-0 position-absolute qela-btn-close"
-      aria-label="Close"
-    ></button>
-    <nav class="qela-nav">
-      <!--FIX mobile logo -->
-      <a class="navbar-brand qela-logo" href="#"
-        ><img src="img/logo-3.svg" alt="Logo" width="57" height="40"
-      /></a>
-      <!--FIX mobile search -->
-      <form class="qela-search mobile" role="search">
-        <div class="input-group">
-          <button
-            class="btn btn-input ic-search"
-            type="button"
-            id="button-search"
-          ></button>
-          <input
-            type="search"
-            class="form-control"
-            placeholder="Пошук"
-            aria-label="Search"
-            aria-describedby="button-search"
-          />
-        </div>
-      </form>
-      <!--FIX mobile user -->
-      <div class="row qela-user mobile">
-        <div class="col">
-          <img
-            class="rounded-circle"
-            src="img/header/user.jpg"
-            width="40"
-            height="40"
-            alt="user"
-          />
-          <span class="fw-semibold fs-5"><small>Uzer Name</small></span>
-        </div>
-        <div class="col-auto">
-          <button type="button" class="btn btn-info ico ic-log-out"></button>
-        </div>
-      </div>
-      <!--FIX nav wrapper -->
-      <div class="qela-nav__wrapper">
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
-              <span class="ic-spead"></span>
-              <span>Дашборд</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-people"></span>
-              <span>Користувачі</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-box-arrow"></span>
-              <span>Голосування</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-notes"></span>
-              <span>Новини</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-calendar"></span>
-              <span>Квести</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-dollar quantity">
-                <span class="badge rounded-pill text-bg-danger qela-badge small"
-                  >25</span
-                >
-              </span>
-              <span>Донати</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-lattice"></span>
-              <span>Теги</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-speaker"></span>
-              <span>Маркетинг</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-jostik"></span>
-              <span>Гейміфікація</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-city"></span>
-              <span>Організація</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-tent"></span>
-              <span>Магазин</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link" aria-current="page">
-              <span class="ic-settings"></span>
-              <span>Налаштування</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- item whith title and button burger-->
+            <div class="col gap-2">
+                <!--FIX mobile logo -->
+                <a class="navbar-brand qela-logo" href="#">
+                    <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
+                </a>
 
+                <h1 class="h5 qela-clamp">Organization</h1>
+                <!-- <button class="qela-burger">
+                    <img src="img/burger.svg" width="24" height="40" alt="burger button" />
+                </button> -->
+            </div>
+            <div class="col-auto d-flex gap-2">
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-help-circle"></a>
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Сайт для прихильників"></a>
+
+                <!--FIX user -->
+                <div class="dropdown qela-dropdown">
+                    <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                            <img src="img/header/user.jpg" alt="">
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu shadow" style="width:350px">
+                        <li>
+                            <div class="qela-item-user">
+                                <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                                    <img src="img/header/user.jpg" alt="">
+                                </span>
+                                <div class="flex-grow-1">
+                                    <div class="h3 mb-1" v-text="UserStatistic.VotingFinished"></div>
+                                    <span>qelatesting1+1800@gmail.com</span>
+                                    <div class="text-info-600">
+                                        <small>Власник</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item ic-user-24" href="#">Профіль</a>
+
+                        </li>
+                        <li><a class="dropdown-item ic-bill" href="#">Оплата</a></li>
+                        <li><a class="dropdown-item ic-dollar" href="#">Підписка</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item ic-log-out" href="#">вийти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
     <main>
+        <!--FIX menu -->
+<aside class="qela-menu">
+    <!--FIX buttons -->
+    <button type="button" class="ic-chevron-left qela-btn-menu"></button>
+    <!-- <button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button> -->
+    <nav class="qela-nav qela-scroll-custom">
+        <!--FIX mobile search -->
+        <!-- <form class="qela-search mobile" role="search">
+            <div class="input-group">
+                <button class="btn btn-input ic-search" type="button" id="button-search"></button>
+                <input type="search" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
+            </div>
+        </form> -->
+        <!--FIX mobile user -->
+        <!-- <div class="row qela-user mobile">
+            <div class="col">
+                <img class="rounded-circle" src="img/header/user.jpg" width="40" height="40" alt="user" />
+                <span class="fw-semibold fs-5"><small>Uzer Name</small></span>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-info ico ic-log-out"></button>
+            </div>
+        </div> -->
+        <!--FIX nav wrapper -->
+        <div class="qela-nav-wrapper">
+            <ul class="nav">
+                <li class="nav-item qela-clamp">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <small class="ic-spead">Дашборд</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-people">Користувачі</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-box-arrow">
+                            Покроковий ґайд
+                        </small>
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-notes">Новини</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-calendar">Квести</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <span class="badge rounded-pill text-bg-danger qela-badge small">25</span>
+                        <small class="ic-dollar ">
+                            Донати
+                        </small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-lattice">Теги</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-speaker">Маркетинг</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-jostik">Гейміфікація</small>
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-city">Організація</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-tent">Магазин</small>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <small class="ic-settings">Налаштування</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</aside>
         <!-- =====================Список користувачів==================== -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="row gx-lg-3 gy-3 gx-lg-0 mb-3 pt-3">
                 <div class="col-lg-4">
                     <div class="border bg-white rounded-2 pb-5">
@@ -273,66 +186,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="p-3">
-                            <!-- FIX Lists whith button -->
-                            <ul class="list-group list-group-flush qela-flush pb-3">
-                                <li class="list-group-item">
-                                    <span class="flex-grow-1">Organization user site link:</span>
-                                    <button type="button" class="btn btn-info ic-file-copy ico-right">
-                                        <span class="qela-clamp qela-clamp-btn text-start">
-                                            www.qela-appwww.qela-appwww.qela-appwww.qela-appwww.qela-app
-                                        </span>
-                                    </button>
-                                </li>
-                            </ul>
-                            <!-- FIX Lists whith text -->
-                            <ul class="list-group list-group-flush qela-flush">
-                                <li class="list-group-item">
-                                    <span>Organization key:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Date Created:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Phone Number:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Email:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span>Year of fondation:</span>
-                                    <span>2023-03-01, 09:40:23</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- FIX Description  -->
-                        <div class="px-4 py-3">
-                            <h3 class="h6 text-info-600 pb-2">Description</h3>
-                            <div id="#text-more" class="qela-description mb-3">
-                                "Unity for Planet" is a non-profit organization dedicated to
-                                protecting the environment through community involvement and
-                                volunteerism. Our mission is to inspire and empower
-                                individuals to take action to preserve and protect the planet
-                                for future generations. We believe that everyone has a role to
-                                play in creating a sustainable future, and that small actions
-                                taken by individuals can lead to significant positive changes
-                                for the environment. Through various initiatives such as beach
-                                cleanups, tree planting campaigns, and educational programs,
-                                we work to engage and educate people about the importance of
-                                environmental conservation. Join us in our efforts to create a
-                                greener and healthier planet by volunteering with Unity for
-                                Planet today!"
-                            </div>
-                            <div class="text-end">
-                                <button type="button" class="btn btn-sm btn-link" data-qela-target="#text-more">
-                                    Reed more
-                                </button>
-                            </div>
-                        </div>
+
                         <!-- FIX Lists whith text -->
                         <div class="p-3">
                             <h3 class="h6 text-info-800 pb-2">Contacts</h3>
@@ -357,6 +211,31 @@
                                     <span>Organization website link</span>
                                     <a href="#">www.unityforplanet.com</a>
                                 </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Organization website link</span>
+                                    <a href="#">www.unityforplanet.com</a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
