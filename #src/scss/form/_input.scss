@@ -1,5 +1,6 @@
 .form-control {
 	--input-number-width: 56px;
+	min-height: 38px;
 	@media (any-hover: hover) {
 		&:hover {
 			border-color: $secondary;
@@ -43,7 +44,9 @@
 		}
 	}
 }
-
+.form-control-sm {
+	height: 30.5px;
+}
 textarea {
 	color: $info-700;
 }

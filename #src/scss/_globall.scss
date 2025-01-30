@@ -1,571 +1,568 @@
 html,
 body {
-    height: 100%;
+	height: 100%;
 }
 main {
-    padding: rem(18);
-    height: 100%;
+	padding: rem(18);
+	height: 100%;
 }
 .qela-body {
-    --body-pad-top: 56px;
-    --body-aside-pad: 168px;
-    --body-aside-pad-close: 56px;
-    padding-top: var(--body-pad-top);
-    padding-left: var(--body-aside-pad);
-    display: flex;
-    flex-direction: column;
-    // transition: padding-left 0.2s linear 0s;
-    // &.active {
-    //     padding-left: var(--body-aside-pad-close);
-    // }
-    @include media-breakpoint-down(md) {
-        padding-left: 0;
-    }
-    .modal-dialog {
-        padding-top: var(--body-pad-top);
-    }
+	--body-pad-top: 56px;
+	--body-aside-pad: 168px;
+	--body-aside-pad-close: 56px;
+	padding-top: var(--body-pad-top);
+	padding-left: var(--body-aside-pad);
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 1439.98px) {
+		--body-aside-pad: 56px;
+		--body-aside-pad-close: 168px;
+	}
+	.modal-dialog {
+		padding-top: var(--body-pad-top);
+	}
 }
 
 // ======================= master
 .qela-main {
-    padding: rem(8) 0;
-    flex: 1 1 auto;
+	padding: rem(8) 0;
+	flex: 1 1 auto;
 
-    .container {
-        height: 100%;
-    }
+	.container {
+		height: 100%;
+	}
 }
 
 .qela-page {
-    min-height: 100%;
-    border: 1px solid $info-300;
-    border-radius: rem(8);
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
+	min-height: 100%;
+	border: 1px solid $info-300;
+	border-radius: rem(8);
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
 
-    .nav.nav-tabs {
-        padding: rem(16) 1.5rem 0 1.5rem;
-        border-radius: rem(8) rem(8) 0 0;
-        background-color: $body-bg;
-    }
+	.nav.nav-tabs {
+		padding: rem(16) 1.5rem 0 1.5rem;
+		border-radius: rem(8) rem(8) 0 0;
+		background-color: $body-bg;
+	}
 
-    .row-grow {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        --bs-gutter-x: 1rem;
-        flex: 1 1 auto;
+	.row-grow {
+		padding: 1rem;
+		border-radius: 0.5rem;
+		--bs-gutter-x: 1rem;
+		flex: 1 1 auto;
 
-        &.no-pad {
-            padding: 0;
-        }
+		&.no-pad {
+			padding: 0;
+		}
 
-        .pad-top-6 {
-            padding-top: 2.5rem;
+		.pad-top-6 {
+			padding-top: 2.5rem;
 
-            @include media-breakpoint-down(lg) {
-                padding-top: 1rem;
-                padding: 1rem;
-            }
-        }
+			@include media-breakpoint-down(lg) {
+				padding-top: 1rem;
+				padding: 1rem;
+			}
+		}
 
-        [class^="col-"] {
-            .card {
-                height: 100%;
-                padding: 0.5rem;
-                background-color: $body-bg;
-                border: none;
-            }
+		[class^="col-"] {
+			.card {
+				height: 100%;
+				padding: 0.5rem;
+				background-color: $body-bg;
+				border: none;
+			}
 
-            .card-text {
-                &.empty {
-                    padding: 2.5rem 1rem;
-                    text-align: center;
-                    color: cheqela-main$info-700;
-                }
+			.card-text {
+				&.empty {
+					padding: 2.5rem 1rem;
+					text-align: center;
+					color: cheqela-main$info-700;
+				}
 
-                &.info {
-                    padding: 1rem;
-                }
-            }
+				&.info {
+					padding: 1rem;
+				}
+			}
 
-            .img-fluid {
-                width: 100%;
-            }
-        }
-    }
+			.img-fluid {
+				width: 100%;
+			}
+		}
+	}
 
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
 }
 
 .qela-right {
-    background-color: $info-100;
-    height: 100%;
-    max-height: 100vh;
-    border-bottom-right-radius: 12px;
-    overflow: auto;
+	background-color: $info-100;
+	height: 100%;
+	max-height: 100vh;
+	border-bottom-right-radius: 12px;
+	overflow: auto;
 
-    @include media-breakpoint-down(lg) {
-        border-bottom-left-radius: 12px;
-        max-height: none;
-    }
+	@include media-breakpoint-down(lg) {
+		border-bottom-left-radius: 12px;
+		max-height: none;
+	}
 
-    @include media-breakpoint-down(lg) {
-        border-left: 1px solid $info-400;
-    }
+	@include media-breakpoint-down(lg) {
+		border-left: 1px solid $info-400;
+	}
 
-    .qela-actions {
-        padding: 1rem;
+	.qela-actions {
+		padding: 1rem;
 
-        @include media-breakpoint-down(lg) {
-            border-bottom: 1px solid $info-400;
-        }
-    }
+		@include media-breakpoint-down(lg) {
+			border-bottom: 1px solid $info-400;
+		}
+	}
 
-    .typography {
-        padding: 1.5rem 1rem;
+	.typography {
+		padding: 1.5rem 1rem;
 
-        @include media-breakpoint-down(lg) {
-            padding: 0.5rem 1rem;
-        }
+		@include media-breakpoint-down(lg) {
+			padding: 0.5rem 1rem;
+		}
 
-        p {
-            margin-bottom: 0;
-        }
+		p {
+			margin-bottom: 0;
+		}
 
-        h2 {
-            padding: 2rem 0 1rem 0;
-            color: $info-400;
-            font-size: 1.5em;
+		h2 {
+			padding: 2rem 0 1rem 0;
+			color: $info-400;
+			font-size: 1.5em;
 
-            @include media-breakpoint-down(lg) {
-                padding: 1rem 0 0.5rem 0;
-            }
-        }
-    }
+			@include media-breakpoint-down(lg) {
+				padding: 1rem 0 0.5rem 0;
+			}
+		}
+	}
 }
 
 .child-mb-2 > *:not(:last-child) {
-    margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .child-mb-2 .qela-chain:not(:last-child) {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 // ======================= master
 // ======================= telent
 .qela-wrap {
-    background-color: transparent;
-    border: none;
+	background-color: transparent;
+	border: none;
 
-    .row-grow {
-        @include media-breakpoint-down(lg) {
-            --bs-gutter-y: 1rem;
-        }
-    }
+	.row-grow {
+		@include media-breakpoint-down(lg) {
+			--bs-gutter-y: 1rem;
+		}
+	}
 }
 
 .qela-start {
-    &:not(:last-child) {
-        margin-bottom: 1rem;
-    }
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-    > div {
-        &:first-child {
-            padding: 48px 24px 24px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+	> div {
+		&:first-child {
+			padding: 48px 24px 24px 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-            .qela-avatar {
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
+			.qela-avatar {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
 
-    .qela-telent-text {
-        margin-bottom: 0.5rem;
-    }
+	.qela-telent-text {
+		margin-bottom: 0.5rem;
+	}
 
-    p {
-        margin-bottom: 0;
-    }
+	p {
+		margin-bottom: 0;
+	}
 
-    .list-group {
-        padding: 1rem;
-    }
+	.list-group {
+		padding: 1rem;
+	}
 
-    .qela-badge-telent {
-        margin-left: auto;
+	.qela-badge-telent {
+		margin-left: auto;
 
-        @include media-breakpoint-down(xl) {
-            margin-left: 0;
-        }
-    }
+		@include media-breakpoint-down(xl) {
+			margin-left: 0;
+		}
+	}
 }
 
 .qela-end {
-    padding-bottom: 1rem;
+	padding-bottom: 1rem;
 
-    &:not(:last-child) {
-        margin-bottom: 1rem;
-    }
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-    &.qela-tables {
-        padding: 0;
-        padding-bottom: 1.5rem;
-        height: auto;
+	&.qela-tables {
+		padding: 0;
+		padding-bottom: 1.5rem;
+		height: auto;
 
-        > .row {
-            --bs-gutter-x: 1rem;
-            padding: 1rem 1.5rem;
-            align-items: center;
-        }
+		> .row {
+			--bs-gutter-x: 1rem;
+			padding: 1rem 1.5rem;
+			align-items: center;
+		}
 
-        .table-qela {
-            max-height: 410px;
-            overflow: auto;
-        }
-    }
+		.table-qela {
+			max-height: 410px;
+			overflow: auto;
+		}
+	}
 
-    > div {
-        &:first-child {
-            padding: 2rem 1rem 0 1rem;
-        }
-    }
+	> div {
+		&:first-child {
+			padding: 2rem 1rem 0 1rem;
+		}
+	}
 
-    > h2 {
-        margin-bottom: 0;
-        align-self: flex-start;
-        font-size: 20px;
-    }
+	> h2 {
+		margin-bottom: 0;
+		align-self: flex-start;
+		font-size: 20px;
+	}
 
-    .qela-telent-text {
-        margin-bottom: 2rem;
-    }
+	.qela-telent-text {
+		margin-bottom: 2rem;
+	}
 
-    .btns-inline {
-        gap: 0.5rem;
-        justify-content: flex-end;
-        padding: 1rem 0;
-    }
+	.btns-inline {
+		gap: 0.5rem;
+		justify-content: flex-end;
+		padding: 1rem 0;
+	}
 
-    .alert {
-        margin-top: 0.75rem;
-    }
+	.alert {
+		margin-top: 0.75rem;
+	}
 }
 
 .qela-start,
 .qela-end {
-    background-color: $white;
-    height: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid $gray-400;
+	background-color: $white;
+	height: 100%;
+	border-radius: 0.5rem;
+	border: 1px solid $gray-400;
 }
 
 .qela-top-item {
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    --bs-gutter-x: 1rem;
+	margin-bottom: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	--bs-gutter-x: 1rem;
 }
 
 // ======================= telent
 
 .qela-shadow {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .qela-conatiner-sm {
-    max-width: 432px;
-    padding: 0 16px;
-    margin: 0 auto;
+	max-width: 432px;
+	padding: 0 16px;
+	margin: 0 auto;
 }
 .qela-conatiner-md {
-    max-width: 820px;
-    padding: 0 16px;
-    margin: 0 auto;
+	max-width: 820px;
+	padding: 0 16px;
+	margin: 0 auto;
 }
 
 .qela-clamp {
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    white-space: nowrap;
-    height: auto;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	white-space: nowrap;
+	height: auto;
 }
 
 .qela-clamp3 {
-    -webkit-line-clamp: 3;
-    white-space: normal;
-    display: -webkit-box;
+	-webkit-line-clamp: 3;
+	white-space: normal;
+	display: -webkit-box;
 }
 .qela-clamp2 {
-    -webkit-line-clamp: 2;
-    white-space: normal;
-    display: -webkit-box;
+	-webkit-line-clamp: 2;
+	white-space: normal;
+	display: -webkit-box;
 }
 .qela-clamp6 {
-    -webkit-line-clamp: 6;
-    white-space: normal;
-    display: -webkit-box;
+	-webkit-line-clamp: 6;
+	white-space: normal;
+	display: -webkit-box;
 }
 .qela-clamp-btn {
-    white-space: normal;
-    display: -webkit-box;
+	white-space: normal;
+	display: -webkit-box;
 }
 
 .qela-pad-r {
-    padding-right: 65px;
+	padding-right: 65px;
 
-    @include media-breakpoint-down(md) {
-        padding-right: 16px;
-    }
+	@include media-breakpoint-down(md) {
+		padding-right: 16px;
+	}
 }
 
 .qela-pad-l {
-    padding-left: 65px;
+	padding-left: 65px;
 
-    @include media-breakpoint-down(md) {
-        padding-left: 16px;
-    }
+	@include media-breakpoint-down(md) {
+		padding-left: 16px;
+	}
 }
 .qela-stiky {
-    position: sticky;
-    top: 0;
+	position: sticky;
+	top: 0;
 }
 .qela-rounded-st {
-    border-top-left-radius: $border-radius !important;
+	border-top-left-radius: $border-radius !important;
 }
 
 .qela-rounded-et {
-    border-top-right-radius: $border-radius !important;
+	border-top-right-radius: $border-radius !important;
 }
 
 .qela-rounded-eb {
-    border-bottom-right-radius: $border-radius !important;
+	border-bottom-right-radius: $border-radius !important;
 }
 .qela-rounded-12 {
-    border-radius: 12px !important;
+	border-radius: 12px !important;
 }
 .qela-wrap-rounded {
-    padding-bottom: 16px;
-    margin-bottom: -16px;
-    flex: 1 0 auto;
-    > div {
-        border: 1px solid $info-400;
-        border-radius: 8px;
-        overflow: hidden;
-        height: 100%;
-    }
+	padding-bottom: 16px;
+	margin-bottom: -16px;
+	flex: 1 0 auto;
+	> div {
+		border: 1px solid $info-400;
+		border-radius: 8px;
+		overflow: hidden;
+		height: 100%;
+	}
 }
 .word-break {
-    word-break: break-word !important;
+	word-break: break-word !important;
 }
 
 .h-100vh {
-    height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
-    overflow-x: hidden;
-    overflow-y: auto;
-    @include media-breakpoint-down(lg) {
-        height: auto;
-    }
+	height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include media-breakpoint-down(lg) {
+		height: auto;
+	}
 }
 // .form-control.is-invalid ~ .btn-input:hover {
 // border-color: #ff453a;
 // color: #ff453a;
 // }
 .qela-scroll {
-    overflow: hidden;
+	overflow: hidden;
 
-    @include media-breakpoint-down(lg) {
-        overflow: auto;
-    }
+	@include media-breakpoint-down(lg) {
+		overflow: auto;
+	}
 }
 
 .qela-rounder-12 {
-    border-radius: 12px !important;
+	border-radius: 12px !important;
 }
 
 .qela-vote {
-    display: flex;
-    align-items: center;
-    border: 1px solid $info-400;
-    border-radius: 0.5rem;
-    background-color: $white;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+	display: flex;
+	align-items: center;
+	border: 1px solid $info-400;
+	border-radius: 0.5rem;
+	background-color: $white;
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
 
-    .badge {
-        margin-left: 1rem;
-    }
+	.badge {
+		margin-left: 1rem;
+	}
 }
 .qela-help {
-    display: flex;
-    margin-top: 1rem;
-    border: 1px solid $gray-400;
-    border-radius: 0.5rem;
-    @include media-breakpoint-down(md) {
-        flex-direction: column;
-    }
-    .nav {
-        padding-top: 1rem;
-        flex: 0 0 230px;
-        flex-direction: column;
-        border-right: 1px solid $gray-400;
-        background: $white;
-        border-bottom-left-radius: 0.5rem;
-        border-top-left-radius: 0.5rem;
-        @include media-breakpoint-down(md) {
-            border-right: none;
-            border-bottom-left-radius: 0;
-            border-top-right-radius: 0.5rem;
-        }
-        .nav-item {
-            ul {
-                padding: 0;
-                li {
-                    list-style: none;
-                    .nav-link {
-                        padding-left: 40px;
-                        &.current {
-                            background-color: $info-200;
-                        }
-                    }
-                }
-            }
-        }
+	display: flex;
+	margin-top: 1rem;
+	border: 1px solid $gray-400;
+	border-radius: 0.5rem;
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
+	}
+	.nav {
+		padding-top: 1rem;
+		flex: 0 0 230px;
+		flex-direction: column;
+		border-right: 1px solid $gray-400;
+		background: $white;
+		border-bottom-left-radius: 0.5rem;
+		border-top-left-radius: 0.5rem;
+		@include media-breakpoint-down(md) {
+			border-right: none;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 0.5rem;
+		}
+		.nav-item {
+			ul {
+				padding: 0;
+				li {
+					list-style: none;
+					.nav-link {
+						padding-left: 40px;
+						&.current {
+							background-color: $info-200;
+						}
+					}
+				}
+			}
+		}
 
-        .nav-link {
-            padding: 0.375rem 1rem;
-            color: $gray-700;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 130%;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s ease-out 0s;
-            &::before {
-                font-size: 20px;
-                margin: 0px 4px 0px 0px;
-                color: $gray-500;
-                transition:
-                    color 0.3s ease-out 0s,
-                    transform 0.3s ease-out 0s;
-            }
-            &.active {
-                &::before {
-                    transform: rotate(-45deg);
-                }
-                &.current {
-                    background-color: $info-200;
-                }
-            }
-            &.current {
-                color: $secondary-700;
-                &::before {
-                    color: $secondary-700;
-                }
-            }
-            &.child-no {
-                &.active {
-                    &.current {
-                        background-color: transparent;
-                    }
-                }
-                &.current {
-                    &::before {
-                        transform: rotate(0deg);
-                    }
-                }
-            }
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $secondary-700;
-                    &::before {
-                        color: $secondary-700;
-                    }
-                }
-            }
-        }
-    }
-    .card {
-        text-decoration: none;
-        padding: 1.5rem;
-        color: $gray-900;
-        border-color: $gray-300;
-        background-color: $gray-100;
-        transition: color 0.3s ease-out 0s;
-        [class*="ic-"] {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            align-items: center;
-            color: $info-700;
-            font-size: 14px;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease-out 0s;
-            &::before {
-                font-size: 20px;
-            }
-        }
-        @media (any-hover: hover) {
-            &:hover {
-                color: $secondary-700;
-                [class*="ic-"] {
-                    color: $secondary;
-                }
-            }
-        }
-    }
+		.nav-link {
+			padding: 0.375rem 1rem;
+			color: $gray-700;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 130%;
+			display: flex;
+			align-items: center;
+			transition: color 0.3s ease-out 0s;
+			&::before {
+				font-size: 20px;
+				margin: 0px 4px 0px 0px;
+				color: $gray-500;
+				transition:
+					color 0.3s ease-out 0s,
+					transform 0.3s ease-out 0s;
+			}
+			&.active {
+				&::before {
+					transform: rotate(-45deg);
+				}
+				&.current {
+					background-color: $info-200;
+				}
+			}
+			&.current {
+				color: $secondary-700;
+				&::before {
+					color: $secondary-700;
+				}
+			}
+			&.child-no {
+				&.active {
+					&.current {
+						background-color: transparent;
+					}
+				}
+				&.current {
+					&::before {
+						transform: rotate(0deg);
+					}
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $secondary-700;
+					&::before {
+						color: $secondary-700;
+					}
+				}
+			}
+		}
+	}
+	.card {
+		text-decoration: none;
+		padding: 1.5rem;
+		color: $gray-900;
+		border-color: $gray-300;
+		background-color: $gray-100;
+		transition: color 0.3s ease-out 0s;
+		[class*="ic-"] {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			align-items: center;
+			color: $info-700;
+			font-size: 14px;
+			gap: 0.5rem;
+			margin-bottom: 0.5rem;
+			transition: color 0.3s ease-out 0s;
+			&::before {
+				font-size: 20px;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $secondary-700;
+				[class*="ic-"] {
+					color: $secondary;
+				}
+			}
+		}
+	}
 }
 .qela-device-alert {
-    padding: 2rem 1rem;
-    text-align: center;
-    img {
-        width: 120px;
-        margin: 42px 0;
-    }
-    h5 {
-        margin-bottom: 1rem;
-    }
-    p {
-        color: $gray-900;
-    }
-    button {
-        margin-top: 1.5rem;
-    }
+	padding: 2rem 1rem;
+	text-align: center;
+	img {
+		width: 120px;
+		margin: 42px 0;
+	}
+	h5 {
+		margin-bottom: 1rem;
+	}
+	p {
+		color: $gray-900;
+	}
+	button {
+		margin-top: 1.5rem;
+	}
 }
 .qela-benifist {
-    background-color: $white;
-    padding: 1.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid $primary-700;
-    ul {
-        padding-left: 0;
-        padding-bottom: 16px;
-        li {
-            list-style: none;
-            position: relative;
-            padding-left: 24px;
-            padding-bottom: 8px;
-            &::before {
-                content: "";
-                position: absolute;
-                display: inline-block;
-                width: 14px;
-                height: 14px;
-                top: 3px;
-                left: 5px;
-                background: url("../img/icons/marcer-list.svg") center/100% no-repeat;
-            }
-        }
-    }
+	background-color: $white;
+	padding: 1.5rem 1rem;
+	border-radius: 8px;
+	border: 1px solid $primary-700;
+	ul {
+		padding-left: 0;
+		padding-bottom: 16px;
+		li {
+			list-style: none;
+			position: relative;
+			padding-left: 24px;
+			padding-bottom: 8px;
+			&::before {
+				content: "";
+				position: absolute;
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				top: 3px;
+				left: 5px;
+				background: url("../img/icons/marcer-list.svg") center/100% no-repeat;
+			}
+		}
+	}
 }
 @import "scroll";

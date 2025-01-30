@@ -1,68 +1,73 @@
 .dropdown {
-    & > .btn {
-        &::before {
-            transition:
-                transform 0.2s ease 0s,
-                color 0.2s ease 0s;
-        }
+	& > .btn {
+		&::before {
+			transition:
+				transform 0.2s ease 0s,
+				color 0.2s ease 0s;
+		}
 
-        &.show {
-            &::before {
-                transform: matrix(1, 0, 0, -1, 0, 0);
-                color: $black;
-            }
-        }
-    }
+		&.show {
+			&::before {
+				transform: matrix(1, 0, 0, -1, 0, 0);
+				color: $black;
+			}
+		}
+		&.ico {
+			&::before {
+				transform: none;
+			}
+		}
+	}
 }
 
 .qela-dropdown {
-    .dropdown-menu {
-        --bs-dropdown-min-width: 11.25rem;
-    }
-    .dropdown-item {
-        transition:
-            background-color 0.25s ease-out 0s,
-            color 0.25s ease-out 0s;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: rem(14) rem(24);
-        &[class*="ic-"] {
-            &::before {
-                font-size: 18px;
-            }
-        }
-        &.danger {
-            color: $danger-600;
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $danger-100;
-                }
-            }
-        }
-        &.success {
-            color: $success-600;
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $success-100;
-                }
-            }
-        }
-        &.warning {
-            color: $warning-600;
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $warning-100;
-                }
-            }
-        }
-    }
+	.dropdown-menu {
+		--bs-dropdown-min-width: 11.25rem;
+	}
+	.dropdown-item {
+		transition:
+			background-color 0.25s ease-out 0s,
+			color 0.25s ease-out 0s;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: rem(14) rem(24);
+		&[class*="ic-"] {
+			&::before {
+				font-size: 18px;
+			}
+		}
+		&.danger {
+			color: $danger-600;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $danger-100;
+				}
+			}
+		}
+		&.success {
+			color: $success-600;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $success-100;
+				}
+			}
+		}
+		&.warning {
+			color: $warning-600;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $warning-100;
+				}
+			}
+		}
+	}
 }
 .qela-item-user {
-    background-color: $white;
-    padding: rem(8) rem(24);
-    display: flex;
-    align-items: start;
-    gap: rem(16);
-    border-radius: rem(8);
+	background-color: $white;
+	padding: rem(8) rem(24);
+	display: flex;
+	align-items: start;
+	gap: rem(16);
+	border-radius: rem(8);
 }
