@@ -465,13 +465,13 @@
 
 .qela-btn-menu {
 	position: absolute;
-	left: calc(100% - 16px);
+	left: calc(100% - 15px);
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 1000;
 	color: $info-500;
 	border-radius: 18px;
-	padding: rem(3) rem(8);
+	padding: rem(3) rem(6);
 	line-height: 1;
 	background-color: $white;
 	border: 1px solid $white;

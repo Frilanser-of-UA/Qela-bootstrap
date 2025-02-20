@@ -162,6 +162,7 @@
 	border-top-color: transparent;
 	border-radius: 0 0 10px 10px;
 	overflow-x: hidden;
+	max-height: unset !important;
 }
 .multiselect__content {
 	min-width: unset;
@@ -245,7 +246,6 @@
 	.multiselect__content-wrapper {
 		border-color: $danger;
 		border-top-color: transparent;
-
 		@media (any-hover: hover) {
 			&:hover {
 				border-color: $danger-600;

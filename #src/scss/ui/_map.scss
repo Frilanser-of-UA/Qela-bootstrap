@@ -1,6 +1,6 @@
 .qela-map {
 	height: 440px;
-
+	z-index: 1;
 	.form-control {
 		&[type="search"] {
 			z-index: 2;
@@ -16,7 +16,9 @@
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s;
+	transition:
+		opacity 0.2s ease 0s,
+		visibility 0.2s ease 0s;
 	margin-left: -13px;
 	transform: translateY(-60px);
 
@@ -114,7 +116,7 @@
 			opacity: 1;
 		}
 
-		@media (any-hover:hover) {
+		@media (any-hover: hover) {
 			&:hover {
 				.qela-pin__num {
 					transform: translateY(-10px);
@@ -166,7 +168,7 @@
 		}
 
 		&::after {
-			content: '';
+			content: "";
 			height: 27px;
 			width: 3px;
 		}

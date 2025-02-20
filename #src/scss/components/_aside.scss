@@ -1,20 +1,14 @@
 .qela-menu {
 	height: calc(100% - var(--body-pad-top));
 	width: var(--body-aside-pad);
-	transition:
-		width 0.2s linear 0s,
-		left 0.3s linear 0s;
 	position: fixed;
 	left: 0;
 	top: var(--body-pad-top);
+	z-index: 11;
 	border-right: 1px solid $info-200;
-	@include media-breakpoint-down(md) {
-		width: 430px;
-		left: -110%;
-	}
-	@include media-breakpoint-down(sm) {
-		width: 100%;
-	}
+	transition:
+		width 0.2s linear 0s,
+		left 0.3s linear 0s;
 
 	&.close {
 		width: var(--body-aside-pad-close);
@@ -111,6 +105,7 @@
 			position: absolute;
 			top: 3.5px;
 			left: 22px;
+			pointer-events: none;
 			&.small {
 				transform: translate(0%, 0%);
 				font-size: rem(9);

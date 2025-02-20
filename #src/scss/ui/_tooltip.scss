@@ -1,45 +1,77 @@
 // Wrapper for the tooltip content
+.tooltip {
+	z-index: 1200;
+}
 .tooltip-inner {
-    box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
 }
 
 .qela-admin {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
 
-    &.btn[class^="ic-"]:before,
-    &.btn[class*="ic-"]:before {
-        font-size: 20px;
-        line-height: 1;
-    }
-    &.qela-sm {
-        width: 24px;
-        height: 24px;
+	&.btn[class^="ic-"]:before,
+	&.btn[class*="ic-"]:before {
+		font-size: 20px;
+		line-height: 1;
+	}
+	&.qela-sm {
+		width: 24px;
+		height: 24px;
 
-        &.btn[class^="ic-"]:before,
-        &.btn[class*="ic-"]:before {
-            font-size: 16px;
-        }
-    }
+		&.btn[class^="ic-"]:before,
+		&.btn[class*="ic-"]:before {
+			font-size: 16px;
+		}
+	}
 }
 
 .qela-tooltip-black {
-    .tooltip-inner {
-        background-color: $black;
-        color: $white;
-    }
+	.tooltip-inner {
+		background-color: $black;
+		color: $white;
+	}
 
-    &[data-popper-placement^="left"] .tooltip-arrow::before {
-        border-left-color: $black;
-    }
+	&[data-popper-placement^="left"] .tooltip-arrow::before {
+		border-left-color: $black;
+	}
 }
 
 .telent-tooltip {
-    .tooltip-inner {
-        --bs-tooltip-max-width: 300px;
-    }
+	.tooltip-inner {
+		--bs-tooltip-max-width: 300px;
+	}
 }
 .qela-sidebar-tooltip {
-    z-index: 1200;
+	--bs-tooltip-border-radius: 1rem;
+	.tooltip-inner {
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+		border: 1px solid $gray-200;
+		z-index: 1;
+		position: relative;
+	}
+	.tooltip-arrow {
+		z-index: 2;
+		&::before {
+			z-index: 2;
+			right: -3px !important;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			border-color: transparent;
+			border-style: solid;
+			top: 0px;
+			left: 1px;
+			border-width: 8px 0 8px 14px;
+			transform: rotate(-180deg);
+			border-left-color: $gray-200;
+		}
+	}
+	&.settings {
+		.tooltip-inner {
+			transform: translateY(5px);
+		}
+	}
 }

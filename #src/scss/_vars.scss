@@ -273,7 +273,7 @@ $link-shade-percentage: 25%;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
 // LINK
 //gutter
-$grid-gutter-width: 3rem;
+$grid-gutter-width: 2rem;
 $container-padding-x: $grid-gutter-width;
 //gutter
 // scss-docs-start border-variables
@@ -614,12 +614,12 @@ $tooltip-color: $black;
 $tooltip-bg: $white;
 $tooltip-border-radius: $border-radius-lg;
 $tooltip-opacity: 1;
-$tooltip-padding-y: $spacer * 0.75;
+$tooltip-padding-y: $spacer * 0.625;
 $tooltip-padding-x: $spacer * 0.625;
 $tooltip-margin: null;
 
-$tooltip-arrow-width: 1.5rem;
-$tooltip-arrow-height: 0.75rem;
+$tooltip-arrow-width: 1rem;
+$tooltip-arrow-height: 0.875rem;
 // fusv-disable
 $tooltip-arrow-color: null;
 // fusv-enable
