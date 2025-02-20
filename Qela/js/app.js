@@ -1,33 +1,3 @@
-// menu
-// window.onload = function () {
-
-//     document.addEventListener("click", documentActions);
-//     // Actions ( делегирование собитий click)
-//     function documentActions(e) {
-//         const targetElement = e.target;
-//         // ====== Меню
-//         if (targetElement.classList.contains('qela-btn-menu') || targetElement.classList.contains('qela-burger')) {
-//             if (document.querySelector('.qela-btn-menu') || document.querySelector('.qela-burger')) {
-//                 document.querySelector('.qela-menu').classList.toggle('active');
-//                 document.querySelector('.qela-btn-menu').classList.toggle('active');
-//                 document.body.classList.toggle('active');
-//             }
-//         } else if (!targetElement.closest('.qela-nav') && document.querySelector('.qela-menu.active') || targetElement.classList.contains('qela-btn-close')) {
-//             document.querySelector('.qela-menu').classList.remove('active');
-//             document.querySelector('.qela-btn-menu').classList.remove('active');
-//             document.body.classList.remove('active');
-//         }
-//         //== випадашки search
-//         if (targetElement.classList.contains('qela-search-btn')) {
-//             if (document.querySelector('.qela-search-btn')) {
-//                 document.querySelector('.qela-search__wrapper').classList.toggle('active');
-//             }
-//         } else if (!targetElement.closest('.qela-search__wrapper') && document.querySelector('.qela-search__wrapper.active')) {
-//             document.querySelector('.qela-search__wrapper').classList.remove('active');
-//         }
-//     }
-// }
-
 const btnMenu = document.querySelector('.qela-btn-menu');
 const menuAside = document.querySelector('.qela-menu');
 if (menuAside) {
@@ -58,6 +28,24 @@ if (toastTrigger) {
         toast.show()
     })
 }
+// input search
+const inputSearchWrap = document.querySelectorAll('.qela-search');
+if (inputSearchWrap) {
+    for (let i = 0; i < inputSearchWrap.length; i++) {
+        const inputSearch = inputSearchWrap[i].querySelector('.form-control');
+        const inputButton = inputSearchWrap[i].querySelector('.ic-cloze');
+        console.log(inputButton);
+        inputSearch.addEventListener('input', function () {
+            if (inputSearch.value != '') inputSearchWrap[i].classList.add('active');
+            else inputSearchWrap[i].classList.remove('active');
+        })
+        inputButton.addEventListener('click', function () {
+            inputSearch.value = '';
+            inputSearchWrap[i].classList.remove('active');
+        })
+    }
+}
+// input search
 // read more text
 let coll = document.querySelectorAll('[data-qela-target]')
 for (let i = 0; i < coll.length; i++) {
