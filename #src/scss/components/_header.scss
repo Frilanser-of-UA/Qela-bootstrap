@@ -1,118 +1,179 @@
 header {
-    height: 56px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: rem(8) rem(16) rem(8) 0;
-    background-color: $white;
-    border-bottom: 1px solid $info-200;
-    z-index: 1111;
+	height: 56px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: rem(8) rem(16) rem(8) 0;
+	background-color: $white;
+	border-bottom: 1px solid $info-200;
+	z-index: 1111;
 
-    .container-fluid {
-        height: 100%;
-        padding-left: 0;
-        padding-right: 0;
+	.container-fluid {
+		height: 100%;
+		padding-left: 0;
+		padding-right: 0;
 
-        > .row {
-            --bs-gutter-x: 0.5rem;
-            height: 100%;
-            position: relative;
+		> .row {
+			--bs-gutter-x: 0.5rem;
+			height: 100%;
+			position: relative;
 
-            [class^="col"],
-            [class*="col"] {
-                display: flex;
-                align-items: center;
-                gap: rem(8);
+			[class^="col"],
+			[class*="col"] {
+				display: flex;
+				align-items: center;
+				gap: rem(8);
 
-                &:last-child {
-                    justify-content: end;
-                }
-            }
-        }
-    }
+				&:last-child {
+					justify-content: end;
+				}
+			}
+		}
+	}
 }
+
+// start search
+.qela-search {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1 1 auto;
+	margin-left: rem(24);
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	&.mobile {
+		display: none;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+			margin: 0;
+			padding: rem(8) rem(16);
+		}
+	}
+
+	& > button {
+		color: $gray-500;
+		border: none;
+	}
+}
+
+.qela-search__wrapper {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+
+	@include media-breakpoint-down(xl) {
+		position: absolute;
+		top: calc(100% + 10px);
+		width: calc(100% - 40px);
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+}
+
+.qela-search-btn {
+	&.btn[class^="ic-"]:before,
+	&.btn[class*="ic-"]:before {
+		font-size: 24px;
+	}
+}
+
+// end search
+
 .qela-notification {
-    padding: 0;
-    border: none;
-    position: relative;
-    color: $gray-500;
+	padding: 0;
+	border: none;
+	position: relative;
+	color: $gray-500;
 
-    &.btn[class^="ic-"]:before,
-    &.btn[class*="ic-"]:before {
-        font-size: 24px;
-    }
+	&.btn[class^="ic-"]:before,
+	&.btn[class*="ic-"]:before {
+		font-size: 24px;
+	}
 
-    .qela-badge {
-        position: absolute;
-        top: 5px;
-        right: 0;
-    }
+	.qela-badge {
+		position: absolute;
+		top: 5px;
+		right: 0;
+	}
 
-    &.active {
-        color: $black;
-    }
+	&.active {
+		color: $black;
+	}
 }
 
 .qela-user {
-    display: flex;
-    padding-right: 1rem;
+	display: flex;
+	padding-right: 1rem;
 
-    @include media-breakpoint-down(md) {
-        padding-right: 0.25rem;
-        display: none;
-    }
+	@include media-breakpoint-down(md) {
+		padding-right: 0.25rem;
+		display: none;
+	}
 
-    &.mobile {
-        display: none;
-        padding: 0.5rem 1rem;
-        --bs-gutter-x: 0.5rem;
+	&.mobile {
+		display: none;
+		padding: 0.5rem 1rem;
+		--bs-gutter-x: 0.5rem;
 
-        [class^="col"],
-        [class*="col"] {
-            &:first-child {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
+		[class^="col"],
+		[class*="col"] {
+			&:first-child {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+		}
 
-        @include media-breakpoint-down(md) {
-            display: flex;
-        }
-    }
+		@include media-breakpoint-down(md) {
+			display: flex;
+		}
+	}
 
-    & > .btn {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        gap: 0;
+	& > .btn {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 0;
 
-        @media (any-hover: hover) {
-            &:hover {
-                &::before {
-                    color: $black;
-                }
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: $black;
+				}
+			}
+		}
 
-        &::before {
-            font-size: 14px;
-            padding: 12px;
-            color: $gray-500;
-            transition: transform 0.3s ease 0s;
-        }
-    }
+		&::before {
+			font-size: 14px;
+			padding: 12px;
+			color: $gray-500;
+			transition: transform 0.3s ease 0s;
+		}
+	}
 
-    .dropdown-menu {
-        width: 280px;
-    }
+	.dropdown-menu {
+		width: 280px;
+	}
 }
 
 .qela-logo {
-    padding: 0 rem(8);
-    // height: 56px;
-    // flex: 0 0 56px;
-    // background-color: $white;
-    z-index: 2;
+	padding: 0 rem(8);
+	// height: 56px;
+	// flex: 0 0 56px;
+	// background-color: $white;
+	z-index: 2;
 }
