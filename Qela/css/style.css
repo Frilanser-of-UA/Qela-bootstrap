@@ -9781,8 +9781,8 @@ textarea.form-control-lg {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: #9188ff;
-  --bs-nav-link-hover-color: #8278ff;
+  --bs-nav-link-color: #495057;
+  --bs-nav-link-hover-color: #6e63fa;
   --bs-nav-link-disabled-color: #6c757d;
   display: flex;
   flex-wrap: wrap;
@@ -9819,7 +9819,7 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-color: #dee2e6;
   --bs-nav-tabs-border-radius: 0.5rem;
   --bs-nav-tabs-link-hover-border-color: #dee2e6 #dee2e6 #dee2e6;
-  --bs-nav-tabs-link-active-color: #000;
+  --bs-nav-tabs-link-active-color: #212529;
   --bs-nav-tabs-link-active-bg: #fff;
   --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
