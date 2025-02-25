@@ -7899,7 +7899,7 @@ progress {
   height: 1.2em;
 }
 .form-control::placeholder {
-  color: #adb5bd;
+  color: #6c757d;
   opacity: 1;
 }
 .form-control:disabled {
@@ -14544,13 +14544,6 @@ main {
   flex-wrap: wrap;
 }
 
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
 .form-control {
   --input-number-width: 56px;
   min-height: 38px;
@@ -14587,39 +14580,8 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-.qela-search {
-  position: relative;
-}
-.qela-search .form-control {
-  padding-left: 2.25rem;
-  padding-right: 2rem;
-  border-radius: 1.875rem;
-}
-.qela-search button {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: #adb5bd;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.qela-search button:first-child {
-  left: 12px;
-}
-.qela-search button:last-child {
-  right: 12px;
-  display: none;
-}
-.qela-search button::before {
-  font-size: 20px;
-}
-.qela-search.active button:last-child {
-  display: block;
-}
-
 .form-control-sm {
-  min-height: 30.5px;
+  height: 30.5px;
 }
 
 textarea {
@@ -15024,12 +14986,12 @@ input::-webkit-inner-spin-button {
   padding: 5px 0;
 }
 .multiselect__input::placeholder {
-  color: #adb5bd;
+  color: #6c757d;
   font-weight: 500;
 }
 
 .multiselect__placeholder {
-  color: #adb5bd;
+  color: #6c757d;
   margin-bottom: 0px;
   padding-top: 0px;
   font-size: 1rem;
