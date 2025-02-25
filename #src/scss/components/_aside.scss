@@ -115,6 +115,7 @@
 			> small {
 				&:not(.small) {
 					background-color: $primary;
+					color: $gray-900;
 				}
 			}
 		}
