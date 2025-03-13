@@ -13509,15 +13509,6 @@ main {
 .qela-page .row-grow.no-pad {
   padding: 0;
 }
-.qela-page .row-grow .pad-top-6 {
-  padding-top: 2.5rem;
-}
-@media (max-width: 991.98px) {
-  .qela-page .row-grow .pad-top-6 {
-    padding-top: 1rem;
-    padding: 1rem;
-  }
-}
 .qela-page .row-grow [class^=col-] .card {
   height: 100%;
   padding: 0.5rem;
@@ -13793,14 +13784,9 @@ main {
 }
 
 .h-100vh {
-  height: calc(100vh - (var(--body-pad-top) + 1rem + 1rem));
+  height: calc(100vh - (var(--body-pad-top) - 1rem - 1rem));
   overflow-x: hidden;
   overflow-y: auto;
-}
-@media (max-width: 991.98px) {
-  .h-100vh {
-    height: auto;
-  }
 }
 
 .qela-rounder-12 {
@@ -14609,13 +14595,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .qela-search button:last-child {
   right: 12px;
-  display: none;
 }
 .qela-search button::before {
   font-size: 20px;
-}
-.qela-search.active button:last-child {
-  display: block;
 }
 
 .form-control-sm {
@@ -14901,6 +14883,20 @@ input::-webkit-inner-spin-button {
   flex: 0 1 215px;
 }
 
+.qela-multiselect {
+  position: relative;
+}
+.qela-multiselect > .btn-close {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  top: 3px;
+  padding: 0.5rem;
+}
+.qela-multiselect.qela-popover {
+  display: block;
+}
+
 .multiselect {
   cursor: pointer;
   min-height: 38px;
@@ -14927,12 +14923,10 @@ input::-webkit-inner-spin-button {
 
 .multiselect--active .multiselect__tags {
   border-color: #9188ff;
-  border-bottom-color: #fff;
 }
 @media (any-hover: hover) {
   .multiselect--active .multiselect__tags:hover {
     border-color: #9188ff;
-    border-bottom-color: #fff;
   }
 }
 
@@ -15038,9 +15032,8 @@ input::-webkit-inner-spin-button {
 .multiselect__content-wrapper {
   border-color: #9188ff;
   border-top-color: transparent;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0.625rem 0.625rem;
   overflow-x: hidden;
-  max-height: unset !important;
 }
 
 .multiselect__content {
@@ -18243,7 +18236,6 @@ input::-webkit-inner-spin-button {
 
 .qela-popover {
   position: relative;
-  display: inline-block;
 }
 .qela-popover .popover {
   position: absolute;
@@ -18556,6 +18548,7 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-nav-wrapper .nav-link.active > small:not(.small), .qela-nav-wrapper .nav-link.active > .small:not(.small) {
   background-color: #ffe000;
+  color: #212529;
 }
 
 .table-qela {
@@ -18822,6 +18815,30 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-table-collapse:last-child .subrow:last-child {
   border-radius: 0 0 12px 12px;
 }
+.qela-email-copy {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+}
+@media (any-hover: hover) {
+  .qela-email-copy:hover .btn {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.qela-email-copy .btn {
+  padding: 0;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease 0s;
+  color: #6c757d;
+}
+.qela-email-copy .btn[class*=ic-]::before {
+  font-size: 1rem;
+}
+
 .text-editor {
   padding: 1.5rem 0;
 }
