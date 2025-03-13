@@ -10,7 +10,19 @@
 		flex: 0 1 215px;
 	}
 }
-
+.qela-multiselect {
+	position: relative;
+	> .btn-close {
+		position: absolute;
+		z-index: 2;
+		right: 30px;
+		top: 3px;
+		padding: rem(8);
+	}
+	&.qela-popover {
+		display: block;
+	}
+}
 .multiselect {
 	cursor: pointer;
 	min-height: 38px;
@@ -40,12 +52,12 @@
 .multiselect--active {
 	.multiselect__tags {
 		border-color: $secondary;
-		border-bottom-color: $input-bg;
+		// border-bottom-color: $input-bg;
 
 		@media (any-hover: hover) {
 			&:hover {
 				border-color: $secondary;
-				border-bottom-color: $input-bg;
+				// border-bottom-color: $input-bg;
 			}
 		}
 	}
@@ -124,7 +136,6 @@
 	right: 0;
 	top: 0;
 	padding: 0;
-
 	&:before {
 		content: "\e903";
 		font-family: "icons";
@@ -160,9 +171,9 @@
 .multiselect__content-wrapper {
 	border-color: $secondary;
 	border-top-color: transparent;
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 rem(10) rem(10);
 	overflow-x: hidden;
-	max-height: unset !important;
+	// max-height: unset !important;
 }
 .multiselect__content {
 	min-width: unset;

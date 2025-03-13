@@ -53,15 +53,6 @@ main {
 			padding: 0;
 		}
 
-		.pad-top-6 {
-			padding-top: 2.5rem;
-
-			@include media-breakpoint-down(lg) {
-				padding-top: 1rem;
-				padding: 1rem;
-			}
-		}
-
 		[class^="col-"] {
 			.card {
 				height: 100%;
@@ -360,12 +351,9 @@ main {
 }
 
 .h-100vh {
-	height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
+	height: calc(100vh - (var(--body-pad-top) - $spacer - $spacer));
 	overflow-x: hidden;
 	overflow-y: auto;
-	@include media-breakpoint-down(lg) {
-		height: auto;
-	}
 }
 // .form-control.is-invalid ~ .btn-input:hover {
 // border-color: #ff453a;
