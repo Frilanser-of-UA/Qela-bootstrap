@@ -12710,10 +12710,6 @@ textarea.form-control-lg {
   content: "\e902";
 }
 
-.ic-chevron:before {
-  content: "\e903";
-}
-
 .ic-city:before {
   content: "\e904";
 }
@@ -12744,6 +12740,14 @@ textarea.form-control-lg {
 
 .ic-dots-2:before {
   content: "\e90b";
+}
+
+.ic-grip-horizontal:before {
+  content: "\e9a6";
+}
+
+.ic-dots-row:before {
+  content: "\e964";
 }
 
 .ic-download:before {
@@ -12842,8 +12846,16 @@ textarea.form-control-lg {
   content: "\e935";
 }
 
-.ic-check:before {
-  content: "\e936";
+.ic-arrow-down:before {
+  content: "\e967";
+}
+
+.ic-arrow-left:before {
+  content: "\e971";
+}
+
+.ic-send:before {
+  content: "\e939";
 }
 
 .ic-arrow:before {
@@ -12852,22 +12864,6 @@ textarea.form-control-lg {
 
 .ic-eye-close:before {
   content: "\e938";
-}
-
-.ic-qela:before {
-  content: "\e939";
-}
-
-.ic-voting:before {
-  content: "\e93a";
-}
-
-.ic-profile:before {
-  content: "\e93b";
-}
-
-.ic-flag:before {
-  content: "\e93c";
 }
 
 .ic-donats:before {
@@ -12886,16 +12882,28 @@ textarea.form-control-lg {
   content: "\e940";
 }
 
-.ic-home:before {
-  content: "\e941";
-}
-
 .ic-chevron-right:before {
   content: "\e942";
 }
 
 .ic-chevron-left:before {
   content: "\e943";
+}
+
+.ic-chevron-up:before {
+  content: "\e953";
+}
+
+.ic-chevron:before {
+  content: "\e903";
+}
+
+.ic-check:before {
+  content: "\e936";
+}
+
+.ic-check-big:before {
+  content: "\e965";
 }
 
 .ic-check-filled:before {
@@ -12922,16 +12930,8 @@ textarea.form-control-lg {
   content: "\e949";
 }
 
-.ic-voting-24:before {
-  content: "\e94a";
-}
-
 .ic-flame:before {
   content: "\e94b";
-}
-
-.ic-flag-24:before {
-  content: "\e94c";
 }
 
 .ic-exclamation-mark:before {
@@ -12956,10 +12956,6 @@ textarea.form-control-lg {
 
 .ic-donation:before {
   content: "\e952";
-}
-
-.ic-chevron-up:before {
-  content: "\e953";
 }
 
 .ic-img:before {
@@ -13026,88 +13022,12 @@ textarea.form-control-lg {
   content: "\e963";
 }
 
-.ic-dots-row:before {
-  content: "\e964";
-}
-
-.ic-check-big:before {
-  content: "\e965";
-}
-
-.ic-flag-filled-24:before {
-  content: "\e966";
-}
-
-.ic-flag-filled-28:before {
-  content: "\e967";
-}
-
-.ic-home-24:before {
-  content: "\e968";
-}
-
-.ic-home-filled-24:before {
-  content: "\e969";
-}
-
-.ic-home-filled-28:before {
-  content: "\e96a";
-}
-
-.ic-qela-filled-28:before {
-  content: "\e96b";
-}
-
-.ic-user-24:before {
-  content: "\e96c";
-}
-
-.ic-user-filled-24:before {
-  content: "\e96d";
-}
-
-.ic-user-filled-28:before {
-  content: "\e96e";
-}
-
-.ic-voting-filled-24:before {
-  content: "\e96f";
-}
-
-.ic-voting-filled-28:before {
-  content: "\e970";
-}
-
-.ic-arrow-left:before {
-  content: "\e971";
-}
-
 .ic-article:before {
   content: "\e972";
 }
 
 .ic-award:before {
   content: "\e973";
-}
-
-.ic-book:before {
-  content: "\e974";
-}
-
-.ic-diamond-24:before {
-  content: "\e975";
-}
-
-.ic-diamond-28:before {
-  content: "\e976";
-}
-
-.ic-diamond-filled-24:before {
-  content: "\e977";
-}
-
-.ic-diamond-filled-28:before {
-  content: "\e978";
 }
 
 .ic-layout-grid:before {
@@ -13218,10 +13138,6 @@ textarea.form-control-lg {
   content: "\e992";
 }
 
-.ic-list-check1:before {
-  content: "\e90f";
-}
-
 .ic-redo:before {
   content: "\e910";
 }
@@ -13314,14 +13230,6 @@ textarea.form-control-lg {
   content: "\e999";
 }
 
-.ic-bell-28:before {
-  content: "\e99a";
-}
-
-.ic-bell-filled-28:before {
-  content: "\e99b";
-}
-
 .ic-bill:before {
   content: "\e99c";
 }
@@ -13362,16 +13270,8 @@ textarea.form-control-lg {
   content: "\e9a5";
 }
 
-.ic-grip-horizontal:before {
-  content: "\e9a6";
-}
-
 .ic-hand:before {
   content: "\e9a7";
-}
-
-.ic-hand-28:before {
-  content: "\e9a8";
 }
 
 .ic-maps-global:before {
@@ -13384,10 +13284,6 @@ textarea.form-control-lg {
 
 .ic-message-circle:before {
   content: "\e9ab";
-}
-
-.ic-message-circle-28:before {
-  content: "\e9ac";
 }
 
 .ic-message-circle-filled-28:before {
@@ -13404,10 +13300,6 @@ textarea.form-control-lg {
 
 .ic-scroll:before {
   content: "\e9b0";
-}
-
-.ic-scroll-28:before {
-  content: "\e9b1";
 }
 
 .ic-square-check:before {
@@ -13448,6 +13340,86 @@ textarea.form-control-lg {
 
 .ic-donation-outlined:before {
   content: "\e9ba";
+}
+
+.ic-diamond:before {
+  content: "\e93a";
+}
+
+.ic-diamond-filled:before {
+  content: "\e93b";
+}
+
+.ic-voting:before {
+  content: "\e94a";
+}
+
+.ic-voting-filled:before {
+  content: "\e96f";
+}
+
+.ic-home:before {
+  content: "\e968";
+}
+
+.ic-home-filled:before {
+  content: "\e969";
+}
+
+.ic-user:before {
+  content: "\e96c";
+}
+
+.ic-user-filled:before {
+  content: "\e96d";
+}
+
+.ic-bell-filled:before {
+  content: "\e99b";
+}
+
+.ic-qela:before {
+  content: "\e941";
+}
+
+.ic-qela-filled:before {
+  content: "\e94c";
+}
+
+.ic-dislike-filled:before {
+  content: "\e966";
+}
+
+.ic-like-filled:before {
+  content: "\e96a";
+}
+
+.ic-like:before {
+  content: "\e96b";
+}
+
+.ic-dislike:before {
+  content: "\e96e";
+}
+
+.ic-archive:before {
+  content: "\e970";
+}
+
+.ic-mute:before {
+  content: "\e974";
+}
+
+.ic-report:before {
+  content: "\e975";
+}
+
+.ic-task:before {
+  content: "\e976";
+}
+
+.ic-reply:before {
+  content: "\e977";
 }
 
 /* Свои глобальние стили (qela-) */
