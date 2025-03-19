@@ -4,70 +4,66 @@
     grid-template-columns: 270px 300px 1fr;
     grid-template-rows: 1fr;
     > div {
+        display: flex;
+        flex-direction: column;
         &:not(:last-child) {
             border-right: 1px solid $info-300;
         }
+    }
+    .qela-scroll-custom {
     }
 }
 
 .qela-chat {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    background-color: $secondary-100;
+    flex-grow: 1;
+    border-radius: 0 0 8px 0;
+    height: 150px;
+    overflow: auto;
+    position: relative;
+    .qela-chat-badge {
+        margin: rem(4) 0 rem(6) 0;
+        align-self: center;
+    }
 }
-
+.qela-chat-head {
+    > div {
+        border-bottom: 1px solid $info-300;
+        &:first-child {
+            height: 47px;
+        }
+    }
+}
+.qela-chat-footer {
+}
 .qela-chat-btn {
     position: fixed;
-    bottom: 64px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 576px;
+    bottom: 104px;
+    right: 16px;
+    margin-right: rem(16);
+    margin-bottom: rem(16);
     z-index: 10;
-    text-align: end;
-    pointer-events: none;
-    .btn-round {
-        border: 1px solid $info-300;
-        margin-right: rem(16);
-        margin-bottom: rem(8);
-        pointer-events: auto;
-        &::before {
-            color: $secondary-700;
-        }
+    border: 1px solid $info-300;
+    border-radius: 50%;
+    padding: rem(7);
+    @media (min-width: 1680px) {
+        right: 256px;
     }
-}
-
-.qela-chat-list {
-    padding: rem(4) rem(24) rem(4) rem(42);
-    list-style: none;
-    margin-bottom: 0;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: start;
-    gap: rem(2);
-    position: relative;
-    align-self: flex-start;
-    &.my-list {
-        padding: rem(4) rem(8) rem(4) rem(24);
-        align-self: flex-end;
-        align-items: end;
-        .qela-chat-mess {
-            background-color: $secondary-300;
-        }
-        .qela-chat-reply {
-            background-color: $white;
-        }
-    }
-    .qela-avatar {
-        position: absolute;
-        left: 8px;
-        bottom: 4px;
+    &::before {
+        color: $secondary-700;
     }
 }
 
 .qela-chat-mess {
+    position: relative;
+    align-self: flex-start;
     background-color: $white;
     border-radius: 12px;
     padding: rem(8);
+    margin: rem(2) rem(24) 0 rem(42);
     line-height: 130%;
     display: inline-grid;
     gap: rem(2);
@@ -75,6 +71,20 @@
     &.report {
         position: relative;
         z-index: 31;
+    }
+    &.my-mess {
+        margin: rem(2) rem(8) 0 rem(24);
+        align-self: flex-end;
+        align-items: end;
+        background-color: $secondary-300;
+        .qela-chat-reply {
+            background-color: $white;
+        }
+    }
+    .qela-avatar {
+        position: absolute;
+        right: calc(100% + 8px);
+        bottom: 0;
     }
 }
 
