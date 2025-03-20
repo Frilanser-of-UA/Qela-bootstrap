@@ -157,7 +157,8 @@
 
     &:disabled,
     &.disabled {
-        background-color: transparent;
+        background-color: $info-100;
+        color: $info-500;
     }
 }
 
