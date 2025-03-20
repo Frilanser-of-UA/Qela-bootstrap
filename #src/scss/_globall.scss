@@ -267,7 +267,7 @@ main {
 // ======================= telent
 
 .qela-shadow {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
 }
 
 .qela-conatiner-sm {
@@ -314,10 +314,6 @@ main {
 }
 .qela-pad-l {
     padding-left: 65px;
-
-    @include media-breakpoint-down(md) {
-        padding-left: 16px;
-    }
 }
 .qela-stiky {
     position: sticky;

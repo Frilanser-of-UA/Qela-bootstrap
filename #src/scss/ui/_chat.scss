@@ -36,6 +36,12 @@
             height: 47px;
         }
     }
+    .qela-dropdown {
+        height: 24px;
+    }
+    .dropdown-menu {
+        margin-top: rem(9) !important;
+    }
 }
 .qela-chat-footer {
 }
@@ -56,7 +62,6 @@
         color: $secondary-700;
     }
 }
-
 .qela-chat-mess {
     position: relative;
     align-self: flex-start;
