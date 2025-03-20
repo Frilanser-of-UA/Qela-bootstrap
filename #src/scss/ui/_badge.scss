@@ -74,6 +74,19 @@
     border-radius: 30px;
     color: $info-900;
 }
+.qela-counter {
+    font-weight: 600;
+    font-size: rem(9);
+    height: 16px;
+    min-width: 16px;
+    border-radius: 14px;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(2);
+    background-color: $danger;
+}
 .qela-badge-primary {
     background-color: #{rgba($primary, 0.1)};
     color: $warning;
