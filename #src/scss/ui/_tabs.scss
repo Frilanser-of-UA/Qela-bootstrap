@@ -1,537 +1,651 @@
 .qela-tab {
-    display: flex;
-    .nav-tabs {
-        flex: 0 0 240px;
-        border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
-        border-radius: $nav-tabs-border-radius 0 0 $nav-tabs-border-radius;
-        counter-reset: step;
-    }
+	display: flex;
 
-    .nav-item {
-        width: 100%;
-        &:first-child {
-            .line {
-                height: 50%;
-            }
-        }
-        &:last-child {
-            .line {
-                height: 25%;
-                top: 0;
-            }
-        }
-    }
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
+	}
 
-    .nav-link {
-        text-align: start;
-    }
+	.nav-tabs {
+		flex: 0 0 240px;
+		border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+		border-radius: $nav-tabs-border-radius 0 0 $nav-tabs-border-radius;
+		counter-reset: step;
+
+		@include media-breakpoint-down(md) {
+			border-bottom: none;
+		}
+
+		@include media-breakpoint-down(md) {
+			flex: 0 0 auto;
+			border-right: none;
+			border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0;
+			overflow: hidden;
+
+			hr {
+				border-top: none;
+				border-left: 1px solid $hr-border-color;
+				height: 100%;
+			}
+		}
+	}
+
+	.nav-item {
+		width: 100%;
+
+		@include media-breakpoint-down(md) {
+			width: auto;
+		}
+		&:first-child {
+			.line {
+				height: 50%;
+				@include media-breakpoint-down(md) {
+					height: 1px;
+				}
+			}
+		}
+		&:last-child {
+			.line {
+				height: 25%;
+				top: 0;
+				@include media-breakpoint-down(md) {
+					height: 1px;
+					top: auto;
+				}
+			}
+		}
+	}
+
+	.nav-link {
+		text-align: start;
+	}
 }
 
 .qela-nav-item {
-    .nav-link {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        position: relative;
-        padding: 16px 48px 16px var(--step-pad-start);
-        border-radius: 0;
-        background-color: $white;
-        margin-bottom: 0;
-        &::before {
-            content: counter(step);
-            counter-increment: step;
-            width: var(--step-diametr);
-            height: var(--step-diametr);
-            flex: 0 0 var(--step-diametr);
-            background-color: $gray-200;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            color: $secondary-600;
-            margin-right: 1rem;
-            position: relative;
-            z-index: 2;
-        }
+	@include media-breakpoint-down(md) {
+		flex: 1 1 auto;
+	}
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 0;
-            height: 0;
-            border-top: 9px solid transparent;
-            border-right: 9px solid $secondary;
-            border-bottom: 9px solid transparent;
-            border-left: 0 solid transparent;
-            transform: translate(0, -50%);
-            opacity: 0;
-            transition: opacity 0.2s ease 0s;
-        }
+	.nav-link {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+		padding: 16px 48px 16px var(--step-pad-start);
+		border-radius: 0;
+		background-color: $white;
+		margin-bottom: 0;
+		&::before {
+			content: counter(step);
+			counter-increment: step;
+			width: var(--step-diametr);
+			height: var(--step-diametr);
+			flex: 0 0 var(--step-diametr);
+			background-color: $gray-200;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			color: $secondary-600;
+			margin-right: 1rem;
+			position: relative;
+			z-index: 2;
+			@include media-breakpoint-down(md) {
+				margin: 0 auto;
+			}
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $gray-100;
-            }
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-top: 9px solid transparent;
+			border-right: 9px solid $secondary;
+			border-bottom: 9px solid transparent;
+			border-left: 0 solid transparent;
+			transform: translate(0, -50%);
+			opacity: 0;
+			transition: opacity 0.2s ease 0s;
 
-        &.active {
-            &::after {
-                opacity: 1;
-            }
+			@include media-breakpoint-down(md) {
+				top: 100%;
+				right: 50%;
+				transform: translate(50%, -12px) rotate(90deg);
+			}
+		}
 
-            &::before {
-                background-color: $secondary;
-                color: $white;
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $gray-100;
+			}
+		}
 
-        &.success {
-            &::before {
-                content: "\e965";
-                font-family: "Icons";
-                font-size: 16px;
-                border: 3px solid $secondary-300;
-                background-color: $secondary-600;
-                color: $white;
-                transition: all 0.2s ease 0s;
-                line-height: 1;
-            }
+		&.active {
+			&::after {
+				opacity: 1;
+			}
 
-            .line {
-                background-color: $secondary;
-            }
+			&::before {
+				background-color: $secondary;
+				color: $white;
+			}
 
-            &.active {
-                &::before {
-                    border: 1px solid $secondary;
-                    background-color: $secondary;
-                }
-            }
-        }
+			@include media-breakpoint-down(md) {
+				background-color: $gray-100;
+			}
+		}
 
-        &.error {
-            color: $gray-900;
+		&.success {
+			&::before {
+				content: "\e965";
+				font-family: "Icons";
+				font-size: 16px;
+				border: 3px solid $secondary-300;
+				background-color: $secondary-600;
+				color: $white;
+				transition: all 0.2s ease 0s;
+				line-height: 1;
+			}
 
-            &::before {
-                content: "\e93e";
-                font-family: "Icons";
-                font-size: 16px;
-                border: 3px solid $danger-100;
-                background-color: $danger;
-                color: $white;
-                transition: all 0.2s ease 0s;
-                line-height: 1;
-            }
+			.line {
+				background-color: $secondary;
+			}
 
-            &::after {
-                border-right-color: $danger;
-            }
-        }
+			&.active {
+				&::before {
+					border: 1px solid $secondary;
+					background-color: $secondary;
+				}
+			}
+		}
 
-        &.disabled {
-            color: $gray-600;
+		&.error {
+			color: $gray-900;
 
-            &::before {
-                color: $gray-600;
-            }
-        }
-    }
+			&::before {
+				content: "\e93e";
+				font-family: "Icons";
+				font-size: 16px;
+				border: 3px solid $danger-100;
+				background-color: $danger;
+				color: $white;
+				transition: all 0.2s ease 0s;
+				line-height: 1;
+			}
 
-    .line {
-        position: absolute;
-        height: 100%;
-        bottom: 0;
-        width: 1px;
-        background-color: $gray-400;
-        left: calc((var(--step-diametr) / 2) + var(--step-pad-start));
-        z-index: 1;
-        transition: background-color 0.2s linear 0s;
+			&::after {
+				border-right-color: $danger;
+			}
+		}
 
-        // &.line-start {
-        //     height: 50%;
-        // }
+		&.disabled {
+			color: $gray-600;
 
-        // &.line-end {
-        //     height: 50%;
-        //     top: 0;
-        // }
-    }
+			&::before {
+				color: $gray-600;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			padding: 16px;
+			margin-bottom: 0;
+		}
+	}
 
-    .link-name {
-        overflow: hidden;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        white-space: normal;
-        display: -webkit-box;
-    }
-    &.small {
-        .nav-link {
-            padding: 8px 32px 8px var(--step-pad-start);
-            &::before {
-                font-size: 14px;
-                margin-right: 8px;
-            }
-            &.success {
-                &::before {
-                    font-size: 12px;
-                }
-            }
-            &.error {
-                &::before {
-                    content: "\e95f";
-                    font-size: 14px;
-                    background-color: $danger-200;
-                    color: $danger;
-                }
-            }
-        }
-    }
-    &.small-light {
-        &:first-child {
-            margin-top: 2px;
-        }
-        .nav-link {
-            padding: 6px 32px 6px var(--step-pad-start);
-            color: $gray-600;
-            background-color: transparent;
-            align-items: flex-start;
-            border-radius: 6px 0px 0px 6px;
-            &::before {
-                font-size: 14px;
-                line-height: 1;
-                margin-right: 8px;
-                color: $gray-600;
-                border: 1px solid $gray-200;
-                background-color: $gray-200;
-            }
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $secondary;
-                    &::before {
-                        color: $secondary;
-                    }
-                }
-            }
-            &.active {
-                color: $secondary;
-                background-color: $gray-100;
-                .line {
-                    background-color: $gray-200;
-                }
-                &::before {
-                    content: counter(step);
-                    font-size: 14px;
-                    color: $white;
-                    background-color: $secondary;
-                }
-            }
-            &.success {
-                &::before {
-                    content: "\e934";
-                    color: $success;
-                    border-color: $success-200;
-                    background-color: $success-200;
-                    font-size: 19px;
-                }
-                &::after {
-                    border-right-color: $success-500;
-                }
-                @media (any-hover: hover) {
-                    &:hover {
-                        color: $success-600;
-                    }
-                }
-                &.active {
-                    color: $success-600;
-                    &::after {
-                        border-right-color: $success-500;
-                    }
-                }
-                .line {
-                    background-color: $gray-200;
-                }
-            }
-            &.error {
-                &::before {
-                    content: "\e95f";
-                    font-size: 14px;
-                    background-color: $danger-200;
-                    color: $danger;
-                }
-                &.active {
-                    color: $gray-600;
-                }
-                @media (any-hover: hover) {
-                    &:hover {
-                        color: $gray-900;
-                    }
-                }
-            }
-        }
-        .line {
-            background-color: $gray-200;
-        }
-    }
+	.line {
+		position: absolute;
+		height: 100%;
+		bottom: 0;
+		width: 1px;
+		background-color: $gray-400;
+		left: calc((var(--step-diametr) / 2) + var(--step-pad-start));
+		z-index: 1;
+		transition: background-color 0.2s linear 0s;
+
+		// &.line-start {
+		//     height: 50%;
+		// }
+
+		// &.line-end {
+		//     height: 50%;
+		//     top: 0;
+		// }
+
+		@include media-breakpoint-down(md) {
+			height: 1px;
+			width: 100%;
+			bottom: 50%;
+			left: 0;
+			transform: translateY(-50%);
+
+			// &.line-start {
+			//     height: 1px;
+			// }
+
+			// &.line-end {
+			//     height: 1px;
+			//     top: auto;
+			// }
+		}
+	}
+
+	.link-name {
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		white-space: normal;
+		display: -webkit-box;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	&.small {
+		.nav-link {
+			padding: 8px 32px 8px var(--step-pad-start);
+			&::before {
+				font-size: 14px;
+				margin-right: 8px;
+			}
+			&.success {
+				&::before {
+					font-size: 12px;
+				}
+			}
+			&.error {
+				&::before {
+					content: "\e95f";
+					font-size: 14px;
+					background-color: $danger-200;
+					color: $danger;
+				}
+			}
+		}
+	}
+	&.small-light {
+		&:first-child {
+			margin-top: 2px;
+		}
+		.nav-link {
+			padding: 6px 32px 6px var(--step-pad-start);
+			color: $gray-600;
+			background-color: transparent;
+			align-items: flex-start;
+			border-radius: 6px 0px 0px 6px;
+			@include media-breakpoint-down(md) {
+				padding: 10px;
+				align-items: center;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 8px;
+			}
+			&::before {
+				font-size: 14px;
+				line-height: 1;
+				margin-right: 8px;
+				color: $gray-600;
+				border: 1px solid $gray-200;
+				background-color: $gray-200;
+				@include media-breakpoint-down(md) {
+					margin-right: auto;
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $secondary;
+					&::before {
+						color: $secondary;
+					}
+				}
+			}
+			&.active {
+				color: $secondary;
+				background-color: $gray-100;
+				.line {
+					background-color: $gray-200;
+				}
+				&::before {
+					content: counter(step);
+					font-size: 14px;
+					color: $white;
+					background-color: $secondary;
+				}
+			}
+			&.success {
+				&::before {
+					content: "\e934";
+					color: $success;
+					border-color: $success-200;
+					background-color: $success-200;
+					font-size: 19px;
+				}
+				&::after {
+					border-right-color: $success-500;
+				}
+				@media (any-hover: hover) {
+					&:hover {
+						color: $success-600;
+					}
+				}
+				&.active {
+					color: $success-600;
+					&::after {
+						border-right-color: $success-500;
+					}
+				}
+				.line {
+					background-color: $gray-200;
+				}
+			}
+			&.error {
+				&::before {
+					content: "\e95f";
+					font-size: 14px;
+					background-color: $danger-200;
+					color: $danger;
+				}
+				&.active {
+					color: $gray-600;
+				}
+				@media (any-hover: hover) {
+					&:hover {
+						color: $gray-900;
+					}
+				}
+			}
+		}
+		.line {
+			background-color: $gray-200;
+		}
+	}
 }
 
 .qela-quest {
-    &:not(:last-child) {
-        .head {
-            border-bottom: 1px solid $gray-400;
-        }
-    }
+	&:not(:last-child) {
+		.head {
+			border-bottom: 1px solid $gray-400;
+		}
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            .head {
-                background-color: $gray-100;
-            }
+	@media (any-hover: hover) {
+		&:hover {
+			.head {
+				background-color: $gray-100;
+			}
 
-            .btn {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
-            }
-        }
-    }
+			.btn,
+			.badge {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+	}
 
-    &.active {
-        .triangle,
-        .btn {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-    }
+	&.active {
+		.triangle,
+		.btn,
+		.badge {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
 
-    .head {
-        position: relative;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease 0s;
-        flex-wrap: wrap;
-    }
+	.head {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+		flex-wrap: wrap;
+	}
 
-    .btn,
-    .triangle,
-    .content {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition:
-            opacity 0.3s ease 0s,
-            overflow 0.3s ease 0s;
-    }
+	.btn,
+	.triangle,
+	.content,
+	.badge {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition:
+			opacity 0.3s ease 0s,
+			overflow 0.3s ease 0s;
+	}
 
-    .triangle {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-top: 11px solid transparent;
-        border-right: 11px solid $secondary;
-        border-bottom: 11px solid transparent;
-        border-left: 0 solid transparent;
-    }
+	.btn {
+		@include media-breakpoint-down(md) {
+			width: 50%;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
+	.triangle {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 0;
+		height: 0;
+		border-top: 11px solid transparent;
+		border-right: 11px solid $secondary;
+		border-bottom: 11px solid transparent;
+		border-left: 0 solid transparent;
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
 }
 
 .qela-content {
-    transition:
-        opacity 0.3s ease 0s,
-        visibility 0.2s ease 0s;
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-    background-color: $body-bg;
+	p {
+		margin-bottom: 0;
+	}
+	> div {
+		&:first-child {
+			padding: rem(23) rem(16);
+		}
+	}
+	transition:
+		opacity 0.3s ease 0s,
+		visibility 0.2s ease 0s;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
 
-    &.active {
-        opacity: 1;
-        visibility: visible;
-        display: block;
-    }
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		display: block;
+	}
 }
 
 .nav-item {
-    position: relative;
-    .qela-counter {
-        position: absolute;
-        top: 0;
-        transform: translate(-100%, -50%);
-        left: calc(100% - 6px);
-    }
+	position: relative;
+
+	.qela-badge {
+		&.small {
+			position: absolute;
+			top: 0;
+			transform: translate(-100%, -50%);
+			left: calc(100% - 6px);
+		}
+	}
 }
 
 .qela-telent-nav {
-    border-radius: 0.75rem;
-    border: 1px solid $gray-400;
-    flex-direction: column;
+	border-radius: 0.75rem;
+	border: 1px solid $gray-400;
+	flex-direction: column;
 
-    .nav-item {
-        transition: background-color 0.3s ease-out 0s;
+	.nav-item {
+		transition: background-color 0.3s ease-out 0s;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $gray-100;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $gray-100;
 
-                .nav-link {
-                    padding-right: 0.75rem;
+				.nav-link {
+					padding-right: 0.75rem;
 
-                    &.current {
-                        padding-right: 1rem;
-                    }
-                }
-            }
-        }
+					&.current {
+						padding-right: 1rem;
+					}
+				}
+			}
+		}
 
-        &:first-child {
-            border-top-left-radius: 0.75rem;
-            border-top-right-radius: 0.75rem;
-        }
+		&:first-child {
+			border-top-left-radius: 0.75rem;
+			border-top-right-radius: 0.75rem;
+		}
 
-        &:last-child {
-            border-bottom-left-radius: 0.75rem;
-            border-bottom-right-radius: 0.75rem;
-        }
-    }
+		&:last-child {
+			border-bottom-left-radius: 0.75rem;
+			border-bottom-right-radius: 0.75rem;
+		}
+	}
 
-    .nav-link {
-        display: flex;
-        align-items: center;
-        padding: 0.25rem 0.5rem;
-        font-weight: 500;
-        line-height: 130%;
-        color: $gray-900;
-        position: relative;
-        transition: all 0.3s ease-out 0s;
+	.nav-link {
+		display: flex;
+		align-items: center;
+		padding: 0.25rem 0.5rem;
+		font-weight: 500;
+		line-height: 130%;
+		color: $gray-900;
+		position: relative;
+		transition: all 0.3s ease-out 0s;
 
-        &.red {
-            &::before {
-                background-color: $telent-red-500;
-            }
+		&.red {
+			&::before {
+				background-color: $telent-red-500;
+			}
 
-            &::after {
-                border-right-color: $telent-red-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-red-800;
+			}
+		}
 
-        &.violet {
-            &::before {
-                background-color: $telent-violet-500;
-            }
+		&.violet {
+			&::before {
+				background-color: $telent-violet-500;
+			}
 
-            &::after {
-                border-right-color: $telent-violet-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-violet-800;
+			}
+		}
 
-        &.lightgreen {
-            &::before {
-                background-color: $telent-lightgreen-500;
-            }
+		&.lightgreen {
+			&::before {
+				background-color: $telent-lightgreen-500;
+			}
 
-            &::after {
-                border-right-color: $telent-lightgreen-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-lightgreen-800;
+			}
+		}
 
-        &.lightblue {
-            &::before {
-                background-color: $telent-lightblue-500;
-            }
+		&.lightblue {
+			&::before {
+				background-color: $telent-lightblue-500;
+			}
 
-            &::after {
-                border-right-color: $telent-lightblue-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-lightblue-800;
+			}
+		}
 
-        &.orange {
-            &::before {
-                background-color: $telent-orange-500;
-            }
+		&.orange {
+			&::before {
+				background-color: $telent-orange-500;
+			}
 
-            &::after {
-                border-right-color: $telent-orange-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-orange-800;
+			}
+		}
 
-        &.green {
-            &::before {
-                background-color: $telent-green-500;
-            }
+		&.green {
+			&::before {
+				background-color: $telent-green-500;
+			}
 
-            &::after {
-                border-right-color: $telent-green-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-green-800;
+			}
+		}
 
-        &.blue {
-            &::before {
-                background-color: $telent-blue-500;
-            }
+		&.blue {
+			&::before {
+				background-color: $telent-blue-500;
+			}
 
-            &::after {
-                border-right-color: $telent-blue-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-blue-800;
+			}
+		}
 
-        &.pink {
-            &::before {
-                background-color: $telent-pink-500;
-            }
+		&.pink {
+			&::before {
+				background-color: $telent-pink-500;
+			}
 
-            &::after {
-                border-right-color: $telent-pink-800;
-            }
-        }
+			&::after {
+				border-right-color: $telent-pink-800;
+			}
+		}
 
-        &.current {
-            padding-right: 1rem;
+		&.current {
+			padding-right: 1rem;
 
-            &::after {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 
-        &::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-        }
+		&::before {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			margin-right: 0.5rem;
+		}
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-top: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-left: 0 solid transparent;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition:
-                opacity 0.3s ease 0s,
-                overflow 0.3s ease 0s;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0;
+			height: 0;
+			border-top: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+			border-left: 0 solid transparent;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition:
+				opacity 0.3s ease 0s,
+				overflow 0.3s ease 0s;
+		}
 
-        span {
-            &:first-child {
-                flex-grow: 1;
-            }
-        }
-    }
+		span {
+			&:first-child {
+				flex-grow: 1;
+			}
+		}
+	}
 }
