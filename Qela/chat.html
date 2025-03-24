@@ -161,7 +161,7 @@
 </aside>
         <!-- ====================================== Chat ====================================-->
         <div id="id" class="container-fluid h-100">
-            <div class="qela-page">
+            <div class="qela-page qela-scroll-custom">
                 <ul class="nav nav-tabs bg-white rounded-top px-4 pt-3">
                     <li id="campaigns-tab" class="nav-item">
                         <a class="nav-link " href="#">General</a>
@@ -174,33 +174,35 @@
                 <div class="qela-chat-inner">
                     <!-- block 1 -->
                     <div>
-                        <ul class="list-group list-group-flush qela-list-menu">
-                            <li class="list-group-item">
-                                <button type="button" class="current">
-                                    <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-diamond"></i></div>
-                                    <div class="qela-clamp">Quests</div>
-                                    <span class="qela-list-num bg-info-400">5</span>
-                                </button>
-                            </li>
-                            <li class="list-group-item">
-                                <button type="button">
-                                    <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-voting"></i></div>
-                                    <div class="qela-clamp">Voting</div>
-                                    <span class="qela-list-num bg-info-400">5</span>
-                                </button>
-                            </li>
-                            <li class="list-group-item">
-                                <button type="button">
-                                    <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-notes"></i></div>
-                                    <div class="qela-clamp">News</div>
-                                    <div class="d-flex align-items-center gap-2px">
-                                        <span class="qela-list-num bg-info-400">40</span>
-                                        <span class="text-danger-600">(4)</span>
-                                        <i class="ic-report text-danger-600"></i>
-                                    </div>
-                                </button>
-                            </li>
-                        </ul>
+                        <div class="flex-grow-1 overflow-auto" style="height:var(--height-scroll)">
+                            <ul class="list-group list-group-flush qela-list-menu">
+                                <li class="list-group-item">
+                                    <button type="button" class="current">
+                                        <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-diamond"></i></div>
+                                        <div class="qela-clamp">Quests</div>
+                                        <span class="qela-list-num bg-info-400">5</span>
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button">
+                                        <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-voting"></i></div>
+                                        <div class="qela-clamp">Voting</div>
+                                        <span class="qela-list-num bg-info-400">5</span>
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button">
+                                        <div class="qela-avatar info-400 qela-ibg"><i class="text-info-600 ic-notes"></i></div>
+                                        <div class="qela-clamp">News</div>
+                                        <div class="d-flex align-items-center gap-2px">
+                                            <span class="qela-list-num bg-info-400">40</span>
+                                            <span class="text-danger-600">(4)</span>
+                                            <i class="ic-report text-danger-600"></i>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- block 2 -->
                     <div>
@@ -211,36 +213,38 @@
                                 <button type="button" class="text-black ic-cloze"></button>
                             </div>
                         </div>
-                        <ul class="list-group list-group-flush qela-list-menu sm">
-                            <li class="list-group-item">
-                                <button type="button" class="current">
-                                    <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
-                                    <div class="qela-clamp">Branch name</div>
-                                    <span class=" qela-list-num bg-info-400">5</span>
-                                </button>
-                            </li>
-                            <li class="list-group-item">
-                                <button type="button">
-                                    <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
-                                    <div class="qela-clamp">Quest name 4 with very long name Quest name 4 with very long name</div>
-                                    <span class="qela-list-num bg-info-400">5</span>
-                                </button>
-                            </li>
-                            <li class="list-group-item">
-                                <button type="button">
-                                    <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
-                                    <div class="qela-clamp">Quests name 4 with very long name Quest name 4name 4 with very long name Quest name 4</div>
-                                    <div class="d-flex align-items-center gap-2px">
-                                        <span class="qela-list-num bg-info-400">40</span>
-                                        <span class="text-danger-600">(4)</span>
-                                        <i class="ic-report text-danger-600"></i>
-                                    </div>
-                                </button>
-                            </li>
-                        </ul>
+                        <div class="flex-grow-1 overflow-auto" style="height:var(--height-scroll)">
+                            <ul class="list-group list-group-flush qela-list-menu sm">
+                                <li class="list-group-item">
+                                    <button type="button" class="current">
+                                        <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
+                                        <div class="qela-clamp">Branch name</div>
+                                        <span class=" qela-list-num bg-info-400">5</span>
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button">
+                                        <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
+                                        <div class="qela-clamp">Quest name 4 with very long name Quest name 4 with very long name</div>
+                                        <span class="qela-list-num bg-info-400">5</span>
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button">
+                                        <div class="qela-avatar qela-ibg"><img src="img/type-logo.svg" alt="#"></div>
+                                        <div class="qela-clamp">Quests name 4 with very long name Quest name 4name 4 with very long name Quest name 4</div>
+                                        <div class="d-flex align-items-center gap-2px">
+                                            <span class="qela-list-num bg-info-400">40</span>
+                                            <span class="text-danger-600">(4)</span>
+                                            <i class="ic-report text-danger-600"></i>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- block chat 3 -->
-                    <div class="qela-scroll-custom">
+                    <div>
                         <div class="qela-chat-head">
                             <div class="px-3 py-2">
                                 <div class="d-flex align-items-center gap-2 h-100">
@@ -278,11 +282,10 @@
                                     <button type="button" class="btn btn-sm btn-info ico ic-chevron" disabled></button>
                                 </div>
                                 <button type="button" class="btn btn-sm btn-outline-secondary"> Done </button>
-
                             </div>
-
                         </div>
                         <div class="qela-chat">
+                            <!-- messages-->
                             <span class="badge qela-chat-badge">17 Feb 2025</span>
                             <div class="qela-chat-mess my-mess">
                                 <div>I just have a question about this quest. When should I send you the screenshot? I just have a question about this quest. When should I send you the screenshot?</div>
@@ -350,13 +353,22 @@
                                     <span class="qela-chat-time">13:13</span>
                                 </div>
                             </div>
-                            <!-- button  chat  -->
-                            <button type="button" class="qela-chat-btn ic-arrow-down"></button>
+                            <!-- no messages-->
+                            <!-- <div class="qela-chat-info">
+                                <i class="ic-message-circle"></i>
+                                <span>No messages</span>
+                            </div> -->
                         </div>
-                        <div class="p-2">
+                        <div class="p-2 position-relative border-top">
+                            <div class="qela-chat-reply mb-1">
+                                <div class="qela-chat-top"><span class="fw-semibold">Green Forest</span></div>
+                                <div class="qela-clamp" style="--clamp-line: 1;">I also have a question if I can take the quest again? I also have a question if I can take the quest again?I also have a question if I can take the quest again?</div>
+                            </div>
                             <div class="qela-chat-input"><button type="button" class="btn ic-send"></button>
                                 <input type="text" class="form-control" id="inputText1" placeholder="Name">
                             </div>
+                            <!-- button  chat  -->
+                            <button type="button" class="qela-chat-btn ic-arrow-down"></button>
                         </div>
                         <!-- Drobdawn chat -->
                         <!-- <div class="dropdown qela-dropdown">

@@ -1,4 +1,5 @@
 .qela-chat-inner {
+    --height-scroll: 150px;
     flex-grow: 1;
     display: grid;
     grid-template-columns: 270px 300px 1fr;
@@ -21,12 +22,35 @@
     background-color: $secondary-100;
     flex-grow: 1;
     border-radius: 0 0 8px 0;
-    height: 150px;
+    height: var(--height-scroll);
     overflow: auto;
     position: relative;
     .qela-chat-badge {
         margin: rem(4) 0 rem(6) 0;
         align-self: center;
+    }
+}
+.qela-chat-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: rem(16);
+    text-align: center;
+    padding: rem(16);
+    span {
+        font-size: rem(18);
+        color: $info-600;
+    }
+    i {
+        color: $info;
+        line-height: 1;
+        &::before {
+            font-size: rem(104);
+        }
     }
 }
 .qela-chat-head {
@@ -46,18 +70,15 @@
 .qela-chat-footer {
 }
 .qela-chat-btn {
-    position: fixed;
-    bottom: 104px;
+    position: absolute;
+    bottom: calc(100% + 16px);
     right: 16px;
-    margin-right: rem(16);
-    margin-bottom: rem(16);
     z-index: 10;
     border: 1px solid $info-300;
     border-radius: 50%;
     padding: rem(7);
-    @media (min-width: 1680px) {
-        right: 256px;
-    }
+    background-color: $white;
+
     &::before {
         color: $secondary-700;
     }
@@ -222,7 +243,7 @@
     }
 }
 .qela-chat-overlay {
-    width: calc(100%);
+    width: 100%;
     height: 100%;
     background-color: rgba($black, 0.4);
     backdrop-filter: blur(12px);

@@ -16805,6 +16805,32 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
 }
 
+.qela-list-num {
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  min-width: 24px;
+  line-height: 1;
+  border-radius: 30px;
+  color: #212529;
+}
+
+.qela-counter {
+  font-weight: 600;
+  font-size: 0.5625rem;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 14px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem;
+  background-color: #ff453a;
+}
+
 .qela-badge-primary {
   background-color: rgba(255, 224, 0, 0.1);
   color: #ff9533;
@@ -17479,7 +17505,7 @@ input::-webkit-inner-spin-button {
 .nav-item {
   position: relative;
 }
-.nav-item .qela-badge.small {
+.nav-item .qela-counter {
   position: absolute;
   top: 0;
   transform: translate(-100%, -50%);
@@ -19346,6 +19372,7 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-chat-inner {
+  --height-scroll: 150px;
   flex-grow: 1;
   display: grid;
   grid-template-columns: 270px 300px 1fr;
@@ -19365,13 +19392,37 @@ input::-webkit-inner-spin-button {
   background-color: #f9f9ff;
   flex-grow: 1;
   border-radius: 0 0 8px 0;
-  height: 150px;
+  height: var(--height-scroll);
   overflow: auto;
   position: relative;
 }
 .qela-chat .qela-chat-badge {
   margin: 0.25rem 0 0.375rem 0;
   align-self: center;
+}
+
+.qela-chat-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+.qela-chat-info span {
+  font-size: 1.125rem;
+  color: #6c757d;
+}
+.qela-chat-info i {
+  color: #adb5bd;
+  line-height: 1;
+}
+.qela-chat-info i::before {
+  font-size: 6.5rem;
 }
 
 .qela-chat-head > div {
@@ -19388,20 +19439,14 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-chat-btn {
-  position: fixed;
-  bottom: 104px;
+  position: absolute;
+  bottom: calc(100% + 16px);
   right: 16px;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   z-index: 10;
   border: 1px solid #dee2e6;
   border-radius: 50%;
   padding: 0.4375rem;
-}
-@media (min-width: 1680px) {
-  .qela-chat-btn {
-    right: 256px;
-  }
+  background-color: #fff;
 }
 .qela-chat-btn::before {
   color: #6e63fa;
