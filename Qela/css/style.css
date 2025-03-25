@@ -14311,6 +14311,10 @@ textarea.form-control-lg {
   content: "\e977";
 }
 
+.ic-book:before {
+  content: "\e93c";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
