@@ -14374,6 +14374,15 @@ main {
 .qela-page .row-grow.no-pad {
   padding: 0;
 }
+.qela-page .row-grow .pad-top-6 {
+  padding-top: 2.5rem;
+}
+@media (max-width: 991.98px) {
+  .qela-page .row-grow .pad-top-6 {
+    padding-top: 1rem;
+    padding: 1rem;
+  }
+}
 .qela-page .row-grow [class^=col-] .card {
   height: 100%;
   padding: 0.5rem;
@@ -14554,13 +14563,18 @@ main {
 }
 
 .qela-shadow {
-  box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .qela-conatiner-sm {
   max-width: 432px;
   padding: 0 1rem;
   margin: 0 auto;
+}
+@media (min-width: 1680px) {
+  .qela-conatiner-sm {
+    transform: translateX(120px);
+  }
 }
 
 .qela-conatiner-md {
@@ -14646,9 +14660,14 @@ main {
 }
 
 .h-100vh {
-  height: calc(100vh - (var(--body-pad-top) - 1rem - 1rem));
+  height: calc(100vh - (var(--body-pad-top) + 1rem + 1rem));
   overflow-x: hidden;
   overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .h-100vh {
+    height: auto;
+  }
 }
 
 .qela-rounder-12 {
