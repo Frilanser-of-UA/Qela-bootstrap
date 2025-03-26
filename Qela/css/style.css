@@ -19411,6 +19411,7 @@ input::-webkit-inner-spin-button {
 .qela-chat-inner > div:not(:last-child) {
   border-right: 1px solid #dee2e6;
 }
+
 .qela-chat {
   display: flex;
   flex-direction: column;
@@ -19462,6 +19463,23 @@ input::-webkit-inner-spin-button {
 }
 .qela-chat-head .dropdown-menu {
   margin-top: 0.5625rem !important;
+}
+.qela-chat-head .dp__main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.qela-chat-head .dp__input {
+  padding: 0;
+  height: auto;
+  opacity: 0;
+  border: none;
+}
+.qela-chat-head .dp--menu-wrapper {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .qela-chat-btn {

@@ -11,8 +11,6 @@
             border-right: 1px solid $info-300;
         }
     }
-    .qela-scroll-custom {
-    }
 }
 
 .qela-chat {
@@ -66,8 +64,23 @@
     .dropdown-menu {
         margin-top: rem(9) !important;
     }
-}
-.qela-chat-footer {
+    .dp__main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .dp__input {
+        padding: 0;
+        height: auto;
+        opacity: 0;
+        border: none;
+    }
+    .dp--menu-wrapper {
+        margin-top: rem(4);
+        margin-bottom: rem(4);
+    }
 }
 .qela-chat-btn {
     position: absolute;
