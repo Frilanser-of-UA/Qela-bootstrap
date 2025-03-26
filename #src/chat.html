@@ -146,7 +146,7 @@
                                     <span class="qela-chat-time">13:13</span>
                                 </div>
                             </div>
-                            <div class="qela-chat-mess mt-2">
+                            <div class="qela-chat-mess mt-2 reported">
                                 <div class="qela-chat-reply">
                                     <div class="qela-chat-top">
                                         <span class="fw-semibold">Green Forest</span>
@@ -174,6 +174,7 @@
                                     </div>
                                     <span class="qela-chat-time">13:13</span>
                                 </div>
+                                <button type="button" class="qela-btn-ic ic-report p-1 text-danger-600" data-bs-toggle="modal" data-bs-target="#modalReporedtMess"></button>
                             </div>
                             <div class="qela-chat-mess">
                                 <div>I also have a question if I can take the quest again? I also have a question if </div>
@@ -182,7 +183,7 @@
                                 </div>
                                 <div class="qela-avatar qela-ibg fs-6" style="--img-size: 30px;"><small><small>MT</small></small></div>
                             </div>
-                            <div class="qela-chat-mess mt-2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="qela-chat-mess mt-2">
                                 <div class="qela-chat-reply">
                                     <div class="qela-chat-top">
                                         <span class="fw-semibold">Green Forest</span>
@@ -255,6 +256,42 @@
                                 </li>
                             </ul>
                         </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- chat modal -->
+        <div class="modal fade" id="modalReporedtMess" tabindex="-1" aria-labelledby="modalReporedtMessLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h2 class="h6" id="modalReporedtMessLabel">Reported</h2>
+                        <button type="button" class="qela-btn-ic text-black ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-grid gap-3 pt-0">
+                        <div class="d-grid gap-2">
+                            <span class="display-7 text-info-600">What is wrong with this message.</span>
+                            <div class="p-12px bg-info-100 rounded">Violence</div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <span class="display-7 text-info-600">Reported by</span>
+                            <div class="d-flex align-items-center gap-2">
+                                <small class="qela-clamp">Green Forest, John McBoris, Mike Literus, Ligma Balls, Mike</small>
+                                <span class="badge bg-info-100 text-info-700">+25</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <span class="display-7 text-info-600">Last reported</span>
+                            <small class="qela-clamp">07/03/2025</small>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <span class="display-7 text-info-600">What to do?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between pt-0 gap-1 border-0">
+                        <button type="button" class="btn btn-warning m-0 ic-delete ico-right"> Delete </button>
+                        <button type="button" class="btn btn-danger m-0 ic-report ico-right">Ban user</button>
+                        <button type="button" class="btn btn-success m-0 ic-success-2 ico-right" data-bs-dismiss="modal">Dismiss</button>
                     </div>
                 </div>
             </div>

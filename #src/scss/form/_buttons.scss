@@ -432,10 +432,10 @@
     &.small {
         width: auto;
         height: auto;
-        padding: 1px;
+        padding: 0px;
 
         &::before {
-            font-size: 16px;
+            font-size: 24px;
         }
     }
 }
@@ -627,6 +627,9 @@
     border: none;
     padding: 0;
     color: $secondary-700;
+    &:disabled {
+        color: $info-600 !important;
+    }
 }
 .btns-center {
     display: flex;

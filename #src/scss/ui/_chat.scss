@@ -84,19 +84,27 @@
     }
 }
 .qela-chat-mess {
+    max-width: 400px;
     position: relative;
     align-self: flex-start;
     background-color: $white;
     border-radius: 12px;
+    border: 1px solid transparent;
     padding: rem(8);
     margin: rem(2) rem(24) 0 rem(42);
     line-height: 130%;
     display: inline-grid;
     gap: rem(2);
     font-size: rem(14);
-    &.report {
-        position: relative;
-        z-index: 31;
+    &.reported {
+        border-color: $danger-600;
+        background-color: $danger-200;
+        margin-right: rem(52);
+        .qela-btn-ic {
+            position: absolute;
+            left: calc(100% + 12px);
+            bottom: 0;
+        }
     }
     &.my-mess {
         margin: rem(2) rem(8) 0 rem(24);
@@ -222,24 +230,39 @@
     border-bottom: 1px solid $info-300;
 }
 .qela-report-mess {
-    background: $white;
-    padding: rem(16);
-    border-radius: 8px 8px 0 0;
-    display: grid;
-    gap: rem(16);
-    .list-group {
-        --bs-list-group-border-radius: 8px;
-        --bs-list-group-item-padding-x: 0;
-        --bs-list-group-item-padding-y: 0.75rem;
-        padding: 0 rem(12);
-        background-color: $gray-100;
-    }
-    .list-group-item {
-        background-color: transparent;
-        &:not(:last-child) {
-            border-bottom-color: $info-300;
+    height: 48px;
+    font-size: rem(14);
+    padding: rem(6) rem(16);
+    background-color: $white;
+    border-bottom: 1px solid $info-300;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: rem(8);
+
+    .indicator {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        height: calc(100% - 5px);
+        width: 3px;
+        display: flex;
+        flex-direction: column;
+        gap: rem(2);
+        overflow: hidden;
+        span {
+            width: 100%;
+            background-color: $secondary-400;
+            display: block;
+            border-radius: 36px;
+            flex: 1 0 9px;
+            &.active {
+                background-color: $secondary-700;
+            }
         }
-        border-radius: 0;
     }
 }
 .qela-chat-overlay {
