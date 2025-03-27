@@ -38,6 +38,7 @@
         body.night-theme header {
             background-color: rgb(0, 0, 0);
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            border-color: #6c757d;
         }
 
         body.night-theme aside.--aside {
@@ -140,7 +141,7 @@
 
         aside.--aside {
             width: 228px;
-            height: calc(100vh - 56px);
+            height: calc(100% - 56px);
             z-index: 10;
             margin-top: 62px;
             overflow: auto;
@@ -165,33 +166,27 @@
             background-color: #ffe000;
         }
 
-        /* .--elastic {
-            counter-reset: olcounter;
-        } */
-
         .--elastic li {
-            /* counter-increment: olcounter; */
             list-style: none;
             position: relative;
             padding-left: 25px;
         }
 
         .--elastic li::before {
-            /* content: counters(olcounter, ".") ""; */
             content: "\e936";
             font-family: 'icons';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background-color: #ffe000;
             left: 0;
-            top: 0;
+            top: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: inherit;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1;
             transition: background-color 0.3s ease 0s;
         }
@@ -244,7 +239,7 @@
                 <div class="row g-2 align-items-center">
                     <div class="col-auto">
                         <a class="navbar-brand d-inline-flex" href="https://qela-admin.a2v10.com/" target="_blank">
-                            <img src="img/logo-3.svg" alt="Logo" width="57" height="40" />
+                            <img src="img/logo-sm.svg" alt="Logo" width="57" height="40" />
                         </a>
                     </div>
                     <div class="col">
@@ -275,7 +270,7 @@
             <aside class="fixed-top --aside">
                 <h4 class="px-2 my-2">Components</h4>
                 <nav class="ps-3">
-                    <ol class="d-flex flex-column gap-2 ps-0 --elastic">
+                    <ol class="d-flex flex-column gap-1 ps-0 --elastic">
                         <li><a class="--link" href="#">buttons</a></li>
                         <li><a class="--link" href="#">text field</a></li>
                         <li><a class="--link" href="#">checkbox</a></li>
@@ -320,6 +315,23 @@
                         <li><a class="--link" href="#">tables</a></li>
                         <li><a class="--link" href="#">popover</a></li>
                         <li><a class="--link" href="#">chat</a></li>
+                    </ol>
+                </nav>
+                <h4 class="px-2 my-2">Pages</h4>
+                <nav class="ps-3">
+                    <ol class="d-flex flex-column gap-1 ps-0 --elastic">
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/alert">alert</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/chat">chat</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/billing-success">billing-success</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/colors">colors</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/email">email</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/list-party">list-party</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/list-verification">list-verification</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/log-in">log-in</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/master">master</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/quests">quests</a></li>
+                        <li><a class="--link" href="https://frilanser-of-ua.github.io/Qela-bootstrap/Qela/reg">registration</a></li>
+
                     </ol>
                 </nav>
             </aside>

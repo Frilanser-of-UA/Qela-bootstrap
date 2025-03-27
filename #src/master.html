@@ -5,8 +5,9 @@
 <body class="qela-body">
     @@include('./components/_header.html',{ "title":"Quests > Campaign master"})
     <main class="qela-main">
+        @@include('./components/_aside.html',{})
         <!-- =====================Список користувачів==================== -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="qela-page" id="app" v-cloak>
                 <div class="row">
                     @@include('components/quest/__nav.html', { "page": "Campaign-master"})
