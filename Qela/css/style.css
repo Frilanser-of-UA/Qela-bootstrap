@@ -19691,6 +19691,15 @@ input::-webkit-inner-spin-button {
   z-index: 21;
 }
 
+.qela-chat-spacer {
+  font-size: 0.75rem;
+  line-height: 130%;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  padding: 0.375rem 1rem;
+  text-transform: uppercase;
+}
+
 header {
   height: 56px;
   width: 100%;
@@ -19865,6 +19874,7 @@ header .container-xxl > .row [class*=col]:last-child {
   display: block;
   border-radius: 30px;
   padding: 0;
+  white-space: nowrap;
 }
 @media (any-hover: hover) {
   .qela-nav-wrapper .nav-link:hover > small:not(.small), .qela-nav-wrapper .nav-link:hover > .small:not(.small) {
@@ -19875,7 +19885,6 @@ header .container-xxl > .row [class*=col]:last-child {
   width: 100%;
   height: 40px;
   color: #495057;
-  font-weight: 500;
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
