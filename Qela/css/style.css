@@ -19400,15 +19400,15 @@ input::-webkit-inner-spin-button {
 .qela-chat-inner {
   --height-scroll: 150px;
   flex-grow: 1;
-  display: grid;
-  grid-template-columns: 270px 300px 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
 }
 .qela-chat-inner > div {
+  --flex-width: auto;
   display: flex;
   flex-direction: column;
 }
 .qela-chat-inner > div:not(:last-child) {
+  flex: 0 0 var(--flex-width);
   border-right: 1px solid #dee2e6;
 }
 
