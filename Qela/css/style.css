@@ -19637,10 +19637,11 @@ input::-webkit-inner-spin-button {
 }
 
 .qela-pinned-mess {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.875rem;
   padding: 0.25rem 1rem;
-  display: grid;
-  gap: 2px;
   border-bottom: 1px solid #dee2e6;
 }
 
