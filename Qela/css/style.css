@@ -14315,6 +14315,18 @@ textarea.form-control-lg {
   content: "\e93c";
 }
 
+.ic-gift:before {
+  content: "\e978";
+}
+
+.ic-unpin:before {
+  content: "\e99a";
+}
+
+.ic-pin:before {
+  content: "\e9a8";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
