@@ -14933,10 +14933,13 @@ main {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  gap: 0.125rem;
+  gap: 0.25rem;
   font-weight: 400;
 }
 .btn-sm[class^=ic-]:before, .btn-group-sm > [class^=ic-].btn:before, .btn-sm[class*=ic-]:before, .btn-group-sm > [class*=ic-].btn:before {
+  font-size: 1rem;
+}
+.btn-sm i::before, .btn-group-sm > .btn i::before {
   font-size: 1rem;
 }
 .btn-sm.ico, .btn-group-sm > .ico.btn {
@@ -15105,6 +15108,9 @@ main {
   border-color: #e5e3ff;
 }
 .btn-outline-secondary:hover {
+  color: #fff;
+}
+.btn-outline-secondary:hover::before {
   color: #fff;
 }
 .btn-outline-secondary:active {
@@ -19632,6 +19638,7 @@ input::-webkit-inner-spin-button {
 .qela-chat-input .form-control {
   padding-top: 0.8125rem;
   padding-bottom: 0.8125rem;
+  padding-right: 3rem;
   box-shadow: none;
   border-color: #adb5bd;
   border-radius: 30px;
