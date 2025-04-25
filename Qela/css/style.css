@@ -14339,6 +14339,8 @@ body {
 
 main {
   padding: 1rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 1680px) {
   main {
