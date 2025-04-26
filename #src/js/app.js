@@ -41,7 +41,6 @@ if (toastTrigger) {
 const myText = document.querySelector('textarea[type="message"]');
 const maxHeight = (myText.dataset.maxHeight * 23 + (myText.scrollHeight - 25));
 myText.style.height = `${myText.scrollHeight}px`;
-console.log(maxHeight);
 myText.addEventListener("input", function () {
     this.style.height = "auto";
     if (myText.scrollHeight <= maxHeight) {
