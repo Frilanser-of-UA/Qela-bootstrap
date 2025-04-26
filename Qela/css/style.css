@@ -15574,7 +15574,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .qela-input-inner .btn:active {
   color: #000 !important;
-  background: transparent;
+  background: transparent !important;
   border-color: none;
 }
 .qela-input-inner .btn:disabled {
@@ -19685,14 +19685,14 @@ textarea {
 
 .qela-chat-input {
   position: relative;
+  --scroll-width: 0px;
 }
 .qela-chat-input .btn {
   padding: 0.1875rem;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
   right: 4px;
-  transform: translateY(-50%);
+  bottom: 4px;
   background-color: #ffd600;
 }
 .qela-chat-input .btn::before {
@@ -19705,6 +19705,11 @@ textarea {
   box-shadow: none;
   border-color: #adb5bd;
   border-radius: 30px;
+  box-sizing: border-box;
+  word-break: break-all;
+  resize: none;
+  line-height: 140%;
+  overflow-y: hidden;
 }
 .qela-chat-input .form-control:focus {
   border-color: #9188ff;

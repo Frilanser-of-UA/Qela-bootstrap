@@ -36,3 +36,15 @@ if (toastTrigger) {
         toast.show()
     })
 }
+
+// texarea autoheight
+const myText = document.querySelector('textarea[type="message"]');
+myText.style.height = `${myText.scrollHeight}px`;
+myText.addEventListener("input", function () {
+    this.style.height = "auto";
+    if (myText.scrollHeight <= 138) {
+        this.style.cssText = `height: ${this.scrollHeight}px; overflow-y: hidden`;
+    } else {
+        this.style.cssText = `height: 138px; overflow-y: auto`;
+    }
+});
