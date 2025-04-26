@@ -15513,21 +15513,82 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .form-control-sm {
-  min-height: 30.5px;
-}
-
-textarea {
-  color: #495057;
+  min-height: 31px;
 }
 
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: 0px;
 }
 
+.input-group.is-invalid .invalid-feedback {
+  display: block;
+}
+
+.input-group-sm .form-control {
+  min-height: 31px;
+  padding: 0.3125rem 0.5rem;
+}
+.input-group-sm .qela-input-inner.right .form-control {
+  padding-right: 1.875rem;
+}
+.input-group-sm .qela-input-inner .btn::before {
+  font-size: 16px;
+}
+
+.qela-input-inner {
+  width: 100%;
+  position: relative;
+}
+.qela-input-inner.right .form-control {
+  padding-right: 2.25rem;
+}
+.qela-input-inner.right .btn {
+  right: 12px;
+}
+@media (any-hover: hover) {
+  .qela-input-inner .form-control:hover ~ .btn:not(:disabled) {
+    color: #000;
+  }
+}
+.qela-input-inner .form-control:focus ~ .btn:not(:disabled) {
+  color: #000;
+}
+.qela-input-inner .form-control:disabled ~ .btn {
+  color: #000;
+}
+.qela-input-inner .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none !important;
+  background-color: transparent;
+  padding: 0;
+  color: #6c757d;
+}
+.qela-input-inner .btn::before {
+  font-size: 20px;
+}
+.qela-input-inner .btn:hover {
+  background: transparent;
+  border-color: none;
+}
+.qela-input-inner .btn:active {
+  color: #000 !important;
+  background: transparent;
+  border-color: none;
+}
+.qela-input-inner .btn:disabled {
+  color: #6c757d;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+textarea {
+  color: #495057;
 }
 
 .helper-text {
