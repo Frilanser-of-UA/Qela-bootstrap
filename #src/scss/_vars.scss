@@ -483,13 +483,13 @@ $form-check-input-width: 1rem;
 $form-check-min-height: $font-size-base;
 $form-check-padding-start: $form-check-input-width + 0.5rem;
 $form-check-margin-bottom: 0.125rem;
-$form-check-label-color: $gray-600;
+$form-check-label-color: $gray-700;
 $form-check-label-cursor: pointer;
 $form-check-transition: all 0.2s ease 0s;
-$form-check-input-bg: transparent;
-$form-check-input-border: 1px solid rgba($gray-500, 1);
+$form-check-input-bg: $white;
+$form-check-input-border: 1px solid rgba($gray-700, 1);
 $form-check-input-border-radius: 0.1875em;
-$form-check-input-focus-border: $gray-500;
+$form-check-input-focus-border: $gray-700;
 $form-check-input-focus-box-shadow: none;
 
 $form-check-input-checked-color: $white;

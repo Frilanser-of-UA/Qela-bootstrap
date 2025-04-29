@@ -8980,11 +8980,11 @@ textarea.form-control-lg {
   height: 1rem;
   margin-top: 0.15rem;
   vertical-align: top;
-  background-color: transparent;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid #adb5bd;
+  border: 1px solid #495057;
   appearance: none;
   print-color-adjust: exact;
   transition: all 0.2s ease 0s;
@@ -9004,7 +9004,7 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #adb5bd;
+  border-color: #495057;
   outline: 0;
   box-shadow: none;
 }
@@ -9034,7 +9034,7 @@ textarea.form-control-lg {
 }
 
 .form-check-label {
-  color: #6c757d;
+  color: #495057;
   cursor: pointer;
 }
 
@@ -16111,25 +16111,25 @@ textarea {
 }
 
 .form-check-input:hover {
-  border-color: #6c757d;
+  border-color: #212529;
 }
 .form-check-input:disabled {
-  border-color: #ced4da;
+  border-color: #adb5bd;
 }
 .form-check-input:disabled ~ .form-check-label {
   color: #adb5bd;
 }
 .form-check-input:checked:hover {
-  border-color: #8278ff;
-  background-color: #8278ff;
+  border-color: #6e63fa;
+  background-color: #6e63fa;
 }
 .form-check-input:checked:disabled {
-  border-color: #ced4da;
-  background-color: #ced4da;
+  border-color: #bdb8ff;
+  background-color: #bdb8ff;
 }
 .form-check-input:checked:disabled:hover {
-  border-color: #ced4da;
-  background-color: #ced4da;
+  border-color: #bdb8ff;
+  background-color: #bdb8ff;
 }
 .form-check-input.is-invalid:focus {
   box-shadow: none;
@@ -16183,11 +16183,6 @@ textarea {
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
-}
-@media (max-width: 767.98px) {
-  .form-switch {
-    gap: 0.5rem;
-  }
 }
 .form-switch .form-check-input {
   width: 3.2em;
