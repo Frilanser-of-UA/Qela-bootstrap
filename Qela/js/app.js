@@ -54,17 +54,20 @@ if (myText) {
 // fix IOS modals zoom 
 document.addEventListener('DOMContentLoaded', function () {
     const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
-
+    let scrollPosition = 0;
     if (isIOS) {
         const modals = document.querySelectorAll('.modal');
-
         modals.forEach(modal => {
             modal.addEventListener('show.bs.modal', () => {
+                scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
                 modal.style.position = 'absolute';
+                modal.style.top = scrollPosition + 'px';
             });
 
             modal.addEventListener('hidden.bs.modal', () => {
                 modal.style.position = '';
+                modal.style.top = '';
+                window.scrollTo(0, scrollPosition);
             });
         });
     }
