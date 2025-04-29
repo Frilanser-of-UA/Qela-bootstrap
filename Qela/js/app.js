@@ -51,3 +51,21 @@ if (myText) {
         }
     });
 }
+// fix IOS modals zoom 
+document.addEventListener('DOMContentLoaded', function () {
+    const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
+
+    if (isIOS) {
+        const modals = document.querySelectorAll('.modal');
+
+        modals.forEach(modal => {
+            modal.addEventListener('show.bs.modal', () => {
+                modal.style.position = 'absolute';
+            });
+
+            modal.addEventListener('hidden.bs.modal', () => {
+                modal.style.position = '';
+            });
+        });
+    }
+});

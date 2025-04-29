@@ -1,45 +1,50 @@
+// @supports (-webkit-overflow-scrolling: touch) {
+//     .modal {
+//         position: absolute !important;
+//     }
+// }
 .qela-modal {
-	&.modal {
-		&:has(.card, .table) {
-			.qela-modal-empty {
-				display: none;
-			}
-		}
-	}
+    &.modal {
+        &:has(.card, .table) {
+            .qela-modal-empty {
+                display: none;
+            }
+        }
+    }
 
-	.modal-body {
-		max-height: 565px;
-	}
+    .modal-body {
+        max-height: 565px;
+    }
 }
 
 .qela-modal-empty {
-	margin: 0;
-	text-align: center;
-	display: block;
+    margin: 0;
+    text-align: center;
+    display: block;
 }
 .qela-quest-template {
-	.modal-content,
-	.qela-content,
-	.qela-tab {
-		height: calc(100vh - 104px);
-		max-height: 1200px;
-	}
-	.modal-body {
-		padding: 0;
-	}
-	.qela-tab {
-		flex-direction: column;
-		align-items: start;
-		padding: rem(16);
-		border-right: 1px solid $info-300;
-		border-bottom: none;
-		width: 220px;
-		flex-wrap: nowrap;
-		.nav-link {
-			padding: rem(8) 0 rem(8) rem(16);
-			&.active {
-				text-decoration: underline;
-			}
-		}
-	}
+    .modal-content,
+    .qela-content,
+    .qela-tab {
+        height: calc(100vh - 104px);
+        max-height: 1200px;
+    }
+    .modal-body {
+        padding: 0;
+    }
+    .qela-tab {
+        flex-direction: column;
+        align-items: start;
+        padding: rem(16);
+        border-right: 1px solid $info-300;
+        border-bottom: none;
+        width: 220px;
+        flex-wrap: nowrap;
+        .nav-link {
+            padding: rem(8) 0 rem(8) rem(16);
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
 }
