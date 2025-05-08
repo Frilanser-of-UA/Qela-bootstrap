@@ -189,14 +189,6 @@
 	background-color: white;
 }
 
-.qela-page h2 {
-	font-size: 24px;
-}
-
-.qela-page h3 {
-	font-size: 20px;
-}
-
 .qela-page .row-grow {
 	border-radius: 0.5rem;
 	--bs-gutter-x: 1rem;
@@ -383,6 +375,9 @@
 .rtf-editor .qela-container .qela-editor {
 	min-height: 150px;
 	max-height: 300px;
+}
+.rtf-editor .qela-snow .qela-tooltip {
+	left: 17px !important;
 }
 
 .form-control img {

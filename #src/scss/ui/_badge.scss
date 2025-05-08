@@ -1,211 +1,225 @@
 .badge {
-    &[class*="ic-"] {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        gap: 2px;
-        &::before {
-            font-size: 16px;
-            line-height: 1;
-        }
-    }
-    &.message {
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 9px;
-        padding: 4px;
-        border-radius: 6px;
-    }
+	&[class*="ic-"] {
+		display: inline-flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		gap: 2px;
+		&::before {
+			font-size: 16px;
+			line-height: 1;
+		}
+	}
+	&.message {
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 9px;
+		padding: 4px;
+		border-radius: 6px;
+	}
 
-    &.large {
-        padding: 5.5px 6px;
-        font-size: 14px;
-        &[class*="ic-"] {
-            gap: 5px;
-            padding-top: 4px;
-            padding-bottom: 4px;
-        }
-    }
+	&.large {
+		padding: 5.5px 6px;
+		font-size: 14px;
+		&[class*="ic-"] {
+			gap: 5px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	}
 
-    &.large-xl {
-        padding: 8px 12px;
-        font-size: 16px;
-        border-radius: 8px;
-        line-height: 131%;
-        &[class*="ic-"] {
-            gap: 10px;
-            &::before {
-                font-size: 20px;
-            }
-        }
-    }
+	&.large-xl {
+		padding: 8px 12px;
+		font-size: 16px;
+		border-radius: 8px;
+		line-height: 131%;
+		&[class*="ic-"] {
+			gap: 10px;
+			&::before {
+				font-size: 20px;
+			}
+		}
+	}
 }
 
 .qela-badge {
-    &.small {
-        padding: 2px 4px;
-        font-size: 10px;
-        text-align: center;
-        min-width: 14px;
-        color: $white !important;
-    }
+	&.small {
+		padding: 2px 4px;
+		font-size: 10px;
+		text-align: center;
+		min-width: 14px;
+		color: $white !important;
+	}
 
-    &.item {
-        padding: 6px 4px 6px 6px;
-        border-radius: 6px;
-        background-color: $secondary-200;
-        color: $info-900;
-        font-weight: 400;
-        font-size: 14px;
-    }
+	&.item {
+		padding: 6px 4px 6px 6px;
+		border-radius: 6px;
+		background-color: $secondary-200;
+		color: $info-900;
+		font-weight: 400;
+		font-size: 14px;
+	}
 }
 .qela-list-num {
-    padding: rem(4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 24px;
-    min-width: 24px;
-    line-height: 1;
-    border-radius: 30px;
-    color: $info-900;
+	padding: rem(4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	min-width: 24px;
+	line-height: 1;
+	border-radius: 30px;
+	color: $info-900;
 }
 .qela-counter {
-    font-weight: 600;
-    font-size: rem(9);
-    height: 16px;
-    min-width: 16px;
-    border-radius: 14px;
-    color: $white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: rem(2);
-    background-color: $danger;
+	font-weight: 600;
+	font-size: rem(9);
+	height: 16px;
+	min-width: 16px;
+	border-radius: 14px;
+	color: $white;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(2);
+	background-color: $danger;
 }
 .qela-badge-primary {
-    background-color: #{rgba($primary, 0.1)};
-    color: $warning;
+	background-color: #{rgba($primary, 0.1)};
+	color: $warning;
 }
 
 .qela-badge-secondary {
-    background-color: #{rgba($secondary, 0.1)};
-    color: $secondary;
+	background-color: #{rgba($secondary, 0.1)};
+	color: $secondary;
 }
 
 .qela-badge-danger {
-    background-color: $danger-100;
-    color: $danger-600;
+	background-color: $danger-100;
+	color: $danger-600;
 }
 
 .qela-badge-success {
-    background-color: $success-100;
-    color: $success-700;
+	background-color: $success-100;
+	color: $success-700;
 }
 
 .qela-badge-warning {
-    background-color: #{rgba($warning, 0.1)};
-    color: $warning;
+	background-color: #{rgba($warning, 0.1)};
+	color: $warning;
 }
 
 .qela-badge-telent {
-    &.text-red {
-        color: $telent-red-700;
-        background-color: $telent-red-100;
-    }
+	&.text-red {
+		color: $telent-red-700;
+		background-color: $telent-red-100;
+	}
 
-    &.text-violet {
-        color: $telent-violet-700;
-        background-color: $telent-violet-100;
-    }
+	&.text-violet {
+		color: $telent-violet-700;
+		background-color: $telent-violet-100;
+	}
 
-    &.text-lightgreen {
-        color: $telent-lightgreen-700;
-        background-color: $telent-lightgreen-100;
-    }
+	&.text-lightgreen {
+		color: $telent-lightgreen-700;
+		background-color: $telent-lightgreen-100;
+	}
 
-    &.text-orange {
-        color: $telent-orange-700;
-        background-color: $telent-orange-100;
-    }
+	&.text-orange {
+		color: $telent-orange-700;
+		background-color: $telent-orange-100;
+	}
 
-    &.text-green {
-        color: $telent-green-700;
-        background-color: $telent-green-100;
-    }
+	&.text-green {
+		color: $telent-green-700;
+		background-color: $telent-green-100;
+	}
 
-    &.text-lightblue {
-        color: $telent-lightblue-700;
-        background-color: $telent-lightblue-100;
-    }
+	&.text-lightblue {
+		color: $telent-lightblue-700;
+		background-color: $telent-lightblue-100;
+	}
 
-    &.text-blue {
-        color: $telent-blue-700;
-        background-color: $telent-blue-100;
-    }
+	&.text-blue {
+		color: $telent-blue-700;
+		background-color: $telent-blue-100;
+	}
 
-    &.text-pink {
-        color: $telent-pink-700;
-        background-color: $telent-pink-100;
-    }
+	&.text-pink {
+		color: $telent-pink-700;
+		background-color: $telent-pink-100;
+	}
 
-    &.text-gray {
-        color: $gray-700;
-        background-color: $gray-100;
-    }
+	&.text-gray {
+		color: $gray-700;
+		background-color: $gray-100;
+	}
 
-    &.red {
-        background-color: $telent-red-600;
-    }
+	&.red {
+		background-color: $telent-red-600;
+	}
 
-    &.violet {
-        background-color: $telent-violet-600;
-    }
+	&.violet {
+		background-color: $telent-violet-600;
+	}
 
-    &.lightgreen {
-        background-color: $telent-lightgreen-600;
-    }
+	&.lightgreen {
+		background-color: $telent-lightgreen-600;
+	}
 
-    &.orange {
-        background-color: $telent-orange-600;
-    }
+	&.orange {
+		background-color: $telent-orange-600;
+	}
 
-    &.green {
-        background-color: $telent-green-600;
-    }
+	&.green {
+		background-color: $telent-green-600;
+	}
 
-    &.lightblue {
-        background-color: $telent-lightblue-600;
-    }
+	&.lightblue {
+		background-color: $telent-lightblue-600;
+	}
 
-    &.blue {
-        background-color: $telent-blue-600;
-    }
+	&.blue {
+		background-color: $telent-blue-600;
+	}
 
-    &.pink {
-        background-color: $telent-pink-600;
-    }
+	&.pink {
+		background-color: $telent-pink-600;
+	}
 
-    &.vote {
-        color: $black;
-        background-color: #f7efc0;
-        display: inline-flex;
-        align-items: center;
-        &.large-xl {
-            &.img {
-                position: relative;
-                padding-right: 40px;
-                img {
-                    width: 28px;
-                    position: absolute;
-                    right: 8px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    margin-left: 0;
-                }
-            }
-        }
-    }
+	&.vote {
+		color: $black;
+		background-color: #f7efc0;
+		display: inline-flex;
+		align-items: center;
+		&.large-xl {
+			&.img {
+				position: relative;
+				padding-right: 40px;
+				img {
+					width: 28px;
+					position: absolute;
+					right: 8px;
+					top: 50%;
+					transform: translateY(-50%);
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+.qela-referral-counter {
+	padding: rem(12) rem(16) rem(12) rem(16);
+	background-color: $secondary-200;
+	border-radius: 8px;
+	display: inline-flex;
+	align-items: center;
+	gap: rem(8);
+	.badge {
+		padding: rem(4) rem(8);
+		font-size: rem(16);
+		min-width: 24px;
+		border-radius: 8px;
+	}
 }

@@ -55,15 +55,6 @@ main {
 			padding: 0;
 		}
 
-		.pad-top-6 {
-			padding-top: 2.5rem;
-
-			@include media-breakpoint-down(lg) {
-				padding-top: 1rem;
-				padding: 1rem;
-			}
-		}
-
 		[class^="col-"] {
 			.card {
 				height: 100%;
@@ -89,11 +80,6 @@ main {
 			}
 		}
 	}
-
-	h2 {
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
-	}
 }
 
 .qela-right {
@@ -103,29 +89,12 @@ main {
 	border-bottom-right-radius: 12px;
 	overflow: auto;
 
-	@include media-breakpoint-down(lg) {
-		border-bottom-left-radius: 12px;
-		max-height: none;
-	}
-
-	@include media-breakpoint-down(lg) {
-		border-left: 1px solid $info-400;
-	}
-
 	.qela-actions {
 		padding: 1rem;
-
-		@include media-breakpoint-down(lg) {
-			border-bottom: 1px solid $info-400;
-		}
 	}
 
 	.typography {
 		padding: 1.5rem 1rem;
-
-		@include media-breakpoint-down(lg) {
-			padding: 0.5rem 1rem;
-		}
 
 		p {
 			margin-bottom: 0;
@@ -135,10 +104,6 @@ main {
 			padding: 2rem 0 1rem 0;
 			color: $info-400;
 			font-size: 1.5em;
-
-			@include media-breakpoint-down(lg) {
-				padding: 1rem 0 0.5rem 0;
-			}
 		}
 	}
 }
@@ -156,12 +121,6 @@ main {
 .qela-wrap {
 	background-color: transparent;
 	border: none;
-
-	.row-grow {
-		@include media-breakpoint-down(lg) {
-			--bs-gutter-y: 1rem;
-		}
-	}
 }
 
 .qela-start {
@@ -196,53 +155,18 @@ main {
 
 	.qela-badge-telent {
 		margin-left: auto;
-
-		@include media-breakpoint-down(xl) {
-			margin-left: 0;
-		}
 	}
 }
 
 .qela-end {
-	padding-bottom: rem(16);
-
 	&:not(:last-child) {
 		margin-bottom: rem(16);
-	}
-
-	&.qela-tables {
-		padding: 0;
-		padding-bottom: rem(24);
-		height: auto;
-
-		> .row {
-			--bs-gutter-x: 1rem;
-			padding: rem(16) rem(24);
-			align-items: center;
-		}
-
-		.table-qela {
-			max-height: 410px;
-			overflow: auto;
-			padding-right: rem(4);
-			thead {
-				position: static;
-				top: 0;
-				z-index: 10;
-			}
-		}
 	}
 
 	> div {
 		&:first-child {
 			padding: 2rem 1rem 0 1rem;
 		}
-	}
-
-	> h2 {
-		margin-bottom: 0;
-		align-self: flex-start;
-		font-size: 20px;
 	}
 
 	.qela-telent-text {
@@ -265,7 +189,7 @@ main {
 	background-color: $white;
 	height: 100%;
 	border-radius: 0.5rem;
-	border: 1px solid $gray-400;
+	border: 1px solid $gray-200;
 }
 
 .qela-top-item {
@@ -366,9 +290,6 @@ main {
 	height: calc(100vh - (var(--body-pad-top) + $spacer + $spacer));
 	overflow-x: hidden;
 	overflow-y: auto;
-	@include media-breakpoint-down(lg) {
-		height: auto;
-	}
 }
 // .form-control.is-invalid ~ .btn-input:hover {
 // border-color: #ff453a;
@@ -396,9 +317,6 @@ main {
 	margin-top: 1rem;
 	border: 1px solid $gray-400;
 	border-radius: 0.5rem;
-	@include media-breakpoint-down(md) {
-		flex-direction: column;
-	}
 	.nav {
 		padding-top: 1rem;
 		flex: 0 0 230px;
@@ -407,11 +325,6 @@ main {
 		background: $white;
 		border-bottom-left-radius: 0.5rem;
 		border-top-left-radius: 0.5rem;
-		@include media-breakpoint-down(md) {
-			border-right: none;
-			border-bottom-left-radius: 0;
-			border-top-right-radius: 0.5rem;
-		}
 		.nav-item {
 			ul {
 				padding: 0;

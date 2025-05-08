@@ -14388,15 +14388,6 @@ main {
 .qela-page .row-grow.no-pad {
   padding: 0;
 }
-.qela-page .row-grow .pad-top-6 {
-  padding-top: 2.5rem;
-}
-@media (max-width: 991.98px) {
-  .qela-page .row-grow .pad-top-6 {
-    padding-top: 1rem;
-    padding: 1rem;
-  }
-}
 .qela-page .row-grow [class^=col-] .card {
   height: 100%;
   padding: 0.5rem;
@@ -14414,10 +14405,6 @@ main {
 .qela-page .row-grow [class^=col-] .img-fluid {
   width: 100%;
 }
-.qela-page h2, .qela-page .h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
 .qela-right {
   background-color: #f8f9fa;
@@ -14426,32 +14413,11 @@ main {
   border-bottom-right-radius: 12px;
   overflow: auto;
 }
-@media (max-width: 991.98px) {
-  .qela-right {
-    border-bottom-left-radius: 12px;
-    max-height: none;
-  }
-}
-@media (max-width: 991.98px) {
-  .qela-right {
-    border-left: 1px solid #ced4da;
-  }
-}
 .qela-right .qela-actions {
   padding: 1rem;
 }
-@media (max-width: 991.98px) {
-  .qela-right .qela-actions {
-    border-bottom: 1px solid #ced4da;
-  }
-}
 .qela-right .typography {
   padding: 1.5rem 1rem;
-}
-@media (max-width: 991.98px) {
-  .qela-right .typography {
-    padding: 0.5rem 1rem;
-  }
 }
 .qela-right .typography p {
   margin-bottom: 0;
@@ -14460,11 +14426,6 @@ main {
   padding: 2rem 0 1rem 0;
   color: #ced4da;
   font-size: 1.5em;
-}
-@media (max-width: 991.98px) {
-  .qela-right .typography h2, .qela-right .typography .h2 {
-    padding: 1rem 0 0.5rem 0;
-  }
 }
 
 .child-mb-2 > *:not(:last-child) {
@@ -14478,11 +14439,6 @@ main {
 .qela-wrap {
   background-color: transparent;
   border: none;
-}
-@media (max-width: 991.98px) {
-  .qela-wrap .row-grow {
-    --bs-gutter-y: 1rem;
-  }
 }
 
 .qela-start:not(:last-child) {
@@ -14509,45 +14465,12 @@ main {
 .qela-start .qela-badge-telent {
   margin-left: auto;
 }
-@media (max-width: 1199.98px) {
-  .qela-start .qela-badge-telent {
-    margin-left: 0;
-  }
-}
 
-.qela-end {
-  padding-bottom: 1rem;
-}
 .qela-end:not(:last-child) {
   margin-bottom: 1rem;
 }
-.qela-end.qela-tables {
-  padding: 0;
-  padding-bottom: 1.5rem;
-  height: auto;
-}
-.qela-end.qela-tables > .row {
-  --bs-gutter-x: 1rem;
-  padding: 1rem 1.5rem;
-  align-items: center;
-}
-.qela-end.qela-tables .table-qela {
-  max-height: 410px;
-  overflow: auto;
-  padding-right: 0.25rem;
-}
-.qela-end.qela-tables .table-qela thead {
-  position: static;
-  top: 0;
-  z-index: 10;
-}
 .qela-end > div:first-child {
   padding: 2rem 1rem 0 1rem;
-}
-.qela-end > h2, .qela-end > .h2 {
-  margin-bottom: 0;
-  align-self: flex-start;
-  font-size: 20px;
 }
 .qela-end .qela-telent-text {
   margin-bottom: 2rem;
@@ -14566,7 +14489,7 @@ main {
   background-color: #fff;
   height: 100%;
   border-radius: 0.5rem;
-  border: 1px solid #ced4da;
+  border: 1px solid #e9ecef;
 }
 
 .qela-top-item {
@@ -14678,11 +14601,6 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
 }
-@media (max-width: 991.98px) {
-  .h-100vh {
-    height: auto;
-  }
-}
 
 .qela-rounder-12 {
   border-radius: 12px !important;
@@ -14706,11 +14624,6 @@ main {
   border: 1px solid #ced4da;
   border-radius: 0.5rem;
 }
-@media (max-width: 767.98px) {
-  .qela-help {
-    flex-direction: column;
-  }
-}
 .qela-help .nav {
   padding-top: 1rem;
   flex: 0 0 230px;
@@ -14719,13 +14632,6 @@ main {
   background: #fff;
   border-bottom-left-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-}
-@media (max-width: 767.98px) {
-  .qela-help .nav {
-    border-right: none;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0.5rem;
-  }
 }
 .qela-help .nav .nav-item ul {
   padding: 0;
@@ -16812,6 +16718,17 @@ textarea {
   color: #6c757d;
 }
 
+.qela-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  height: 100%;
+}
+
 .qela-modal.modal:has(.card, .table) .qela-modal-empty {
   display: none;
 }
@@ -17035,6 +16952,21 @@ textarea {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 0;
+}
+
+.qela-referral-counter {
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  background-color: #f4f3ff;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.qela-referral-counter .badge {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  min-width: 24px;
+  border-radius: 8px;
 }
 
 .pagination {
@@ -20005,8 +19937,24 @@ header .container-xxl > .row [class*=col]:last-child {
   width: 100%;
   margin-bottom: 0;
 }
+.table-qela .table-borderless thead {
+  position: relative;
+}
+.table-qela .table-borderless thead::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #dee2e6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .table-qela .table-light {
   --bs-table-bg: #e9e9e8;
+}
+.table-qela .table-light th,
+.table-qela .table-light tr {
+  background-color: var(--bs-table-bg);
 }
 .table-qela th i::before {
   font-size: 16px;
@@ -20027,10 +19975,10 @@ header .container-xxl > .row [class*=col]:last-child {
 .table-qela.large td {
   font-size: 16px;
 }
-.table-qela.qela-sticky th {
+.table-qela.qela-sticky thead {
   position: sticky;
   top: 0;
-  z-index: 90;
+  z-index: 10;
 }
 .table-qela .qela-light * {
   color: #adb5bd;
@@ -20055,6 +20003,21 @@ header .container-xxl > .row [class*=col]:last-child {
 .table-qela .qela-light .qela-btn-group .btn {
   color: #adb5bd !important;
   background-color: transparent !important;
+}
+
+.qela-tables {
+  padding: 0;
+  padding-bottom: 0.5rem;
+  height: auto;
+}
+.qela-tables > .row {
+  --bs-gutter-x: 1rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+}
+.qela-tables .table-qela {
+  max-height: 410px;
+  overflow: auto;
 }
 
 .qela-tag {

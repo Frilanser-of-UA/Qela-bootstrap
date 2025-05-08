@@ -1,89 +1,99 @@
 .qela-organization {
-    border-bottom: 1px solid $info-400;
-    padding: 1.5rem 0;
+	border-bottom: 1px solid $info-400;
+	padding: 1.5rem 0;
 
-    &.row {
-        justify-content: space-between;
-        align-items: end;
-    }
+	&.row {
+		justify-content: space-between;
+		align-items: end;
+	}
 
-    .qela-avatar {
-        border: 0;
-        margin-right: 1.5rem;
+	.qela-avatar {
+		border: 0;
+		margin-right: 1.5rem;
 
-        @include media-breakpoint-down(md) {
-            margin-right: 0.5rem;
-        }
+		@include media-breakpoint-down(md) {
+			margin-right: 0.5rem;
+		}
 
-        &.white {
-            background-color: white;
-            border-width: 1px;
-        }
-    }
+		&.white {
+			background-color: white;
+			border-width: 1px;
+		}
+	}
 
-    .col-btns {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
+	.col-btns {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
 
-        > * {
-            &:not(:last-child) {
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
+		> * {
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
 }
 
 .qela-map-items {
-    > .row {
-        padding: 8px 16px;
-        @include media-breakpoint-down(md) {
-            align-items: baseline;
-        }
-        &:first-child {
-            @include media-breakpoint-down(lg) {
-                display: none;
-            }
-        }
+	> .row {
+		padding: 8px 16px;
+		@include media-breakpoint-down(md) {
+			align-items: baseline;
+		}
+		&:first-child {
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
 
-        [class^="col"],
-        [class*="col"] {
-            &:first-child {
-                margin-right: 8px;
-            }
-        }
-    }
+		[class^="col"],
+		[class*="col"] {
+			&:first-child {
+				margin-right: 8px;
+			}
+		}
+	}
 
-    .btns-inline {
-        gap: 0.5rem;
-    }
+	.btns-inline {
+		gap: 0.5rem;
+	}
 
-    .form-label {
-        color: $gray-600;
-        margin-bottom: 0;
-    }
+	.form-label {
+		color: $gray-600;
+		margin-bottom: 0;
+	}
 }
 .qela-votes {
-    display: flex;
-    gap: 1rem;
-    align-items: stretch;
-    color: $gray-800;
-    @include media-breakpoint-down(xl) {
-        flex-wrap: wrap;
-    }
-    .qela-vote {
-        padding-left: 0.5rem;
-    }
-    > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &:first-child {
-            align-items: flex-end;
-        }
-        &:last-child {
-            align-self: flex-start;
-            color: $gray-600;
-        }
-    }
+	display: flex;
+	gap: 1rem;
+	align-items: stretch;
+	color: $gray-800;
+	@include media-breakpoint-down(xl) {
+		flex-wrap: wrap;
+	}
+	.qela-vote {
+		padding-left: 0.5rem;
+	}
+	> div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		&:first-child {
+			align-items: flex-end;
+		}
+		&:last-child {
+			align-self: flex-start;
+			color: $gray-600;
+		}
+	}
+}
+.qela-item {
+	display: flex;
+	align-items: flex-start;
+	gap: rem(24);
+	background-color: $white;
+	padding: rem(24);
+	border-radius: 8px;
+	border: 1px solid $gray-200;
+	height: 100%;
 }

@@ -6,8 +6,26 @@
 		width: 100%;
 		margin-bottom: 0;
 	}
+	.table-borderless {
+		thead {
+			position: relative;
+			&::after {
+				content: "";
+				width: 100%;
+				height: 1px;
+				background-color: $info-300;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
 	.table-light {
 		--bs-table-bg: #e9e9e8;
+		th,
+		tr {
+			background-color: var(--bs-table-bg);
+		}
 	}
 	th {
 		i {
@@ -41,10 +59,10 @@
 		}
 	}
 	&.qela-sticky {
-		th {
+		thead {
 			position: sticky;
 			top: 0;
-			z-index: 90;
+			z-index: 10;
 		}
 	}
 	.qela-light {
@@ -76,7 +94,22 @@
 		}
 	}
 }
+.qela-tables {
+	padding: 0;
+	padding-bottom: rem(8);
+	height: auto;
 
+	> .row {
+		--bs-gutter-x: 1rem;
+		padding: rem(16) rem(24);
+		align-items: center;
+	}
+
+	.table-qela {
+		max-height: 410px;
+		overflow: auto;
+	}
+}
 .qela-tag {
 	display: inline-block;
 	color: $black;

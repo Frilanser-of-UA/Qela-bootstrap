@@ -1,305 +1,305 @@
 .qela-chat-inner {
-    --height-scroll: 150px;
-    flex-grow: 1;
-    display: flex;
-    > div {
-        --flex-width: auto;
-        display: flex;
-        flex-direction: column;
-        &:not(:last-child) {
-            flex: 0 0 var(--flex-width);
-            border-right: 1px solid $info-300;
-        }
-    }
+	--height-scroll: 150px;
+	flex-grow: 1;
+	display: flex;
+	> div {
+		--flex-width: auto;
+		display: flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			flex: 0 0 var(--flex-width);
+			border-right: 1px solid $info-300;
+		}
+	}
 }
 
 .qela-chat {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $secondary-100;
-    flex-grow: 1;
-    border-radius: 0 0 8px 0;
-    height: var(--height-scroll);
-    overflow: auto;
-    position: relative;
-    .qela-chat-badge {
-        margin: rem(4) 0 rem(6) 0;
-        align-self: center;
-    }
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: $secondary-100;
+	flex-grow: 1;
+	border-radius: 0 0 8px 0;
+	height: var(--height-scroll);
+	overflow: auto;
+	position: relative;
+	.qela-chat-badge {
+		margin: rem(4) 0 rem(6) 0;
+		align-self: center;
+	}
 }
 .qela-chat-info {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    gap: rem(16);
-    text-align: center;
-    padding: rem(16);
-    span {
-        font-size: rem(18);
-        color: $info-600;
-    }
-    i {
-        color: $info;
-        line-height: 1;
-        &::before {
-            font-size: rem(104);
-        }
-    }
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	gap: rem(16);
+	text-align: center;
+	padding: rem(16);
+	span {
+		font-size: rem(18);
+		color: $info-600;
+	}
+	i {
+		color: $info;
+		line-height: 1;
+		&::before {
+			font-size: rem(104);
+		}
+	}
 }
 .qela-chat-head {
-    > div {
-        border-bottom: 1px solid $info-300;
-        &:first-child {
-            height: 47px;
-        }
-    }
-    .qela-dropdown {
-        height: 24px;
-    }
-    .dropdown-menu {
-        margin-top: rem(9) !important;
-    }
-    .dp__main {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-    .dp__input {
-        padding: 0;
-        height: auto;
-        opacity: 0;
-        border: none;
-    }
-    .dp--menu-wrapper {
-        margin-top: rem(4);
-        margin-bottom: rem(4);
-    }
+	> div {
+		border-bottom: 1px solid $info-300;
+		&:first-child {
+			height: 47px;
+		}
+	}
+	.qela-dropdown {
+		height: 24px;
+	}
+	.dropdown-menu {
+		margin-top: rem(9) !important;
+	}
+	.dp__main {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.dp__input {
+		padding: 0;
+		height: auto;
+		opacity: 0;
+		border: none;
+	}
+	.dp--menu-wrapper {
+		margin-top: rem(4);
+		margin-bottom: rem(4);
+	}
 }
 .qela-chat-btn {
-    position: absolute;
-    bottom: calc(100% + 16px);
-    right: 16px;
-    z-index: 10;
-    border: 1px solid $info-300;
-    border-radius: 50%;
-    padding: rem(7);
-    background-color: $white;
+	position: absolute;
+	bottom: calc(100% + 16px);
+	right: 16px;
+	z-index: 10;
+	border: 1px solid $info-300;
+	border-radius: 50%;
+	padding: rem(7);
+	background-color: $white;
 
-    &::before {
-        color: $secondary-700;
-    }
+	&::before {
+		color: $secondary-700;
+	}
 }
 .qela-chat-mess {
-    max-width: 400px;
-    position: relative;
-    align-self: flex-start;
-    background-color: $white;
-    border-radius: 12px;
-    border: 1px solid transparent;
-    padding: rem(8);
-    margin: rem(2) rem(24) 0 rem(42);
-    line-height: 130%;
-    display: inline-grid;
-    gap: rem(2);
-    font-size: rem(14);
-    &.reported {
-        border-color: $danger-600;
-        background-color: $danger-200;
-        margin-right: rem(52);
-        .qela-btn-ic {
-            position: absolute;
-            left: calc(100% + 12px);
-            bottom: 0;
-        }
-    }
-    &.my-mess {
-        margin: rem(2) rem(8) 0 rem(24);
-        align-self: flex-end;
-        align-items: end;
-        background-color: $secondary-300;
-        .qela-chat-reply {
-            background-color: $white;
-        }
-    }
-    .qela-avatar {
-        position: absolute;
-        right: calc(100% + 8px);
-        bottom: 0;
-    }
+	max-width: 400px;
+	position: relative;
+	align-self: flex-start;
+	background-color: $white;
+	border-radius: 12px;
+	border: 1px solid transparent;
+	padding: rem(8);
+	margin: rem(2) rem(24) 0 rem(42);
+	line-height: 130%;
+	display: inline-grid;
+	gap: rem(2);
+	font-size: rem(14);
+	&.reported {
+		border-color: $danger-600;
+		background-color: $danger-200;
+		margin-right: rem(52);
+		.qela-btn-ic {
+			position: absolute;
+			left: calc(100% + 12px);
+			bottom: 0;
+		}
+	}
+	&.my-mess {
+		margin: rem(2) rem(8) 0 rem(24);
+		align-self: flex-end;
+		align-items: end;
+		background-color: $secondary-300;
+		.qela-chat-reply {
+			background-color: $white;
+		}
+	}
+	.qela-avatar {
+		position: absolute;
+		right: calc(100% + 8px);
+		bottom: 0;
+	}
 }
 
 .qela-chat-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    gap: rem(8);
-    font-size: rem(14);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	align-items: center;
+	gap: rem(8);
+	font-size: rem(14);
 }
 .qela-text-blue-600 {
-    color: $telent-blue-800;
+	color: $telent-blue-800;
 }
 .qela-chat-like {
-    background-color: $white;
-    border: 1px solid $info-200;
-    display: inline-flex;
-    gap: rem(4);
-    border-radius: 20px;
-    padding: rem(1) rem(7);
-    .btn {
-        color: $info-700;
-        padding: 0;
-        border-radius: 0;
-        font-size: rem(12);
-        align-items: center;
-        line-height: 1;
-        gap: rem(2);
-        &:not(:first-child) {
-            padding-left: rem(4);
-            border-left: 1px solid $gray-300;
-        }
-        &.current {
-            i {
-                &:first-child {
-                    display: none;
-                }
-                &:nth-child(2) {
-                    display: block;
-                    color: $secondary-700;
-                }
-            }
-        }
-        &:active {
-            border-color: transparent !important;
-            color: $info-700 !important;
-        }
-        i {
-            &:nth-child(2) {
-                display: none;
-            }
-            &::before {
-                font-size: rem(16);
-            }
-        }
-    }
+	background-color: $white;
+	border: 1px solid $info-200;
+	display: inline-flex;
+	gap: rem(4);
+	border-radius: 20px;
+	padding: rem(1) rem(7);
+	.btn {
+		color: $info-700;
+		padding: 0;
+		border-radius: 0;
+		font-size: rem(12);
+		align-items: center;
+		line-height: 1;
+		gap: rem(2);
+		&:not(:first-child) {
+			padding-left: rem(4);
+			border-left: 1px solid $gray-300;
+		}
+		&.current {
+			i {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: block;
+					color: $secondary-700;
+				}
+			}
+		}
+		&:active {
+			border-color: transparent !important;
+			color: $info-700 !important;
+		}
+		i {
+			&:nth-child(2) {
+				display: none;
+			}
+			&::before {
+				font-size: rem(16);
+			}
+		}
+	}
 }
 .qela-chat-time {
-    font-size: rem(10);
-    margin-left: auto;
-    color: $info-700;
+	font-size: rem(10);
+	margin-left: auto;
+	color: $info-700;
 }
 .qela-chat-reply {
-    font-size: rem(12);
-    padding: rem(2) rem(2) rem(2) rem(5);
-    border-left: 3px solid $info-500;
-    background-color: $info-100;
-    border-radius: 4px;
-    flex-grow: 1;
+	font-size: rem(12);
+	padding: rem(2) rem(2) rem(2) rem(5);
+	border-left: 3px solid $info-500;
+	background-color: $info-100;
+	border-radius: 4px;
+	flex-grow: 1;
 }
 .qela-chat-input {
-    position: relative;
-    --scroll-width: 0px;
-    .btn {
-        padding: rem(3);
-        border-radius: 50%;
-        position: absolute;
-        right: 4px;
-        bottom: 4px;
-        background-color: $primary-600;
-        &::before {
-            font-size: rem(32);
-        }
-    }
-    .form-control {
-        padding-top: rem(13);
-        padding-bottom: rem(13);
-        padding-right: rem(48);
-        box-shadow: none;
-        border-color: $info-500;
-        border-radius: 30px;
-        box-sizing: border-box;
-        word-break: break-all;
-        resize: none;
-        line-height: 140%;
-        overflow-y: hidden;
-        &:focus {
-            border-color: $secondary-500;
-        }
-    }
+	position: relative;
+	--scroll-width: 0px;
+	.btn {
+		padding: rem(3);
+		border-radius: 50%;
+		position: absolute;
+		right: 4px;
+		bottom: 4px;
+		background-color: $primary-600;
+		&::before {
+			font-size: rem(32);
+		}
+	}
+	.form-control {
+		padding-top: rem(13);
+		padding-bottom: rem(13);
+		padding-right: rem(48);
+		box-shadow: none;
+		border-color: $info-500;
+		border-radius: 30px;
+		box-sizing: border-box;
+		word-break: break-all;
+		resize: none;
+		line-height: 140%;
+		overflow-y: hidden;
+		&:focus {
+			border-color: $secondary-500;
+		}
+	}
 }
 .qela-chat-badge {
-    color: $black;
-    font-size: rem(12);
-    padding: rem(6) rem(12);
-    border-radius: 20px;
-    background-color: $info-200;
+	color: $black;
+	font-size: rem(12);
+	padding: rem(6) rem(12);
+	border-radius: 20px;
+	background-color: $info-200;
 }
 .qela-pinned-mess {
-    display: flex;
-    align-items: center;
-    gap: rem(8);
-    font-size: rem(14);
-    padding: rem(4) rem(16);
-    border-bottom: 1px solid $info-300;
+	display: flex;
+	align-items: center;
+	gap: rem(8);
+	font-size: rem(14);
+	padding: rem(4) rem(16);
+	border-bottom: 1px solid $info-300;
 }
 .qela-report-mess {
-    height: 48px;
-    font-size: rem(14);
-    padding: rem(6) rem(16);
-    background-color: $white;
-    border-bottom: 1px solid $info-300;
-    line-height: 130%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    gap: rem(8);
+	height: 48px;
+	font-size: rem(14);
+	padding: rem(6) rem(16);
+	background-color: $white;
+	border-bottom: 1px solid $info-300;
+	line-height: 130%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	gap: rem(8);
 
-    .indicator {
-        position: absolute;
-        top: 50%;
-        left: 8px;
-        transform: translateY(-50%);
-        height: calc(100% - 5px);
-        width: 3px;
-        display: flex;
-        flex-direction: column;
-        gap: rem(2);
-        overflow: hidden;
-        span {
-            width: 100%;
-            background-color: $secondary-400;
-            display: block;
-            border-radius: 36px;
-            flex: 1 0 9px;
-            &.active {
-                background-color: $secondary-700;
-            }
-        }
-    }
+	.indicator {
+		position: absolute;
+		top: 50%;
+		left: 8px;
+		transform: translateY(-50%);
+		height: calc(100% - 5px);
+		width: 3px;
+		display: flex;
+		flex-direction: column;
+		gap: rem(2);
+		overflow: hidden;
+		span {
+			width: 100%;
+			background-color: $secondary-400;
+			display: block;
+			border-radius: 36px;
+			flex: 1 0 9px;
+			&.active {
+				background-color: $secondary-700;
+			}
+		}
+	}
 }
 .qela-chat-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba($black, 0.4);
-    backdrop-filter: blur(12px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 21;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black, 0.4);
+	backdrop-filter: blur(12px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 21;
 }
 .qela-chat-spacer {
-    font-size: rem(12);
-    line-height: 130%;
-    color: $info-600;
-    background-color: $info-100;
-    padding: rem(6) rem(16);
-    text-transform: uppercase;
+	font-size: rem(12);
+	line-height: 130%;
+	color: $info-600;
+	background-color: $info-100;
+	padding: rem(6) rem(16);
+	text-transform: uppercase;
 }
