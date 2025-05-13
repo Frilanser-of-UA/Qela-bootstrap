@@ -1,4 +1,4 @@
-.table-qela {
+.qela-table {
 	overflow-y: hidden;
 	font-size: 14px;
 	table-layout: auto;
@@ -58,12 +58,9 @@
 			font-size: 16px;
 		}
 	}
-	&.qela-sticky {
-		thead {
-			position: sticky;
-			top: 0;
-			z-index: 10;
-		}
+	.qela-sticky {
+		top: 0;
+		z-index: 10;
 	}
 	.qela-light {
 		* {
@@ -105,7 +102,7 @@
 		align-items: center;
 	}
 
-	.table-qela {
+	.qela-table {
 		max-height: 410px;
 		overflow: auto;
 	}

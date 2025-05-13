@@ -253,9 +253,9 @@ main {
 .qela-pad-l {
 	padding-left: 65px;
 }
-.qela-stiky {
-	position: sticky;
-	top: 0;
+.qela-sticky {
+	position: sticky !important;
+	top: calc(var(--body-pad-top) + 16px);
 }
 .qela-rounded-st {
 	border-top-left-radius: $border-radius !important;
