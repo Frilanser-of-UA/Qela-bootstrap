@@ -19765,6 +19765,45 @@ textarea {
   text-transform: uppercase;
 }
 
+.qela-cookie {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2150;
+}
+.qela-cookie .alert {
+  width: 100%;
+  gap: 8px;
+  margin: 1px;
+  background-color: #f9f9ff;
+  border-radius: 0;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  display: flex;
+  gap: 5px;
+  border: 1px solid #fff;
+}
+.qela-cookie .alert span[class*=ic-]::before {
+  font-size: 40px;
+}
+.qela-cookie .modal-header span[class*=ic-]::before {
+  font-size: 40px;
+}
+
+.qela-cookie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  background-color: #495057;
+  z-index: -1;
+}
+
 header {
   height: 56px;
   width: 100%;

@@ -1,0 +1,47 @@
+.qela-cookie {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 2150;
+	.alert {
+		width: 100%;
+		gap: 8px;
+		margin: 1px;
+		background-color: $secondary-100;
+		border-radius: 0;
+		padding: rem(24) rem(32) rem(24) rem(32);
+		display: flex;
+		gap: 5px;
+		border: 1px solid $white;
+		span {
+			&[class*="ic-"] {
+				&::before {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+	.modal-header {
+		span {
+			&[class*="ic-"] {
+				&::before {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+.qela-cookie-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	background-color: $info-700;
+	z-index: -1;
+}

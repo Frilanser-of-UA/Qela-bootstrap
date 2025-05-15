@@ -1,223 +1,222 @@
 .progress {
-    position: relative;
-    min-width: 150px;
+	position: relative;
+	min-width: 150px;
 
-    &.small {
-        .progress-bar {
-            position: absolute;
-            height: 100%;
+	&.small {
+		.progress-bar {
+			position: absolute;
+			height: 100%;
 
-            &:last-child {
-                z-index: 1;
-            }
+			&:last-child {
+				z-index: 1;
+			}
 
-            &:nth-child(2) {
-                z-index: 2;
-                border-top-right-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
-            }
+			&:nth-child(2) {
+				z-index: 2;
+				border-top-right-radius: 0.5rem;
+				border-bottom-right-radius: 0.5rem;
+			}
 
-            &:first-child {
-                z-index: 3;
-                border-top-right-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
-            }
-        }
+			&:first-child {
+				z-index: 3;
+				border-top-right-radius: 0.5rem;
+				border-bottom-right-radius: 0.5rem;
+			}
+		}
 
-        button {
-            position: absolute;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            padding: 0;
-            border: 0;
-            background-color: transparent;
-        }
-    }
+		button {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+		}
+	}
 }
 .qela-progress-new {
-    height: 26px;
-    .label {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background-color: transparent;
-        color: $gray-900;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 4px 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 4;
-    }
-    .progress-bar {
-        position: absolute;
-        height: 100%;
-        &:last-child {
-            z-index: 1;
-        }
+	height: 26px;
+	.label {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		background-color: transparent;
+		color: $gray-900;
+		font-size: 14px;
+		font-weight: 500;
+		padding: 4px 8px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 4;
+	}
+	.progress-bar {
+		position: absolute;
+		height: 100%;
+		&:last-child {
+			z-index: 1;
+		}
 
-        &:nth-child(2) {
-            z-index: 2;
-        }
+		&:nth-child(2) {
+			z-index: 2;
+		}
 
-        &:first-child {
-            z-index: 3;
-        }
-    }
-    button {
-        position: absolute;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        padding: 0;
-        border: 0;
-        background-color: transparent;
-    }
+		&:first-child {
+			z-index: 3;
+		}
+	}
+	button {
+		position: absolute;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+	}
 }
 .progressbar-tooltip {
-    padding: 8px;
-    .tooltip-inner {
-        border-radius: 10px;
-        border: 1px solid $gray-300;
-        box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
-    }
-    .tooltip-arrow {
-        --bs-tooltip-arrow-width: 1rem;
-        --bs-tooltip-arrow-height: 0.5rem;
-    }
+	padding: 8px;
+	.tooltip-inner {
+		border-radius: 10px;
+		border: 1px solid $gray-300;
+		box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
+	}
+	.tooltip-arrow {
+		--bs-tooltip-arrow-width: 1rem;
+		--bs-tooltip-arrow-height: 0.5rem;
+	}
 }
 .qela-progress {
-    min-width: 150px;
-    position: relative;
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    font-size: 1rem;
+	min-width: 150px;
+	position: relative;
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	font-size: 1rem;
 
-    > div {
-        display: flex;
-        align-items: center;
-    }
+	> div {
+		display: flex;
+		align-items: center;
+	}
 
-    .left {
-        width: 100%;
-        background: $secondary;
-        color: $white;
-    }
+	.left {
+		width: 100%;
+		background: $secondary;
+		color: $white;
+	}
 
-    .right {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: $secondary-300;
-        color: $black;
-        clip-path: inset(-1px -1px -1px var(--percent));
-    }
+	.right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: $secondary-300;
+		color: $black;
+		clip-path: inset(-1px -1px -1px var(--percent));
+	}
 
-    &.large {
-        height: 2.125rem;
-        border-radius: 0.375rem;
+	&.large {
+		height: 2.125rem;
+		border-radius: 0.375rem;
 
-        > div {
-            justify-content: flex-start;
+		> div {
+			justify-content: flex-start;
 
-            div {
-                &:first-child {
-                    margin-right: auto;
-                }
-            }
-        }
+			div {
+				&:first-child {
+					margin-right: auto;
+				}
+			}
+		}
 
-        .left {
-            &:first-child {
-                padding-left: 6px;
-                padding-right: 6px;
-            }
-        }
+		.left {
+			&:first-child {
+				padding-left: 6px;
+				padding-right: 6px;
+			}
+		}
 
-        .right {
-            &:last-child {
-                padding-left: 6px;
-                padding-right: 6px;
-            }
-        }
-    }
+		.right {
+			&:last-child {
+				padding-left: 6px;
+				padding-right: 6px;
+			}
+		}
+	}
 
-    &.small {
-        height: 1rem;
-        font-size: 12px;
-        border-radius: 15px;
+	&.small {
+		height: 1rem;
+		font-size: 12px;
+		border-radius: 15px;
 
-        > div {
-            justify-content: center;
-        }
-    }
+		> div {
+			justify-content: center;
+		}
+	}
 }
-
 .qela-loader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2100;
-    left: 0;
-    top: 0;
-    background-color: rgba($black, 0.7);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    flex-direction: column;
-    span {
-        color: $white;
-        font-size: rem(18);
-    }
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2100;
+	left: 0;
+	top: 0;
+	background-color: rgba($black, 0.7);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	flex-direction: column;
+	span {
+		color: $white;
+		font-size: rem(18);
+	}
 
-    $offset: 212;
-    $duration: 1.5s;
+	$offset: 212;
+	$duration: 1.5s;
 
-    .spinner {
-        animation: rotator $duration linear infinite;
-    }
-    .path {
-        stroke-dasharray: $offset;
-        stroke-dashoffset: 0;
-        transform-origin: center;
-        animation: dash $duration ease-in-out infinite;
-        stroke: $primary-700;
-    }
-    @keyframes rotator {
-        0% {
-            transform: rotate(0deg);
-        }
-        50% {
-            transform: rotate(120deg);
-        }
-        100% {
-            transform: rotate(270deg);
-        }
-    }
-    @keyframes dash {
-        0% {
-            stroke-dashoffset: $offset;
-        }
-        50% {
-            stroke-dashoffset: calc($offset / 4);
-            transform: rotate(135deg);
-        }
-        100% {
-            stroke-dashoffset: $offset;
-            transform: rotate(450deg);
-        }
-    }
+	.spinner {
+		animation: rotator $duration linear infinite;
+	}
+	.path {
+		stroke-dasharray: $offset;
+		stroke-dashoffset: 0;
+		transform-origin: center;
+		animation: dash $duration ease-in-out infinite;
+		stroke: $primary-700;
+	}
+	@keyframes rotator {
+		0% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(120deg);
+		}
+		100% {
+			transform: rotate(270deg);
+		}
+	}
+	@keyframes dash {
+		0% {
+			stroke-dashoffset: $offset;
+		}
+		50% {
+			stroke-dashoffset: calc($offset / 4);
+			transform: rotate(135deg);
+		}
+		100% {
+			stroke-dashoffset: $offset;
+			transform: rotate(450deg);
+		}
+	}
 }
