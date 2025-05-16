@@ -44,4 +44,8 @@
 	width: 100vw;
 	background-color: $info-700;
 	z-index: -1;
+	display: none;
+}
+#cookie-banner.show .qela-cookie-overlay {
+	display: block;
 }

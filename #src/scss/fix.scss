@@ -289,7 +289,7 @@
 }
 
 .qela-btn-debug-view {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 82px;
 	border: 1px solid var(--bs-code-color);
@@ -299,7 +299,7 @@
 }
 
 .qela-debug-pane {
-	position: absolute;
+	position: fixed;
 	background-color: #fafafa;
 	border: 1px solid var(--bs-code-color);
 	left: 100%;
@@ -310,7 +310,7 @@
 }
 
 .qela-debug-pane-view {
-	position: absolute;
+	position: fixed;
 	background-color: #fafafa;
 	border: 1px solid var(--bs-code-color);
 	right: 0;
