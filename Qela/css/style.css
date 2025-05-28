@@ -16084,7 +16084,7 @@ textarea {
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 .form-switch .form-check-input {
   width: 3.2em;
@@ -20044,14 +20044,31 @@ header .container-xxl > .row [class*=col]:last-child {
   left: 0;
 }
 .qela-table .table-light {
-  --bs-table-bg: #e9e9e8;
+  --bs-table-bg: #e9ecef;
+  --bs-table-color: #212529;
 }
 .qela-table .table-light th,
 .qela-table .table-light tr {
   background-color: var(--bs-table-bg);
 }
-.qela-table th i::before {
-  font-size: 16px;
+.qela-table th .btn {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  justify-content: flex-end;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bs-table-color);
+  transition: opacity 0.2s ease 0s;
+}
+@media (any-hover: hover) {
+  .qela-table th .btn:hover {
+    opacity: 0.85;
+  }
+}
+.qela-table th .btn::before {
+  font-size: 1rem;
 }
 .qela-table th,
 .qela-table td {

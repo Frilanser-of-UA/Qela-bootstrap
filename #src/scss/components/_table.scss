@@ -21,16 +21,31 @@
 		}
 	}
 	.table-light {
-		--bs-table-bg: #e9e9e8;
+		--bs-table-bg: #{$gray-200};
+		--bs-table-color: #{$gray-900};
 		th,
 		tr {
 			background-color: var(--bs-table-bg);
 		}
 	}
 	th {
-		i {
+		.btn {
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			border: none !important;
+			justify-content: flex-end;
+			font-size: rem(14);
+			font-weight: 500;
+			color: var(--bs-table-color);
+			transition: opacity 0.2s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.85;
+				}
+			}
 			&::before {
-				font-size: 16px;
+				font-size: rem(16);
 			}
 		}
 	}
