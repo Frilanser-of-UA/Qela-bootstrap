@@ -7,18 +7,6 @@
 		margin-bottom: 0;
 	}
 	.table-borderless {
-		thead {
-			position: relative;
-			&::after {
-				content: "";
-				width: 100%;
-				height: 1px;
-				background-color: $info-300;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-			}
-		}
 	}
 	.table-light {
 		--bs-table-bg: #{$gray-200};
@@ -108,7 +96,21 @@
 			}
 		}
 	}
+	.qela-no--hover {
+		--bs-table-hover-bg: #{$white};
+		td {
+			cursor: unset !important;
+		}
+		&:hover {
+			background: var(--bs-table-hover-bg);
+		}
+	}
+	.qela-clamp {
+		word-break: break-all;
+		overflow-wrap: break-word;
+	}
 }
+
 .qela-tables {
 	padding: 0;
 	padding-bottom: rem(8);
@@ -228,6 +230,7 @@
 		overflow: visible;
 	}
 }
+
 .qela-table-grid {
 	width: 100%;
 	font-size: 12px;
@@ -287,7 +290,7 @@
 		}
 	}
 	a {
-		--bs-link-color: #212529;
+		--bs-link-color: #{$gray-900};
 		text-decoration: none;
 	}
 	&.subrow {
