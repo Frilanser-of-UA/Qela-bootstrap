@@ -1,4 +1,8 @@
 .badge {
+	border: 0px solid transparent;
+	&.border-1 {
+		border-width: var(--bs-border-width);
+	}
 	&[class*="ic-"] {
 		display: inline-flex;
 		align-items: center;
@@ -42,14 +46,13 @@
 		}
 	}
 }
-
 .qela-badge {
 	&.small {
+		--bs-badge-color: #{$white};
 		padding: 2px 4px;
 		font-size: 10px;
 		text-align: center;
 		min-width: 14px;
-		color: $white !important;
 	}
 
 	&.item {
@@ -61,6 +64,7 @@
 		font-size: 14px;
 	}
 }
+
 .qela-list-num {
 	padding: rem(4);
 	display: flex;
@@ -72,6 +76,7 @@
 	border-radius: 30px;
 	color: $info-900;
 }
+
 .qela-counter {
 	font-weight: 600;
 	font-size: rem(9);
@@ -85,112 +90,169 @@
 	padding: rem(2);
 	background-color: $danger;
 }
+
 .qela-badge-primary {
-	background-color: #{rgba($primary, 0.1)};
-	color: $warning;
+	background-color: $primary-200;
+	color: $primary-900;
+	border-color: $primary-600;
 }
 
 .qela-badge-secondary {
-	background-color: #{rgba($secondary, 0.1)};
-	color: $secondary;
+	background-color: $secondary-200;
+	color: $secondary-900;
+	border-color: $secondary-600;
 }
 
 .qela-badge-danger {
-	background-color: $danger-100;
-	color: $danger-600;
+	background-color: $danger-200;
+	color: $danger-900;
+	border-color: $danger-600;
 }
 
 .qela-badge-success {
-	background-color: $success-100;
-	color: $success-700;
+	background-color: $success-200;
+	color: $success-900;
+	border-color: $success-600;
 }
 
 .qela-badge-warning {
-	background-color: #{rgba($warning, 0.1)};
-	color: $warning;
+	background-color: $warning-200;
+	color: $warning-900;
+	border-color: $warning-600;
+}
+.qela-badge-info {
+	background-color: $info-200;
+	color: $info-900;
+	border-color: $info;
+}
+.qela-badge-light {
+	background-color: $white;
+	color: $info-900;
+	border-color: $info;
 }
 
 .qela-badge-telent {
 	&.text-red {
 		color: $telent-red-700;
-		background-color: $telent-red-100;
+		background-color: $telent-red-200;
 	}
 
 	&.text-violet {
 		color: $telent-violet-700;
-		background-color: $telent-violet-100;
+		background-color: $telent-violet-200;
 	}
 
 	&.text-lightgreen {
 		color: $telent-lightgreen-700;
-		background-color: $telent-lightgreen-100;
+		background-color: $telent-lightgreen-200;
 	}
 
 	&.text-orange {
 		color: $telent-orange-700;
-		background-color: $telent-orange-100;
+		background-color: $telent-orange-200;
 	}
 
 	&.text-green {
 		color: $telent-green-700;
-		background-color: $telent-green-100;
+		background-color: $telent-green-200;
 	}
 
 	&.text-lightblue {
 		color: $telent-lightblue-700;
-		background-color: $telent-lightblue-100;
+		background-color: $telent-lightblue-200;
 	}
 
 	&.text-blue {
 		color: $telent-blue-700;
-		background-color: $telent-blue-100;
+		background-color: $telent-blue-200;
 	}
 
 	&.text-pink {
 		color: $telent-pink-700;
-		background-color: $telent-pink-100;
+		background-color: $telent-pink-200;
 	}
 
 	&.text-gray {
 		color: $gray-700;
-		background-color: $gray-100;
+		background-color: $gray-200;
 	}
-
+	// ==========================================
 	&.red {
-		background-color: $telent-red-600;
+		background-color: $telent-red-200;
+		color: $telent-red-900;
+		border-color: $telent-red-700;
+		i {
+			color: $telent-red-700;
+		}
 	}
 
 	&.violet {
-		background-color: $telent-violet-600;
-	}
-
-	&.lightgreen {
-		background-color: $telent-lightgreen-600;
+		background-color: $telent-violet-200;
+		color: $telent-violet-900;
+		border-color: $telent-violet-700;
+		i {
+			color: $telent-violet-700;
+		}
 	}
 
 	&.orange {
-		background-color: $telent-orange-600;
+		background-color: $telent-orange-200;
+		color: $telent-orange-900;
+		border-color: $telent-orange-700;
+		i {
+			color: $telent-orange-700;
+		}
+	}
+
+	&.yellow {
+		background-color: $telent-yellow-200;
+		color: $telent-yellow-900;
+		border-color: $telent-yellow-700;
+		i {
+			color: $telent-yellow-700;
+		}
 	}
 
 	&.green {
-		background-color: $telent-green-600;
+		background-color: $telent-green-200;
+		color: $telent-green-900;
+		border-color: $telent-green-700;
+		i {
+			color: $telent-green-700;
+		}
 	}
 
 	&.lightblue {
-		background-color: $telent-lightblue-600;
+		background-color: $telent-lightblue-200;
+		color: $telent-lightblue-900;
+		border-color: $telent-lightblue-700;
+		i {
+			color: $telent-lightblue-700;
+		}
 	}
 
 	&.blue {
-		background-color: $telent-blue-600;
+		background-color: $telent-blue-200;
+		color: $telent-blue-900;
+		border-color: $telent-blue-700;
+		i {
+			color: $telent-blue-700;
+		}
 	}
 
 	&.pink {
-		background-color: $telent-pink-600;
+		background-color: $telent-pink-200;
+		color: $telent-pink-900;
+		border-color: $telent-pink-700;
+		i {
+			color: $telent-pink-700;
+		}
 	}
 
 	&.vote {
-		color: $black;
-		background-color: #f7efc0;
+		color: $primary-900;
+		background-color: $primary-200;
+		border-color: $primary-700;
 		display: inline-flex;
 		align-items: center;
 		&.large-xl {
@@ -206,6 +268,71 @@
 					margin-left: 0;
 				}
 			}
+		}
+	}
+}
+
+.qela-status-badge {
+	--bs-badge-color: #{$white};
+	--ql-badge-bg: #{$primary};
+	--ql-badge-color-icon: var(--bs-badge-color);
+	--ql-badge-border-color: var(--ql-badge-bg);
+	color: var(--bs-badge-color);
+	background-color: var(--ql-badge-bg);
+	border: 1px solid var(--ql-badge-border-color);
+	padding: 0 rem(8);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: rem(14);
+	line-height: 1;
+	height: 30px;
+	min-width: 30px;
+	border-radius: 20px;
+	&[class*="ic-"] {
+		&::before {
+			font-size: 20px;
+			margin: 0px rem(4) 0px 0px;
+			color: var(--ql-badge-color-icon);
+		}
+	}
+	&.secondary {
+		--bs-badge-color: #{$secondary-800};
+		--ql-badge-bg: #{$secondary-100};
+		--ql-badge-color-icon: #{$secondary};
+		--ql-badge-border-color: #{$secondary-400};
+	}
+	&.success {
+		--bs-badge-color: #{$success-900};
+		--ql-badge-bg: #{$success-100};
+		--ql-badge-color-icon: #{$success-700};
+		--ql-badge-border-color: #{$success-700};
+	}
+	&.warning {
+		--bs-badge-color: #{$warning-900};
+		--ql-badge-bg: #{$warning-100};
+		--ql-badge-color-icon: #{$warning-600};
+		--ql-badge-border-color: #{$warning-400};
+	}
+	&.danger {
+		--ql-badge-bg: #{$danger-100};
+		--ql-badge-color-icon: #{$danger};
+	}
+	&.circel {
+		padding: 0;
+		border-width: 0;
+		&[class*="ic-"] {
+			&::before {
+				margin: 0;
+			}
+		}
+	}
+	&.sm {
+		height: 24px;
+		min-width: 24px;
+		border-radius: 20px;
+		&::before {
+			font-size: 16px;
 		}
 	}
 }
