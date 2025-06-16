@@ -1,11 +1,8 @@
 // Wrapper for the tooltip content
 .tooltip {
 	z-index: 1200;
+	--ql-tooltip-border-color: #{$gray-300};
 }
-.tooltip-inner {
-	box-shadow: $box-shadow;
-}
-
 .qela-admin {
 	width: 30px;
 	height: 30px;
@@ -72,6 +69,77 @@
 	&.settings {
 		.tooltip-inner {
 			transform: translateY(5px);
+		}
+	}
+}
+.custom-tooltip {
+	--bs-tooltip-padding-y: 0.75rem;
+	--bs-tooltip-arrow-width: 14px;
+	--bs-tooltip-arrow-height: 6px;
+	&.bs-tooltip-bottom {
+		.tooltip-arrow {
+			&::after {
+				border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+				border-bottom-color: var(--ql-tooltip-border-color);
+				bottom: -1px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	&.bs-tooltip-top {
+		.tooltip-arrow {
+			&::after {
+				border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+				border-top-color: var(--ql-tooltip-border-color);
+				top: -1px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	&.bs-tooltip-end {
+		.tooltip-arrow {
+			&::after {
+				border-width: calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height)
+					calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+				border-right-color: var(--ql-tooltip-border-color);
+				top: 50%;
+				left: 0px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&.bs-tooltip-start {
+		.tooltip-arrow {
+			&::after {
+				border-width: calc(var(--bs-tooltip-arrow-width) * 0.5) 0 calc(var(--bs-tooltip-arrow-width) * 0.5)
+					var(--bs-tooltip-arrow-height);
+				border-left-color: var(--ql-tooltip-border-color);
+				top: 50%;
+				right: 0px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.tooltip-inner {
+		border: 1px solid var(--ql-tooltip-border-color);
+		z-index: 1;
+		position: relative;
+	}
+	.tooltip-arrow {
+		z-index: 2;
+		&::before {
+			z-index: 2;
+		}
+		&::after {
+			content: "";
+			--bs-tooltip-arrow-height: 7px;
+			--bs-tooltip-arrow-width: 16px;
+			position: absolute;
+			border-color: transparent;
+			border-style: solid;
 		}
 	}
 }
