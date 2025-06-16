@@ -38,26 +38,38 @@
 			}
 		}
 		&.danger {
-			color: $danger-600;
+			color: $danger-800;
+			&::before {
+				color: $danger-600;
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: $danger-100;
+					color: $danger-600;
 				}
 			}
 		}
 		&.success {
-			color: $success-600;
+			color: $success-900;
+			&::before {
+				color: $success-600;
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: $success-100;
+					color: $success-600;
 				}
 			}
 		}
 		&.warning {
-			color: $warning-600;
+			color: $warning-900;
+			&::before {
+				color: $warning-600;
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: $warning-100;
+					color: $warning-600;
 				}
 			}
 		}
