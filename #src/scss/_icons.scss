@@ -1,584 +1,593 @@
 %ic {
-    font-family: "icons";
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    font-size: 24px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 24px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 [class^="ic-"],
 [class*="ic-"] {
-    &:before {
-        @extend %ic;
-        display: block;
-    }
+	&:before {
+		@extend %ic;
+		display: block;
+	}
 
-    &.ico-md {
-        &::before {
-            font-size: 18px;
-        }
-    }
+	&.ico-md {
+		&::before {
+			font-size: 18px;
+		}
+	}
 
-    &.ico-sm {
-        &::before {
-            font-size: 16px;
-        }
-    }
+	&.ico-sm {
+		&::before {
+			font-size: 16px;
+		}
+	}
 }
 
 .ic-bell:before {
-    content: "\e900";
+	content: "\e900";
 }
 .ic-box-arrow:before {
-    content: "\e901";
+	content: "\e901";
 }
 .ic-calendar:before {
-    content: "\e902";
+	content: "\e902";
 }
 .ic-city:before {
-    content: "\e904";
+	content: "\e904";
 }
 .ic-clock:before {
-    content: "\e905";
+	content: "\e905";
 }
 .ic-cloze:before {
-    content: "\e906";
+	content: "\e906";
 }
 .ic-commit:before {
-    content: "\e907";
+	content: "\e907";
 }
 .ic-delete:before {
-    content: "\e908";
+	content: "\e908";
 }
 .ic-dollar:before {
-    content: "\e909";
+	content: "\e909";
 }
 .ic-dots:before {
-    content: "\e90a";
+	content: "\e90a";
 }
 .ic-dots-2:before {
-    content: "\e90b";
+	content: "\e90b";
 }
 .ic-grip-horizontal:before {
-    content: "\e9a6";
+	content: "\e9a6";
 }
 .ic-dots-row:before {
-    content: "\e964";
+	content: "\e964";
 }
 .ic-download:before {
-    content: "\e90c";
+	content: "\e90c";
 }
 .ic-files:before {
-    content: "\e90e";
+	content: "\e90e";
 }
 .ic-jostik:before {
-    content: "\e921";
+	content: "\e921";
 }
 .ic-latter:before {
-    content: "\e922";
+	content: "\e922";
 }
 .ic-lattice:before {
-    content: "\e923";
+	content: "\e923";
 }
 .ic-mail:before {
-    content: "\e924";
+	content: "\e924";
 }
 .ic-map:before {
-    content: "\e925";
+	content: "\e925";
 }
 .ic-mark:before {
-    content: "\e926";
+	content: "\e926";
 }
 .ic-no-success:before {
-    content: "\e927";
+	content: "\e927";
 }
 .ic-notes:before {
-    content: "\e928";
+	content: "\e928";
 }
 .ic-people:before {
-    content: "\e929";
+	content: "\e929";
 }
 .ic-phone:before {
-    content: "\e92a";
+	content: "\e92a";
 }
 .ic-plus:before {
-    content: "\e92b";
+	content: "\e92b";
 }
 .ic-print:before {
-    content: "\e92c";
+	content: "\e92c";
 }
 .ic-search:before {
-    content: "\e92d";
+	content: "\e92d";
 }
 .ic-settings:before {
-    content: "\e92e";
+	content: "\e92e";
 }
 .ic-spead:before {
-    content: "\e92f";
+	content: "\e92f";
 }
 .ic-speaker:before {
-    content: "\e930";
+	content: "\e930";
 }
 .ic-stop:before {
-    content: "\e931";
+	content: "\e931";
 }
 .ic-stop-2:before {
-    content: "\e932";
+	content: "\e932";
 }
 .ic-success:before {
-    content: "\e933";
+	content: "\e933";
 }
 .ic-success-2:before {
-    content: "\e934";
+	content: "\e934";
 }
 .ic-tent:before {
-    content: "\e935";
+	content: "\e935";
 }
 .ic-arrow-down:before {
-    content: "\e967";
+	content: "\e967";
 }
 .ic-arrow-left:before {
-    content: "\e971";
+	content: "\e971";
 }
 .ic-send:before {
-    content: "\e939";
+	content: "\e939";
 }
 .ic-arrow:before {
-    content: "\e937";
+	content: "\e937";
 }
 .ic-eye-close:before {
-    content: "\e938";
+	content: "\e938";
 }
 .ic-donats:before {
-    content: "\e93d";
+	content: "\e93d";
 }
 .ic-error-warning-fill:before {
-    content: "\e93e";
+	content: "\e93e";
 }
 .ic-alert-triangle:before {
-    content: "\e93f";
+	content: "\e93f";
 }
 .ic-eye:before {
-    content: "\e940";
+	content: "\e940";
 }
 .ic-chevron-right:before {
-    content: "\e942";
+	content: "\e942";
 }
 .ic-chevron-left:before {
-    content: "\e943";
+	content: "\e943";
 }
 .ic-chevron-up:before {
-    content: "\e953";
+	content: "\e953";
 }
 .ic-chevron:before {
-    content: "\e903";
+	content: "\e903";
 }
 .ic-check:before {
-    content: "\e936";
+	content: "\e936";
 }
 .ic-check-big:before {
-    content: "\e965";
+	content: "\e965";
 }
 .ic-check-filled:before {
-    content: "\e944";
+	content: "\e944";
 }
 .ic-add:before {
-    content: "\e945";
+	content: "\e945";
 }
 .ic-info:before {
-    content: "\e946";
+	content: "\e946";
 }
 .ic-file-copy:before {
-    content: "\e947";
+	content: "\e947";
 }
 .ic-circle:before {
-    content: "\e948";
+	content: "\e948";
 }
 .ic-flame:before {
-    content: "\e94b";
+	content: "\e94b";
 }
 .ic-exclamation-mark:before {
-    content: "\e94d";
+	content: "\e94d";
 }
 .ic-chart-pie:before {
-    content: "\e94e";
+	content: "\e94e";
 }
 .ic-bulb:before {
-    content: "\e94f";
+	content: "\e94f";
 }
 .ic-camera-plus:before {
-    content: "\e950";
+	content: "\e950";
 }
 .ic-checkmark-starburst-filled:before {
-    content: "\e951";
+	content: "\e951";
 }
 .ic-donation:before {
-    content: "\e952";
+	content: "\e952";
 }
 .ic-img:before {
-    content: "\e954";
+	content: "\e954";
 }
 .ic-img-plus:before {
-    content: "\e955";
+	content: "\e955";
 }
 .ic-log-out:before {
-    content: "\e956";
+	content: "\e956";
 }
 .ic-upload:before {
-    content: "\e957";
+	content: "\e957";
 }
 .ic-text-doc:before {
-    content: "\e958";
+	content: "\e958";
 }
 .ic-share-2:before {
-    content: "\e959";
+	content: "\e959";
 }
 .ic-mobile-message:before {
-    content: "\e95a";
+	content: "\e95a";
 }
 .ic-message-square:before {
-    content: "\e95b";
+	content: "\e95b";
 }
 .ic-lock:before {
-    content: "\e95c";
+	content: "\e95c";
 }
 .ic-loader:before {
-    content: "\e95d";
+	content: "\e95d";
 }
 .ic-info-filled:before {
-    content: "\e95e";
+	content: "\e95e";
 }
 .ic-alert-filled:before {
-    content: "\e95f";
+	content: "\e95f";
 }
 .ic-help-circle-filled:before {
-    content: "\e960";
+	content: "\e960";
 }
 .ic-help-circle:before {
-    content: "\e961";
+	content: "\e961";
 }
 .ic-alert-triangle-2:before {
-    content: "\e962";
+	content: "\e962";
 }
 .ic-alert-starburst-filled:before {
-    content: "\e963";
+	content: "\e963";
 }
 .ic-article:before {
-    content: "\e972";
+	content: "\e972";
 }
 .ic-award:before {
-    content: "\e973";
+	content: "\e973";
 }
 .ic-layout-grid:before {
-    content: "\e979";
+	content: "\e979";
 }
 .ic-layout-kanban:before {
-    content: "\e97a";
+	content: "\e97a";
 }
 .ic-list-check:before {
-    content: "\e97b";
+	content: "\e97b";
 }
 .ic-notebook:before {
-    content: "\e97c";
+	content: "\e97c";
 }
 .ic-swipe:before {
-    content: "\e97d";
+	content: "\e97d";
 }
 .ic-trophy:before {
-    content: "\e97e";
+	content: "\e97e";
 }
 .ic-wallpaper:before {
-    content: "\e97f";
+	content: "\e97f";
 }
 .ic-equal:before {
-    content: "\e980";
+	content: "\e980";
 }
 .ic-hand-click:before {
-    content: "\e981";
+	content: "\e981";
 }
 .ic-letter-c:before {
-    content: "\e982";
+	content: "\e982";
 }
 .ic-link:before {
-    content: "\e914";
+	content: "\e914";
 }
 .ic-link-2:before {
-    content: "\e983";
+	content: "\e983";
 }
 .ic-refresh:before {
-    content: "\e984";
+	content: "\e984";
 }
 .ic-triangle-default:before {
-    content: "\e985";
+	content: "\e985";
 }
 .ic-triangle-filled:before {
-    content: "\e986";
+	content: "\e986";
 }
 .ic-triangle-inverted-default:before {
-    content: "\e987";
+	content: "\e987";
 }
 .ic-triangle-inverted-filled:before {
-    content: "\e988";
+	content: "\e988";
 }
 .ic-triangle-inverted-small:before {
-    content: "\e989";
+	content: "\e989";
 }
 .ic-triangle-small:before {
-    content: "\e98a";
+	content: "\e98a";
 }
 .ic-arrows-minimize:before {
-    content: "\e98b";
+	content: "\e98b";
 }
 .ic-arrows-maximize:before {
-    content: "\e98c";
+	content: "\e98c";
 }
 .ic-arrow-move:before {
-    content: "\e98d";
+	content: "\e98d";
 }
 .ic-arrow-autofit-content:before {
-    content: "\e98e";
+	content: "\e98e";
 }
 .ic-branch:before {
-    content: "\e98f";
+	content: "\e98f";
 }
 .ic-edit:before {
-    content: "\e990";
+	content: "\e990";
 }
 .ic-key:before {
-    content: "\e991";
+	content: "\e991";
 }
 .ic-minus:before {
-    content: "\e992";
+	content: "\e992";
 }
 .ic-redo:before {
-    content: "\e910";
+	content: "\e910";
 }
 .ic-undo:before {
-    content: "\e911";
+	content: "\e911";
 }
 .ic-triangle-left-small:before {
-    content: "\e912";
+	content: "\e912";
 }
 .ic-triangle-right-small:before {
-    content: "\e913";
+	content: "\e913";
 }
 .ic-un-link:before {
-    content: "\e993";
+	content: "\e993";
 }
 .ic-location:before {
-    content: "\e915";
+	content: "\e915";
 }
 .ic-google-map:before {
-    content: "\e916";
+	content: "\e916";
 }
 .ic-img-32:before {
-    content: "\e917";
+	content: "\e917";
 }
 .ic-scan:before {
-    content: "\e918";
+	content: "\e918";
 }
 .ic-play:before {
-    content: "\e919";
+	content: "\e919";
 }
 .ic-img-plus-40:before {
-    content: "\e91a";
+	content: "\e91a";
 }
 .ic-fb:before {
-    content: "\e91b";
+	content: "\e91b";
 }
 .ic-inst:before {
-    content: "\e91c";
+	content: "\e91c";
 }
 .ic-teleg:before {
-    content: "\e91d";
+	content: "\e91d";
 }
 .ic-twit:before {
-    content: "\e91e";
+	content: "\e91e";
 }
 .ic-youtube:before {
-    content: "\e91f";
+	content: "\e91f";
 }
 .ic-twit-new:before {
-    content: "\e920";
+	content: "\e920";
 }
 .ic-adjustments-h-24:before {
-    content: "\e994";
+	content: "\e994";
 }
 .ic-arrow-big-down:before {
-    content: "\e995";
+	content: "\e995";
 }
 .ic-arrow-big-up:before {
-    content: "\e996";
+	content: "\e996";
 }
 .ic-arrows-down-up:before {
-    content: "\e997";
+	content: "\e997";
 }
 .ic-video-40:before {
-    content: "\e998";
+	content: "\e998";
 }
 .ic-hexagon-plus-24:before {
-    content: "\e999";
+	content: "\e999";
 }
 .ic-bill:before {
-    content: "\e99c";
+	content: "\e99c";
 }
 .ic-chevron-down-right:before {
-    content: "\e99d";
+	content: "\e99d";
 }
 .ic-inkedin:before {
-    content: "\e99e";
+	content: "\e99e";
 }
 .ic-triangle-2-down:before {
-    content: "\e99f";
+	content: "\e99f";
 }
 .ic-triangle-2-down-right:before {
-    content: "\e9a0";
+	content: "\e9a0";
 }
 .ic-triangle-2-up:before {
-    content: "\e9a1";
+	content: "\e9a1";
 }
 .ic-web-site:before {
-    content: "\e9a2";
+	content: "\e9a2";
 }
 .ic-world:before {
-    content: "\e9a3";
+	content: "\e9a3";
 }
 .ic-credit-card:before {
-    content: "\e9a4";
+	content: "\e9a4";
 }
 .ic-tag:before {
-    content: "\e9a5";
+	content: "\e9a5";
 }
 .ic-hand:before {
-    content: "\e9a7";
+	content: "\e9a7";
 }
 .ic-maps-global:before {
-    content: "\e9a9";
+	content: "\e9a9";
 }
 .ic-maps-global-28:before {
-    content: "\e9aa";
+	content: "\e9aa";
 }
 .ic-message-circle:before {
-    content: "\e9ab";
+	content: "\e9ab";
 }
 .ic-message-circle-filled-28:before {
-    content: "\e9ad";
+	content: "\e9ad";
 }
 .ic-player-play:before {
-    content: "\e9ae";
+	content: "\e9ae";
 }
 .ic-radiobutton:before {
-    content: "\e9af";
+	content: "\e9af";
 }
 .ic-scroll:before {
-    content: "\e9b0";
+	content: "\e9b0";
 }
 .ic-square-check:before {
-    content: "\e9b2";
+	content: "\e9b2";
 }
 .ic-star:before {
-    content: "\e9b3";
+	content: "\e9b3";
 }
 .ic-trophy-1:before {
-    content: "\e9b4";
+	content: "\e9b4";
 }
 .ic-trophy-2:before {
-    content: "\e9b5";
+	content: "\e9b5";
 }
 .ic-trophy-3:before {
-    content: "\e9b6";
+	content: "\e9b6";
 }
 .ic-calendar-time:before {
-    content: "\e90f";
+	content: "\e90f";
 }
 .ic-hour-glass:before {
-    content: "\e9b7";
+	content: "\e9b7";
 }
 .ic-chevrons-right:before {
-    content: "\e9b8";
+	content: "\e9b8";
 }
 .ic-chevrons-left:before {
-    content: "\e9b9";
+	content: "\e9b9";
 }
 .ic-donation-outlined:before {
-    content: "\e9ba";
+	content: "\e9ba";
 }
 .ic-diamond:before {
-    content: "\e93a";
+	content: "\e93a";
 }
 .ic-diamond-filled:before {
-    content: "\e93b";
+	content: "\e93b";
 }
 .ic-voting:before {
-    content: "\e94a";
+	content: "\e94a";
 }
 .ic-voting-filled:before {
-    content: "\e96f";
+	content: "\e96f";
 }
 .ic-home:before {
-    content: "\e968";
+	content: "\e968";
 }
 .ic-home-filled:before {
-    content: "\e969";
+	content: "\e969";
 }
 .ic-user:before {
-    content: "\e96c";
+	content: "\e96c";
 }
 .ic-user-filled:before {
-    content: "\e96d";
+	content: "\e96d";
 }
 .ic-bell-filled:before {
-    content: "\e99b";
+	content: "\e99b";
 }
 .ic-qela:before {
-    content: "\e941";
+	content: "\e941";
 }
 .ic-qela-filled:before {
-    content: "\e94c";
+	content: "\e94c";
 }
 .ic-dislike-filled:before {
-    content: "\e966";
+	content: "\e966";
 }
 .ic-like-filled:before {
-    content: "\e96a";
+	content: "\e96a";
 }
 .ic-like:before {
-    content: "\e96b";
+	content: "\e96b";
 }
 .ic-dislike:before {
-    content: "\e96e";
+	content: "\e96e";
 }
 .ic-archive:before {
-    content: "\e970";
+	content: "\e970";
 }
 .ic-mute:before {
-    content: "\e974";
+	content: "\e974";
 }
 .ic-report:before {
-    content: "\e975";
+	content: "\e975";
 }
 .ic-task:before {
-    content: "\e976";
+	content: "\e976";
 }
 .ic-reply:before {
-    content: "\e977";
+	content: "\e977";
 }
 .ic-book:before {
-    content: "\e93c";
+	content: "\e93c";
 }
 .ic-gift:before {
-    content: "\e978";
+	content: "\e978";
 }
 .ic-unpin:before {
-    content: "\e99a";
+	content: "\e99a";
 }
 .ic-pin:before {
-    content: "\e9a8";
+	content: "\e9a8";
 }
 .ic-cookie:before {
-    content: "\e90d";
+	content: "\e90d";
+}
+.ic-achievement-filled:before {
+	content: "\e949";
+}
+.ic-menu-order:before {
+	content: "\e9ac";
+}
+.ic-rules:before {
+	content: "\e9bd";
 }
