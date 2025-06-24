@@ -131,124 +131,14 @@
 	border-color: $info;
 }
 
-.qela-badge-telent {
-	&.text-red {
-		color: $telent-red-700;
-		background-color: $telent-red-200;
-	}
-
-	&.text-violet {
-		color: $telent-violet-700;
-		background-color: $telent-violet-200;
-	}
-
-	&.text-lightgreen {
-		color: $telent-lightgreen-700;
-		background-color: $telent-lightgreen-200;
-	}
-
-	&.text-orange {
-		color: $telent-orange-700;
-		background-color: $telent-orange-200;
-	}
-
-	&.text-green {
-		color: $telent-green-700;
-		background-color: $telent-green-200;
-	}
-
-	&.text-lightblue {
-		color: $telent-lightblue-700;
-		background-color: $telent-lightblue-200;
-	}
-
-	&.text-blue {
-		color: $telent-blue-700;
-		background-color: $telent-blue-200;
-	}
-
-	&.text-pink {
-		color: $telent-pink-700;
-		background-color: $telent-pink-200;
-	}
-
-	&.text-gray {
-		color: $gray-700;
-		background-color: $gray-200;
+.qela-badge-talent {
+	color: var(--ql-talent-color);
+	background-color: var(--ql-talent-bg);
+	border-color: var(--ql-talent-border-color);
+	i {
+		color: var(--ql-talent-border-color);
 	}
 	// ==========================================
-	&.red {
-		background-color: $telent-red-200;
-		color: $telent-red-900;
-		border-color: $telent-red-700;
-		i {
-			color: $telent-red-700;
-		}
-	}
-
-	&.violet {
-		background-color: $telent-violet-200;
-		color: $telent-violet-900;
-		border-color: $telent-violet-700;
-		i {
-			color: $telent-violet-700;
-		}
-	}
-
-	&.orange {
-		background-color: $telent-orange-200;
-		color: $telent-orange-900;
-		border-color: $telent-orange-700;
-		i {
-			color: $telent-orange-700;
-		}
-	}
-
-	&.yellow {
-		background-color: $telent-yellow-200;
-		color: $telent-yellow-900;
-		border-color: $telent-yellow-700;
-		i {
-			color: $telent-yellow-700;
-		}
-	}
-
-	&.green {
-		background-color: $telent-green-200;
-		color: $telent-green-900;
-		border-color: $telent-green-700;
-		i {
-			color: $telent-green-700;
-		}
-	}
-
-	&.lightblue {
-		background-color: $telent-lightblue-200;
-		color: $telent-lightblue-900;
-		border-color: $telent-lightblue-700;
-		i {
-			color: $telent-lightblue-700;
-		}
-	}
-
-	&.blue {
-		background-color: $telent-blue-200;
-		color: $telent-blue-900;
-		border-color: $telent-blue-700;
-		i {
-			color: $telent-blue-700;
-		}
-	}
-
-	&.pink {
-		background-color: $telent-pink-200;
-		color: $telent-pink-900;
-		border-color: $telent-pink-700;
-		i {
-			color: $telent-pink-700;
-		}
-	}
-
 	&.vote {
 		color: $primary-900;
 		background-color: $primary-200;

@@ -15,7 +15,7 @@ $black: #000;
 
 // scss-docs-start color-variables
 $yellow: #ffe000;
-$purple: #8981f8;
+$purple: #9188ff;
 $orange: #ff7c02;
 $red: #ff4136;
 $green: #25dd29;
@@ -42,17 +42,17 @@ $primary-200: #fff8c1;
 $primary-300: #fff399;
 $primary-400: #ffeb75;
 $primary-500: $primary;
-$primary-600: #f0d302;
-$primary-700: #d2b800;
-$primary-800: #a28d00;
+$primary-600: #dec402;
+$primary-700: #b49e01;
+$primary-800: #857500;
 $primary-900: #635700;
 
 $secondary-100: #f9f9ff;
 $secondary-200: #ecebff;
 $secondary-300: #d5d3ff;
-$secondary-400: #bab6ff;
+$secondary-400: #ada6ff;
 $secondary-500: $secondary;
-$secondary-600: #766dea;
+$secondary-600: #8169eb;
 $secondary-700: #6550c4;
 $secondary-800: #473690;
 $secondary-900: #352676;
@@ -96,125 +96,43 @@ $info-600: $gray-600;
 $info-700: $gray-700;
 $info-800: $gray-800;
 $info-900: $gray-900;
-// ============== telent color =================
-$telent-red-100: #fff4f4;
-$telent-red-200: #ffe9e9;
-$telent-red-300: #ffb0b0;
-$telent-red-400: #ff9797;
-$telent-red-500: #ff8484;
-$telent-red-600: #f16e77;
-$telent-red-700: #e24242;
-$telent-red-800: #e51d1d;
-$telent-red-900: #dd1b1b;
+// ============== talent color=================
+$talent-red-200: #ffcccc;
+$talent-red-700: #d92525;
+$talent-red-900: #921c14;
 
-$telent-violet-100: #f9f7ff;
-$telent-violet-200: #f3effe;
-$telent-violet-300: #bda9fc;
-$telent-violet-400: #b99efd;
-$telent-violet-500: #aa8efa;
-$telent-violet-600: #a386f2;
-$telent-violet-700: #8f6cf1;
-$telent-violet-800: #7b58df;
-$telent-violet-900: #633bd4;
+$talent-violet-200: #ebe4ff;
+$talent-violet-700: #7b57e2;
+$talent-violet-900: #5027c3;
 
-$telent-green-100: #f5faf9;
-$telent-green-200: #eaf6f4;
-$telent-green-300: #81ead6;
-$telent-green-400: #7ae0cd;
-$telent-green-500: #59d7be;
-$telent-green-600: #37c3a8;
-$telent-green-700: #01a888;
-$telent-green-800: #29917d;
-$telent-green-900: #25816f;
+$talent-orange-200: #ffdcb9;
+$talent-orange-700: #bf6b17;
+$talent-orange-900: #723900;
 
-$telent-orange-100: #fff9f3;
-$telent-orange-200: #fff2e7;
-$telent-orange-300: #ffc892;
-$telent-orange-400: #ffb966;
-$telent-orange-500: #ffac5c;
-$telent-orange-600: #f2a152;
-$telent-orange-700: #f58920;
-$telent-orange-800: #fa7312;
-$telent-orange-900: #ec690c;
+$talent-yellow-200: #fff9a6;
+$talent-yellow-700: #9a9000;
+$talent-yellow-900: #5b5500;
 
-$telent-lightgreen-100: #f5fcf7;
-$telent-lightgreen-200: #ecf9ef;
-$telent-lightgreen-300: #a0efaf;
-$telent-lightgreen-400: #80f49b;
-$telent-lightgreen-500: #70eb8d;
-$telent-lightgreen-600: #75d182;
-$telent-lightgreen-700: #50be60;
-$telent-lightgreen-800: #39b349;
-$telent-lightgreen-900: #389444;
+$talent-green-200: #cfffd6;
+$talent-green-700: #2c9d3c;
+$talent-green-900: #086014;
 
-$telent-lightblue-100: #f4fcff;
-$telent-lightblue-200: #e8f6ff;
-$telent-lightblue-300: #b0e2f7;
-$telent-lightblue-400: #9fd6fb;
-$telent-lightblue-500: #97cff5;
-$telent-lightblue-600: #72c1f4;
-$telent-lightblue-700: #36a4ed;
-$telent-lightblue-800: #0a8fe9;
-$telent-lightblue-900: #006eb7;
+$talent-lightblue-200: #c3faff;
+$talent-lightblue-700: #2096a3;
+$talent-lightblue-900: #005963;
 
-$telent-blue-100: #f4f9ff;
-$telent-blue-200: #e9f3ff;
-$telent-blue-300: #b5d2f4;
-$telent-blue-400: #a6c5f6;
-$telent-blue-500: #8bb3f4;
-$telent-blue-600: #71a9ff;
-$telent-blue-700: #258bff;
-$telent-blue-800: #1677e7;
-$telent-blue-900: #2668b3;
+$talent-blue-200: #c7e2ff;
+$talent-blue-700: #397ac5;
+$talent-blue-900: #03448f;
 
-$telent-pink-100: #fcf4ff;
-$telent-pink-200: #f9eaff;
-$telent-pink-300: #edbbff;
-$telent-pink-400: #e395ff;
-$telent-pink-500: #dd7cff;
-$telent-pink-600: #cf6ef1;
-$telent-pink-700: #ca4ef5;
-$telent-pink-800: #c732fc;
-$telent-pink-900: #9941b9;
-// ============== telent color =================
-// ============== telent color new=================
-$telent-red-200: #ffcccc;
-$telent-red-700: #d92525;
-$telent-red-900: #921c14;
-
-$telent-violet-200: #ebe4ff;
-$telent-violet-700: #7b57e2;
-$telent-violet-900: #5027c3;
-
-$telent-orange-200: #ffdcb9;
-$telent-orange-700: #bf6b17;
-$telent-orange-900: #723900;
-
-$telent-yellow-200: #fff9a6;
-$telent-yellow-700: #9a9000;
-$telent-yellow-900: #5b5500;
-
-$telent-green-200: #cfffd6;
-$telent-green-700: #2c9d3c;
-$telent-green-900: #086014;
-
-$telent-lightblue-200: #c3faff;
-$telent-lightblue-700: #2096a3;
-$telent-lightblue-900: #005963;
-
-$telent-blue-200: #c7e2ff;
-$telent-blue-700: #397ac5;
-$telent-blue-900: #03448f;
-
-$telent-pink-200: #f3ceff;
-$telent-pink-700: #b34dd6;
-$telent-pink-900: #6d168b;
+$talent-pink-200: #f3ceff;
+$talent-pink-700: #b34dd6;
+$talent-pink-900: #6d168b;
 // -------------------------------------
-$telent-lightgreen-200: #ecf9ef;
-$telent-lightgreen-700: #50be60;
-$telent-lightgreen-900: #389444;
-
-// ============== telent color new=================
+$talent-lightgreen-200: #ecf9ef;
+$talent-lightgreen-700: #50be60;
+$talent-lightgreen-900: #389444;
+// ============== talent color new=================
 
 // ===============================================
 $primarys: (
