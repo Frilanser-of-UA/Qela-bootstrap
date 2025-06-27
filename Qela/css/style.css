@@ -18697,6 +18697,10 @@ textarea {
     padding-right: 0.75rem;
     border-color: var(--ql-talent-border-color);
   }
+  .qela-talent-item:hover.disabled {
+    border-color: transparent;
+    background-color: #fff;
+  }
 }
 .qela-talent-item.active {
   background-color: #fff;
@@ -18713,8 +18717,9 @@ textarea {
   opacity: 0;
 }
 .qela-talent-item.disabled {
-  pointer-events: none;
   opacity: 0.4;
+  cursor: pointer;
+  pointer-events: all;
 }
 .qela-talent-item > div:first-child {
   flex: 0 0 24px;
