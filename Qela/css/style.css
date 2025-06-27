@@ -17915,18 +17915,12 @@ textarea {
   align-items: center;
   gap: 16px;
 }
-@media (max-width: 1199.98px) {
-  .qela-flush .list-group-item {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-}
 .qela-flush .list-group-item > * {
   font-size: 14px;
 }
 .qela-flush .list-group-item > *:first-child {
   color: #858585;
-  flex: 0 0 37%;
+  flex: 0 0 50%;
 }
 .qela-flush .list-group-item > *:last-child {
   color: #2c2c2c;
@@ -19919,7 +19913,7 @@ header .container-xxl > .row [class*=col]:last-child {
 
 .qela-table {
   overflow-y: hidden;
-  font-size: 14px;
+  font-size: 0.875rem;
   table-layout: auto;
 }
 .qela-table .table {
@@ -19960,17 +19954,33 @@ header .container-xxl > .row [class*=col]:last-child {
 }
 .qela-table tr th:first-child,
 .qela-table tr td:first-child {
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 .qela-table tr th:last-child,
 .qela-table tr td:last-child {
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 .qela-table tr td {
   cursor: pointer;
 }
-.qela-table.large td {
-  font-size: 16px;
+.qela-table.large td,
+.qela-table.large th {
+  font-size: 1rem;
+}
+.qela-table.large tr th,
+.qela-table.large tr td {
+  padding: 0.625rem 0.5rem;
+}
+.qela-table.large tr th:first-child,
+.qela-table.large tr td:first-child {
+  padding-left: 1.5rem;
+}
+.qela-table.large tr th:last-child,
+.qela-table.large tr td:last-child {
+  padding-right: 1.5rem;
+}
+.qela-table.large tr td {
+  cursor: pointer;
 }
 .qela-table .qela-sticky {
   top: 0;

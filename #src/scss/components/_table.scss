@@ -1,6 +1,6 @@
 .qela-table {
 	overflow-y: hidden;
-	font-size: 14px;
+	font-size: rem(14);
 	table-layout: auto;
 	.table {
 		width: 100%;
@@ -47,11 +47,11 @@
 		th,
 		td {
 			&:first-child {
-				padding-left: 16px;
+				padding-left: rem(16);
 			}
 
 			&:last-child {
-				padding-right: 16px;
+				padding-right: rem(16);
 			}
 		}
 		td {
@@ -60,8 +60,25 @@
 	}
 
 	&.large {
-		td {
-			font-size: 16px;
+		td,
+		th {
+			font-size: rem(16);
+		}
+		tr {
+			th,
+			td {
+				padding: rem(10) rem(8);
+				&:first-child {
+					padding-left: rem(24);
+				}
+
+				&:last-child {
+					padding-right: rem(24);
+				}
+			}
+			td {
+				cursor: pointer;
+			}
 		}
 	}
 	.qela-sticky {

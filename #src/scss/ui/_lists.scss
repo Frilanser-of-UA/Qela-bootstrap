@@ -1,438 +1,433 @@
 .qela-list {
-    &.no-outline {
-        .list-group-item {
-            border: none;
-        }
-    }
+	&.no-outline {
+		.list-group-item {
+			border: none;
+		}
+	}
 
-    &.no-rounded {
-        .list-group-item {
-            border-radius: 0;
-        }
-    }
+	&.no-rounded {
+		.list-group-item {
+			border-radius: 0;
+		}
+	}
 
-    &.primary {
-        .list-group-item {
-            border-color: $primary-600;
-        }
-    }
+	&.primary {
+		.list-group-item {
+			border-color: $primary-600;
+		}
+	}
 
-    &.info {
-        .list-group-item {
-            border-color: $info-100;
-            background-color: $info-100;
-            transition: background-color 0.3s ease 0s;
+	&.info {
+		.list-group-item {
+			border-color: $info-100;
+			background-color: $info-100;
+			transition: background-color 0.3s ease 0s;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $info-200;
-                }
-            }
-        }
-    }
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $info-200;
+				}
+			}
+		}
+	}
 
-    .list-group-item {
-        border-color: $info-400;
-        position: relative;
-        border-radius: 0.5rem;
-        padding: 0;
+	.list-group-item {
+		border-color: $info-400;
+		position: relative;
+		border-radius: 0.5rem;
+		padding: 0;
 
-        > a {
-            border-radius: 0.5rem;
-            padding: 1rem 0.5rem 1rem 1rem;
-            display: flex;
-            text-decoration: none;
-            align-items: center;
-            color: $info-900;
+		> a {
+			border-radius: 0.5rem;
+			padding: 1rem 0.5rem 1rem 1rem;
+			display: flex;
+			text-decoration: none;
+			align-items: center;
+			color: $info-900;
 
-            p {
-                transition: color 0.3s ease 0s;
-            }
+			p {
+				transition: color 0.3s ease 0s;
+			}
 
-            .qela-previews {
-                margin-right: 1rem;
-            }
-        }
+			.qela-previews {
+				margin-right: 1rem;
+			}
+		}
 
-        & + .list-group-item {
-            border-top-width: 1px;
-        }
+		& + .list-group-item {
+			border-top-width: 1px;
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 0.5rem;
-        }
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
 
-        & > *:not(:last-child) {
-            margin-right: 0.5rem;
-        }
+		& > *:not(:last-child) {
+			margin-right: 0.5rem;
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                > a {
-                    p {
-                        color: $secondary;
-                    }
-                }
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				> a {
+					p {
+						color: $secondary;
+					}
+				}
+			}
+		}
 
-        .qela-clamp {
-            -webkit-line-clamp: 2;
-            white-space: normal;
-            display: -webkit-box;
-            margin-bottom: 0;
-        }
+		.qela-clamp {
+			-webkit-line-clamp: 2;
+			white-space: normal;
+			display: -webkit-box;
+			margin-bottom: 0;
+		}
 
-        .badge {
-            position: absolute;
-            right: 10px;
-            top: -5px;
-        }
-    }
+		.badge {
+			position: absolute;
+			right: 10px;
+			top: -5px;
+		}
+	}
 }
 
 .qela-chain {
-    background-color: $white;
-    border-radius: 12px;
-    border: 1px solid $info-400;
-    padding-top: 0;
+	background-color: $white;
+	border-radius: 12px;
+	border: 1px solid $info-400;
+	padding-top: 0;
 
-    .qela-actions {
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
+	.qela-actions {
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
 
-        h2 {
-            font-size: 1rem;
-        }
+		h2 {
+			font-size: 1rem;
+		}
 
-        p {
-            margin-bottom: 0;
-        }
-    }
+		p {
+			margin-bottom: 0;
+		}
+	}
 
-    .qela-toolbar {
-        margin-bottom: 0.5rem;
-    }
+	.qela-toolbar {
+		margin-bottom: 0.5rem;
+	}
 
-    .qela-list {
-        .list-group-item {
-            margin-bottom: 0;
+	.qela-list {
+		.list-group-item {
+			margin-bottom: 0;
 
-            &:last-child {
-                border-bottom-left-radius: 12px;
-                border-bottom-right-radius: 12px;
-            }
-        }
-    }
+			&:last-child {
+				border-bottom-left-radius: 12px;
+				border-bottom-right-radius: 12px;
+			}
+		}
+	}
 }
 
 .qela-steps {
-    counter-reset: ol-steps;
-    padding-left: 0;
-    margin-bottom: 0;
+	counter-reset: ol-steps;
+	padding-left: 0;
+	margin-bottom: 0;
 
-    .list-group-item {
-        display: flex;
-        position: relative;
-        --diameter: 32px;
-        --gap-num: 10px;
+	.list-group-item {
+		display: flex;
+		position: relative;
+		--diameter: 32px;
+		--gap-num: 10px;
 
-        h3 {
-            font-size: 1em;
-            margin-bottom: 0.25rem;
-            position: relative;
-        }
+		h3 {
+			font-size: 1em;
+			margin-bottom: 0.25rem;
+			position: relative;
+		}
 
-        .badge {
-            position: absolute;
-            right: 0;
-            top: -15px;
-        }
+		.badge {
+			position: absolute;
+			right: 0;
+			top: -15px;
+		}
 
-        p {
-            margin-bottom: 0;
-            font-size: 1em;
-        }
+		p {
+			margin-bottom: 0;
+			font-size: 1em;
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 1.5rem;
-        }
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
 
-        &::before {
-            counter-increment: ol-steps;
-            content: "" counters(ol-steps, "");
-            flex: 0 0 var(--diameter);
-            width: var(--diameter);
-            height: var(--diameter);
-            font-weight: 500;
-            font-size: 14px;
-            color: $info-900;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid $secondary;
-            border-radius: 50%;
-            margin-right: 1rem;
-        }
+		&::before {
+			counter-increment: ol-steps;
+			content: "" counters(ol-steps, "");
+			flex: 0 0 var(--diameter);
+			width: var(--diameter);
+			height: var(--diameter);
+			font-weight: 500;
+			font-size: 14px;
+			color: $info-900;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid $secondary;
+			border-radius: 50%;
+			margin-right: 1rem;
+		}
 
-        &::after {
-            content: "";
-            display: block;
-            width: 1px;
-            height: calc(100% - (var(--diameter) + var(--gap-num)));
-            background-color: $secondary;
-            position: absolute;
-            left: calc(var(--diameter) / 2);
-            bottom: 0;
-        }
+		&::after {
+			content: "";
+			display: block;
+			width: 1px;
+			height: calc(100% - (var(--diameter) + var(--gap-num)));
+			background-color: $secondary;
+			position: absolute;
+			left: calc(var(--diameter) / 2);
+			bottom: 0;
+		}
 
-        &:nth-child(-n + 9) {
-            &::before {
-                content: "0" counters(ol-steps, "");
-            }
-        }
-    }
+		&:nth-child(-n + 9) {
+			&::before {
+				content: "0" counters(ol-steps, "");
+			}
+		}
+	}
 }
 
 .qela-flush {
-    .list-group-item {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+	.list-group-item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
 
-        @include media-breakpoint-down(xl) {
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+		> * {
+			font-size: 14px;
+			&:first-child {
+				color: $info-600;
+				flex: 0 0 50%;
+			}
+			&:last-child {
+				color: $info-900;
+				flex: 0 1 auto;
+			}
+		}
 
-        > * {
-            font-size: 14px;
-            &:first-child {
-                color: $info-600;
-                flex: 0 0 37%;
-            }
-            &:last-child {
-                color: $info-900;
-                flex: 0 1 auto;
-            }
-        }
-
-        a {
-            text-decoration: none;
-        }
-    }
-    .qela-comment {
-        justify-content: space-between;
-        align-items: baseline;
-        > div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            p {
-                margin: 0px 0px 10px 0px;
-            }
-        }
-    }
+		a {
+			text-decoration: none;
+		}
+	}
+	.qela-comment {
+		justify-content: space-between;
+		align-items: baseline;
+		> div {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			p {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
 }
 
 .qela-plan {
-    .list-group-item {
-        display: flex;
-        gap: 0.25rem;
-        font-size: 14px;
-        padding: 0;
-        border: none;
-        &:not(:last-child) {
-            margin-bottom: 1rem;
-        }
-        > * {
-            color: $gray-800;
-            font-variant-numeric: lining-nums tabular-nums;
-            line-height: 130%;
-        }
-    }
+	.list-group-item {
+		display: flex;
+		gap: 0.25rem;
+		font-size: 14px;
+		padding: 0;
+		border: none;
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+		> * {
+			color: $gray-800;
+			font-variant-numeric: lining-nums tabular-nums;
+			line-height: 130%;
+		}
+	}
 }
 
 .qela-extended {
-    .list-group-item {
-        padding: 0;
-        overflow: hidden;
-        transition: background-color 0.25s ease 0s;
-        cursor: pointer;
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $secondary-100;
-            }
-        }
-    }
-    .form-check {
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
-    .form-check-input {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        margin-left: 0;
-        float: none;
-        &:checked {
-            & ~ .qela-collapse {
-                grid-template-rows: 1fr;
-                padding-bottom: 1rem;
-                background-color: $secondary-100;
-            }
-            & ~ .form-check-label {
-                background-color: $secondary-100;
-            }
-        }
-        &:disabled,
-        .disabled {
-            & ~ .qela-collapse {
-                background-color: $white;
-                * {
-                    color: $gray-600 !important;
-                }
-            }
-            & ~ .form-check-label {
-                background-color: $white;
-                * {
-                    color: $gray-600 !important;
-                    pointer-events: none;
-                }
-            }
-        }
-    }
-    .form-check-label {
-        padding: 1rem 1rem 1rem 3rem;
-        display: block;
-        transition: all 0.3s ease 0s;
-    }
-    .qela-collapse {
-        display: grid;
-        grid-template-rows: 0fr;
-        overflow: hidden;
-        transition:
-            grid-template-rows 0.8s ease 0s,
-            padding 0.4s ease 0s,
-            background-color 0.3s ease;
-        padding: 0px 1rem;
-        > * {
-            min-height: 0;
-            margin: 0;
-        }
-    }
+	.list-group-item {
+		padding: 0;
+		overflow: hidden;
+		transition: background-color 0.25s ease 0s;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $secondary-100;
+			}
+		}
+	}
+	.form-check {
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	.form-check-input {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		margin-left: 0;
+		float: none;
+		&:checked {
+			& ~ .qela-collapse {
+				grid-template-rows: 1fr;
+				padding-bottom: 1rem;
+				background-color: $secondary-100;
+			}
+			& ~ .form-check-label {
+				background-color: $secondary-100;
+			}
+		}
+		&:disabled,
+		.disabled {
+			& ~ .qela-collapse {
+				background-color: $white;
+				* {
+					color: $gray-600 !important;
+				}
+			}
+			& ~ .form-check-label {
+				background-color: $white;
+				* {
+					color: $gray-600 !important;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+	.form-check-label {
+		padding: 1rem 1rem 1rem 3rem;
+		display: block;
+		transition: all 0.3s ease 0s;
+	}
+	.qela-collapse {
+		display: grid;
+		grid-template-rows: 0fr;
+		overflow: hidden;
+		transition:
+			grid-template-rows 0.8s ease 0s,
+			padding 0.4s ease 0s,
+			background-color 0.3s ease;
+		padding: 0px 1rem;
+		> * {
+			min-height: 0;
+			margin: 0;
+		}
+	}
 }
 
 .qela-list-wrap {
-    --bs-list-group-border-color: #e9ecef;
-    border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+	--bs-list-group-border-color: #e9ecef;
+	border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
 }
 
 .qela-list-item {
-    --bs-list-group-item-padding-x: 1rem;
-    --bs-list-group-item-padding-y: 1rem;
-    display: flex;
-    gap: 1rem;
-    align-items: start;
-    background-color: $white;
-    border: none;
-    position: relative;
-    > div {
-        &:first-child {
-            @include media-breakpoint-down(md) {
-                flex-direction: column;
-            }
-        }
-    }
+	--bs-list-group-item-padding-x: 1rem;
+	--bs-list-group-item-padding-y: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: start;
+	background-color: $white;
+	border: none;
+	position: relative;
+	> div {
+		&:first-child {
+			@include media-breakpoint-down(md) {
+				flex-direction: column;
+			}
+		}
+	}
 
-    &:not(:last-child) {
-        &::before {
-            content: "";
-            width: calc(100% - (var(--bs-list-group-item-padding-x) * 2));
-            height: 1px;
-            position: absolute;
-            background-color: $info-200;
-            top: calc(100% - 1px);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-    }
-    &.success {
-        .qela-icon {
-            [class*="ic-"] {
-                color: $success;
-                background-color: $success-200;
-            }
-        }
-    }
-    @include media-breakpoint-down(lg) {
-        flex-wrap: wrap;
-    }
-    .btn {
-        white-space: nowrap;
-    }
-    .qela-icon {
-        [class*="ic-"] {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $info;
-            background-color: $info-100;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+	&:not(:last-child) {
+		&::before {
+			content: "";
+			width: calc(100% - (var(--bs-list-group-item-padding-x) * 2));
+			height: 1px;
+			position: absolute;
+			background-color: $info-200;
+			top: calc(100% - 1px);
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+	}
+	&.success {
+		.qela-icon {
+			[class*="ic-"] {
+				color: $success;
+				background-color: $success-200;
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		flex-wrap: wrap;
+	}
+	.btn {
+		white-space: nowrap;
+	}
+	.qela-icon {
+		[class*="ic-"] {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $info;
+			background-color: $info-100;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
 
-            &::before {
-                font-size: 20px;
-            }
-        }
-    }
-    iframe {
-        width: 100%;
-    }
+			&::before {
+				font-size: 20px;
+			}
+		}
+	}
+	iframe {
+		width: 100%;
+	}
 }
 
 .qela-list-menu {
-    .list-group-item {
-        padding: 0;
-        border-bottom: 0;
-        --img-size: 40px;
-        --clamp-line: 1;
-        > * {
-            text-decoration: none;
-            border: 0;
-            text-align: start;
-            width: 100%;
-            background-color: $white;
-            padding: rem(16);
-            display: flex;
-            align-items: center;
-            gap: rem(8);
-            transition: background-color 0.25s ease 0s;
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $info-100;
-                }
-            }
-            &.current {
-                background-color: $secondary-200;
-            }
-        }
-        .qela-clamp {
-            flex: 1 1 auto;
-        }
-    }
-    &.sm {
-        .list-group-item {
-            --img-size: 30px;
-            > * {
-                padding-top: rem(8);
-                padding-bottom: rem(8);
-            }
-            .qela-clamp {
-                font-size: rem(14);
-            }
-        }
-    }
+	.list-group-item {
+		padding: 0;
+		border-bottom: 0;
+		--img-size: 40px;
+		--clamp-line: 1;
+		> * {
+			text-decoration: none;
+			border: 0;
+			text-align: start;
+			width: 100%;
+			background-color: $white;
+			padding: rem(16);
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			transition: background-color 0.25s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $info-100;
+				}
+			}
+			&.current {
+				background-color: $secondary-200;
+			}
+		}
+		.qela-clamp {
+			flex: 1 1 auto;
+		}
+	}
+	&.sm {
+		.list-group-item {
+			--img-size: 30px;
+			> * {
+				padding-top: rem(8);
+				padding-bottom: rem(8);
+			}
+			.qela-clamp {
+				font-size: rem(14);
+			}
+		}
+	}
 }
