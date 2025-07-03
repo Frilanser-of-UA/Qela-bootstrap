@@ -1,4 +1,5 @@
-.dropdown {
+.dropdown,
+.dropdown-center {
 	& > .btn {
 		&::before {
 			transition:
@@ -19,7 +20,6 @@
 		}
 	}
 }
-
 .qela-dropdown {
 	.dropdown-menu {
 		--bs-dropdown-min-width: 11.25rem;
@@ -71,6 +71,91 @@
 					background-color: $warning-100;
 					color: $warning-600;
 				}
+			}
+		}
+	}
+}
+.qela-hover-dropdown {
+	.dropdown-menu {
+		--bs-dropdown-min-width: 11.25rem;
+		--bs-dropdown-padding-x: 0.5rem;
+		--bs-dropdown-padding-y: 0.5rem;
+		--bs-tooltip-arrow-width: 14px;
+		--bs-tooltip-arrow-height: 6px;
+		.qela-dropdown-arrow {
+			position: absolute;
+			width: var(--bs-tooltip-arrow-width);
+			height: var(--bs-tooltip-arrow-height);
+
+			&::before,
+			&::after {
+				position: absolute;
+				content: "";
+				border-color: transparent;
+				border-style: solid;
+			}
+		}
+		&[data-popper-placement^="bottom"] {
+			margin-top: calc(var(--bs-tooltip-arrow-height)) !important;
+			.qela-dropdown-arrow {
+				bottom: 100%;
+				transform: translateX(-50%);
+				left: 50%;
+				&::before {
+					bottom: 0;
+					border-width: 0 calc(16px * 0.5) 7px;
+					border-bottom-color: var(--bs-dropdown-border-color);
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				&::after {
+					bottom: 0;
+					border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+					border-bottom-color: var(--bs-dropdown-bg);
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		&[data-popper-placement^="top"] {
+			margin-bottom: calc(var(--bs-tooltip-arrow-height)) !important;
+			.qela-dropdown-arrow {
+				top: 100%;
+				transform: translateX(-50%);
+				left: 50%;
+				&::before {
+					top: 0;
+					border-width: 7px calc(16px * 0.5) 0;
+					border-top-color: var(--bs-dropdown-border-color);
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				&::after {
+					top: 0;
+					border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+					border-top-color: var(--bs-dropdown-bg);
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+
+	.btn {
+		&:focus-visible {
+			--bs-btn-hover-color: #{$info-900};
+			--bs-btn-hover-bg: #{$white};
+			--bs-btn-hover-border-color: #{$info-600};
+			box-shadow: none;
+		}
+		&.show {
+			--bs-btn-active-bg: #{$info-200};
+			--bs-btn-active-border-color: #{$info-600};
+			&:focus-visible {
+				box-shadow: none;
+			}
+			&::before {
+				transform: matrix(1, 0, 0, 1, 0, 0);
 			}
 		}
 	}

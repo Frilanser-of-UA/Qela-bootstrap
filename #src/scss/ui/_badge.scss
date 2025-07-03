@@ -135,6 +135,10 @@
 	color: var(--ql-talent-color);
 	background-color: var(--ql-talent-bg);
 	border-color: var(--ql-talent-border-color);
+	text-decoration: none;
+	&:hover {
+		color: var(--ql-talent-color);
+	}
 	i {
 		color: var(--ql-talent-border-color);
 	}

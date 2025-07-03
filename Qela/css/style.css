@@ -16670,14 +16670,17 @@ textarea {
   padding: 0;
 }
 
-.dropdown > .btn::before {
+.dropdown > .btn::before,
+.dropdown-center > .btn::before {
   transition: transform 0.2s ease 0s, color 0.2s ease 0s;
 }
-.dropdown > .btn.show::before {
+.dropdown > .btn.show::before,
+.dropdown-center > .btn.show::before {
   transform: matrix(1, 0, 0, -1, 0, 0);
   color: #000;
 }
-.dropdown > .btn.ico::before {
+.dropdown > .btn.ico::before,
+.dropdown-center > .btn.ico::before {
   transform: none;
 }
 
@@ -16729,6 +16732,85 @@ textarea {
     background-color: #ffeee0;
     color: #dc6a00;
   }
+}
+
+.qela-hover-dropdown .dropdown-menu {
+  --bs-dropdown-min-width: 11.25rem;
+  --bs-dropdown-padding-x: 0.5rem;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-tooltip-arrow-width: 14px;
+  --bs-tooltip-arrow-height: 6px;
+}
+.qela-hover-dropdown .dropdown-menu .qela-dropdown-arrow {
+  position: absolute;
+  width: var(--bs-tooltip-arrow-width);
+  height: var(--bs-tooltip-arrow-height);
+}
+.qela-hover-dropdown .dropdown-menu .qela-dropdown-arrow::before, .qela-hover-dropdown .dropdown-menu .qela-dropdown-arrow::after {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=bottom] {
+  margin-top: calc(var(--bs-tooltip-arrow-height)) !important;
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=bottom] .qela-dropdown-arrow {
+  bottom: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=bottom] .qela-dropdown-arrow::before {
+  bottom: 0;
+  border-width: 0 8px 7px;
+  border-bottom-color: var(--bs-dropdown-border-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=bottom] .qela-dropdown-arrow::after {
+  bottom: 0;
+  border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+  border-bottom-color: var(--bs-dropdown-bg);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=top] {
+  margin-bottom: calc(var(--bs-tooltip-arrow-height)) !important;
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=top] .qela-dropdown-arrow {
+  top: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=top] .qela-dropdown-arrow::before {
+  top: 0;
+  border-width: 7px 8px 0;
+  border-top-color: var(--bs-dropdown-border-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.qela-hover-dropdown .dropdown-menu[data-popper-placement^=top] .qela-dropdown-arrow::after {
+  top: 0;
+  border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+  border-top-color: var(--bs-dropdown-bg);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.qela-hover-dropdown .btn:focus-visible {
+  --bs-btn-hover-color: #2c2c2c;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #858585;
+  box-shadow: none;
+}
+.qela-hover-dropdown .btn.show {
+  --bs-btn-active-bg: #e9e9e8;
+  --bs-btn-active-border-color: #858585;
+}
+.qela-hover-dropdown .btn.show:focus-visible {
+  box-shadow: none;
+}
+.qela-hover-dropdown .btn.show::before {
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .qela-item-user {
@@ -17006,6 +17088,10 @@ textarea {
   color: var(--ql-talent-color);
   background-color: var(--ql-talent-bg);
   border-color: var(--ql-talent-border-color);
+  text-decoration: none;
+}
+.qela-badge-talent:hover {
+  color: var(--ql-talent-color);
 }
 .qela-badge-talent i {
   color: var(--ql-talent-border-color);
@@ -18602,7 +18688,7 @@ textarea {
   z-index: 1;
   border-radius: 20px;
   padding: 2px;
-  right: -10px;
+  left: calc(100% - 10px);
   top: -6px;
   min-width: 18px;
   border: 1px solid var(--ql-talent-border-color);
@@ -18614,6 +18700,25 @@ textarea {
   padding: 0.25rem 0.5rem;
   line-height: 14px;
   font-size: 0.75rem;
+}
+.qela-awards.orden .number {
+  background-color: #fff;
+  color: #676767;
+}
+.qela-awards.orden .qela-badge-talent {
+  background-color: #fff399;
+  padding-right: 3.375rem;
+}
+.qela-awards.orden .qela-badge-talent.small {
+  color: #676767 !important;
+}
+.qela-awards.orden .qela-badge-talent img {
+  position: absolute;
+  bottom: 2px;
+  right: 16px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
 }
 .qela-awards.light-type .qela-badge {
   background-color: var(--ql-talent-bg);

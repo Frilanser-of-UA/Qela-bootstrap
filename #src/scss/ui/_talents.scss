@@ -15,7 +15,7 @@
 		z-index: 1;
 		border-radius: 20px;
 		padding: 2px;
-		right: -10px;
+		left: calc(100% - 10px);
 		top: -6px;
 		min-width: 18px;
 		border: 1px solid var(--ql-talent-border-color);
@@ -28,6 +28,28 @@
 			padding: rem(4) rem(8);
 			line-height: 14px;
 			font-size: rem(12);
+		}
+	}
+	&.orden {
+		.number {
+			background-color: $white;
+			color: $info-700;
+		}
+
+		.qela-badge-talent {
+			background-color: $primary-300;
+			padding-right: rem(54);
+			&.small {
+				color: $info-700 !important;
+			}
+			img {
+				position: absolute;
+				bottom: 2px;
+				right: 16px;
+				z-index: 1;
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 	&.light-type {
