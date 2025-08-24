@@ -48,19 +48,35 @@
 	}
 }
 .qela-users {
+	@media (any-hover: hover) {
+		&:hover {
+			.btn {
+				visibility: visible;
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
 	.qela-avatar {
 		&:not(:first-child) {
-			margin-left: -10px;
+			margin-left: -16px;
+		}
+	}
+	.btn {
+		border: none !important;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.25s ease 0s;
+		&::before {
+			font-size: rem(24);
+			color: $info-600;
 		}
 	}
 }
 .qela-qr {
 	width: 63.5%;
 	display: inline-block;
-
-	@include media-breakpoint-down(sm) {
-		width: 100%;
-	}
 
 	img {
 		width: 100%;
