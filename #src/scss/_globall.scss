@@ -29,7 +29,9 @@ main {
 		padding-top: var(--body-pad-top);
 	}
 }
-
+.qela-lock {
+	overflow: hidden;
+}
 // ======================= master
 
 .qela-page {
@@ -229,7 +231,10 @@ main {
 	height: auto;
 	display: -webkit-box;
 }
-
+.qela-word {
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
 .qela-clamp3 {
 	--clamp-line: 3;
 	white-space: normal;
@@ -300,18 +305,6 @@ main {
 	border-radius: 12px !important;
 }
 
-.qela-vote {
-	display: flex;
-	align-items: center;
-	border: 1px solid $info-400;
-	border-radius: 0.5rem;
-	background-color: $white;
-	padding: 0.5rem 0.5rem 0.5rem 1rem;
-
-	.badge {
-		margin-left: 1rem;
-	}
-}
 .qela-help {
 	display: flex;
 	margin-top: 1rem;

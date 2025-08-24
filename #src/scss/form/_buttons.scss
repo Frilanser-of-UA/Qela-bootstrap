@@ -399,16 +399,19 @@
 	&.btn-group {
 		display: inline-flex;
 		align-items: center;
-
+		gap: rem(2);
 		.btn {
 			border-color: transparent;
 			background-color: transparent;
-			padding: 5.5px;
-			color: $info-600;
+			padding: rem(6);
+			margin: 0 !important;
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: $secondary;
+					color: $info-700;
+					&::before {
+						color: $info-700;
+					}
 				}
 			}
 
@@ -418,6 +421,9 @@
 				@media (any-hover: hover) {
 					&:hover {
 						color: $danger-600;
+						&::before {
+							color: $danger-600;
+						}
 					}
 				}
 			}
@@ -635,23 +641,31 @@
 		background-color: rgba($black, 0.8);
 		--bs-btn-border-width: 0;
 		--bs-btn-border-radius: 0.75rem;
-		color: $gray-500;
-		transition-duration: 0.2s;
 
+		transition-duration: 0.2s;
+		&::before {
+			color: $gray-500;
+		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: $white;
+				&::before {
+					color: $white;
+				}
 			}
 		}
 
 		&:disabled {
 			background-color: rgba($black, 0.5);
-			color: $gray-400;
+			&::before {
+				color: $gray-400;
+			}
 		}
 
 		&:focus {
 			background-color: rgba($black, 0.8);
-			color: $gray-500;
+			&::before {
+				color: $gray-500;
+			}
 		}
 
 		&[class^="ic-"],

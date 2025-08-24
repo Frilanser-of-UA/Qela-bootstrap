@@ -63,30 +63,17 @@
 		margin-bottom: 0;
 	}
 }
-.qela-votes {
+.qela-vote {
 	display: flex;
-	gap: 1rem;
-	align-items: stretch;
-	color: $gray-800;
-	@include media-breakpoint-down(xl) {
-		flex-wrap: wrap;
-	}
-	.qela-vote {
-		padding-left: 0.5rem;
-	}
-	> div {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		&:first-child {
-			align-items: flex-end;
-		}
-		&:last-child {
-			align-self: flex-start;
-			color: $gray-600;
-		}
-	}
+	align-items: center;
+	gap: rem(8);
+	border: 1px solid $info-400;
+	border-radius: 0.5rem;
+	background-color: $white;
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	text-decoration: none;
 }
+
 .qela-item {
 	display: flex;
 	align-items: flex-start;

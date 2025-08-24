@@ -8,6 +8,13 @@
 	}
 	.table-borderless {
 	}
+	.table-hover {
+		td {
+			* {
+				cursor: pointer;
+			}
+		}
+	}
 	.table-light {
 		--bs-table-bg: #{$gray-200};
 		--bs-table-color: #{$gray-900};
@@ -135,7 +142,7 @@
 
 	> .row {
 		--bs-gutter-x: 1rem;
-		padding: rem(16) rem(24);
+		padding: rem(16);
 		align-items: center;
 	}
 

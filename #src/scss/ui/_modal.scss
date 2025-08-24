@@ -43,3 +43,30 @@
 		}
 	}
 }
+.qela-modal-mob {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	background: rgba($black, 0.7);
+	z-index: 9999;
+	.modal-content {
+		position: absolute;
+		background-color: $modal-content-bg;
+		border-radius: $modal-content-border-radius;
+	}
+	.modal-header {
+		padding: $modal-header-padding-y $modal-header-padding-x;
+		align-items: flex-start;
+		border-bottom: 1px solid $info-300;
+	}
+	.modal-title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 120%;
+	}
+	.modal-body {
+		padding: rem(16);
+	}
+}

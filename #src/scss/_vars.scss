@@ -96,43 +96,6 @@ $info-600: $gray-600;
 $info-700: $gray-700;
 $info-800: $gray-800;
 $info-900: $gray-900;
-// ============== talent color=================
-$talent-red-200: #ffcccc;
-$talent-red-700: #d92525;
-$talent-red-900: #921c14;
-
-$talent-violet-200: #ebe4ff;
-$talent-violet-700: #7b57e2;
-$talent-violet-900: #5027c3;
-
-$talent-orange-200: #ffdcb9;
-$talent-orange-700: #bf6b17;
-$talent-orange-900: #723900;
-
-$talent-yellow-200: #fff9a6;
-$talent-yellow-700: #9a9000;
-$talent-yellow-900: #5b5500;
-
-$talent-green-200: #cfffd6;
-$talent-green-700: #2c9d3c;
-$talent-green-900: #086014;
-
-$talent-lightblue-200: #c3faff;
-$talent-lightblue-700: #2096a3;
-$talent-lightblue-900: #005963;
-
-$talent-blue-200: #c7e2ff;
-$talent-blue-700: #397ac5;
-$talent-blue-900: #03448f;
-
-$talent-pink-200: #f3ceff;
-$talent-pink-700: #b34dd6;
-$talent-pink-900: #6d168b;
-// -------------------------------------
-$talent-lightgreen-200: #ecf9ef;
-$talent-lightgreen-700: #50be60;
-$talent-lightgreen-900: #389444;
-// ============== talent color new=================
 
 // ===============================================
 $primarys: (
@@ -223,7 +186,7 @@ $spacers: (
 	12px: $spacer * 0.75
 );
 // Settings for the `<body>` element.
-$body-color: $black;
+$body-color: $gray-900;
 $body-bg: $gray-100;
 // LINK
 $link-color: $secondary;
