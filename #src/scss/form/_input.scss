@@ -130,7 +130,9 @@ input[type="search"]::-webkit-search-results-decoration {
 			&:hover {
 				~ .btn {
 					&:not(:disabled) {
-						color: $black;
+						&::before {
+							color: $black;
+						}
 					}
 				}
 			}
@@ -138,13 +140,17 @@ input[type="search"]::-webkit-search-results-decoration {
 		&:focus {
 			~ .btn {
 				&:not(:disabled) {
-					color: $black;
+					&::before {
+						color: $black;
+					}
 				}
 			}
 		}
 		&:disabled {
 			~ .btn {
-				color: $black;
+				&::before {
+					color: $black;
+				}
 			}
 		}
 	}
@@ -155,24 +161,32 @@ input[type="search"]::-webkit-search-results-decoration {
 		border: none !important;
 		background-color: transparent;
 		padding: 0;
-		color: $gray-600;
 		&::before {
+			color: $gray-600;
 			font-size: 20px;
 		}
 
 		&:hover {
 			background: transparent;
 			border-color: none;
+			&::before {
+				color: $black;
+			}
 		}
 
 		&:active {
 			color: $black !important;
 			background: transparent !important;
 			border-color: none;
+			&::before {
+				color: $black;
+			}
 		}
 
 		&:disabled {
-			color: $gray-600;
+			&::before {
+				color: $gray-600;
+			}
 		}
 	}
 }

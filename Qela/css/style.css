@@ -15562,14 +15562,14 @@ input[type=search]::-webkit-search-results-decoration {
   right: 12px;
 }
 @media (any-hover: hover) {
-  .qela-input-inner .form-control:hover ~ .btn:not(:disabled) {
+  .qela-input-inner .form-control:hover ~ .btn:not(:disabled)::before {
     color: #000;
   }
 }
-.qela-input-inner .form-control:focus ~ .btn:not(:disabled) {
+.qela-input-inner .form-control:focus ~ .btn:not(:disabled)::before {
   color: #000;
 }
-.qela-input-inner .form-control:disabled ~ .btn {
+.qela-input-inner .form-control:disabled ~ .btn::before {
   color: #000;
 }
 .qela-input-inner .btn {
@@ -15579,21 +15579,27 @@ input[type=search]::-webkit-search-results-decoration {
   border: none !important;
   background-color: transparent;
   padding: 0;
-  color: #858585;
 }
 .qela-input-inner .btn::before {
+  color: #858585;
   font-size: 20px;
 }
 .qela-input-inner .btn:hover {
   background: transparent;
   border-color: none;
 }
+.qela-input-inner .btn:hover::before {
+  color: #000;
+}
 .qela-input-inner .btn:active {
   color: #000 !important;
   background: transparent !important;
   border-color: none;
 }
-.qela-input-inner .btn:disabled {
+.qela-input-inner .btn:active::before {
+  color: #000;
+}
+.qela-input-inner .btn:disabled::before {
   color: #858585;
 }
 
